@@ -956,7 +956,10 @@ section .main-about .btn-lh:hover {
 }
 
 .policy_list .policy_rows .policy_col .policy_link {
+  display: flex;
+  flex-direction: column;
   color: var(--color-txt);
+  height: 100%;
 }
 
 .policy_list .policy_rows .policy_col .policy_link .policy_ico {
