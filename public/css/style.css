@@ -341,6 +341,7 @@ input, textarea {
     width: 100%;
     color: var(--text-color);
     font-size: 2.4em;
+    padding: 14px 0px;
 }
 
 .menu .box-title-menu .block-bottom .btn-down:hover {
@@ -454,6 +455,7 @@ a.btn-learn-more:hover i {
 
 .section.built {
     background-color: var(--text-color);
+    height: auto;
 }
 
 a.btn-up {
@@ -488,9 +490,9 @@ a.btn-up {
 
 .section.built .box-built {
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr auto;
     grid-template-columns: auto 416px;
-    height: 100vh;
+    height: auto;
 }
 
 .section.built .box-built .box-left-built.bg-all {
@@ -536,6 +538,7 @@ a.btn-up {
     color: var(--color-txt);
     line-height: 20px;
     font-size: 14px;
+    text-align: justify;
 }
 
 .right-built-button {
@@ -610,7 +613,7 @@ a.btn-up {
 }
 
 .section-gird .box-quick .main-box-quick {
-    padding: 0 20%;
+    padding: 0 15%;
     width: 100%;
     grid-gap: 0 24px;
     display: grid;
@@ -620,18 +623,15 @@ a.btn-up {
 
 .main-box-quick-right {
     display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;
-    /* TWEENER - IE 10 */
     display: -webkit-flex;
-    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
-    /* NEW, Spec - Firefox, Chrome, Opera */
     flex-flow: column nowrap;
     font-size: 16px;
     color: var(--color-txt);
     padding: 16px 0;
     width: 100%;
+    text-align: justify;
 }
 
 .main-box-quick .main-box-quick-left {
@@ -644,7 +644,7 @@ a.btn-up {
 
 /***---START SECTION 4 ---***/
 
-.section.section-gird .gird-drive {
+.section.section-gird .bg-index-3 {
     background: url(../../shared/img/car-blue.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -691,7 +691,7 @@ a.btn-up {
 
 /***---START SECTION 6 ---***/
 
-.box-title-menu.gird-top.bg-thanhtuu {
+.box-title-menu.gird-top.bg-index-4 {
     background: url(../../shared/img/thanh-tuu.png);
     background-repeat: no-repeat;
     background-position: center;

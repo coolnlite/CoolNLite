@@ -5,7 +5,10 @@
     grid-gap: 24px;
     grid-template-rows: 1fr;
 }
-
+.container-slide{
+    width: 100%;
+    height: 100%;
+}
 @media only screen and (max-width : 1024px) {
     .container-slide.titanx-slide .slider-container .slider,
     .container-slide.titanx-slide .slider-container .slider2 {
@@ -17,9 +20,6 @@
     position: relative;
     margin: 0 auto;
     height: 100%;
-}
-.container-slide .slider-container .sizes-slider{
-    height: 100vh;
 }
 .container-slide .slider-container .sizes-slider2{
     height: 100vh;

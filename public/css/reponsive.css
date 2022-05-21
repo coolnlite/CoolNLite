@@ -23,7 +23,9 @@
     background-position: center;
     background-size: cover;
   }
-
+  .section.built .box-built .box-right-built{
+    padding: 24px 1em;
+  }
   .section.section-gird .gird-top .quick {
     grid-template-columns: 100px 100px 100px;
   }
@@ -59,13 +61,6 @@
 
   .section-gird .gird-top {
     background: url(../../shared/img/modal-hero-mb.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .section.section-gird .gird-drive {
-    background: url(../../shared/img/car-blue-mb.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -159,8 +154,8 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .box-built {
-    grid-template-columns: 1fr !important;
+  .section.built .box-built {
+    grid-template-columns: 1fr;
   }
 
   .box-built .main-box-right-button .box-img {
