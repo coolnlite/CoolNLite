@@ -1,6 +1,7 @@
 <?php
     require_once('../../config/config.php');
     require_once('../../config/dbhelper.php');
+    require_once('function.php');
 
     if(isset($_POST['customers'])){
         $output= array();
@@ -60,7 +61,7 @@
             $sub_array[] = $row['models'];
             $sub_array[] = $row['area'];
             $sub_array[] = $row['message'];
-            $sub_array[] = $row['time'];
+            $sub_array[] = facebook_time_ago($row['time']);
             $sub_array[] = '<a href="javascript:void();" data-id="'.$row['id_contact'].'"  class="btn btn-danger btn-sm deleteBtn" >Delete</a>';
             $data[] = $sub_array;
         }
