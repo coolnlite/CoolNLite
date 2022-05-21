@@ -62,7 +62,7 @@
             $sub_array[] = $row['area'];
             $sub_array[] = $row['message'];
             $sub_array[] = facebook_time_ago($row['time']);
-            $sub_array[] = '<a href="javascript:void();" data-id="'.$row['id_contact'].'"  class="btn btn-danger btn-sm deleteBtn" >Delete</a>';
+            $sub_array[] = '<a href="javascript:void();" data-id="'.$row['id_contact'].'"  class="btn btn-danger btn-sm deleteBtn" >Xóa</a>';
             $data[] = $sub_array;
         }
 

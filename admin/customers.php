@@ -62,7 +62,7 @@
         language: {
             lengthMenu: 'Hiện _MENU_ mẫu tin trên trang',
             zeroRecords: 'Không tìm thấy mẫu tin nào',
-            info: 'Hiện trang _PAGE_ trên _PAGES_',
+            info: 'Hiện trang _PAGE_ trên _PAGES_ trang',
             infoEmpty: 'Không có mẫu tin nào',
             infoFiltered:'',
             search : "Tìm kiếm:",
