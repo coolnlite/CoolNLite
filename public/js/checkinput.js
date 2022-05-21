@@ -18,7 +18,7 @@ $(document).ready(function () {
         phoneVN: true,
       },
       messenger: {
-        maxlength: 700
+        maxlength: 300
       },
     },
     messages: {
@@ -33,7 +33,7 @@ $(document).ready(function () {
         number: "Vui lòng nhập vào là số"
       },
       messenger: {
-        maxlength: "Vui lòng không nhập quá 500 ký tự",
+        maxlength: "Vui lòng không nhập quá 300 ký tự",
       },
     }
   });
@@ -50,7 +50,7 @@ $(document).ready(function () {
     models == "Vui lòng chọn dữ liệu" ? models = "" : models;
     area == "Vui lòng chọn dữ liệu" ? area = "" : area;
 
-    if (fullname.length !== 0 && (tel.length === 10 && tel.length !== 0)) {
+    if (fullname.length !== 0 && (tel.length === 10 && tel.length !== 0) && messenger.length <= 300) {
       event.preventDefault();
       $.ajax({
         method: "POST",

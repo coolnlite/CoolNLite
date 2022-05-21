@@ -12,7 +12,7 @@
             $sidebar = executeResult($sql);
             foreach($sidebar as $sb){
         ?>
-        <li class="" >
+        <li class="<?php $sb['url'] == $curPageName ? print "hovered" : print '' ?>" >
             <a href="<?php echo ''.$DOMAIN.$sb['url'].''?>">
                 <span class="icon">
                     <?php echo ''.$sb['icon'].''?>
