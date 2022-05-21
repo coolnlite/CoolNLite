@@ -5,7 +5,7 @@
 //delete contact
     if(isset($_POST['delete_customer']) && isset($_POST['id_contact'])){
         $id_contact = $_POST['id_contact'];
-        $sql = "DELETE FROM `contact` WHERE `id_contact`='$contact_id'";
+        $sql = "DELETE FROM `contact` WHERE `id_contact`='$id_contact'";
         $result =mysqli_query($conn,$sql);
         if($result == true)
         {
@@ -27,5 +27,5 @@
         } 
 
     }
-    
+
 ?>

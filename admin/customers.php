@@ -55,6 +55,7 @@
       var DOMAIN = 'http://localhost/CoolNLite/admin/modules/';
       $('#example').DataTable({
         "fnCreatedRow": function(nRow, aData, iDataIndex) {
+          console.log(nRow);
           $(nRow).attr('id', aData[0]);
         },
         language: {
@@ -64,8 +65,11 @@
             infoEmpty: 'Không có mẫu tin nào',
             infoFiltered:'',
             search : "Tìm kiếm:",
+            
             buttons: {
-                colvis: 'Chọn cột'
+                colvis: 'Chọn cột',
+                copyTitle: 'Sao chép thành công',
+                copySuccess: "Đã sao chép %d dòng vào clipboard"
             },
             paginate: {
                 next:       ">>",
@@ -140,7 +144,7 @@
       var table = $('#example').DataTable();
       event.preventDefault();
       var id_contact = $(this).data('id');
-        if (confirm("Bạn chắc chắc có muốn xóa khách hàng này")) {
+        if (confirm("Bạn chắc chắc có muốn xóa mẫu tin này")) {
           $.ajax({
             url: '<?php echo ''.$DOMAIN.'modules/delete_data.php'?>',
             data: {
@@ -152,7 +156,7 @@
               var json = JSON.parse(data);
               status = json.status;
               if (status == 'success') {
-                $("#" + id).closest('tr').remove();
+                $("#" + id_contact).closest('tr').remove();
               } else {
                 alert('Có lỗi gì đó');
                 return;
