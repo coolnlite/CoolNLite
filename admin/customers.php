@@ -52,7 +52,7 @@
 
     <script type="text/javascript">
     $(document).ready(function() {
-      
+
       var DOMAIN = 'http://localhost/CoolNLite/admin/modules/';
 
       $('#example').DataTable({
