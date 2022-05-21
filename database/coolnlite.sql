@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2022 at 12:31 PM
+-- Generation Time: May 21, 2022 at 07:02 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -87,8 +87,6 @@ INSERT INTO `contact` (`id_contact`, `full_name`, `tel`, `models`, `area`, `mess
 (75, ' Lê Long Đỉnh', '0971234323', 'Coupe', 'Bến Tre', 'Mẫu tin thử nghiệm', '2022-05-20 10:21:17'),
 (76, 'Lê Thị Hương', '0973664167', '', 'Bình Định', 'Tôi là ai', '2022-05-20 09:52:07'),
 (77, ' Lê Long Đỉnh', '0971234323', 'Hatchback', 'Bình Dương', 'Tôi đang thử nghiệm form', '2022-05-20 10:22:52'),
-(78, ' Lê Long Đỉnh', '0971234323', 'Hatchback', 'Bình Dương', 'Tôi đang thử nghiệm form', '2022-05-20 10:22:52'),
-(79, 'Lê Thị Hương', '0973664167', '', 'Bình Định', 'Tôi là ai', '2022-05-20 09:52:07'),
 (80, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 03:06:47'),
 (81, ' Lê Long Đỉnh', '0971234323', 'Coupe', 'Bến Tre', 'Mẫu tin thử nghiệm thôi mà', '2022-05-20 10:21:17'),
 (82, ' Lê Long Đỉnh', '0971234323', 'Coupe', 'Bến Tre', 'Mẫu tin thử nghiệm thôi mà', '2022-05-20 10:21:17'),
@@ -97,12 +95,7 @@ INSERT INTO `contact` (`id_contact`, `full_name`, `tel`, `models`, `area`, `mess
 (85, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 03:05:10'),
 (86, 'Lê Thị Hương', '0973664167', '', 'Bình Định', 'Tôi là ai, vì sao mọi người làm như thế', '2022-05-20 09:52:07'),
 (87, ' Lê Long Đỉnh', '0971234323', 'Coupe', 'Bến Tre', 'Mẫu tin thử nghiệm thôi mà', '2022-05-20 10:21:17'),
-(88, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 03:05:10'),
-(89, ' Lê Long Đỉnh', '0971234323', 'Coupe', 'Bến Tre', 'Mẫu tin thử nghiệm thôi mà', '2022-05-20 10:21:17'),
-(90, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 03:05:10'),
-(91, ' Nguyễn Văn A', '0971738344', 'SUV', 'Bình Phước', 'Sáng sớm ăn cơm ở nhà', '2022-05-18 07:37:52'),
-(92, ' Lê Long Đỉnh', '0971234323', 'Hatchback', 'Bình Dương', 'Tôi đang thử nghiệm form', '2022-05-20 10:22:52'),
-(93, ' Lê Long Đỉnh', '0971234323', 'Hatchback', 'Bình Dương', 'Tôi đang thử nghiệm form', '2022-05-20 10:22:52');
+(94, ' Lê Minh Hòa', '0971738344', 'Convertible', 'Bạc Liêu', 'Tôi là ai tôi đang ở đâu', '2022-05-21 04:09:13');
 
 -- --------------------------------------------------------
 
@@ -210,7 +203,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- AUTO_INCREMENT for table `keyword`
