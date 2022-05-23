@@ -50,7 +50,7 @@ $(document).ready(function () {
                     if(response.status == 0){
                         $('#alert').text(response.message);
                     }else{
-                        window.location= response.message;
+                        window.location = response.message;
                     }
                 },
             });
