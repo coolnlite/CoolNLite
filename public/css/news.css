@@ -1177,14 +1177,14 @@ section .main-about .btn-lh:hover {
     grid-gap: 10px;
   }
 
-  .ab-container .box-text .box-text-l {
+  .ab-container section.box-text h1.box-text-l {
     grid-column-start: 1;
     grid-column-end: 13;
     text-align: center;
     line-height: 2em;
   }
 
-  .ab-container .box-text .box-text-r {
+  .ab-container section.box-text div.box-text-r {
     grid-column-start: 1;
     grid-column-end: 13;
     text-align: center;
