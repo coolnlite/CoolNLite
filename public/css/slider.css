@@ -144,4 +144,19 @@
         height: 40px;
         font-size: 20px;
       }
+      .container-slide.about-slide{
+          width: 100%;
+      }
+      .container-slide .slider-container .prev-button2,
+       .container-slide .slider-container .next-button2{
+        width: 30px;
+        height: 30px;
+        font-size: 1.6em;
+      }
+      .container-slide .slider-container .prev-button2{
+          left: -10px;
+      }
+      .container-slide .slider-container .next-button2{
+          right: -10px;
+      }
 }
