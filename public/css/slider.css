@@ -132,3 +132,16 @@
 .container-slide .slider-container .lines .line2:hover {
     background: var(--color-blue);
 }
+@media only screen and (max-width : 480px){
+    #block-slider.block-slider{
+        height: 50vh;
+      }
+      .container-slide .slider-container div.sizes-slider2{
+        height: 50vh;
+      }
+      .container-slide .slider-container .prev-button1,
+      .container-slide .slider-container .next-button1{
+        height: 40px;
+        font-size: 20px;
+      }
+}
