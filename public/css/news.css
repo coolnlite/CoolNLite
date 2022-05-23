@@ -860,9 +860,11 @@ section .main-about .btn-lh:hover {
 .ab-container .box-text .box-text-l {
   grid-column-start: 2;
   grid-column-end: 5;
-  font-size: 2.4em;
-  line-height: 2.8em;
   font-weight: 500;
+  padding: 1.6em 0;
+}
+.ab-container .box-text .box-text-l span{
+  font-size: 2em;
 }
 
 .ab-container .box-text .box-text-r {
@@ -879,7 +881,7 @@ section .main-about .btn-lh:hover {
 }
 
 .policy_section .policy_container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -960,11 +962,12 @@ section .main-about .btn-lh:hover {
   flex-direction: column;
   color: var(--color-txt);
   height: 100%;
+  width: 100%;
 }
 
 .policy_list .policy_rows .policy_col .policy_link .policy_ico {
-  width: 175px;
-  height: 175px;
+  width: 200px;
+  height: 200px;
   border-radius: 100%;
   background: #eaeaea;
   margin: 0 auto;
@@ -1110,7 +1113,7 @@ section .main-about .btn-lh:hover {
 }
 
 .bh_section .bh_container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -1215,10 +1218,6 @@ section .main-about .btn-lh:hover {
   .bh_section {
     margin-top: 30px;
     margin-bottom: 30px;
-  }
-
-  .bh_section .bh_container {
-    width: 97%;
   }
 
   .bh_section .bh_container .bh_row .bh_col_top h1 {
