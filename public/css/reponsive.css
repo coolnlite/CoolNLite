@@ -88,6 +88,9 @@
     background-position: center;
     background-size: cover;
   }
+  .main-future .box-future-text .item-future div.item-top{
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 375px) {
@@ -381,6 +384,9 @@ section div.main-about {
   .container-slide.about-slide{
     width: calc(100% - 4em);
     margin: 0 auto;
+  }
+  .main-future .box-future-text .item-future .item-top{
+    font-size: 23px;
   }
 }
 /* TITANX  */
