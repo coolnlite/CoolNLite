@@ -89,7 +89,7 @@
     background-size: cover;
   }
   .main-future .box-future-text .item-future div.item-top{
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -243,9 +243,6 @@
   }
 }
 
-section div.main-about {
-  max-width: calc(100% - 2em);
-}
 
 @media only screen and (max-width : 900px) {
   .block-slider.bg-white .img-slider .slide.img-slider {
