@@ -385,5 +385,8 @@
   .main-future .box-future-text .item-future .item-top{
     font-size: 23px;
   }
+  section .main-about p .hide-text{
+    display: none;
+  }
 }
 /* TITANX  */

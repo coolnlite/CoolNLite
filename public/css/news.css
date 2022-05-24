@@ -1195,6 +1195,9 @@ section .main-about .btn-lh:hover {
     padding: 0;
   }
 
+  .ab-container section.box-text div.box-text-r p .hide-text {
+    display: none;
+  }
   .policy_section {
     margin-top: 30px;
   }
@@ -1303,8 +1306,6 @@ section .main-about .btn-lh:hover {
   text-transform: uppercase;
 }
 
-.container-agency .col-content .box-content p span {}
-
 @media only screen and (min-width: 992px) {
   #agency {
     height: calc(100vw * 9/32);
@@ -1350,5 +1351,8 @@ section .main-about .btn-lh:hover {
 
   .item-agency:last-child {
     padding-bottom: 50px;
+  }
+  section .main-about{
+    width: calc(100% - 2em);
   }
 }
