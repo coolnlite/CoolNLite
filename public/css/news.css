@@ -1241,6 +1241,9 @@ section .main-about .btn-lh:hover {
     height: 35px;
     line-height: 35px;
   }
+  .main-future .box-future-text .item-future .item-bottom{
+    display: none;
+  }
 }
 
 /* AGENCY */
