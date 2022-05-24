@@ -324,15 +324,11 @@
 
   .block-bottom .main-list-menu .box-para-top {
     flex-direction: column;
-    font-size: 14px;
-  }
-
-  .main-future {
-    padding-left: 2em;
+    font-size: 13px;
   }
 
   .section.built .box-built .box-right-built {
-    padding: 2.4em 2em;
+    padding: 2.4em 1em;
   }
 
   .title-right-built {

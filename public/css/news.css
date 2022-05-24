@@ -1018,16 +1018,17 @@ section .main-about .btn-lh:hover {
 
 .policy_col .policy_link .policy_txt {
   text-align: center;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
 }
 
 .policy_col .policy_link .policy_txt h2 {
   margin-top: 22px;
   margin-bottom: 11px;
-  font-size: 22px;
+  font-size: 18px;
   color: var(--text-color-b);
   transition: .45s;
+  text-transform: uppercase;
 }
 
 .policy_col .policy_link .policy_txt p {
@@ -1240,9 +1241,6 @@ section .main-about .btn-lh:hover {
     font-size: 12px;
     height: 35px;
     line-height: 35px;
-  }
-  .main-future .box-future-text .item-future .item-bottom{
-    display: none;
   }
 }
 
