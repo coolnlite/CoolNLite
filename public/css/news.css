@@ -1307,6 +1307,15 @@ section .main-about .btn-lh:hover {
   #agency{
     height: calc(100vw * 9/16);
   }
+  .container-agency .col-content{
+    padding: 0em;
+  }
+  div.item-agency{
+    padding: 3em 0em 0em 0em;
+  }
+  div.item-agency:last-child{
+    padding-bottom: 2em;
+  }
 }
 @media only screen and (max-width: 768px){
   .item-agency .container-agency{
