@@ -359,9 +359,6 @@
     grid-column-start: 1;
     grid-column-end: 13;
   }
-  .ab-container section.box-text{
-    padding: 1.6em 1em;
-  }
   .ab-container .box-text h1.box-text-l{
     grid-column-start: 1;
     grid-column-end: 6;

@@ -835,17 +835,9 @@ section .main-about .btn-lh:hover {
 }
 
 .ab-container .block-policy {
-  grid-template-columns: repeat(12, 1fr);
   margin: auto;
   max-width: 1440px;
-  grid-area: main;
 }
-
-.ab-container .block-policy .box-video-about {
-  grid-column-start: 2;
-  grid-column-end: 12;
-}
-
 .ab-container .block-policy .box-video-about video {
   width: 100%;
   height: 100%;
@@ -854,13 +846,10 @@ section .main-about .btn-lh:hover {
 .ab-container .box-text {
   max-width: 1440px;
   padding: 1.6em 0;
-  grid-template-areas: ". aside aside aside main main main main main main main .";
   height: auto;
-  grid-gap: 24px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin: auto;
-  grid-area: main;
 }
 
 .ab-container .box-text .box-text-l {
@@ -1181,10 +1170,6 @@ section .main-about .btn-lh:hover {
     width: 97%;
   }
 
-  .ab-container .box-text {
-    grid-gap: 10px;
-  }
-
   .ab-container section.box-text h1.box-text-l {
     grid-column-start: 1;
     grid-column-end: 13;
@@ -1357,6 +1342,9 @@ section .main-about .btn-lh:hover {
     padding-bottom: 50px;
   }
   section .main-about{
+    width: calc(100% - 2em);
+  }
+  .ab-container{
     width: calc(100% - 2em);
   }
 }
