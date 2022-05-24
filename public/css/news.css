@@ -824,14 +824,17 @@ section .main-about .btn-lh:hover {
 }
 
 .control {
-  width: 100%;
+  width: 1440px;
   height: auto;
+  margin: 0 auto;
+}
+
+.ab-container {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .ab-container .block-policy {
-  grid-template-areas: ". main main main main main main main main main main .";
-  grid-gap: 24px;
-  display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin: auto;
   max-width: 1440px;
@@ -1237,10 +1240,10 @@ section .main-about .btn-lh:hover {
   }
 
   .policy_section .policy_container .policy_wrap .box-btn-policy .btn-policy {
-    padding: 0em 1.5em;
+    padding: 0em 1em;
     font-size: 12px;
     height: 35px;
-    line-height: 35px;
+    line-height: 18px;
   }
 }
 

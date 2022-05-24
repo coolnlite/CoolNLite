@@ -241,6 +241,10 @@
   .bh_container .bh_row .box-built section.box-right-built {
     padding: 32px 0;
   }
+
+  section.control {
+    width: 100%;
+  }
 }
 
 
@@ -344,6 +348,10 @@
   }
   .policy_col .policy_link div.policy_txt p{
     text-align: center;
+  }
+
+  section.control {
+    width: 100%;
   }
 }
 @media only screen and (max-width : 768px) {
