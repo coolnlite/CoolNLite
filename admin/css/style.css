@@ -31,6 +31,10 @@ dl, ol, ul{
 a{
   text-decoration: none;
 }
+/* CHẶN 000WEBHOST */
+div.disclaimer{
+  display: none;
+}
 .container-admin {
   position: relative;
   width: 100%;
