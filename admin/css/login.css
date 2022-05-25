@@ -12,6 +12,10 @@
     --black: #000;
     --gray: #393c41;
 }
+/* CHẶN 000WEBHOST */
+div.disclaimer{
+    display: none;
+  }
 img{
     width: 100%;
     height: 100%;
