@@ -29,7 +29,7 @@ if(isset($_POST['btn-login'])){
 
             echo json_encode(array(
                 'status' => 1,
-                'message' => 'http://localhost/CoolNLite/admin/dashboard.php'
+                'message' => 'https://coolnlite.000webhostapp.com/admin/dashboard.php'
             ));
             exit();
 
