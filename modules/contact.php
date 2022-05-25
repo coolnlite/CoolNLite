@@ -1,6 +1,7 @@
 <?php
 require_once('../config/config.php');
 require_once('../config/dbhelper.php');
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 
 if (isset($_POST['btn_contact'])) {
     if(isset($_POST['fullname']) && isset($_POST['tel'])){

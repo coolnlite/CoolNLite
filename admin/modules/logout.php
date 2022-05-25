@@ -3,6 +3,6 @@
    session_start();
    
    if(session_destroy()) {
-      header("Location: http://localhost/CoolNLite/admin/");
+      header("Location: https://coolnlite.000webhostapp.com/admin/");
    }
 ?>
