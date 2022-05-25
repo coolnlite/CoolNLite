@@ -992,7 +992,7 @@ a.btn-up {
     color: var(--text-color);
 }
 
-.footer-distributed .footer-links a:before {
+.footer-distributed .footer-links a:not(a:first-child)::before {
     content: "|";
     font-weight: 300;
     font-size: 20px;
