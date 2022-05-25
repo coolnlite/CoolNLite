@@ -60,9 +60,17 @@
             $sub_array[] = $row['tel'];
             $sub_array[] = $row['models'];
             $sub_array[] = $row['area'];
-            $sub_array[] = $row['message'];
+            $sub_array[] = countStr($row['message']) ;
             $sub_array[] = facebook_time_ago($row['time']);
-            $sub_array[] = '<a href="javascript:void();" data-id="'.$row['id_contact'].'"  class="btn btn-danger btn-sm deleteBtn" >Xóa</a>';
+            $sub_array[] = 
+            '
+            <a title="Xóa" href="javascript:void();" data-id="'.$row['id_contact'].'"  class="btn btn-danger btn-sm deleteBtn" >
+            <i class="fas fa-trash-alt"></i>
+            </a>
+            <a title="Xem" data-toggle="modal" data-target="#viewCustomer" href="javascript:void();" data-id="'.$row['id_contact'].'"  class="btn btn-info btn-sm viewBtn" >
+            <i class="fas fa-eye"></i>
+            </a>
+            ';
             $data[] = $sub_array;
         }
 

@@ -170,9 +170,27 @@
         }
       })
 
+      $(document).on('click', '.viewBtn', function(event) {
+        event.preventDefault();
+        var id_contact = $(this).data('id');
+          $.ajax({
+            url: '<?php echo ''.$DOMAIN.'modules/view_data.php'?>',
+            data: {
+              view_customer : true,
+              id_contact: id_contact
+            },
+            type: "post",
+            success: function(response) {
+              $('#modal-body-view').html(response)
+            }
+          });
+      })
+      
+
     });
     
   </script>
+ 
 </body>
 
 </html>

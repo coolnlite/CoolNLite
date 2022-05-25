@@ -45,7 +45,15 @@ function getToken($length)
 
     return $token;
 }
-
+function countStr($str){
+  if(strlen($str) >= 200){
+    $str =  substr($str,0,200);
+    $str =  $str.'...';
+  }else{
+    $str = $str;
+  }
+  return $str;
+}
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 function date_format_vn($date_time)
 {
