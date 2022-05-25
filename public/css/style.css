@@ -26,7 +26,10 @@ li {
 a {
     text-decoration: none;
 }
-
+/* CHẶN 000WEBHOST */
+div.disclaimer{
+    display: none;
+}
 a:visited {
     color: #fff;
 }
