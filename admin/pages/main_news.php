@@ -7,9 +7,9 @@
               <thead>
                 <th>Id</th>
                 <th>Đường dẫn</th>
+                <th>Ảnh đại diện</th>
                 <th>Tiêu đề</th>
                 <th>Mô tả</th>
-                <th>Nội dung</th>
                 <th>Lượt xem</th>
                 <th>Người đăng</th>
                 <th>Thời gian đăng</th>

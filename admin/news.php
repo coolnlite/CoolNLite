@@ -94,20 +94,20 @@
       $(document).on('click', '.deleteBtn', function(event) {
       var table = $('#example').DataTable();
       event.preventDefault();
-      var id_contact = $(this).data('id');
+      var id_news = $(this).data('id');
         if (confirm("Bạn chắc chắc có muốn xóa mẫu tin này")) {
           $.ajax({
             url: '<?php echo ''.$DOMAIN.'modules/delete_data.php'?>',
             data: {
-              delete_customer : true,
-              id_contact: id_contact
+              delete_news : true,
+              id_news: id_news
             },
             type: "post",
             success: function(data) {
               var json = JSON.parse(data);
               status = json.status;
               if (status == 'success') {
-                $("#" + id_contact).closest('tr').remove();
+                $("#" + id_news).closest('tr').remove();
               } else {
                 alert('Có lỗi gì đó');
                 return;
@@ -118,23 +118,6 @@
           return null;
         }
       })
-
-      $(document).on('click', '.viewBtn', function(event) {
-        event.preventDefault();
-        var id_contact = $(this).data('id');
-          $.ajax({
-            url: '<?php echo ''.$DOMAIN.'modules/view_data.php'?>',
-            data: {
-              view_customer : true,
-              id_contact: id_contact
-            },
-            type: "post",
-            success: function(response) {
-              $('#modal-body-view').html(response)
-            }
-          });
-      })
-      
 
     });
     

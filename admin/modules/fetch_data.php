@@ -15,9 +15,9 @@
         $columns = array(
             0 => 'id',
             1 => 'url',
-            2 => 'title',
-            3 => 'description',
-            4 => 'content',
+            2 => 'thumnail',
+            3 => 'title',
+            4 => 'description',
             5 => 'view',
             6 => 'id_user',
             7 => 'time'
@@ -29,10 +29,7 @@
             $sql .= " WHERE `url` like '%".$search_value."%'";
             $sql .= " OR `title` like '%".$search_value."%'";
             $sql .= " OR `description` like '%".$search_value."%'";
-            $sql .= " OR `content` like '%".$search_value."%'";
             $sql .= " OR `view` like '%".$search_value."%'";
-            $sql .= " OR `id_user` like '%".$search_value."%'";
-            $sql .= " OR `time` like '%".$search_value."%'";
         }
 
         if(isset($_POST['order']))
@@ -69,9 +66,9 @@
             $sub_array = array();
             $sub_array[] = $row['id'];
             $sub_array[] = $row['url'];
+            $sub_array[] = $row['thumnail'];
             $sub_array[] = $row['title'];
             $sub_array[] = $row['description'];
-            $sub_array[] = $row['content'];
             $sub_array[] = $row['view'] ;
             $sub_array[] = $full_name ;
             $sub_array[] = facebook_time_ago($row['time']);
@@ -80,11 +77,11 @@
             <a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  class="btn btn-danger btn-sm deleteBtn" >
             <i class="fas fa-trash-alt"></i>
             </a>
-            <a title="Xem" data-toggle="modal" data-target="#viewNews" href="javascript:void();" data-id="'.$row['id'].'"  class="btn btn-info btn-sm viewBtn" >
-            <i class="fas fa-eye"></i>
-            </a>
-            <a title="Sửa" data-toggle="modal" data-target="#editNews" href="javascript:void();" data-id="'.$row['id'].'"  class="btn btn-warning btn-sm editBtn" >
+            <a title="Sửa" href="" class="btn btn-warning btn-sm" >
             <i class="fas fa-user-edit"></i>
+            </a>
+            <a title="SEO Bài viết" href=""  class="btn btn-primary btn-sm" >
+                SEO
             </a>
             ';
             $data[] = $sub_array;
@@ -127,7 +124,6 @@ if(isset($_POST['customers'])){
         $sql .= " OR `models` like '%".$search_value."%'";
         $sql .= " OR `area` like '%".$search_value."%'";
         $sql .= " OR `message` like '%".$search_value."%'";
-        $sql .= " OR `time` like '%".$search_value."%'";
     }
 
     if(isset($_POST['order']))

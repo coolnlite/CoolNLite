@@ -27,5 +27,30 @@
         } 
 
     }
+//delete news
+if(isset($_POST['delete_news']) && isset($_POST['id_news'])){
+    $id_news = $_POST['id_news'];
+    $sql = "DELETE FROM `news` WHERE `id`='$id_news'";
+    $result =mysqli_query($conn,$sql);
+    if($result == true)
+    {
+        $data = array(
+            'status'=>'success',
+        
+        );
+
+        echo json_encode($data);
+    }
+    else
+    {
+        $data = array(
+            'status'=>'failed',
+        
+        );
+
+        echo json_encode($data);
+    } 
+
+}
 
 ?>
