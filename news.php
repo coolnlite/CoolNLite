@@ -1,3 +1,7 @@
+<?php 
+    require_once('./config/config.php');
+    require_once('./config/dbhelper.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -11,10 +15,10 @@
          />
       <!-- fontawesome -->
       <!-- css -->
-      <link rel="icon" sizes="32x32" href="../shared/img/icon.png">
-      <link rel="stylesheet" href="../public/css/style.css" />
-      <link rel="stylesheet" href="../public/css/reponsive.css" />
-      <link rel="stylesheet" href="../public/css/news.css" />
+      <link rel="icon" sizes="32x32" href="./shared/img/icon.png">
+      <link rel="stylesheet" href="./public/css/style.css" />
+      <link rel="stylesheet" href="./public/css/reponsive.css" />
+      <link rel="stylesheet" href="./public/css/news.css" />
       <!-- css -->
       <title>TIN TỨC</title>
    </head>
@@ -22,73 +26,9 @@
       <div id="main">
          <!-- SECTION NEWS -->
          <section class="section menu news">
-            <div class="box-menu">
-               <header class="header">
-                  <h1 class="logo">
-                     <a href="../index.html" class="logo-link">
-                     <img src="../shared/img/logo.png" alt="Logo Cool N Lite" />
-                     </a>
-                  </h1>
-                  <div class="block-menu">
-                     <ul class="list-menu">
-                       <li class="items-menu">
-                           <a class="link-menu" href="./premier.html">Premier Series</a>
-                       </li>
-                       <li class="items-menu">
-                           <a class="link-menu" href="./titanx.html">Titan X Series</a>
-                       </li>
-                       <li class="items-menu">
-                           <a class="link-menu" href="./news.html">News</a>
-                       </li>
-                       <li class="items-menu">
-                           <a class="link-menu" href="./about.html">About Us</a>
-                       </li>
-                     </ul>
-                  </div>
-                  <div class="search-box search-box-desktop">
-                     <input type="text" name="search-text" id="search-text" placeholder="Tìm kiếm" autocomplete="off" />
-                     <button type="submit" id="btn-search">
-                       <i class="far fa-search"></i>
-                     </button>
-                     <div class="result-search" id="result-search">
-                     </div>
-                   </div>
-                  <button class="btn-menu-mobile btn-open fix-color" type="button">
-                  <span>Menu</span>
-                  </button>
-               </header>
-               <div class="modal-menu list-mobile-menu">
-                  <div class="block-close">
-                     <span class="fas fa-times click-close"></span>
-                  </div>
-                  <ul class="list-menu">
-                     <li class="items-menu">
-                        <a class="link-menu" href="../index.html">Home</a>
-                    </li>
-                    <li class="items-menu">
-                        <a class="link-menu" href="./premier.html">Premier Series</a>
-                    </li>
-                    <li class="items-menu">
-                        <a class="link-menu" href="./titanx.html">Titan X Series</a>
-                    </li>
-                    <li class="items-menu">
-                        <a class="link-menu" href="./news.html">News</a>
-                    </li>
-                    <li class="items-menu">
-                        <a class="link-menu" href="./about.html">About Us</a>
-                    </li>
-                  </ul>
-                  <div class="search-box search-box-mobile">
-                     <input type="text" name="search-text" id="search-text" placeholder="Tìm kiếm" autocomplete="off" />
-                     <button type="submit" id="btn-search">
-                       <i class="far fa-search"></i>
-                     </button>
-                     <div class="result-search" id="result-search">
-                     </div>
-                   </div>
-               </div>
-               <div class="modal-background"></div>
-            </div>
+         <?php 
+            require_once('./pages/menu.php');
+         ?> 
          </section>
          <!-- SECTION NEWS -->
          <!-- MAIN NEWS -->
@@ -103,10 +43,10 @@
                   <div class="rows-news">
                      <ul class="col-news">
                         <li class="items-news">
-                           <a class="link-news" href="./post.html">
+                           <a class="link-news" href="./post.php">
                               <article class="posts">
                                  <figure class="box-img fix">
-                                    <img src="../uploads/sieuxe.jpg" alt="Siêu xe">
+                                    <img src="./uploads/sieuxe.jpg" alt="Siêu xe">
                                     <i class="fas fa-eye"></i>
                                  </figure>
                                  <div class="box-content">
@@ -116,7 +56,7 @@
                                     <div class="box-all">
                                        <div class="arthur">
                                           <div class="box-arthur">
-                                             <img src="../uploads/avatar.jpg" alt="Avatar">
+                                             <img src="./uploads/avatar.jpg" alt="Avatar">
                                           </div>
                                           <span class="name">
                                           Võ Đông Thái
@@ -139,7 +79,7 @@
                            <a class="link-news" href="./post.html">
                               <article class="posts">
                                  <figure class="box-img fix">
-                                    <img src="../uploads/sieuxe.jpg" alt="Siêu xe">
+                                    <img src="./uploads/sieuxe.jpg" alt="Siêu xe">
                                     <i class="fas fa-eye"></i>
                                  </figure>
                                  <div class="box-content">
@@ -149,7 +89,7 @@
                                     <div class="box-all">
                                        <div class="arthur">
                                           <div class="box-arthur">
-                                             <img src="../uploads/avatar.jpg" alt="Avatar">
+                                             <img src="./uploads/avatar.jpg" alt="Avatar">
                                           </div>
                                           <span class="name">
                                           Võ Đông Thái
@@ -172,7 +112,7 @@
                            <a class="link-news" href="./post.html">
                               <article class="posts">
                                  <figure class="box-img fix">
-                                    <img src="../uploads/sieuxe.jpg" alt="Siêu xe">
+                                    <img src="./uploads/sieuxe.jpg" alt="Siêu xe">
                                     <i class="fas fa-eye"></i>
                                  </figure>
                                  <div class="box-content">
@@ -182,7 +122,7 @@
                                     <div class="box-all">
                                        <div class="arthur">
                                           <div class="box-arthur">
-                                             <img src="../uploads/avatar.jpg" alt="Avatar">
+                                             <img src="./uploads/avatar.jpg" alt="Avatar">
                                           </div>
                                           <span class="name">
                                           Võ Đông Thái
@@ -205,7 +145,7 @@
                            <a class="link-news" href="./post.html">
                               <article class="posts">
                                  <figure class="box-img fix">
-                                    <img src="../uploads/sieuxe.jpg" alt="Siêu xe">
+                                    <img src="./uploads/sieuxe.jpg" alt="Siêu xe">
                                     <i class="fas fa-eye"></i>
                                  </figure>
                                  <div class="box-content">
@@ -215,7 +155,7 @@
                                     <div class="box-all">
                                        <div class="arthur">
                                           <div class="box-arthur">
-                                             <img src="../uploads/avatar.jpg" alt="Avatar">
+                                             <img src="./uploads/avatar.jpg" alt="Avatar">
                                           </div>
                                           <span class="name">
                                           Võ Đông Thái
@@ -238,7 +178,7 @@
                            <a class="link-news" href="./post.html">
                               <article class="posts">
                                  <figure class="box-img fix">
-                                    <img src="../uploads/sieuxe.jpg" alt="Siêu xe">
+                                    <img src="./uploads/sieuxe.jpg" alt="Siêu xe">
                                     <i class="fas fa-eye"></i>
                                  </figure>
                                  <div class="box-content">
@@ -248,7 +188,7 @@
                                     <div class="box-all">
                                        <div class="arthur">
                                           <div class="box-arthur">
-                                             <img src="../uploads/avatar.jpg" alt="Avatar">
+                                             <img src="./uploads/avatar.jpg" alt="Avatar">
                                           </div>
                                           <span class="name">
                                           Võ Đông Thái
@@ -275,54 +215,12 @@
          </main>
          <!-- MAIN BLOG -->
       </div>
-      <footer class="footer-distributed">
-         <div class="footer-left">
-            <h3><a href="../index.html"><img src="../shared/img/logo.png" alt="Logo Cool N Lite"></a></h3>
-            <p class="footer-links">
-               <a href="../index.html" class="link-1">Home</a>
-               <a href="./premier.html">Premier Series</a>
-               <a href="./titanx.html">Titan X Series</a>
-               <a href="./news.html">News</a>
-               <a href="./about.html">About Us</a>
-            </p>
-            <p class="footer-company-name">Copyright © 2022 by COOL N LITE</p>
-         </div>
-         <div class="footer-center">
-            <div>
-               <i class="fa fa-map-marker"></i>
-               <p><span> Tầng 12, Petroland, 12 Tân Trào, Q.7, TP HCM</span></p>
-            </div>
-            <div>
-               <i class="fa fa-phone"></i>
-               <p class="phone"><a href="tel:+0835 808 858"></a>0835 808 858</p>
-            </div>
-            <div>
-               <i class="fa fa-envelope"></i>
-               <p class="gmail"><a href="mailto:coolnlite@gmail.com"></a>coolnlite@gmail.com</p>
-            </div>
-         </div>
-         <div class="footer-right">
-            <p class="footer-company-about">
-               <span>Về công ty</span>
-               Cool N Lite được thành lập vào năm 2003 cung cấp phim cách nhiệt công nghệ cao và dịch vụ chuyên nghiệp trong lĩnh vực giải pháp kiểm soát nhiệt và chói hiệu suất cao.
-            </p>
-            <div class="footer-icons">
-               <a href="#"><i class="fab fa-facebook"></i></i></a>
-               <a href="#"><i class="fab fa-facebook-messenger"></i></a>
-               <a href="#"><i class="fab fa-google"></i></a>
-            </div>
-         </div>
-      </footer>
-      <button type="button" class="btn-messenger">
-      <a href=""></a>
-      </button>
+      <?php 
+        require_once('./pages/footer.php');
+      ?>
       <!-- javasript -->
-      <script
-         src="https://code.jquery.com/jquery-3.6.0.js"
-         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-         crossorigin="anonymous"
-         ></script>
-      <script src="../public/js/script.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+      <script src="./public/js/script.js"></script>
       <!-- javasript -->
    </body>
 </html>

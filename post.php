@@ -1,3 +1,7 @@
+<?php 
+    require_once('./config/config.php');
+    require_once('./config/dbhelper.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,11 +13,11 @@
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
     <!-- fontawesome -->
     <!-- css -->
-    <link rel="icon" sizes="32x32" href="../shared/img/icon.png">
-    <link rel="stylesheet" href="../public/css/style.css" />
-    <link rel="stylesheet" href="../public/css/reponsive.css" />
-    <link rel="stylesheet" href="../public/css/slider.css">
-    <link rel="stylesheet" href="../public/css/news.css">
+    <link rel="icon" sizes="32x32" href="./shared/img/icon.png">
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="stylesheet" href="./public/css/reponsive.css" />
+    <link rel="stylesheet" href="./public/css/slider.css">
+    <link rel="stylesheet" href="./public/css/news.css">
     <!-- css -->
     <title>BÀI VIẾT</title>
 </head>
@@ -22,58 +26,9 @@
     <div id="main">
         <!-- SETION 1 -->
         <section class="section" id="details">
-            <div class="box-menu">
-                <header class="header">
-                    <h1 class="logo">
-                        <a href="../index.html" class="logo-link">
-                            <img src="../shared/img/logo.png" alt="Logo Cool N Lite" />
-                        </a>
-                    </h1>
-                    <div class="block-menu">
-                        <ul class="list-menu">
-                            <li class="items-menu">
-                                <a class="link-menu" href="../index.html">Home</a>
-                            </li>
-                            <li class="items-menu">
-                                <a class="link-menu" href="./premier.html">Premier Series</a>
-                            </li>
-                            <li class="items-menu">
-                                <a class="link-menu" href="./titanx.html">Titan X Series</a>
-                            </li>
-                            <li class="items-menu">
-                                <a class="link-menu" href="./news.html">News</a>
-                            </li>
-                            <li class="items-menu">
-                                <a class="link-menu" href="./about.html">About Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="block-other"></div>
-                    <button class="btn-menu-mobile btn-open" type="button">
-                        <span>Menu</span>
-                    </button>
-                </header>
-                <div class="modal-menu list-mobile-menu">
-                    <div class="block-close">
-                        <span class="fas fa-times click-close"></span>
-                    </div>
-                    <ul class="list-menu">
-                        <li class="items-menu">
-                            <a class="link-menu" href="./premier.html">Premier Series</a>
-                        </li>
-                        <li class="items-menu">
-                            <a class="link-menu" href="./titanx.html">Titan X Series</a>
-                        </li>
-                        <li class="items-menu">
-                            <a class="link-menu" href="./news.html">News</a>
-                        </li>
-                        <li class="items-menu">
-                            <a class="link-menu" href="./about.html">About Us</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="modal-background"></div>
-            </div>
+        <?php 
+            require_once('./pages/menu.php');
+         ?> 
         </section>
         <!-- SETION 1 -->
         <main class="default-page-width">
@@ -89,7 +44,7 @@
                             <div class="user-info">
                                 <a>
                                     <div class="card-img">
-                                        <img class="users" src="../uploads/avatar.jpg" alt="Người viết">
+                                        <img class="users" src="./uploads/avatar.jpg" alt="Người viết">
                                     </div>
                                     <div class="card-title">
                                         <h6>Chia sẻ bởi</h6>
@@ -111,13 +66,13 @@
                     </div>
                     <div id="content-posts" class="content-posts">
                         <p>
-                            <img src="../uploads/avatar.jpg" alt="hinh ảnh minh họa">
+                            <img src="./uploads/avatar.jpg" alt="hinh ảnh minh họa">
                         </p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,
                             sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae
                             quae. Hic ab dolorum temporibus expedita.</p>
                         <p>
-                            <img src="../uploads/sieuxe.jpg" alt="hinh ảnh minh họa">
+                            <img src="./uploads/sieuxe.jpg" alt="hinh ảnh minh họa">
                         </p>
                     </div>
 
@@ -154,7 +109,7 @@
                         <div class="card-columns">
                             <a href="posts.php?p=trai-nghiem-danh-gia-ios-15-beta">
                                 <div class="card-img">
-                                    <img src="../uploads/sieuxe.jpg" alt="">
+                                    <img src="./uploads/sieuxe.jpg" alt="">
                                 </div>
                                 <div class="card-title">
                                     <h4>
@@ -168,7 +123,7 @@
                                     </p>
                                     <div class="box-users">
                                         <div class="box-img">
-                                            <img src="../uploads/avatar.jpg" alt="Người viết">
+                                            <img src="./uploads/avatar.jpg" alt="Người viết">
                                         </div>
                                         <span>
                                             Võ Đông Thái
@@ -181,7 +136,7 @@
                         <div class="card-columns">
                             <a href="posts.php?p=huong-dan-sua-wifi-bang-cac-cau-lenh-cmd-p-11">
                                 <div class="card-img">
-                                    <img src="../uploads/sieuxe.jpg" alt="">
+                                    <img src="./uploads/sieuxe.jpg" alt="">
                                 </div>
                                 <div class="card-title">
                                     <h4>
@@ -195,7 +150,7 @@
                                     </p>
                                     <div class="box-users">
                                         <div class="box-img">
-                                            <img src="../uploads/avatar.jpg" alt="Người viết">
+                                            <img src="./uploads/avatar.jpg" alt="Người viết">
                                         </div>
                                         <span>
                                             Võ Đông Thái
@@ -208,7 +163,7 @@
                         <div class="card-columns">
                             <a href="posts.php?p=huong-dan-sua-wifi-bang-cac-cau-lenh-cmd-p-12">
                                 <div class="card-img">
-                                    <img src="../uploads/sieuxe.jpg" alt="">
+                                    <img src="./uploads/sieuxe.jpg" alt="">
                                 </div>
                                 <div class="card-title">
                                     <h4>
@@ -222,7 +177,7 @@
                                     </p>
                                     <div class="box-users">
                                         <div class="box-img">
-                                            <img src="../uploads/avatar.jpg" alt="Người viết">
+                                            <img src="./uploads/avatar.jpg" alt="Người viết">
                                         </div>
                                         <span>
                                             Võ Đông Thái
@@ -235,7 +190,7 @@
                         <div class="card-columns">
                             <a href="posts.php?p=huong-dan-sua-wifi-bang-cac-cau-lenh-cmd-p-13">
                                 <div class="card-img">
-                                    <img src="../uploads/sieuxe.jpg" alt="">
+                                    <img src="./uploads/sieuxe.jpg" alt="">
                                 </div>
                                 <div class="card-title">
                                     <h4>
@@ -249,7 +204,7 @@
                                     </p>
                                     <div class="box-users">
                                         <div class="box-img">
-                                            <img src="../uploads/avatar.jpg" alt="Người viết">
+                                            <img src="./uploads/avatar.jpg" alt="Người viết">
                                         </div>
                                         <span>
                                             Võ Đông Thái
@@ -262,7 +217,7 @@
                         <div class="card-columns">
                             <a href="posts.php?p=huong-dan-sua-wifi-bang-cac-cau-lenh-cmd-p-14">
                                 <div class="card-img">
-                                    <img src="../uploads/sieuxe.jpg" alt="">
+                                    <img src="./uploads/sieuxe.jpg" alt="">
                                 </div>
                                 <div class="card-title">
                                     <h4>
@@ -276,7 +231,7 @@
                                     </p>
                                     <div class="box-users">
                                         <div class="box-img">
-                                            <img src="../uploads/avatar.jpg" alt="Người viết">
+                                            <img src="./uploads/avatar.jpg" alt="Người viết">
                                         </div>
                                         <span>
                                             Võ Đông Thái
@@ -289,7 +244,7 @@
                         <div class="card-columns">
                             <a href="posts.php?p=huong-dan-sua-wifi-bang-cac-cau-lenh-cmd-p-15">
                                 <div class="card-img">
-                                    <img src="../uploads/sieuxe.jpg" alt="">
+                                    <img src="./uploads/sieuxe.jpg" alt="">
                                 </div>
                                 <div class="card-title">
                                     <h4>
@@ -303,7 +258,7 @@
                                     </p>
                                     <div class="box-users">
                                         <div class="box-img">
-                                            <img src="../uploads/avatar.jpg" alt="Người viết">
+                                            <img src="./uploads/avatar.jpg" alt="Người viết">
                                         </div>
                                         <span>
                                             Võ Đông Thái
@@ -320,60 +275,13 @@
     </section>
     </main>
     </div>
-    <footer class="footer-distributed">
-        <div class="footer-left">
-            <h3><a href="../index.html"><img src="../shared/img/logo.png" alt="Logo Cool N Lite"></a></h3>
-
-            <p class="footer-links">
-                <a href="../index.html" class="link-1">Home</a>
-                <a href="./premier.html">Premier Series</a>
-                <a href="./titanx.html">Titan X Series</a>
-                <a href="./news.html">News</a>
-                <a href="./about.html">About Us</a>
-            </p>
-
-            <p class="footer-company-name">Copyright © 2022 by COOL N LITE</p>
-        </div>
-
-        <div class="footer-center">
-            <div>
-                <i class="fa fa-map-marker"></i>
-                <p><span> Tầng 12, Petroland, 12 Tân Trào, Q.7, TP HCM</span></p>
-            </div>
-
-            <div>
-                <i class="fa fa-phone"></i>
-                <p class="phone"><a href="tel:+0835 808 858"></a>0835 808 858</p>
-            </div>
-
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p class="gmail"><a href="mailto:coolnlite@gmail.com"></a>coolnlite@gmail.com</p>
-            </div>
-        </div>
-
-        <div class="footer-right">
-            <p class="footer-company-about">
-                <span>Về công ty</span>
-                Cool N Lite được thành lập vào năm 2003 cung cấp phim cách nhiệt công nghệ cao và dịch vụ chuyên nghiệp
-                trong lĩnh vực giải pháp kiểm soát nhiệt và chói hiệu suất cao.
-            </p>
-
-            <div class="footer-icons">
-                <a href="#"><i class="fab fa-facebook"></i></i></a>
-                <a href="#"><i class="fab fa-facebook-messenger"></i></a>
-                <a href="#"><i class="fab fa-google"></i></a>
-            </div>
-        </div>
-    </footer>
-    <button type="button" class="btn-messenger">
-        <a href="tel:+0835 808 858"></a>
-    </button>
+    <?php 
+        require_once('./pages/footer.php');
+    ?>
     <!-- javasript -->
-    <script src="../public/js/slider.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="../public/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="./public/js/slider.js"></script>
+    <script src="./public/js/script.js"></script>
     <!-- javasript -->
 </body>
 

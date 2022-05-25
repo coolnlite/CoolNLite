@@ -1,7 +1,8 @@
 <?php
+ob_start(); 
+session_start();
 require_once('../../config/config.php');
 require_once('../../config/dbhelper.php');
-session_start();
 
 if(isset($_POST['btn-login'])){
     if(isset($_POST['username']) && isset($_POST['password'])){

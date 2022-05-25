@@ -9,19 +9,12 @@
     width: 100%;
   }
 
-  .section.menu .box-menu .header {
+  .section .box-menu header.header {
     padding: 12px 8px 12px 8px;
   }
 
   .menu .box-title-menu .title {
     font-size: 3.4rem;
-  }
-
-  .section.menu {
-    background: url(../../shared/img/modal3-mb.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
   }
 
   .section.built .box-built .box-right-built {
@@ -181,13 +174,19 @@
   .btn-menu-mobile {
     background-color: hsla(0, 0%, 100%, 0.2);
     backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
     min-height: 32px;
     width: 72px;
     border-radius: 12px;
     color: var(--text-color);
   }
-
+  .section.news .box-menu .header .btn-menu-mobile{
+    background-color: rgba(0,0,0,0.05);
+    color: var(--text-color-b);
+  }
+  #details .box-menu .header .btn-menu-mobile{
+    background-color: rgba(0,0,0,0.05);
+    color: var(--text-color-b);
+  }
   .btn-menu-mobile:hover {
     cursor: pointer;
   }

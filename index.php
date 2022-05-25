@@ -1,3 +1,7 @@
+<?php 
+    require_once('./config/config.php');
+    require_once('./config/dbhelper.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,80 +26,9 @@
   <div id="main">
     <!-- SETION 1 -->
     <section class="section menu bg-index-1" id="section-1">
-      <div class="box-menu">
-        <header class="header">
-          <h1 class="logo">
-            <a href="./index.html" class="logo-link">
-              <img src="./shared/img/logo.png" alt="Logo Cool N Lite" />
-            </a>
-          </h1>
-          <div class="block-menu">
-            <ul class="list-menu">
-              <li class="items-menu">
-                <a class="link-menu" href="./pages/premier.html">Premier Series</a>
-              </li>
-              <li class="items-menu">
-                <a class="link-menu" href="./pages/titanx.html">Titan X Series</a>
-              </li>
-              <li class="items-menu">
-                <a class="link-menu" href="./pages/news.html">News</a>
-              </li>
-              <li class="items-menu">
-                <a class="link-menu" href="./pages/about.html">About Us</a>
-              </li>
-              <li class="items-menu">
-                <a class="link-menu" href="./pages/agency.html">Agency</a>
-              </li>
-            </ul>
-          </div>
-          <div class="search-box search-box-desktop">
-            <input type="text" name="search-text" id="search-text" placeholder="Tìm kiếm" autocomplete="off" />
-            <button type="submit" id="btn-search">
-              <i class="far fa-search"></i>
-            </button>
-            <div class="result-search" id="result-search">
-            </div>
-          </div>
-          <button class="btn-menu-mobile btn-open" type="button">
-            <span>Menu</span>
-          </button>
-        </header>
-        <div class="modal-menu list-mobile-menu">
-          <div class="block-close">
-            <span class="fas fa-times click-close"></span>
-          </div>
-
-          <ul class="list-menu">
-            <li class="items-menu">
-              <a class="link-menu" href="./index.html">Home</a>
-            </li>
-            <li class="items-menu">
-              <a class="link-menu" href="./pages/premier.html">Premier Series</a>
-            </li>
-            <li class="items-menu">
-              <a class="link-menu" href="./pages/titanx.html">Titan X Series</a>
-            </li>
-            <li class="items-menu">
-              <a class="link-menu" href="./pages/news.html">News</a>
-            </li>
-            <li class="items-menu">
-              <a class="link-menu" href="./pages/about.html">About Us</a>
-            </li>
-            <li class="items-menu">
-              <a class="link-menu" href="./pages/agency.html">Agency</a>
-            </li>
-          </ul>
-          <div class="search-box search-box-mobile">
-            <input type="text" name="search-text" id="search-text" placeholder="Tìm kiếm" autocomplete="off" />
-            <button type="submit" id="btn-search">
-              <i class="far fa-search"></i>
-            </button>
-            <div class="result-search" id="result-search">
-            </div>
-          </div>
-        </div>
-        <div class="modal-background"></div>
-      </div>
+      <?php 
+        require_once('./pages/menu.php');
+      ?>
       <div class="box-title-menu">
         <h1 class="title">THE TITANIUM FILM</h1>
         <div class="block-bottom">
@@ -354,176 +287,10 @@
     </section>
     <!-- VIDEO  -->
   </div>
-  <!-- FOOTER -->
-  <footer class="footer-distributed">
-    <div class="footer-left">
-      <h3><a href="./index.html"><img src="./shared/img/logo.png" alt="Logo Cool N Lite"></a></h3>
-
-      <p class="footer-links">
-        <a href="./pages/premier.html" class="link-1">Premier Series</a>
-
-        <a href="./pages/titanx.html">Titan X Series</a>
-
-        <a href="./pages/news.html">News</a>
-
-        <a href="./pages/about.html">About Us</a>
-      </p>
-
-      <p class="footer-company-name">Copyright © 2022 by COOL N LITE</p>
-    </div>
-
-    <div class="footer-center">
-      <div>
-        <i class="fa fa-map-marker"></i>
-        <p><span> Tầng 12, Petroland, 12 Tân Trào, Q.7, TP HCM</span></p>
-      </div>
-
-      <div>
-        <i class="fa fa-phone"></i>
-        <p class="phone"><a href="tel:+0835 808 858">0835 808 858</a></p>
-      </div>
-
-      <div>
-        <i class="fa fa-envelope"></i>
-        <p class="gmail"><a href="mailto:coolnlite@gmail.com">coolnlite@gmail.com</a></p>
-      </div>
-    </div>
-
-    <div class="footer-right">
-      <p class="footer-company-about">
-        <span>COOL N LITE - The Titanium Film
-        </span>
-        Phim cách nhiệt COOL N LITE được sản xuất tại các cơ sở sản xuất phim công nghệ cao hàng đầu Hoa Kỳ. Đồng thời
-        được nghiên cứu và phát triển bởi các kỹ sư tài năng nổi tiếng của Nhật để tạo ra phim cách nhiệt siêu cấp, công
-        nghệ Titanium đầu tiên trên thế giới.
-      </p>
-
-      <div class="footer-icons">
-        <a href="#"><i class="fab fa-facebook"></i></i></a>
-        <a href="#"><i class="fab fa-facebook-messenger"></i></a>
-        <a href="#"><i class="fab fa-google"></i></a>
-      </div>
-    </div>
-  </footer>
-  <!-- FOOTER -->
-  <button type="button" class="btn-messenger">
-    <a href="tel:+0835 808 858"></a>
-  </button>
-  <!-- Popup Form -->
-  <div class="modal-form" id="modal-form">
-    <div class="modal-bg-form">
-    </div>
-    <div class="modal-container modal-content">
-      <div class="modal-rows">
-        <section class="box-main-form" id="box-main-form">
-          <header class="header-form">
-            <button type="button" class="txt-left">
-              <span class="fas fa-times"></span>
-            </button>
-            <div class="txt-center">
-              <span>
-                LIÊN HỆ CHÚNG TÔI
-              </span>
-            </div>
-            <button type="button" class="txt-right">
-              <span class="fas fa-times"></span>
-            </button>
-          </header>
-          <form method="POST" id="form-contact" novalidate="novalidate">
-            <div class="title-form">
-              <h3>VUI LÒNG ĐỂ LẠI THÔNG TIN LIÊN HỆ THEO MẪU BÊN DƯỚI</h3>
-            </div>
-            <div class="all-group">
-
-              <div class="form-group">
-                <label class="title" for="fullname">Họ và tên<span> *</span></label>
-                <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Nhập họ và tên"
-                  autocomplete="off">
-              </div>
-
-              <div class="form-group">
-                <label class="title" for="tel">Số điện thoại<span> *</span></label>
-                <input type="text" name="tel" class="form-control" id="tel" placeholder="Nhập số điện thoại">
-              </div>
-
-              <div class="dropdown models form-group">
-                <label class="title">Dòng xe<span> *</span></label>
-                <div class="select-btn">
-                  <span>Vui lòng chọn dữ liệu</span>
-                  <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="content">
-                  <div class="search">
-                    <i class="fas fa-search"></i>
-                    <input spellcheck="false" type="text" placeholder="Tìm kiếm">
-                  </div>
-                  <ul class="options"></ul>
-                </div>
-              </div>
-
-              <div class="dropdown area form-group">
-                <label class="title">Khu vực<span> *</span></label>
-                <div class="select-btn">
-                  <span>Vui lòng chọn dữ liệu</span>
-                  <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="content">
-                  <div class="search">
-                    <i class="fas fa-search"></i>
-                    <input spellcheck="false" type="text" placeholder="Tìm kiếm">
-                  </div>
-                  <ul class="options"></ul>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label class="title" for="password">Tin nhắn</label>
-                <textarea name="messenger" class="form-control" id="messenger"></textarea>
-              </div>
-
-              <button type="submit" class="btn-send btn-submit btn-contact">Gửi Đi <span
-                  class="fas fa-paper-plane"></span></button>
-
-            </div>
-          </form>
-        </section>
-        <section class="notify-box">
-
-          <div class="container-notify" id="success">
-            <div class="box-btn-notify">
-              <button type="button" class="btn-close-notify">
-                <i class="fas fa-times"></i>
-              </button>
-            </div>
-            <div class="box-icons">
-              <i class="fas fa-check"></i>
-            </div>
-            <div class="box-content">
-              <h1>Gửi thông tin thành công</h1>
-              <p>Chúng tôi sẽ liên hệ với bạn sớm nhất</p>
-            </div>
-          </div>
-
-          <div class="container-notify" id="error">
-            <div class="box-btn-notify">
-              <button type="button" class="btn-close-notify">
-                <i class="fas fa-times"></i>
-              </button>
-            </div>
-            <div class="box-icons">
-              <i class="fas fa-times"></i>
-            </div>
-            <div class="box-content">
-              <h1>Gửi thông tin không thành công !</h1>
-              <p>Vui lòng thử lại sau</p>
-            </div>
-          </div>
-
-        </section>
-      </div>
-    </div>
-  </div>
-  <!-- Popup Form -->
+  <?php 
+    require_once('./pages/footer.php');
+    require_once('./pages/popup_form.php');
+  ?>
   <!-- javasript -->
   <script src="./public//js/slider.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="

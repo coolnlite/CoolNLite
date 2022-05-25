@@ -8,7 +8,7 @@
         <?php
             $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
             
-            $sql = "SELECT `url`,`icon`,`name` FROM `sidebar` ";
+            $sql = "SELECT `url`,`icon`,`name` FROM `sidebar` ORDER BY `position` ASC";
             $sidebar = executeResult($sql);
             foreach($sidebar as $sb){
         ?>

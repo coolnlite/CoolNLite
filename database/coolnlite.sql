@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 23, 2022 at 07:13 PM
+-- Generation Time: May 24, 2022 at 06:49 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -20,6 +20,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `coolnlite`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `agency`
+--
+
+CREATE TABLE `agency` (
+  `id` int(11) NOT NULL,
+  `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `address` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
+  `phone` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `time` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -131,7 +145,7 @@ CREATE TABLE `footer` (
   `phone` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `mail` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `title` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `subitle` varchar(350) COLLATE utf8_unicode_ci NOT NULL,
+  `subtitle` varchar(350) COLLATE utf8_unicode_ci NOT NULL,
   `time` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -139,7 +153,7 @@ CREATE TABLE `footer` (
 -- Dumping data for table `footer`
 --
 
-INSERT INTO `footer` (`id`, `copyright`, `address`, `phone`, `mail`, `title`, `subitle`, `time`) VALUES
+INSERT INTO `footer` (`id`, `copyright`, `address`, `phone`, `mail`, `title`, `subtitle`, `time`) VALUES
 (1, 'Copyright © 2022 by COOL N LITE', 'Tầng 12, Petroland, 12 Tân Trào, Q.7, TP HCM', '0835 808 858', 'coolnlite@gmail.com', 'COOL N LITE - The Titanium Film', 'Phim cách nhiệt COOL N LITE được sản xuất tại các cơ sở sản xuất phim công nghệ cao hàng đầu Hoa Kỳ. Đồng thời được nghiên cứu và phát triển bởi các kỹ sư tài năng nổi tiếng của Nhật để tạo ra phim cách nhiệt siêu cấp, công nghệ Titanium đầu tiên trên thế giới.', '2022-05-23 17:12:12');
 
 -- --------------------------------------------------------
@@ -171,6 +185,7 @@ INSERT INTO `keyword` (`id`, `name`) VALUES
 CREATE TABLE `menu` (
   `id` int(11) NOT NULL,
   `name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `url` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `position` int(1) NOT NULL,
   `time` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -179,12 +194,12 @@ CREATE TABLE `menu` (
 -- Dumping data for table `menu`
 --
 
-INSERT INTO `menu` (`id`, `name`, `position`, `time`) VALUES
-(1, 'Premier Series', 0, '2022-05-23 16:54:14'),
-(2, 'Titan X Series', 1, '2022-05-23 16:54:14'),
-(3, 'News', 2, '2022-05-23 16:55:17'),
-(4, 'About Us', 3, '2022-05-23 16:55:17'),
-(5, 'Agency', 4, '2022-05-23 17:01:06');
+INSERT INTO `menu` (`id`, `name`, `url`, `position`, `time`) VALUES
+(1, 'Premier Series', 'premier.php', 0, '2022-05-23 16:54:14'),
+(2, 'Titan X Series', 'titanx.php', 1, '2022-05-23 16:54:14'),
+(3, 'Tin Tức', 'news.php', 2, '2022-05-23 16:55:17'),
+(4, 'Về Chúng Tôi', 'about.php', 3, '2022-05-23 16:55:17'),
+(5, 'Đại Lý', 'agency.php', 4, '2022-05-23 17:01:06');
 
 -- --------------------------------------------------------
 
@@ -261,6 +276,12 @@ INSERT INTO `users` (`id`, `user_name`, `email`, `pass_word`, `position`, `full_
 --
 
 --
+-- Indexes for table `agency`
+--
+ALTER TABLE `agency`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `contact`
 --
 ALTER TABLE `contact`
@@ -284,7 +305,8 @@ ALTER TABLE `keyword`
 --
 ALTER TABLE `menu`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `name` (`name`);
+  ADD UNIQUE KEY `name` (`name`),
+  ADD UNIQUE KEY `url` (`url`);
 
 --
 -- Indexes for table `news`
@@ -316,6 +338,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `agency`
+--
+ALTER TABLE `agency`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `contact`

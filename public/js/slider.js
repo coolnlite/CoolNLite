@@ -2,8 +2,8 @@
 var index = 0;
 var i = 0;
 
-var slider = document.getElementsByClassName('slider');
-var line = document.getElementsByClassName('line');
+var slider = $('.slider');
+var line = $('.line');
 
 auto();
 
@@ -53,8 +53,8 @@ function currentSlide(n){
 var index2 = 0;
 var i2 = 0;
 
-var slider2 = document.getElementsByClassName('slider2');
-var line2 = document.getElementsByClassName('line2');
+var slider2 = $('.slider2');
+var line2 = $('.line2');
 
 auto2();
 
