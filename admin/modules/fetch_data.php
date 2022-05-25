@@ -83,7 +83,7 @@
             <a title="Xem" data-toggle="modal" data-target="#viewNews" href="javascript:void();" data-id="'.$row['id'].'"  class="btn btn-info btn-sm viewBtn" >
             <i class="fas fa-eye"></i>
             </a>
-            <a title="Xem" data-toggle="modal" data-target="#editNews" href="javascript:void();" data-id="'.$row['id'].'"  class="btn btn-warning btn-sm editBtn" >
+            <a title="Sửa" data-toggle="modal" data-target="#editNews" href="javascript:void();" data-id="'.$row['id'].'"  class="btn btn-warning btn-sm editBtn" >
             <i class="fas fa-user-edit"></i>
             </a>
             ';
