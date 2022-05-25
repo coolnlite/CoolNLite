@@ -11,9 +11,10 @@ if (isset($_POST['btn_contact'])) {
         $messenger = mysqli_real_escape_string($conn, $_POST['messenger']);
         $models = mysqli_real_escape_string($conn, $_POST['models']);
         $area = mysqli_real_escape_string($conn, $_POST['area']);
-        
-        $sql = "INSERT INTO `contact` ( `full_name` , `tel`, `models` , `area`, `message`) 
-        VALUES (' $fullname', '$tel' ,'$models','$area' ,'$messenger')";
+        $time = date('Y-m-d H:i:s');
+
+        $sql = "INSERT INTO `contact` ( `full_name` , `tel`, `models` , `area`, `message`,`time`) 
+        VALUES (' $fullname', '$tel' ,'$models','$area' ,'$messenger','$time')";
 
         $result = mysqli_query($conn,$sql);
 

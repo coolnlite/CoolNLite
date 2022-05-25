@@ -1,10 +1,10 @@
 <?php
 if (isset($_SESSION['user_id']) == false) {
 	
-	header('Location: https://coolnlite.000webhostapp.com/admin/');
+	header('Location: http://localhost/CoolNLite/admin');
 }else {
 	$user_id = ($_SESSION['user_id']);
-	$DOMAIN = "https://coolnlite.000webhostapp.com/admin/";
+	$DOMAIN = "http://localhost/CoolNLite/admin/";
 	
 	if (isset($_SESSION['permision']) == true) {
 		
