@@ -36,13 +36,13 @@
 }
 
 main header {
-  padding-top: 45px;
-  margin-bottom: 30px;
+  padding-top: 2em;
+  margin-bottom: 2em;
 }
 
 main header .page-title {
-  font-size: 3em;
-  line-height: 3.4em;
+  font-size: 2.5em;
+  line-height: 2.5em;
 }
 
 main header .page-title a {
@@ -72,6 +72,10 @@ main header .page-title a::before {
 .rows-news .col-news {
   width: 100%;
 }
+#load_news .loader{
+  margin: 0 auto;
+  text-align: center;
+}
 
 .rows-news .col-news .items-news {
   border-bottom: 1px solid var(--border-gray);
@@ -94,18 +98,12 @@ main header .page-title a::before {
 
 .posts {
   display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
   display: -ms-flexbox;
-  /* TWEENER - IE 10 */
   display: -webkit-flex;
-  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   display: flex;
-  /* NEW, Spec - Firefox, Chrome, Opera */
-  justify-content: space-between;
 }
 
 .posts .box-img {
-  width: calc(23% - 1em);
   position: relative;
   text-align: center;
   border-radius: 7px;
@@ -113,10 +111,11 @@ main header .page-title a::before {
 
 .posts .box-img img {
   border-radius: 0.7em;
+  width: 100%;
+  height: 100%;
 }
 
 .posts .box-content {
-  width: 77%;
   padding-left: 1em;
 }
 
@@ -142,13 +141,9 @@ main header .page-title a::before {
 
 .posts .box-content .box-all .arthur {
   display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
   display: -ms-flexbox;
-  /* TWEENER - IE 10 */
   display: -webkit-flex;
-  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   display: flex;
-  /* NEW, Spec - Firefox, Chrome, Opera */
   justify-content: space-between;
   align-items: center;
 }
@@ -169,7 +164,6 @@ main header .page-title a::before {
 
 .posts .box-content .describe {
   font-size: 1.6em;
-  padding-bottom: 1em;
 }
 
 /* PHẦN FIGURE */
@@ -245,7 +239,7 @@ figure.box-img i {
       rgba(2, 126, 251, 1) 100%);
   width: 130px;
   height: 40px;
-  line-height: 42px;
+  line-height: 40px;
   padding: 0;
   border: none;
   font-size: 1.6em;
@@ -337,48 +331,14 @@ figure.box-img i {
   }
 }
 
-@media only screen and (max-width : 480px) {
-  .btn-messenger {
-    right: 1.5em;
-    bottom: 1.5em;
-  }
-
-  main header .page-title {
-    font-size: 2.5em;
-    line-height: 2.5em;
-  }
-
-  .posts .box-content h3 {
-    font-size: 2em;
-  }
-
-  .posts .box-content .describe {
-    font-size: 1.5em;
-  }
-}
-
 @media only screen and (max-width: 600px) {
-  .posts {
-    display: block;
-  }
-
   .container {
     width: 100%;
     padding: 0 1em;
   }
 
-  .posts .box-img {
-    width: 100% !important;
-  }
-
-  .posts .box-content {
-    width: 100%;
-    padding-top: 1em;
-    padding-left: 0em;
-  }
-
   main header {
-    padding-top: 2em;
+    padding-top: 0em;
     margin-bottom: 0em;
   }
 
@@ -387,16 +347,75 @@ figure.box-img i {
   }
 
 }
+@media only screen and (max-width: 480px){
+  .btn-messenger {
+    right: 1.5em;
+    bottom: 1.5em;
+  }
 
-@media only screen and (max-width: 768px) {
-  .posts .box-img {
-    width: calc(30% - 1em);
+  main header .page-title {
+    font-size: 2em;
+    line-height: 2em;
+  }
+
+  .posts .box-content h3 {
+    font-size: 2em;
+  }
+
+  .posts .box-content .describe {
+    font-size: 1.4em;
+  }
+  #news-list{
+    padding-bottom: 3em;
+  }
+  .limit-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .posts figure.box-img {
+    width: 160px;
+    height: 120px;
+  }
+  .posts div.box-content {
+    width: calc(100% - 160px);
+  }
+  .rows-news .col-news .items-news{
+    padding: 1em 0;
+  }
+  .posts .box-content .box-all{
+    padding-right: 0em;
+    padding-bottom: 0.5em;
+  }
+  .posts .box-content .box-all .arthur .name{
+    padding-left: 0.5em;
+  }
+  .posts .box-content h3{
+    font-size: 1.8em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 0.5em;
   }
 }
-
-@media only screen and (min-width: 769px) and (min-width: 920px) {
+@media only screen and (max-width: 767px){
   .posts .box-img {
-    width: calc(27% - 1em);
+    width: 180px;
+    height: 160px;
+  }
+  .posts .box-content {
+    width: calc(100% - 180px);
+  }
+}
+@media only screen and (min-width: 768px){
+  .posts .box-img {
+    width: 240px;
+    height: 160px;
+  }
+  .posts .box-content{
+    width: calc(100% - 240px);
   }
 }
 
@@ -622,7 +641,6 @@ main.default-page-width {
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 1.6em;
-  padding-top: .5em;
   text-align: justify;
   color: #000;
 }
