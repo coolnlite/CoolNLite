@@ -605,8 +605,8 @@ main.default-page-width {
 }
 
 .wrapper .card-columns {
-  max-width: 30em;
-  max-height: 30em;
+  width: 30em;
+  height: 30em;
 }
 
 .wrapper .card-columns a {

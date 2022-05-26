@@ -135,168 +135,50 @@
                         </div>
                     </nav>
                     <div class="wrapper">
+                    <?php
+                        $row = 6;
+                        $posts = $posts[0]['id'];
+                        $sql = "SELECT * FROM `news` WHERE `url` != $posts
+                         ORDER BY RAND() LIMIT 0, $row ";
+                        $posts = executeResult($sql);
+                        foreach($posts as $ps){
+                    ?>
                         <div class="card-columns">
-                            <a href="posts.php?p=trai-nghiem-danh-gia-ios-15-beta">
+                            <a href="posts.php?url=<?php echo ''.$ps['url'].''?>">
                                 <div class="card-img">
-                                    <img src="./uploads/sieuxe.jpg" alt="">
+                                    <img src=".<?php echo ''.$ps['thumnail'].''?>" alt="">
                                 </div>
                                 <div class="card-title">
                                     <h4>
-                                        Trải nghiệm đánh giá iOS 15 Beta 2: Đã có bản Public Beta cho người dùng
-                                        cập nhật miễn phí, bổ sung thêm tính năng mới
+                                    <?php echo ''.$ps['title'].''?>
                                     </h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur magnam aut
-                                        placeat fugiat omnis esse illum labore quisquam. Saepe numquam aliquid cum
-                                        veritatis modi dolorem quos consequuntur illum dolorum totam.
+                                    <?php echo ''.$ps['description'].''?>
                                     </p>
                                     <div class="box-users">
+                                    <?php
+                                        $id_users = $ps['id_user'];
+                                        $sql = "SELECT `full_name`, `image` FROM users WHERE id = '$id_users'";
+                                        $users = executeResult($sql);
+                                        foreach($users as $us){
+                                        ?>
                                         <div class="box-img">
-                                            <img src="./uploads/avatar.jpg" alt="Người viết">
+                                            <img src=".<?php echo ''.$us['image'].''?>" alt="Người viết">
                                         </div>
                                         <span>
-                                            Võ Đông Thái
+                                            <?php echo ''.$us['full_name'].''?>
                                         </span>
+                                        <?php
+                                            }//Kết thúc vòng lặp users
+                                        ?>
                                     </div>
                                 </div>
 
                             </a>
                         </div>
-                        <div class="card-columns">
-                            <a href="posts.php?p=huong-dan-sua-wifi-bang-cac-cau-lenh-cmd-p-11">
-                                <div class="card-img">
-                                    <img src="./uploads/sieuxe.jpg" alt="">
-                                </div>
-                                <div class="card-title">
-                                    <h4>
-                                        Hướng dẫn cách sửa WiFi laptop bằng các câu lệnh, giúp bạn biết rõ
-                                        nguyên nhân gây ra lỗi kết nối từ đâu
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur magnam aut
-                                        placeat fugiat omnis esse illum labore quisquam. Saepe numquam aliquid cum
-                                        veritatis modi dolorem quos consequuntur illum dolorum totam.
-                                    </p>
-                                    <div class="box-users">
-                                        <div class="box-img">
-                                            <img src="./uploads/avatar.jpg" alt="Người viết">
-                                        </div>
-                                        <span>
-                                            Võ Đông Thái
-                                        </span>
-                                    </div>
-                                </div>
-
-                            </a>
-                        </div>
-                        <div class="card-columns">
-                            <a href="posts.php?p=huong-dan-sua-wifi-bang-cac-cau-lenh-cmd-p-12">
-                                <div class="card-img">
-                                    <img src="./uploads/sieuxe.jpg" alt="">
-                                </div>
-                                <div class="card-title">
-                                    <h4>
-                                        Hướng dẫn cách sửa WiFi laptop bằng các câu lệnh, giúp bạn biết rõ
-                                        nguyên nhân gây ra lỗi kết nối từ đâu
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur magnam aut
-                                        placeat fugiat omnis esse illum labore quisquam. Saepe numquam aliquid cum
-                                        veritatis modi dolorem quos consequuntur illum dolorum totam.
-                                    </p>
-                                    <div class="box-users">
-                                        <div class="box-img">
-                                            <img src="./uploads/avatar.jpg" alt="Người viết">
-                                        </div>
-                                        <span>
-                                            Võ Đông Thái
-                                        </span>
-                                    </div>
-                                </div>
-
-                            </a>
-                        </div>
-                        <div class="card-columns">
-                            <a href="posts.php?p=huong-dan-sua-wifi-bang-cac-cau-lenh-cmd-p-13">
-                                <div class="card-img">
-                                    <img src="./uploads/sieuxe.jpg" alt="">
-                                </div>
-                                <div class="card-title">
-                                    <h4>
-                                        Hướng dẫn cách sửa WiFi laptop bằng các câu lệnh, giúp bạn biết rõ
-                                        nguyên nhân gây ra lỗi kết nối từ đâu
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur magnam aut
-                                        placeat fugiat omnis esse illum labore quisquam. Saepe numquam aliquid cum
-                                        veritatis modi dolorem quos consequuntur illum dolorum totam.
-                                    </p>
-                                    <div class="box-users">
-                                        <div class="box-img">
-                                            <img src="./uploads/avatar.jpg" alt="Người viết">
-                                        </div>
-                                        <span>
-                                            Võ Đông Thái
-                                        </span>
-                                    </div>
-                                </div>
-
-                            </a>
-                        </div>
-                        <div class="card-columns">
-                            <a href="posts.php?p=huong-dan-sua-wifi-bang-cac-cau-lenh-cmd-p-14">
-                                <div class="card-img">
-                                    <img src="./uploads/sieuxe.jpg" alt="">
-                                </div>
-                                <div class="card-title">
-                                    <h4>
-                                        Hướng dẫn cách sửa WiFi laptop bằng các câu lệnh, giúp bạn biết rõ
-                                        nguyên nhân gây ra lỗi kết nối từ đâu
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur magnam aut
-                                        placeat fugiat omnis esse illum labore quisquam. Saepe numquam aliquid cum
-                                        veritatis modi dolorem quos consequuntur illum dolorum totam.
-                                    </p>
-                                    <div class="box-users">
-                                        <div class="box-img">
-                                            <img src="./uploads/avatar.jpg" alt="Người viết">
-                                        </div>
-                                        <span>
-                                            Võ Đông Thái
-                                        </span>
-                                    </div>
-                                </div>
-
-                            </a>
-                        </div>
-                        <div class="card-columns">
-                            <a href="posts.php?p=huong-dan-sua-wifi-bang-cac-cau-lenh-cmd-p-15">
-                                <div class="card-img">
-                                    <img src="./uploads/sieuxe.jpg" alt="">
-                                </div>
-                                <div class="card-title">
-                                    <h4>
-                                        Hướng dẫn cách sửa WiFi laptop bằng các câu lệnh, giúp bạn biết rõ
-                                        nguyên nhân gây ra lỗi kết nối từ đâu
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur magnam aut
-                                        placeat fugiat omnis esse illum labore quisquam. Saepe numquam aliquid cum
-                                        veritatis modi dolorem quos consequuntur illum dolorum totam.
-                                    </p>
-                                    <div class="box-users">
-                                        <div class="box-img">
-                                            <img src="./uploads/avatar.jpg" alt="Người viết">
-                                        </div>
-                                        <span>
-                                            Võ Đông Thái
-                                        </span>
-                                    </div>
-                                </div>
-
-                            </a>
-                        </div>
+                    <?php
+                        }//Kết thúc vòng lặp posts
+                    ?>
                     </div>
                 </div>
                 <!-- Kết thúc phần tin khác -->
