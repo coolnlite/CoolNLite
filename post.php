@@ -111,7 +111,7 @@
                             ?>
                             <li class="tag-items">
                                 
-                                <a href="tag.php?keyword=<?php
+                                <a href="tag.php?id=<?php echo ''.$kw['id'].''?>&keyword=<?php
                                     echo str_replace(' ', '+', $kw['name']);
                                 ?>">
                                     <?php echo ''.$kw['name'].''?>
