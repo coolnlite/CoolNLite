@@ -8,7 +8,7 @@ $(document).ready(function () {
                           </path>\
                       </svg>\
                   </div>';
-
+    //Load more news
     $(document).on("click", ".btn-news", function () {
         var row = Number($("#load_news .row").data("row"));
         var allcount = Number($("#load_news .allcount").data("allcount"));
@@ -66,4 +66,5 @@ $(document).ready(function () {
             }, 500);
         }
     });
+
 })
