@@ -49,19 +49,28 @@
                   <h1 class="page-title"><a href="./news.php"><?php print $keyword ?></a></h1>
                </div>
             </header>
+            <?php
+               $sql = "SELECT * FROM `news_keyword` WHERE `id_tag` = '$id_keyword'";
+               $result = mysqli_query($conn, $sql);
+               $news_keyword = executeResult($sql);
+               foreach($news_keyword as $nk){
+                     $id_news = $nk['id_news'];
+                  }
+               ?>
             <section id="news-list">
                <div class="container">
                   <div class="rows-news">
-                     <ul class="col-news" id="load_news">
+                     <ul class="col-news" id="load_news_tag">
                         <?php
                            $rowperpage = 5;
-                           $sql = "SELECT count(*) AS allcount FROM `news`";
+                           $sql = "SELECT count(*) AS allcount FROM `news` WHERE `id` = $id_news";
                            $fetch = executeResult($sql);
                            $allcount = $fetch[0]['allcount'];
                            $sql = "SELECT * FROM  `news` ORDER BY `id` DESC LIMIT 0, $rowperpage";
                            $news = executeResult($sql);
                            $count = count($news);
                            foreach($news as $ns) {
+                              
                         ?>
                         <li class="items-news news">
                            <a class="link-news" href="./post.php?url=<?php echo ''.$ns['url'].''?>">

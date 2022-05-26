@@ -22,12 +22,15 @@
   background: var(--text-color);
 }
 
-.section.menu.news .box-menu .header .search-box-desktop {
+.section.menu.news .box-menu .header .search-box-desktop,
+#details .box-menu .header .search-box-desktop{
   box-shadow: 0px 0px 1px 1px var(--color-form);
 }
 
 .section.menu.news .box-menu .header .search-box-desktop:focus,
-.section.menu.news .box-menu .header .search-box-desktop:hover {
+.section.menu.news .box-menu .header .search-box-desktop:hover,
+#details .box-menu .header .search-box-desktop:focus,
+#details .box-menu .header .search-box-desktop:hover{
   box-shadow: 0px 0px 1px 1px var(--color-blue);
 }
 
