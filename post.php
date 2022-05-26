@@ -144,7 +144,7 @@
                         foreach($posts as $ps){
                     ?>
                         <div class="card-columns">
-                            <a href="posts.php?url=<?php echo ''.$ps['url'].''?>">
+                            <a href="post.php?url=<?php echo ''.$ps['url'].''?>">
                                 <div class="card-img">
                                     <img src=".<?php echo ''.$ps['thumnail'].''?>" alt="">
                                 </div>

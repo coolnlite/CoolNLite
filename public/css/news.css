@@ -400,6 +400,13 @@ figure.box-img i {
     margin-bottom: 0.5em;
   }
 }
+@media only screen and (min-width: 481px) and (max-width: 767px){
+  div.wrapper{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 2em 0em 1.25em 0em;
+  }
+}
 @media only screen and (max-width: 767px){
   .posts .box-img {
     width: 180px;
@@ -600,19 +607,22 @@ main.default-page-width {
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 1em;
   margin: 4em 0em 1.25em 0em;
-  align-items: center;
   justify-items: center;
 }
-
-.wrapper .card-columns {
-  width: 30em;
-  height: 30em;
+.wrapper .card-columns{
+  width: 240px;
+  height: 200px;
 }
-
+.wrapper .card-columns .card-img{
+  width: 240px;
+  height: 140px;
+}
 .wrapper .card-columns a {
   color: #2c3642;
 }
-
+.wrapper .card-columns .card-title{
+  padding-top: .5em;
+}
 .wrapper .card-columns a:hover .card-title h4 {
   color: var(--color-blue);
 }
@@ -624,6 +634,8 @@ main.default-page-width {
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .wrapper .card-columns a:hover .card-img>img {
@@ -635,12 +647,12 @@ main.default-page-width {
 }
 
 .wrapper .card-columns .card-title h4 {
-  font-weight: 700;
+  font-weight: 300;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  font-size: 1.6em;
+  font-size: 1.5em;
   text-align: justify;
   color: #000;
 }
@@ -685,7 +697,14 @@ main.default-page-width {
   font-size: 1em;
   color: var(--color-txt);
 }
-
+@media only screen and (min-width : 481px){
+  .wrapper .card-columns .card-title .box-users{
+    display: none;
+  }
+  .wrapper .card-columns .card-title p{
+    display: none;
+  }
+}
 @media only screen and (max-width : 480px) {
   .posts-main .posts-top .posts-heading h1 {
     font-size: 2em;
@@ -738,8 +757,8 @@ main.default-page-width {
   }
 
   .wrapper .card-columns {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
   }
 
   .wrapper .card-columns a {
@@ -748,16 +767,19 @@ main.default-page-width {
   }
 
   .wrapper .card-columns a .card-img {
-    width: 50%;
+    width: 40%;
+    height: 130px;
   }
 
   .wrapper .card-columns a .card-title {
-    width: 50%;
+    padding-top: 0em;
+    width: 60%;
     padding-left: 1em;
   }
 
   .wrapper .card-columns .card-title h4 {
     font-size: 1.4em;
+    font-weight: 500;
   }
 
   /*--- PHẦN ORTHER NEWS ---*/
