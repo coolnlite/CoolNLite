@@ -1,6 +1,7 @@
 <?php 
     require_once('./config/config.php');
     require_once('./config/dbhelper.php');
+    require_once('./admin/modules/function.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +32,14 @@
          ?> 
         </section>
         <!-- SETION 1 -->
+        <?php
+            $posts = $_GET['url'] = !"" ? mysqli_real_escape_string($conn, $_GET['url']) : '';
+            $sql = "SELECT * FROM `news` WHERE `url` = '$posts'";
+            $result = mysqli_query($conn, $sql);
+            $rowcount = mysqli_num_rows($result);
+        ?>
+        <?php if ($rowcount != 0) { // Kiểm tra có bài viết này không 
+        ?>
         <main class="default-page-width">
             <section class="tag-main">
                 <div class="posts-main">
@@ -38,7 +47,8 @@
                         <div class="posts-heading">
                             <h1>
                                 Trải nghiệm đánh giá iOS 15 Beta 2: Đã có bản Public Beta cho người dùng cập
-                                nhật miễn phí, bổ sung thêm tính năng mới </h1>
+                                nhật miễn phí, bổ sung thêm tính năng mới 
+                            </h1>
                         </div>
                         <div class="posts-user">
                             <div class="user-info">
@@ -274,6 +284,11 @@
     </div>
     </section>
     </main>
+    <?php
+        }else{
+            require_once('./error_404.php');
+        }
+    ?>
     </div>
     <?php 
         require_once('./pages/footer.php');

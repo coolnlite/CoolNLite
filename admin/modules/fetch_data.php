@@ -66,7 +66,7 @@
             $sub_array = array();
             $sub_array[] = $row['id'];
             $sub_array[] = $row['url'];
-            $sub_array[] = $row['thumnail'];
+            $sub_array[] = '<img src="..'.$row['thumnail'].'" alt="">';
             $sub_array[] = $row['title'];
             $sub_array[] = $row['description'];
             $sub_array[] = $row['view'] ;
