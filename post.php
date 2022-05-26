@@ -42,48 +42,53 @@
         ?>
         <main class="default-page-width">
             <section class="tag-main">
+                <?php
+                    $sql = "SELECT * FROM `news` WHERE `url` = '$posts'";
+                    $posts = executeResult($sql);
+                    foreach($posts as $ps){
+                ?>
                 <div class="posts-main">
                     <div class="posts-top">
                         <div class="posts-heading">
                             <h1>
-                                Trải nghiệm đánh giá iOS 15 Beta 2: Đã có bản Public Beta cho người dùng cập
-                                nhật miễn phí, bổ sung thêm tính năng mới 
+                               <?php echo ''.$ps['title'].''?>
                             </h1>
                         </div>
                         <div class="posts-user">
                             <div class="user-info">
+                            <?php
+                                $id_users = $ps['id_user'];
+                                $sql = "SELECT `full_name`, `image` FROM users WHERE id = '$id_users'";
+                                $users = executeResult($sql);
+                                foreach($users as $us){
+                            ?>
                                 <a>
                                     <div class="card-img">
-                                        <img class="users" src="./uploads/avatar.jpg" alt="Người viết">
+                                        <img class="users" src=".<?php echo ''.$us['image'].''?>" alt="Người viết">
                                     </div>
                                     <div class="card-title">
                                         <h6>Chia sẻ bởi</h6>
-                                        <h3>Võ Đông Thái</h3>
+                                        <h3><?php echo ''.$us['full_name'].''?></h3>
                                     </div>
                                 </a>
+                                <?php
+                                 }
+                                ?>
                             </div>
 
                             <div class="users-time">
                                 <h5>
-                                    Đăng lúc<span>
-                                        15:10 26-10-2021 </span>
+                                    Ngày đăng :<span>
+                                    <?php echo ''.date_format_vn($ps['time']).''?></span>
                                 </h5>
                                 <span class="view">
                                     <i class="far fa-eye"></i>
-                                    0 </span>
+                                    <?php echo ''.$ps['view'].''?></span>
                             </div>
                         </div>
                     </div>
                     <div id="content-posts" class="content-posts">
-                        <p>
-                            <img src="./uploads/avatar.jpg" alt="hinh ảnh minh họa">
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,
-                            sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae
-                            quae. Hic ab dolorum temporibus expedita.</p>
-                        <p>
-                            <img src="./uploads/sieuxe.jpg" alt="hinh ảnh minh họa">
-                        </p>
+                        <?php echo ''.$ps['content'].''?>
                     </div>
 
                     <div class="tag-box">
@@ -92,27 +97,41 @@
                                 <span class="fas fa-tags"></span>
                                 <span class="keyword">Từ khóa :</span>
                             </li>
+                            <?php
+                                $id_posts = $ps['id'];
+                                $sql = "SELECT `id_news`, `id_tag` FROM `news_keyword` WHERE id_news = '$id_posts'";
+                                $news_keyword = executeResult($sql);
+                                foreach( $news_keyword as $nk){
+                            ?>
+                            <?php
+                                $id_tag = $nk['id_tag'];
+                                $sql = "SELECT `id`, `name` FROM `keyword` WHERE id = '$id_tag'";
+                                $keyword = executeResult($sql);
+                                foreach($keyword as $kw){
+                            ?>
                             <li class="tag-items">
-                                <a href="tag.php?keyword=windows">
-                                    Windows </a>
+                                
+                                <a href="tag.php?keyword=<?php
+                                    echo str_replace(' ', '+', $kw['name']);
+                                ?>">
+                                    <?php echo ''.$kw['name'].''?>
+                                </a>
                             </li>
-                            <li class="tag-items">
-                                <a href="tag.php?keyword=hot-face">
-                                    Hot face </a>
-                            </li>
-                            <li class="tag-items">
-                                <a href="tag.php?keyword=ios">
-                                    Ios </a>
-                            </li>
+                            <?php
+                                }//Kết thúc vòng lặp keyword
+                            }//Kết thúc vòng lặp news_keyword
+                            ?>
                         </ul>
                     </div>
                 </div>
-
+                <?php
+                    }//Kết thúc vòng lặp posts
+                ?>
                 <!-- Phần tin khác -->
                 <div class="other-news-box">
                     <nav class="title-items">
                         <div class="heading-title">
-                            <h3>Bài viết cùng thể loại</h3>
+                            <h3>Bài viết khác</h3>
                         </div>
                     </nav>
                     <div class="wrapper">
