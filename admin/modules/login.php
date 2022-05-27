@@ -9,9 +9,10 @@ if(isset($_POST['btn-login'])){
         $username = mysqli_real_escape_string($conn, $_POST['username']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
         $password = md5($password);
+        $on = 1;
 
-        $sql = "SELECT `id`,`position` FROM `users` WHERE `user_name` = '$username' and `pass_word` = '$password' 
-        || `email` = '$username' and `pass_word` = '$password'";
+        $sql = "SELECT `id`,`position` FROM `users` WHERE `user_name` = '$username' and `pass_word` = '$password' and `status` = $on
+        || `email` = '$username' and `pass_word` = '$password' and `status` = $on";
 
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
