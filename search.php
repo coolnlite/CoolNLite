@@ -6,10 +6,6 @@
    if(isset($_GET['search_query'])){
         $search_query = $_GET['search_query'] = !"" ? mysqli_real_escape_string($conn, $_GET['search_query']) : '';
         $search_query = str_replace('+', ' ', $search_query);
-    
-      if(isset($rowcount) &&  $rowcount == 0) {
-         require_once('./error_404.php');
-      }
    }else{
       require_once('./error_404.php');
    }

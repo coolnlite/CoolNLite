@@ -206,7 +206,7 @@ $('#search-txt').keypress(function(event){
   });
 
   $(document).on("click", "#btn-search-mb", function () {
-    $text_mb = $('#search-tet').val();
+    $text_mb = $('#search-txt').val();
     
     if($text_mb.replace(/\s/g, "").length <= 0){
 

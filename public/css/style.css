@@ -326,7 +326,7 @@ textarea {
     transition: all 0.5s;
     border-radius: 5px;
     overflow-y: scroll;
-    box-shadow: 0px 0px 1px 1px var(--color-txt);
+    box-shadow: 0px 0px 1px 1px var(--color-form);
     display: none;
 }
 .result-search-mb .card-search{
