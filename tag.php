@@ -65,9 +65,67 @@
             <section id="news-list">
                <div class="container">
                   <div class="rows-news">
-                     <ul class="col-news" id="load_news_tag" 
-                     data-id-keyword = "<?php print $id_keyword ?>" data-keyword="<?php print $keyword ?>">
-                        
+                     <ul class="col-news" id="load_news_tag">
+                        <?php 
+                           $sql = "SELECT * FROM news_keyword WHERE id_tag = $id_keyword";
+                           $news_keyword = executeResult($sql);
+                           foreach($news_keyword as $nk){
+                              $id_news = $nk['id_news'];
+                        ?>
+                        <?php
+                            $sql = "SELECT * FROM  `news` WHERE id = $id_news  ORDER BY `id` DESC";
+                            $news = executeResult($sql);
+                            foreach($news as $ns) {
+                        ?>
+                        <li class="items-news news">
+                           <a class="link-news" href="./post.php?url=<?php echo ''.$ns['url'].''?>">
+                              <article class="posts">
+                                 <figure class="box-img fix">
+                                    <img src=".<?php echo ''.$ns['thumnail'].''?>" alt="ảnh đại điện">
+                                    <i class="fas fa-eye"></i>
+                                 </figure>
+                                 <div class="box-content">
+                                    <h3 class="limit-2">
+                                       <?php echo ''.$ns['title'].''?>
+                                    </h3>
+                                    <div class="box-all">
+                                       <div class="arthur">
+                                          <?php
+                                             $id_users = $ns['id_user'];
+                                             $sql = "SELECT `full_name`, `image` FROM users WHERE id = '$id_users'";
+                                             $users = executeResult($sql);
+                                             foreach($users as $us){
+
+                                          ?>
+                                          <div class="box-arthur">
+                                             <img src=".<?php echo ''.$us['image'].''?>" alt="Avatar">
+                                          </div>
+                                          <span class="name">
+                                             <?php echo ''.$us['full_name'].''?>
+                                          </span>
+                                          <?php
+                                            } 
+                                          ?>
+                                       </div>
+                                       <div class="time-ago">
+                                          <span>
+                                             <?php echo ''.facebook_time_ago($ns['time']).''?>
+                                          </span>
+                                       </div>
+                                    </div>
+                                    <div class="describe">
+                                       <p class="limit-3">
+                                       <?php echo ''.$ns['description'].''?>
+                                       </p>
+                                    </div>
+                                 </div>
+                              </article>
+                           </a>
+                        </li>
+                        <?php
+                            }//Kết thúc vòng lặp news
+                           }//Kết thúc vòng lặp news_keyword
+                        ?>
                      </ul>
                   </div>
                </div>
@@ -80,7 +138,6 @@
       ?>
       <!-- javasript -->
       <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-      <script src="./public/js/pagination.js"></script>
       <script src="./public/js/script.js"></script>
       <!-- javasript -->
    </body>
