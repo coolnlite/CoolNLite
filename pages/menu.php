@@ -23,6 +23,9 @@
             <button type="submit" id="btn-search">
               <i class="far fa-search"></i>
             </button>
+            <button class="clean-txt">
+              <span class="fas fa-times"></span>
+            </button>
             <div class="result-search" id="result-search">
             </div>
           </div>

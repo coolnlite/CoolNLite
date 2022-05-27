@@ -143,6 +143,7 @@ textarea {
     vertical-align: middle;
     margin: 0 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .pagination .page-item.active {
@@ -176,7 +177,20 @@ textarea {
     font-size: 1.1em;
     position: relative;
 }
-
+.search-box .clean-txt{
+    position: absolute;
+    right: 35px;
+    top: 0;
+    width: 20px;
+    height: 30px;
+    color: var(--text-color-b);
+    outline: 0;
+    background-color: var(--text-color);
+    cursor: pointer;
+}
+.search-box .clean-txt span{
+   font-size: 16px;
+}
 .search-box #search-text {
     flex: 1;
 }
@@ -236,6 +250,7 @@ textarea {
     color: var(--text-color-b);
     font-size: 14px;
     height: 80px;
+    cursor: pointer;
 }
 .result-search .card-columns:last-child a{
     height: 70px;

@@ -46,7 +46,7 @@
                <div class="container">
                   <h1 class="page-title">
                      <a href="./search.php?search_query=<?php print str_replace(' ', '+', $search_query)?>">
-                        <?php print $search_query?>
+                      Tìm kiếm :  <?php print $search_query?>
                     </a>
                   </h1>
                </div>

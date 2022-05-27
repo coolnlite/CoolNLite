@@ -222,6 +222,7 @@
   ?>
   <!-- javasript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="./public/js/form.js"></script>
   <script src="./public/js/slider.js"></script>
   <script src="./public/js/script.js"></script>
   <!-- javasript -->
