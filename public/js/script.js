@@ -140,3 +140,53 @@ searchInpArea.addEventListener("keyup", () => {
 });
 
 selectBtnArea.addEventListener("click", () => wrapperArea.classList.toggle("active"));
+
+$(document).ready(function(){
+  //Phần search thường
+$('#search-text').keypress(function(event){
+  var keycode = (event.keyCode ? event.keyCode : event.which);
+  if (keycode == '13') {
+    $text = $('#search-text').val();
+    if($text.replace(/\s/g, "").length <= 0){
+
+    }else{
+      $text = $text.replace(/\s/g,'+');
+      window.location.href = 'search.php?search_query=' + $text;
+    }
+  }
+  });
+
+  $(document).on("click", "#btn-search", function () {
+    $text = $('#search-text').val();
+    
+    if($text.replace(/\s/g, "").length <= 0){
+
+    }else{
+      $text = $text.replace(/\s/g,'+');
+      window.location.href = 'search.php?search_query=' + $text;
+    }
+  });
+
+  //Kết thúc search thường
+
+  $("#search-text").keyup(function () {
+    $text = $(this).val();
+    $result = $("#result-search");
+
+    if ($text != "") {
+      $.ajax({
+        type: "POST",
+        url: "modules/result.php",
+        data: {
+          text: $text,
+        },
+        success: function (data) {
+          $result.html(data);
+          $result.css("display", "block");
+        },
+      });
+    } else {
+      $result.css("display", "none");
+    }
+  });
+})

@@ -213,12 +213,11 @@ textarea {
 /*--- Search result ---*/
 .result-search {
     position: absolute;
-    width: 100%;
+    width: 200%;
     overflow: hidden;
     max-height: 340px;
     background-color: var(--text-color);
-    top: 47.5px;
-    left: 0;
+    top: 40px;
     right: 0;
     z-index: 33;
     transition: all 0.5s;
@@ -227,32 +226,34 @@ textarea {
 }
 
 .result-search .card-columns {
-    height: 110px;
     padding: 0px 10px;
+    height: 70px;
 }
 
 .result-search .card-columns a {
-    height: 110px;
     border-bottom: 1px solid #eee;
     display: flex;
-    justify-content: space-between;
     padding: 10px 0px;
+    color: var(--text-color-b);
+    font-size: 14px;
 }
-
-.result-search .card-columns .card-img {
-    width: 27%;
+.result-search .card-columns .card-img{
+    width: 60px;
+    height: 60px;
 }
-
-.result-search .card-columns .card-img img {
-    border-radius: 7px;
-}
-
 .result-search .card-columns .card-title {
-    width: calc(73% - 0.625em);
+    width: calc(100% - 60px);
+    padding-left: 1em;
     text-align: justify;
 }
-
+.result-search .card-columns .card-title h5{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 .result-search .not-data {
+    font-size: 1.4em;
     color: red;
     padding: 10px;
 }
@@ -278,7 +279,9 @@ textarea {
 }
 
 /*--- Search result ---*/
+/*--- SEARCH BOX MOBILE ---*/
 
+/*--- SEARCH BOX MOBILE ---*/
 /***--- START SECTION 1 ---***/
 
 .section.menu.bg-index-1 {
@@ -904,7 +907,6 @@ a.btn-up {
 
 .list-mobile-menu .list-menu {
     padding: 2em;
-    border-bottom: 1px solid var(--color-blue);
 }
 
 .list-mobile-menu .block-close {
