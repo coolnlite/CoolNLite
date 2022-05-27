@@ -12,16 +12,10 @@ if (
     $id_keyword = mysqli_real_escape_string($conn, $_POST['id_keyword']);
     $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
     
-    $sql = "SELECT * FROM `news_keyword` WHERE id_tag = $id_keyword";
-    $news_keyword = executeResult($sql);
-    foreach($news_keyword as $nk){
-        $id_news = $nk['id_news'];
-    }
-    
-    $sql = "SELECT count(*) AS allcount FROM `news` WHERE id = $id_news";
-    $fetch = executeResult($sql);
-    $total_record = $fetch[0]['allcount'];
-
+    $sql = "SELECT count(id_news_tag) AS total FROM `news_keyword`  WHERE id_tag = $id_keyword";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $total_record = $row['total']; //Tổng sổ mẫu tin
 
     $limit = 5; //Số mẫu tin giới hạn
     $page = 1; //trang hiện tại mặc định là 1
@@ -34,18 +28,21 @@ if (
 
     //Đã có vị trí bắt đầu và kết thúc thì view dữ liệu lên
     $output = '';
+
+    $sql = "SELECT * FROM `news_keyword`  WHERE id_tag = $id_keyword";
+    $news_keyword = executeResult($sql);
+    $id_news = [];
+    foreach($news_keyword as $nk){
+        array_push($id_news, $nk['id_news']);
+    }
+    var_dump($id_news);
+    
     $sql = "SELECT * FROM `news` WHERE 
     `id` = $id_news ORDER BY `id` DESC LIMIT $start, $limit";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
         foreach ($result as $row) {
-            $sql = 'SELECT * FROM users WHERE id = ' . $row['id_user'] . '';
-            $users = mysqli_query($conn, $sql);
-            foreach ($users as $us) {
-                $img = $us['image'];
-                $fullname = $us['full_name'];
-            }
             $output .= '
             <li class="items-news news">
                 <a class="link-news" href="./post.php?url='.$row['url'].'">
