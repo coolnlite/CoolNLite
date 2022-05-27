@@ -107,6 +107,14 @@ $('#search-text').keypress(function(event){
   });
 
 //Search trên điện thoại
+//Xử lý sự kiện click vào phần tử search
+$(document).click(function(event) { 
+  $target = $(event.target);
+  if(!$target.closest('#block-search-mb').length && 
+  $('#block-search-mb').is(":visible")) {
+    $('#result-search-mb').hide();
+  }        
+});
 
 $('#search-txt').keypress(function(event){
   var keycode = (event.keyCode ? event.keyCode : event.which);
