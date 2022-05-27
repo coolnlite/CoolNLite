@@ -115,8 +115,8 @@
       ?>
       <!-- javasript -->
       <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-      <script src="./public/js/loadmore.js"></script>
       <script src="./public/js/script.js"></script>
+      <script src="./public/js/loadmore.js"></script>
       <!-- javasript -->
    </body>
 </html>

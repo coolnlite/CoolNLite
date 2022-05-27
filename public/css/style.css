@@ -223,26 +223,33 @@ textarea {
     transition: all 0.5s;
     border-radius: 5px;
     overflow-y: scroll;
+    padding: 1em;
+    display: none;
 }
 
 .result-search .card-columns {
-    padding: 0px 10px;
-    height: 70px;
+    width: 100%;
 }
 
 .result-search .card-columns a {
-    border-bottom: 1px solid #eee;
     display: flex;
-    padding: 10px 0px;
     color: var(--text-color-b);
     font-size: 14px;
+    height: 80px;
+}
+.result-search .card-columns:last-child a{
+    height: 70px;
 }
 .result-search .card-columns .card-img{
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
+}
+.result-search .card-columns .card-img img{
+    width: 100%;
+    height: 100%;
 }
 .result-search .card-columns .card-title {
-    width: calc(100% - 60px);
+    width: calc(100% - 70px);
     padding-left: 1em;
     text-align: justify;
 }
