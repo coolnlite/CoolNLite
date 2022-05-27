@@ -11,14 +11,17 @@ if (
     $page = mysqli_real_escape_string($conn, $_POST['page']);
     $id_keyword = mysqli_real_escape_string($conn, $_POST['id_keyword']);
     $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
+    
+    $sql = "SELECT * FROM `news_keyword` WHERE id_tag = $id_keyword";
+    $news_keyword = executeResult($sql);
+    foreach($news_keyword as $nk){
+        $id_news = $nk['id_news'];
+    }
+    
+    $sql = "SELECT count(*) AS allcount FROM `news` WHERE id = $id_news";
+    $fetch = executeResult($sql);
+    $total_record = $fetch[0]['allcount'];
 
-    $sql = "SELECT * FROM `news_keyword` WHERE id_news =  $id_keyword AND id_tag = $keyword ";
-
-    $sql = "SELECT COUNT(id_posts) AS total 
-    FROM posts WHERE id_users = $id_users";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $total_record = $row['total']; //Tổng sổ mẫu tin
 
     $limit = 5; //Số mẫu tin giới hạn
     $page = 1; //trang hiện tại mặc định là 1
@@ -31,44 +34,58 @@ if (
 
     //Đã có vị trí bắt đầu và kết thúc thì view dữ liệu lên
     $output = '';
-    $sql = "SELECT * FROM posts WHERE 
-    id_users = $id_users ORDER BY created_at DESC LIMIT $start,$limit";
+    $sql = "SELECT * FROM `news` WHERE 
+    `id` = $id_news ORDER BY `id` DESC LIMIT $start, $limit";
     $result = mysqli_query($conn, $sql);
+
     if (mysqli_num_rows($result) > 0) {
         foreach ($result as $row) {
-            $sql = 'SELECT img_user,fullname,id_users 
-            FROM users WHERE id_users = ' . $row['id_users'] . '';
+            $sql = 'SELECT * FROM users WHERE id = ' . $row['id_user'] . '';
             $users = mysqli_query($conn, $sql);
             foreach ($users as $us) {
-                $img = $us['img_user'];
-                $fullname = $us['fullname'];
+                $img = $us['image'];
+                $fullname = $us['full_name'];
             }
-            $output .= '<article class="card-columns posts">
-                <div class="card-rows">
-                    <a href="posts.php?p=' . $row['url'] . '">
-                        <h4>
-                        ' . $row['title'] . '
-                        </h4>
-                        <div class="img-list">
-                            <img src="' . $row['image_S'] . '" alt="" />
-                        </div>
-                    </a>
-                    <div class="content-list">
-                        <h6>
-                        ' . $row['summary'] . ' 
-                            </h6>
-                        <nav class="nav-users">
-                            <div class="users-info">
-                                <a href="users.php?u=' . $row['id_users'] . '">
-                                    <img src="' . $img . '" alt="" />
-                                    <span>' . $fullname . '</span>
-                                </a>
+            $output .= '
+            <li class="items-news news">
+                <a class="link-news" href="./post.php?url='.$row['url'].'">
+                    <article class="posts">
+                        <figure class="box-img fix">
+                        <img src=".'.$row['thumnail'].'?>" alt="ảnh đại điện">
+                        <i class="fas fa-eye"></i>
+                        </figure>
+                        <div class="box-content">
+                        <h3 class="limit-2">
+                            '.$row['title'].'
+                        </h3>
+                        <div class="box-all">
+                            <div class="arthur">
+                                <div class="box-arthur">
+                                    <img src=".'.$img.'" alt="Avatar">
+                                </div>
+                                <span class="name">
+                                    '.$fullname.'
+                                </span>
+                                <?php
+                                } 
+                                ?>
                             </div>
-                            <span class="time">'.facebook_time_ago($row['created_at']). ' </span>
-                        </nav>
-                    </div>
-                </div>
-            </article>';
+                            <div class="time-ago">
+                                <span>
+                                    '.facebook_time_ago($row['time']).'
+                                </span>
+                            </div>
+                        </div>
+                        <div class="describe">
+                            <p class="limit-3">
+                            '.$row['description'].'
+                            </p>
+                        </div>
+                        </div>
+                    </article>
+                </a>
+            </li>
+        ';
         } //posts
     } else {
         $output .= '<p style="margin: 2em 0em;">Không tìm thấy dữ liệu</p>';

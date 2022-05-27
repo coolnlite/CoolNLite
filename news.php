@@ -50,7 +50,6 @@
                            $allcount = $fetch[0]['allcount'];
                            $sql = "SELECT * FROM  `news` ORDER BY `id` DESC LIMIT 0, $rowperpage";
                            $news = executeResult($sql);
-                           $count = count($news);
                            foreach($news as $ns) {
                         ?>
                         <li class="items-news news">

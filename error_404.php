@@ -14,7 +14,7 @@
    <link rel="stylesheet" href="./public/css/reponsive.css" />
    <link rel="stylesheet" href="./public/css/news.css" />
    <!-- css -->
-   <title>COOL N LITE</title>
+   <title>COOL N LITE - Phim cách nhiệt</title>
    <style>
       #notfound {
          position: relative;
