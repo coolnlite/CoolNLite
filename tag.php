@@ -7,6 +7,14 @@
       $id_keyword = $_GET['id'] = !"" ? mysqli_real_escape_string($conn, $_GET['id']) : '';
       $keyword = $_GET['keyword'] = !"" ? mysqli_real_escape_string($conn, $_GET['keyword']) : '';
       $keyword = str_replace('+', ' ', $keyword);
+
+      $sql = "SELECT * FROM `keyword` WHERE `id` = '$id_keyword' AND `name` = '$keyword'";
+      $result = mysqli_query($conn, $sql);
+      $rowcount = mysqli_num_rows($result);
+    
+      if(isset($rowcount) &&  $rowcount == 0) {
+         require_once('./error_404.php');
+      }
    }else{
       require_once('./error_404.php');
    }
@@ -30,7 +38,7 @@
       <link rel="stylesheet" href="./public/css/reponsive.css" />
       <link rel="stylesheet" href="./public/css/news.css" />
       <!-- css -->
-      <title></title>
+      <title><?php print  $keyword ?> - Phim cách nhiệt COOL N LITE</title>
    </head>
    <body class="body">
       <div id="main">
@@ -41,14 +49,7 @@
          ?> 
          </section>
         
-         <?php
-            $sql = "SELECT * FROM `keyword` WHERE `id` = '$id_keyword' AND `name` = '$keyword'";
-            $result = mysqli_query($conn, $sql);
-            $rowcount = mysqli_num_rows($result);
-         ?>
-         <?php 
-            if(isset($rowcount) &&  $rowcount != 0) {
-         ?>
+         
          <main role="main">
             <header>
                <div class="container">
@@ -72,11 +73,7 @@
                </div>
             </section>
          </main>
-         <?php
-            }else{
-               require_once('./error_404.php');
-            }
-         ?>
+         
       </div>
       <?php 
         require_once('./pages/footer.php');
