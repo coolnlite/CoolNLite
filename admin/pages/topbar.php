@@ -20,7 +20,7 @@
     ?>
     <a 
     href="<?php print $DOMAIN.'account.php'?>?id=<?php echo '' .$user_id. '' ?>&?permision=<?php echo $permission?>" 
-    class="box-user" data-id-users = "<?php echo '' .$user_id. '' ?>">
+    class="box-user">
         <span class="name-user"><?php echo '' . $us['full_name'] . '' ?></span>
         <div class="user">
             <img src="<?php echo '' .'..'. $us['image'] . '' ?>" alt="Avatar">

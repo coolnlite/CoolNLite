@@ -2,8 +2,8 @@
 -- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 27, 2022 at 12:35 PM
+-- Host: localhost
+-- Generation Time: May 27, 2022 at 06:11 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -210,7 +210,7 @@ INSERT INTO `menu` (`id`, `name`, `url`, `position`, `time`) VALUES
 
 CREATE TABLE `news` (
   `id` int(11) NOT NULL,
-  `url` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `url` varchar(220) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `thumnail` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `title` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `description` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -393,9 +393,7 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `user_name` (`user_name`),
   ADD UNIQUE KEY `pass_word` (`pass_word`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `position` (`position`),
-  ADD UNIQUE KEY `status` (`status`);
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
