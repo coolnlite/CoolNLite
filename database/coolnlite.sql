@@ -2,8 +2,8 @@
 -- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: May 27, 2022 at 01:53 AM
+-- Host: 127.0.0.1
+-- Generation Time: May 27, 2022 at 12:35 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -241,6 +241,7 @@ INSERT INTO `news` (`id`, `url`, `thumnail`, `title`, `description`, `content`, 
 --
 
 CREATE TABLE `news_keyword` (
+  `id_news_tag` int(11) NOT NULL,
   `id_news` int(11) NOT NULL,
   `id_tag` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -249,30 +250,30 @@ CREATE TABLE `news_keyword` (
 -- Dumping data for table `news_keyword`
 --
 
-INSERT INTO `news_keyword` (`id_news`, `id_tag`) VALUES
-(1, 1),
-(1, 2),
-(1, 3),
-(2, 1),
-(2, 2),
-(2, 3),
-(3, 1),
-(3, 2),
-(3, 3),
-(4, 1),
-(4, 2),
-(4, 3),
-(5, 1),
-(5, 2),
-(5, 3),
-(6, 1),
-(6, 2),
-(6, 3),
-(7, 1),
-(7, 2),
-(7, 3),
-(8, 2),
-(8, 3);
+INSERT INTO `news_keyword` (`id_news_tag`, `id_news`, `id_tag`) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 1, 3),
+(4, 2, 1),
+(5, 2, 2),
+(6, 2, 3),
+(7, 3, 1),
+(8, 3, 2),
+(9, 3, 3),
+(10, 4, 1),
+(11, 4, 2),
+(12, 4, 3),
+(13, 5, 1),
+(14, 5, 2),
+(15, 5, 3),
+(16, 6, 1),
+(17, 6, 2),
+(18, 6, 3),
+(19, 7, 1),
+(20, 7, 2),
+(21, 7, 3),
+(22, 8, 2),
+(23, 8, 3);
 
 -- --------------------------------------------------------
 
@@ -371,6 +372,12 @@ ALTER TABLE `news`
   ADD UNIQUE KEY `url` (`url`);
 
 --
+-- Indexes for table `news_keyword`
+--
+ALTER TABLE `news_keyword`
+  ADD PRIMARY KEY (`id_news_tag`);
+
+--
 -- Indexes for table `sidebar`
 --
 ALTER TABLE `sidebar`
@@ -429,6 +436,12 @@ ALTER TABLE `menu`
 --
 ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `news_keyword`
+--
+ALTER TABLE `news_keyword`
+  MODIFY `id_news_tag` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `sidebar`
