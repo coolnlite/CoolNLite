@@ -40,7 +40,7 @@
             <button type="submit" id="btn-search-mb">
               <i class="far fa-search"></i>
             </button>
-            <div class="result-search" id="result-search-mb">
+            <div class="result-search-mb" id="result-search-mb">
             </div>
         </div>
         <ul class="list-menu">
