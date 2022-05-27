@@ -51,6 +51,7 @@ $(document).ready(function () {
 })
 
 $(document).ready(function(){
+  //Clear data
   //Phần search thường
 $('#search-text').keypress(function(event){
   var keycode = (event.keyCode ? event.keyCode : event.which);
