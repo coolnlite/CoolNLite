@@ -42,6 +42,8 @@
             </button>
             <div class="result-search-mb" id="result-search-mb">
             </div>
+            <div class="bg-search-mb" id="bg-search-mb">
+            </div>
         </div>
         <ul class="list-menu">
 

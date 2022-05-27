@@ -208,7 +208,7 @@ $('#search-txt').keypress(function(event){
   $(document).on("click", "#btn-search-mb", function () {
     $text_mb = $('#search-tet').val();
     
-    if($$text_mb.replace(/\s/g, "").length <= 0){
+    if($text_mb.replace(/\s/g, "").length <= 0){
 
     }else{
       $text_mb =$text_mb.replace(/\s/g,'+');
@@ -218,16 +218,15 @@ $('#search-txt').keypress(function(event){
 
   //Kết thúc search thường
 
-  $("#search-text").keyup(function () {
-    $text = $(this).val();
-    $result = $("#result-search");
-
-    if ($text != "") {
+  $("#search-txt").keyup(function () {
+    $text_mb = $(this).val();
+    $result = $("#result-search-mb");
+    if ($text_mb != "") {
       $.ajax({
         type: "POST",
         url: "modules/result.php",
         data: {
-          text: $text,
+          text_mb:  $text_mb,
         },
         success: function (data) {
           $result.html(data);

@@ -205,8 +205,8 @@ if (
 
 //Live search
 
-if (isset($_POST['text'])) {
-    $text = mysqli_real_escape_string($conn, $_POST['text']);
+if (isset($_POST['text_mb'])) {
+    $text = mysqli_real_escape_string($conn, $_POST['text_mb']);
 
     $sql = "SELECT * FROM `news` WHERE title LIKE '$text%'";
     $result = mysqli_query($conn, $sql);
