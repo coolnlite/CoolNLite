@@ -51,12 +51,18 @@ $(document).ready(function () {
 })
 
 $(document).ready(function(){
-  //Clear data
+  //Xử lý sự kiện click vào phần tử search
+  $(document).click(function(event) { 
+    $target = $(event.target);
+    if(!$target.closest('#search-box-desktop').length && 
+    $('#search-box-desktop').is(":visible")) {
+      $('#result-search').hide();
+    }        
+  });
   //Phần search thường
 $('#search-text').keypress(function(event){
   var keycode = (event.keyCode ? event.keyCode : event.which);
   if (keycode == '13') {
-    $text = $('#search-text').val();
     if($text.replace(/\s/g, "").length <= 0){
 
     }else{

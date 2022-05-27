@@ -18,12 +18,12 @@
               <?php } ?>
             </ul>
           </div>
-          <div class="search-box search-box-desktop">
+          <div class="search-box search-box-desktop" id="search-box-desktop">
             <input type="text" name="search-text" id="search-text" placeholder="Tìm kiếm" autocomplete="off" />
             <button type="submit" id="btn-search">
               <i class="far fa-search"></i>
             </button>
-            <button class="clean-txt">
+            <button type="button" class="clean-txt">
               <span class="fas fa-times"></span>
             </button>
             <div class="result-search" id="result-search">

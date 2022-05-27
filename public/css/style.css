@@ -177,20 +177,6 @@ textarea {
     font-size: 1.1em;
     position: relative;
 }
-.search-box .clean-txt{
-    position: absolute;
-    right: 35px;
-    top: 0;
-    width: 20px;
-    height: 30px;
-    color: var(--text-color-b);
-    outline: 0;
-    background-color: var(--text-color);
-    cursor: pointer;
-}
-.search-box .clean-txt span{
-   font-size: 16px;
-}
 .search-box #search-text {
     flex: 1;
 }
@@ -255,6 +241,9 @@ textarea {
 .result-search .card-columns:last-child a{
     height: 70px;
 }
+.result-search .card-columns a:hover .card-title h5{
+    color: var(--color-blue);
+}
 .result-search .card-columns .card-img{
     width: 70px;
     height: 70px;
@@ -273,6 +262,8 @@ textarea {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    font-size: 14px;
+    font-weight: 300;
 }
 .result-search .not-data {
     font-size: 1.4em;
