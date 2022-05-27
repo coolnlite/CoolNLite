@@ -2,6 +2,16 @@
     require_once('./config/config.php');
     require_once('./config/dbhelper.php');
     require_once('./admin/modules/function.php');
+
+   if(isset($_GET['id']) && isset($_GET['keyword'])){
+      $id_keyword = $_GET['id'] = !"" ? mysqli_real_escape_string($conn, $_GET['id']) : '';
+      $keyword = $_GET['keyword'] = !"" ? mysqli_real_escape_string($conn, $_GET['keyword']) : '';
+      $keyword = str_replace('+', ' ', $keyword);
+   }else{
+      $keyword = "";
+      $id_keyword = "";
+   }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +31,7 @@
       <link rel="stylesheet" href="./public/css/reponsive.css" />
       <link rel="stylesheet" href="./public/css/news.css" />
       <!-- css -->
-      <title>TIN TỨC COOL N LITE</title>
+      <title></title>
    </head>
    <body class="body">
       <div id="main">
@@ -34,27 +44,32 @@
          <!-- SECTION NEWS -->
          <!-- MAIN NEWS -->
          <?php
-            $id_keyword = $_GET['id'] = !"" ? mysqli_real_escape_string($conn, $_GET['id']) : '';
-            $keyword = $_GET['keyword'] = !"" ? mysqli_real_escape_string($conn, $_GET['keyword']) : '';
-            $keyword = str_replace('+', ' ', $keyword);
+            if(isset($_GET['id']) && isset($_GET['keyword'])){
+               $id_keyword = $_GET['id'] = !"" ? mysqli_real_escape_string($conn, $_GET['id']) : '';
+               $keyword = $_GET['keyword'] = !"" ? mysqli_real_escape_string($conn, $_GET['keyword']) : '';
+               $keyword = str_replace('+', ' ', $keyword);
+            }else{
+               
+            }
             $sql = "SELECT * FROM `keyword` WHERE `id` = '$id_keyword' AND `name` = '$keyword'";
             $result = mysqli_query($conn, $sql);
             $rowcount = mysqli_num_rows($result);
         ?>
-         <?php if(isset($rowcount) != 0){ //Kiểm tra có mẫu tin nào không
+         <?php if(isset($rowcount) != 0 || isset($_GET['id']) && isset($_GET['keyword'])){ //Kiểm tra có mẫu tin nào không
             
          ?>
          <main role="main">
             <header>
                <div class="container">
-                  <h1 class="page-title"><a href="./news.php"><?php print $keyword ?></a></h1>
+                  <h1 class="page-title"><a href="./news.php"><?php echo ''.$keyword.'' ?></a></h1>
                </div>
             </header>
             
             <section id="news-list">
                <div class="container">
                   <div class="rows-news">
-                     <ul class="col-news" id="load_news_tag">
+                     <ul class="col-news" id="load_news_tag" 
+                     data-id-keyword = "<?php print $id_keyword ?>" data-keyword="<?php print $keyword ?>">
                         
                      </ul>
                   </div>
