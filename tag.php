@@ -8,8 +8,7 @@
       $keyword = $_GET['keyword'] = !"" ? mysqli_real_escape_string($conn, $_GET['keyword']) : '';
       $keyword = str_replace('+', ' ', $keyword);
    }else{
-      $keyword = "";
-      $id_keyword = "";
+      require_once('./error_404.php');
    }
 
 ?>
@@ -41,27 +40,24 @@
             require_once('./pages/menu.php');
          ?> 
          </section>
-         <!-- SECTION NEWS -->
-         <!-- MAIN NEWS -->
+        
          <?php
-            if(isset($_GET['id']) && isset($_GET['keyword'])){
-               $id_keyword = $_GET['id'] = !"" ? mysqli_real_escape_string($conn, $_GET['id']) : '';
-               $keyword = $_GET['keyword'] = !"" ? mysqli_real_escape_string($conn, $_GET['keyword']) : '';
-               $keyword = str_replace('+', ' ', $keyword);
-            }else{
-               
-            }
             $sql = "SELECT * FROM `keyword` WHERE `id` = '$id_keyword' AND `name` = '$keyword'";
             $result = mysqli_query($conn, $sql);
             $rowcount = mysqli_num_rows($result);
-        ?>
-         <?php if(isset($rowcount) != 0 || isset($_GET['id']) && isset($_GET['keyword'])){ //Kiểm tra có mẫu tin nào không
-            
+         ?>
+         <?php 
+            if(isset($rowcount) &&  $rowcount != 0) {
          ?>
          <main role="main">
             <header>
                <div class="container">
-                  <h1 class="page-title"><a href="./news.php"><?php echo ''.$keyword.'' ?></a></h1>
+                  <h1 class="page-title">
+                     <a href="./tag.php?id=<?php echo ''.$id_keyword.''?>&keyword=<?php
+                                    echo str_replace(' ', '+', $keyword);
+                                ?>"><?php print  $keyword ?>
+                     </a>
+                  </h1>
                </div>
             </header>
             
@@ -77,9 +73,9 @@
             </section>
          </main>
          <?php
-            }else {
+            }else{
                require_once('./error_404.php');
-            }//Kết thúc kiểm tra có mẫu tin nào không
+            }
          ?>
       </div>
       <?php 

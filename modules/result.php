@@ -6,10 +6,13 @@ require_once('../admin/modules/function.php');
 //Tìm theo từ khóa
 
 if (
-    isset($_POST['page']) && isset($_POST['id_users'])
+    isset($_POST['page']) && isset($_POST['id_keyword']) && isset($_POST['keyword'])
 ) {
     $page = mysqli_real_escape_string($conn, $_POST['page']);
-    $id_users = mysqli_real_escape_string($conn, $_POST['id_users']);
+    $id_keyword = mysqli_real_escape_string($conn, $_POST['id_keyword']);
+    $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
+
+    $sql = "SELECT * FROM `news_keyword` WHERE id_news =  $id_keyword AND id_tag = $keyword ";
 
     $sql = "SELECT COUNT(id_posts) AS total 
     FROM posts WHERE id_users = $id_users";

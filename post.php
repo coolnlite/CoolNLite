@@ -2,6 +2,11 @@
     require_once('./config/config.php');
     require_once('./config/dbhelper.php');
     require_once('./admin/modules/function.php');
+    if(isset($_GET['url'])){
+        $posts = $_GET['url'] = !"" ? mysqli_real_escape_string($conn, $_GET['url']) : '';
+    }else{
+      require_once('./error_404.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,12 +38,11 @@
         </section>
         <!-- SETION 1 -->
         <?php
-            $posts = $_GET['url'] = !"" ? mysqli_real_escape_string($conn, $_GET['url']) : '';
             $sql = "SELECT * FROM `news` WHERE `url` = '$posts'";
             $result = mysqli_query($conn, $sql);
             $rowcount = mysqli_num_rows($result);
         ?>
-        <?php if ($rowcount != 0) { // Kiểm tra có bài viết này không 
+        <?php if (isset($rowcount) && $rowcount != 0) { // Kiểm tra có bài viết này không 
         ?>
         <main class="default-page-width">
             <section class="tag-main">
