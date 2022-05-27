@@ -1,5 +1,6 @@
 <div class="container-fluid">
-    <div class="row">
+    <div class="row d-flex justify-content-end ">
+    <a type="button" href="../add_news.php" class="btn btn-outline-success mb-3 mr-5">Thêm bài viết</a>
       <div style="width: 94%; margin : 0 auto">
         <div class="row">
           <div class="col-xl-12">

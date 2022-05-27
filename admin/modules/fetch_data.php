@@ -83,6 +83,9 @@
             <a title="SEO Bài viết" href=""  class="btn btn-primary btn-sm" >
                 SEO
             </a>
+            <a title="Thêm từ khóa" href=""  class="btn btn-secondary btn-sm" >
+                KEYWORD
+            </a>
             ';
             $data[] = $sub_array;
         }

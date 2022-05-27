@@ -119,7 +119,7 @@ $(document).click(function(event) {
 $('#search-txt').keypress(function(event){
   var keycode = (event.keyCode ? event.keyCode : event.which);
   if (keycode == '13') {
-    $text_mb = $('#search-tet').val();
+    $text_mb = $('#search-txt').val();
     if($text_mb.replace(/\s/g, "").length <= 0){
 
     }else{
