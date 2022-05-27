@@ -192,27 +192,27 @@ $('#search-text').keypress(function(event){
 
 //Search trên điện thoại
 
-$('#search-text-mb').keypress(function(event){
+$('#search-txt').keypress(function(event){
   var keycode = (event.keyCode ? event.keyCode : event.which);
   if (keycode == '13') {
-    $text = $('#search-text').val();
-    if($text.replace(/\s/g, "").length <= 0){
+    $text_mb = $('#search-tet').val();
+    if($text_mb.replace(/\s/g, "").length <= 0){
 
     }else{
-      $text = $text.replace(/\s/g,'+');
-      window.location.href = 'search.php?search_query=' + $text;
+      $text_mb = $text_mb.replace(/\s/g,'+');
+      window.location.href = 'search.php?search_query=' + $text_mb;
     }
   }
   });
 
-  $(document).on("click", "#btn-search", function () {
-    $text = $('#search-text').val();
+  $(document).on("click", "#btn-search-mb", function () {
+    $text_mb = $('#search-tet').val();
     
-    if($text.replace(/\s/g, "").length <= 0){
+    if($$text_mb.replace(/\s/g, "").length <= 0){
 
     }else{
-      $text = $text.replace(/\s/g,'+');
-      window.location.href = 'search.php?search_query=' + $text;
+      $text_mb =$text_mb.replace(/\s/g,'+');
+      window.location.href = 'search.php?search_query=' + $text_mb;
     }
   });
 
