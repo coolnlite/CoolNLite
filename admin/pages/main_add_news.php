@@ -1,6 +1,6 @@
 <div style="margin: 0 auto; width : 94%">
   <h3>Thêm bài viết</h3>
-  <form action="../modules/add_data.php" method="POST" class="needs-validation" novalidate>
+  <form action="<?php print $DOMAIN ?>" method="POST" class="needs-validation" novalidate>
     <div class="form-group">
       <label for="url">Đường dẫn :</label><label class="text-danger">(Mẫu : vo-dong-thai-dep-trai-ahihi)</label>
       <input type="text" class="form-control" id="url" placeholder="Nhập đường dẫn bài viết" name="url" required>
