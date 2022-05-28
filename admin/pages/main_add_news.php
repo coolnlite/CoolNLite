@@ -140,7 +140,7 @@ if(isset($_POST['add_news'])){
       <label class="custom-control-label" for="RadioOn">Hiện</label>
     </div>
     </div>
-    <button type="submit" class="btn btn-primary" name="add_news">Thêm</button>
+    <button type="submit" class="btn btn-primary btn-add-news">Thêm</button>
   </form>
 </div>
 
@@ -164,3 +164,4 @@ if(isset($_POST['add_news'])){
   }, false);
 })();
 </script>
+
