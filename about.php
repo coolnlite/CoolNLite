@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./public/css/news.css" />
     <link rel="stylesheet" href="./public/css/slider.css">
     <!-- css -->
-    <title>VỀ CHÚNG TÔI</title>
+    <title>Về Chúng Tôi - COOL N LITE</title>
 </head>
 
 <body class="body">

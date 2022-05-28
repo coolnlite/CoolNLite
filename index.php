@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="./public//css/news.css">
   <link rel="stylesheet" href="./public/css/slider.css">
   <!-- css -->
-  <title>Cool N Lite</title>
+  <title>COOL N LITE - Phim cách nhiệt</title>
 </head>
 
 <body class="body">

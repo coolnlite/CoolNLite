@@ -7,6 +7,17 @@
     }else{
       require_once('./error_404.php');
     }
+    $sql = "SELECT * FROM `news` WHERE `url` = '$posts'";
+    $result = mysqli_query($conn, $sql);
+    $rowcount = mysqli_num_rows($result);
+    
+    if (isset($rowcount) && $rowcount != 0) { // Kiểm tra có bài viết này không
+        $sql = "SELECT `id`,`title` FROM `news` WHERE `url` = '$posts'";
+        $list = executeResult($sql);
+        foreach($list as $lt){ 
+            $title = $lt['title'];
+        }
+       
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +36,7 @@
     <link rel="stylesheet" href="./public/css/slider.css">
     <link rel="stylesheet" href="./public/css/news.css">
     <!-- css -->
-    <title>BÀI VIẾT</title>
+    <title><?php print $title.'-COOL N LITE'?></title>
 </head>
 
 <body class="body">
@@ -37,13 +48,6 @@
          ?> 
         </section>
         <!-- SETION 1 -->
-        <?php
-            $sql = "SELECT * FROM `news` WHERE `url` = '$posts'";
-            $result = mysqli_query($conn, $sql);
-            $rowcount = mysqli_num_rows($result);
-        ?>
-        <?php if (isset($rowcount) && $rowcount != 0) { // Kiểm tra có bài viết này không 
-        ?>
         <main class="default-page-width">
             <section class="tag-main">
                 <?php
@@ -189,11 +193,6 @@
     </div>
     </section>
     </main>
-    <?php
-        }else{
-            require_once('./error_404.php');
-        }
-    ?>
     </div>
     <?php 
         require_once('./pages/footer.php');
@@ -206,3 +205,8 @@
 </body>
 
 </html>
+<?php
+    }else{
+       require_once('./error_404.php');
+    }
+?>

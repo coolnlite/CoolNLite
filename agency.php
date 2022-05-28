@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./public/css/news.css" />
     <link rel="stylesheet" href="./public/css/slider.css">
     <!-- css -->
-    <title>ĐẠI LÝ COOL N LITE</title>
+    <title>Đại Lý - COOL N LITE</title>
 </head>
 
 <body class="body">

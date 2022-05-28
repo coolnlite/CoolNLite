@@ -1,7 +1,7 @@
 <div class="box-menu">
         <header class="header">
           <h1 class="logo">
-            <a href="./index.php" class="logo-link">
+            <a href="./" class="logo-link">
               <img src="./shared/img/logo.png" alt="Logo Cool N Lite" />
             </a>
           </h1>
@@ -13,12 +13,12 @@
                  foreach($menu as $mn){
                 ?>
                 <li class="items-menu">
-                    <a class="link-menu" href="<?php echo ''.$mn['url'].''?>"><?php echo ''.$mn['name'].''?></a>
+                    <a class="link-menu" href="<?php echo ''.$mn['url'].''?>" title="<?php echo ''.$mn['name'].''?>"><?php echo ''.$mn['name'].''?></a>
                 </li>
               <?php } ?>
             </ul>
           </div>
-          <div class="search-box search-box-desktop" id="search-box-desktop">
+          <div title="Tìm kiếm" class="search-box search-box-desktop" id="search-box-desktop">
             <input type="search" name="search-text" id="search-text" placeholder="Tìm kiếm" autocomplete="off" />
             <button type="submit" id="btn-search">
               <i class="far fa-search"></i>
@@ -35,8 +35,8 @@
         <div class="block-close">
         <span class="fas fa-times click-close"></span>
         </div>
-        <div class="block-search-mb" id="block-search-mb">
-            <input title="Tìm kiếm" type="search" name="search-txt" id="search-txt" placeholder="Tìm kiếm" autocomplete="off" />
+        <div class="block-search-mb" id="block-search-mb" title="Tìm kiếm">
+            <input type="search" name="search-txt" id="search-txt" placeholder="Tìm kiếm" autocomplete="off" />
             <button type="submit" id="btn-search-mb">
               <i class="far fa-search"></i>
             </button>

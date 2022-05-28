@@ -21,7 +21,7 @@
       <link rel="stylesheet" href="./public/css/reponsive.css" />
       <link rel="stylesheet" href="./public/css/news.css" />
       <!-- css -->
-      <title>TIN TỨC COOL N LITE</title>
+      <title>Tin Tức - COOL N LITE</title>
    </head>
    <body class="body">
       <div id="main">

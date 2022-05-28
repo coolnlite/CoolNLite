@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="./public/css/reponsive.css" />
   <link rel="stylesheet" href="./public/css/slider.css">
   <!-- css -->
-  <title>Titan-X Series</title>
+  <title>Titan-X Series - COOL N LITE</title>
 </head>
 
 <body class="body">

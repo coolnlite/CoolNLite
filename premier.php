@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="./public/css/reponsive.css" />
   <link rel="stylesheet" href="./public/css/slider.css">
   <!-- css -->
-  <title>Premier Series</title>
+  <title>Premier Series - COOL N LITE</title>
 </head>
 
 <body class="body">

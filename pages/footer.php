@@ -1,7 +1,7 @@
 <!-- FOOTER -->
 <footer class="footer-distributed">
     <div class="footer-left">
-      <h3><a href="./index.php"><img src="./shared/img/logo.png" alt="Logo Cool N Lite"></a></h3>
+      <h3><a href="./"><img src="./shared/img/logo.png" alt="Logo Cool N Lite"></a></h3>
 
       <p class="footer-links">
       <?php
@@ -59,6 +59,6 @@
     </div>
   </footer>
   <!-- FOOTER -->
-  <button type="button" class="btn-messenger">
+  <button type="button" class="btn-messenger" title="0835 808 858">
     <a href="tel:+0835 808 858"></a>
   </button>
