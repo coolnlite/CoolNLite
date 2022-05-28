@@ -1,7 +1,7 @@
 
 <div style="margin: 0 auto; width : 94%">
   <h3>Thêm bài viết</h3>
-  <form action="" class="needs-validation" method="POST" enctype="multipart/form-data" novalidate>
+  <form id="fAddNews" class="needs-validation" method="POST" enctype="multipart/form-data" novalidate>
     <div class="form-group">
       <label for="url">Đường dẫn :</label><label class="text-danger">(Mẫu : vo-dong-thai-dep-trai-ahihi)</label>
       <input type="text" class="form-control" id="url" placeholder="Nhập đường dẫn bài viết" name="url" required>
