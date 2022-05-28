@@ -1,6 +1,7 @@
+
 <div style="margin: 0 auto; width : 94%">
   <h3>Thêm bài viết</h3>
-  <form id="fAddNews" enctype="multipart/form-data" method="POST" class="needs-validation" novalidate>
+  <form action="" class="needs-validation" method="POST" enctype="multipart/form-data" novalidate>
     <div class="form-group">
       <label for="url">Đường dẫn :</label><label class="text-danger">(Mẫu : vo-dong-thai-dep-trai-ahihi)</label>
       <input type="text" class="form-control" id="url" placeholder="Nhập đường dẫn bài viết" name="url" required>
@@ -14,7 +15,7 @@
     <div class="form-group">
       <label for="thumnail">Ảnh đại diện :</label>
       <input type="file" class="form-control" name="thumnail" id="thumnail" required>
-      <div class="invalid-feedback">Vui lòng nhập ảnh đại diện</div>
+      <div class="invalid-feedback">Vui lòng nhập ảnh đại diện bài viết</div>
     </div>
     <div class="form-group">
       <label for="description">Mô tả :</label> <label class="text-danger">không quá 300 ký tự</label>
@@ -22,22 +23,23 @@
       <div class="invalid-feedback">Vui lòng nhập mô tả bài viết</div>
     </div>
     <div class="form-group">
-      <label for="description">Nội dung :</label>
+      <label for="content">Nội dung :</label>
       <textarea class="form-control" id="content" name="content" rows="5" required></textarea>
       <div class="invalid-feedback">Vui lòng nhập nội dung bài viết</div>
     </div>
     <div class="form-group">
-      <label for="description">Trạng thái bài viết :</label>
-      <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" value="0" id="RadioOff" name="radio" class="custom-control-input">
-      <label class="custom-control-label" for="RadioOff">Ẩn</label>
+      <label>Trạng thái bài viết :</label>
+      <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" value="0" id="customControlValidation2" name="radio-stacked" required>
+      <label class="custom-control-label" for="customControlValidation2">Ẩn</label>
     </div>
-    <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" value="1" id="RadioOn" name="radio" class="custom-control-input">
-      <label class="custom-control-label" for="RadioOn">Hiện</label>
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" value="1" id="customControlValidation3" name="radio-stacked" required>
+      <label class="custom-control-label" for="customControlValidation3">Hiện</label>
+      <div class="invalid-feedback">Vui lòng nhập trạng thái bài viết</div>
     </div>
     </div>
-    <button type="submit" class="btn btn-primary btn-add-news" name="add_news">Thêm</button>
+    <button type="submit" class="btn btn-primary btn-add-news">Thêm</button>
   </form>
 </div>
 
