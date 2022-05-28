@@ -54,6 +54,16 @@ function countStr($str){
   }
   return $str;
 }
+
+function status($val){
+  if($val == 1){
+    $echo = "Hiện";
+  }else{
+    $echo = "Ẩn";
+  }
+  return $echo;
+}
+
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 function date_format_vn($date_time)
 {

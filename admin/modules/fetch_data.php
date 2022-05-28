@@ -72,6 +72,7 @@
             $sub_array[] = $row['title'];
             $sub_array[] = $row['description'];
             $sub_array[] = $row['view'] ;
+            $sub_array[] = status($row['status']);
             $sub_array[] = $full_name ;
             $sub_array[] = facebook_time_ago($row['time']);
             $sub_array[] = 
