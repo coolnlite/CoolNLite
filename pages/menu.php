@@ -19,7 +19,7 @@
             </ul>
           </div>
           <div class="search-box search-box-desktop" id="search-box-desktop">
-            <input type="text" name="search-text" id="search-text" placeholder="Tìm kiếm" autocomplete="off" />
+            <input type="search" name="search-text" id="search-text" placeholder="Tìm kiếm" autocomplete="off" />
             <button type="submit" id="btn-search">
               <i class="far fa-search"></i>
             </button>
@@ -36,7 +36,7 @@
         <span class="fas fa-times click-close"></span>
         </div>
         <div class="block-search-mb" id="block-search-mb">
-            <input type="text" name="search-txt" id="search-txt" placeholder="Tìm kiếm" autocomplete="off" />
+            <input title="Tìm kiếm" type="search" name="search-txt" id="search-txt" placeholder="Tìm kiếm" autocomplete="off" />
             <button type="submit" id="btn-search-mb">
               <i class="far fa-search"></i>
             </button>

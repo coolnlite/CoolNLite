@@ -12,6 +12,7 @@
                 <th>Tiêu đề</th>
                 <th>Mô tả</th>
                 <th>Lượt xem</th>
+                <th>Trạng thái</th>
                 <th>Người đăng</th>
                 <th>Thời gian đăng</th>
                 <th>Thao tác</th>

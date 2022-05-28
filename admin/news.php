@@ -52,8 +52,6 @@
     <script type="text/javascript">
     $(document).ready(function() {
 
-      var DOMAIN = 'http://localhost/CoolNLite/admin/modules/';
-
       $('#example').DataTable({
         "fnCreatedRow": function(nRow, aData, iDataIndex) {
           $(nRow).attr('id', aData[0]);
@@ -84,7 +82,7 @@
         },
         "aoColumnDefs": [{
             "bSortable": false,
-            "aTargets": [8]
+            "aTargets": [9]
           },
 
         ]

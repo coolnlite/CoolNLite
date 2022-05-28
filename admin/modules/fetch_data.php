@@ -19,8 +19,9 @@
             3 => 'title',
             4 => 'description',
             5 => 'view',
-            6 => 'id_user',
-            7 => 'time'
+            6 => 'status',
+            7 => 'id_user',
+            8 => 'time'
         );
         
         if(isset($_POST['search']['value']))
@@ -30,6 +31,7 @@
             $sql .= " OR `title` like '%".$search_value."%'";
             $sql .= " OR `description` like '%".$search_value."%'";
             $sql .= " OR `view` like '%".$search_value."%'";
+            $sql .= " OR `status` like '%".$search_value."%'";
         }
 
         if(isset($_POST['order']))

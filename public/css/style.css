@@ -202,6 +202,11 @@ textarea {
     border-radius: 30px;
     max-width: 160px;
 }
+#search-text::-webkit-search-cancel-button{
+    position:relative;
+    right: 35px;
+    cursor: pointer;    
+}
 
 /* Hiển thị input khi người dùng hover vào search-box */
 .search-box:hover,
@@ -310,6 +315,11 @@ textarea {
     outline: none;
     border: 1px solid var(--color-form);
     text-indent: 10px;
+}
+#search-txt::-webkit-search-cancel-button{
+    position:relative;
+    right: 30px;
+    cursor: pointer;    
 }
 .block-search-mb > input:focus,
 .block-search-mb > input:hover{
