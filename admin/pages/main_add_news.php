@@ -29,12 +29,12 @@
     <div class="form-group">
       <label for="description">Trạng thái bài viết :</label>
       <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" id="customRadioInline1" name="customRadioInline" class="custom-control-input">
-      <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+      <input type="radio" value="0" id="RadioOff" name="radio" class="custom-control-input">
+      <label class="custom-control-label" for="RadioOff">Ẩn</label>
     </div>
     <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" id="customRadioInline2" name="customRadioInline" class="custom-control-input">
-      <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+      <input type="radio" value="1" id="RadioOn" name="radio" class="custom-control-input">
+      <label class="custom-control-label" for="RadioOn">Hiện</label>
     </div>
     </div>
     <button type="submit" class="btn btn-primary" name="add_news">Thêm</button>
