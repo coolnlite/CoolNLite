@@ -73,8 +73,8 @@
             processData:false
         }).always(function(){
 
-        }).done(function(){
-
+        }).done(function(response){
+            alert(response);
         })
        
         
