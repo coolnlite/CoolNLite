@@ -63,18 +63,22 @@
             type: 'POST',
             url: '<?php print $DOMAIN.'modules/add_data.php'?>',
             data: new FormData(this),
-            dataType: 'json',
+            dataType : 'json',
             contentType: false,
             cache: false,
             processData:false,
-            success: function(data) {
-            var data = JSON.parse(data);
-            console.log(data);
-            if (data.status != 0) {
-                window.location('<?php print $DOMAIN.'news.php'?>');
-            }else{
-                alert(data.message);
-            }
+            beforeSend: function(){
+               
+            },
+            success: function(response){ 
+                console.log(response);
+                if(response.status == 1){
+                    alert(response.message);
+                    window.location('<?php print $DOMAIN.'modules/news.php'?>')
+                }else{
+                    alert(response.message);
+                }
+                
             }
         })
        
