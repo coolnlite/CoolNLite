@@ -77,7 +77,7 @@
             success: function(data) {
               var json = JSON.parse(data);
               status = json.status;
-              if (status != 0) {
+              if (status == 1) {
                 alert(status.message);
               }else {
                 alert(status.message);
