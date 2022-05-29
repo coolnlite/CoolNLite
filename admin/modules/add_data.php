@@ -68,27 +68,35 @@
              $num ++;
          }
          $path = $fileName . '.' . $fileType;
-         move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path);
-        $thumnail =  $tar_get . '/' .$path;
-        $id_users = $user_id;
-        $view = 0;
-        $time = date('Y-m-d H:i:s');
+         var_dump(move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path));
+        if(move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path)){
+            $thumnail =  $tar_get . '/' .$path;
+            $id_users = $user_id;
+            $view = 0;
+            $time = date('Y-m-d H:i:s');
 
-        $sql = "INSERT INTO `news` (`url`, `thumnail`, `title`, `description`, `content`, `status`, `view`, `id_user`, `time`) 
-        VALUES ('$url','$thumnail','$title','$description','$content',$radio,$view,$id_users,'$time')";
-        $result = mysqli_query($conn,$sql);
-         var_dump($result);
-        if($result){
-            echo json_encode(array('status' => 0,
-            'message' => 'Thêm bài viết thành công'
-        ));
-        exit();
-        }else{
-            echo json_encode(array(
-            'status' => 1,
-            'message' => 'Thêm bài viết thất bại'
+            $sql = "INSERT INTO `news` (`url`, `thumnail`, `title`, `description`, `content`, `status`, `view`, `id_user`, `time`) 
+            VALUES ('$url','$thumnail','$title','$description','$content',$radio,$view,$id_users,'$time')";
+            $result = mysqli_query($conn,$sql);
+            var_dump($result);
+            if($result){
+                echo json_encode(array('status' => 0,
+                'message' => 'Thêm bài viết thành công'
             ));
             exit();
+            }else{
+                echo json_encode(array(
+                'status' => 1,
+                'message' => 'Thêm bài viết thất bại'
+                ));
+                exit();
+            }
+        }else{
+            echo json_encode(array(
+                'status' => 1,
+                'message' => 'Thêm file thất bại'
+                ));
+                exit();
         }
       }
 
