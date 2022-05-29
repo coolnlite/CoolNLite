@@ -63,7 +63,11 @@ function status($val){
   }
   return $echo;
 }
-
+function Convert($key){
+  $id = 'coolnlie'.$key;
+  $id = base64_encode($id);
+  return $id;
+}
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 function date_format_vn($date_time)
 {

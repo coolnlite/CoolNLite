@@ -51,9 +51,6 @@
 
     <script type="text/javascript">
     $(document).ready(function() {
-
-      var DOMAIN = 'http://localhost/CoolNLite/admin/modules/';
-
       $('#example').DataTable({
         "fnCreatedRow": function(nRow, aData, iDataIndex) {
           $(nRow).attr('id', aData[0]);

@@ -5,8 +5,9 @@
     require_once('../../config/config.php');
     require_once('../../config/dbhelper.php');
     
+
     date_default_timezone_set('Asia/Ho_Chi_Minh');
-  
+  //Thêm bài viết mới
         if(
             isset($_POST['url']) && isset($_POST['title']) 
              && isset($_FILES['thumnail']) && isset($_POST['description'])
@@ -106,5 +107,7 @@
                 exit();
         }
       }
+
+    //Thêm từ khóa cho bài viết
 
 ?>
