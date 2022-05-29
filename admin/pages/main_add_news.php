@@ -37,7 +37,7 @@
       <div class="invalid-feedback">Vui lòng nhập trạng thái bài viết</div>
     </div>
     </div>
-    <button type="submit" class="btn btn-primary" id="btn-add-news">Thêm</button>
+    <button type="submit" class="btn btn-primary" name="add_news">Thêm</button>
   </form>
 </div>
 
