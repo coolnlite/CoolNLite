@@ -1,7 +1,6 @@
-
 <div style="margin: 0 auto; width : 94%">
   <h3>Thêm bài viết</h3>
-  <form id="fAddNews" class="needs-validation" method="POST" enctype="multipart/form-data" novalidate>
+  <form id="fAddNews" class="needs-validation" enctype="multipart/form-data" novalidate>
     <div class="form-group">
       <label for="url">Đường dẫn :</label><label class="text-danger">(Mẫu : vo-dong-thai-dep-trai-ahihi)</label>
       <input type="text" class="form-control" id="url" placeholder="Nhập đường dẫn bài viết" name="url" required>
@@ -39,7 +38,7 @@
       <div class="invalid-feedback">Vui lòng nhập trạng thái bài viết</div>
     </div>
     </div>
-    <button type="submit" class="btn btn-primary btn-add-news">Thêm</button>
+    <button type="submit" class="btn btn-primary" id="btn-add-news">Thêm</button>
   </form>
 </div>
 
