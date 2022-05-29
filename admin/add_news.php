@@ -71,16 +71,11 @@
             contentType: false,
             cache: false,
             processData:false,
-            beforeSend: function(){
-
-            },
             success: function(data) {
-              var json = JSON.parse(data);
-              status = json.status;
-              if (status == 1) {
-                alert(status.message);
-              }else {
-                alert(status.message);
+              if (data.status != 0) {
+                window.location('<?php print $DOMAIN.'news.php'?>');
+              }else{
+                alert(data.message);
               }
             }
         })

@@ -33,7 +33,7 @@
          /* Location */
          $uploadPath = "../../uploads/";
 
-         $tar_get = "/uploads"."/";
+         $tar_get = "/uploads";
          /* Upload file */
          //Kiểm tra kích thước ảnh trước khi upload
          $size = $_FILES["thumnail"]['tmp_name'];
@@ -84,7 +84,7 @@
             $sql = "INSERT INTO `news` (`url`, `thumnail`, `title`, `description`, `content`, `status`, `view`, `id_user`, `time`) 
             VALUES ('$url','$thumnail','$title','$description','$content',$radio,$view,$id_users,'$time')";
             $result = mysqli_query($conn,$sql);
-            var_dump($result);
+
             if($result){
                 echo json_encode(array(
                 'status' => 1,
