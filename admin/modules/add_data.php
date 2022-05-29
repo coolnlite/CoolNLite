@@ -12,13 +12,12 @@
       $description = mysqli_real_escape_string($conn, $_POST['description']);
       $content = mysqli_real_escape_string($conn, $_POST['content']);
       $radio = mysqli_real_escape_string($conn, $_POST['radio']);
-      $image = mysqli_real_escape_string($conn, $_FILES['file']);
   
       /* Nhận tên file */
-      $filename = $image;
+      $filename = $_FILES['thumnail']['name'];
   
       /* Nhận kích thước file */
-      $filesize = $_FILES['file']['size'];
+      $filesize = $_FILES['thumnail']['size'];
   
       /* Thêm tên file bằng timestamp*/
       $timestamp = time();
