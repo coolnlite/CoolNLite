@@ -1,14 +1,12 @@
 <?php
   date_default_timezone_set('Asia/Ho_Chi_Minh');
-    var_dump($_FILES['thumnail']);
-     if($_POST['add_news']){
-         
         if(
             isset($_POST['url']) && isset($_POST['title']) 
              && isset($_FILES['thumnail']) && isset($_POST['description'])
-             || isset($_POST['content']) && isset($_POST['radio'] )
+             && isset($_POST['content']) && isset($_POST['radio'] )
         )
         {
+         var_dump($_FILES['thumnail']);
          $url = mysqli_real_escape_string($conn, $_POST['url']);
          $title = mysqli_real_escape_string($conn, $_POST['title']);
          $description = mysqli_real_escape_string($conn, $_POST['description']);
@@ -28,14 +26,14 @@
          $path = $timestamp.$filename;
      
          /* Location */
-         $uploadPath = "../../uploads/posts".date('d-m-Y', time());
+         $uploadPath = "../../uploads/posts/".date('d-m-Y', time());
          if(!is_dir($uploadPath)){
              mkdir($uploadPath,0777,true);
          }
      
          /* Upload file */
          //Kiểm tra kích thước ảnh trước khi upload
-         $size = $_FILES["file"]['tmp_name'];
+         $size = $_FILES["thumnail"]['tmp_name'];
          list($width, $height) = getimagesize($size);
      
          if($width > "800" || $height > "600") {
@@ -65,7 +63,7 @@
              $num ++;
          }
          $path = $fileName . '.' . $fileType;
-         if(move_uploaded_file($_FILES['file']['tmp_name'],$uploadPath . '/' .$path)){
+         if(move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path)){
              $thumnail =  $uploadPath . '/' .$path;
              $id_users = $user_id;
              $time = date('Y-m-d H:i:s');
@@ -94,7 +92,4 @@
        ));
        }
       }
-
-     }
-
 ?>

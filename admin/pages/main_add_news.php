@@ -21,10 +21,10 @@
       <input type="text" class="form-control" id="description" placeholder="Nhập mô tả bài viết" name="description" required>
       <div class="invalid-feedback">Vui lòng nhập mô tả bài viết</div>
     </div>
-    <div class="form-group">
-      <label for="content">Nội dung :</label>
-      <textarea class="form-control" id="content" name="content" rows="5" ></textarea>
-    </div>
+      
+    <label for="content">Nội dung :</label>
+    <textarea class="form-control" id="content" name="content" rows="5" value=""></textarea>
+    
     <div class="form-group">
       <label>Trạng thái bài viết :</label>
       <div class="custom-control custom-radio">
@@ -37,7 +37,7 @@
       <div class="invalid-feedback">Vui lòng nhập trạng thái bài viết</div>
     </div>
     </div>
-    <button type="submit" class="btn btn-primary" name="add_news">Thêm</button>
+    <button type="submit" class="btn btn-primary">Thêm</button>
   </form>
 </div>
 
