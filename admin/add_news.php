@@ -61,9 +61,8 @@
         $("#fAddNews").on('submit', function(e){
         e.preventDefault();
         
-        $content =  CKEDITOR.instances.content.getData();
-        $('#content').updateElement();
-        if($content.length != ""){
+        CKEDITOR.instances['content'].updateElement();//Cập nhật element CK
+       
             $.ajax({
             type: 'POST',
             url: '<?php print $DOMAIN.'modules/add_data.php'?>',
@@ -77,9 +76,7 @@
         }).done(function(){
 
         })
-        }else{
-            
-        }
+       
         
     });
     
