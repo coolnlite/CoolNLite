@@ -31,11 +31,9 @@
          $path = $timestamp.$filename;
      
          /* Location */
-         $uploadPath = "../../uploads/posts/".date('d-m-Y-H-m-s');
-         if(!is_dir($uploadPath)){
-            mkdir($uploadPath,0777,true);
-         }
-         $tar_get = "/uploads/posts/".date('d-m-Y-H-m-s');
+         $uploadPath = "../../uploads/";
+
+         $tar_get = "/uploads"."/";
          /* Upload file */
          //Kiểm tra kích thước ảnh trước khi upload
          $size = $_FILES["thumnail"]['tmp_name'];
@@ -43,22 +41,30 @@
      
          if($width > "1000" || $height > "1000") {
              echo json_encode(array(
-                 'size' => 0,
-                 'message' => 'Error : Kích thước ảnh nhỏ hơn 800px x 600px .'
+                 'status' => 0,
+                 'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 1000px X 1000px'
              ));
              exit();
          }
          //Kiểm tra xem kiểu file có hợp lệ hoặc dung lượng lớn không
          $validTypes = array("jpg","jpeg","png","bmp");
          $fileType = substr($path,strrpos($path,".") + 1);
-     
+
          if(!in_array($fileType,$validTypes) || $filesize > 2 * 1024 * 1024){
+            echo json_encode(array(
+                'status' => 0,
+                'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp'
+            ));
+            exit();
+        }
+         if($filesize > 2 * 1024 * 1024){
              echo json_encode(array(
-                 'file' => 0,
-                 'message' => 'Error : File lớn hơn 2MB hoặc file không phải là ảnh'
+                 'status' => 0,
+                 'messaage' => 'Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
              ));
              exit();
          }
+
          //Check xem ảnh đã tồn tại hay chưa nếu không thì đổi tên
          $num = 1;
          $fileName = substr($path,0,strrpos($path,"."));
@@ -68,7 +74,7 @@
              $num ++;
          }
          $path = $fileName . '.' . $fileType;
-         var_dump(move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path));
+
         if(move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path)){
             $thumnail =  $tar_get . '/' .$path;
             $id_users = $user_id;
@@ -80,20 +86,21 @@
             $result = mysqli_query($conn,$sql);
             var_dump($result);
             if($result){
-                echo json_encode(array('status' => 0,
+                echo json_encode(array(
+                'status' => 1,
                 'message' => 'Thêm bài viết thành công'
             ));
             exit();
             }else{
                 echo json_encode(array(
-                'status' => 1,
+                'status' => 0,
                 'message' => 'Thêm bài viết thất bại'
                 ));
                 exit();
             }
         }else{
             echo json_encode(array(
-                'status' => 1,
+                'status' => 0,
                 'message' => 'Thêm file thất bại'
                 ));
                 exit();

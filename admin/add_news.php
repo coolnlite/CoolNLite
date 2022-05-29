@@ -70,11 +70,19 @@
             dataType: 'json',
             contentType: false,
             cache: false,
-            processData:false
-        }).always(function(){
+            processData:false,
+            beforeSend: function(){
 
-        }).done(function(response){
-            alert(response);
+            },
+            success: function(data) {
+              var json = JSON.parse(data);
+              status = json.status;
+              if (status != 0) {
+                alert(status.message);
+              }else {
+                alert(status.message);
+              }
+            }
         })
        
         
