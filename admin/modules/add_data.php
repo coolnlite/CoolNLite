@@ -1,21 +1,21 @@
 <?php
   date_default_timezone_set('Asia/Ho_Chi_Minh');
+  
         if(
             isset($_POST['url']) && isset($_POST['title']) 
              && isset($_FILES['thumnail']) && isset($_POST['description'])
-             && isset($_POST['content']) && isset($_POST['radio'] )
+             && isset($_POST['content']) && isset($_POST['radio-stacked'] )
         )
         {
-         var_dump($_FILES['thumnail']);
          $url = mysqli_real_escape_string($conn, $_POST['url']);
          $title = mysqli_real_escape_string($conn, $_POST['title']);
          $description = mysqli_real_escape_string($conn, $_POST['description']);
          $content = mysqli_real_escape_string($conn, $_POST['content']);
-         $radio = mysqli_real_escape_string($conn, $_POST['radio']);
+         $radio = mysqli_real_escape_string($conn, $_POST['radio-stacked']);
      
          /* Nhận tên file */
          $filename = $_FILES['thumnail']['name'];
-     
+         var_dump($filename); 
          /* Nhận kích thước file */
          $filesize = $_FILES['thumnail']['size'];
      
@@ -26,7 +26,7 @@
          $path = $timestamp.$filename;
      
          /* Location */
-         $uploadPath = "../../uploads/posts/".date('d-m-Y', time());
+         $uploadPath = "../../uploads/posts/".date('d-m-Y H-m-s');
          if(!is_dir($uploadPath)){
              mkdir($uploadPath,0777,true);
          }
