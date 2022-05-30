@@ -14,24 +14,15 @@ if(isset($_POST['tag_news'])){
    
     $columns = array(
         0 => 'id',
-        1 => 'url',
-        2 => 'thumnail',
-        3 => 'title',
-        4 => 'description',
-        5 => 'view',
-        6 => 'status',
-        7 => 'id_user',
-        8 => 'time'
+        1 => 'name',
+        2 => 'time',
     );
     
     if(isset($_POST['search']['value']))
     {
         $search_value = $_POST['search']['value'];
-        $sql .= " WHERE `url` like '%".$search_value."%'";
-        $sql .= " OR `title` like '%".$search_value."%'";
-        $sql .= " OR `description` like '%".$search_value."%'";
-        $sql .= " OR `view` like '%".$search_value."%'";
-        $sql .= " OR `status` like '%".$search_value."%'";
+        $sql .= " WHERE `id` like '%".$search_value."%'";
+        $sql .= " OR `name` like '%".$search_value."%'";
     }
 
     if(isset($_POST['order']))
@@ -58,36 +49,14 @@ if(isset($_POST['tag_news'])){
 
     while($row = mysqli_fetch_assoc($query))
     {
-        $id_users = $row['id_user'];
-        $sql = "SELECT `full_name` FROM `users` WHERE `id` = $id_users ";
-        $users = executeResult($sql);
-        foreach ($users as $us){
-            $full_name = $us['full_name'];
-        }
-
         $sub_array = array();
         $sub_array[] = $row['id'];
-        $sub_array[] = $row['url'];
-        $sub_array[] = '<img src="..'.$row['thumnail'].'" alt="">';
-        $sub_array[] = $row['title'];
-        $sub_array[] = $row['description'];
-        $sub_array[] = $row['view'] ;
-        $sub_array[] = status($row['status']);
-        $sub_array[] = $full_name ;
+        $sub_array[] = $row['name'];
         $sub_array[] = facebook_time_ago($row['time']);
         $sub_array[] = 
         '
         <a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  class="btn btn-danger btn-sm deleteBtn" >
         <i class="fas fa-trash-alt"></i>
-        </a>
-        <a title="Sửa" href="" class="btn btn-warning btn-sm" >
-        <i class="fas fa-user-edit"></i>
-        </a>
-        <a title="SEO Bài viết" href=""  class="btn btn-primary btn-sm" >
-            SEO
-        </a>
-        <a title="Thêm từ khóa" href="tag_news.php?k='.Convert($row['id']).'"  class="btn btn-secondary btn-sm" >
-            KEYWORD
         </a>
         ';
         $data[] = $sub_array;
@@ -185,7 +154,7 @@ if(isset($_POST['tag_news'])){
             <a title="SEO Bài viết" href=""  class="btn btn-primary btn-sm" >
                 SEO
             </a>
-            <a title="Thêm từ khóa" href="tag_news.php?k='.Convert($row['id']).'"  class="btn btn-secondary btn-sm" >
+            <a title="Thêm từ khóa" href="tag_news.php?id='.$row['id'].'"  class="btn btn-secondary btn-sm" >
                 KEYWORD
             </a>
             ';

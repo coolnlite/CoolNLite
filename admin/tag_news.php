@@ -4,6 +4,23 @@
     require_once('./modules/permision.php');
     require_once('../config/config.php');
     require_once('../config/dbhelper.php'); 
+
+    if(isset($_GET['id'])){
+      $id = $_GET['id'] = !"" ? mysqli_real_escape_string($conn, $_GET['id']) : '';
+    }else{
+      echo "Có lỗi gì đó xảy ra";
+    }
+    $sql = "SELECT `id` FROM `news` WHERE `id` = '$id'";
+    $result = mysqli_query($conn, $sql);
+    $rowcount = mysqli_num_rows( $result);
+    if (isset($rowcount) && $rowcount != 0) { // Kiểm tra có id này không
+      
+    }else{
+      echo "Có lỗi gì đó xảy ra";
+    }
+  
+ 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
