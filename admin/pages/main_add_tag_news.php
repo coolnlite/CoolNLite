@@ -1,6 +1,17 @@
 <div style="margin: 0 auto; width : 94%">
-  <h5>Bài viết này hiện có các từ khóa là :</h5>
-   <div>
+<?php
+  $sql = "SELECT id, `name`, id_tag, id_news FROM news_keyword INNER JOIN keyword ON id = id_tag WHERE id_news = $id";
+  $result = mysqli_query($conn, $sql);
+  if($result){
+  echo '<h5>Bài viết này hiện có các từ khóa là :';
+   while ($row = mysqli_fetch_array($result)) {
+    echo '<span class="text-primary"> #'.$row['name'].' </span>';
+   }
+  }else{
+    echo  '<h5>Bài viết này hiện chưa có từ khóa nào. Vui lòng thêm từ khóa</h5>';
+  }
+?>
+   <div class="mt-3">
    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseAddNewsTag" aria-expanded="false" aria-controls="collapseExample">
     Thêm Từ Khóa Cho Bài Viết
     </button>
