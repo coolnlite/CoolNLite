@@ -1279,7 +1279,7 @@ section .main-about .btn-lh:hover {
 
 #agency {
   width: 100%;
-  background: url(../../shared/img/agency.jpg);
+  background: url(../../shared/img/daily/agency.jpg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
