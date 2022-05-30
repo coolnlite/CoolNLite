@@ -73,10 +73,10 @@
         <div class="container-slide">
           <div class="slider-container">
             <div class="slider sizes-slider">
-              <img src="./shared/img/titan-x.jpg" alt="Image">
+              <img src="./shared/img/trangchu/titanium.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img src="./shared/img/cong-nghe-phun-xa.jpg" alt="Image">
+              <img src="./shared/img/trangchu/cong-nghe-phun-xa.jpg" alt="Image">
             </div>
             <div class="box-btn">
               <div class="prev-button prev-button1" onclick="plusSlide(-1)">

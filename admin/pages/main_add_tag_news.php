@@ -26,7 +26,7 @@
     <div class="collapse" id="collapseAddNewsTag">
     <div class="card card-body">
     <h4 class="text-center">Thêm từ khóa cho bài viết</h4>
-    <form id="fAddTagNews" class="needs-validation" enctype="multipart/form-data" novalidate>
+    <form id="fAddTagNews" class="needs-validation" novalidate>
     <div class="form-group">
         <label>Từ Khóa</label>
         <?php
@@ -34,16 +34,25 @@
             $result = mysqli_query($conn,$sql);
             $rowcount = mysqli_num_rows($result);
             if(isset($rowcount) && $rowcount > 0){
-
+              $sql = "SELECT * FROM keyword";
+              $keyword = executeResult($sql);
+              foreach($keyword as $kw){
+                echo ' <div class="form-check form-check-inline">
+                <input class="form-check-input" name="add_key[]" type="checkbox" id="inlineCheckbox1" value="'.$kw['id'].'">
+                <label class="form-check-label" for="inlineCheckbox1">'.$kw['name'].'</label>
+              </div>';
+              }
             }else{
-
+              $sql = "SELECT * FROM keyword";
+              $keyword = executeResult($sql);
+              foreach($keyword as $kw){
+                echo ' <div class="form-check form-check-inline">
+                <input class="form-check-input" name="add_key[]" type="checkbox" id="inlineCheckbox1" value="'.$kw['id'].'">
+                <label class="form-check-label" for="inlineCheckbox1">'.$kw['name'].'</label>
+              </div>';
+              }
             }
         ?>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" name="add_key[]" type="checkbox" id="inlineCheckbox1" value="">
-          <label class="form-check-label" for="inlineCheckbox1"></label>
-        </div>
-
     </div>
     <button type="submit" class="btn btn-primary">Thêm</button>
   </form>
@@ -56,14 +65,17 @@
     <form id="fAddTagNews" class="needs-validation" enctype="multipart/form-data" novalidate>
     <div class="form-group">
         <label>Từ khóa :</label>
-        <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-        <label class="form-check-label" for="inlineCheckbox1">1</label>
-        </div>
-        <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-        <label class="form-check-label" for="inlineCheckbox2">2</label>
-        </div>
+        <?php 
+             $sql = "SELECT id, `name`, id_tag, id_news FROM news_keyword INNER JOIN keyword ON id = id_tag WHERE id_news = $id";
+             $key = executeResult($sql);
+             foreach($key as $k){
+              echo '<div class="form-check form-check-inline">
+              <input class="form-check-input" name="update_key[]" type="checkbox" id="inlineCheckbox1" value="'.$k['id'].'" >
+              <label class="form-check-label" for="inlineCheckbox1">'.$k['name'].'</label>
+              </div>';
+             }
+        ?>
+        
     </div>
     <button type="submit" class="btn btn-primary">Cập nhật</button>
   </form>

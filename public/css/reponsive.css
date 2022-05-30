@@ -54,13 +54,6 @@
     font-size: 14px;
   }
 
-  .section-gird .gird-top {
-    background: url(../../shared/img/modal-hero-mb.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
   .section.built .box-built .anywhere {
     background: url(../../shared/img/car-red-mb.jpg);
     background-repeat: no-repeat;
@@ -352,6 +345,26 @@
   section.control {
     width: 100%;
   }
+  /* PHẦN THAY BG */
+  .section.menu.bg-index-1{
+    background: url(../../shared/img/trangchu/modal3-mbnologo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .section-gird .gird-top {
+    background: url(../../shared/img/trangchu/modal-hero-mbnologo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .section.section-gird .bg-index-3 {
+    background: url(../../shared/img/trangchu/car-bluenologo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
 }
 @media only screen and (max-width : 768px) {
   .ab-container .block-policy div.box-video-about{
