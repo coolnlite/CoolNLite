@@ -68,7 +68,7 @@
     <!-- SETION 2-->
     <section class="section built">
       <section class="box-built  fix-100vh">
-        <div class="box-left-built bg-all"></div>
+        <div class="box-left-built bg-pre"></div>
         <section class="box-right-built">
           <div class="main-box-right-button">
             <span class="title-right-built">
@@ -94,13 +94,13 @@
       <div class="container-slide">
         <div class="slider-container">
           <div class="slider2 sizes-slider2">
-            <img src="./shared/img/car-black.jpg" alt="Image">
+            <img src="./shared/img/premier/MA-MAU-PREMIER.png" alt="Image">
           </div>
           <div class="slider2 sizes-slider2">
-            <img src="./shared/img/car-blue.jpg" alt="Image">
+            <img src="./shared/img/premier/TITLE-PREMIER.png" alt="Image">
           </div>
           <div class="slider2 sizes-slider2">
-            <img src="./shared/img/car-red.jpg" alt="Image">
+            <img src="./shared/img/premier/THONG-SO-KY-THUAT-PREMIER-SERIES.png" alt="Image">
           </div>
           <div class="box-btn">
             <div class="prev-button prev-button1" onclick="plusSlide2(-1)">
@@ -160,16 +160,16 @@
         <div class="container-slide titanx-slide">
           <div class="slider-container">
             <div class="slider sizes-slider">
-              <img src="./shared/img/premiers-series-01.jpg" alt="Image">
+              <img src="./shared/img/premier/01.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img src="./shared/img/premiers-series-02.jpg" alt="Image">
+              <img src="./shared/img/premier/02.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img src="./shared/img/premiers-series-03.jpg" alt="Image">
+              <img src="./shared/img/premier/03.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img src="./shared/img/premiers-series-04.jpg" alt="Image">
+              <img src="./shared/img/premier/04.jpg" alt="Image">
             </div>
             <div class="box-btn">
               <div class="prev-button prev-button1" onclick="plusSlide(-1)">

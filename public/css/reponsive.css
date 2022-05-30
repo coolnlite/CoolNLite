@@ -365,6 +365,27 @@
     background-size: cover;
   }
 
+  .section.menu.bg-premier-1 {
+    background: url(../../shared/img/premier/car-black-mbnologo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+  .section.bg-titanx-1 {
+  background: url(../../shared/img/titanx/car-white-mbnologo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+  #about-us {
+  background: url(../../shared/img/about/about-mbnologo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+
 }
 @media only screen and (max-width : 768px) {
   .ab-container .block-policy div.box-video-about{

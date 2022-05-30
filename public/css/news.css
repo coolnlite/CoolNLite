@@ -794,7 +794,7 @@ main.default-page-width {
 #about-us {
   width: 100%;
   height: 400px;
-  background: url(../../shared/img/about.jpg);
+  background: url(../../shared/img/about/aboutnologo.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

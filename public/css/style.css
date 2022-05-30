@@ -95,31 +95,31 @@ textarea {
 }
 
 .section.menu.bg-premier-1 {
-    background: url(../../shared/img/car-black.jpg);
+    background: url(../../shared/img/premier/car-blacknologo.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .section .bg-premier-2 {
-    background: url(../../shared/img/car-white.jpg);
+    background: url(../../shared/img/premier/BANG-GIA-NIEM-YET-PREMIER-SERIES.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
 }
 
 .section.bg-titanx-1 {
-    background: url(../../shared/img/car-white.jpg);
+    background: url(../../shared/img/titanx/car-whitenologo.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .section .bg-titanx-2 {
-    background: url(../../shared/img/car-blue.jpg);
+    background: url(../../shared/img/titanx/bangniemyet.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
 }
 
 .section.built .box-built.fix-100vh {
@@ -723,8 +723,15 @@ a.btn-up {
     height: auto;
 }
 
-.section.built .box-built .box-left-built.bg-all {
-    background: url(../../shared/img/cac-lop-cua-titan-x.png);
+.section.built .box-built .box-left-built.bg-pre {
+    background: url(../../shared/img/premier/CAC-LOP-CUA-PREMIER-SERIES-5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.section.built .box-built .box-left-built.bg-tit {
+    background: url(../../shared/img/titanx/caclopcuatitanx.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
