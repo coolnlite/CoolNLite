@@ -31,18 +31,19 @@
         <label>Từ Khóa</label>
         <?php
             $sql = "SELECT * FROM news_keyword WHERE id_news = $id";
-            $news_word = executeResult($sql);
-            foreach($news_word as $nk){
-              $id_tag = $nk['id_tag'];
-           
+            $result = mysqli_query($conn,$sql);
+            $rowcount = mysqli_num_rows($result);
+            if(isset($rowcount) && $rowcount > 0){
+
+            }else{
+
+            }
         ?>
         <div class="form-check form-check-inline">
-        <input class="form-check-input" name="add_key[]" type="checkbox" id="inlineCheckbox2" value="">
-        <label class="form-check-label" for="inlineCheckbox2">2</label>
+          <input class="form-check-input" name="add_key[]" type="checkbox" id="inlineCheckbox1" value="">
+          <label class="form-check-label" for="inlineCheckbox1"></label>
         </div>
-        <?php
-             }  //Kết thúc vòng lặp news_keyword        
-        ?>
+
     </div>
     <button type="submit" class="btn btn-primary">Thêm</button>
   </form>
