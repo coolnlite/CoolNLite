@@ -62,7 +62,7 @@
     <div class="collapse" id="collapseUpdateNewsTag">
     <div class="card card-body">
     <h4 class="text-center">Cập nhật từ khóa cho bài viết</h4>
-    <form id="fAddTagNews" class="needs-validation" enctype="multipart/form-data" novalidate>
+    <form id="fUpdateTagNews" class="needs-validation" enctype="multipart/form-data" novalidate>
     <div class="form-group">
         <label>Từ khóa :</label>
         <?php 

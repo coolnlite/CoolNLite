@@ -352,12 +352,6 @@
     background-position: center;
     background-size: cover;
   }
-  .section-gird .gird-top {
-    background: url(../../shared/img/trangchu/modal-hero-mbnologo.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
   .section.section-gird .bg-index-3 {
     background: url(../../shared/img/trangchu/car-bluenologo.jpg);
     background-repeat: no-repeat;
@@ -377,7 +371,7 @@
   background-position: center;
   background-size: cover;
 }
-  #about-us {
+  section#about-us {
   background: url(../../shared/img/about/about-mbnologo.jpg);
   background-repeat: no-repeat;
   background-position: center;

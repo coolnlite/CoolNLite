@@ -109,5 +109,12 @@
       }
 
     //Thêm từ khóa cho bài viết
+      if(isset($_POST['add_key[]'])){
+          var_dump($_POST['add_key[]']);
+          $add_key = $_POST['add_key[]'];
+          foreach($add_key as $ak){
+            print $ak;
+          }
+      }
 
 ?>

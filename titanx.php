@@ -155,16 +155,16 @@
         <div class="container-slide titanx-slide">
           <div class="slider-container">
             <div class="slider sizes-slider">
-              <img src="./shared/img/titan-x-series-01.jpg" alt="Image">
+              <img src="./shared/img/titanx/titan-x-series-01.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img src="./shared/img/titan-x-series-02.jpg" alt="Image">
+              <img src="./shared/img/titanx//titan-x-series-02.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img src="./shared/img/titan-x-series-03.jpg" alt="Image">
+              <img src="./shared/img/titanx/titan-x-series-03.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img src="./shared/img/titan-x-series-04.jpg" alt="Image">
+              <img src="./shared/img/titanx/titan-x-series-04.jpg" alt="Image">
             </div>
             <div class="box-btn">
               <div class="prev-button prev-button1" onclick="plusSlide(-1)">
