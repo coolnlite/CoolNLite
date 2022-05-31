@@ -56,7 +56,7 @@
                 <div class="invalid-feedback">Vui lòng nhập tên từ khóa</div>
                 </div>
                 </div>
-                <button type="submit" class="btn btn-primary editKey" data-id_key ="'.$v['id'].'">Thêm</button>
+                <button type="button" class="btn btn-primary" id="editBtn" data-id_key ="'.$v['id'].'">Thêm</button>
             </form>
             ';
         }

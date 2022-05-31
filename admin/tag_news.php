@@ -218,8 +218,9 @@
             }
           });
         })
+
     // Edit mẫu tin từ khóa
-    $(document).on('click', '.editKey', function(event) {
+    $(document).on('click', '#editBtn', function(event) {
       event.preventDefault();
             var id_key = $(this).data('id_key');
             var name = $('#name_key').val();
