@@ -2,11 +2,12 @@
 <?php
   $sql = "SELECT id, `name`, id_tag, id_news FROM news_keyword INNER JOIN keyword ON id = id_tag WHERE id_news = $id";
   $result = mysqli_query($conn, $sql);
-  if($result){
-  echo '<h5>Bài viết này hiện có các từ khóa là :';
-   while ($row = mysqli_fetch_array($result)) {
-    echo '<span class="text-primary"> #'.$row['name'].' </span>';
-   }
+  $rows = mysqli_num_rows($result);
+  if(isset($rows) && $rows != 0){
+    echo '<h5>Bài viết này hiện có các từ khóa là :';
+    while ($row = mysqli_fetch_array($result)) {
+     echo '<span class="text-primary"> #'.$row['name'].' </span>';
+    }
   }else{
     echo  '<h5>Bài viết này hiện chưa có từ khóa nào. Vui lòng thêm từ khóa</h5>';
   }
@@ -28,7 +29,7 @@
     <h4 class="text-center">Thêm từ khóa cho bài viết</h4>
     <form id="fAddTagNews" class="needs-validation" novalidate>
     <div class="form-group">
-        <label>Từ Khóa</label>
+        <label>Từ Khóa : </label>
         <?php
             $sql = "SELECT * FROM news_keyword WHERE id_news = $id";
             $result = mysqli_query($conn,$sql);
@@ -38,8 +39,8 @@
               $keyword = executeResult($sql);
               foreach($keyword as $kw){
                 echo ' <div class="form-check form-check-inline">
-                <input class="form-check-input" name="add_key[]" type="checkbox" id="inlineCheckbox1" value="'.$kw['id'].'">
-                <label class="form-check-label" for="inlineCheckbox1">'.$kw['name'].'</label>
+                <input class="form-check-input" name="add_key[]" type="checkbox" value="'.$kw['id'].'">
+                <label class="form-check-label" >'.$kw['name'].'</label>
               </div>';
               }
             }else{
@@ -53,6 +54,7 @@
               }
             }
         ?>
+        <input type="hidden" name="id_news" value="<?php print $id ;?>" >
     </div>
     <button type="submit" class="btn btn-primary">Thêm</button>
   </form>
@@ -70,7 +72,7 @@
              $key = executeResult($sql);
              foreach($key as $k){
               echo '<div class="form-check form-check-inline">
-              <input class="form-check-input" name="update_key[]" type="checkbox" id="inlineCheckbox1" value="'.$k['id'].'" >
+              <input class="form-check-input" name="update_key[]" checked type="checkbox" id="inlineCheckbox1" value="'.$k['id'].'" >
               <label class="form-check-label" for="inlineCheckbox1">'.$k['name'].'</label>
               </div>';
              }

@@ -109,11 +109,28 @@
       }
 
     //Thêm từ khóa cho bài viết
-      if(isset($_POST['add_key[]'])){
-          var_dump($_POST['add_key[]']);
-          $add_key = $_POST['add_key[]'];
+      if(isset($_POST['add_key']) && isset($_POST['id_news'])){
+          $add_key = $_POST['add_key'];
+          $id_news = $_POST['id_news'];
           foreach($add_key as $ak){
-            print $ak;
+            $sql = "SELECT * FROM news_keyword WHERE id_news = $id_news AND id_tag = $ak";
+            $keyword = mysqli_query($conn,$sql);
+            $row = mysqli_num_rows($keyword);
+            if($row == 0){
+                $sql = "INSERT INTO `news_keyword` (`id_news`, `id_tag`) VALUES ('$id_news','$ak')";
+                $result = mysqli_query($conn,$sql);
+                if($result){
+                    echo json_encode(array(
+                        'status' => 1,
+                        'message' => 'Thêm từ khóa cho bài viết thành công'
+                    ));
+                }
+            }else{
+                echo json_encode(array(
+                    'status' => 0,
+                    'message' => 'Thêm từ khóa cho bài viết thất bại'
+                ));
+            }
           }
       }
 
