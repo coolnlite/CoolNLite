@@ -91,13 +91,13 @@
       <div class="container-slide">
         <div class="slider-container">
           <div class="slider2 sizes-slider2">
-            <img src="./shared/img/titanx/titan-x-series-01.jpg" alt="Image">
+            <img src="./shared/img/titanx/titletitanx.png" alt="Image">
           </div>
           <div class="slider2 sizes-slider2">
-            <img src="./shared/img/titanx/titan-x-series-02.jpg" alt="Image">
+            <img src="./shared/img/titanx/mamautitanx.png" alt="Image">
           </div>
           <div class="slider2 sizes-slider2">
-            <img src="./shared/img/titanx/titan-x-series-03.jpg" alt="Image">
+            <img src="./shared/img/titanx/thongsokythuattitanx.png" alt="Image">
           </div>
           <div class="box-btn">
             <div class="prev-button prev-button1" onclick="plusSlide2(-1)">

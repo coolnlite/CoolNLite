@@ -219,17 +219,26 @@
           });
         })
     // Edit mẫu tin từ khóa
-    $(document).on('click', '.editKey', function() {
+    $(document).on('click', '.editKey', function(event) {
+      event.preventDefault();
             var id_key = $(this).data('id_key');
+            var name = $('#name_key').val();
               $.ajax({
                 url: '<?php echo ''.$DOMAIN.'modules/edit_data.php'?>',
                 data: {
                   edit_key : true,
+                  name_key : name_key,
                   id_key : id_key
                 },
-                type: "post",
+                type: "post", 
                 success: function(response) {
                  var response = JSON.parse(response);
+                 if(response.status == 1){
+                  alert(response.message);
+                  window.location.reload();
+                 }else{
+                  alert(response.message);
+                 }
                 }
               });
             })

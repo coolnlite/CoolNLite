@@ -159,11 +159,13 @@
                 'status' => 1,
                 'message' => 'Thêm từ khóa thành công'
             ));
+            exit();
         }else{
             echo json_encode(array(
                 'status' => 0,
                 'message' => 'Thêm từ khóa thất bại'
             ));
+            exit();
         }
     }
 
