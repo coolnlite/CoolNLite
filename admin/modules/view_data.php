@@ -47,8 +47,7 @@
         $view = executeResult($sql);
         foreach ($view as $v) {
             echo '
-            <form id="feditTag" class="needs-validation" novalidate>
-                <div class="form-group">
+            <form id="feditTag" method="POST" class="needs-validation" novalidate >
                 <div class="form-group">
                 <label for="thumnail">Tên từ khóa :</label>
                 <input type="text" class="form-control" maxlength="50" 
@@ -58,7 +57,7 @@
                 <input type="hidden" class="form-control" name="id_key" id="id_key" 
                 value="'.$v['id'].'" required>
                 </div>
-                <button type="submit" class="btn btn-primary" id="editBtn">Thêm</button>
+                <button type="submit" class="btn btn-primary">Thêm</button>
             </form>
             ';
         }
