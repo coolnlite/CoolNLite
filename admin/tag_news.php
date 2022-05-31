@@ -203,6 +203,21 @@
         }
       })
 
+  // Edit mẫu tin từ khóa
+  $(document).on('click', '.viewBtn', function() {
+        var id_key = $(this).data('id');
+          $.ajax({
+            url: '<?php echo ''.$DOMAIN.'modules/view_data.php'?>',
+            data: {
+              view_key : true,
+              id_key: id_key
+            },
+            type: "post",
+            success: function(response) {
+              $('#modal-body-view').html(response);
+            }
+          });
+        })
 
     </script>
 </body>
