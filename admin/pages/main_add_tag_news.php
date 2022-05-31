@@ -94,11 +94,11 @@
   <div class="collapse" id="collapseAddTag">
     <div class="card card-body">
     <h4 class="text-center">Thêm từ khóa mới</h4>
-    <form id="fAddTagNews" class="needs-validation" novalidate>
+    <form id="fAddTag" class="needs-validation" novalidate>
     <div class="form-group">
     <div class="form-group">
       <label for="thumnail">Tên từ khóa :</label>
-      <input type="text" class="form-control" name="name" id="name" required>
+      <input type="text" class="form-control" maxlength="50" name="name_key" id="name_key" required>
       <div class="invalid-feedback">Vui lòng nhập tên từ khóa</div>
     </div>
     </div>

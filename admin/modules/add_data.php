@@ -148,4 +148,23 @@
           }
     }
 
+     //Thêm từ khóa
+     if(isset($_POST['name_key'])){
+        $name = mysqli_real_escape_string($conn, $_POST['name_key']);
+        $time = date('Y-m-d H:i:s');
+        $sql = "INSERT INTO `keyword` (`name`,`time`) VALUES ('$name','$time')";
+        $result = mysqli_query($conn,$sql);
+        if($result == true){
+            echo json_encode(array(
+                'status' => 1,
+                'message' => 'Thêm từ khóa thành công'
+            ));
+        }else{
+            echo json_encode(array(
+                'status' => 0,
+                'message' => 'Thêm từ khóa thất bại'
+            ));
+        }
+    }
+
 ?>

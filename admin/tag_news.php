@@ -151,6 +151,59 @@
         })
     });
 
+     //Thêm từ khóa
+     $("#fAddTag").on('submit', function(e){
+        e.preventDefault();
+            $.ajax({
+            type: 'POST',
+            url: '<?php print $DOMAIN.'modules/add_data.php'?>',
+            data: new FormData(this),
+            dataType : 'json',
+            contentType: false,
+            cache: false,
+            processData:false,
+            success: function(response){ 
+                if(response.status == 1){
+                    alert(response.message);
+                    window.location.reload();
+                }else{
+                    alert(response.message);
+                }
+                
+            }
+        })
+    });
+
+    // Xóa mẫu tin từ khóa
+    $(document).on('click', '.deleteBtn', function(event) {
+      var table = $('#example').DataTable();
+      event.preventDefault();
+      var id_key = $(this).data('id');
+        if (confirm("Bạn chắc chắc có muốn xóa mẫu tin này")) {
+          $.ajax({
+            url: '<?php echo ''.$DOMAIN.'modules/delete_data.php'?>',
+            data: {
+              delete_key : true,
+              id_key: id_key
+            },
+            type: "post",
+            success: function(data) {
+              var json = JSON.parse(data);
+              status = json.status;
+              if (status == 'success') {
+                $("#" + id_key).closest('tr').remove();
+              } else {
+                alert('Có lỗi gì đó');
+                return;
+              }
+            }
+          });
+        } else {
+          return null;
+        }
+      })
+
+
     </script>
 </body>
 

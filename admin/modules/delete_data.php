@@ -53,4 +53,28 @@ if(isset($_POST['delete_news']) && isset($_POST['id_news'])){
 
 }
 
+//delete keyword
+if(isset($_POST['delete_key']) && isset($_POST['id_key'])){
+    $id_key = $_POST['id_key'];
+    $sql = "DELETE FROM `keyword` WHERE `id`='$id_key'";
+    $result =mysqli_query($conn,$sql);
+    if($result == true)
+    {
+        $data = array(
+            'status'=>'success',
+        );
+
+        echo json_encode($data);
+    }
+    else
+    {
+        $data = array(
+            'status'=>'failed',
+        );
+
+        echo json_encode($data);
+    } 
+
+}
+
 ?>
