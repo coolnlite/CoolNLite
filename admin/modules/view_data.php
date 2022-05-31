@@ -57,7 +57,7 @@
                 <input type="hidden" class="form-control" name="id_key" id="id_key" 
                 value="'.$v['id'].'" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Thêm</button>
+                <button type="button" class="btn btn-primary">Thêm</button>
             </form>
             ';
         }

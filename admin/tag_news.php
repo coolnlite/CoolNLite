@@ -220,8 +220,8 @@
         })
 
         // Edit mẫu tin từ khóa
-        $("#feditTag").on('submit', function(e){
-                e.preventDefault();
+        $("#feditTag").on('submit', function(event){
+                    event.preventDefault();
                     $.ajax({
                     type: 'POST',
                     url: '<?php print $DOMAIN.'modules/edit_data.php'?>',
