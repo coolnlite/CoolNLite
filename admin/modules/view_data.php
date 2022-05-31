@@ -43,7 +43,7 @@
     //view contact
     if(isset($_POST['view_key']) && isset($_POST['id_key'])){
         $id_key = $_POST['id_key'];
-        $sql = "SELECT `name` FROM `keyword` WHERE `id` =  $id_key";
+        $sql = "SELECT `id`,`name` FROM `keyword` WHERE `id` =  $id_key";
         $view = executeResult($sql);
         foreach ($view as $v) {
             echo '
@@ -56,7 +56,7 @@
                 <div class="invalid-feedback">Vui lòng nhập tên từ khóa</div>
                 </div>
                 </div>
-                <button type="submit" class="btn btn-primary editKey">Thêm</button>
+                <button type="submit" class="btn btn-primary editKey" data-id_key ="'.$v['id'].'">Thêm</button>
             </form>
             ';
         }

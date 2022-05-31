@@ -58,7 +58,7 @@ if(isset($_POST['tag_news'])){
         <a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  class="btn btn-danger btn-sm deleteBtn" >
         <i class="fas fa-trash-alt"></i>
         </a>
-        <a title="Sửa" data-id="'.$row['id'].'" data-target="#editKey"  class="btn btn-warning btn-sm viewBtn" >
+        <a title="Sửa" data-id="'.$row['id'].'" data-toggle="modal" data-target="#editKey"  class="btn btn-warning btn-sm viewBtn" >
         <i class="fas fa-user-edit"></i>
         </a>
         ';

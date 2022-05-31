@@ -203,7 +203,7 @@
         }
       })
 
-  // Edit mẫu tin từ khóa
+  // Xem mẫu tin từ khóa
   $(document).on('click', '.viewBtn', function() {
         var id_key = $(this).data('id');
           $.ajax({
@@ -218,6 +218,22 @@
             }
           });
         })
+    // Edit mẫu tin từ khóa
+    $(document).on('click', '.editKey', function() {
+            var id_key = $(this).data('id_key');
+              $.ajax({
+                url: '<?php echo ''.$DOMAIN.'modules/edit_data.php'?>',
+                data: {
+                  edit_key : true,
+                  id_key : id_key
+                },
+                type: "post",
+                success: function(response) {
+                 var response = JSON.parse(response);
+                }
+              });
+            })
+
 
     </script>
 </body>
