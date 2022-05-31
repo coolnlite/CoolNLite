@@ -72,7 +72,7 @@
              $key = executeResult($sql);
              foreach($key as $k){
               echo '<div class="form-check form-check-inline">
-              <input class="form-check-input" name="update_key[]" checked type="checkbox" id="inlineCheckbox1" value="'.$k['id'].'" >
+              <input class="form-check-input" name="update_key[]" type="checkbox" id="inlineCheckbox1" value="'.$k['id'].'" >
               <label class="form-check-label" for="inlineCheckbox1">'.$k['name'].'</label>
               </div>';
              }

@@ -121,14 +121,12 @@
                 $result = mysqli_query($conn,$sql);
                 if($result){
                     echo json_encode(array(
-                        'status' => 1,
-                        'message' => 'Thêm từ khóa cho bài viết thành công'
+                        'status' => 1
                     ));
                 }
             }else{
                 echo json_encode(array(
-                    'status' => 0,
-                    'message' => 'Thêm từ khóa cho bài viết thất bại'
+                    'status' => 0
                 ));
             }
           }
@@ -141,8 +139,8 @@
         foreach($update_key as $uk){
           $sql = "DELETE FROM news_keyword WHERE id_news = $id_news AND id_tag = $uk";
           $result = mysqli_query($conn,$sql);
-
-          if($result == true){
+        }
+        if($result == true){
             echo json_encode(array(
                 'status' => 1,
                 'message' => 'Cập nhật từ khóa cho bài viết thành công'
@@ -153,7 +151,6 @@
                   'message' => 'Cập nhật từ khóa cho bài viết thất bại'
               ));
           }
-        }
     }
 
 ?>
