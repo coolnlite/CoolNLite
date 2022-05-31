@@ -2,7 +2,7 @@
  require_once('../../config/config.php');
  require_once('../../config/dbhelper.php');
 
-if(isset($_POST['edit_key']) && isset($_POST['id_key']) && isset($_POST['name_key'])){
+if(isset($_POST['id_key']) && isset($_POST['name_key'])){
     $id_key = $_POST['id_key'];
     $name_key = mysqli_real_escape_string($conn, $_POST['name_key']);
     $time = date('Y-m-d H:i:s');
