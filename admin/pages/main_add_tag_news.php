@@ -77,7 +77,7 @@
               </div>';
              }
         ?>
-        
+      <input type="hidden" name="id_news" value="<?php print $id ;?>" >
     </div>
     <button type="submit" class="btn btn-primary">Cập nhật</button>
   </form>

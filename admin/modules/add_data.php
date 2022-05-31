@@ -134,4 +134,26 @@
           }
       }
 
+      //Cập nhật từ khóa cho bài viết
+      if(isset($_POST['update_key']) && isset($_POST['id_news'])){
+        $update_key = $_POST['update_key'];
+        $id_news = $_POST['id_news'];
+        foreach($update_key as $uk){
+          $sql = "DELETE FROM news_keyword WHERE id_news = $id_news AND id_tag = $uk";
+          $result = mysqli_query($conn,$sql);
+
+          if($result == true){
+            echo json_encode(array(
+                'status' => 1,
+                'message' => 'Cập nhật từ khóa cho bài viết thành công'
+            ));
+          }else{
+              echo json_encode(array(
+                  'status' => 0,
+                  'message' => 'Cập nhật từ khóa cho bài viết thất bại'
+              ));
+          }
+        }
+    }
+
 ?>
