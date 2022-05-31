@@ -119,14 +119,12 @@
             if($row == 0){
                 $sql = "INSERT INTO `news_keyword` (`id_news`, `id_tag`) VALUES ('$id_news','$ak')";
                 $result = mysqli_query($conn,$sql);
-                    if($result){
-                        echo json_encode(array(
-                            'status' => 1,
-                        ));
-                    }
-                }
+            }
           }
-          
+          echo json_encode(array(
+            'status' => 1,
+            'message' => 'Cập nhật từ khóa cho bài viết thành công'
+        ));
       }
 
       //Cập nhật từ khóa cho bài viết

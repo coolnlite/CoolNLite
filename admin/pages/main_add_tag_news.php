@@ -69,13 +69,20 @@
         <label>Từ khóa :</label>
         <?php 
              $sql = "SELECT id, `name`, id_tag, id_news FROM news_keyword INNER JOIN keyword ON id = id_tag WHERE id_news = $id";
-             $key = executeResult($sql);
-             foreach($key as $k){
-              echo '<div class="form-check form-check-inline">
-              <input class="form-check-input" name="update_key[]" type="checkbox" id="inlineCheckbox1" value="'.$k['id'].'" >
-              <label class="form-check-label" for="inlineCheckbox1">'.$k['name'].'</label>
-              </div>';
+             $result = mysqli_query($conn,$sql);
+             $row = mysqli_num_rows($result);
+             if(isset($row) && $row != 0){
+              $key = executeResult($sql);
+              foreach($key as $k){
+               echo '<div class="form-check form-check-inline">
+               <input class="form-check-input" name="update_key[]" type="checkbox" id="inlineCheckbox1" value="'.$k['id'].'" >
+               <label class="form-check-label" for="inlineCheckbox1">'.$k['name'].'</label>
+               </div>';
+              }
+             }else{
+              echo '<span>Chưa có từ khóa nào cho bài viết này</span>';
              }
+
         ?>
       <input type="hidden" name="id_news" value="<?php print $id ;?>" >
     </div>
