@@ -116,12 +116,9 @@
             contentType: false,
             cache: false,
             processData:false,
-            beforeSend: function(){
-               
-            },
             success: function(response){ 
                 if(response.status == 1){
-                    alert(response.message);
+                    alert("Thêm từ khóa cho bài biết thành công");
                     window.location.reload();
                 }else{
                     alert(response.message);
