@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2022 at 12:23 PM
+-- Generation Time: Jun 01, 2022 at 12:30 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -176,9 +176,8 @@ CREATE TABLE `keyword` (
 INSERT INTO `keyword` (`id`, `name`, `time`) VALUES
 (1, 'phim cách nhiệt ô tô', '2022-05-25 13:49:31'),
 (2, 'MTFILM', '2022-05-25 13:49:31'),
-(3, 'COOL N LITE', '2022-05-25 13:49:31'),
-(4, 'chất lượng nhất tốt', ''),
-(6, 'chất lượng ', '2022-05-31 14:27:00');
+(3, 'COOL N LITE', '2022-06-01 10:01:54'),
+(9, 'titan x series', '2022-06-01 10:04:40');
 
 -- --------------------------------------------------------
 
@@ -236,7 +235,7 @@ INSERT INTO `news` (`id`, `url`, `thumnail`, `title`, `description`, `content`, 
 (5, 'bai-viet-so-5', '/uploads/avatar.jpg', 'Đậu mùa khỉ xuất hiện tại nhiều quốc gia, WHO đề nghị cảnh giác nhưng chưa cần tiêm vaccine đại trà', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n <img src=\"./uploads/avatar.jpg\" alt=\"hinh ảnh minh họa\">\r\n<br/>\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n<br/>\r\n<img src=\"./uploads/sieuxe.jpg\" alt=\"hinh ảnh minh họa\">', 1, 1, 1, '2022-05-25 13:49:31'),
 (6, 'bai-viet-so-6', '/uploads/sieuxe.jpg', 'iPhone 14 Pro có thể sẽ được áp dụng tính năng always-on display', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n <img src=\"./uploads/avatar.jpg\" alt=\"hinh ảnh minh họa\">\r\n<br/>\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n<br/>\r\n<img src=\"./uploads/sieuxe.jpg\" alt=\"hinh ảnh minh họa\">', 1, 1, 1, '2022-05-25 13:49:31'),
 (7, 'bai-viet-so-7', '/uploads/avatar.jpg', 'Đây là hệ thống camera Street View mới sẽ được Google sử dụng trong tương lai', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n <img src=\"./uploads/avatar.jpg\" alt=\"hinh ảnh minh họa\">\r\n<br/>\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n<br/>\r\n<img src=\"./uploads/sieuxe.jpg\" alt=\"hinh ảnh minh họa\">', 1, 1, 1, '2022-05-25 13:49:31'),
-(8, 'bai-viet-so-8', '/uploads/sieuxe.jpg', 'Trải nghiệm đánh giá iOS 15 Beta 2: Đã có bản Public Beta cho người dùng cập nhật miễn phí, bổ sung thêm tính năng mới', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n <img src=\"./uploads/avatar.jpg\" alt=\"hinh ảnh minh họa\">\r\n<br/>\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n<br/>\r\n<img src=\"./uploads/sieuxe.jpg\" alt=\"hinh ảnh minh họa\">', 1, 1, 1, '2022-05-25 13:49:31');
+(8, 'bai-viet-so-8-nhi-nhi', '/uploads/990472accf064f0b0b064e7bf8b4b65d.jpg', 'Trải nghiệm đánh giá iOS 15 Beta 2: Đã có bản Public Beta cho người dùng cập nhật miễn phí, bổ sung thêm tính năng mới nhất', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>&nbsp;</p>\r\n\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n\r\n<p><br />\r\n<img alt=\"hinh ảnh minh họa\" src=\"./uploads/sieuxe.jpg\" /></p>\r\n\r\n<p>&nbsp;</p>\r\n', 1, 1, 1, '2022-06-01 15:33:09');
 
 -- --------------------------------------------------------
 
@@ -276,6 +275,29 @@ INSERT INTO `news_keyword` (`id_news_tag`, `id_news`, `id_tag`) VALUES
 (19, 7, 1),
 (20, 7, 2),
 (21, 7, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `seo_news`
+--
+
+CREATE TABLE `seo_news` (
+  `id` int(11) NOT NULL,
+  `id_news` int(11) NOT NULL,
+  `title` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
+  `description` varchar(160) COLLATE utf8_unicode_ci NOT NULL,
+  `keywords` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `link_fb` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `img_fb` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `title_fb` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
+  `description_fb` varchar(160) COLLATE utf8_unicode_ci NOT NULL,
+  `keyword_fb` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `id_fb` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `tw_title` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
+  `tw_description` varchar(160) COLLATE utf8_unicode_ci NOT NULL,
+  `tw_image` varchar(150) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -380,6 +402,13 @@ ALTER TABLE `news_keyword`
   ADD PRIMARY KEY (`id_news_tag`);
 
 --
+-- Indexes for table `seo_news`
+--
+ALTER TABLE `seo_news`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id_news` (`id_news`);
+
+--
 -- Indexes for table `sidebar`
 --
 ALTER TABLE `sidebar`
@@ -423,7 +452,7 @@ ALTER TABLE `footer`
 -- AUTO_INCREMENT for table `keyword`
 --
 ALTER TABLE `keyword`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `menu`
@@ -442,6 +471,12 @@ ALTER TABLE `news`
 --
 ALTER TABLE `news_keyword`
   MODIFY `id_news_tag` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+
+--
+-- AUTO_INCREMENT for table `seo_news`
+--
+ALTER TABLE `seo_news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sidebar`
