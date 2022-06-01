@@ -26,6 +26,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- meta main -->
+    <title><?php print $title.' - COOL N LITE'?></title>
+    <meta name="robots" content="noarchive,index,follow"/>
+    <meta http-equiv=”content-language” content=”vi” />
+    <meta name="copyright" content="COOL N LITE"/>
+    <meta name="author" content="COOL N LITE"/>
+    <meta name="robots" content="noarchive,index,follow"/>
+    <meta name="googlebot" content="noarchive"/>
+    <meta name="geo.placename" content="Ho Chi Minh, Viet Nam"/>
+    <meta name="geo.region" content="VN-HCM"/>
+    <meta name="geo.position" content="106.0125,107.0110"/>
+    <meta name="ICBM" content="106.0125, 107.0110"/>
+    <meta name="revisit-after" content="days"/>
+    <!-- meta main -->
+
+
     <!-- fontawesome -->
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
     <!-- fontawesome -->
@@ -36,7 +52,6 @@
     <link rel="stylesheet" href="./public/css/slider.css">
     <link rel="stylesheet" href="./public/css/news.css">
     <!-- css -->
-    <title><?php print $title.'-COOL N LITE'?></title>
 </head>
 
 <body class="body">
