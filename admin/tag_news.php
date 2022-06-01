@@ -203,6 +203,20 @@
         }
       })
 
+      function ViewKey(id){
+        $.ajax({
+            url: '<?php echo ''.$DOMAIN.'modules/view_data.php'?>',
+            data: {
+              view_key : true,
+              id_key: id
+            },
+            type: "post",
+            success: function(response) {
+              $('#modal-body-view').html(response);
+            }
+          });
+      }
+
   // Xem mẫu tin từ khóa
   $(document).on('click', '.viewBtn', function() {
         var id_key = $(this).data('id');
@@ -220,17 +234,18 @@
         })
 
         // Edit mẫu tin từ khóa
-        $("#feditTag").on('submit', function(event){
-                    event.preventDefault();
+        $(document).on('click','#UpdateKey', function(event){
+                    var id_key = $('#id_key').val();
+                    var name_key = $('#name_key').val();
                     $.ajax({
                     type: 'POST',
-                    url: '<?php print $DOMAIN.'modules/edit_data.php'?>',
-                    data: new FormData(this),
                     dataType : 'json',
-                    contentType: false,
-                    cache: false,
-                    processData:false,
-                    success: function(response){ 
+                    url: '<?php print $DOMAIN.'modules/edit_data.php'?>',
+                    data: {
+                      id_key : id_key,
+                      name_key : name_key
+                    },
+                    success: function(response){
                         if(response.status == 1){
                             alert(response.message);
                             window.location.reload();

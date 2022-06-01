@@ -124,7 +124,7 @@
         </button>
       </div>
       <div class="modal-body" id="modal-body-view">
-      
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
