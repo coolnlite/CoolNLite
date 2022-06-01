@@ -40,9 +40,22 @@ $content = mysqli_real_escape_string($conn, $_POST['content']);
 $radio = mysqli_real_escape_string($conn, $_POST['radio-stacked']);
 $time = date('Y-m-d H:i:s');
 
-$sql = "UPDATE `news` SET `name` = '$url', `title` = '$time', `description` = '$description',
-`content` = '$content', `status` = '$radio', `time` = $time  WHERE `id` = '$id_news'";
+$sql = "UPDATE `news` SET `name` = '$url', `title` = '$title', `description` = '$description',
+`content` = '$content', `status` = '$radio', `time` = '$time'  WHERE `id` = '$id_news'";
+$result = mysqli_query($conn,$sql);
 
+if($result == true){
+    echo json_encode(array(
+        'status' => 1,
+        'message' => 'Cập nhật bài viết thành công'
+    ));
+    exit();
+}else{
+    echo json_encode(array(
+        'status' => 0,
+        'message' => 'Cập nhật bài viết thất bại'
+    ));
+}
 if($_FILES['thumnail']['error'] > 0){
     return null;
 }else{
@@ -68,7 +81,7 @@ if($_FILES['thumnail']['error'] > 0){
 
  if($width > "1000" || $height > "1000") {
      echo json_encode(array(
-         'status' => 0,
+         'image' => 0,
          'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 1000px X 1000px'
      ));
      exit();
@@ -79,14 +92,14 @@ if($_FILES['thumnail']['error'] > 0){
 
  if(!in_array($fileType,$validTypes) || $filesize > 2 * 1024 * 1024){
     echo json_encode(array(
-        'status' => 0,
+        'image' => 0,
         'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp'
     ));
     exit();
 }
  if($filesize > 2 * 1024 * 1024){
      echo json_encode(array(
-         'status' => 0,
+         'image' => 0,
          'messaage' => 'Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
      ));
      exit();
@@ -105,27 +118,25 @@ if($_FILES['thumnail']['error'] > 0){
 if(move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path)){
     $thumnail =  $tar_get . '/' .$path;
 
-    $sql = "INSERT INTO `news` (`url`, `thumnail`, `title`, `description`, `content`, `status`, `view`, `id_user`, `time`) 
-    VALUES ('$url','$thumnail','$title','$description','$content',$radio,$view,$id_users,'$time')";
-    $result = mysqli_query($conn,$sql);
+    $sql = "UPDATE `news` SET `thumnail` = '$thumnail', `time` = '$time' WHERE `id` = '$id_news'";
 
     if($result){
         echo json_encode(array(
         'status' => 1,
-        'message' => 'Thêm bài viết thành công'
+        'message' => 'Thêm hình ảnh thành công thành công'
     ));
     exit();
     }else{
         echo json_encode(array(
         'status' => 0,
-        'message' => 'Thêm bài viết thất bại'
+        'message' => 'Thêm hình ảnh thất bại'
         ));
         exit();
     }
 }else{
     echo json_encode(array(
         'status' => 0,
-        'message' => 'Thêm file thất bại'
+        'message' => 'Thêm hình ảnh thất bại'
         ));
         exit();
 }
