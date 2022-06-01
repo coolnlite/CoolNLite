@@ -154,7 +154,7 @@ if(isset($_POST['tag_news'])){
             <a title="Sửa" href="../admin/edit_news.php?id='.$row['id'].'" class="btn btn-warning btn-sm" >
             <i class="fas fa-user-edit"></i>
             </a>
-            <a title="SEO Bài viết" href=""  class="btn btn-primary btn-sm" >
+            <a title="SEO Bài viết" href="../admin/seo_news.php?id='.$row['id'].'"  class="btn btn-primary btn-sm" >
                 SEO
             </a>
             <a title="Thêm từ khóa" href="tag_news.php?id='.$row['id'].'"  class="btn btn-secondary btn-sm" >
