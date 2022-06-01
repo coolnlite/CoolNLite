@@ -1,6 +1,6 @@
 <div style="margin: 0 auto; width : 94%">
   <h3>Chỉnh sửa bài viết</h3>
-  <form id="fAddNews" class="needs-validation" enctype="multipart/form-data" novalidate>
+  <form id="fUpdateNews" class="needs-validation" enctype="multipart/form-data" novalidate>
   <?php
      $sql = "SELECT * FROM `news` WHERE `id` = '$id'";
      $news = executeResult($sql);
@@ -19,7 +19,7 @@
     </div>
     <div class="form-group">
       <label for="thumnail">Ảnh đại diện :</label>
-      <input type="file" class="form-control" name="thumnail" id="thumnail" required>
+      <input type="file" class="form-control" name="thumnail" value="<?php print $ns['thumnail']?>" id="thumnail">
       <div class="invalid-feedback">Vui lòng nhập ảnh đại diện bài viết</div>
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="<?php print '..'.$ns['thumnail']?>" alt="Image">

@@ -28,7 +28,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THÊM BÀI VIẾT</title>
+    <title>CHỈNH SỬA BÀI VIẾT</title>
     <link rel="icon" sizes="32x32" href="../shared/img/icon.png">
     <!-- fontawesome -->
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
@@ -70,7 +70,7 @@
     <script>
        
     $(document).ready(() => {
-        $("#fAddNews").on('submit', function(e){
+        $("#fUpdateNews").on('submit', function(e){
         e.preventDefault();
         
         CKEDITOR.instances['content'].updateElement();//Cập nhật element CK
@@ -83,9 +83,6 @@
             contentType: false,
             cache: false,
             processData:false,
-            beforeSend: function(){
-               
-            },
             success: function(response){ 
                 if(response.status == 1){
                     alert(response.message);

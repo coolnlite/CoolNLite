@@ -26,9 +26,9 @@ if(isset($_POST['id_key']) && isset($_POST['name_key'])){
 
 //Chỉnh sửa bài viết
 if(
-    isset($_POST['url']) && isset($_POST['title']) 
-     && isset($_FILES['thumnail']) && isset($_POST['description'])
-     && isset($_POST['content']) && isset($_POST['radio-stacked'] )
+    isset($_POST['url']) || isset($_POST['title']) 
+     || isset($_FILES['thumnail']) || isset($_POST['description'])
+     || isset($_POST['content']) || isset($_POST['radio-stacked'] )
 )
 {
 $url = mysqli_real_escape_string($conn, $_POST['url']);
@@ -36,7 +36,14 @@ $title = mysqli_real_escape_string($conn, $_POST['title']);
 $description = mysqli_real_escape_string($conn, $_POST['description']);
 $content = mysqli_real_escape_string($conn, $_POST['content']);
 $radio = mysqli_real_escape_string($conn, $_POST['radio-stacked']);
+$view = 0;
+$time = date('Y-m-d H:i:s');
 
+if($_FILES['thumnail']['error'] > 0){
+
+}else{
+    
+}
  /* Nhận tên file */
  $filename = $_FILES['thumnail']['name'];
  /* Nhận kích thước file */
@@ -95,8 +102,6 @@ $radio = mysqli_real_escape_string($conn, $_POST['radio-stacked']);
 
 if(move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path)){
     $thumnail =  $tar_get . '/' .$path;
-    $view = 0;
-    $time = date('Y-m-d H:i:s');
 
     $sql = "INSERT INTO `news` (`url`, `thumnail`, `title`, `description`, `content`, `status`, `view`, `id_user`, `time`) 
     VALUES ('$url','$thumnail','$title','$description','$content',$radio,$view,$id_users,'$time')";
