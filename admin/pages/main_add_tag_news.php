@@ -19,9 +19,6 @@
     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseUpdateNewsTag" aria-expanded="false" aria-controls="collapseExample">
     Cập Nhật Từ Khóa
     </button>
-    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseAddTag" aria-expanded="false" aria-controls="collapseExample">
-    Thêm Từ Khóa Mới
-    </button>
    </div>
 
     <div class="collapse" id="collapseAddNewsTag">
@@ -91,26 +88,10 @@
     </div>
   </div>
 
-  <div class="collapse" id="collapseAddTag">
-    <div class="card card-body">
-    <h4 class="text-center">Thêm từ khóa mới</h4>
-    <form id="fAddTag" class="needs-validation" novalidate>
-    <div class="form-group">
-    <div class="form-group">
-      <label for="thumnail">Tên từ khóa :</label>
-      <input type="text" class="form-control" maxlength="50" name="name_key" id="name_key" required>
-      <div class="invalid-feedback">Vui lòng nhập tên từ khóa</div>
-    </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Thêm</button>
-  </form>
-    </div>
-  </div>
-
-</div>
 
 <div class="container-fluid mt-4">
-    <div class="row">
+<div class="row d-flex justify-content-end ">
+    <a type="button" data-toggle="modal" data-target="#addKey" class="btn btn-outline-success mb-3 mr-5">Thêm từ khóa</a>
       <div style="width: 94%; margin : 0 auto">
         <div class="row">
           <div class="col-xl-12">
@@ -152,6 +133,34 @@
   </div>
 </div>
 
+<div class="modal fade" id="addKey" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Thông tin từ khóa</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body-view">
+      <h4 class="text-center">Thêm từ khóa mới</h4>
+      <form id="fAddTag" class="needs-validation" novalidate>
+      <div class="form-group">
+      <div class="form-group">
+        <label for="thumnail">Tên từ khóa :</label>
+        <input type="text" class="form-control" maxlength="50" name="name_key" id="name_key" required>
+        <div class="invalid-feedback">Vui lòng nhập tên từ khóa</div>
+      </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Thêm</button>
+    </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- MODAL  -->
 
 <script>
