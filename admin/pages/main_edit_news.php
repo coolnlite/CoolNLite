@@ -7,6 +7,7 @@
      foreach($news as $ns){
 ?>
     <input type="hidden" value="<?php print $id ?>" name="id_news">
+    <input type="hidden" value="<?php print $ns['thumnail']?>" name="thumnail_old">
     <div class="form-group">
       <label for="url">Đường dẫn :</label><label class="text-danger">(Mẫu : vo-dong-thai-dep-trai-ahihi)</label>
       <input type="text" class="form-control" value="<?php print $ns['url']?>" id="url" name="url" placeholder="Nhập đường dẫn bài viết" required>

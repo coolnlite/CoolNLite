@@ -26,19 +26,22 @@ if(isset($_POST['id_key']) && isset($_POST['name_key'])){
 
 //Chỉnh sửa bài viết
 if(
-   isset($_POST['id_news']) && 
+
+   isset($_POST['id_news']) && isset($_POST['thumnail_old']) &&
    isset($_POST['url']) && isset($_POST['title']) 
    && isset($_FILES['thumnail']) && isset($_POST['description'])
    && isset($_POST['content']) && isset($_POST['radio-stacked'] )
 )
 {
 $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
+$time = date('Y-m-d H:i:s');
 
 if($_FILES['thumnail']['error'] > 0){
     
 }else{
 /* Nhận tên file */
  $filename = $_FILES['thumnail']['name'];
+
  /* Nhận kích thước file */
  $filesize = $_FILES['thumnail']['size'];
 
@@ -96,8 +99,13 @@ if($_FILES['thumnail']['error'] > 0){
 if(move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path)){
     $thumnail =  $tar_get . '/' .$path;
 
-    $sql = "UPDATE `news` SET `thumnail` = '$thumnail', `time` = '$time' WHERE `id` = '$id_news'";
+    $thumnail_old = $_POST['thumnail_old'];
+    $link = '../..';
+    $flie = $link.$thumnail_old;
+    var_dump($flie);
 
+    $sql = "UPDATE `news` SET `thumnail` = '$thumnail', `time` = '$time' WHERE `id` = '$id_news'";
+    $result = mysqli_query($conn,$sql);
     if($result){
         echo json_encode(array(
         'image' => 1,
@@ -126,7 +134,6 @@ $title = mysqli_real_escape_string($conn, $_POST['title']);
 $description = mysqli_real_escape_string($conn, $_POST['description']);
 $content = mysqli_real_escape_string($conn, $_POST['content']);
 $radio = mysqli_real_escape_string($conn, $_POST['radio-stacked']);
-$time = date('Y-m-d H:i:s');
 
 $sql = "UPDATE `news` SET `url` = '$url', `title` = '$title', `description` = '$description',
 `content` = '$content', `status` = '$radio', `time` = '$time'  WHERE `id` = '$id_news'";
