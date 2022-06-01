@@ -21,13 +21,18 @@ img{
     height: 100%;
 }
 body {
-    background: url(../../shared/img/bg-login.png) no-repeat center center fixed;
+    background: url(../../shared/img/bg-admin.png) no-repeat center center fixed;
     text-align: center;
     font-family: "Roboto", sans-serif;
     width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
+}
+@media screen and (max-width : 600px) {
+    body{
+        background: url(../../shared/img/bg-admin-mb.png) no-repeat center center fixed;
+    }
 }
 label.error{
     font-size: 14px;
