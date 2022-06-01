@@ -151,7 +151,7 @@ if(isset($_POST['tag_news'])){
             <a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  class="btn btn-danger btn-sm deleteBtn" >
             <i class="fas fa-trash-alt"></i>
             </a>
-            <a title="Sửa" href="../edit_news.php?id='.$row['id'].'" class="btn btn-warning btn-sm" >
+            <a title="Sửa" href="../admin/edit_news.php?id='.$row['id'].'" class="btn btn-warning btn-sm" >
             <i class="fas fa-user-edit"></i>
             </a>
             <a title="SEO Bài viết" href=""  class="btn btn-primary btn-sm" >

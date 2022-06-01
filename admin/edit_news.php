@@ -6,20 +6,20 @@
     require_once('../config/dbhelper.php'); 
 
     if(isset($_GET['id'])){
-        $id = $_GET['id'] = !"" ? mysqli_real_escape_string($conn, $_GET['id']) : '';
-      }else{
-        echo "Có lỗi gì đó xảy ra";
-        exit();
-      }
-      $sql = "SELECT `id` FROM `news` WHERE `id` = '$id'";
-      $result = mysqli_query($conn, $sql);
-      $rowcount = mysqli_num_rows( $result);
-      if (isset($rowcount) && $rowcount != 0) { // Kiểm tra có id này không
-        
-      }else{
-        echo "Có lỗi gì đó xảy ra";
-        exit();
-      }
+      $id = $_GET['id'] = !"" ? mysqli_real_escape_string($conn, $_GET['id']) : '';
+    }else{
+      require_once('./error_404.php');
+      exit();
+    }
+    $sql = "SELECT `id` FROM `news` WHERE `id` = '$id'";
+    $result = mysqli_query($conn, $sql);
+    $rowcount = mysqli_num_rows($result);
+    if (isset($rowcount) && $rowcount != 0) { // Kiểm tra có id này không
+      
+    }else{
+      require_once('./error_404.php');
+      exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

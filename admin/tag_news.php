@@ -20,9 +20,6 @@
       require_once('./error_404.php');
       exit();
     }
-  
- 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
