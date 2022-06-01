@@ -1,10 +1,3 @@
-<?php
-    ob_start(); 
-    session_start();
-    require_once('./modules/permision.php');
-    require_once('../config/config.php');
-    require_once('../config/dbhelper.php'); 
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,6 +13,11 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./css/style.css">
     <style>
+    :root {
+        --text-color : #fff;
+        --text-color-b: #000;
+        --color-blue: #437CBF;
+    }
       #notfound {
          position: relative;
          height: 65vh;
@@ -56,7 +54,7 @@
          display: inline-block;
          width: 120px;
          height: 120px;
-         background-image: url('./shared/img/emoji.png');
+         background-image: url('http://localhost/CoolNLite/shared/img/emoji.png');
          background-size: cover;
          -webkit-transform: scale(1.4);
          -ms-transform: scale(1.4);
@@ -135,7 +133,7 @@
                     Xin lỗi nhưng trang bạn đang tìm kiếm không tồn tại, đã bị xóa. tên đã thay đổi hoặc tạm thời không có
                     sẵn
                     </p>
-                    <a href="./index.php">Quay lại trang chủ</a>
+                    <a href="./dashboard.php">Quay lại trang chủ</a>
                 </div>
             </div>
         </div>

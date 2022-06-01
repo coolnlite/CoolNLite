@@ -9,14 +9,16 @@
       $id = $_GET['id'] = !"" ? mysqli_real_escape_string($conn, $_GET['id']) : '';
     }else{
       require_once('./error_404.php');
+      exit();
     }
     $sql = "SELECT `id` FROM `news` WHERE `id` = '$id'";
     $result = mysqli_query($conn, $sql);
-    $rowcount = mysqli_num_rows( $result);
+    $rowcount = mysqli_num_rows($result);
     if (isset($rowcount) && $rowcount != 0) { // Kiểm tra có id này không
       
     }else{
       require_once('./error_404.php');
+      exit();
     }
   
  

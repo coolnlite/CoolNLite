@@ -4,6 +4,7 @@
   $result = mysqli_query($conn, $sql);
   $rows = mysqli_num_rows($result);
   if(isset($rows) && $rows != 0){
+
     echo '<h5>Bài viết này hiện có các từ khóa là :';
     while ($row = mysqli_fetch_array($result)) {
      echo '<span class="text-primary"> #'.$row['name'].' </span>';
@@ -11,6 +12,7 @@
   }else{
     echo  '<h5>Bài viết này hiện chưa có từ khóa nào. Vui lòng thêm từ khóa</h5>';
   }
+
 ?>
    <div class="mt-3">
    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseAddNewsTag" aria-expanded="false" aria-controls="collapseExample">
