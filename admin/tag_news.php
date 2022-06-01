@@ -246,9 +246,10 @@
                       name_key : name_key
                     },
                     success: function(response){
+
                         if(response.status == 1){
                             alert(response.message);
-                            window.location.reload();
+                             $("#" + id_key).find('td:nth-child(2)').text(name_key);
                         }else{
                             alert(response.message);
                         }
