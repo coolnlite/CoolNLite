@@ -8,7 +8,7 @@
     if(isset($_GET['id'])){
       $id = $_GET['id'] = !"" ? mysqli_real_escape_string($conn, $_GET['id']) : '';
     }else{
-      echo "Có lỗi gì đó xảy ra";
+      require_once('./error_404.php');
     }
     $sql = "SELECT `id` FROM `news` WHERE `id` = '$id'";
     $result = mysqli_query($conn, $sql);
@@ -16,7 +16,7 @@
     if (isset($rowcount) && $rowcount != 0) { // Kiểm tra có id này không
       
     }else{
-      echo "Có lỗi gì đó xảy ra";
+      require_once('./error_404.php');
     }
   
  
