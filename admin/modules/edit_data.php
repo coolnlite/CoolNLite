@@ -101,8 +101,8 @@ if(move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path))
 
     $thumnail_old = $_POST['thumnail_old'];
     $link = '../..';
-    $flie = $link.$thumnail_old;
-    var_dump($flie);
+    $file = $link.$thumnail_old;
+    unlink($file);
 
     $sql = "UPDATE `news` SET `thumnail` = '$thumnail', `time` = '$time' WHERE `id` = '$id_news'";
     $result = mysqli_query($conn,$sql);
