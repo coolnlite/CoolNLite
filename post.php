@@ -28,6 +28,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- meta main -->
     <title><?php print $title.' - COOL N LITE'?></title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
     <meta name="robots" content="noarchive,index,follow"/>
     <meta http-equiv=”content-language” content=”vi” />
     <meta name="copyright" content="COOL N LITE"/>
@@ -40,7 +42,31 @@
     <meta name="ICBM" content="106.0125, 107.0110"/>
     <meta name="revisit-after" content="days"/>
     <!-- meta main -->
-
+    <!-- FACEBOOK -->
+    <meta property="og:site_name" content="vnexpress.net"/>
+    <meta property="og:rich_attachment" content="true"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:publisher" content="https://www.facebook.com/congdongvnexpress/"/>
+    <meta property="article:modified_time" content="Ngày chỉnh sửa. Ví dụ: 2021-016T19:08:47+01:00" />
+    <meta property="article:published_time" content="Ngày xuất bản. Ví dụ: 2021-16-17T05:59:00+01:00" />
+    <meta property="og:url" itemprop="url" content=""/>
+    <meta property="og:image" itemprop="thumbnailUrl" content=""/>
+    <meta property="og:image:width" content="800"/>
+    <meta property="og:image:height" content="354"/>
+    <meta content="Phạm nhân 'vượt ngục' Triệu Quân Sự bị bắt" itemprop="headline" property="og:title"/>
+    <meta content="Gần 15h hôm nay, Triệu Quân Sự, phạm nhân mang án chung thân, bị bắt tại xã Yên Dương, huyện Hà Trung, sau gần một ngày trốn khỏi trại giam quân đội T-974." itemprop="description" property="og:description"/>
+    <meta property="article:tag" content="Triệu Quân Sự,Thanh Hóa,Tin nóng"/>
+    <meta property="fb:admins" content="ID FaceBook dùng để quản lý" />
+    <!-- FACEBOOK -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:description" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:site" content="@COOLNLITE"/>
+    <meta name="twitter:creator" content="@COOLNLITE"/>
+    <!-- End Twitter Card -->
 
     <!-- fontawesome -->
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
