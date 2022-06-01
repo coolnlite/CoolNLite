@@ -33,33 +33,11 @@ if(
 )
 {
 $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
-$url = mysqli_real_escape_string($conn, $_POST['url']);
-$title = mysqli_real_escape_string($conn, $_POST['title']);
-$description = mysqli_real_escape_string($conn, $_POST['description']);
-$content = mysqli_real_escape_string($conn, $_POST['content']);
-$radio = mysqli_real_escape_string($conn, $_POST['radio-stacked']);
-$time = date('Y-m-d H:i:s');
 
-$sql = "UPDATE `news` SET `name` = '$url', `title` = '$title', `description` = '$description',
-`content` = '$content', `status` = '$radio', `time` = '$time'  WHERE `id` = '$id_news'";
-$result = mysqli_query($conn,$sql);
-
-if($result == true){
-    echo json_encode(array(
-        'status' => 1,
-        'message' => 'Cập nhật bài viết thành công'
-    ));
-    exit();
-}else{
-    echo json_encode(array(
-        'status' => 0,
-        'message' => 'Cập nhật bài viết thất bại'
-    ));
-}
 if($_FILES['thumnail']['error'] > 0){
-    return null;
+    
 }else{
-     /* Nhận tên file */
+/* Nhận tên file */
  $filename = $_FILES['thumnail']['name'];
  /* Nhận kích thước file */
  $filesize = $_FILES['thumnail']['size'];
@@ -122,24 +100,49 @@ if(move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path))
 
     if($result){
         echo json_encode(array(
-        'status' => 1,
+        'image' => 1,
         'message' => 'Thêm hình ảnh thành công thành công'
     ));
     exit();
     }else{
         echo json_encode(array(
-        'status' => 0,
+        'image' => 0,
         'message' => 'Thêm hình ảnh thất bại'
         ));
         exit();
     }
 }else{
     echo json_encode(array(
-        'status' => 0,
+        'image' => 0,
         'message' => 'Thêm hình ảnh thất bại'
         ));
         exit();
 }
+
+}//Kiểm tra hình ảnh có tồn tại không
+//Phần cập nhật bài viết trừ ảnh
+$url = mysqli_real_escape_string($conn, $_POST['url']);
+$title = mysqli_real_escape_string($conn, $_POST['title']);
+$description = mysqli_real_escape_string($conn, $_POST['description']);
+$content = mysqli_real_escape_string($conn, $_POST['content']);
+$radio = mysqli_real_escape_string($conn, $_POST['radio-stacked']);
+$time = date('Y-m-d H:i:s');
+
+$sql = "UPDATE `news` SET `url` = '$url', `title` = '$title', `description` = '$description',
+`content` = '$content', `status` = '$radio', `time` = '$time'  WHERE `id` = '$id_news'";
+$result = mysqli_query($conn,$sql);
+
+if($result == true){
+    echo json_encode(array(
+        'status' => 1,
+        'message' => 'Cập nhật bài viết thành công'
+    ));
+    exit();
+}else{
+    echo json_encode(array(
+        'status' => 0,
+        'message' => 'Cập nhật bài viết thất bại'
+    ));
 }
 
 }

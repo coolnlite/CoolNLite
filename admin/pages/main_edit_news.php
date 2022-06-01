@@ -34,7 +34,9 @@
     </div>
       
     <label for="content">Nội dung :</label>
-    <textarea class="form-control" id="content" name="content" rows="5" value="<?php print $ns['content']?>"></textarea>
+    <textarea class="form-control" id="content" name="content" rows="5" >
+        <?php print $ns['content']?>
+    </textarea>
     
     <div class="form-group">
       <label>Trạng thái bài viết :</label>
