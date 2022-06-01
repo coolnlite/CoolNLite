@@ -47,7 +47,6 @@
     <meta property="og:rich_attachment" content="true"/>
     <meta property="og:type" content="article"/>
     <meta property="article:publisher" content="https://www.facebook.com/congdongvnexpress/"/>
-    <meta property="article:modified_time" content="Ngày chỉnh sửa. Ví dụ: 2021-016T19:08:47+01:00" />
     <meta property="article:published_time" content="Ngày xuất bản. Ví dụ: 2021-16-17T05:59:00+01:00" />
     <meta property="og:url" itemprop="url" content=""/>
     <meta property="og:image" itemprop="thumbnailUrl" content=""/>
