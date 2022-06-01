@@ -6,6 +6,7 @@
      $news = executeResult($sql);
      foreach($news as $ns){
 ?>
+    <input type="hidden" value="<?php print $id ?>" name="id_news">
     <div class="form-group">
       <label for="url">Đường dẫn :</label><label class="text-danger">(Mẫu : vo-dong-thai-dep-trai-ahihi)</label>
       <input type="text" class="form-control" value="<?php print $ns['url']?>" id="url" name="url" placeholder="Nhập đường dẫn bài viết" required>
@@ -19,7 +20,7 @@
     </div>
     <div class="form-group">
       <label for="thumnail">Ảnh đại diện :</label>
-      <input type="file" class="form-control" name="thumnail" value="<?php print $ns['thumnail']?>" id="thumnail">
+      <input type="file" class="form-control" name="thumnail" id="thumnail">
       <div class="invalid-feedback">Vui lòng nhập ảnh đại diện bài viết</div>
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="<?php print '..'.$ns['thumnail']?>" alt="Image">
