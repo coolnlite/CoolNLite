@@ -163,6 +163,9 @@
                 <label for="img-fb">Ảnh đại diện:</label>
                 <input type="file" class="form-control" name="img-fb" id="img-fb">
                 <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="<?php print '..'.$sn['img_fb']?>" alt="Image">
+                </div>
                 </div>
                 
                 <div class="form-group">
@@ -212,8 +215,11 @@
                 
                 <div class="form-group">
                 <label for="img-tw">Ảnh đại diện:</label>
-                <input type="file" class="form-control" name="img-tw" id="img-tw" required>
+                <input type="file" class="form-control" name="img-tw" id="img-tw">
                 <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="<?php print '..'.$sn['img_tw']?>" alt="Image">
+                </div>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Thêm</button>

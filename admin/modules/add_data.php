@@ -306,10 +306,12 @@ if(!empty($_POST['id_news']) && !empty($_POST['title']) && !empty($_FILES['img-t
         $description_tw = mysqli_real_escape_string($conn, $_POST['description-tw']);
 
         $sql = "INSERT INTO `seo_news` (`id_news`,`title`,`description`,`keyword`,`link_fb`,`img_fb`,
-        `title_fb`,`description_fb`,`keyword_fb`,`title_tw`,`description`,`img_tw`)
+        `title_fb`,`description_fb`,`keyword_fb`,`title_tw`,`description_tw`,`img_tw`)
         VALUES ('$id_news','$title','$description','$keyword','$link_fb','$img_fb',
         '$title_fb','$description_fb','$keyword_fb','$title_tw','$description_tw','$img_tw')";
+
         $result = mysqli_query($conn,$sql);
+
         if($result == true){
             echo json_encode(array(
                 'status' => 1,
