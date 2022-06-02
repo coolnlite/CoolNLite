@@ -25,7 +25,7 @@
       <div class="invalid-feedback">Vui lòng nhập ảnh đại diện bài viết</div>
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="<?php print '..'.$ns['thumnail']?>" alt="Image">
-        </div>
+      </div>
     </div>
     <div class="form-group">
       <label for="description">Mô tả :</label> <label class="text-danger">không quá 300 ký tự</label>
