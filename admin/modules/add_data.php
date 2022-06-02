@@ -231,30 +231,30 @@ if(!empty($_POST['id_news']) && !empty($_POST['title']) && !empty($_FILES['img-t
  }
  $path1 = $fileName1 . '.' . $fileType1;
 
-    move_uploaded_file($_FILES['img-fb']['tmp_name'],$uploadPath . '/' .$path);
+ $resultFB = move_uploaded_file($_FILES['img-fb']['tmp_name'],$uploadPath1 . '/' .$path1);
     $img_fb =  $tar_get . '/' .$path;
 
     /* Nhận tên file */
- $filename = $_FILES['img-tw']['name'];
+ $filename2 = $_FILES['img-tw']['name'];
  /* Nhận kích thước file */
- $filesize = $_FILES['img-tw']['size'];
+ $filesize2 = $_FILES['img-tw']['size'];
 
  /* Thêm tên file bằng timestamp*/
- $timestamp = time();
+ $timestamp2 = time();
 
  /* Gắn timestamp vào tên file*/
- $path = $timestamp.$filename;
+ $path2 = $timestamp2.$filename2;
 
  /* Location */
- $uploadPath = "../../uploads/seo_news";
+ $uploadPath2 = "../../uploads/seo_news";
 
- $tar_get = "/uploads/seo_news";
+ $tar_get2 = "/uploads/seo_news";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
- $size = $_FILES["img-tw"]['tmp_name'];
- list($width, $height) = getimagesize($size);
+ $size2 = $_FILES["img-tw"]['tmp_name'];
+ list($width2, $height2) = getimagesize($size2);
 
- if($width > "1000" || $height > "1000") {
+ if($width2 > "1000" || $height2 > "1000") {
      echo json_encode(array(
          'status' => 0,
          'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 1000px X 1000px'
@@ -262,17 +262,17 @@ if(!empty($_POST['id_news']) && !empty($_POST['title']) && !empty($_FILES['img-t
      exit();
  }
  //Kiểm tra xem kiểu file có hợp lệ hoặc dung lượng lớn không
- $validTypes = array("jpg","jpeg","png","bmp");
- $fileType = substr($path,strrpos($path,".") + 1);
+ $validTypes2 = array("jpg","jpeg","png","bmp");
+ $fileType2 = substr($path2,strrpos($path2,".") + 1);
 
- if(!in_array($fileType,$validTypes) || $filesize > 2 * 1024 * 1024){
+ if(!in_array($fileType2,$validTypes2) || $filesize2 > 2 * 1024 * 1024){
     echo json_encode(array(
         'status' => 0,
         'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp'
     ));
     exit();
 }
- if($filesize > 2 * 1024 * 1024){
+ if($filesize2 > 2 * 1024 * 1024){
      echo json_encode(array(
          'status' => 0,
          'messaage' => 'Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
@@ -281,43 +281,51 @@ if(!empty($_POST['id_news']) && !empty($_POST['title']) && !empty($_FILES['img-t
  }
 
  //Check xem ảnh đã tồn tại hay chưa nếu không thì đổi tên
- $num = 1;
- $fileName = substr($path,0,strrpos($path,"."));
- $fileName = md5($fileName);
- while(file_exists($uploadPath . '/' . $fileName . '.' . $fileType)){
-     $fileName = $fileName . "(". $num .")";
-     $num ++;
+ $num2 = 1;
+ $fileName2 = substr($path2,0,strrpos($path2,"."));
+ $fileName2 = md5($fileName2);
+ while(file_exists($uploadPath2 . '/' . $fileName2 . '.' . $fileType2)){
+     $fileName2 = $fileName2 . "(". $num2 .")";
+     $num2 ++;
  }
- $path = $fileName . '.' . $fileType;
+ $path2 = $fileName2 . '.' . $fileType2;
 
-    move_uploaded_file($_FILES['img-tw']['tmp_name'],$uploadPath . '/' .$path);
-    $img_fb =  $tar_get . '/' .$path;
+    $resultTW =  move_uploaded_file($_FILES['img-tw']['tmp_name'],$uploadPath2 . '/' .$path2);
+    $img_tw =  $tar_get2 . '/' .$path2;
 
-
-    $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
-    $title = mysqli_real_escape_string($conn, $_POST['title']);
-    $description = mysqli_real_escape_string($conn, $_POST['description']);
-    $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
-    $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
-    $title = mysqli_real_escape_string($conn, $_POST['title']);
-    $description = mysqli_real_escape_string($conn, $_POST['description']);
-    $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
-
-    $sql = "INSERT INTO `seo_news` (`id_news`,`title`,`description`,`keyword`)
-    VALUES ('$id_news','$title','$description','$keyword')";
-    $result = mysqli_query($conn,$sql);
-    if($result == true){
-        echo json_encode(array(
-            'status' => 1,
-            'message' => 'Thêm từ khóa thành công'
-        ));
-        exit();
+    if($resultTW && $resultFB){
+        $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
+        $title = mysqli_real_escape_string($conn, $_POST['title']);
+        $description = mysqli_real_escape_string($conn, $_POST['description']);
+        $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
+        $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
+        $title = mysqli_real_escape_string($conn, $_POST['title']);
+        $description = mysqli_real_escape_string($conn, $_POST['description']);
+        $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
+    
+        $sql = "INSERT INTO `seo_news` (`id_news`,`title`,`description`,`keyword`)
+        VALUES ('$id_news','$title','$description','$keyword')";
+        $result = mysqli_query($conn,$sql);
+        if($result == true){
+            echo json_encode(array(
+                'status' => 1,
+                'message' => 'Thêm SEO cho bài viết thành công'
+            ));
+            exit();
+        }else{
+            echo json_encode(array(
+                'status' => 0,
+                'message' => 'Thêm SEO cho bài viết thất bại'
+            ));
+            exit();
+        }
     }else{
         echo json_encode(array(
             'status' => 0,
-            'message' => 'Thêm từ khóa thất bại'
+            'message' => 'Thêm SEO cho bài viết thất bại'
         ));
         exit();
     }
+
 }
 ?>
