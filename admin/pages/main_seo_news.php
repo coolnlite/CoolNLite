@@ -155,7 +155,7 @@
   </nav>
     <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="seo-main" role="tabpanel" aria-labelledby="seo-main-tab">
-            <h5 class="mt-3">Thêm SEO chính</h5>
+            <h5 class="mt-3">Chỉnh sửa SEO chính</h5>
             <form id="faddseomain" class="needs-validation"novalidate>
                 <input type="hidden" name="id_news" value="<?php print $id?>"  required>
 
@@ -190,7 +190,7 @@
             </form>
         </div>
         <div class="tab-pane fade" id="seo-facebook" role="tabpanel" aria-labelledby="seo-facebook-tab">
-        <h5 class="mt-3">Thêm SEO Facebook</h5>
+        <h5 class="mt-3">Chỉnh sửa SEO Facebook</h5>
             <form id="faddseofb" class="needs-validation"novalidate>
                 <input type="hidden" name="id_news" value="<?php print $id?>"  required>
 
@@ -240,7 +240,7 @@
             </form>
         </div>
         <div class="tab-pane fade" id="seo-twitter" role="tabpanel" aria-labelledby="seo-twitter-tab">
-        <h5 class="mt-3">Thêm SEO Twitter</h5>
+        <h5 class="mt-3">Chỉnh sửa SEO Twitter</h5>
             <form id="faddseotw" class="needs-validation"novalidate>
                 <input type="hidden" name="id_news" value="<?php print $id?>"  required>
                 
