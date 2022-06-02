@@ -169,4 +169,9 @@
         }
     }
 
+//Thêm seo chính cho bài viết
+if(isset($_POST['id_news']) && isset($_POST['title']) &&
+ isset($_POST['description']) && isset($_POST['id_news'])){
+    
+}
 ?>
