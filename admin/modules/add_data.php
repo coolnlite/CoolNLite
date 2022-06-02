@@ -171,7 +171,28 @@
 
 //Thêm seo chính cho bài viết
 if(isset($_POST['id_news']) && isset($_POST['title']) &&
- isset($_POST['description']) && isset($_POST['id_news'])){
-    
+ isset($_POST['description']) && isset($_POST['keyword'])){
+     
+    $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
+    $title = mysqli_real_escape_string($conn, $_POST['title']);
+    $description = mysqli_real_escape_string($conn, $_POST['description']);
+    $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
+
+        $time = date('Y-m-d H:i:s');
+        $sql = "INSERT INTO `keyword` (`name`,`time`) VALUES ('$name','$time')";
+        $result = mysqli_query($conn,$sql);
+        if($result == true){
+            echo json_encode(array(
+                'status' => 1,
+                'message' => 'Thêm từ khóa thành công'
+            ));
+            exit();
+        }else{
+            echo json_encode(array(
+                'status' => 0,
+                'message' => 'Thêm từ khóa thất bại'
+            ));
+            exit();
+        }
 }
 ?>
