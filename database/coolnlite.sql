@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2022 at 12:30 PM
+-- Generation Time: Jun 02, 2022 at 12:14 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -285,19 +285,25 @@ INSERT INTO `news_keyword` (`id_news_tag`, `id_news`, `id_tag`) VALUES
 CREATE TABLE `seo_news` (
   `id` int(11) NOT NULL,
   `id_news` int(11) NOT NULL,
-  `title` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
-  `description` varchar(160) COLLATE utf8_unicode_ci NOT NULL,
-  `keywords` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `description` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `keyword` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `link_fb` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `img_fb` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
-  `title_fb` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
-  `description_fb` varchar(160) COLLATE utf8_unicode_ci NOT NULL,
+  `title_fb` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `description_fb` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `keyword_fb` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `id_fb` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `tw_title` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
-  `tw_description` varchar(160) COLLATE utf8_unicode_ci NOT NULL,
-  `tw_image` varchar(150) COLLATE utf8_unicode_ci NOT NULL
+  `title_tw` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `description_tw` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `img_tw` varchar(150) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `seo_news`
+--
+
+INSERT INTO `seo_news` (`id`, `id_news`, `title`, `description`, `keyword`, `link_fb`, `img_fb`, `title_fb`, `description_fb`, `keyword_fb`, `title_tw`, `description_tw`, `img_tw`) VALUES
+(7, 8, 'Thử nghiệm bài viết', 'ok', 'jjjj', 'https://www.facebook.com/coolnlitevn', '/uploads/seo_news/3b352c37fce4cfeec5f180cb45692230.jpg', 'hh', 'hh', 'hh', 'hh', 'hh', '/uploads/seo_news/5d29a73541c8cfdd43707c1e140dea92.jpg');
 
 -- --------------------------------------------------------
 
@@ -476,7 +482,7 @@ ALTER TABLE `news_keyword`
 -- AUTO_INCREMENT for table `seo_news`
 --
 ALTER TABLE `seo_news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `sidebar`
