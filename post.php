@@ -56,7 +56,6 @@
     <meta content="Phạm nhân 'vượt ngục' Triệu Quân Sự bị bắt" itemprop="headline" property="og:title"/>
     <meta content="Gần 15h hôm nay, Triệu Quân Sự, phạm nhân mang án chung thân, bị bắt tại xã Yên Dương, huyện Hà Trung, sau gần một ngày trốn khỏi trại giam quân đội T-974." itemprop="description" property="og:description"/>
     <meta property="article:tag" content="Triệu Quân Sự,Thanh Hóa,Tin nóng"/>
-    <meta property="fb:admins" content="ID FaceBook dùng để quản lý" />
     <!-- FACEBOOK -->
     <!-- Twitter Card -->
     <meta name="twitter:card" value="summary"/>
