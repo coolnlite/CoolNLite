@@ -156,15 +156,22 @@
     <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="seo-main" role="tabpanel" aria-labelledby="seo-main-tab">
             <h5 class="mt-3">Chỉnh sửa SEO chính</h5>
-            <form id="faddseomain" class="needs-validation"novalidate>
+            <form id="feditseomain" class="needs-validation"novalidate>
                 <input type="hidden" name="id_news" value="<?php print $id?>"  required>
+                <?php
+                    $sql = "SELECT * FROM `seo_news` WHERE `id_news` = '$id'";
+                    $seo_news = executeResult($sql);
+                    foreach($seo_news as $sn){
+
+                ?>
+                <input type="hidden" name="id_tag" value="<?php print $sn['id']?>"  required>
 
                 <div class="form-group">
                 <label for="title">Tiêu đề :</label>
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title" class="text-danger">100</span> ký tự</span>
                 <input type="text" maxlength="100" class="form-control" id="title" name="title" 
                 placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title')" 
-                onkeydown="limit(this,100,'#n-title')" required>
+                onkeydown="limit(this,100,'#n-title')" value="<?php print $sn['title']?>" required>
                 <div class="invalid-feedback">Vui lòng nhập tiêu đề cho bài viết</div>
                 </div>
 
@@ -173,7 +180,7 @@
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description" class="text-danger">250</span> ký tự</span>
                 <input type="text" maxlength="250" class="form-control" id="description" name="description" 
                 placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description')" 
-                onkeydown="limit(this,250,'#n-description')" required>
+                onkeydown="limit(this,250,'#n-description')" value="<?php print $sn['description']?>" required>
                 <div class="invalid-feedback">Vui lòng nhập mô tả cho bài viết</div>
                 </div>
                 
@@ -182,10 +189,12 @@
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-keyword" class="text-danger">100</span> ký tự</span>
                 <input type="text" maxlength="100" class="form-control" id="keyword" name="keyword" 
                 placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#n-keyword')" 
-                onkeydown="limit(this,100,'#n-keyword')" required>
+                onkeydown="limit(this,100,'#n-keyword')" value="<?php print $sn['keyword']?>" required>
                 <div class="invalid-feedback">Vui lòng nhập từ khóa cho bài viết</div>
                 </div>
-                
+                <?php 
+                    }
+                ?>
                 <button type="submit" class="btn btn-primary">Thêm</button>
             </form>
         </div>

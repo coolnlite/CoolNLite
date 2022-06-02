@@ -178,21 +178,21 @@ if(isset($_POST['id_news']) && isset($_POST['title']) &&
     $description = mysqli_real_escape_string($conn, $_POST['description']);
     $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
 
-        $time = date('Y-m-d H:i:s');
-        $sql = "INSERT INTO `keyword` (`name`,`time`) VALUES ('$name','$time')";
-        $result = mysqli_query($conn,$sql);
-        if($result == true){
-            echo json_encode(array(
-                'status' => 1,
-                'message' => 'Thêm từ khóa thành công'
-            ));
-            exit();
-        }else{
-            echo json_encode(array(
-                'status' => 0,
-                'message' => 'Thêm từ khóa thất bại'
-            ));
-            exit();
-        }
+    $sql = "INSERT INTO `seo_news` (`id_news`,`title`,`description`,`keyword`)
+    VALUES ('$id_news','$title','$description','$keyword')";
+    $result = mysqli_query($conn,$sql);
+    if($result == true){
+        echo json_encode(array(
+            'status' => 1,
+            'message' => 'Thêm từ khóa thành công'
+        ));
+        exit();
+    }else{
+        echo json_encode(array(
+            'status' => 0,
+            'message' => 'Thêm từ khóa thất bại'
+        ));
+        exit();
+    }
 }
 ?>

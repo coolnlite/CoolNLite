@@ -86,8 +86,7 @@
               processData:false,
               success: function(response){ 
                   if(response.status == 1){
-                      alert("Thêm từ khóa cho bài biết thành công");
-                      window.location.reload();
+                      alert(response.message);
                   }else{
                       alert(response.message);
                   }
