@@ -6,9 +6,12 @@
 
   <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link active" id="seo-main-tab" data-toggle="tab" href="#seo-main" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-        <a class="nav-item nav-link" id="seo-facebook-tab" data-toggle="tab" href="#seo-facebook" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-        <a class="nav-item nav-link" id="seo-twitter-tab" data-toggle="tab" href="#seo-twitter" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+        <a class="nav-item nav-link active" id="seo-main-tab" data-toggle="tab" href="#seo-main" 
+        role="tab" aria-controls="nav-home" aria-selected="true">SEO</a>
+        <a class="nav-item nav-link" id="seo-facebook-tab" data-toggle="tab" href="#seo-facebook" 
+        role="tab" aria-controls="nav-profile" aria-selected="false">FACEBOOK</a>
+        <a class="nav-item nav-link" id="seo-twitter-tab" data-toggle="tab" href="#seo-twitter" 
+        role="tab" aria-controls="nav-contact" aria-selected="false">TWITTER</a>
     </div>
   </nav>
     <div class="tab-content" id="nav-tabContent">
@@ -19,21 +22,28 @@
 
                 <div class="form-group">
                 <label for="title">Tiêu đề :</label>
-                <span class="ml-2 font-weight-bold">Bạn còn tối đa <span id="n-title" class="text-danger">70</span> ký tự còn lại</span>
-                <input type="text" maxlength="70" class="form-control" id="title" name="title" 
-                placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,70,'#n-title')" required>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title" class="text-danger">100</span> ký tự</span>
+                <input type="text" maxlength="100" class="form-control" id="title" name="title" 
+                placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title')" 
+                onkeydown="limit(this,100,'#n-title')" required>
                 <div class="invalid-feedback">Vui lòng nhập tiêu đề cho bài viết</div>
                 </div>
 
                 <div class="form-group">
                 <label for="description">Mô tả:</label>
-                <input type="text" class="form-control" id="description" name="description" placeholder="Nhập mô tả cho bài viết" required>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description" class="text-danger">250</span> ký tự</span>
+                <input type="text" maxlength="250" class="form-control" id="description" name="description" 
+                placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description')" 
+                onkeydown="limit(this,250,'#n-description')" required>
                 <div class="invalid-feedback">Vui lòng nhập mô tả cho bài viết</div>
                 </div>
                 
                 <div class="form-group">
                 <label for="keyword">Từ khóa :</label>
-                <input type="text" class="form-control" id="keyword" name="keyword" placeholder="Nhập mô tả bài viết" required>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-keyword" class="text-danger">100</span> ký tự</span>
+                <input type="text" maxlength="100" class="form-control" id="keyword" name="keyword" 
+                placeholder="Nhập mô tả bài viết" onkeyup="limit(this,100,'#n-keyword')" 
+                onkeydown="limit(this,100,'#n-keyword')" required>
                 <div class="invalid-feedback">Vui lòng nhập từ khóa cho bài viết</div>
                 </div>
                 
