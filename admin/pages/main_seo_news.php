@@ -106,26 +106,26 @@
                 <input type="hidden" name="id_news" value=""  required>
                 
                 <div class="form-group">
-                <label for="title-fb">Tiêu đề :</label>
-                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title-fb" class="text-danger">100</span> ký tự</span>
-                <input type="text" maxlength="100" class="form-control" id="title-fb" name="title-fb" 
-                placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title-fb')" 
-                onkeydown="limit(this,100,'#n-title-fb')" required>
+                <label for="title-tw">Tiêu đề :</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title-tw" class="text-danger">100</span> ký tự</span>
+                <input type="text" maxlength="100" class="form-control" id="title-tw" name="title-tw" 
+                placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title-tw')" 
+                onkeydown="limit(this,100,'#n-title-tw')" required>
                 <div class="invalid-feedback">Vui lòng nhập tiêu đề cho bài viết</div>
                 </div>
                 
                 <div class="form-group">
-                <label for="description-fb">Mô tả:</label>
-                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description-fb" class="text-danger">250</span> ký tự</span>
-                <input type="text" maxlength="250" class="form-control" id="description-fb" name="description-fb" 
+                <label for="description-tw">Mô tả:</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description-tw" class="text-danger">250</span> ký tự</span>
+                <input type="text" maxlength="250" class="form-control" id="description-tw" name="description-tw" 
                 placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description-fb')" 
-                onkeydown="limit(this,250,'#n-description-fb')" required>
+                onkeydown="limit(this,250,'#n-description-tw')" required>
                 <div class="invalid-feedback">Vui lòng nhập mô tả cho bài viết</div>
                 </div>
                 
                 <div class="form-group">
-                <label for="img-fb">Ảnh đại diện:</label>
-                <input type="file" class="form-control" name="img-fb" id="img-fb" required>
+                <label for="img-tw">Ảnh đại diện:</label>
+                <input type="file" class="form-control" name="img-tw" id="img-tw" required>
                 <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
                 </div>
 
