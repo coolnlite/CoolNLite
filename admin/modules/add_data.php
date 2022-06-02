@@ -184,7 +184,7 @@ if(!empty($_POST['id_news']) && !empty($_POST['title']) && !empty($_FILES['img-t
  $timestamp1 = time();
 
  /* Gắn timestamp vào tên file*/
- $path1 = $timestamp.$filename;
+ $path1 = $timestamp1.$filename1;
 
  /* Location */
  $uploadPath1 = "../../uploads/seo_news";
@@ -232,7 +232,7 @@ if(!empty($_POST['id_news']) && !empty($_POST['title']) && !empty($_FILES['img-t
  $path1 = $fileName1 . '.' . $fileType1;
 
  $resultFB = move_uploaded_file($_FILES['img-fb']['tmp_name'],$uploadPath1 . '/' .$path1);
-    $img_fb =  $tar_get . '/' .$path;
+    $img_fb =  $tar_get1 . '/' .$path1;
 
     /* Nhận tên file */
  $filename2 = $_FILES['img-tw']['name'];
