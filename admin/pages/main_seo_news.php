@@ -8,20 +8,7 @@
 ?>
   <h2>SEO Cho Bài Viết</h2>
 
-  <nav>
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link active" id="seo-main-tab" data-toggle="tab" href="#seo-main" 
-        role="tab" aria-controls="nav-home" aria-selected="true">SEO</a>
-        <a class="nav-item nav-link" id="seo-facebook-tab" data-toggle="tab" href="#seo-facebook" 
-        role="tab" aria-controls="nav-profile" aria-selected="false">FACEBOOK</a>
-        <a class="nav-item nav-link" id="seo-twitter-tab" data-toggle="tab" href="#seo-twitter" 
-        role="tab" aria-controls="nav-contact" aria-selected="false">TWITTER</a>
-    </div>
-  </nav>
-    <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="seo-main" role="tabpanel" aria-labelledby="seo-main-tab">
-            <h5 class="mt-3">Thêm SEO chính</h5>
-            <form id="faddseomain" class="needs-validation"novalidate>
+            <form id="faddseomain" class="needs-validation" enctype="multipart/form-data" novalidate>
                 <input type="hidden" name="id_news" value="<?php print $id?>"  required>
 
                 <div class="form-group">
@@ -51,31 +38,23 @@
                 <div class="invalid-feedback">Vui lòng nhập từ khóa cho bài viết</div>
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Thêm</button>
-            </form>
-        </div>
-        <div class="tab-pane fade" id="seo-facebook" role="tabpanel" aria-labelledby="seo-facebook-tab">
-        <h5 class="mt-3">Thêm SEO Facebook</h5>
-            <form id="faddseofb" class="needs-validation"novalidate>
-                <input type="hidden" name="id_news" value="<?php print $id?>"  required>
-
                 <div class="form-group">
-                <label for="link-fb">Đường dẫn fanpage :</label>
+                <label for="link-fb">Đường dẫn fanpage facebook:</label>
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-link-fb" class="text-danger">100</span> ký tự</span>
-                <input type="text" maxlength="100" class="form-control" id="link-fb" name="link-fb" 
-                placeholder="https://www.facebook.com/coolnlitevn" onkeyup="limit(this,100,'#n-link-fb')" 
+                <input type="url" maxlength="100" class="form-control" id="link-fb" name="link-fb" 
+                placeholder="https://www.facebook.com/..." onkeyup="limit(this,100,'#n-link-fb')" 
                 onkeydown="limit(this,100,'#n-link-fb')" required>
                 <div class="invalid-feedback">Vui lòng nhập đường dẫn fanpage</div>
                 </div>
 
                 <div class="form-group">
-                <label for="img-fb">Ảnh đại diện:</label>
+                <label for="img-fb">Ảnh đại diện facebook:</label>
                 <input type="file" class="form-control" name="img-fb" id="img-fb" required>
                 <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
                 </div>
                 
                 <div class="form-group">
-                <label for="title-fb">Tiêu đề :</label>
+                <label for="title-fb">Tiêu đề facebook:</label>
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title-fb" class="text-danger">100</span> ký tự</span>
                 <input type="text" maxlength="100" class="form-control" id="title-fb" name="title-fb" 
                 placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title-fb')" 
@@ -84,7 +63,7 @@
                 </div>
                 
                 <div class="form-group">
-                <label for="description-fb">Mô tả:</label>
+                <label for="description-fb">Mô tả facebook:</label>
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description-fb" class="text-danger">250</span> ký tự</span>
                 <input type="text" maxlength="250" class="form-control" id="description-fb" name="description-fb" 
                 placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description-fb')" 
@@ -93,24 +72,16 @@
                 </div>
                 
                 <div class="form-group">
-                <label for="keyword-fb">Từ khóa :</label>
+                <label for="keyword-fb">Từ khóa facebook:</label>
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-keyword-fb" class="text-danger">100</span> ký tự</span>
                 <input type="text" maxlength="100" class="form-control" id="keyword-fb" name="keyword-fb" 
                 placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#n-keyword-fb')" 
                 onkeydown="limit(this,100,'#n-keyword-fb')" required>
                 <div class="invalid-feedback">Vui lòng nhập từ khóa cho bài viết</div>
                 </div>
-
-                <button type="submit" class="btn btn-primary">Thêm</button>
-            </form>
-        </div>
-        <div class="tab-pane fade" id="seo-twitter" role="tabpanel" aria-labelledby="seo-twitter-tab">
-        <h5 class="mt-3">Thêm SEO Twitter</h5>
-            <form id="faddseotw" class="needs-validation"novalidate>
-                <input type="hidden" name="id_news" value="<?php print $id?>"  required>
-                
+  
                 <div class="form-group">
-                <label for="title-tw">Tiêu đề :</label>
+                <label for="title-tw">Tiêu đề twitter:</label>
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title-tw" class="text-danger">100</span> ký tự</span>
                 <input type="text" maxlength="100" class="form-control" id="title-tw" name="title-tw" 
                 placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title-tw')" 
@@ -119,51 +90,37 @@
                 </div>
                 
                 <div class="form-group">
-                <label for="description-tw">Mô tả:</label>
+                <label for="description-tw">Mô tả twitter:</label>
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description-tw" class="text-danger">250</span> ký tự</span>
                 <input type="text" maxlength="250" class="form-control" id="description-tw" name="description-tw" 
-                placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description-fb')" 
+                placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description-tw')" 
                 onkeydown="limit(this,250,'#n-description-tw')" required>
                 <div class="invalid-feedback">Vui lòng nhập mô tả cho bài viết</div>
                 </div>
                 
                 <div class="form-group">
-                <label for="img-tw">Ảnh đại diện:</label>
+                <label for="img-tw">Ảnh đại diện twitter:</label>
                 <input type="file" class="form-control" name="img-tw" id="img-tw" required>
                 <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Thêm</button>
             </form>
-        </div>
-    </div>
+
     <?php 
         }else{//Đã tồn tại bài viết
     ?>
 
 <h2>Chỉnh Sửa SEO Cho Bài Viết</h2>
 
-  <nav>
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link active" id="seo-main-tab" data-toggle="tab" href="#seo-main" 
-        role="tab" aria-controls="nav-home" aria-selected="true">SEO</a>
-        <a class="nav-item nav-link" id="seo-facebook-tab" data-toggle="tab" href="#seo-facebook" 
-        role="tab" aria-controls="nav-profile" aria-selected="false">FACEBOOK</a>
-        <a class="nav-item nav-link" id="seo-twitter-tab" data-toggle="tab" href="#seo-twitter" 
-        role="tab" aria-controls="nav-contact" aria-selected="false">TWITTER</a>
-    </div>
-  </nav>
-    <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="seo-main" role="tabpanel" aria-labelledby="seo-main-tab">
-            <h5 class="mt-3">Chỉnh sửa SEO chính</h5>
-            <form id="feditseomain" class="needs-validation"novalidate>
-                <input type="hidden" name="id_news" value="<?php print $id?>"  required>
-                <?php
+  <?php
                     $sql = "SELECT * FROM `seo_news` WHERE `id_news` = '$id'";
                     $seo_news = executeResult($sql);
                     foreach($seo_news as $sn){
 
                 ?>
+            <form id="feditseomain" class="needs-validation"novalidate>
+                <input type="hidden" name="id_news" value="<?php print $id?>"  required>
                 <input type="hidden" name="id_tag" value="<?php print $sn['id']?>"  required>
 
                 <div class="form-group">
@@ -192,29 +149,19 @@
                 onkeydown="limit(this,100,'#n-keyword')" value="<?php print $sn['keyword']?>" required>
                 <div class="invalid-feedback">Vui lòng nhập từ khóa cho bài viết</div>
                 </div>
-                <?php 
-                    }
-                ?>
-                <button type="submit" class="btn btn-primary">Thêm</button>
-            </form>
-        </div>
-        <div class="tab-pane fade" id="seo-facebook" role="tabpanel" aria-labelledby="seo-facebook-tab">
-        <h5 class="mt-3">Chỉnh sửa SEO Facebook</h5>
-            <form id="faddseofb" class="needs-validation"novalidate>
-                <input type="hidden" name="id_news" value="<?php print $id?>"  required>
-
+               
                 <div class="form-group">
                 <label for="link-fb">Đường dẫn fanpage :</label>
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-link-fb" class="text-danger">100</span> ký tự</span>
-                <input type="text" maxlength="100" class="form-control" id="link-fb" name="link-fb" 
-                placeholder="https://www.facebook.com/coolnlitevn" onkeyup="limit(this,100,'#n-link-fb')" 
-                onkeydown="limit(this,100,'#n-link-fb')" required>
+                <input type="url" maxlength="100" class="form-control" id="link-fb" name="link-fb" 
+                placeholder="https://www.facebook.com/..." onkeyup="limit(this,100,'#n-link-fb')" 
+                onkeydown="limit(this,100,'#n-link-fb')" value="<?php print $sn['link_fb']?>" required>
                 <div class="invalid-feedback">Vui lòng nhập đường dẫn fanpage</div>
                 </div>
 
                 <div class="form-group">
                 <label for="img-fb">Ảnh đại diện:</label>
-                <input type="file" class="form-control" name="img-fb" id="img-fb" required>
+                <input type="file" class="form-control" name="img-fb" id="img-fb">
                 <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
                 </div>
                 
@@ -223,7 +170,7 @@
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title-fb" class="text-danger">100</span> ký tự</span>
                 <input type="text" maxlength="100" class="form-control" id="title-fb" name="title-fb" 
                 placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title-fb')" 
-                onkeydown="limit(this,100,'#n-title-fb')" required>
+                onkeydown="limit(this,100,'#n-title-fb')" value="<?php print $sn['title_fb']?>" required>
                 <div class="invalid-feedback">Vui lòng nhập tiêu đề cho bài viết</div>
                 </div>
                 
@@ -232,7 +179,7 @@
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description-fb" class="text-danger">250</span> ký tự</span>
                 <input type="text" maxlength="250" class="form-control" id="description-fb" name="description-fb" 
                 placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description-fb')" 
-                onkeydown="limit(this,250,'#n-description-fb')" required>
+                onkeydown="limit(this,250,'#n-description-fb')" value="<?php print $sn['description_fb']?>" required>
                 <div class="invalid-feedback">Vui lòng nhập mô tả cho bài viết</div>
                 </div>
                 
@@ -241,24 +188,16 @@
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-keyword-fb" class="text-danger">100</span> ký tự</span>
                 <input type="text" maxlength="100" class="form-control" id="keyword-fb" name="keyword-fb" 
                 placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#n-keyword-fb')" 
-                onkeydown="limit(this,100,'#n-keyword-fb')" required>
+                onkeydown="limit(this,100,'#n-keyword-fb')" value="<?php print $sn['keyword_fb']?>" required>
                 <div class="invalid-feedback">Vui lòng nhập từ khóa cho bài viết</div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Thêm</button>
-            </form>
-        </div>
-        <div class="tab-pane fade" id="seo-twitter" role="tabpanel" aria-labelledby="seo-twitter-tab">
-        <h5 class="mt-3">Chỉnh sửa SEO Twitter</h5>
-            <form id="faddseotw" class="needs-validation"novalidate>
-                <input type="hidden" name="id_news" value="<?php print $id?>"  required>
-                
                 <div class="form-group">
                 <label for="title-tw">Tiêu đề :</label>
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title-tw" class="text-danger">100</span> ký tự</span>
                 <input type="text" maxlength="100" class="form-control" id="title-tw" name="title-tw" 
                 placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title-tw')" 
-                onkeydown="limit(this,100,'#n-title-tw')" required>
+                onkeydown="limit(this,100,'#n-title-tw')" value="<?php print $sn['title_tw']?>" required>
                 <div class="invalid-feedback">Vui lòng nhập tiêu đề cho bài viết</div>
                 </div>
                 
@@ -267,7 +206,7 @@
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description-tw" class="text-danger">250</span> ký tự</span>
                 <input type="text" maxlength="250" class="form-control" id="description-tw" name="description-tw" 
                 placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description-fb')" 
-                onkeydown="limit(this,250,'#n-description-tw')" required>
+                onkeydown="limit(this,250,'#n-description-tw')" value="<?php print $sn['description_tw']?>" required>
                 <div class="invalid-feedback">Vui lòng nhập mô tả cho bài viết</div>
                 </div>
                 
@@ -279,8 +218,9 @@
 
                 <button type="submit" class="btn btn-primary">Thêm</button>
             </form>
-        </div>
-    </div>
+    <?php 
+        }//Kết thúc vòng lặp
+    ?>
 <?php } //Kết thúc kiểm tra ?>
 </div>
 
