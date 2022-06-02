@@ -45,6 +45,7 @@ function getToken($length)
 
     return $token;
 }
+
 function countStr($str){
   if(strlen($str) >= 200){
     $str =  substr($str,0,200);
