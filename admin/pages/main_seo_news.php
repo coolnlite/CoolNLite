@@ -42,7 +42,7 @@
                 <label for="keyword">Từ khóa :</label>
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-keyword" class="text-danger">100</span> ký tự</span>
                 <input type="text" maxlength="100" class="form-control" id="keyword" name="keyword" 
-                placeholder="Nhập mô tả bài viết" onkeyup="limit(this,100,'#n-keyword')" 
+                placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#n-keyword')" 
                 onkeydown="limit(this,100,'#n-keyword')" required>
                 <div class="invalid-feedback">Vui lòng nhập từ khóa cho bài viết</div>
                 </div>
@@ -51,7 +51,57 @@
             </form>
         </div>
         <div class="tab-pane fade" id="seo-facebook" role="tabpanel" aria-labelledby="seo-facebook-tab">
+        <h5 class="mt-3">Thêm SEO Facebook</h5>
+            <form id="fseomain" class="needs-validation"novalidate>
+                <input type="hidden" name="id_news" value=""  required>
 
+                <div class="form-group">
+                <label for="link-fb">Đường dẫn fanpage :</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-link-fb" class="text-danger">100</span> ký tự</span>
+                <input type="text" maxlength="100" class="form-control" id="link-fb" name="link-fb" 
+                placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title')" 
+                onkeydown="limit(this,100,'#n-title')" required>
+                <div class="invalid-feedback">Vui lòng nhập tiêu đề cho bài viết</div>
+                </div>
+
+                <div class="form-group">
+                <label for="description">Mô tả:</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description" class="text-danger">250</span> ký tự</span>
+                <input type="text" maxlength="250" class="form-control" id="description" name="description" 
+                placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description')" 
+                onkeydown="limit(this,250,'#n-description')" required>
+                <div class="invalid-feedback">Vui lòng nhập mô tả cho bài viết</div>
+                </div>
+                
+                <div class="form-group">
+                <label for="keyword">Từ khóa :</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-keyword" class="text-danger">100</span> ký tự</span>
+                <input type="text" maxlength="100" class="form-control" id="keyword" name="keyword" 
+                placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#n-keyword')" 
+                onkeydown="limit(this,100,'#n-keyword')" required>
+                <div class="invalid-feedback">Vui lòng nhập từ khóa cho bài viết</div>
+                </div>
+                
+                <div class="form-group">
+                <label for="description">Mô tả:</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description" class="text-danger">250</span> ký tự</span>
+                <input type="text" maxlength="250" class="form-control" id="description" name="description" 
+                placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description')" 
+                onkeydown="limit(this,250,'#n-description')" required>
+                <div class="invalid-feedback">Vui lòng nhập mô tả cho bài viết</div>
+                </div>
+                
+                <div class="form-group">
+                <label for="keyword">Từ khóa :</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-keyword" class="text-danger">100</span> ký tự</span>
+                <input type="text" maxlength="100" class="form-control" id="keyword" name="keyword" 
+                placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#n-keyword')" 
+                onkeydown="limit(this,100,'#n-keyword')" required>
+                <div class="invalid-feedback">Vui lòng nhập từ khóa cho bài viết</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Thêm</button>
+            </form>
         </div>
         <div class="tab-pane fade" id="seo-twitter" role="tabpanel" aria-labelledby="seo-twitter-tab">
 
