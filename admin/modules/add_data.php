@@ -298,13 +298,17 @@ if(!empty($_POST['id_news']) && !empty($_POST['title']) && !empty($_FILES['img-t
         $title = mysqli_real_escape_string($conn, $_POST['title']);
         $description = mysqli_real_escape_string($conn, $_POST['description']);
         $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
-        $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
-        $title = mysqli_real_escape_string($conn, $_POST['title']);
-        $description = mysqli_real_escape_string($conn, $_POST['description']);
-        $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
-    
-        $sql = "INSERT INTO `seo_news` (`id_news`,`title`,`description`,`keyword`)
-        VALUES ('$id_news','$title','$description','$keyword')";
+        $link_fb = mysqli_real_escape_string($conn, $_POST['link-fb']);
+        $title_fb = mysqli_real_escape_string($conn, $_POST['title-fb']);
+        $description_fb = mysqli_real_escape_string($conn, $_POST['description-fb']);
+        $keyword_fb = mysqli_real_escape_string($conn, $_POST['keyword-fb']);
+        $title_tw = mysqli_real_escape_string($conn, $_POST['title-tw']);
+        $description_tw = mysqli_real_escape_string($conn, $_POST['description-tw']);
+
+        $sql = "INSERT INTO `seo_news` (`id_news`,`title`,`description`,`keyword`,`link_fb`,`img_fb`,
+        `title_fb`,`description_fb`,`keyword_fb`,`title_tw`,`description`,`img_tw`)
+        VALUES ('$id_news','$title','$description','$keyword','$link_fb','$img_fb',
+        '$title_fb','$description_fb','$keyword_fb','$title_tw','$description_tw','$img_tw')";
         $result = mysqli_query($conn,$sql);
         if($result == true){
             echo json_encode(array(
