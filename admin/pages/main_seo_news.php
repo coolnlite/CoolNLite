@@ -13,7 +13,7 @@
   <div class="tab-content">
     <div id="main" class="tab-pane fade in active">
       <h3 class="text-center">SEO Chính</h3>
-        <form action="/action_page.php" class="needs-validation" novalidate>
+        <form id="main-seo" class="needs-validation" novalidate>
             <div class="form-group">
             <label for="uname">Username:</label>
             <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
