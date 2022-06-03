@@ -304,7 +304,6 @@ if(!empty($_FILES['img-tw'])){
     }
 }
  
-        $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
         $title = mysqli_real_escape_string($conn, $_POST['title']);
         $description = mysqli_real_escape_string($conn, $_POST['description']);
         $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
@@ -315,20 +314,20 @@ if(!empty($_FILES['img-tw'])){
         $title_tw = mysqli_real_escape_string($conn, $_POST['title-tw']);
         $description_tw = mysqli_real_escape_string($conn, $_POST['description-tw']);
 
-        $sql = "";
+        $sql = "UPDATE `seo_news` SET  WHERE id = $id_tag AND id_news = $id_news";
 
         $result = mysqli_query($conn,$sql);
 
         if($result == true){
             echo json_encode(array(
                 'status' => 1,
-                'message' => 'Thêm SEO cho bài viết thành công'
+                'message' => 'Chỉnh sửa SEO cho bài viết thành công'
             ));
             exit();
         }else{
             echo json_encode(array(
                 'status' => 0,
-                'message' => 'Thêm SEO cho bài viết thất bại'
+                'message' => 'Chỉnh sửa SEO cho bài viết thất bại'
             ));
             exit();
         }
