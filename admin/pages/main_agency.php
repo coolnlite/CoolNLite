@@ -116,7 +116,7 @@
 
             <div class="form-group">
             <label for="edit-phone">Số điện thoại :</label>
-            <input type="text" class="form-control" value="'.$ag['phone'].'" name="edit-phone" id="edit-phone"
+            <input type="text" class="form-control" value="" name="edit-phone" id="edit-phone"
             maxlength="10" placeholder="Nhập số điện thoại đại lý"  required>
             <div class="invalid-feedback">Vui lòng nhập số điện thoại đại lý</div>
             </div>

@@ -67,8 +67,9 @@
     if(isset($_POST['view_agency']) && isset($_POST['id_agency'])){
         $id_agency = $_POST['id_agency'];
         $sql = "SELECT * FROM `agency` WHERE `id` = '$id_agency'";
-        $agency = executeResult($sql);
-        echo json_encode($agency);
+        $result = mysqli_query($conn,$sql);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row);
     }
 
 ?>        

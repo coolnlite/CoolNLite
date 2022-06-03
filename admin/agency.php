@@ -140,7 +140,7 @@
         }
       })
 
-    // Chỉnh sửa đại lý
+    // Xem đại lý
     $(document).on('click', '.editBtn', function(event) {
         var id_agency = $(this).data('id');
             $.ajax({
@@ -152,7 +152,12 @@
                 type: "post",
                 success: function(data) {
                     var json = JSON.parse(data);
-                    
+                    $("#id-agency").val(json.id);
+                    $("#img-old").val(json.img);
+                    $("#card-img-top").attr('src',json.img);
+                    $("#edit-name").val(json.name);
+                    $("#edit-address").val(json.address);
+                    $("#edit-phone").val(json.phone);
                 }
             });
         })
