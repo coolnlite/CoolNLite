@@ -314,7 +314,11 @@ if(!empty($_FILES['img-tw'])){
         $title_tw = mysqli_real_escape_string($conn, $_POST['title-tw']);
         $description_tw = mysqli_real_escape_string($conn, $_POST['description-tw']);
 
-        $sql = "UPDATE `seo_news` SET  WHERE id = $id_tag AND id_news = $id_news";
+        $sql = "UPDATE `seo_news` SET `title` = '$title', `description` = '$description',
+        `keyword` = '$keyword',`link_fb` = '$link_fb', `title_fb` = '$title_fb', 
+        `description_fb` = '$description_fb',`keyword_fb` = '$keyword_fb',
+        `title_tw` = '$title_tw',`description_tw` = '$description_tw'
+        WHERE id = $id_tag AND id_news = $id_news";
 
         $result = mysqli_query($conn,$sql);
 
