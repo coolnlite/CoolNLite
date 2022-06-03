@@ -225,7 +225,7 @@ if(!empty($_FILES['img-fb'])){
  $resultFB = move_uploaded_file($_FILES['img-fb']['tmp_name'],$uploadPath1 . '/' .$path1);
  if($resultFB){
     $img_fb_old = $_POST['img-fb-old'];
-    $link_fb = '../..';
+    $link_fb = '../';
     $file_fb = $link_fb.$img_fb_old;
     unlink($file_fb);
 
@@ -294,7 +294,7 @@ if(!empty($_FILES['img-tw'])){
     $resultTW =  move_uploaded_file($_FILES['img-tw']['tmp_name'],$uploadPath2 . '/' .$path2);
     if($resultTW){
         $img_tw_old = $_POST['img-tw-old'];
-        $link_tw = '../..';
+        $link_tw = '../';
         $file_tw = $link_tw.$img_tw_old;
         unlink($file_tw);
 

@@ -109,7 +109,7 @@
               success: function(response){ 
                   if(response.status == 1){
                       alert(response.message);
-                      
+                    //   window.location.href = <?php print $DOMAIN.'news.php'?>;
                   }else{
                       alert(response.message);
                   }
