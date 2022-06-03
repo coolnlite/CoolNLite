@@ -77,4 +77,30 @@ if(isset($_POST['delete_key']) && isset($_POST['id_key'])){
 
 }
 
+//delete agency
+if(isset($_POST['delete_agency']) && isset($_POST['id_agency'])){
+    $id_agency = $_POST['id_agency'];
+    $sql = "SELECT `img` FROM `agency` WHERE id = $id_agency";
+    
+    $sql = "DELETE FROM `keyword` WHERE `id`='$id_key'";
+    $result =mysqli_query($conn,$sql);
+    if($result == true)
+    {
+        $data = array(
+            'status'=>'success',
+        );
+
+        echo json_encode($data);
+    }
+    else
+    {
+        $data = array(
+            'status'=>'failed',
+        );
+
+        echo json_encode($data);
+    } 
+
+}
+
 ?>
