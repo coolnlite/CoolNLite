@@ -32,13 +32,17 @@
         </section>
         <!-- SETION 1 -->
         <section class="main-agency" id="main-agency">
-
+        <?php 
+            $sql = "SELECT * FROM `agency`";
+            $agency = executeResult($sql);
+            foreach($agency as $ag){
+        ?>
             <div class="item-agency">
                 <div class="container-agency">
 
                     <div class="col-img">
                         <div class="box-img">
-                            <img src="./uploads/daily.jpg" alt="Đại lý">
+                            <img src=".<?php print $ag['img'] ?>" alt="Đại lý">
                         </div>
                     </div>
                     <div class="col-content">
@@ -46,96 +50,28 @@
                             <p>
                                 Tên cửa hàng :
                                 <span>
-                                    68 Workshop
+                                    <?php print $ag['name'] ?>
                                 </span>
                             </p>
                             <p>
                                 Địa chỉ cửa hàng :
                                 <span>
-                                    Đường Lạc Hồng Nối Dài, khu phố Phi Kinh, phường Vĩnh Hiệp, thành phố Rạch Giá, tỉnh
-                                    Kiên Giang.
+                                    <?php print $ag['address'] ?>
                                 </span>
                             </p>
                             <p>
                                 Số điện thoại :
                                 <span>
-                                    0981852352
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="item-agency">
-                <div class="container-agency">
-
-                    <div class="col-img">
-                        <div class="box-img">
-                            <img src="./uploads/daily.jpg" alt="Đại lý">
-                        </div>
-                    </div>
-                    <div class="col-content">
-                        <div class="box-content">
-                            <p>
-                                Tên cửa hàng :
-                                <span>
-                                    68 Workshop
-                                </span>
-                            </p>
-                            <p>
-                                Địa chỉ cửa hàng :
-                                <span>
-                                    Đường Lạc Hồng Nối Dài, khu phố Phi Kinh, phường Vĩnh Hiệp, thành phố Rạch Giá, tỉnh
-                                    Kiên Giang.
-                                </span>
-                            </p>
-                            <p>
-                                Số điện thoại :
-                                <span>
-                                    0981852352
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="item-agency">
-                <div class="container-agency">
-
-                    <div class="col-img">
-                        <div class="box-img">
-                            <img src="./uploads/daily.jpg" alt="Đại lý">
-                        </div>
-                    </div>
-                    <div class="col-content">
-                        <div class="box-content">
-                            <p>
-                                Tên cửa hàng :
-                                <span>
-                                    68 Workshop
-                                </span>
-                            </p>
-                            <p>
-                                Địa chỉ cửa hàng :
-                                <span>
-                                    Đường Lạc Hồng Nối Dài, khu phố Phi Kinh, phường Vĩnh Hiệp, thành phố Rạch Giá, tỉnh
-                                    Kiên Giang.
-                                </span>
-                            </p>
-                            <p>
-                                Số điện thoại :
-                                <span>
-                                    0981852352
+                                    <?php print $ag['phone'] ?>
                                 </span>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
+            <?php 
+                }
+            ?>
         </section>
     </div>
     <?php 

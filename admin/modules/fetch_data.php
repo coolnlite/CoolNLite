@@ -8,10 +8,9 @@
     if(isset($_POST['agency'])){
         $output= array();
         $sql = "SELECT * FROM `agency`";
-
         $totalQuery = mysqli_query($conn,$sql);
         $total_all_rows = mysqli_num_rows($totalQuery);
-       
+        var_dump($total_all_rows);
         $columns = array(
             0 => 'id',
             1 => 'img',

@@ -34,7 +34,7 @@
         </button>
       </div>
       <div class="modal-body" id="modal-body-view">
-        <form id="fAddAgency" class="needs-validation" enctype="multipart/form-data" novalidate>
+        <form id="fAddAgency" class="needs-validation" method="POST" enctype="multipart/form-data" novalidate>
 
         <div class="form-group">
         <label for="img">Ảnh đại lý :</label>
@@ -62,8 +62,8 @@
         maxlength="10" placeholder="Nhập mô tả bài viết"  required>
         <div class="invalid-feedback">Vui lòng nhập mô tả bài viết</div>
         </div>
-        
-        <button type="submit" class="btn btn-primary">Thêm</button>
+
+        <button type="button" class="btn btn-primary">Thêm</button>
     </form>
       </div>
       <div class="modal-footer">
