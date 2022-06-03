@@ -30,6 +30,14 @@
 //delete news
 if(isset($_POST['delete_news']) && isset($_POST['id_news'])){
     $id_news = $_POST['id_news'];
+    $sql = "SELECT `thumnail` FROM `news` WHERE `id` = '$id_news'";
+    $news = executeResult($sql);
+    foreach($news as $ns){
+        $img = $ns['thumnail'];
+        $link = '../..';
+        $file = $link.$img;
+        unlink($file);
+    }
     $sql = "DELETE FROM `news` WHERE `id`='$id_news'";
     $result =mysqli_query($conn,$sql);
     if($result == true)
