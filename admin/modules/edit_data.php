@@ -104,7 +104,7 @@ if(move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path))
     $file = $link.$thumnail_old;
     unlink($file);
 
-    $sql = "UPDATE `news` SET `thumnail` = '$thumnail', `time` = '$time' WHERE `id` = '$id_news'";
+    $sql = "UPDATE `news` SET `thumnail` = '$thumnail' WHERE `id` = '$id_news'";
     $result = mysqli_query($conn,$sql);
 }
 
@@ -115,6 +115,7 @@ $title = mysqli_real_escape_string($conn, $_POST['title']);
 $description = mysqli_real_escape_string($conn, $_POST['description']);
 $content = mysqli_real_escape_string($conn, $_POST['content']);
 $radio = mysqli_real_escape_string($conn, $_POST['radio-stacked']);
+$time = date('Y-m-d H:i:s');
 
 $sql = "UPDATE `news` SET `url` = '$url', `title` = '$title', `description` = '$description',
 `content` = '$content', `status` = '$radio', `time` = '$time'  WHERE `id` = '$id_news'";
@@ -320,21 +321,20 @@ if(!empty($_FILES['img-tw'])){
 
     //Chỉnh sửa đại lý
 if(
-    !empty($_POST['id_agency']) && !empty($_POST['name']) && !empty($_POST['address'])
-     && !empty($_POST['phone'])
+    !empty($_POST['id-agency']) && !empty($_POST['img-old']) && !empty($_POST['edit-name'])
+     && !empty($_POST['edit-address']) && !empty($_POST['edit-phone'])
  )
  {
- $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
- $time = date('Y-m-d H:i:s');
+ $id_agency = mysqli_real_escape_string($conn, $_POST['id-agency']);
  
- if($_FILES['img']['error'] > 0){
+ if($_FILES['edit-img']['error'] > 0){
      
  }else{
  /* Nhận tên file */
-  $filename = $_FILES['thumnail']['name'];
+  $filename = $_FILES['edit-img']['name'];
  
   /* Nhận kích thước file */
-  $filesize = $_FILES['thumnail']['size'];
+  $filesize = $_FILES['edit-img']['size'];
  
   /* Thêm tên file bằng timestamp*/
   $timestamp = time();
@@ -343,18 +343,18 @@ if(
   $path = $timestamp.$filename;
  
   /* Location */
-  $uploadPath = "../../uploads/posts";
+  $uploadPath = "../../uploads/agency";
  
-  $tar_get = "/uploads/posts";
+  $tar_get = "/uploads/agency";
   /* Upload file */
   //Kiểm tra kích thước ảnh trước khi upload
-  $size = $_FILES["thumnail"]['tmp_name'];
+  $size = $_FILES["edit-img"]['tmp_name'];
   list($width, $height) = getimagesize($size);
  
-  if($width > "1000" || $height > "1000") {
+  if($width > "2000" || $height > "2000") {
       echo json_encode(array(
           'image' => 0,
-          'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 1000px X 1000px'
+          'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 2000px X 2000px'
       ));
       exit();
   }
@@ -372,7 +372,7 @@ if(
   if($filesize > 2 * 1024 * 1024){
       echo json_encode(array(
           'image' => 0,
-          'messaage' => 'Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
+          'message' => 'Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
       ));
       exit();
   }
@@ -387,28 +387,27 @@ if(
   }
   $path = $fileName . '.' . $fileType;
  
- if(move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path)){
-     $thumnail =  $tar_get . '/' .$path;
+ if(move_uploaded_file($_FILES['edit-img']['tmp_name'],$uploadPath . '/' .$path)){
+     $img =  $tar_get . '/' .$path;
  
-     $thumnail_old = $_POST['thumnail_old'];
+     $img_old = $_POST['img-old'];
      $link = '../..';
-     $file = $link.$thumnail_old;
+     $file = $link.$img_old;
      unlink($file);
  
-     $sql = "UPDATE `news` SET `thumnail` = '$thumnail', `time` = '$time' WHERE `id` = '$id_news'";
+     $sql = "UPDATE `agency` SET `img` = '$img' WHERE `id` = '$id_agency'";
      $result = mysqli_query($conn,$sql);
  }
  
  }//Kiểm tra hình ảnh có tồn tại không
  //Phần cập nhật bài viết trừ ảnh
- $url = mysqli_real_escape_string($conn, $_POST['url']);
- $title = mysqli_real_escape_string($conn, $_POST['title']);
- $description = mysqli_real_escape_string($conn, $_POST['description']);
- $content = mysqli_real_escape_string($conn, $_POST['content']);
- $radio = mysqli_real_escape_string($conn, $_POST['radio-stacked']);
- 
- $sql = "UPDATE `news` SET `url` = '$url', `title` = '$title', `description` = '$description',
- `content` = '$content', `status` = '$radio', `time` = '$time'  WHERE `id` = '$id_news'";
+ $name = mysqli_real_escape_string($conn, $_POST['edit-name']);
+ $address = mysqli_real_escape_string($conn, $_POST['edit-address']);
+ $phone = mysqli_real_escape_string($conn, $_POST['edit-phone']);
+ $time = date('Y-m-d H:i:s');
+
+ $sql = "UPDATE `agency` SET `name` = '$name',
+ `address` = '$address', `phone` = '$phone', `time` = '$time'  WHERE `id` = '$id_agency'";
  $result = mysqli_query($conn,$sql);
  
  if($result == true){
