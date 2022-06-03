@@ -216,7 +216,7 @@
             <div class="form-group">
             <label for="img-tw">Ảnh đại diện twitter:</label>
             <input type="file" class="form-control" name="img-tw" id="img-tw">
-            <input type="hidden" class="form-control" value="<?php print '..'.$sn['img_tw']?>" name="img-tw-old" id="img-tw-old">
+            <input type="hidden" class="form-control" value="<?php print '..'.$sn['img_tw']?>" name="img-tw-old" id="img--old">
             <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="<?php print '..'.$sn['img_tw']?>" alt="Image">
