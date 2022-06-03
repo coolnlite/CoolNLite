@@ -7,7 +7,7 @@
     
 
     date_default_timezone_set('Asia/Ho_Chi_Minh');
-  //Thêm bài viết mới
+    //Thêm bài viết mới
         if(
             !empty($_POST['url']) && !empty($_POST['title']) 
              && !empty($_FILES['thumnail']) && !empty($_POST['description'])
