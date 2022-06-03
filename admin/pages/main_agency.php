@@ -43,20 +43,23 @@
         </div>
 
         <div class="form-group">
-        <label for="url">Đường dẫn :</label><label class="text-danger">(Mẫu : vo-dong-thai-dep-trai-ahihi)</label>
-        <input type="text" class="form-control" id="url" placeholder="Nhập đường dẫn bài viết" name="url" required>
-        <div class="invalid-feedback">Vui lòng nhập đường dẫn bài viết</div>
+        <label for="name">Tên đại lý :</label>
+        <input type="text" class="form-control" name="name"  id="name" 
+        placeholder="Nhập tên đại lý" required>
+        <div class="invalid-feedback">Vui lòng nhập tên đại lý</div>
         </div>
 
         <div class="form-group">
-        <label for="title">Tiêu đề :</label> <label class="text-danger">không quá 200 ký tự</label>
-        <input type="text" class="form-control" id="title" placeholder="Nhập tiêu đề bài viết" name="title" required>
-        <div class="invalid-feedback">Vui lòng nhập tiêu đề bài viết</div>
+        <label for="adrress">Địa chỉ :</label>
+        <input type="text" class="form-control" id="adrress" name="adrress" 
+        placeholder="Nhập địa chỉ đại lý" required>
+        <div class="invalid-feedback">Vui lòng nhập địa chỉ đại lý</div>
         </div>
 
         <div class="form-group">
-        <label for="description">Mô tả :</label> <label class="text-danger">không quá 300 ký tự</label>
-        <input type="text" class="form-control" id="description" placeholder="Nhập mô tả bài viết" name="description" required>
+        <label for="phone">Số điện thoại :</label>
+        <input type="text" class="form-control" name="description" id="description"
+        maxlength="10" placeholder="Nhập mô tả bài viết"  required>
         <div class="invalid-feedback">Vui lòng nhập mô tả bài viết</div>
         </div>
         
