@@ -150,17 +150,18 @@
             </div>
             
             <div class="form-group">
-            <label for="link-fb">Đường dẫn fanpage :</label>
+            <label for="link-fb">Đường dẫn fanpage facebook:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-link-fb" class="text-danger">100</span> ký tự</span>
             <input type="url" maxlength="100" class="form-control" id="link-fb" name="link-fb" 
             placeholder="https://www.facebook.com/..." onkeyup="limit(this,100,'#n-link-fb')" 
             onkeydown="limit(this,100,'#n-link-fb')" value="<?php print $sn['link_fb']?>" required>
-            <div class="invalid-feedback">Vui lòng nhập đường dẫn fanpage</div>
+            <div class="invalid-feedback">Vui lòng nhập đường dẫn fanpage facebook</div>
             </div>
 
             <div class="form-group">
-            <label for="img-fb">Ảnh đại diện:</label>
+            <label for="img-fb">Ảnh đại diện facebook:</label><span class="text-danger ml-1">Ảnh có kích thước không quá (2000px X 2000px)</span>
             <input type="file" class="form-control" name="img-fb" id="img-fb">
+            <input type="hidden" class="form-control" value="<?php print '..'.$sn['img_fb']?>" name="img-fb-old" id="img-fb-old">
             <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="<?php print '..'.$sn['img_fb']?>" alt="Image">
@@ -168,7 +169,7 @@
             </div>
             
             <div class="form-group">
-            <label for="title-fb">Tiêu đề :</label>
+            <label for="title-fb">Tiêu đề facebook:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title-fb" class="text-danger">100</span> ký tự</span>
             <input type="text" maxlength="100" class="form-control" id="title-fb" name="title-fb" 
             placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title-fb')" 
@@ -177,7 +178,7 @@
             </div>
             
             <div class="form-group">
-            <label for="description-fb">Mô tả:</label>
+            <label for="description-fb">Mô tả facebook:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description-fb" class="text-danger">250</span> ký tự</span>
             <input type="text" maxlength="250" class="form-control" id="description-fb" name="description-fb" 
             placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description-fb')" 
@@ -186,7 +187,7 @@
             </div>
             
             <div class="form-group">
-            <label for="keyword-fb">Từ khóa :</label>
+            <label for="keyword-fb">Từ khóa facebook:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-keyword-fb" class="text-danger">100</span> ký tự</span>
             <input type="text" maxlength="100" class="form-control" id="keyword-fb" name="keyword-fb" 
             placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#n-keyword-fb')" 
@@ -195,7 +196,7 @@
             </div>
 
             <div class="form-group">
-            <label for="title-tw">Tiêu đề :</label>
+            <label for="title-tw">Tiêu đề twitter:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title-tw" class="text-danger">100</span> ký tự</span>
             <input type="text" maxlength="100" class="form-control" id="title-tw" name="title-tw" 
             placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title-tw')" 
@@ -204,7 +205,7 @@
             </div>
             
             <div class="form-group">
-            <label for="description-tw">Mô tả:</label>
+            <label for="description-tw">Mô tả twitter:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description-tw" class="text-danger">250</span> ký tự</span>
             <input type="text" maxlength="250" class="form-control" id="description-tw" name="description-tw" 
             placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description-fb')" 
@@ -213,8 +214,9 @@
             </div>
             
             <div class="form-group">
-            <label for="img-tw">Ảnh đại diện:</label>
+            <label for="img-tw">Ảnh đại diện twitter:</label>
             <input type="file" class="form-control" name="img-tw" id="img-tw">
+            <input type="hidden" class="form-control" value="<?php print '..'.$sn['img_tw']?>" name="img-tw-old" id="img-tw-old">
             <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="<?php print '..'.$sn['img_tw']?>" alt="Image">
