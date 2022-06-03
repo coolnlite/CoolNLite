@@ -140,6 +140,23 @@
         }
       })
 
+    // Chỉnh sửa đại lý
+    $(document).on('click', '.editBtn', function(event) {
+        var id_agency = $(this).data('id');
+            $.ajax({
+                url: '<?php echo ''.$DOMAIN.'modules/view_data.php'?>',
+                data: {
+                view_agency : true,
+                id_agency: id_agency
+                },
+                type: "post",
+                success: function(data) {
+                var json = JSON.parse(data);
+               
+                }
+            });
+        })
+
     });
     
   </script>
