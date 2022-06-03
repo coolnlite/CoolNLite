@@ -154,7 +154,7 @@
                     var json = JSON.parse(data);
                     $("#id-agency").val(json.id);
                     $("#img-old").val(json.img);
-                    $("#card-img-top").attr('src',json.img);
+                    $("#card-img-top").attr('src','..'+json.img);
                     $("#edit-name").val(json.name);
                     $("#edit-address").val(json.address);
                     $("#edit-phone").val(json.phone);
