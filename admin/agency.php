@@ -151,28 +151,31 @@
                 },
                 type: "post",
                 success: function(data) {
-                    $('#modal-body-view-1').html(data);
+                    var json = JSON.parse(data);
+                    
                 }
             });
         })
+
+        //Chỉnh sửa đại lý
+        $("#fEditAgency").on('submit', function(e){
+                e.preventDefault();
+                    $.ajax({
+                    type: 'POST',
+                    url: '<?php print $DOMAIN.'modules/edit_data.php'?>',
+                    data: new FormData(this),
+                    dataType : 'json',
+                    contentType: false,
+                    cache: false,
+                    processData:false,
+                    success: function(response){ 
+                        
+                    }
+                })
+            });  
+
     });
     
-    //Chỉnh sửa đại lý
-    $("#fEditAgency").on('submit', function(e){
-          e.preventDefault();
-              $.ajax({
-              type: 'POST',
-              url: '<?php print $DOMAIN.'modules/edit_data.php'?>',
-              data: new FormData(this),
-              dataType : 'json',
-              contentType: false,
-              cache: false,
-              processData:false,
-              success: function(response){ 
-                  
-              }
-          })
-      });  
 
   </script>
  

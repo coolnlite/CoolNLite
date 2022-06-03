@@ -68,47 +68,7 @@
         $id_agency = $_POST['id_agency'];
         $sql = "SELECT * FROM `agency` WHERE `id` = '$id_agency'";
         $agency = executeResult($sql);
-        foreach ($agency as $ag) {
-            echo '
-        <form id="fEditAgency" class="needs-validation" enctype="multipart/form-data" novalidate>
-            <input type="hidden" name="id-agency" value="'.$ag['id'].'" required>
-            <input type="hidden" name="img-old" value="'.$ag['img'].'" required>
-
-            <div class="form-group">
-            <label for="edit-img">Ảnh đại lý :</label>
-            <input type="file" class="form-control" name="edit-img" id="edit-img" required>
-            <div class="invalid-feedback">Vui lòng nhập ảnh đại đại lý</div>
-            <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..'.$ag['img'].'" alt="Image">
-            </div>
-            </div>
-
-            <div class="form-group">
-            <label for="edit-name">Tên đại lý :</label>
-            <input type="text" class="form-control" value="'.$ag['name'].'" name="edit-name"  id="edit-name" 
-            placeholder="Nhập tên đại lý" required>
-            <div class="invalid-feedback">Vui lòng nhập tên đại lý</div>
-            </div>
-
-            <div class="form-group">
-            <label for="edit-address">Địa chỉ :</label>
-            <input type="text" class="form-control" value="'.$ag['address'].'" id="edit-address" name="edit-address" 
-            placeholder="Nhập địa chỉ đại lý" required>
-            <div class="invalid-feedback">Vui lòng nhập địa chỉ đại lý</div>
-            </div>
-
-            <div class="form-group">
-            <label for="edit-phone">Số điện thoại :</label>
-            <input type="text" class="form-control" value="'.$ag['phone'].'" name="edit-phone" id="edit-phone"
-            maxlength="10" placeholder="Nhập số điện thoại đại lý"  required>
-            <div class="invalid-feedback">Vui lòng nhập số điện thoại đại lý</div>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Thêm</button>
-
-        </form>
-            ';
-        }
+        echo json_encode($agency);
     }
 
 ?>        
