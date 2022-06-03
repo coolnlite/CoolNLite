@@ -24,6 +24,8 @@
     </div>
   </div>
 
+<!-- MODAL ADD AGENCY -->
+
   <div class="modal fade" id="addAgency" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" style="max-width : 700px" role="document">
     <div class="modal-content">
@@ -35,6 +37,57 @@
       </div>
       <div class="modal-body" id="modal-body-view">
         <form id="fAddAgency" class="needs-validation" enctype="multipart/form-data" novalidate>
+
+        <div class="form-group">
+        <label for="img">Ảnh đại lý :</label>
+        <input type="file" class="form-control" name="img" id="img" required>
+        <div class="invalid-feedback">Vui lòng nhập ảnh đại đại lý</div>
+        </div>
+
+        <div class="form-group">
+        <label for="name">Tên đại lý :</label>
+        <input type="text" class="form-control" name="name"  id="name" 
+        placeholder="Nhập tên đại lý" required>
+        <div class="invalid-feedback">Vui lòng nhập tên đại lý</div>
+        </div>
+
+        <div class="form-group">
+        <label for="address">Địa chỉ :</label>
+        <input type="text" class="form-control" id="address" name="address" 
+        placeholder="Nhập địa chỉ đại lý" required>
+        <div class="invalid-feedback">Vui lòng nhập địa chỉ đại lý</div>
+        </div>
+
+        <div class="form-group">
+        <label for="phone">Số điện thoại :</label>
+        <input type="text" class="form-control" name="phone" id="phone"
+        maxlength="10" placeholder="Nhập số điện thoại đại lý"  required>
+        <div class="invalid-feedback">Vui lòng nhập số điện thoại đại lý</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Thêm</button>
+    </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL EDIT AGENCY -->
+
+<div class="modal fade" id="editAgency" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="max-width : 700px" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Thêm đại lý</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body-view">
+        <form id="fEditAgency" class="needs-validation" enctype="multipart/form-data" novalidate>
 
         <div class="form-group">
         <label for="img">Ảnh đại lý :</label>
