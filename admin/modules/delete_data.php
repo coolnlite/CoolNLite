@@ -80,9 +80,16 @@ if(isset($_POST['delete_key']) && isset($_POST['id_key'])){
 //delete agency
 if(isset($_POST['delete_agency']) && isset($_POST['id_agency'])){
     $id_agency = $_POST['id_agency'];
-    $sql = "SELECT `img` FROM `agency` WHERE id = $id_agency";
-    
-    $sql = "DELETE FROM `keyword` WHERE `id`='$id_key'";
+    $sql = "SELECT `img` FROM `agency` WHERE `id` = '$id_agency'";
+    $agency = executeResult($sql);
+    foreach($agency as $ag){
+        $img = $ag['img'];
+        $link = '../..';
+        $file = $link.$img;
+        unlink($file);
+    }
+
+    $sql = "DELETE FROM `agency` WHERE `id`='$id_agency'";
     $result =mysqli_query($conn,$sql);
     if($result == true)
     {

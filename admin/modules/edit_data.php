@@ -106,25 +106,6 @@ if(move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path))
 
     $sql = "UPDATE `news` SET `thumnail` = '$thumnail', `time` = '$time' WHERE `id` = '$id_news'";
     $result = mysqli_query($conn,$sql);
-    if($result){
-        echo json_encode(array(
-        'image' => 1,
-        'message' => 'Thêm hình ảnh thành công thành công'
-    ));
-    exit();
-    }else{
-        echo json_encode(array(
-        'image' => 0,
-        'message' => 'Thêm hình ảnh thất bại'
-        ));
-        exit();
-    }
-}else{
-    echo json_encode(array(
-        'image' => 0,
-        'message' => 'Thêm hình ảnh thất bại'
-        ));
-        exit();
 }
 
 }//Kiểm tra hình ảnh có tồn tại không
@@ -336,4 +317,112 @@ if(!empty($_FILES['img-tw'])){
             exit();
         }
     }
+
+    //Chỉnh sửa đại lý
+if(
+    !empty($_POST['id_agency']) && !empty($_POST['name']) && !empty($_POST['address'])
+     && !empty($_POST['phone'])
+ )
+ {
+ $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
+ $time = date('Y-m-d H:i:s');
+ 
+ if($_FILES['img']['error'] > 0){
+     
+ }else{
+ /* Nhận tên file */
+  $filename = $_FILES['thumnail']['name'];
+ 
+  /* Nhận kích thước file */
+  $filesize = $_FILES['thumnail']['size'];
+ 
+  /* Thêm tên file bằng timestamp*/
+  $timestamp = time();
+ 
+  /* Gắn timestamp vào tên file*/
+  $path = $timestamp.$filename;
+ 
+  /* Location */
+  $uploadPath = "../../uploads/posts";
+ 
+  $tar_get = "/uploads/posts";
+  /* Upload file */
+  //Kiểm tra kích thước ảnh trước khi upload
+  $size = $_FILES["thumnail"]['tmp_name'];
+  list($width, $height) = getimagesize($size);
+ 
+  if($width > "1000" || $height > "1000") {
+      echo json_encode(array(
+          'image' => 0,
+          'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 1000px X 1000px'
+      ));
+      exit();
+  }
+  //Kiểm tra xem kiểu file có hợp lệ hoặc dung lượng lớn không
+  $validTypes = array("jpg","jpeg","png","bmp");
+  $fileType = substr($path,strrpos($path,".") + 1);
+ 
+  if(!in_array($fileType,$validTypes) || $filesize > 2 * 1024 * 1024){
+     echo json_encode(array(
+         'image' => 0,
+         'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp'
+     ));
+     exit();
+ }
+  if($filesize > 2 * 1024 * 1024){
+      echo json_encode(array(
+          'image' => 0,
+          'messaage' => 'Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
+      ));
+      exit();
+  }
+ 
+  //Check xem ảnh đã tồn tại hay chưa nếu không thì đổi tên
+  $num = 1;
+  $fileName = substr($path,0,strrpos($path,"."));
+  $fileName = md5($fileName);
+  while(file_exists($uploadPath . '/' . $fileName . '.' . $fileType)){
+      $fileName = $fileName . "(". $num .")";
+      $num ++;
+  }
+  $path = $fileName . '.' . $fileType;
+ 
+ if(move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path)){
+     $thumnail =  $tar_get . '/' .$path;
+ 
+     $thumnail_old = $_POST['thumnail_old'];
+     $link = '../..';
+     $file = $link.$thumnail_old;
+     unlink($file);
+ 
+     $sql = "UPDATE `news` SET `thumnail` = '$thumnail', `time` = '$time' WHERE `id` = '$id_news'";
+     $result = mysqli_query($conn,$sql);
+ }
+ 
+ }//Kiểm tra hình ảnh có tồn tại không
+ //Phần cập nhật bài viết trừ ảnh
+ $url = mysqli_real_escape_string($conn, $_POST['url']);
+ $title = mysqli_real_escape_string($conn, $_POST['title']);
+ $description = mysqli_real_escape_string($conn, $_POST['description']);
+ $content = mysqli_real_escape_string($conn, $_POST['content']);
+ $radio = mysqli_real_escape_string($conn, $_POST['radio-stacked']);
+ 
+ $sql = "UPDATE `news` SET `url` = '$url', `title` = '$title', `description` = '$description',
+ `content` = '$content', `status` = '$radio', `time` = '$time'  WHERE `id` = '$id_news'";
+ $result = mysqli_query($conn,$sql);
+ 
+ if($result == true){
+     echo json_encode(array(
+         'status' => 1,
+         'message' => 'Cập nhật đại lý thành công'
+     ));
+     exit();
+ }else{
+     echo json_encode(array(
+         'status' => 0,
+         'message' => 'Cập nhật đại lý thất bại'
+     ));
+ }
+ 
+ }
  ?>

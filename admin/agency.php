@@ -111,24 +111,24 @@
           })
       });
 
-      // Xóa mẫu tin khách hàng
+      // Xóa mẫu tin đại lý
       $(document).on('click', '.deleteBtn', function(event) {
       var table = $('#example').DataTable();
       event.preventDefault();
-      var id_news = $(this).data('id');
+      var id_agency = $(this).data('id');
         if (confirm("Bạn chắc chắc có muốn xóa mẫu tin này")) {
           $.ajax({
             url: '<?php echo ''.$DOMAIN.'modules/delete_data.php'?>',
             data: {
-              delete_news : true,
-              id_news: id_news
+              delete_agency : true,
+              id_agency: id_agency
             },
             type: "post",
             success: function(data) {
               var json = JSON.parse(data);
               status = json.status;
               if (status == 'success') {
-                $("#" + id_news).closest('tr').remove();
+                $("#" + id_agency).closest('tr').remove();
               } else {
                 alert('Có lỗi gì đó');
                 return;
