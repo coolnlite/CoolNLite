@@ -27,7 +27,103 @@
 </ul>
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel">
+  <form id="faddhome" class="needs-validation" enctype="multipart/form-data" novalidate>
 
+                <div class="form-group">
+                <label for="title">Tiêu đề :</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title" class="text-danger">100</span> ký tự</span>
+                <input type="text" maxlength="100" class="form-control" id="title" name="title" 
+                placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title')" 
+                onkeydown="limit(this,100,'#n-title')" required>
+                <div class="invalid-feedback">Vui lòng nhập tiêu đề cho bài viết</div>
+                </div>
+
+                <div class="form-group">
+                <label for="description">Mô tả:</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description" class="text-danger">250</span> ký tự</span>
+                <input type="text" maxlength="250" class="form-control" id="description" name="description" 
+                placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description')" 
+                onkeydown="limit(this,250,'#n-description')" required>
+                <div class="invalid-feedback">Vui lòng nhập mô tả cho bài viết</div>
+                </div>
+                
+                <div class="form-group">
+                <label for="keyword">Từ khóa :</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-keyword" class="text-danger">100</span> ký tự</span>
+                <input type="text" maxlength="100" class="form-control" id="keyword" name="keyword" 
+                placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#n-keyword')" 
+                onkeydown="limit(this,100,'#n-keyword')" required>
+                <div class="invalid-feedback">Vui lòng nhập từ khóa cho bài viết</div>
+                </div>
+                
+                <div class="form-group">
+                <label for="link-fb">Đường dẫn fanpage facebook:</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-link-fb" class="text-danger">100</span> ký tự</span>
+                <input type="url" maxlength="100" class="form-control" id="link-fb" name="link-fb" 
+                placeholder="https://www.facebook.com/..." onkeyup="limit(this,100,'#n-link-fb')" 
+                onkeydown="limit(this,100,'#n-link-fb')" required>
+                <div class="invalid-feedback">Vui lòng nhập đường dẫn fanpage</div>
+                </div>
+
+                <div class="form-group">
+                <label for="img-fb">Ảnh đại diện facebook:</label>
+                <input type="file" class="form-control" name="img-fb" id="img-fb" required>
+                <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
+                </div>
+                
+                <div class="form-group">
+                <label for="title-fb">Tiêu đề facebook:</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title-fb" class="text-danger">100</span> ký tự</span>
+                <input type="text" maxlength="100" class="form-control" id="title-fb" name="title-fb" 
+                placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title-fb')" 
+                onkeydown="limit(this,100,'#n-title-fb')" required>
+                <div class="invalid-feedback">Vui lòng nhập tiêu đề cho bài viết</div>
+                </div>
+                
+                <div class="form-group">
+                <label for="description-fb">Mô tả facebook:</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description-fb" class="text-danger">250</span> ký tự</span>
+                <input type="text" maxlength="250" class="form-control" id="description-fb" name="description-fb" 
+                placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description-fb')" 
+                onkeydown="limit(this,250,'#n-description-fb')" required>
+                <div class="invalid-feedback">Vui lòng nhập mô tả cho bài viết</div>
+                </div>
+                
+                <div class="form-group">
+                <label for="keyword-fb">Từ khóa facebook:</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-keyword-fb" class="text-danger">100</span> ký tự</span>
+                <input type="text" maxlength="100" class="form-control" id="keyword-fb" name="keyword-fb" 
+                placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#n-keyword-fb')" 
+                onkeydown="limit(this,100,'#n-keyword-fb')" required>
+                <div class="invalid-feedback">Vui lòng nhập từ khóa cho bài viết</div>
+                </div>
+  
+                <div class="form-group">
+                <label for="title-tw">Tiêu đề twitter:</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title-tw" class="text-danger">100</span> ký tự</span>
+                <input type="text" maxlength="100" class="form-control" id="title-tw" name="title-tw" 
+                placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title-tw')" 
+                onkeydown="limit(this,100,'#n-title-tw')" required>
+                <div class="invalid-feedback">Vui lòng nhập tiêu đề cho bài viết</div>
+                </div>
+                
+                <div class="form-group">
+                <label for="description-tw">Mô tả twitter:</label>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description-tw" class="text-danger">250</span> ký tự</span>
+                <input type="text" maxlength="250" class="form-control" id="description-tw" name="description-tw" 
+                placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description-tw')" 
+                onkeydown="limit(this,250,'#n-description-tw')" required>
+                <div class="invalid-feedback">Vui lòng nhập mô tả cho bài viết</div>
+                </div>
+                
+                <div class="form-group">
+                <label for="img-tw">Ảnh đại diện twitter:</label>
+                <input type="file" class="form-control" name="img-tw" id="img-tw" required>
+                <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Thêm</button>
+            </form>
   </div>
   <div class="tab-pane fade" id="premier" role="tabpanel">
 
