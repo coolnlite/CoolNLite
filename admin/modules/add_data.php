@@ -9,9 +9,9 @@
     date_default_timezone_set('Asia/Ho_Chi_Minh');
   //Thêm bài viết mới
         if(
-            isset($_POST['url']) && isset($_POST['title']) 
-             && isset($_FILES['thumnail']) && isset($_POST['description'])
-             && isset($_POST['content']) && isset($_POST['radio-stacked'] )
+            !empty($_POST['url']) && !empty($_POST['title']) 
+             && !empty($_FILES['thumnail']) && !empty($_POST['description'])
+             && !empty($_POST['content']) && !empty($_POST['radio-stacked'] )
         )
         {
         $url = mysqli_real_escape_string($conn, $_POST['url']);
