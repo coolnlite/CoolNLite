@@ -32,9 +32,9 @@
          $path = $timestamp.$filename;
      
          /* Location */
-         $uploadPath = "../../uploads/";
+         $uploadPath = "../../uploads/posts";
 
-         $tar_get = "/uploads";
+         $tar_get = "/uploads/posts";
          /* Upload file */
          //Kiểm tra kích thước ảnh trước khi upload
          $size = $_FILES["thumnail"]['tmp_name'];

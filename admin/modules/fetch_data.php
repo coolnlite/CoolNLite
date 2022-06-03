@@ -55,12 +55,10 @@
         {
             $sub_array = array();
             $sub_array[] = $row['id'];
-            $sub_array[] = '<img src="..'.$row['thumnail'].'" alt="">';
-            $sub_array[] = $row['title'];
-            $sub_array[] = $row['description'];
-            $sub_array[] = $row['view'] ;
-            $sub_array[] = status($row['status']);
-            $sub_array[] = $full_name ;
+            $sub_array[] = '<img src="..'.$row['img'].'" alt="">';
+            $sub_array[] = $row['name'];
+            $sub_array[] = $row['address'];
+            $sub_array[] = $row['phone'] ;
             $sub_array[] = facebook_time_ago($row['time']);
             $sub_array[] = 
             '
@@ -69,12 +67,6 @@
             </a>
             <a title="Sửa" href="../admin/edit_news.php?id='.$row['id'].'" class="btn btn-warning btn-sm" >
             <i class="fas fa-user-edit"></i>
-            </a>
-            <a title="SEO Bài viết" href="../admin/seo_news.php?id='.$row['id'].'"  class="btn btn-primary btn-sm" >
-                SEO
-            </a>
-            <a title="Thêm từ khóa" href="tag_news.php?id='.$row['id'].'"  class="btn btn-secondary btn-sm" >
-                KEYWORD
             </a>
             ';
             $data[] = $sub_array;
