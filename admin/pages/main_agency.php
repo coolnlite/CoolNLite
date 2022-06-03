@@ -81,37 +81,37 @@
   <div class="modal-dialog" style="max-width : 700px" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Thêm đại lý</h5>
+        <h5 class="modal-title" id="exampleModalLabel1">Chỉnh sửa đại lý</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body" id="modal-body-view">
+      <div class="modal-body" id="modal-body-view-1">
         <form id="fEditAgency" class="needs-validation" enctype="multipart/form-data" novalidate>
 
         <div class="form-group">
-        <label for="img">Ảnh đại lý :</label>
-        <input type="file" class="form-control" name="img" id="img" required>
+        <label for="edit-img">Ảnh đại lý :</label>
+        <input type="file" class="form-control" name="edit-img" id="edit-img" required>
         <div class="invalid-feedback">Vui lòng nhập ảnh đại đại lý</div>
         </div>
 
         <div class="form-group">
-        <label for="name">Tên đại lý :</label>
-        <input type="text" class="form-control" name="name"  id="name" 
+        <label for="edit-name">Tên đại lý :</label>
+        <input type="text" class="form-control" name="edit-name"  id="edit-name" 
         placeholder="Nhập tên đại lý" required>
         <div class="invalid-feedback">Vui lòng nhập tên đại lý</div>
         </div>
 
         <div class="form-group">
-        <label for="address">Địa chỉ :</label>
-        <input type="text" class="form-control" id="address" name="address" 
+        <label for="edit-address">Địa chỉ :</label>
+        <input type="text" class="form-control" id="edit-address" name="edit-address" 
         placeholder="Nhập địa chỉ đại lý" required>
         <div class="invalid-feedback">Vui lòng nhập địa chỉ đại lý</div>
         </div>
 
         <div class="form-group">
-        <label for="phone">Số điện thoại :</label>
-        <input type="text" class="form-control" name="phone" id="phone"
+        <label for="edit-phone">Số điện thoại :</label>
+        <input type="text" class="form-control" name="edit-phone" id="edit-phone"
         maxlength="10" placeholder="Nhập số điện thoại đại lý"  required>
         <div class="invalid-feedback">Vui lòng nhập số điện thoại đại lý</div>
         </div>
