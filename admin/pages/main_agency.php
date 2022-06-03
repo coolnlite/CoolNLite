@@ -34,7 +34,7 @@
         </button>
       </div>
       <div class="modal-body" id="modal-body-view">
-        <form id="fAddAgency" class="needs-validation" method="POST" enctype="multipart/form-data" novalidate>
+        <form id="fAddAgency" class="needs-validation" enctype="multipart/form-data" novalidate>
 
         <div class="form-group">
         <label for="img">Ảnh đại lý :</label>
@@ -50,20 +50,20 @@
         </div>
 
         <div class="form-group">
-        <label for="adrress">Địa chỉ :</label>
-        <input type="text" class="form-control" id="adrress" name="adrress" 
+        <label for="address">Địa chỉ :</label>
+        <input type="text" class="form-control" id="address" name="address" 
         placeholder="Nhập địa chỉ đại lý" required>
         <div class="invalid-feedback">Vui lòng nhập địa chỉ đại lý</div>
         </div>
 
         <div class="form-group">
         <label for="phone">Số điện thoại :</label>
-        <input type="text" class="form-control" name="description" id="description"
-        maxlength="10" placeholder="Nhập mô tả bài viết"  required>
-        <div class="invalid-feedback">Vui lòng nhập mô tả bài viết</div>
+        <input type="text" class="form-control" name="phone" id="phone"
+        maxlength="10" placeholder="Nhập số điện thoại đại lý"  required>
+        <div class="invalid-feedback">Vui lòng nhập số điện thoại đại lý</div>
         </div>
 
-        <button type="button" class="btn btn-primary">Thêm</button>
+        <button type="submit" class="btn btn-primary">Thêm</button>
     </form>
       </div>
       <div class="modal-footer">
