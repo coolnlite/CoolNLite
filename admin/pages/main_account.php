@@ -174,14 +174,14 @@
 
       <div class="form-group">
       <label for="user_name">Tên tài khoản :</label>
-      <input type="text" class="form-control" id="user_name" name="user_name" 
+      <input type="text" class="form-control" name="user_name" 
       placeholder="Nhập tên tài khoản" maxlength="30" required>
       <div class="invalid-feedback">Vui lòng nhập tên tài khoản</div>
       </div>
 
       <div class="form-group">
       <label for="email">Email :</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="Nhập email" required>
+      <input type="email" class="form-control" name="email" placeholder="Nhập email" required>
       <div class="invalid-feedback">Vui lòng nhập email</div>
       </div>
 
@@ -195,15 +195,15 @@
         <label for="">Phân quyền người dùng :</label>
         <select class="custom-select" required>
         <option value="">Chọn quyền...</option>
-        <option value="0" name="position">CRM</option>
-        <option value="1" name="position">SEO & POSTS</option>
-        <option value="2" name="position">Administrator</option>
+            <option value="0" name="position">CRM</option>
+            <option value="1" name="position">SEO & POSTS</option>
+            <option value="2" name="position">Administrator</option>
         </select>
         <div class="invalid-feedback">Vui lòng thiết lập quyền tài khoản</div>
   </div>
       <div class="form-group">
       <label for="full_name">Tên đầy đủ :</label>
-      <input type="text" class="form-control" id="full_name" name="full_name" 
+      <input type="text" class="form-control" name="full_name" 
       placeholder="Nhập tên đầy đủ" maxlength="30" required>
       <div class="invalid-feedback">Vui lòng nhập tên đầy đủ</div>
       </div>
