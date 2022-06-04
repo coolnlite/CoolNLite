@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 03, 2022 at 12:33 PM
+-- Generation Time: Jun 04, 2022 at 07:11 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -310,7 +310,8 @@ INSERT INTO `news_keyword` (`id_news_tag`, `id_news`, `id_tag`) VALUES
 (18, 6, 3),
 (19, 7, 1),
 (20, 7, 2),
-(21, 7, 3);
+(21, 7, 3),
+(52, 7, 10);
 
 -- --------------------------------------------------------
 
@@ -523,7 +524,7 @@ ALTER TABLE `footer`
 -- AUTO_INCREMENT for table `keyword`
 --
 ALTER TABLE `keyword`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `menu`
@@ -535,13 +536,13 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `news_keyword`
 --
 ALTER TABLE `news_keyword`
-  MODIFY `id_news_tag` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id_news_tag` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `seo_news`
