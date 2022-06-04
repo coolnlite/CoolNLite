@@ -194,7 +194,7 @@
       <div class="form-group">
         <label for="">Phân quyền người dùng :</label>
         <select class="custom-select" required>
-        <option >Chọn quyền</option>
+        <option value="">Chọn quyền...</option>
         <option value="0" name="position">CRM</option>
         <option value="1" name="position">SEO & POSTS</option>
         <option value="2" name="position">Administrator</option>
@@ -211,7 +211,7 @@
       <div class="form-group">
           <label for="">Ảnh đại diện</label>
       <div class="custom-file">
-        <input type="file" name="" class="custom-file-input" required>
+        <input type="file" name="image" id="image" class="custom-file-input" required>
         <label class="custom-file-label">Chọn file</label>
         <div class="invalid-feedback">Vui lòng chọn hình ảnh</div>
         </div>
@@ -220,7 +220,7 @@
      <div class="form-group">
         <label for="">Trạng thái tài khoản :</label>
         <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+            <input type="checkbox" name="status" class="custom-control-input" id="customSwitch1">
             <label class="custom-control-label" for="customSwitch1">Hiện</label>
         </div>
     </div>
