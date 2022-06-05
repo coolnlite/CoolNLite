@@ -353,7 +353,7 @@ if(
  
   if($width > "2000" || $height > "2000") {
       echo json_encode(array(
-          'image' => 0,
+          'status' => 0,
           'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 2000px X 2000px'
       ));
       exit();
@@ -362,16 +362,16 @@ if(
   $validTypes = array("jpg","jpeg","png","bmp");
   $fileType = substr($path,strrpos($path,".") + 1);
  
-  if(!in_array($fileType,$validTypes) || $filesize > 2 * 1024 * 1024){
+  if(!in_array($fileType,$validTypes)){
      echo json_encode(array(
-         'image' => 0,
+         'status' => 0,
          'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp'
      ));
      exit();
  }
   if($filesize > 2 * 1024 * 1024){
       echo json_encode(array(
-          'image' => 0,
+          'status' => 0,
           'message' => 'Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
       ));
       exit();
