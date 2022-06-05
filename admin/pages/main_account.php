@@ -102,8 +102,8 @@
       <div class="modal-body">
       <form class="needs-validation" novalidate>
       <div class="form-group">
-      <div class="custom-file">
-        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+        <div class="custom-file">
+        <input type="file" name="image" class="custom-file-input" id="validatedCustomFile" required>
         <label class="custom-file-label" for="validatedCustomFile">Chọn file</label>
         <div class="invalid-feedback">Vui lòng chọn hình ảnh</div>
         </div>

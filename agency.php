@@ -33,7 +33,7 @@
         <!-- SETION 1 -->
         <section class="main-agency" id="main-agency">
         <?php 
-            $sql = "SELECT * FROM `agency`";
+            $sql = "SELECT * FROM `agency` ORDER BY `time` DESC ";
             $agency = executeResult($sql);
             foreach($agency as $ag){
         ?>
