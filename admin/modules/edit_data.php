@@ -387,7 +387,7 @@ if(
   }
   $path = $fileName . '.' . $fileType;
  
- if(move_uploaded_file($_FILES['edit-img']['tmp_name'],$uploadPath . '/' .$path)){
+ if(move_uploaded_file($_FILES['image']['tmp_name'],$uploadPath . '/' .$path)){
      $img =  $tar_get . '/' .$path;
  
      $img_old = $_POST['img-old'];
@@ -424,4 +424,97 @@ if(
  }
  
  }
+
+ //Cập nhật hình đại diện
+if(
+   isset($_FILES['image']) && !empty($_FILES['image']) &&
+   isset($_POST['image_old']) && !empty($_POST['image_old'])
+   && isset($_POST['id_users']) && !empty($_POST['id_users'])
+)
+{
+/* Nhận tên file */
+ $filename = $_FILES['image']['name'];
+
+ /* Nhận kích thước file */
+ $filesize = $_FILES['image']['size'];
+
+ /* Thêm tên file bằng timestamp*/
+ $timestamp = time();
+
+ /* Gắn timestamp vào tên file*/
+ $path = $timestamp.$filename;
+
+ /* Location */
+ $uploadPath = "../../uploads/users";
+
+ $tar_get = "/uploads/users";
+ /* Upload file */
+ //Kiểm tra kích thước ảnh trước khi upload
+ $size = $_FILES["image"]['tmp_name'];
+ list($width, $height) = getimagesize($size);
+
+ if($width > "2000" || $height > "2000") {
+     echo json_encode(array(
+         'status' => 0,
+         'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 2000px X 2000px'
+     ));
+     exit();
+ }
+ //Kiểm tra xem kiểu file có hợp lệ hoặc dung lượng lớn không
+ $validTypes = array("jpg","jpeg","png","bmp","gif");
+ $fileType = substr($path,strrpos($path,".") + 1);
+
+ if(!in_array($fileType,$validTypes)){
+    echo json_encode(array(
+        'status' => 0,
+        'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp, gif'
+    ));
+    exit();
+}
+ if($filesize > 2 * 1024 * 1024){
+     echo json_encode(array(
+         'status' => 0,
+         'messaage' => 'Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
+     ));
+     exit();
+ }
+
+ //Check xem ảnh đã tồn tại hay chưa nếu không thì đổi tên
+ $num = 1;
+ $fileName = substr($path,0,strrpos($path,"."));
+ $fileName = md5($fileName);
+ while(file_exists($uploadPath . '/' . $fileName . '.' . $fileType)){
+     $fileName = $fileName . "(". $num .")";
+     $num ++;
+ }
+ $path = $fileName . '.' . $fileType;
+
+if(move_uploaded_file($_FILES['image']['tmp_name'],$uploadPath . '/' .$path)){
+    $image =  $tar_get . '/' .$path;
+
+    $image_old = $_POST['image_old'];
+    $link = '../..';
+    $file = $link.$image_old;
+    unlink($file);
+
+    $id_users = $_POST['id_users'];
+    $sql = "UPDATE `users` SET `image` = '$image' WHERE `id` = '$id_users'";
+    $result = mysqli_query($conn,$sql);
+    if($result){
+        echo json_encode(array(
+            'status' => 1,
+            'messaage' => 'Cập nhật ảnh đại diện thành công'
+        ));
+        exit();
+    }else{
+        echo json_encode(array(
+            'status' => 0,
+            'messaage' => 'Cập nhật ảnh đại diện thất bại'
+        ));
+        exit();
+    }
+}
+
+}
+
  ?>

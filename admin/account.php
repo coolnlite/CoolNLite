@@ -105,6 +105,23 @@
             ]
             });
 
+            //Thay đổi ảnh đại diện
+        $("#fchangeImg").on('submit', function(e){
+                e.preventDefault();
+                    $.ajax({
+                    type: 'POST',
+                    url: '<?php print $DOMAIN.'modules/edit_data.php'?>',
+                    data: new FormData(this),
+                    dataType : 'json',
+                    contentType: false,
+                    cache: false,
+                    processData:false,
+                    success: function(response){ 
+                        
+                    }
+                })
+            });  
+
         });
 
     </script>

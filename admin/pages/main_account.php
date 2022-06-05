@@ -113,9 +113,19 @@
         </button>
       </div>
       <div class="modal-body">
-      <form class="needs-validation" novalidate>
+      <form id="fchangeImg" class="needs-validation" novalidate>
       <div class="form-group">
         <div class="custom-file">
+        <?php
+          $sql = "SELECT `image`,`id` FROM `users` WHERE `id` = '$id' AND `token` = '$tk'";
+          $users = executeResult($sql);
+          foreach($users as $us){
+            echo '
+            <input type="hidden" value="'.$us['image'].'" name="image_old" >
+            <input type="hidden" value="'.$us['id'].'" name="id_users" >
+            ';
+          }
+        ?>
         <input type="file" name="image" class="custom-file-input" id="validatedCustomFile" required>
         <label class="custom-file-label" for="validatedCustomFile">Chọn file</label>
         <div class="invalid-feedback">Vui lòng chọn hình ảnh</div>
