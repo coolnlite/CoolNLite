@@ -30,6 +30,19 @@
 //delete news
 if(isset($_POST['delete_news']) && isset($_POST['id_news'])){
     $id_news = $_POST['id_news'];
+
+    $sql = "SELECT `id_news` FROM `news_keyword` WHERE `id_news` = '$id_news'";
+    $result = mysqli_query($conn,$sql);
+    if($result){
+        $row = mysqli_fetch_assoc($result);
+        while ($row) {
+            $news = $row['id_news'];
+            $sql = "DELETE FROM `news_keyword` WHERE `id_news`= '$news'";
+            mysqli_query($conn,$sql);
+        }
+    }
+   
+    
     $sql = "SELECT `thumnail` FROM `news` WHERE `id` = '$id_news'";
     $news = executeResult($sql);
     foreach($news as $ns){
