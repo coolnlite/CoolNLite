@@ -427,16 +427,16 @@ if(
 
  //Cập nhật hình đại diện
 if(
-   isset($_FILES['image-users']) && !empty($_FILES['image-users']) &&
+   isset($_FILES['image']) && !empty($_FILES['image']) &&
    isset($_POST['image_old']) && !empty($_POST['image_old'])
    && isset($_POST['id_users']) && !empty($_POST['id_users'])
 )
 {
 /* Nhận tên file */
- $filename = $_FILES['image-users']['name'];
+ $filename = $_FILES['image']['name'];
 
  /* Nhận kích thước file */
- $filesize = $_FILES['image-users']['size'];
+ $filesize = $_FILES['image']['size'];
 
  /* Thêm tên file bằng timestamp*/
  $timestamp = time();
@@ -450,7 +450,7 @@ if(
  $tar_get = "/uploads/users";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
- $size = $_FILES["image-users"]['tmp_name'];
+ $size = $_FILES["image"]['tmp_name'];
  list($width, $height) = getimagesize($size);
 
  if($width > "2000" || $height > "2000") {
@@ -488,11 +488,9 @@ if(
      $num ++;
  }
  $path = $fileName . '.' . $fileType;
- $changeImg = move_uploaded_file($_FILES['image-users']['tmp_name'],$uploadPath . '/' .$path);
- var_dump($changeImg);
-if($changeImg){
+
+if(move_uploaded_file($_FILES['image']['tmp_name'],$uploadPath . '/' .$path)){
     $image =  $tar_get . '/' .$path;
-    
 
     $image_old = $_POST['image_old'];
     $link = '../..';

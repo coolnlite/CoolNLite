@@ -126,7 +126,7 @@
             ';
           }
         ?>
-        <input type="file" name="image-users" class="custom-file-input" id="validatedCustomFile" required>
+        <input type="file" name="image" class="custom-file-input" id="validatedCustomFile" required>
         <label class="custom-file-label" for="validatedCustomFile">Chọn file</label>
         <div class="invalid-feedback">Vui lòng chọn hình ảnh</div>
         </div>
