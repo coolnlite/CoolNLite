@@ -12,14 +12,14 @@
     <?php
         if(isset($user_id) == true){
             
-            $sql = "SELECT `full_name`,`image` FROM `users` WHERE `id` = $user_id";
+            $sql = "SELECT `full_name`,`image`,`token` FROM `users` WHERE `id` = $user_id";
             $user = executeResult($sql);
             foreach($user as $us){
 
        
     ?>
     <a 
-    href="<?php print $DOMAIN.'account.php'?>?id=<?php echo '' .$user_id. '' ?>&?permision=<?php echo $permission?>" 
+    href="<?php print $DOMAIN.'account.php'?>?id=<?php echo '' .$user_id. '' ?>&?token=<?php print $us['token']?>" 
     class="box-user">
         <span class="name-user"><?php echo '' . $us['full_name'] . '' ?></span>
         <div class="user">

@@ -3,10 +3,11 @@ ob_start();
 session_start();
 require_once('../../config/config.php');
 require_once('../../config/dbhelper.php');
+require_once('./function.php');
 require_once('./permision.php');
 
 if(isset($_POST['btn-login'])){
-    if(isset($_POST['username']) && isset($_POST['password'])){
+    if(!empty($_POST['username']) && !empty($_POST['password'])){
         $username = mysqli_real_escape_string($conn, $_POST['username']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
         $password = md5($password);
@@ -21,13 +22,18 @@ if(isset($_POST['btn-login'])){
         if($row != NULL){
             $id = $row['id'];
             $permision = $row['position'];
-            
+
             $count = mysqli_num_rows($result);
             
+            $token = getToken(30);
+            $sql = "UPDATE `users` SET `token` = '$token' WHERE `id` = '$id'";
+            execute($sql);
+
             if($count == 1) {
             
             $_SESSION['user_id'] = $id;
             $_SESSION['permision'] = $permision;
+
 
             echo json_encode(array(
                 'status' => 1,
