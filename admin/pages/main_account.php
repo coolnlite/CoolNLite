@@ -11,32 +11,43 @@
             </div>
             <div class="col-xl-9 border-right">
             <h5>Thông Tin Tài Khoản</h5>
-            <form class="needs-validation" novalidate>
+            <form>
+              <?php 
+                $sql = "SELECT * FROM `users` WHERE `id` = '$id' AND `token` = '$tk'";
+                $users = executeResult($sql);
+                foreach($users as $us){
+
+                }
+              ?>
                 <div class="form-row">
                     <div class="col-xl-6 mb-3">
-                    <label for="validationCustomUsername">Username</label>
+                    <label for="validationCustomUsername">Tên tài khoản</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         <span class="input-group-text">@</span>
                         </div>
-                        <input type="text" class="form-control" value="" readonly>
+                        <input type="text" class="form-control" 
+                        value="<?php print $us['user_name']?>" readonly>
                     </div>
                     </div>
 
                     <div class="col-xl-6 mb-3">
                     <label for="validationCustom02">Email</label>
-                    <input type="email" class="form-control" value="" readonly>
+                    <input type="email" class="form-control" 
+                    value="<?php print $us['email']?>" readonly>
                     </div>
 
                 </div>
                 <div class="form-row">
                     <div class="col-xl-6 mb-3">
                     <label for="validationCustom04">Vị trí</label>
-                    <input type="text" class="form-control" value="" readonly>
+                    <input type="text" class="form-control" 
+                    value="<?php $us['position'] == 2 ? print 'Administrator' : print 'Users'?>" readonly>
                     </div>
                     <div class="col-xl-6 mb-3">
                     <label for="validationCustom05">Tên đầy đủ</label>
-                    <input type="text" class="form-control" value="" readonly>
+                    <input type="text" class="form-control" 
+                    value="<?php print $us['full_name']?>" readonly>
                     </div>
                 </div>
                 <div class="form-row mb-3">

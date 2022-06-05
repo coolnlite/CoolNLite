@@ -16,7 +16,6 @@
             $user = executeResult($sql);
             foreach($user as $us){
 
-       
     ?>
     <a 
     href="<?php print $DOMAIN.'account.php?u='.$user_id.'&token='.$token.''?>" 

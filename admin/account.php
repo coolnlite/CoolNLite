@@ -5,21 +5,20 @@
     require_once('../config/config.php');
     require_once('../config/dbhelper.php'); 
 
-    if(isset($_GET['id']) && isset($_GET['token'])){
-        $id = $_GET['id'] = !"" ? mysqli_real_escape_string($conn, $_GET['id']) : '';
-        $token = $_GET['token'] = !"" ? mysqli_real_escape_string($conn, $_GET['token']) : '';
+    if(isset($_GET['u']) && isset($_GET['token']) 
+    && !empty($_GET['u']) && !empty($_GET['token'])){
+        $id = $_GET['u'] = !"" ? mysqli_real_escape_string($conn, $_GET['u']) : '';
+        $tk = $_GET['token'] = !"" ? mysqli_real_escape_string($conn, $_GET['token']) : '';
       }else{
         require_once('./error_404.php');
         exit();
       }
 
-      $sql = "SELECT `id`,`token` FROM `users` WHERE `id` = '$id' AND `token` = $token";
+      $sql = "SELECT `id`,`token` FROM `users` WHERE `id` = '$id' AND `token` = '$tk'";
       $result = mysqli_query($conn, $sql);
       $rowcount = mysqli_num_rows($result);
 
-      if (isset($rowcount) && $rowcount != 0) { // Kiểm tra có id này không
-        
-      }else{
+      if ($rowcount == 0) { // Nếu không có mẫu tin nào thì chuyển trang không tìm thấy
         require_once('./error_404.php');
         exit();
       }
