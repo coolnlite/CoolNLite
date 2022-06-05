@@ -56,10 +56,10 @@ if(isset($_POST['account'])){
         $sub_array[] = $row['id'];
         $sub_array[] = $row['user_name'];
         $sub_array[] = $row['email'];
-        $sub_array[] = $row['position'] ;
+        $sub_array[] = $row['position'] == 2 ? 'Administrator' : 'Users' ;
         $sub_array[] = $row['full_name'] ;
         $sub_array[] = '<img src="..'.$row['image'].'" alt="">';
-        $sub_array[] = $row['status'] ;
+        $sub_array[] = $row['status'] == 1 ? 'Đang hoạt động'  : 'Đang ngủ' ;
         $sub_array[] = facebook_time_ago($row['time']);
         $sub_array[] = 
         '
