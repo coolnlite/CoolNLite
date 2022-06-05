@@ -53,7 +53,8 @@
                 <div class="form-row mb-3">
                     <div class="col-xl-12 mb-12">
                     <label for="validationCustom03">Trạng thái</label>
-                    <input type="text" class="form-control" value="" readonly>
+                    <input type="text" class="form-control" 
+                    value="<?php $us['status'] == 1 ? print 'Đang hoạt động' : print 'Đang ngủ'?>" readonly>
                     </div>
                 </div>
                 <div class="form-row mb-3 d-flex justify-content-center">
