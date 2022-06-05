@@ -1,9 +1,16 @@
+<?php 
+    $sql = "SELECT * FROM `users` WHERE `id` = '$id' AND `token` = '$tk'";
+    $users = executeResult($sql);
+    foreach($users as $us){
+
+    }
+?>
 <div style="margin: 0 auto; width : 94%">
     <div class="rounded bg-white mb-3 mt-3">
         <div class="row">
             <div class="col-xl-3 border-right">
                 <div class="d-flex flex-column align-items-center text-center">
-                    <img class="rounded-circle" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+                    <img class="rounded-circle" width="150px" src="..<?php print $us['image']?>">
                     <span class="font-weight-bold">Võ Đông Thái</span>
                     <span class="text-black-50">Administrator</span>
                     <a class="btn btn-outline-primary mt-1" data-toggle="modal" data-target="#changImage">Thay đổi ảnh đại diện</a>
@@ -12,13 +19,6 @@
             <div class="col-xl-9 border-right">
             <h5>Thông Tin Tài Khoản</h5>
             <form>
-              <?php 
-                $sql = "SELECT * FROM `users` WHERE `id` = '$id' AND `token` = '$tk'";
-                $users = executeResult($sql);
-                foreach($users as $us){
-
-                }
-              ?>
                 <div class="form-row">
                     <div class="col-xl-6 mb-3">
                     <label for="validationCustomUsername">Tên tài khoản</label>

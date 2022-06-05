@@ -474,7 +474,7 @@ if(
  if($filesize > 2 * 1024 * 1024){
      echo json_encode(array(
          'status' => 0,
-         'messaage' => 'Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
+         'message' => 'Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
      ));
      exit();
  }
@@ -488,9 +488,11 @@ if(
      $num ++;
  }
  $path = $fileName . '.' . $fileType;
-
-if(move_uploaded_file($_FILES['image']['tmp_name'],$uploadPath . '/' .$path)){
+ $changeImg = move_uploaded_file($_FILES['image']['tmp_name'],$uploadPath . '/' .$path);
+ var_dump($changeImg);
+if($changeImg){
     $image =  $tar_get . '/' .$path;
+    
 
     $image_old = $_POST['image_old'];
     $link = '../..';
@@ -503,13 +505,13 @@ if(move_uploaded_file($_FILES['image']['tmp_name'],$uploadPath . '/' .$path)){
     if($result){
         echo json_encode(array(
             'status' => 1,
-            'messaage' => 'Cập nhật ảnh đại diện thành công'
+            'message' => 'Cập nhật ảnh đại diện thành công'
         ));
         exit();
     }else{
         echo json_encode(array(
             'status' => 0,
-            'messaage' => 'Cập nhật ảnh đại diện thất bại'
+            'message' => 'Cập nhật ảnh đại diện thất bại'
         ));
         exit();
     }
