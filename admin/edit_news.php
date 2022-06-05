@@ -84,14 +84,9 @@
             cache: false,
             processData:false,
             success: function(response){ 
-                if(response.image == 0){
-                    alert(response.message);
-                }else{
-                    alert(response.message);
-                    window.location.href = '<?php print $DOMAIN.'news.php'?>';
-                }
                 if(response.status == 1){
                     alert(response.message);
+                    window.location.href = '<?php print $DOMAIN.'news.php'?>';
                 }else{
                     alert(response.message);
                 }

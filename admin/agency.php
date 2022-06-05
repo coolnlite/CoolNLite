@@ -177,8 +177,6 @@
                         if(response.status == 1){
                             alert(response.message);
                             window.location.reload();
-                        }else if(response.image == 0){
-                            alert(response.message);
                         }else{
                             alert(response.message);
                         }
