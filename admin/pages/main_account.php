@@ -151,20 +151,22 @@
       <div class="form-group">
       <label for="user_name">Tên tài khoản :</label>
       <input type="text" class="form-control" name="user_name" 
-      placeholder="Nhập tên tài khoản" maxlength="30" required>
+      placeholder="Nhập tên tài khoản" value="<?php print $us['user_name']?>" maxlength="30" required>
       <div class="invalid-feedback">Vui lòng nhập tên tài khoản</div>
       </div>
 
       <div class="form-group">
       <label for="email">Email :</label>
-      <input type="email" class="form-control" name="email" placeholder="Nhập email" required>
+      <input type="email" class="form-control" name="email" 
+      placeholder="Nhập email" value="<?php print $us['email']?>" required>
       <div class="invalid-feedback">Vui lòng nhập email</div>
       </div>
 
       <div class="form-group">
       <label for="full_name">Tên đầy đủ :</label>
       <input type="text" class="form-control" name="full_name" 
-      placeholder="Nhập tên đầy đủ" maxlength="30" required>
+      placeholder="Nhập tên đầy đủ" maxlength="30" 
+      value="<?php print $us['full_name']?>" required>
       <div class="invalid-feedback">Vui lòng nhập tên đầy đủ</div>
       </div>
 
