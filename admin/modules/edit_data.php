@@ -517,4 +517,31 @@ if(move_uploaded_file($_FILES['image']['tmp_name'],$uploadPath . '/' .$path)){
 
 }
 
+if
+(!empty($_POST['id_users']) && !empty($_POST['user_name']) &&
+!empty($_POST['email']) && !empty($_POST['full_name']))
+{
+    $id_users = mysqli_real_escape_string($conn, $_POST['id_users']);
+    $user_name = mysqli_real_escape_string($conn, $_POST['user_name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $full_name = mysqli_real_escape_string($conn, $_POST['full_name']);
+  
+    $sql = "UPDATE `users` SET `user_name` = '$user_name', `email` = '$email', 
+    `full_name` = '$full_name' WHERE `id` = '$id_users'";
+    $result = mysqli_query($conn,$sql);
+    if($result == true){
+        echo json_encode(array(
+            'status' => 1,
+            'message' => 'Cập nhật thông tin thành công'
+        ));
+        exit();
+    }else{
+        echo json_encode(array(
+            'status' => 0,
+            'message' => 'Cập nhật thông tin thất bại'
+        ));
+        exit();
+    }
+}
+
  ?>

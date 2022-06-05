@@ -10,7 +10,8 @@
         <div class="row">
             <div class="col-xl-3 border-right">
                 <div class="d-flex flex-column align-items-center text-center">
-                    <img class="rounded-circle" width="150px" src="..<?php print $us['image']?>">
+                    <img class="rounded-circle" alt="Ảnh đại diện" 
+                    width="150px" src="..<?php print $us['image']?>">
                     <span class="font-weight-bold">Võ Đông Thái</span>
                     <span class="text-black-50">Administrator</span>
                     <a class="btn btn-outline-primary mt-1" data-toggle="modal" data-target="#changImage">Thay đổi ảnh đại diện</a>
@@ -114,18 +115,10 @@
       </div>
       <div class="modal-body">
       <form id="fchangeImg" class="needs-validation" novalidate>
+      <input type="hidden" value="<?php print $us['id']?>" name="id_users" >
+      <input type="hidden" value="<?php print $us['image']?>" name="image_old" >
       <div class="form-group">
         <div class="custom-file">
-        <?php
-          $sql = "SELECT `image`,`id` FROM `users` WHERE `id` = '$id' AND `token` = '$tk'";
-          $users = executeResult($sql);
-          foreach($users as $us){
-            echo '
-            <input type="hidden" value="'.$us['image'].'" name="image_old" >
-            <input type="hidden" value="'.$us['id'].'" name="id_users" >
-            ';
-          }
-        ?>
         <input type="file" name="image" class="custom-file-input" id="validatedCustomFile" required>
         <label class="custom-file-label" for="validatedCustomFile">Chọn file</label>
         <div class="invalid-feedback">Vui lòng chọn hình ảnh</div>
@@ -151,24 +144,26 @@
         </button>
       </div>
       <div class="modal-body">
-      <form class="needs-validation" novalidate>
+      <form id="feditUsers" class="needs-validation" novalidate>
+
+      <input type="hidden" value="<?php print $us['id']?>" name="id_users" >
 
       <div class="form-group">
       <label for="user_name">Tên tài khoản :</label>
-      <input type="text" class="form-control" id="user_name" name="user_name" 
+      <input type="text" class="form-control" name="user_name" 
       placeholder="Nhập tên tài khoản" maxlength="30" required>
       <div class="invalid-feedback">Vui lòng nhập tên tài khoản</div>
       </div>
 
       <div class="form-group">
       <label for="email">Email :</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="Nhập email" required>
+      <input type="email" class="form-control" name="email" placeholder="Nhập email" required>
       <div class="invalid-feedback">Vui lòng nhập email</div>
       </div>
 
       <div class="form-group">
       <label for="full_name">Tên đầy đủ :</label>
-      <input type="email" class="form-control" id="full_name" name="full_name" 
+      <input type="text" class="form-control" name="full_name" 
       placeholder="Nhập tên đầy đủ" maxlength="30" required>
       <div class="invalid-feedback">Vui lòng nhập tên đầy đủ</div>
       </div>
@@ -216,7 +211,7 @@
 
       <div class="form-group">
         <label for="">Phân quyền người dùng :</label>
-        <select class="custom-select" required>
+        <select class="custom-select" title="Chọn quyền" required>
         <option value="">Chọn quyền...</option>
             <option value="0" name="position">CRM</option>
             <option value="1" name="position">SEO & POSTS</option>
