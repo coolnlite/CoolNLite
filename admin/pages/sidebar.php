@@ -13,7 +13,13 @@
             foreach($sidebar as $sb){
         ?>
         <li class="<?php $sb['url'] == $curPageName ? print "hovered" : print '' ?>" >
-            <a href="<?php echo ''.$DOMAIN.$sb['url'].''?>">
+            <a href="<?php
+             if($sb['url'] == 'account.php'){
+                print $DOMAIN.$sb['url'].'?u='.$user_id.'&token='.$token.'';
+             }else{
+                print $DOMAIN.$sb['url'];
+             }
+            ?>">
                 <span class="icon">
                     <?php echo ''.$sb['icon'].''?>
                 </span>

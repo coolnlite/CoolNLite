@@ -4,6 +4,25 @@
     require_once('./modules/permision.php');
     require_once('../config/config.php');
     require_once('../config/dbhelper.php'); 
+
+    if(isset($_GET['id']) && isset($_GET['token'])){
+        $id = $_GET['id'] = !"" ? mysqli_real_escape_string($conn, $_GET['id']) : '';
+        $token = $_GET['token'] = !"" ? mysqli_real_escape_string($conn, $_GET['token']) : '';
+      }else{
+        require_once('./error_404.php');
+        exit();
+      }
+
+      $sql = "SELECT `id`,`token` FROM `users` WHERE `id` = '$id' AND `token` = $token";
+      $result = mysqli_query($conn, $sql);
+      $rowcount = mysqli_num_rows($result);
+
+      if (isset($rowcount) && $rowcount != 0) { // Kiểm tra có id này không
+        
+      }else{
+        require_once('./error_404.php');
+        exit();
+      }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +68,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 
     <script>
-        
+
     </script>
 
 </body>

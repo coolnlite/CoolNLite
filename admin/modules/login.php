@@ -26,6 +26,7 @@ if(isset($_POST['btn-login'])){
             $count = mysqli_num_rows($result);
             
             $token = getToken(30);
+            
             $sql = "UPDATE `users` SET `token` = '$token' WHERE `id` = '$id'";
             execute($sql);
 
@@ -33,7 +34,7 @@ if(isset($_POST['btn-login'])){
             
             $_SESSION['user_id'] = $id;
             $_SESSION['permision'] = $permision;
-
+            $_SESSION['token'] = $token;
 
             echo json_encode(array(
                 'status' => 1,
