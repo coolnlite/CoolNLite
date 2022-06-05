@@ -87,6 +87,7 @@
                 <th>Tên đầy đủ</th>
                 <th>Ảnh đại diện</th>
                 <th>Trạng thái</th>
+                <th>Thời gian tạo</th>
                 <th>Thao tác</th>
               </thead>
               <tbody>
