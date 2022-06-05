@@ -40,10 +40,10 @@
          $size = $_FILES["thumnail"]['tmp_name'];
          list($width, $height) = getimagesize($size);
      
-         if($width > "1000" || $height > "1000") {
+         if($width > "2000" || $height > "2000") {
              echo json_encode(array(
                  'status' => 0,
-                 'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 1000px X 1000px'
+                 'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 2000px X 2000px'
              ));
              exit();
          }
@@ -51,7 +51,7 @@
          $validTypes = array("jpg","jpeg","png","bmp");
          $fileType = substr($path,strrpos($path,".") + 1);
 
-         if(!in_array($fileType,$validTypes) || $filesize > 2 * 1024 * 1024){
+         if(!in_array($fileType,$validTypes)){
             echo json_encode(array(
                 'status' => 0,
                 'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp'
@@ -189,10 +189,10 @@ if(!empty($_POST['id_news']) && !empty($_POST['title']) && !empty($_FILES['img-t
  $size1 = $_FILES["img-fb"]['tmp_name'];
  list($width1, $height1) = getimagesize($size1);
 
- if($width1 > "1000" || $height1 > "1000") {
+ if($width1 > "2000" || $height1 > "2000") {
      echo json_encode(array(
          'status' => 0,
-         'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 1000px X 1000px'
+         'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 2000px X 2000px'
      ));
      exit();
  }
@@ -200,7 +200,7 @@ if(!empty($_POST['id_news']) && !empty($_POST['title']) && !empty($_FILES['img-t
  $validTypes1 = array("jpg","jpeg","png","bmp");
  $fileType1 = substr($path1,strrpos($path1,".") + 1);
 
- if(!in_array($fileType1,$validTypes1) || $filesize1 > 2 * 1024 * 1024){
+ if(!in_array($fileType1,$validTypes1)){
     echo json_encode(array(
         'status' => 0,
         'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp'
@@ -367,7 +367,7 @@ if(
  $validTypes = array("jpg","jpeg","png","bmp");
  $fileType = substr($path,strrpos($path,".") + 1);
 
- if(!in_array($fileType,$validTypes) || $filesize > 2 * 1024 * 1024){
+ if(!in_array($fileType,$validTypes)){
     echo json_encode(array(
         'status' => 0,
         'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp'
