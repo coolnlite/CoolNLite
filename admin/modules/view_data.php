@@ -86,12 +86,12 @@ if(isset($_POST['view_users']) && isset($_POST['id_users'])){
                 <label for="">Trạng thái tài khoản :</label>
                 <div class="custom-control custom-radio">
                     <input type="radio" class="custom-control-input" id="customControlValidation1" 
-                    name="status" value="0" <?php $us['id'] == 0 ? print 'checked' : print ''?> required>
+                    name="status" value="0" <?php $us['status'] == 0 ? print 'checked' : print ''?> required>
                     <label class="custom-control-label" for="customControlValidation1">Ngủ</label>
                 </div>
                 <div class="custom-control custom-radio">
                     <input type="radio" class="custom-control-input" id="customControlValidation2" 
-                    name="status" value="1" <?php $us['id'] == 1 ? 'checked' : ''?> required>
+                    name="status" value="1" <?php $us['status'] == 1 ? print 'checked' : print ''?> required>
                     <label class="custom-control-label" for="customControlValidation2">Hoạt động</label>
                 </div>
                 </div>
