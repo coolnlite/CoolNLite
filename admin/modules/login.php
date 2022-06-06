@@ -4,7 +4,6 @@ session_start();
 require_once('../../config/config.php');
 require_once('../../config/dbhelper.php');
 require_once('./function.php');
-require_once('./permision.php');
 
 if(isset($_POST['btn-login'])){
     if(!empty($_POST['username']) && !empty($_POST['password'])){
@@ -38,7 +37,7 @@ if(isset($_POST['btn-login'])){
 
             echo json_encode(array(
                 'status' => 1,
-                'message' => $DOMAIN.'dashboard.php'
+                'message' => 'http://localhost/CoolNLite/admin/dashboard.php'
             ));
             exit();
 

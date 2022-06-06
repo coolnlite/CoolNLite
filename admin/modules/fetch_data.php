@@ -65,10 +65,12 @@ if(isset($_POST['account']) && !empty($_POST['user_id']) && !empty($_POST['permi
         $sub_array[] = $row['status'] == 1 ? 'Đang hoạt động'  : 'Đang ngủ' ;
         $sub_array[] = facebook_time_ago($row['time']);
         if($permission != 2){
-
-        }else{
             $sub_array[] = '';
-            if($row['id'] != $user_id){
+        }else{
+            if($row['position'] == $permission){
+                $sub_array[] = '';
+            }
+            if($row['id'] != $user_id ){
                 $sub_array[] = '<a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  
                 class="btn btn-danger btn-sm deleteBtn" >
                 <i class="fas fa-trash-alt"></i>
