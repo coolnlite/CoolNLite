@@ -36,7 +36,11 @@
         <div class="main">
            <?php
             require_once('./pages/topbar.php');
-            require_once('./pages/main_agency.php');
+            if($permission != 2){
+              require_once('./pages/main_premision.php');
+            }else{
+              require_once('./pages/main_agency.php');
+            }
            ?>
         </div>
     </div>

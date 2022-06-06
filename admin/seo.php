@@ -36,7 +36,11 @@
         <div class="main">
            <?php
             require_once('./pages/topbar.php');
-            require_once('./pages/main_seo.php');
+            if($permission == 0){
+                require_once('./pages/main_premision.php');
+              }else{
+                require_once('./pages/main_seo.php');
+            }
            ?>
         </div>
     </div>
