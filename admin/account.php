@@ -247,10 +247,18 @@
                 $.ajax({
                     type: "POST",
                     url: "<?php print $DOMAIN.'modules/add_data.php'?>",
-                    data: $(form).serializeArray(),
+                    data: new FormData(form),
+                    dataType : 'json',
+                    contentType: false,
+                    cache: false,
+                    processData:false,
                     success: function (response) {
-                    response = JSON.parse(response);
-                   
+                        if(response.status == 1){
+                            alert(response.message);
+                            window.location.reload();
+                        }else{
+                            alert(response.message);
+                        }
                     },
                 });
                 },

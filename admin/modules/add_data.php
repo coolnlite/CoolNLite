@@ -418,4 +418,104 @@ if(
         }
     }
 }
+
+//Thêm tài khoản mới
+
+if(
+    !empty($_POST['user_name']) && !empty($_POST['email'])
+     && !empty($_POST['pass_word']) && !empty($_POST['position']) && !empty($_POST['full_name'])
+     && !empty($_FILES['image']) && !empty($_POST['status'])
+)
+{
+    var_dump($_POST,$_FILES);
+ /* Nhận tên file */
+ $filename = $_FILES['image']['name'];
+ /* Nhận kích thước file */
+ $filesize = $_FILES['image']['size'];
+
+ /* Thêm tên file bằng timestamp*/
+ $timestamp = time();
+
+ /* Gắn timestamp vào tên file*/
+ $path = $timestamp.$filename;
+
+ /* Location */
+ $uploadPath = "../../uploads/users";
+
+ $tar_get = "/uploads/users";
+ /* Upload file */
+ //Kiểm tra kích thước ảnh trước khi upload
+ $size = $_FILES["image"]['tmp_name'];
+ list($width, $height) = getimagesize($size);
+
+ if($width > "2000" || $height > "2000") {
+     echo json_encode(array(
+         'status' => 0,
+         'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 2000px X 2000px'
+     ));
+     exit();
+ }
+ //Kiểm tra xem kiểu file có hợp lệ hoặc dung lượng lớn không
+ $validTypes = array("jpg","jpeg","png","bmp","gif");
+ $fileType = substr($path,strrpos($path,".") + 1);
+
+ if(!in_array($fileType,$validTypes)){
+    echo json_encode(array(
+        'status' => 0,
+        'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp, gif'
+    ));
+    exit();
+}
+ if($filesize > 2 * 1024 * 1024){
+     echo json_encode(array(
+         'status' => 0,
+         'messaage' => 'Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
+     ));
+     exit();
+ }
+
+ //Check xem ảnh đã tồn tại hay chưa nếu không thì đổi tên
+ $num = 1;
+ $fileName = substr($path,0,strrpos($path,"."));
+ $fileName = md5($fileName);
+ while(file_exists($uploadPath . '/' . $fileName . '.' . $fileType)){
+     $fileName = $fileName . "(". $num .")";
+     $num ++;
+ }
+ $path = $fileName . '.' . $fileType;
+
+    if(move_uploaded_file($_FILES['image']['tmp_name'],$uploadPath . '/' .$path)){
+        $image =  $tar_get . '/' .$path;
+
+        $user_name = mysqli_real_escape_string($conn, $_POST['user_name']);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $pass_word = mysqli_real_escape_string($conn, $_POST['pass_word']);
+        $pass_word = md5($pass_word);
+
+        $position = mysqli_real_escape_string($conn, $_POST['position']);
+        $full_name = mysqli_real_escape_string($conn, $_POST['full_name']);
+        $status = mysqli_real_escape_string($conn, $_POST['status']);
+        $time = date('Y-m-d H:i:s');
+
+        $sql = "INSERT INTO `users` (`user_name`, `email`, `pass_word`, `position`
+        , `full_name`, `image`, `status`, `time`) 
+        VALUES ('$user_name',' $email','$pass_word','$position','$full_name','$image','$status','$time')";
+        $result = mysqli_query($conn,$sql);
+
+        if($result){
+            echo json_encode(array(
+            'status' => 1,
+            'message' => 'Thêm tài khoản thành công'
+        ));
+        exit();
+        }else{
+            echo json_encode(array(
+            'status' => 0,
+            'message' => 'Thêm tài khoản thất bại'
+            ));
+            exit();
+        }
+    }
+}
+
 ?>

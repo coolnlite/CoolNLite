@@ -215,7 +215,7 @@
 
       <div class="form-group">
         <label for="">Phân quyền người dùng :</label>
-        <select class="custom-select" name="position[]" title="Chọn quyền" required>
+        <select class="custom-select" name="position" title="Chọn quyền" required>
         <option value="">Chọn quyền...</option>
             <option value="0" >CRM</option>
             <option value="1" >SEO & POSTS</option>
@@ -239,11 +239,13 @@
      <div class="form-group">
         <label for="">Trạng thái tài khoản :</label>
         <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="customControlValidation1" name="status" required>
+          <input type="radio" class="custom-control-input" id="customControlValidation1" 
+          name="status" value="0" required>
           <label class="custom-control-label" for="customControlValidation1">Ngủ</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="customControlValidation2" name="status" required>
+          <input type="radio" class="custom-control-input" id="customControlValidation2" 
+          name="status" value="1" required>
           <label class="custom-control-label" for="customControlValidation2">Hoạt động</label>
         </div>
       </div>
