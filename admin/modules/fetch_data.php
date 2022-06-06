@@ -77,7 +77,7 @@ if(isset($_POST['account']) && !empty($_POST['user_id']) && !empty($_POST['permi
                 <i class="fas fa-ban"></i>
                 </a>';
             }else{
-
+                $sub_array[] = '';
             }
         }
         $data[] = $sub_array;
