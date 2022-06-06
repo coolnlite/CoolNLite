@@ -73,3 +73,34 @@
     }
 
 ?>        
+<?php 
+if(isset($_POST['view_users']) && isset($_POST['id_users'])){
+        $id_users = $_POST['id_users'];
+        $sql = "SELECT `id`,`status` FROM `users` WHERE `id` = '$id_users'";
+        $users = executeResult($sql);
+        foreach ( $users as $us) {
+           ?>
+            <form id="fchangeUsers" class="needs-validation">
+            <input type="hidden" class="form-control" value="<?php print $us['id'] ?>" >
+            <div class="form-group">
+                <label for="">Trạng thái tài khoản :</label>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="customControlValidation1" 
+                    name="status" value="0" <?php $us['id'] == 0 ? print 'checked' : print ''?> required>
+                    <label class="custom-control-label" for="customControlValidation1">Ngủ</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="customControlValidation2" 
+                    name="status" value="1" <?php $us['id'] == 1 ? 'checked' : ''?> required>
+                    <label class="custom-control-label" for="customControlValidation2">Hoạt động</label>
+                </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary text-left">Cập nhật</button>
+                </div>
+            </form>
+            
+   <?php 
+         }
+        }
+   ?>
