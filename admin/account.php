@@ -353,7 +353,7 @@
                 })
 
                 //Chỉnh sửa đại lý
-                $("#fEditAgency").on('submit', function(e){
+                $("#fchangeUsers").on('submit', function(e){
                         e.preventDefault();
                             $.ajax({
                             type: 'POST',

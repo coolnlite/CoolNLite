@@ -80,7 +80,7 @@
         $users = executeResult($sql);
         foreach($users as $us){
 ?>
-    <input type="hidden" class="form-control" value="<?php print $us['id']?>" >
+    <input type="hidden" class="form-control" name="id_users" value="<?php print $us['id']?>" >
     <div class="form-group">
         <label for="">Trạng thái tài khoản :</label>
         <div class="custom-control custom-radio">
