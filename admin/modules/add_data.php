@@ -423,8 +423,8 @@ if(
 //Thêm tài khoản mới
 
 if(
-    isset($_POST['user_name']) && isset($_POST['email'])
-     && isset($_POST['pass_word'])  && isset($_POST['position']) && isset($_POST['full_name'])
+    !empty($_POST['user_name']) && !empty($_POST['email'])
+     && !empty($_POST['pass_word'])  && isset($_POST['position']) && isset($_POST['full_name'])
      && !empty($_FILES['image']) && isset($_POST['status'])
 )
 {
