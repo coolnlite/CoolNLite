@@ -71,12 +71,33 @@
         $row = mysqli_fetch_assoc($result);
         echo json_encode($row);
     }
+?>        
 
+<?php 
     if(isset($_POST['view_users']) && isset($_POST['id_users'])){
         $id_users = $_POST['id_users'];
         $sql = "SELECT `id`,`status` FROM `users` WHERE `id` = '$id_users'";
-        $result = mysqli_query($conn,$sql);
-        $row = mysqli_fetch_assoc($result);
-        echo json_encode($row);
+        $users = executeResult($sql);
+        foreach($users as $us){
+?>
+    <input type="hidden" class="form-control" value="<?php print $us['id']?>" >
+    <div class="form-group">
+        <label for="">Trạng thái tài khoản :</label>
+        <div class="custom-control custom-radio">
+    <input type="radio" id="customRadio1" name="status" value="0"
+    <?php $us['status'] == 0 ? print 'checked' : print '' ?> class="custom-control-input">
+    <label class="custom-control-label" for="customRadio1">Ngủ</label>
+    </div>
+    <div class="custom-control custom-radio">
+    <input type="radio" id="customRadio2" name="status" value="1"
+    <?php $us['status'] == 1 ? print 'checked' : print '' ?> class="custom-control-input" >
+    <label class="custom-control-label" for="customRadio2">Hoạt động</label>
+    </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary text-left">Cập nhật</button>
+    </div>
+<?php 
     }
-?>        
+}
+?>
