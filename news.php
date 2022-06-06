@@ -100,7 +100,7 @@
                         <?php 
                            }
                         ?>
-                        <a class="custom-btn btn-3 btn-show btn-news"><span>Xem Thêm</span></a>
+                        <a class="btn-show btn-news">Xem Thêm</a>
                         <input type="hidden" data-row="0" class="row">
                         <input type="hidden" data-allcount="<?php echo '' . $allcount . ''; ?>" class="allcount">
                      </ul>
