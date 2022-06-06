@@ -53,7 +53,7 @@
                 <input id="password" type="password" name="password" class="form-control" />
                
                 <p class="alert" id="alert"></p>
-                <button type="submit" name="btn-login" class="btn">Đăng nhập</button>
+                <button type="submit" class="btn">Đăng nhập</button>
             </div>
             <a href="forget_password.php" class="forget">Quên mật khẩu</a>
         </form>
@@ -63,7 +63,68 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script>
-        <script src="./js/login.js"></script>
+        <script>
+            $(document).ready(function () {
+                //UP DOWN PANDA
+                $('#password').focusin(function () {
+                    $('form').addClass('up')
+                });
+                $('#password').focusout(function () {
+                    $('form').removeClass('up')
+                });
+
+                // Panda Eye move
+                $(document).on("mousemove", function (event) {
+                    var dw = $(document).width() / 15;
+                    var dh = $(document).height() / 15;
+                    var x = event.pageX / dw;
+                    var y = event.pageY / dh;
+                    $('.eye-ball').css({
+                        width: x,
+                        height: y
+                    });
+                });
+                //FORM LOGIN ADMIN
+                $("#form-login").validate({
+                    rules: {
+                        username: {
+                            required: true,
+                            maxlength: 50,
+                        },
+                        password: {
+                            required: true,
+                            minlength: 8,
+                        },
+                    },
+                    messages: {
+                        username: {
+                            required: "Vui lòng nhập Tên tài khoản / Email",
+                            maxlength: "Vui lòng không nhập quá 50 ký tự"
+                        },
+                        password: {
+                            required: "Vui lòng nhập mật khẩu",
+                            minlength: "Vui lòng nhập ít nhất 8 ký tự",
+                        },
+                    },
+                    submitHandler: function (form) {
+                        $.ajax({
+                            type: "POST",
+                            url: "modules/login.php",
+                            data: $(form).serializeArray(),
+                            dataType : 'json',
+                            success: function (response) {
+                                if(response.status == 0){
+                                    $('#alert').text(response.message);
+                                }else{
+                                    window.location = response.message;
+                                }
+                            },
+                        });
+                    },
+                });
+            })
+
+        </script>
     <!-- javascript -->
 </body>
 
