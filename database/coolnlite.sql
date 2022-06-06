@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2022 at 07:11 AM
+-- Generation Time: Jun 06, 2022 at 12:33 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -213,8 +213,7 @@ CREATE TABLE `keyword` (
 INSERT INTO `keyword` (`id`, `name`, `time`) VALUES
 (1, 'phim cách nhiệt ô tô', '2022-05-25 13:49:31'),
 (2, 'MTFILM', '2022-05-25 13:49:31'),
-(3, 'COOL N LITE', '2022-06-01 10:01:54'),
-(9, 'titan x series', '2022-06-01 10:04:40');
+(3, 'COOL N LITE', '2022-06-01 10:01:54');
 
 -- --------------------------------------------------------
 
@@ -363,6 +362,19 @@ CREATE TABLE `seo_pages` (
   `img_tw` varchar(150) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `seo_pages`
+--
+
+INSERT INTO `seo_pages` (`id`, `title`, `description`, `keyword`, `link_fb`, `img_fb`, `title_fb`, `description_fb`, `keyword_fb`, `title_tw`, `description_tw`, `img_tw`) VALUES
+(1, '', '', '', '', '', '', '', '', '', '', ''),
+(2, '', '', '', '', '', '', '', '', '', '', ''),
+(3, '', '', '', '', '', '', '', '', '', '', ''),
+(4, '', '', '', '', '', '', '', '', '', '', ''),
+(5, '', '', '', '', '', '', '', '', '', '', ''),
+(6, '', '', '', '', '', '', '', '', '', '', ''),
+(7, '', '', '', '', '', '', '', '', '', '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -404,6 +416,7 @@ CREATE TABLE `users` (
   `email` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `pass_word` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
   `position` int(1) NOT NULL,
+  `token` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `full_name` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` int(1) NOT NULL,
@@ -414,8 +427,11 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `user_name`, `email`, `pass_word`, `position`, `full_name`, `image`, `status`, `time`) VALUES
-(1, 'thaisaone', 'vodongthai68@gmail.com', 'f2db2c94d7f2554ccda9edd32ae2bef5', 2, 'Võ Đông Thái', '/uploads/luffy.jpg', 1, '2022-05-19 10:13:12');
+INSERT INTO `users` (`id`, `user_name`, `email`, `pass_word`, `position`, `token`, `full_name`, `image`, `status`, `time`) VALUES
+(1, 'thaisaone', 'vodongthai68@gmail.com', 'f2db2c94d7f2554ccda9edd32ae2bef5', 2, 'AmZAW9mDlgJDVpXTBuE6bmwIYJ2NRd', 'Võ Đông Thái', '/uploads/users/1d7f3558b481ac55f57c60f3c03321ef.jpg', 1, '2022-05-19 10:13:12'),
+(26, 'crm', ' mtauto.marketing@gmail.com', '09e74116393bb3557a6aaa6427d3f281', 0, 'CYyqLtXAXGFhB3YnuGEokWLJSJZkGD', '68 Workshop', '/uploads/users/b5b5931df030f32e7496b2cf5f799b9a.jpg', 1, '2022-06-06 13:49:01'),
+(27, 'posts', ' mtgroup259@gmail.com', '09e74116393bb3557a6aaa6427d3f281', 1, 'ug8rexasGyu7n8Vi1gMbethNkCGVIG', 'Anh', '/uploads/users/1eac1adb34a6561f00933a954f508766.jpg', 1, '2022-06-06 14:13:41'),
+(28, 'dungdeptrai', ' vodongthais1@gmail.com', '09e74116393bb3557a6aaa6427d3f281', 2, '7qUBaRyaFPBQUIJuoDlTf5MIX2ROPn', 'Dung Thông II', '/uploads/users/6fb814a1c9f8767b96a2f72aa3133174.jpg', 1, '2022-06-06 14:15:54');
 
 --
 -- Indexes for dumped tables
@@ -495,8 +511,8 @@ ALTER TABLE `sidebar`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `user_name` (`user_name`),
-  ADD UNIQUE KEY `pass_word` (`pass_word`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `token` (`token`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -512,7 +528,7 @@ ALTER TABLE `agency`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
+  MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
 
 --
 -- AUTO_INCREMENT for table `footer`
@@ -554,7 +570,7 @@ ALTER TABLE `seo_news`
 -- AUTO_INCREMENT for table `seo_pages`
 --
 ALTER TABLE `seo_pages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `sidebar`
@@ -566,7 +582,7 @@ ALTER TABLE `sidebar`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
