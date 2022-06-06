@@ -7,7 +7,6 @@
 if(isset($_POST['account']) && !empty($_POST['user_id']) && !empty($_POST['permission'])){
     $user_id = $_POST['user_id'];
     $permission = $_POST['permission'];
-    ini_set('display_errors','on');
     $output= array();
     $sql = "SELECT * FROM `users` ";
     $totalQuery = mysqli_query($conn,$sql);
@@ -65,7 +64,7 @@ if(isset($_POST['account']) && !empty($_POST['user_id']) && !empty($_POST['permi
         $sub_array[] = $row['status'] == 1 ? 'Đang hoạt động'  : 'Đang ngủ' ;
         $sub_array[] = facebook_time_ago($row['time']);
         if($permission != 2){
-            $sub_array[] = '';
+            '';
         }else{
             if($row['position'] == $permission){
                 $sub_array[] = '';

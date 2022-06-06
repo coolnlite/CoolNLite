@@ -91,7 +91,9 @@
                 <th>Ảnh đại diện</th>
                 <th>Trạng thái</th>
                 <th>Thời gian tạo</th>
+                <?php if($permission == 2){?>
                 <th>Thao tác</th>
+                <?php } ?>
               </thead>
               <tbody>
               </tbody>
