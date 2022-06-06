@@ -47,7 +47,7 @@ if(isset($_POST['btn-login'])){
         }else{
             echo json_encode(array(
                 'status' => 0,
-                'message' => 'Mật khẩu hoặc tài khoản không đúng'
+                'message' => 'Mật khẩu hoặc tài khoản không đúng hoặc bị vô hiệu hóa'
             ));
             exit();
         }

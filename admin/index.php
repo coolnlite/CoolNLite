@@ -53,7 +53,7 @@
                 <input id="password" type="password" name="password" class="form-control" />
                
                 <p class="alert" id="alert"></p>
-                <button type="submit" class="btn">Đăng nhập</button>
+                <button type="submit" name="btn-login" class="btn">Đăng nhập</button>
             </div>
             <a href="forget_password.php" class="forget">Quên mật khẩu</a>
         </form>
