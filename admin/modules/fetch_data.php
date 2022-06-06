@@ -64,7 +64,7 @@ if(isset($_POST['account']) && !empty($_POST['user_id']) && !empty($_POST['permi
         $sub_array[] = $row['status'] == 1 ? 'Đang hoạt động'  : 'Đang ngủ' ;
         $sub_array[] = facebook_time_ago($row['time']);
         if($permission != 2){
-            '';
+            
         }else{
             if($row['position'] == $permission){
                 $sub_array[] = '';
