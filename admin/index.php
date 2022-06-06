@@ -39,7 +39,7 @@
                 <div class="finger"></div>
             </div>
         </div>
-        <form method="POST" action="./modules/login.php" id="form-login" novalidate="novalidate">
+        <form id="form-login">
             <div class="hand"></div>
             <div class="hand rgt"></div>
             <div class="box-logo"><img src="../shared/img/logo.png" alt=""></div>

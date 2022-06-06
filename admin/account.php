@@ -105,7 +105,9 @@
             'ajax': {
                 'url': '<?php echo ''.$DOMAIN.'modules/fetch_data.php'?>',
                 'data': {
-                account : true
+                account : true,
+                user_id : <?php print $user_id?>,
+                permission : <?php print $permission?>
                 },
                 
                 'type': 'post',

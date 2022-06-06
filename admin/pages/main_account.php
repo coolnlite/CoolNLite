@@ -70,10 +70,12 @@
     <div class="container-fluid">
     <div class="row d-flex justify-content-between">
         <h5>Danh sách tài khoản</h5>
+        <?php if($permission == 2) { ?>
         <button title="Thêm tài khoản" type="button" data-toggle="modal" data-target="#AddUsers"
             class="btn btn-outline-success mb-3">
                 <i class="fas fa-plus"></i>
         </button>
+        <?php }?>
     </div>
     <div class="row d-flex justify-content-end ">
       <div style="width: 100%">
@@ -89,7 +91,7 @@
                 <th>Ảnh đại diện</th>
                 <th>Trạng thái</th>
                 <th>Thời gian tạo</th>
-                <th>Thao tác</th>
+                <?php $permission == 2 ? print '<th>Thao tác</th>' : print ''?>
               </thead>
               <tbody>
               </tbody>

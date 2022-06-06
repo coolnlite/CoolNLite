@@ -45,8 +45,8 @@ $(document).ready(function () {
                 type: "POST",
                 url: "modules/login.php",
                 data: $(form).serializeArray(),
+                dataType : 'json',
                 success: function (response) {
-                    response = JSON.parse(response);
                     if(response.status == 0){
                         $('#alert').text(response.message);
                     }else{

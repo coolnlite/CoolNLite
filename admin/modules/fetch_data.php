@@ -4,9 +4,12 @@
     require_once('function.php');
 
 //View Danh sách người dùng
-if(isset($_POST['account'])){
+if(isset($_POST['account']) && !empty($_POST['user_id']) && !empty($_POST['permission'])){
+    $user_id = $_POST['user_id'];
+    $permission = $_POST['permission'];
+
     $output= array();
-    $sql = "SELECT * FROM `users`";
+    $sql = "SELECT * FROM `users` ";
     $totalQuery = mysqli_query($conn,$sql);
     $total_all_rows = mysqli_num_rows($totalQuery);
     $columns = array(
@@ -36,7 +39,7 @@ if(isset($_POST['account'])){
     }
     else
     {
-        $sql .= " ORDER BY `id` desc";
+        $sql .= "ORDER BY `id` desc ";
     }
 
     if($_POST['length'] != -1)
@@ -61,17 +64,19 @@ if(isset($_POST['account'])){
         $sub_array[] = '<img src="..'.$row['image'].'" alt="">';
         $sub_array[] = $row['status'] == 1 ? 'Đang hoạt động'  : 'Đang ngủ' ;
         $sub_array[] = facebook_time_ago($row['time']);
-        $sub_array[] = 
-        '
-        <a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  
-        class="btn btn-danger btn-sm deleteBtn" >
-        <i class="fas fa-trash-alt"></i>
-        </a>
-        <a title="Sửa" href="javascript:void();" data-id="'.$row['id'].'" data-toggle="modal" 
-        data-target="#editAgency" class="btn btn-warning btn-sm editBtn"  >
-        <i class="fas fa-user-edit"></i>
-        </a>
-        ';
+        $sub_array[] = $permission == 2 && $row['id'] != $user_id ?
+            '
+            <a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  
+            class="btn btn-danger btn-sm deleteBtn" >
+            <i class="fas fa-trash-alt"></i>
+            </a>
+            <a title="Trạng thái" href="javascript:void();" data-id="'.$row['id'].'" data-toggle="modal" 
+            data-target="#editAgency" class="btn btn-warning btn-sm editBtn"  >
+            <i class="fas fa-ban"></i>
+            </a>
+            '
+            : '';
+        
         $data[] = $sub_array;
     }
 
