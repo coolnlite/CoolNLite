@@ -190,25 +190,27 @@
         </button>
       </div>
       <div class="modal-body">
-      <form id="fAddUsers" class="needs-validation" novali date>
+      <form id="fAddUsers">
 
       <div class="form-group">
       <label for="user_name">Tên tài khoản :</label>
       <input type="text" class="form-control" name="user_name" 
       placeholder="Nhập tên tài khoản" maxlength="30" required>
-      <div class="invalid-feedback">Vui lòng nhập tên tài khoản</div>
       </div>
 
       <div class="form-group">
       <label for="email">Email :</label>
       <input type="email" class="form-control" name="email" placeholder="Nhập email" required>
-      <div class="invalid-feedback">Vui lòng nhập email</div>
       </div>
 
       <div class="form-group">
       <label for="pass_word">Mật khẩu :</label>
       <input type="password" class="form-control" id="pass_word" name="pass_word" placeholder="Nhập mật khẩu" required>
-      <div class="invalid-feedback">Vui lòng nhập mật khẩu</div>
+      </div>
+
+      <div class="form-group">
+      <label for="pass_word_confirm">Nhập lại mật khẩu :</label>
+      <input type="password" class="form-control" id="pass_word_confirm" name="pass_word_confirm" placeholder="Nhập mật khẩu" required>
       </div>
 
       <div class="form-group">
@@ -219,13 +221,11 @@
             <option value="1" >SEO & POSTS</option>
             <option value="2" >Administrator</option>
         </select>
-        <div class="invalid-feedback">Vui lòng thiết lập quyền tài khoản</div>
   </div>
       <div class="form-group">
       <label for="full_name">Tên đầy đủ :</label>
       <input type="text" class="form-control" name="full_name" 
       placeholder="Nhập tên đầy đủ" maxlength="30" required>
-      <div class="invalid-feedback">Vui lòng nhập tên đầy đủ</div>
       </div>
 
       <div class="form-group">
@@ -233,7 +233,6 @@
       <div class="custom-file">
         <input type="file" name="image" id="image" class="custom-file-input" required>
         <label class="custom-file-label">Chọn file</label>
-        <div class="invalid-feedback">Vui lòng chọn hình ảnh</div>
         </div>
       </div>
 
