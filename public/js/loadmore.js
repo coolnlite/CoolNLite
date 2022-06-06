@@ -37,7 +37,7 @@ $(document).ready(function () {
                             .fadeIn("slow");
                         var rowno = row + 5;
                         if (rowno > allcount) {
-                            $(".btn-news").text('Ẩn Đi');
+                            $(".btn-news").hide();
                         } else {
                             $(".btn-news").text('Xem Thêm');
                         }
@@ -46,24 +46,24 @@ $(document).ready(function () {
             });
         } else {
             $(".btn-news").hide();
-            $("#load_news").append(load);
-            setTimeout(function () {
-                $("#load_news .loader").remove();
-            }, 500);
-            setTimeout(function () {
-                $("#load_news .news:nth-child(5)")
-                    .nextAll("#load_news .news")
-                    .remove()
-                    .fadeIn("slow");
-                $("#load_news .row").data("row", "0");
-                $(".btn-news").show().text('Xem Thêm');
-                $scrollTo = $("#load_news .news:last-of-type");
-                if ($scrollTo.length) {
-                    $("html, body").animate({
-                        scrollTop: $scrollTo.offset().top,
-                    });
-                }
-            }, 500);
+            // $("#load_news").append(load);
+            // setTimeout(function () {
+            //     $("#load_news .loader").remove();
+            // }, 500);
+            // setTimeout(function () {
+            //     $("#load_news .news:nth-child(5)")
+            //         .nextAll("#load_news .news")
+            //         .remove()
+            //         .fadeIn("slow");
+            //     $("#load_news .row").data("row", "0");
+            //     $(".btn-news").show().text('Xem Thêm');
+            //     $scrollTo = $("#load_news .news:last-of-type");
+            //     if ($scrollTo.length) {
+            //         $("html, body").animate({
+            //             scrollTop: $scrollTo.offset().top,
+            //         });
+            //     }
+            // }, 500);
         }
     });
 
