@@ -77,6 +77,18 @@ if(isset($_POST['delete_news']) && isset($_POST['id_news'])){
 //delete keyword
 if(isset($_POST['delete_key']) && isset($_POST['id_key'])){
     $id_key = $_POST['id_key'];
+
+    $sql = "SELECT `id_tag` FROM `news_keyword` WHERE `id_tag` = '$id_key'";
+    $result = mysqli_query($conn,$sql);
+    if($result){
+        $row = mysqli_fetch_assoc($result);
+        while ($row) {
+            $news = $row['id_news'];
+            $sql = "DELETE FROM `news_keyword` WHERE `id_tag`= '$id_key'";
+            mysqli_query($conn,$sql);
+        }
+    }
+
     $sql = "DELETE FROM `keyword` WHERE `id`='$id_key'";
     $result =mysqli_query($conn,$sql);
     if($result == true)

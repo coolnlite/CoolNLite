@@ -2,6 +2,7 @@
     ob_start(); 
     session_start();
     require_once('./permision.php');
+    require_once('./function.php');
     require_once('../../config/config.php');
     require_once('../../config/dbhelper.php');
     
