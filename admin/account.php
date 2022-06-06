@@ -307,6 +307,34 @@
                 },
             });
 
+            // Xóa mẫu tin khách hàng
+            $(document).on('click', '.deleteBtn', function(event) {
+            var table = $('#example').DataTable();
+            event.preventDefault();
+            var id_users = $(this).data('id');
+                if (confirm("Bạn chắc chắc có muốn xóa tài khoản này")) {
+                $.ajax({
+                    url: '<?php echo ''.$DOMAIN.'modules/delete_data.php'?>',
+                    data: {
+                    delete_users : true,
+                    id_users: id_users
+                    },
+                    type: "post",
+                    success: function(data) {
+                    var json = JSON.parse(data);
+                    status = json.status;
+                    if (status == 'success') {
+                        $("#" + id_users).closest('tr').remove();
+                    } else {
+                        alert('Có lỗi gì đó');
+                        return;
+                    }
+                    }
+                });
+                } else {
+                return null;
+                }
+            })
 
         });
 

@@ -143,4 +143,37 @@ if(isset($_POST['delete_agency']) && isset($_POST['id_agency'])){
 
 }
 
+//delete users
+if(isset($_POST['delete_users']) && !empty($_POST['id_users'])){
+    $id_users = $_POST['id_users'];
+    $sql = "SELECT `image` FROM `users` WHERE `id` = '$id_users'";
+    $users = executeResult($sql);
+    foreach( $users as $us){
+        $image = $us['image'];
+        $link = '../..';
+        $file = $link.$image;
+        unlink($file);
+    }
+
+    $sql = "DELETE FROM `users` WHERE `id`= '$id_users'";
+    $result =mysqli_query($conn,$sql);
+    if($result == true)
+    {
+        $data = array(
+            'status'=>'success',
+        );
+
+        echo json_encode($data);
+    }
+    else
+    {
+        $data = array(
+            'status'=>'failed',
+        );
+
+        echo json_encode($data);
+    } 
+
+}
+
 ?>

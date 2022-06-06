@@ -73,7 +73,7 @@ if(isset($_POST['account']) && !empty($_POST['user_id']) && isset($_POST['permis
                 <i class="fas fa-trash-alt"></i>
                 </a>
                 <a title="Trạng thái" href="javascript:void();" data-id="'.$row['id'].'" data-toggle="modal" 
-                data-target="" class="btn btn-warning btn-sm editBtn"  >
+                data-target="#" class="btn btn-warning btn-sm"  >
                 <i class="fas fa-ban"></i>
                 </a>';
             }else{
