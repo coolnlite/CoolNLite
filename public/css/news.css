@@ -216,11 +216,11 @@ figure.box-img i {
 .btn-show{
   cursor: pointer;
   display: block;
-  margin-top: 4em;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   height: 48px;
-  width: 20%;
+  width: 200px;
   text-align: center;
   line-height: 44px;
   font-size: 1.6em;
@@ -280,6 +280,12 @@ figure.box-img i {
 
   .header .logo {
     max-width: 150px;
+  }
+  .btn-show{
+    margin-top: 2em;
+    height: 40px;
+    line-height: 36px;
+    font-size: 14px;
   }
 
 }
