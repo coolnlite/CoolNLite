@@ -4,7 +4,7 @@
     require_once('function.php');
 
 //View Danh sách người dùng
-if(isset($_POST['account']) && !empty($_POST['user_id']) && !empty($_POST['permission'])){
+if(isset($_POST['account']) && !empty($_POST['user_id']) && isset($_POST['permission'])){
     $user_id = $_POST['user_id'];
     $permission = $_POST['permission'];
     $output= array();
@@ -63,9 +63,7 @@ if(isset($_POST['account']) && !empty($_POST['user_id']) && !empty($_POST['permi
         $sub_array[] = '<img src="..'.$row['image'].'" alt="">';
         $sub_array[] = $row['status'] == 1 ? 'Đang hoạt động'  : 'Đang ngủ' ;
         $sub_array[] = facebook_time_ago($row['time']);
-        if($permission != 2){
-            
-        }else{
+        if($permission == 2){
             if($row['position'] == $permission){
                 $sub_array[] = '';
             }
@@ -75,7 +73,7 @@ if(isset($_POST['account']) && !empty($_POST['user_id']) && !empty($_POST['permi
                 <i class="fas fa-trash-alt"></i>
                 </a>
                 <a title="Trạng thái" href="javascript:void();" data-id="'.$row['id'].'" data-toggle="modal" 
-                data-target="#editAgency" class="btn btn-warning btn-sm editBtn"  >
+                data-target="" class="btn btn-warning btn-sm editBtn"  >
                 <i class="fas fa-ban"></i>
                 </a>';
             }else{
