@@ -423,7 +423,7 @@ if(
 
 if(
     !empty($_POST['user_name']) && !empty($_POST['email'])
-     && !empty($_POST['pass_word']) && !empty($_POST['position']) && !empty($_POST['full_name'])
+     && !empty($_POST['pass_word'])  && !empty($_POST['position']) && !empty($_POST['full_name'])
      && !empty($_FILES['image']) && !empty($_POST['status'])
 )
 {

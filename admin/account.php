@@ -140,26 +140,67 @@
                 })
             });  
 
-            $("#feditUsers").on('submit', function(e){
-                e.preventDefault();
-                    $.ajax({
-                    type: 'POST',
-                    url: '<?php print $DOMAIN.'modules/edit_data.php'?>',
-                    data: new FormData(this),
+            // cập nhật thông tin
+            $("#feditUsers").validate({
+                rules: {
+                user_name: {
+                    required: true,
+                    maxlength : 30,
+                    nowhitespace : true,
+                    remote: "<?php print $DOMAIN.'modules/check_input.php'?>",
+                },
+                email: {
+                    required: true,
+                    email: true,
+                    maxlength : 50,
+                    remote: "<?php print $DOMAIN.'modules/check_input.php'?>",
+                },
+                full_name: {
+                    required: true,
+                    maxlength : 30
+                },
+                },
+                messages: {
+
+                user_name: {
+                    required: "Vui lòng nhập tên tài khoản",
+                    maxlength : "Vui lòng nhập không quá 30 ký tự",
+                    nowhitespace : "Vui lòng không nhập khoảng trắng",
+                    remote: $.validator.format("{0} đã tồn tại"),
+                },
+                email: {
+                    required: "Vui lòng nhập email",
+                    email: "Vui lòng nhập đúng định dạnh email",
+                    maxlength : "Vui lòng nhập không quá 50 ký tự",
+                    remote: $.validator.format("{0} đã được đăng ký"),
+                },
+                
+                full_name: {
+                    required: "Vui lòng nhập tên người dùng",
+                    maxlength : "Vui lòng nhập không quá 30 ký tự"
+                },
+
+                },
+                submitHandler: function (form) {
+                $.ajax({
+                    type: "POST",
+                    url: "<?php print $DOMAIN.'modules/edit_data.php'?>",
+                    data: new FormData(form),
                     dataType : 'json',
                     contentType: false,
                     cache: false,
                     processData:false,
-                    success: function(response){ 
+                    success: function (response) {
                         if(response.status == 1){
                             alert(response.message);
                             window.location.reload();
                         }else{
                             alert(response.message);
                         }
-                    }
-                })
-            });  
+                    },
+                });
+                },
+            });
 
             $.validator.addMethod("pwcheck", function(value) {
                 return /^[A-Za-z0-9\d=!\-@._*]*$/.test(value) // consists of only these
