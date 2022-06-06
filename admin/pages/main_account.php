@@ -190,7 +190,7 @@
         </button>
       </div>
       <div class="modal-body">
-      <form class="needs-validation" novalidate>
+      <form id="fAddUsers" class="needs-validation" novali date>
 
       <div class="form-group">
       <label for="user_name">Tên tài khoản :</label>
@@ -213,11 +213,11 @@
 
       <div class="form-group">
         <label for="">Phân quyền người dùng :</label>
-        <select class="custom-select" title="Chọn quyền" required>
+        <select class="custom-select" name="position[]" title="Chọn quyền" required>
         <option value="">Chọn quyền...</option>
-            <option value="0" name="position">CRM</option>
-            <option value="1" name="position">SEO & POSTS</option>
-            <option value="2" name="position">Administrator</option>
+            <option value="0" >CRM</option>
+            <option value="1" >SEO & POSTS</option>
+            <option value="2" >Administrator</option>
         </select>
         <div class="invalid-feedback">Vui lòng thiết lập quyền tài khoản</div>
   </div>
@@ -243,13 +243,11 @@
         <input type="radio" class="custom-control-input" id="customControlValidation3"
          name="status" value="0" required>
         <label class="custom-control-label" for="customControlValidation3">Ngủ</label>
-        <div class="invalid-feedback">Vui lòng chọn trạng thái tài khoản</div>
         </div>
         <div class="custom-control custom-radio custom-control-inline">
         <input type="radio" class="custom-control-input" id="customControlValidation3"
          name="status" value="1" required>
         <label class="custom-control-label" for="customControlValidation3">Hoạt động</label>
-        <div class="invalid-feedback">Vui lòng chọn trạng thái tài khoản</div>
         </div>
       </div>
       <div class="d-flex justify-content-center">
