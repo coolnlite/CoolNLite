@@ -274,8 +274,26 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body" id="bodyChange">
-      
+      <div class="modal-body">
+      <form id="fchangeUsers" class="needs-validation">
+      <input type="hidden" class="form-control" value="" >
+        <div class="form-group">
+            <label for="">Trạng thái tài khoản :</label>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" 
+                id="customControlValidation3" value="0" name="status" required>
+                <label class="custom-control-label" for="customControlValidation3">Ngủ</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" 
+                id="customControlValidation3" value="1" name="status" required>
+                <label class="custom-control-label" for="customControlValidation3">Hoạt động</label>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary text-left">Cập nhật</button>
+        </div>
+      </form>
       </div>
       </div>
     </div>

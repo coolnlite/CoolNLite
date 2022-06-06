@@ -347,7 +347,7 @@
                         },
                         type: "post",
                         success: function(data) {
-                            $('#bodyChange').html(data);
+                            $('#fchangeUsers').html(data);
                         }
                     });
                 })
