@@ -114,7 +114,7 @@
             },
             "aoColumnDefs": [{
                 "bSortable": false,
-                "aTargets": [7]
+                "aTargets": [<?php $permission ? print 8 : print 7?>]
                 },
 
             ]
