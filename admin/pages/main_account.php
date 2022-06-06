@@ -239,17 +239,25 @@
 
      <div class="form-group">
         <label for="">Trạng thái tài khoản :</label>
-        <div class="custom-control custom-switch">
-            <input type="checkbox" name="status" class="custom-control-input" id="customSwitch1">
-            <label class="custom-control-label" for="customSwitch1">Hiện</label>
+        <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="customControlValidation3"
+         name="status" value="0" required>
+        <label class="custom-control-label" for="customControlValidation3">Ngủ</label>
+        <div class="invalid-feedback">Vui lòng chọn trạng thái tài khoản</div>
         </div>
-    </div>
-
-        <div class="d-flex justify-content-center">
+        <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="customControlValidation3"
+         name="status" value="1" required>
+        <label class="custom-control-label" for="customControlValidation3">Hoạt động</label>
+        <div class="invalid-feedback">Vui lòng chọn trạng thái tài khoản</div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
             <button type="submit" class="btn btn-primary text-left">Cập nhật</button>
         </div>
 
         </form>
+    </div>
       </div>
     </div>
   </div>
