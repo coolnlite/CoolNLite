@@ -486,7 +486,7 @@ textarea {
     background-color: var(--color-blue);
     transition: 0.3s;
 }
-.list-menu .items-menu .link-menu.hovered{
+.list-menu .items-menu .link-menu.hovered::before{
     position: absolute;
     bottom : 5px;
     left: 0;

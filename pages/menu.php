@@ -15,8 +15,7 @@
                  foreach($menu as $mn){
                 ?>
                 <li class="items-menu">
-                    <a class="link-menu <?php $mn['url'] == $curPageName ? print "hovered" : print '' ?>" 
-                    href="<?php echo ''.$mn['url'].''?>" title="<?php echo ''.$mn['name'].''?>">
+                    <a class="link-menu <?php $mn['url'] == $curPageName ? print "hovered" : print '' ?>" href="<?php echo ''.$mn['url'].''?>" title="<?php echo ''.$mn['name'].''?>">
                     <?php echo ''.$mn['name'].''?>
                   </a>
                 </li>
@@ -51,19 +50,19 @@
             </div>
         </div>
         <ul class="list-menu">
-
+        <?php
+          $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
+        ?>
         <li class="items-menu">
-            <a class="link-menu" href="./index.php">Home</a>
+            <a class="link-menu <?php $curPageName == 'index.php' ? print "hovered" : print '' ?>" href="./">Home</a>
         </li>
         <?php
-            $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
             $sql = "SELECT * FROM `menu` ORDER BY `position` ASC";
             $menu = executeResult($sql);
             foreach($menu as $mn){
         ?>
             <li class="items-menu">
-                <a class="link-menu <?php $mn['url'] == $curPageName ? print "hovered" : print '' ?>" 
-                href="<?php echo ''.$mn['url'].''?>"><?php echo ''.$mn['name'].''?></a>
+                <a class="link-menu <?php $mn['url'] == $curPageName ? print "hovered" : print '' ?>" href="<?php echo ''.$mn['url'].''?>"><?php echo ''.$mn['name'].''?></a>
             </li>
         <?php } ?>
         </ul>
