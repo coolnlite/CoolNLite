@@ -195,7 +195,7 @@
       <div class="form-group">
       <label for="user_name">Tên tài khoản :</label>
       <input type="text" class="form-control" name="user_name" 
-      placeholder="Nhập tên tài khoản" maxlength="30" required>
+      placeholder="Nhập tên tài khoản" required>
       </div>
 
       <div class="form-group">
@@ -238,15 +238,13 @@
 
      <div class="form-group">
         <label for="">Trạng thái tài khoản :</label>
-        <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" class="custom-control-input" id="customControlValidation3"
-         name="status" value="0" required>
-        <label class="custom-control-label" for="customControlValidation3">Ngủ</label>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="customControlValidation1" name="status" required>
+          <label class="custom-control-label" for="customControlValidation1">Ngủ</label>
         </div>
-        <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" class="custom-control-input" id="customControlValidation3"
-         name="status" value="1" required>
-        <label class="custom-control-label" for="customControlValidation3">Hoạt động</label>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="customControlValidation2" name="status" required>
+          <label class="custom-control-label" for="customControlValidation2">Hoạt động</label>
         </div>
       </div>
       <div class="d-flex justify-content-center">

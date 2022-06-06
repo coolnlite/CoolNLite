@@ -41,6 +41,16 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.6.0/jszip-2.5.0/dt-1.12.1/b-2.2.3/b-colvis-2.2.3/b-html5-2.2.3/b-print-2.2.3/datatables.min.css"/>
 
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        input.error,select.error {
+            border: 1px solid red;
+        }
+        label.error{
+            color: red;
+            font-size: 15px;
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -229,7 +239,7 @@
                     required: "Vui lòng nhập ảnh đại diện",
                 },
                 status : {
-                    required: "Vui lòng nhập trạng thái tài khoản",
+                    required: "Vui lòng chọn trạng trái",
                 }
 
                 },
