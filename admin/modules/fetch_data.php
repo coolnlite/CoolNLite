@@ -67,6 +67,7 @@ if(isset($_POST['account']) && !empty($_POST['user_id']) && !empty($_POST['permi
         if($permission != 2){
 
         }else{
+            $sub_array[] = '';
             if($row['id'] != $user_id){
                 $sub_array[] = '<a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  
                 class="btn btn-danger btn-sm deleteBtn" >
