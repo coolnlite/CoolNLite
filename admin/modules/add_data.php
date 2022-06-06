@@ -422,12 +422,12 @@ if(
 //Thêm tài khoản mới
 
 if(
-    !empty($_POST['user_name']) && !empty($_POST['email'])
-     && !empty($_POST['pass_word'])  && !empty($_POST['position']) && !empty($_POST['full_name'])
-     && !empty($_FILES['image']) && !empty($_POST['status'])
+    isset($_POST['user_name']) && isset($_POST['email'])
+     && isset($_POST['pass_word'])  && isset($_POST['position']) && isset($_POST['full_name'])
+     && !empty($_FILES['image']) && isset($_POST['status'])
 )
 {
-    var_dump($_POST,$_FILES);
+
  /* Nhận tên file */
  $filename = $_FILES['image']['name'];
  /* Nhận kích thước file */
@@ -493,13 +493,14 @@ if(
         $pass_word = md5($pass_word);
 
         $position = mysqli_real_escape_string($conn, $_POST['position']);
+        $tk = getToken(30);
         $full_name = mysqli_real_escape_string($conn, $_POST['full_name']);
         $status = mysqli_real_escape_string($conn, $_POST['status']);
         $time = date('Y-m-d H:i:s');
 
-        $sql = "INSERT INTO `users` (`user_name`, `email`, `pass_word`, `position`
+        $sql = "INSERT INTO `users` (`user_name`, `email`, `pass_word`, `position`,`token`
         , `full_name`, `image`, `status`, `time`) 
-        VALUES ('$user_name',' $email','$pass_word','$position','$full_name','$image','$status','$time')";
+        VALUES ('$user_name',' $email','$pass_word','$position','$tk','$full_name','$image','$status','$time')";
         $result = mysqli_query($conn,$sql);
 
         if($result){
