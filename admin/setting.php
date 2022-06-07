@@ -228,20 +228,41 @@
               $.ajax({
               type: 'POST',
               url: '<?php print $DOMAIN.'modules/add_data.php'?>',
-              data: new FormData(this),
-              dataType : 'json',
+              data: $(this).serializeArray(),
               success: function(response){
-                console.log(response);
-                  // if(response.status == 1){
-                  //     alert(response.message);
-                  //     window.location.reload();
-                  // }else{
-                  //     alert(response.message);
-                  // }
+                var response = JSON.parse(response);
+
+                  if(response.status == 1){
+                      alert(response.message);
+                      window.location.reload();
+                  }else{
+                      alert(response.message);
+                  }
                   
               }
           })
       });
+
+      $("#faddSidebar").on('submit', function(e){
+          e.preventDefault();
+              $.ajax({
+              type: 'POST',
+              url: '<?php print $DOMAIN.'modules/add_data.php'?>',
+              data: $(this).serializeArray(),
+              success: function(response){
+                var response = JSON.parse(response);
+
+                  if(response.status == 1){
+                      alert(response.message);
+                      window.location.reload();
+                  }else{
+                      alert(response.message);
+                  }
+                  
+              }
+          })
+      });
+
 
     });
     
