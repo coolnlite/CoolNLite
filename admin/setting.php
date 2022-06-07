@@ -52,6 +52,78 @@
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.6.0/jszip-2.5.0/dt-1.12.1/b-2.2.3/b-colvis-2.2.3/b-html5-2.2.3/b-print-2.2.3/datatables.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+      $('#menu').DataTable({
+        "fnCreatedRow": function(nRow, aData, iDataIndex) {
+          $(nRow).attr('id', aData[0]);
+        },
+        language: {
+            lengthMenu: 'Hiện _MENU_ mẫu tin trên trang',
+            zeroRecords: 'Không tìm thấy mẫu tin nào',
+            info: 'Hiện trang _PAGE_ trên _PAGES_ trang',
+            infoEmpty: 'Không có mẫu tin nào',
+            infoFiltered:'',
+            search : "Tìm kiếm:",
+            paginate: {
+                next:       ">>",
+                previous:   "<<"
+              },
+        },
+        'serverSide': 'true',
+        'processing': 'true',
+        'paging': 'true',
+        'order': [],
+        'ajax': {
+          'url': '<?php echo ''.$DOMAIN.'modules/fetch_data.php'?>',
+          'data': {
+            news : true
+          },
+            
+          'type': 'post',
+        },
+        "aoColumnDefs": [{
+            "bSortable": false,
+            "aTargets": [6]
+          },
+
+        ]
+      });
+
+      // Xóa mẫu tin khách hàng
+      $(document).on('click', '.deleteBtn', function(event) {
+      var table = $('#example').DataTable();
+      event.preventDefault();
+      var id_news = $(this).data('id');
+        if (confirm("Bạn chắc chắc có muốn xóa mẫu tin này")) {
+          $.ajax({
+            url: '<?php echo ''.$DOMAIN.'modules/delete_data.php'?>',
+            data: {
+              delete_news : true,
+              id_news: id_news
+            },
+            type: "post",
+            success: function(data) {
+              var json = JSON.parse(data);
+              status = json.status;
+              if (status == 'success') {
+                $("#" + id_news).closest('tr').remove();
+              } else {
+                alert('Có lỗi gì đó');
+                return;
+              }
+            }
+          });
+        } else {
+          return null;
+        }
+      })
+
+    });
+    
+  </script>
+
 </body>
 
 </html>

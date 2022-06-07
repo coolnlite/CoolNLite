@@ -9,7 +9,7 @@
       </div>
         <div class="row">
           <div class="col-xl-12">
-            <table id="example" class="table table-striped table-bordered" style="width: 100%;">
+            <table id="menu" class="table table-striped table-bordered" style="width: 100%;">
               <thead>
                 <th>Id</th>
                 <th>Tên</th>
@@ -32,7 +32,7 @@
         </div>
           <div class="row">
             <div class="col-xl-12">
-              <table id="example" class="table table-striped table-bordered" style="width: 100%;">
+              <table id="footer" class="table table-striped table-bordered" style="width: 100%;">
                 <thead>
                   <th>Id</th>
                   <th>Copyright</th>
@@ -58,7 +58,7 @@
         </div>
           <div class="row">
             <div class="col-xl-12">
-              <table id="example" class="table table-striped table-bordered" style="width: 100%;">
+              <table id="sidebar" class="table table-striped table-bordered" style="width: 100%;">
                 <thead>
                 <th>Id</th>
                 <th>Đường dẫn</th>
