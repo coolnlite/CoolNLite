@@ -38,6 +38,7 @@ searchInpModels.addEventListener("keyup", () => {
 
 selectBtnModels.addEventListener("click", () => wrapperModels.classList.toggle("active"));
 
+
 //ẨN HIÊN FORM KHU VỰC
 
 const wrapperArea = document.querySelector(".dropdown.area"),
