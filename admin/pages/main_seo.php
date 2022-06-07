@@ -109,16 +109,16 @@
                 
                 <div class="form-group">
                 <label for="description-tw">Mô tả twitter:</label>
-                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description-tw" class="text-danger">250</span> ký tự</span>
-                <input type="text" maxlength="250" class="form-control" id="description-tw" name="description-tw" 
-                placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description-tw')" 
-                onkeydown="limit(this,250,'#n-description-tw')" required>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-description-tw" class="text-danger">250</span> ký tự</span>
+                <input type="text" maxlength="250" class="form-control" name="description-tw" 
+                placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#home-description-tw')" 
+                onkeydown="limit(this,250,'#home-description-tw')" required>
                 <div class="invalid-feedback">Vui lòng nhập mô tả cho bài viết</div>
                 </div>
                 
                 <div class="form-group">
                 <label for="img-tw">Ảnh đại diện twitter:</label>
-                <input type="file" class="form-control" name="img-tw" id="img-tw" required>
+                <input type="file" class="form-control" name="img-tw" required>
                 <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
                 </div>
 
