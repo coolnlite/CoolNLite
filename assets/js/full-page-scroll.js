@@ -18,7 +18,7 @@
 		 * Sections divclass
 		 * @type {Array}
 		 */
-		var sections = main.getElementsByTagName('section');
+		var sections = main.getElementsByClass('section');
 		
 		/**
 		 * Full page scroll configurations

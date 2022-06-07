@@ -310,6 +310,7 @@
     <script type="text/javascript">
       new fullScroll({
         mainElement: "main",
+        sections : '.section',
         displayDots: true,
         dotsPosition: "left",
         animateTime: 0.7,
