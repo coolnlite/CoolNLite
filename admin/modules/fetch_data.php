@@ -621,7 +621,7 @@ if(isset($_POST['sidebar'])){
     }
     else
     {
-        $sql .= " ORDER BY `id` desc";
+        $sql .= " ORDER BY `position` asc";
     }
 
     if($_POST['length'] != -1)
