@@ -1,6 +1,6 @@
 <div class="topbar">
     <div class="toggle">
-        <ion-icon name="menu-outline"></ion-icon>
+        <i class="fas fa-bars"></i>
     </div>
 
     <div class="search">
