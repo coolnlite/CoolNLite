@@ -1673,9 +1673,8 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
 
         //Chỉnh sửa seo về từ khóa
 if(!empty($_POST['id_pages_tag']) && !empty($_POST['description']) && !empty($_POST['keyword']) 
-&& !empty($_POST['link_fb']) && isset($_POST['img_fb_old']) && !empty($_POST['title_fb']) &&
- !empty($_POST['description_fb']) && !empty($_POST['keyword_fb']) && !empty($_POST['title_tw']) 
- && !empty($_POST['description_tw']) && isset($_POST['img_tw_old'])){
+&& !empty($_POST['link_fb']) && isset($_POST['img_fb_old']) && !empty($_POST['description_fb'])
+&& !empty($_POST['description_tw']) && isset($_POST['img_tw_old'])){
     
     $id_pages = mysqli_real_escape_string($conn, $_POST['id_pages_tag']);
 
@@ -1825,16 +1824,13 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
         $description = mysqli_real_escape_string($conn, $_POST['description']);
         $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
         $link_fb = mysqli_real_escape_string($conn, $_POST['link_fb']);
-        $title_fb = mysqli_real_escape_string($conn, $_POST['title_fb']);
         $description_fb = mysqli_real_escape_string($conn, $_POST['description_fb']);
         $keyword_fb = mysqli_real_escape_string($conn, $_POST['keyword_fb']);
-        $title_tw = mysqli_real_escape_string($conn, $_POST['title_tw']);
         $description_tw = mysqli_real_escape_string($conn, $_POST['description_tw']);
 
-        $sql = "UPDATE `seo_pages` SET `title` = '$title', `description` = '$description',
-        `keyword` = '$keyword',`link_fb` = '$link_fb', `title_fb` = '$title_fb', 
-        `description_fb` = '$description_fb',`keyword_fb` = '$keyword_fb',
-        `title_tw` = '$title_tw',`description_tw` = '$description_tw'
+        $sql = "UPDATE `seo_pages` SET `description` = '$description',
+        `keyword` = '$keyword',`link_fb` = '$link_fb',`description_fb` = '$description_fb',
+        `keyword_fb` = '$keyword_fb',`description_tw` = '$description_tw'
         WHERE `id` = $id_pages";
 
         $result = mysqli_query($conn,$sql);
@@ -1856,9 +1852,8 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
 
     //Chỉnh sửa từ khóa search
     if(!empty($_POST['id_pages_search']) && !empty($_POST['description']) && !empty($_POST['keyword']) 
-&& !empty($_POST['link_fb']) && isset($_POST['img_fb_old']) && !empty($_POST['title_fb']) &&
- !empty($_POST['description_fb']) && !empty($_POST['keyword_fb']) && !empty($_POST['title_tw']) 
- && !empty($_POST['description_tw']) && isset($_POST['img_tw_old'])){
+&& !empty($_POST['link_fb']) && isset($_POST['img_fb_old']) && !empty($_POST['description_fb']) &&
+ !empty($_POST['keyword_fb']) && !empty($_POST['description_tw']) && isset($_POST['img_tw_old'])){
     
     $id_pages = mysqli_real_escape_string($conn, $_POST['id_pages_search']);
 
@@ -2008,16 +2003,13 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
         $description = mysqli_real_escape_string($conn, $_POST['description']);
         $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
         $link_fb = mysqli_real_escape_string($conn, $_POST['link_fb']);
-        $title_fb = mysqli_real_escape_string($conn, $_POST['title_fb']);
         $description_fb = mysqli_real_escape_string($conn, $_POST['description_fb']);
         $keyword_fb = mysqli_real_escape_string($conn, $_POST['keyword_fb']);
-        $title_tw = mysqli_real_escape_string($conn, $_POST['title_tw']);
         $description_tw = mysqli_real_escape_string($conn, $_POST['description_tw']);
 
         $sql = "UPDATE `seo_pages` SET `description` = '$description',
-        `keyword` = '$keyword',`link_fb` = '$link_fb', `title_fb` = '$title_fb', 
-        `description_fb` = '$description_fb',`keyword_fb` = '$keyword_fb',
-        `title_tw` = '$title_tw',`description_tw` = '$description_tw'
+        `keyword` = '$keyword',`link_fb` = '$link_fb',`description_fb` = '$description_fb',
+        `keyword_fb` = '$keyword_fb',`description_tw` = '$description_tw'
         WHERE `id` = $id_pages";
 
         $result = mysqli_query($conn,$sql);
