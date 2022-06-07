@@ -68,13 +68,13 @@ if($_FILES['thumnail']['error'] > 0){
      exit();
  }
  //Kiểm tra xem kiểu file có hợp lệ hoặc dung lượng lớn không
- $validTypes = array("jpg","jpeg","png","bmp");
+ $validTypes = array("jpg","jpeg","png","bmp","gif");
  $fileType = substr($path,strrpos($path,".") + 1);
 
- if(!in_array($fileType,$validTypes) || $filesize > 2 * 1024 * 1024){
+ if(!in_array($fileType,$validTypes)){
     echo json_encode(array(
         'image' => 0,
-        'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp'
+        'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp, gif'
     ));
     exit();
 }
