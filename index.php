@@ -20,7 +20,6 @@
   <link rel="stylesheet" href="./public/css/slider.css">
   <!-- css -->
   <!-- one page scroll -->
-  
   <!-- one page scroll -->
   <title>COOL N LITE - Phim cách nhiệt</title>
 </head>
