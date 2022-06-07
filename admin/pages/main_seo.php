@@ -35,23 +35,23 @@
     ?>
   <form id="fedithome" class="needs-validation" enctype="multipart/form-data" novalidate>
 
-            <input type="hidden" class="form-control" value="" name="id_pages">
+            <input type="hidden" class="form-control" value="1" name="id_pages">
             <div class="form-group">
             <label for="title">Tiêu đề :</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-title" class="text-danger">100</span> ký tự</span>
             <input type="text" maxlength="100" class="form-control" name="title" 
-            placeholder="Nhập tiêu đề cho trang chủ" onkeyup="limit(this,100,'#home-title')" 
+            placeholder="Nhập tiêu đề" onkeyup="limit(this,100,'#home-title')" 
             onkeydown="limit(this,100,'#home-title')" value="<?php print $sp['title']?>" required>
-            <div class="invalid-feedback">Vui lòng nhập tiêu đề cho trang chủ</div>
+            <div class="invalid-feedback">Vui lòng nhập tiêu đề</div>
             </div>
 
             <div class="form-group">
             <label for="description">Mô tả:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-description" class="text-danger">250</span> ký tự</span>
             <input type="text" maxlength="250" class="form-control" name="description" 
-            placeholder="Nhập mô tả cho trang chủ" onkeyup="limit(this,250,'#home-description')" 
+            placeholder="Nhập mô tả" onkeyup="limit(this,250,'#home-description')" 
             onkeydown="limit(this,250,'#home-description')" value="<?php print $sp['description']?>" required>
-            <div class="invalid-feedback">Vui lòng nhập mô tả cho trang chủ</div>
+            <div class="invalid-feedback">Vui lòng nhập mô tả</div>
             </div>
             
             <div class="form-group">
@@ -60,7 +60,7 @@
             <input type="text" maxlength="100" class="form-control" name="keyword" 
             placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#home-keyword')" 
             onkeydown="limit(this,100,'#home-keyword')" value="<?php print $sp['keyword']?>" required>
-            <div class="invalid-feedback">Vui lòng nhập từ khóa cho trang chủ</div>
+            <div class="invalid-feedback">Vui lòng nhập từ khóa</div>
             </div>
             
             <div class="form-group">
@@ -76,7 +76,7 @@
             <label for="img-fb">Ảnh đại diện facebook:</label>
             <input type="file" class="form-control" name="img-fb" required>
             <input type="hidden" class="form-control" value="<?php print $sp['img_fb']?>" name="img_fb_old">
-            <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
+            <div class="invalid-feedback">Vui lòng nhập ảnh đại diện</div>
             <?php 
             if($sp['img_fb'] != ''){
             ?>
@@ -87,23 +87,24 @@
             <?php
               }
             ?>
+            </div>
             
             <div class="form-group">
             <label for="title-fb">Tiêu đề facebook:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-title-fb" class="text-danger">100</span> ký tự</span>
             <input type="text" maxlength="100" class="form-control" name="title_fb" 
-            placeholder="Nhập tiêu đề cho trang chủ" onkeyup="limit(this,100,'#home-title-fb')" 
+            placeholder="Nhập tiêu đề" onkeyup="limit(this,100,'#home-title-fb')" 
             onkeydown="limit(this,100,'#home-title-fb')" value="<?php print $sp['title_fb']?>" required>
-            <div class="invalid-feedback">Vui lòng nhập tiêu đề cho trang chủ</div>
+            <div class="invalid-feedback">Vui lòng nhập tiêu đề</div>
             </div>
             
             <div class="form-group">
             <label for="description-fb">Mô tả facebook:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-description-fb" class="text-danger">250</span> ký tự</span>
             <input type="text" maxlength="250" class="form-control" name="description_fb" 
-            placeholder="Nhập mô tả cho trang chủ" onkeyup="limit(this,250,'#home-description-fb')" 
+            placeholder="Nhập mô tả" onkeyup="limit(this,250,'#home-description-fb')" 
             onkeydown="limit(this,250,'#home-description-fb')" value="<?php print $sp['description_fb']?>" required>
-            <div class="invalid-feedback">Vui lòng nhập mô tả cho trang chủ</div>
+            <div class="invalid-feedback">Vui lòng nhập mô tả</div>
             </div>
             
             <div class="form-group">
@@ -112,32 +113,32 @@
             <input type="text" maxlength="100" class="form-control" name="keyword-fb" 
             placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#home-keyword-fb')" 
             onkeydown="limit(this,100,'#home-keyword-fb')" value="<?php print $sp['keyword_fb']?>" required>
-            <div class="invalid-feedback">Vui lòng nhập từ khóa cho trang chủ</div>
+            <div class="invalid-feedback">Vui lòng nhập từ khóa</div>
             </div>
 
             <div class="form-group">
             <label for="title-tw">Tiêu đề twitter:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-title-tw" class="text-danger">100</span> ký tự</span>
             <input type="text" maxlength="100" class="form-control" name="title_tw" 
-            placeholder="Nhập tiêu đề cho trang chủ" onkeyup="limit(this,100,'#home-title-tw')" 
+            placeholder="Nhập tiêu đề" onkeyup="limit(this,100,'#home-title-tw')" 
             onkeydown="limit(this,100,'#home-title-tw')" value="<?php print $sp['title_tw']?>" required>
-            <div class="invalid-feedback">Vui lòng nhập tiêu đề cho trang chủ</div>
+            <div class="invalid-feedback">Vui lòng nhập tiêu đề</div>
             </div>
             
             <div class="form-group">
             <label for="description-tw">Mô tả twitter:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-description-tw" class="text-danger">250</span> ký tự</span>
             <input type="text" maxlength="250" class="form-control" name="description_tw" 
-            placeholder="Nhập mô tả cho trang chủ" onkeyup="limit(this,250,'#home-description-tw')" 
+            placeholder="Nhập mô tả" onkeyup="limit(this,250,'#home-description-tw')" 
             onkeydown="limit(this,250,'#home-description-tw')" value="<?php print $sp['description_tw']?>" required>
-            <div class="invalid-feedback">Vui lòng nhập mô tả cho trang chủ</div>
+            <div class="invalid-feedback">Vui lòng nhập mô tả</div>
             </div>
             
             <div class="form-group">
             <label for="img-tw">Ảnh đại diện twitter:</label>
             <input type="file" class="form-control" name="img_tw" required>
             <input type="hidden" class="form-control" value="<?php print $sp['img_tw']?>" name="img_tw_old">
-            <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho trang chủ</div>
+            <div class="invalid-feedback">Vui lòng nhập ảnh đại diện</div>
             <?php 
             if($sp['img_tw'] != ''){
             ?>
@@ -150,7 +151,7 @@
             ?>
             </div>
 
-            <button type="submit" class="btn btn-primary">Thêm</button>
+            <button type="submit" class="btn btn-primary">Cập nhật</button>
         </form>
         <?php  
         }

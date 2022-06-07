@@ -12,7 +12,7 @@
         if(
             !empty($_POST['url']) && !empty($_POST['title']) 
              && !empty($_FILES['thumnail']) && !empty($_POST['description'])
-             && !empty($_POST['content']) && !empty($_POST['radio-stacked'] )
+             && !empty($_POST['content']) && isset($_POST['radio-stacked'] )
         )
         {
         $url = mysqli_real_escape_string($conn, $_POST['url']);
@@ -49,13 +49,13 @@
              exit();
          }
          //Kiểm tra xem kiểu file có hợp lệ hoặc dung lượng lớn không
-         $validTypes = array("jpg","jpeg","png","bmp");
+         $validTypes = array("jpg","jpeg","png","bmp","gif");
          $fileType = substr($path,strrpos($path,".") + 1);
 
          if(!in_array($fileType,$validTypes)){
             echo json_encode(array(
                 'status' => 0,
-                'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp'
+                'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp, gif'
             ));
             exit();
         }
@@ -331,7 +331,7 @@ if(!empty($_POST['id_news']) && !empty($_POST['title']) && !empty($_FILES['img-t
 }
 
 //Thêm đại lý
-//Thêm bài viết mới
+
 if(
     !empty($_FILES['img']) && !empty($_POST['name']) && !empty($_POST['address'])
      && !empty($_POST['phone'])

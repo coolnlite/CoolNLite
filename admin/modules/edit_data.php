@@ -27,10 +27,10 @@ if(isset($_POST['id_key']) && isset($_POST['name_key'])){
 //Chỉnh sửa bài viết
 if(
 
-   isset($_POST['id_news']) && isset($_POST['thumnail_old']) &&
-   isset($_POST['url']) && isset($_POST['title']) 
-   && isset($_FILES['thumnail']) && isset($_POST['description'])
-   && isset($_POST['content']) && isset($_POST['radio-stacked'] )
+   !empty($_POST['id_news']) && !empty($_POST['thumnail_old']) &&
+   !empty($_POST['url']) && !empty($_POST['title']) 
+   && isset($_FILES['thumnail']) && !empty($_POST['description'])
+   && !empty($_POST['content']) && isset($_POST['radio-stacked'] )
 )
 {
 $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
@@ -168,10 +168,10 @@ if(!empty($_FILES['img-fb'])){
  $size1 = $_FILES["img-fb"]['tmp_name'];
  list($width1, $height1) = getimagesize($size1);
 
- if($width1 > "1000" || $height1 > "1000") {
+ if($width1 > "2000" || $height1 > "2000") {
      echo json_encode(array(
          'status' => 0,
-         'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 1000px X 1000px'
+         'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 2000px X 2000px'
      ));
      exit();
  }
