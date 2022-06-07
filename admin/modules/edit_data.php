@@ -575,7 +575,6 @@ if(!empty($_POST['id_pages_home']) && !empty($_POST['title']) && !empty($_POST['
     
     $id_pages = mysqli_real_escape_string($conn, $_POST['id_pages_home']);
 
-    var_dump($_FILES,$_POST);
 if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
     /* Nhận tên file */
  $filename1 = $_FILES['img_fb']['name'];
@@ -648,11 +647,11 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
 }
     
 }
-if(!empty($_FILES['img-tw']) && $_FILES['img-tw'] == 0){
+if(!empty($_FILES['img_tw']) && $_FILES['img_tw'] == 0){
     /* Nhận tên file */
- $filename2 = $_FILES['img-tw']['name'];
+ $filename2 = $_FILES['img_tw']['name'];
  /* Nhận kích thước file */
- $filesize2 = $_FILES['img-tw']['size'];
+ $filesize2 = $_FILES['img_tw']['size'];
 
  /* Thêm tên file bằng timestamp*/
  $timestamp2 = time();
@@ -661,18 +660,18 @@ if(!empty($_FILES['img-tw']) && $_FILES['img-tw'] == 0){
  $path2 = $timestamp2.$filename2;
 
  /* Location */
- $uploadPath2 = "../../uploads/seo_news";
+ $uploadPath2 = "../../uploads/seo_pages";
 
- $tar_get2 = "/uploads/seo_news";
+ $tar_get2 = "/uploads/seo_pages";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
- $size2 = $_FILES["img-tw"]['tmp_name'];
+ $size2 = $_FILES["img_tw"]['tmp_name'];
  list($width2, $height2) = getimagesize($size2);
 
- if($width2 > "1000" || $height2 > "1000") {
+ if($width2 > "2000" || $height2 > "2000") {
      echo json_encode(array(
          'status' => 0,
-         'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 1000px X 1000px'
+         'message' => 'Vui lòng chọn ảnh có kích cỡ nhỏ hoặc bằng 2000px X 2000px'
      ));
      exit();
  }
@@ -680,7 +679,7 @@ if(!empty($_FILES['img-tw']) && $_FILES['img-tw'] == 0){
  $validTypes2 = array("jpg","jpeg","png","bmp");
  $fileType2 = substr($path2,strrpos($path2,".") + 1);
 
- if(!in_array($fileType2,$validTypes2) || $filesize2 > 2 * 1024 * 1024){
+ if(!in_array($fileType2,$validTypes2)){
     echo json_encode(array(
         'status' => 0,
         'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp'
