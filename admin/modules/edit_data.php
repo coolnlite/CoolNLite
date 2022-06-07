@@ -207,7 +207,7 @@ if(!empty($_FILES['img-fb'])){
  $resultFB = move_uploaded_file($_FILES['img-fb']['tmp_name'],$uploadPath1 . '/' .$path1);
  if($resultFB){
     $img_fb_old = $_POST['img-fb-old'];
-    $link_fb = '../';
+    $link_fb = '../..';
     $file_fb = $link_fb.$img_fb_old;
     unlink($file_fb);
 
@@ -276,7 +276,7 @@ if(!empty($_FILES['img-tw'])){
     $resultTW =  move_uploaded_file($_FILES['img-tw']['tmp_name'],$uploadPath2 . '/' .$path2);
     if($resultTW){
         $img_tw_old = $_POST['img-tw-old'];
-        $link_tw = '../';
+        $link_tw = '../..';
         $file_tw = $link_tw.$img_tw_old;
         unlink($file_tw);
 
@@ -608,7 +608,7 @@ if(!empty($_FILES['img_fb'])){
  $validTypes1 = array("jpg","jpeg","png","bmp");
  $fileType1 = substr($path1,strrpos($path1,".") + 1);
 
- if(!in_array($fileType1,$validTypes1) || $filesize1 > 2 * 1024 * 1024){
+ if(!in_array($fileType1,$validTypes1)){
     echo json_encode(array(
         'status' => 0,
         'message' => 'Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp'
@@ -633,15 +633,17 @@ if(!empty($_FILES['img_fb'])){
  }
  $path1 = $fileName1 . '.' . $fileType1;
 
- $resultFB = move_uploaded_file($_FILES['img-fb']['tmp_name'],$uploadPath1 . '/' .$path1);
+ $resultFB = move_uploaded_file($_FILES['img_fb']['tmp_name'],$uploadPath1 . '/' .$path1);
  if($resultFB){
-    $img_fb_old = $_POST['img-fb-old'];
-    $link_fb = '../';
-    $file_fb = $link_fb.$img_fb_old;
-    unlink($file_fb);
+    if($_POST['img-fb-old'] != ''){
+        $img_fb_old = $_POST['img-fb-old'];
+        $link_fb = '../..';
+        $file_fb = $link_fb.$img_fb_old;
+        unlink($file_fb);
+    }
 
     $img_fb =  $tar_get1 . '/' .$path1;
-    $sql = "UPDATE `seo_news` SET `img_fb` = '$img_fb' WHERE id = $id_tag AND id_news = $id_news";
+    $sql = "UPDATE `seo_pages` SET `img_fb` = '$img_fb' WHERE `id` = $id_pages";
     $result = mysqli_query($conn,$sql);
 }
     

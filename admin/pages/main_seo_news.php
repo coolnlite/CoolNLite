@@ -161,7 +161,7 @@
             <div class="form-group">
             <label for="img-fb">Ảnh đại diện facebook:</label><span class="text-danger ml-1">Ảnh có kích thước không quá (2000px X 2000px)</span>
             <input type="file" class="form-control" name="img-fb" id="img-fb">
-            <input type="hidden" class="form-control" value="<?php print '..'.$sn['img_fb']?>" name="img-fb-old" id="img-fb-old">
+            <input type="hidden" class="form-control" value="<?php print $sn['img_fb']?>" name="img-fb-old" id="img-fb-old">
             <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="<?php print '..'.$sn['img_fb']?>" alt="Image">
@@ -216,7 +216,7 @@
             <div class="form-group">
             <label for="img-tw">Ảnh đại diện twitter:</label>
             <input type="file" class="form-control" name="img-tw" id="img-tw">
-            <input type="hidden" class="form-control" value="<?php print '..'.$sn['img_tw']?>" name="img-tw-old" id="img--old">
+            <input type="hidden" class="form-control" value="<?php print $sn['img_tw']?>" name="img-tw-old" id="img--old">
             <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="<?php print '..'.$sn['img_tw']?>" alt="Image">
