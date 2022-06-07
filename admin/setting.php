@@ -193,6 +193,36 @@
         }
       })
 
+
+      $(document).on('click', '.deleteSidebar', function(event) {
+      var table = $('#sidebar').DataTable();
+      event.preventDefault();
+      var id_sidebar = $(this).data('id');
+        if (confirm("Bạn chắc chắc có muốn xóa mẫu tin này")) {
+          $.ajax({
+            url: '<?php echo ''.$DOMAIN.'modules/delete_data.php'?>',
+            data: {
+              delete_sidebar : true,
+              id_sidebar : id_sidebar
+            },
+            type: "post",
+            success: function(data) {
+              var json = JSON.parse(data);
+              status = json.status;
+              if (status == 'success') {
+                $("#" + id_menu).closest('tr').remove();
+              } else {
+                alert('Có lỗi gì đó');
+                return;
+              }
+            }
+          });
+        } else {
+          return null;
+        }
+      })
+
+
     });
     
   </script>
