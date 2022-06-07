@@ -74,7 +74,7 @@
 
             <div class="form-group">
             <label for="img-fb">Ảnh đại diện facebook:</label>
-            <input type="file" class="form-control" name="img-fb" required>
+            <input type="file" class="form-control" name="img_fb" required>
             <input type="hidden" class="form-control" value="<?php print $sp['img_fb']?>" name="img_fb_old">
             <div class="invalid-feedback">Vui lòng nhập ảnh đại diện</div>
             <?php 
@@ -110,7 +110,7 @@
             <div class="form-group">
             <label for="keyword-fb">Từ khóa facebook:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-keyword-fb" class="text-danger">100</span> ký tự</span>
-            <input type="text" maxlength="100" class="form-control" name="keyword-fb" 
+            <input type="text" maxlength="100" class="form-control" name="keyword_fb" 
             placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#home-keyword-fb')" 
             onkeydown="limit(this,100,'#home-keyword-fb')" value="<?php print $sp['keyword_fb']?>" required>
             <div class="invalid-feedback">Vui lòng nhập từ khóa</div>

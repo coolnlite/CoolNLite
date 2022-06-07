@@ -571,16 +571,16 @@ if
 if(!empty($_POST['id_pages_home']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['keyword']) 
 && !empty($_POST['link_fb']) && isset($_POST['img_fb_old']) && !empty($_POST['title_fb']) &&
  !empty($_POST['description_fb']) && !empty($_POST['keyword_fb']) && !empty($_POST['title_tw']) 
- && !empty($_POST['description_tw']) && !empty($_POST['description_tw'])){
+ && !empty($_POST['description_tw']) && isset($_POST['img_tw_old'])){
     
-    $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
+    $id_pages = mysqli_real_escape_string($conn, $_POST['id_pages_home']);
 
 
-if(!empty($_FILES['img-fb'])){
+if(!empty($_FILES['img_fb'])){
     /* Nhận tên file */
- $filename1 = $_FILES['img-fb']['name'];
+ $filename1 = $_FILES['img_fb']['name'];
  /* Nhận kích thước file */
- $filesize1 = $_FILES['img-fb']['size'];
+ $filesize1 = $_FILES['img_fb']['size'];
 
  /* Thêm tên file bằng timestamp*/
  $timestamp1 = time();
@@ -589,12 +589,12 @@ if(!empty($_FILES['img-fb'])){
  $path1 = $timestamp1.$filename1;
 
  /* Location */
- $uploadPath1 = "../../uploads/seo_news";
+ $uploadPath1 = "../../uploads/seo_pages";
 
- $tar_get1 = "/uploads/seo_news";
+ $tar_get1 = "/uploads/seo_pages";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
- $size1 = $_FILES["img-fb"]['tmp_name'];
+ $size1 = $_FILES["img_fb"]['tmp_name'];
  list($width1, $height1) = getimagesize($size1);
 
  if($width1 > "2000" || $height1 > "2000") {
