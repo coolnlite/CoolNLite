@@ -482,11 +482,12 @@ if(isset($_POST['menu'])){
         $sub_array[] = facebook_time_ago($row['time']);
         $sub_array[] = 
         '
-        <a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  class="btn btn-danger btn-sm deleteBtn" >
+        <a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  
+        class="btn btn-danger btn-sm deleteMenu" >
         <i class="fas fa-trash-alt"></i>
         </a>
         <a title="Sửa" data-toggle="modal" data-target="#editMenu" href="javascript:void();" data-id="'.$row['id'].'"
-        class="btn btn-warning btn-sm editBtn" >
+        class="btn btn-warning btn-sm editMenuBtn" >
         <i class="fas fa-user-edit"></i>
         </a>
         ';
@@ -569,8 +570,8 @@ if(isset($_POST['footer'])){
         $sub_array[] = facebook_time_ago($row['time']);
         $sub_array[] = 
         '
-        <a title="Sửa" data-toggle="modal" data-target="#editMenu" href="javascript:void();" data-id="'.$row['id'].'"
-        class="btn btn-warning btn-sm editBtn" >
+        <a title="Sửa" data-toggle="modal" data-target="#editFooter" href="javascript:void();" data-id="'.$row['id'].'"
+        class="btn btn-warning btn-sm editFooterBtn" >
         <i class="fas fa-user-edit"></i>
         </a>
         ';
@@ -649,8 +650,8 @@ if(isset($_POST['sidebar'])){
         <a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  class="btn btn-danger btn-sm deleteBtn" >
         <i class="fas fa-trash-alt"></i>
         </a>
-        <a title="Sửa" data-toggle="modal" data-target="#editMenu" href="javascript:void();" data-id="'.$row['id'].'"
-        class="btn btn-warning btn-sm editBtn" >
+        <a title="Sửa" data-toggle="modal" data-target="#editSidebar" href="javascript:void();" data-id="'.$row['id'].'"
+        class="btn btn-warning btn-sm editSidebarBtn" >
         <i class="fas fa-user-edit"></i>
         </a>
         ';
