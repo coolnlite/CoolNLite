@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2022 at 12:33 PM
+-- Generation Time: Jun 07, 2022 at 12:38 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -334,13 +334,6 @@ CREATE TABLE `seo_news` (
   `img_tw` varchar(150) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `seo_news`
---
-
-INSERT INTO `seo_news` (`id`, `id_news`, `title`, `description`, `keyword`, `link_fb`, `img_fb`, `title_fb`, `description_fb`, `keyword_fb`, `title_tw`, `description_tw`, `img_tw`) VALUES
-(9, 8, 'Thử nghiệm bài viết 1', 'ok 1', 'jjjj 1', 'https://www.facebook.com/coolnlitevnn', '/uploads/seo_news/4a84c47bab61123f97979034965bec59.jpg', 'hh gg', 'hh gg', 'hh ggg', 'hh gg', 'hh gg', '/uploads/seo_news/12bc107c726b857d8fe6d85d798789ff.png');
-
 -- --------------------------------------------------------
 
 --
@@ -367,13 +360,14 @@ CREATE TABLE `seo_pages` (
 --
 
 INSERT INTO `seo_pages` (`id`, `title`, `description`, `keyword`, `link_fb`, `img_fb`, `title_fb`, `description_fb`, `keyword_fb`, `title_tw`, `description_tw`, `img_tw`) VALUES
-(1, '', '', '', '', '', '', '', '', '', '', ''),
-(2, '', '', '', '', '', '', '', '', '', '', ''),
-(3, '', '', '', '', '', '', '', '', '', '', ''),
+(1, 'hh', 'hh', 'hh', 'hh', '/uploads/seo_pages/0fdaf7d00b9f8cefcdd95af3597863a6.png', 'hh', 'hh', 'hh', 'hh', 'hh', '/uploads/seo_pages/7f1c039bf163454dcb2910b79930f9d1.jpg'),
+(2, 'hh', 'hhh', 'hh', 'hhh', '/uploads/seo_pages/fb9c14ef21fc569556c81cb96420225c.jpg', 'hh', 'hh', 'hh', 'hh', 'hh', '/uploads/seo_pages/ef4559abe33feb676b94159bd8da45ed.jpg'),
+(3, 'hh', 'hh', 'hh', 'hh', '/uploads/seo_pages/ec3850e9690686d866dcb9aec8033b87.jpg', 'hh', 'hh', 'hh', 'hh', 'hh', '/uploads/seo_pages/39aab874057072424a5163dacf435208.jpg'),
 (4, '', '', '', '', '', '', '', '', '', '', ''),
 (5, '', '', '', '', '', '', '', '', '', '', ''),
 (6, '', '', '', '', '', '', '', '', '', '', ''),
-(7, '', '', '', '', '', '', '', '', '', '', '');
+(7, '', '', '', '', '', '', '', '', '', '', ''),
+(8, '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -428,7 +422,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user_name`, `email`, `pass_word`, `position`, `token`, `full_name`, `image`, `status`, `time`) VALUES
-(1, 'thaisaone', 'vodongthai68@gmail.com', 'f2db2c94d7f2554ccda9edd32ae2bef5', 2, 'AmZAW9mDlgJDVpXTBuE6bmwIYJ2NRd', 'Võ Đông Thái', '/uploads/users/1d7f3558b481ac55f57c60f3c03321ef.jpg', 1, '2022-05-19 10:13:12'),
+(1, 'thaisaone', 'vodongthai68@gmail.com', 'f2db2c94d7f2554ccda9edd32ae2bef5', 2, 'xhC1A0BtJ9x6L8ldZrLLEOVRnYX0up', 'Võ Đông Thái', '/uploads/users/1d7f3558b481ac55f57c60f3c03321ef.jpg', 1, '2022-05-19 10:13:12'),
 (26, 'crm', ' mtauto.marketing@gmail.com', '09e74116393bb3557a6aaa6427d3f281', 0, 'CYyqLtXAXGFhB3YnuGEokWLJSJZkGD', '68 Workshop', '/uploads/users/b5b5931df030f32e7496b2cf5f799b9a.jpg', 1, '2022-06-06 13:49:01'),
 (27, 'posts', ' mtgroup259@gmail.com', '09e74116393bb3557a6aaa6427d3f281', 1, 'ug8rexasGyu7n8Vi1gMbethNkCGVIG', 'Anh', '/uploads/users/1eac1adb34a6561f00933a954f508766.jpg', 1, '2022-06-06 14:13:41'),
 (28, 'dungdeptrai', ' vodongthais1@gmail.com', '09e74116393bb3557a6aaa6427d3f281', 2, '7qUBaRyaFPBQUIJuoDlTf5MIX2ROPn', 'Dung Thông II', '/uploads/users/6fb814a1c9f8767b96a2f72aa3133174.jpg', 1, '2022-06-06 14:15:54');
@@ -570,7 +564,7 @@ ALTER TABLE `seo_news`
 -- AUTO_INCREMENT for table `seo_pages`
 --
 ALTER TABLE `seo_pages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `sidebar`
