@@ -1,7 +1,10 @@
 <div class="container-fluid">
-  
     <div class="row">
       <div style="width: 94%; margin : 0 auto">
+      <div class="d-flex justify-content-between align-items-center pb-3">
+        <span class="text-center h5">MENU</span>
+        <button type="button" class="btn btn-outline-success">Thêm menu</button>
+      </div>
         <div class="row">
           <div class="col-xl-12">
             <table id="example" class="table table-striped table-bordered" style="width: 100%;">
