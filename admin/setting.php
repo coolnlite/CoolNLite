@@ -78,7 +78,79 @@
         'ajax': {
           'url': '<?php echo ''.$DOMAIN.'modules/fetch_data.php'?>',
           'data': {
-            news : true
+            menu : true
+          },
+            
+          'type': 'post',
+        },
+        "aoColumnDefs": [{
+            "bSortable": false,
+            "aTargets": [5]
+          },
+
+        ]
+      });
+
+      $('#footer').DataTable({
+        "fnCreatedRow": function(nRow, aData, iDataIndex) {
+          $(nRow).attr('id', aData[0]);
+        },
+        language: {
+            lengthMenu: 'Hiện _MENU_ mẫu tin trên trang',
+            zeroRecords: 'Không tìm thấy mẫu tin nào',
+            info: 'Hiện trang _PAGE_ trên _PAGES_ trang',
+            infoEmpty: 'Không có mẫu tin nào',
+            infoFiltered:'',
+            search : "Tìm kiếm:",
+            paginate: {
+                next:       ">>",
+                previous:   "<<"
+              },
+        },
+        'serverSide': 'true',
+        'processing': 'true',
+        'paging': 'true',
+        'order': [],
+        'ajax': {
+          'url': '<?php echo ''.$DOMAIN.'modules/fetch_data.php'?>',
+          'data': {
+            footer : true
+          },
+            
+          'type': 'post',
+        },
+        "aoColumnDefs": [{
+            "bSortable": false,
+            "aTargets": [8]
+          },
+
+        ]
+      });
+
+      $('#sidebar').DataTable({
+        "fnCreatedRow": function(nRow, aData, iDataIndex) {
+          $(nRow).attr('id', aData[0]);
+        },
+        language: {
+            lengthMenu: 'Hiện _MENU_ mẫu tin trên trang',
+            zeroRecords: 'Không tìm thấy mẫu tin nào',
+            info: 'Hiện trang _PAGE_ trên _PAGES_ trang',
+            infoEmpty: 'Không có mẫu tin nào',
+            infoFiltered:'',
+            search : "Tìm kiếm:",
+            paginate: {
+                next:       ">>",
+                previous:   "<<"
+              },
+        },
+        'serverSide': 'true',
+        'processing': 'true',
+        'paging': 'true',
+        'order': [],
+        'ajax': {
+          'url': '<?php echo ''.$DOMAIN.'modules/fetch_data.php'?>',
+          'data': {
+            sidebar : true
           },
             
           'type': 'post',
@@ -90,6 +162,7 @@
 
         ]
       });
+
 
       // Xóa mẫu tin khách hàng
       $(document).on('click', '.deleteBtn', function(event) {
