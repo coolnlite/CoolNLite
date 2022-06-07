@@ -647,7 +647,8 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
 }
     
 }
-if(!empty($_FILES['img_tw']) && $_FILES['img_tw'] == 0){
+if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
+    var_dump($_FILES['img_tw']);
     /* Nhận tên file */
  $filename2 = $_FILES['img_tw']['name'];
  /* Nhận kích thước file */
@@ -728,7 +729,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw'] == 0){
         $title_tw = mysqli_real_escape_string($conn, $_POST['title_tw']);
         $description_tw = mysqli_real_escape_string($conn, $_POST['description_tw']);
 
-        $sql = "UPDATE `seo_news` SET `title` = '$title', `description` = '$description',
+        $sql = "UPDATE `seo_pages` SET `title` = '$title', `description` = '$description',
         `keyword` = '$keyword',`link_fb` = '$link_fb', `title_fb` = '$title_fb', 
         `description_fb` = '$description_fb',`keyword_fb` = '$keyword_fb',
         `title_tw` = '$title_tw',`description_tw` = '$description_tw'
