@@ -648,7 +648,6 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
     
 }
 if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
-    var_dump($_FILES['img_tw']);
     /* Nhận tên file */
  $filename2 = $_FILES['img_tw']['name'];
  /* Nhận kích thước file */
