@@ -568,10 +568,10 @@ if
 }
 
 //Chỉnh sửa seo home
-if(!empty($_POST['id_pages_home']) && !empty($_POST['title']) && !empty($_POST['img-tw-old']) &&
-!empty($_POST['description']) && !empty($_POST['keyword']) && !empty($_POST['link-fb']) &&
-!empty($_POST['img-fb-old']) && !empty($_POST['title-fb']) && !empty($_POST['description-fb']) && 
-!empty($_POST['keyword-fb']) && !empty($_POST['title-tw']) && !empty($_POST['description-tw'])){
+if(!empty($_POST['id_pages_home']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['keyword']) 
+&& !empty($_POST['link_fb']) && isset($_POST['img_fb_old']) && !empty($_POST['title_fb']) &&
+ !empty($_POST['description_fb']) && !empty($_POST['keyword_fb']) && !empty($_POST['title_tw']) 
+ && !empty($_POST['description_tw']) && !empty($_POST['description_tw'])){
     
     $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
 
