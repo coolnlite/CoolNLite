@@ -147,7 +147,7 @@ if(!empty($_POST['id_news']) && !empty($_POST['id_tag'])&& !empty($_POST['title'
     $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
 
 
-if(!empty($_FILES['img-fb'])){
+if(!empty($_FILES['img-fb']) && $_FILES['img-fb']['error'] == 0){
     /* Nhận tên file */
  $filename1 = $_FILES['img-fb']['name'];
  /* Nhận kích thước file */
@@ -217,7 +217,7 @@ if(!empty($_FILES['img-fb'])){
 }
     
 }
-if(!empty($_FILES['img-tw'])){
+if(!empty($_FILES['img-tw']) && $_FILES['img-tw']['error'] == 0){
     /* Nhận tên file */
  $filename2 = $_FILES['img-tw']['name'];
  /* Nhận kích thước file */
