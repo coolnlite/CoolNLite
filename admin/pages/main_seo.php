@@ -932,10 +932,10 @@
 
         <div class="form-group">
         <label for="description">Mô tả:</label>
-        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-description" class="text-danger">250</span> ký tự</span>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="search-description" class="text-danger">250</span> ký tự</span>
         <input type="text" maxlength="250" class="form-control" name="description" 
-        placeholder="Nhập mô tả" onkeyup="limit(this,250,'#tag-description')" 
-        onkeydown="limit(this,250,'#tag-description')" value="<?php print $sp['description']?>" required>
+        placeholder="Nhập mô tả" onkeyup="limit(this,250,'#search-description')" 
+        onkeydown="limit(this,250,'#search-description')" value="<?php print $sp['description']?>" required>
         <div class="invalid-feedback">Vui lòng nhập mô tả</div>
         </div>
 
