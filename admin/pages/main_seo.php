@@ -159,14 +159,14 @@
   </div>
   <div class="tab-pane fade" id="premier" role="tabpanel">
   <?php
-      $sql = "SELECT * FROM `seo_pages` WHERE `id` = 1 ";
+      $sql = "SELECT * FROM `seo_pages` WHERE `id` = 2 ";
       $seo_pages = executeResult($sql);
       foreach ($seo_pages as $sp){
 
     ?>
   <form id="feditpremier" class="needs-validation" enctype="multipart/form-data" novalidate>
 
-            <input type="hidden" class="form-control" value="1" name="id_pages_premier">
+            <input type="hidden" class="form-control" value="2" name="id_pages_premier">
             <div class="form-group">
             <label for="title">Tiêu đề :</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="premier-title" class="text-danger">100</span> ký tự</span>
