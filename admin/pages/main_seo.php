@@ -927,8 +927,8 @@
         foreach ($seo_pages as $sp){
 
       ?>
-     <form id="fedittag" class="needs-validation" enctype="multipart/form-data" novalidate>
-        <input type="hidden" class="form-control" value="7" name="id_pages_tag" >
+     <form id="feditsearch" class="needs-validation" enctype="multipart/form-data" novalidate>
+        <input type="hidden" class="form-control" value="8" name="id_pages_search" >
 
         <div class="form-group">
         <label for="description">Mô tả:</label>
