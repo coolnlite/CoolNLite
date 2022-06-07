@@ -82,28 +82,28 @@
                 
                 <div class="form-group">
                 <label for="description-fb">Mô tả facebook:</label>
-                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description-fb" class="text-danger">250</span> ký tự</span>
-                <input type="text" maxlength="250" class="form-control" id="description-fb" name="description-fb" 
-                placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#n-description-fb')" 
-                onkeydown="limit(this,250,'#n-description-fb')" required>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-description-fb" class="text-danger">250</span> ký tự</span>
+                <input type="text" maxlength="250" class="form-control" name="description-fb" 
+                placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#home-description-fb')" 
+                onkeydown="limit(this,250,'#home-description-fb')" required>
                 <div class="invalid-feedback">Vui lòng nhập mô tả cho bài viết</div>
                 </div>
                 
                 <div class="form-group">
                 <label for="keyword-fb">Từ khóa facebook:</label>
-                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-keyword-fb" class="text-danger">100</span> ký tự</span>
-                <input type="text" maxlength="100" class="form-control" id="keyword-fb" name="keyword-fb" 
-                placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#n-keyword-fb')" 
-                onkeydown="limit(this,100,'#n-keyword-fb')" required>
-                <div class="invalid-feedback">Vui lòng nhập từ khóa cho bài viết</div>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-keyword-fb" class="text-danger">100</span> ký tự</span>
+                <input type="text" maxlength="100" class="form-control" name="keyword-fb" 
+                placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#home-keyword-fb')" 
+                onkeydown="limit(this,100,'#home-keyword-fb')" required>
+                <div class="invalid-feedback">Vui lòng nhập từ khóa cho trang chủ</div>
                 </div>
   
                 <div class="form-group">
                 <label for="title-tw">Tiêu đề twitter:</label>
-                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title-tw" class="text-danger">100</span> ký tự</span>
-                <input type="text" maxlength="100" class="form-control" id="title-tw" name="title-tw" 
-                placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title-tw')" 
-                onkeydown="limit(this,100,'#n-title-tw')" required>
+                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-title-tw" class="text-danger">100</span> ký tự</span>
+                <input type="text" maxlength="100" class="form-control" name="title-tw" 
+                placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#home-title-tw')" 
+                onkeydown="limit(this,100,'#home-title-tw')" required>
                 <div class="invalid-feedback">Vui lòng nhập tiêu đề cho bài viết</div>
                 </div>
                 
