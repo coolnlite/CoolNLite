@@ -550,12 +550,12 @@ if(!empty($_POST['name']) && !empty($_POST['url']) && isset($_POST['position']))
 
 //Thêm sidebar
 
-if(!empty($_POST['url']) && !empty($_POST['icon']) && !empty($_POST['name']) 
-&& isset($_POST['position'])){
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $url = mysqli_real_escape_string($conn, $_POST['url']);
-    $icon = mysqli_real_escape_string($conn, $_POST['icon']);
-    $position = mysqli_real_escape_string($conn, $_POST['position']);
+if(!empty($_POST['url_sidebar']) && !empty($_POST['icon_sidebar']) && 
+!empty($_POST['name_sidebar']) && isset($_POST['position_sidebar'])){
+    $name = mysqli_real_escape_string($conn, $_POST['name_sidebar']);
+    $url = mysqli_real_escape_string($conn, $_POST['url_sidebar']);
+    $icon = mysqli_real_escape_string($conn, $_POST['icon_sidebar']);
+    $position = mysqli_real_escape_string($conn, $_POST['position_sidebar']);
     $time = date('Y-m-d H:i:s');
 
     $sql = "INSERT INTO `sidebar` (`url`,`icon`,`name`,`position`,`time`) 

@@ -142,21 +142,21 @@
 
             <div class="form-group">
             <label for="url">Đường dẫn :</label>
-            <input type="text" class="form-control" name="url" 
+            <input type="text" class="form-control" name="url_sidebar" 
             placeholder="Nhập đường dẫn" required>
             <div class="invalid-feedback">Vui lòng nhập đường dẫn</div>
             </div>
 
             <div class="form-group">
             <label for="icon"> Icon :</label>
-            <input type="text" class="form-control" name="icon" 
+            <input type="text" class="form-control" name="icon_sidebar" 
             placeholder="Nhập icon" required>
             <div class="invalid-feedback">Vui lòng nhập icon</div>
             </div>
 
             <div class="form-group">
             <label for="name">Tên sidebar :</label>
-            <input type="text" class="form-control" name="name" 
+            <input type="text" class="form-control" name="name_sidebar" 
             placeholder="Nhập tên sidebar" required>
             <div class="invalid-feedback">Vui lòng nhập tên sidebar</div>
             </div>
@@ -164,7 +164,7 @@
             <div class="form-group">
             <label for="position">Vị trí :</label>
             <label class="text-danger">Vui lòng nhập số</label>
-            <input type="text" class="form-control" name="position"
+            <input type="text" class="form-control" name="position_sidebar"
             maxlength="1" placeholder="Nhập vị trí sidebar"  required>
             <div class="invalid-feedback">Vui lòng nhập vị trí</div>
             </div>
