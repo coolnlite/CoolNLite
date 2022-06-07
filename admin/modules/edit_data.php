@@ -703,15 +703,15 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw'] == 0){
      $num2 ++;
  }
     $path2 = $fileName2 . '.' . $fileType2;
-    $resultTW =  move_uploaded_file($_FILES['img-tw']['tmp_name'],$uploadPath2 . '/' .$path2);
+    $resultTW =  move_uploaded_file($_FILES['img_tw']['tmp_name'],$uploadPath2 . '/' .$path2);
     if($resultTW){
-        $img_tw_old = $_POST['img-tw-old'];
+        $img_tw_old = $_POST['img_tw_old'];
         $link_tw = '../';
         $file_tw = $link_tw.$img_tw_old;
         unlink($file_tw);
 
         $img_tw =  $tar_get2 . '/' .$path2;
-        $sql = "UPDATE `seo_news` SET `img_tw` = '$img_tw' WHERE id = $id_tag AND id_news = $id_news";
+        $sql = "UPDATE `seo_pages` SET `img_tw` = '$img_tw' WHERE `id` = $id_pages";
         $result = mysqli_query($conn,$sql);
     }
 }
