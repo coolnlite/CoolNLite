@@ -647,7 +647,8 @@ if(isset($_POST['sidebar'])){
         $sub_array[] = facebook_time_ago($row['time']);
         $sub_array[] = 
         '
-        <a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  class="btn btn-danger btn-sm deleteBtn" >
+        <a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  
+        class="btn btn-danger btn-sm deleteSidebar" >
         <i class="fas fa-trash-alt"></i>
         </a>
         <a title="Sửa" data-toggle="modal" data-target="#editSidebar" href="javascript:void();" data-id="'.$row['id'].'"

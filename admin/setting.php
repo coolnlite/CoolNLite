@@ -164,9 +164,9 @@
       });
 
 
-      // Xóa mẫu tin khách hàng
-      $(document).on('click', '.deleteBtn', function(event) {
-      var table = $('#example').DataTable();
+      // Xóa mẫu tin menu
+      $(document).on('click', '.deleteMenu', function(event) {
+      var table = $('#menu').DataTable();
       event.preventDefault();
       var id_news = $(this).data('id');
         if (confirm("Bạn chắc chắc có muốn xóa mẫu tin này")) {
