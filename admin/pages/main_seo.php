@@ -728,10 +728,10 @@
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="<?php print '..'.$sp['img_fb']?>" alt="Ảnh đại diện">
         </div>
-        </div>
         <?php
           }
         ?>
+        </div>
 
         <div class="form-group">
         <label for="title-fb">Tiêu đề facebook:</label>
@@ -789,10 +789,10 @@
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="<?php print '..'.$sp['img_tw']?>" alt="Ảnh đại diện">
         </div>
-        </div>
         <?php
           }
         ?>
+        </div>
 
         <button type="submit" class="btn btn-primary">Cập nhật</button>
         </form>
@@ -848,10 +848,10 @@
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="<?php print '..'.$sp['img_fb']?>" alt="Ảnh đại diện">
         </div>
-        </div>
         <?php
           }
         ?>
+        </div>
 
         <div class="form-group">
         <label for="title-fb">Tiêu đề facebook:</label>
