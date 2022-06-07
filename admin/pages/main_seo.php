@@ -278,7 +278,7 @@
           }
         ?>
 
-        <button type="submit" class="btn btn-primary mt-1">Cập nhật</button>
+        <button type="submit" class="btn btn-primary">Cập nhật</button>
         </form>
         <?php  
         }
