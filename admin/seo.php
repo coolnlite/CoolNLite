@@ -193,6 +193,50 @@
           })
       });
 
+      $("#fedittag").on('submit', function(e){
+          e.preventDefault();
+              $.ajax({
+              type: 'POST',
+              url: '<?php print $DOMAIN.'modules/edit_data.php'?>',
+              data: new FormData(this),
+              dataType : 'json',
+              contentType: false,
+              cache: false,
+              processData:false,
+              success: function(response){ 
+                  if(response.status == 1){
+                      alert(response.message);
+                      window.location.reload();
+                  }else{
+                      alert(response.message);
+                  }
+                  
+              }
+          })
+      });
+
+      $("#feditsearch").on('submit', function(e){
+          e.preventDefault();
+              $.ajax({
+              type: 'POST',
+              url: '<?php print $DOMAIN.'modules/edit_data.php'?>',
+              data: new FormData(this),
+              dataType : 'json',
+              contentType: false,
+              cache: false,
+              processData:false,
+              success: function(response){ 
+                  if(response.status == 1){
+                      alert(response.message);
+                      window.location.reload();
+                  }else{
+                      alert(response.message);
+                  }
+                  
+              }
+          })
+      });
+
     </script>
 </body>
 

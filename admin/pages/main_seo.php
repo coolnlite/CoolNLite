@@ -4,25 +4,25 @@
       <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#home" role="tab">Trang Chủ</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#premier" role="tab">Premier Series</a>
+      <a class="nav-link" id="pills-premier-tab" data-toggle="pill" href="#premier" role="tab">Premier Series</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#titanx" role="tab">Titan X Series</a>
+      <a class="nav-link" id="pills-titanx-tab" data-toggle="pill" href="#titanx" role="tab">Titan X Series</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#news" role="tab">Tin Tức</a>
+      <a class="nav-link" id="pills-news-tab" data-toggle="pill" href="#news" role="tab">Tin Tức</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#about" role="tab">Chúng Tôi</a>
+      <a class="nav-link" id="pills-about-tab" data-toggle="pill" href="#about" role="tab">Chúng Tôi</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#agency" role="tab">Đại Lý</a>
+      <a class="nav-link" id="pills-agency-tab" data-toggle="pill" href="#agency" role="tab">Đại Lý</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#tag" role="tab">Từ Khóa</a>
+      <a class="nav-link" id="pills-tag-tab" data-toggle="pill" href="#tag" role="tab">Từ Khóa</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#search" role="tab">Tìm Kiếm</a>
+      <a class="nav-link" id="pills-search-tab" data-toggle="pill" href="#search" role="tab">Tìm Kiếm</a>
     </li>
   </ul>
   <div class="tab-content" id="pills-tabContent">
@@ -801,10 +801,244 @@
         ?>
     </div>
     <div class="tab-pane fade" id="tag" role="tabpanel">
+    <?php
+        $sql = "SELECT * FROM `seo_pages` WHERE `id` = 7 ";
+        $seo_pages = executeResult($sql);
+        foreach ($seo_pages as $sp){
 
+      ?>
+     <form id="fedittag" class="needs-validation" enctype="multipart/form-data" novalidate>
+        <input type="hidden" class="form-control" value="7" name="id_pages_tag" >
+
+        <div class="form-group">
+        <label for="description">Mô tả:</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-description" class="text-danger">250</span> ký tự</span>
+        <input type="text" maxlength="250" class="form-control" name="description" 
+        placeholder="Nhập mô tả" onkeyup="limit(this,250,'#tag-description')" 
+        onkeydown="limit(this,250,'#tag-description')" value="<?php print $sp['description']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập mô tả</div>
+        </div>
+
+        <div class="form-group">
+        <label for="keyword">Từ khóa :</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-keyword" class="text-danger">100</span> ký tự</span>
+        <input type="text" maxlength="100" class="form-control" name="keyword" 
+        placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#tag-keyword')" 
+        onkeydown="limit(this,100,'#tag-keyword')" value="<?php print $sp['keyword']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập từ khóa</div>
+        </div>
+
+        <div class="form-group">
+        <label for="link-fb">Đường dẫn fanpage facebook:</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-link-fb" class="text-danger">100</span> ký tự</span>
+        <input type="url" maxlength="100" class="form-control" name="link_fb" 
+        placeholder="https://www.facebook.com/..." onkeyup="limit(this,100,'#tag-link-fb')" 
+        onkeydown="limit(this,100,'#tag-link-fb')" value="<?php print $sp['link_fb']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập đường dẫn fanpage</div>
+        </div>
+
+        <div class="form-group">
+        <label for="img-fb">Ảnh đại diện facebook:</label>
+        <input type="file" class="form-control" name="img_fb" required>
+        <input type="hidden" class="form-control" value="<?php print $sp['img_fb']?>" name="img_fb_old">
+        <div class="invalid-feedback">Vui lòng nhập ảnh đại diện</div>
+        <?php 
+        if($sp['img_fb'] != ''){
+        ?>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<?php print '..'.$sp['img_fb']?>" alt="Ảnh đại diện">
+        </div>
+        </div>
+        <?php
+          }
+        ?>
+
+        <div class="form-group">
+        <label for="title-fb">Tiêu đề facebook:</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-title-fb" class="text-danger">100</span> ký tự</span>
+        <input type="text" maxlength="100" class="form-control" name="title_fb" 
+        placeholder="Nhập tiêu đề" onkeyup="limit(this,100,'#tag-title-fb')" 
+        onkeydown="limit(this,100,'#tag-title-fb')" value="<?php print $sp['title_fb']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập tiêu đề</div>
+        </div>
+
+        <div class="form-group">
+        <label for="description-fb">Mô tả facebook:</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-description-fb" class="text-danger">250</span> ký tự</span>
+        <input type="text" maxlength="250" class="form-control" name="description_fb" 
+        placeholder="Nhập mô tả" onkeyup="limit(this,250,'#tag-description-fb')" 
+        onkeydown="limit(this,250,'#tag-description-fb')" value="<?php print $sp['description_fb']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập mô tả</div>
+        </div>
+
+        <div class="form-group">
+        <label for="keyword-fb">Từ khóa facebook:</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-keyword-fb" class="text-danger">100</span> ký tự</span>
+        <input type="text" maxlength="100" class="form-control" name="keyword_fb" 
+        placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#tag-keyword-fb')" 
+        onkeydown="limit(this,100,'#tag-keyword-fb')" value="<?php print $sp['keyword_fb']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập từ khóa</div>
+        </div>
+
+        <div class="form-group">
+        <label for="title-tw">Tiêu đề twitter:</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-title-tw" class="text-danger">100</span> ký tự</span>
+        <input type="text" maxlength="100" class="form-control" name="title_tw" 
+        placeholder="Nhập tiêu đề" onkeyup="limit(this,100,'#tag-title-tw')" 
+        onkeydown="limit(this,100,'#tag-title-tw')" value="<?php print $sp['title_tw']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập tiêu đề</div>
+        </div>
+
+        <div class="form-group">
+        <label for="description-tw">Mô tả twitter:</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-description-tw" class="text-danger">250</span> ký tự</span>
+        <input type="text" maxlength="250" class="form-control" name="description_tw" 
+        placeholder="Nhập mô tả" onkeyup="limit(this,250,'#tag-description-tw')" 
+        onkeydown="limit(this,250,'#tag-description-tw')" value="<?php print $sp['description_tw']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập mô tả</div>
+        </div>
+
+        <div class="form-group">
+        <label for="img-tw">Ảnh đại diện twitter:</label>
+        <input type="file" class="form-control" name="img_tw" required>
+        <input type="hidden" class="form-control" value="<?php print $sp['img_tw']?>" name="img_tw_old">
+        <div class="invalid-feedback">Vui lòng nhập ảnh đại diện</div>
+        <?php 
+        if($sp['img_tw'] != ''){
+        ?>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<?php print '..'.$sp['img_tw']?>" alt="Ảnh đại diện">
+        </div>
+        </div>
+        <?php
+          }
+        ?>
+
+        <button type="submit" class="btn btn-primary">Cập nhật</button>
+        </form>
+        <?php  
+        }
+        ?>
     </div>
     <div class="tab-pane fade" id="search" role="tabpanel">
+    <?php
+        $sql = "SELECT * FROM `seo_pages` WHERE `id` = 8 ";
+        $seo_pages = executeResult($sql);
+        foreach ($seo_pages as $sp){
 
+      ?>
+     <form id="fedittag" class="needs-validation" enctype="multipart/form-data" novalidate>
+        <input type="hidden" class="form-control" value="7" name="id_pages_tag" >
+
+        <div class="form-group">
+        <label for="description">Mô tả:</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-description" class="text-danger">250</span> ký tự</span>
+        <input type="text" maxlength="250" class="form-control" name="description" 
+        placeholder="Nhập mô tả" onkeyup="limit(this,250,'#tag-description')" 
+        onkeydown="limit(this,250,'#tag-description')" value="<?php print $sp['description']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập mô tả</div>
+        </div>
+
+        <div class="form-group">
+        <label for="keyword">Từ khóa :</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-keyword" class="text-danger">100</span> ký tự</span>
+        <input type="text" maxlength="100" class="form-control" name="keyword" 
+        placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#tag-keyword')" 
+        onkeydown="limit(this,100,'#tag-keyword')" value="<?php print $sp['keyword']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập từ khóa</div>
+        </div>
+
+        <div class="form-group">
+        <label for="link-fb">Đường dẫn fanpage facebook:</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-link-fb" class="text-danger">100</span> ký tự</span>
+        <input type="url" maxlength="100" class="form-control" name="link_fb" 
+        placeholder="https://www.facebook.com/..." onkeyup="limit(this,100,'#tag-link-fb')" 
+        onkeydown="limit(this,100,'#tag-link-fb')" value="<?php print $sp['link_fb']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập đường dẫn fanpage</div>
+        </div>
+
+        <div class="form-group">
+        <label for="img-fb">Ảnh đại diện facebook:</label>
+        <input type="file" class="form-control" name="img_fb" required>
+        <input type="hidden" class="form-control" value="<?php print $sp['img_fb']?>" name="img_fb_old">
+        <div class="invalid-feedback">Vui lòng nhập ảnh đại diện</div>
+        <?php 
+        if($sp['img_fb'] != ''){
+        ?>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<?php print '..'.$sp['img_fb']?>" alt="Ảnh đại diện">
+        </div>
+        </div>
+        <?php
+          }
+        ?>
+
+        <div class="form-group">
+        <label for="title-fb">Tiêu đề facebook:</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-title-fb" class="text-danger">100</span> ký tự</span>
+        <input type="text" maxlength="100" class="form-control" name="title_fb" 
+        placeholder="Nhập tiêu đề" onkeyup="limit(this,100,'#tag-title-fb')" 
+        onkeydown="limit(this,100,'#tag-title-fb')" value="<?php print $sp['title_fb']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập tiêu đề</div>
+        </div>
+
+        <div class="form-group">
+        <label for="description-fb">Mô tả facebook:</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-description-fb" class="text-danger">250</span> ký tự</span>
+        <input type="text" maxlength="250" class="form-control" name="description_fb" 
+        placeholder="Nhập mô tả" onkeyup="limit(this,250,'#tag-description-fb')" 
+        onkeydown="limit(this,250,'#tag-description-fb')" value="<?php print $sp['description_fb']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập mô tả</div>
+        </div>
+
+        <div class="form-group">
+        <label for="keyword-fb">Từ khóa facebook:</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-keyword-fb" class="text-danger">100</span> ký tự</span>
+        <input type="text" maxlength="100" class="form-control" name="keyword_fb" 
+        placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#tag-keyword-fb')" 
+        onkeydown="limit(this,100,'#tag-keyword-fb')" value="<?php print $sp['keyword_fb']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập từ khóa</div>
+        </div>
+
+        <div class="form-group">
+        <label for="title-tw">Tiêu đề twitter:</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-title-tw" class="text-danger">100</span> ký tự</span>
+        <input type="text" maxlength="100" class="form-control" name="title_tw" 
+        placeholder="Nhập tiêu đề" onkeyup="limit(this,100,'#tag-title-tw')" 
+        onkeydown="limit(this,100,'#tag-title-tw')" value="<?php print $sp['title_tw']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập tiêu đề</div>
+        </div>
+
+        <div class="form-group">
+        <label for="description-tw">Mô tả twitter:</label>
+        <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="tag-description-tw" class="text-danger">250</span> ký tự</span>
+        <input type="text" maxlength="250" class="form-control" name="description_tw" 
+        placeholder="Nhập mô tả" onkeyup="limit(this,250,'#tag-description-tw')" 
+        onkeydown="limit(this,250,'#tag-description-tw')" value="<?php print $sp['description_tw']?>" required>
+        <div class="invalid-feedback">Vui lòng nhập mô tả</div>
+        </div>
+
+        <div class="form-group">
+        <label for="img-tw">Ảnh đại diện twitter:</label>
+        <input type="file" class="form-control" name="img_tw" required>
+        <input type="hidden" class="form-control" value="<?php print $sp['img_tw']?>" name="img_tw_old">
+        <div class="invalid-feedback">Vui lòng nhập ảnh đại diện</div>
+        <?php 
+        if($sp['img_tw'] != ''){
+        ?>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<?php print '..'.$sp['img_tw']?>" alt="Ảnh đại diện">
+        </div>
+        </div>
+        <?php
+          }
+        ?>
+
+        <button type="submit" class="btn btn-primary">Cập nhật</button>
+        </form>
+        <?php  
+        }
+        ?>
     </div>
   </div>
 </div>
