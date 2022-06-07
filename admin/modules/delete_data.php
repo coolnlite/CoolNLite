@@ -176,4 +176,55 @@ if(isset($_POST['delete_users']) && !empty($_POST['id_users'])){
 
 }
 
+//delete menu
+if(isset($_POST['delete_menu']) && !empty($_POST['id_menu'])){
+    $id_menu = $_POST['id_menu'];
+    
+    $sql = "DELETE FROM `menu` WHERE `id`= '$id_menu'";
+    $result =mysqli_query($conn,$sql);
+    if($result == true)
+    {
+        $data = array(
+            'status'=>'success',
+        );
+
+        echo json_encode($data);
+    }
+    else
+    {
+        $data = array(
+            'status'=>'failed',
+        );
+
+        echo json_encode($data);
+    } 
+
+}
+
+//delete menu
+if(isset($_POST['delete_sidebar']) && !empty($_POST['id_sidebar'])){
+    $id_menu = $_POST['id_sidebar'];
+    
+    $sql = "DELETE FROM `sidebar` WHERE `id`= '$id_sidebar'";
+    $result =mysqli_query($conn,$sql);
+    if($result == true)
+    {
+        $data = array(
+            'status'=>'success',
+        );
+
+        echo json_encode($data);
+    }
+    else
+    {
+        $data = array(
+            'status'=>'failed',
+        );
+
+        echo json_encode($data);
+    } 
+
+}
+
+
 ?>
