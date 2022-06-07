@@ -210,7 +210,7 @@
               var json = JSON.parse(data);
               status = json.status;
               if (status == 'success') {
-                $("#" + id_menu).closest('tr').remove();
+                $("#" + id_sidebar).closest('tr').remove();
               } else {
                 alert('Có lỗi gì đó');
                 return;
