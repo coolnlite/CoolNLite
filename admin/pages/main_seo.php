@@ -164,7 +164,7 @@
       ?>
      <form id="feditpremier" class="needs-validation" enctype="multipart/form-data" novalidate>
 
-        <input type="hidden" class="form-control" value="2" name="id_pages_home">
+        <input type="hidden" class="form-control" value="2" name="id_pages_premier">
         <div class="form-group">
         <label for="title">Tiêu đề :</label>
         <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-title" class="text-danger">100</span> ký tự</span>
