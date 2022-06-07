@@ -168,20 +168,20 @@
       $(document).on('click', '.deleteMenu', function(event) {
       var table = $('#menu').DataTable();
       event.preventDefault();
-      var id_news = $(this).data('id');
+      var id_menu = $(this).data('id');
         if (confirm("Bạn chắc chắc có muốn xóa mẫu tin này")) {
           $.ajax({
             url: '<?php echo ''.$DOMAIN.'modules/delete_data.php'?>',
             data: {
-              delete_news : true,
-              id_news: id_news
+              delete_menu : true,
+              id_menu : id_menu
             },
             type: "post",
             success: function(data) {
               var json = JSON.parse(data);
               status = json.status;
               if (status == 'success') {
-                $("#" + id_news).closest('tr').remove();
+                $("#" + id_menu).closest('tr').remove();
               } else {
                 alert('Có lỗi gì đó');
                 return;
