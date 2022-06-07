@@ -635,8 +635,8 @@ if(!empty($_FILES['img_fb'])){
 
  $resultFB = move_uploaded_file($_FILES['img_fb']['tmp_name'],$uploadPath1 . '/' .$path1);
  if($resultFB){
-    if($_POST['img-fb-old'] != ''){
-        $img_fb_old = $_POST['img-fb-old'];
+    if($_POST['img_fb_old'] != ''){
+        $img_fb_old = $_POST['img_fb_old'];
         $link_fb = '../..';
         $file_fb = $link_fb.$img_fb_old;
         unlink($file_fb);
