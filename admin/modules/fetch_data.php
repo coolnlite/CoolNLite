@@ -587,7 +587,7 @@ if(isset($_POST['footer'])){
 
 }
 
-//Hiện thị menu
+//Hiện thị sidebar
 
 if(isset($_POST['sidebar'])){
     $output= array();
@@ -621,7 +621,7 @@ if(isset($_POST['sidebar'])){
     }
     else
     {
-        $sql .= " ORDER BY `position` asc";
+        $sql .= " ORDER BY `id` desc";
     }
 
     if($_POST['length'] != -1)
@@ -639,8 +639,9 @@ if(isset($_POST['sidebar'])){
     {
         $sub_array = array();
         $sub_array[] = $row['id'];
-        $sub_array[] = $row['name'];
         $sub_array[] = $row['url'];
+        $sub_array[] = $row['icon'];
+        $sub_array[] = $row['name'];
         $sub_array[] = $row['position'];
         $sub_array[] = facebook_time_ago($row['time']);
         $sub_array[] = 
