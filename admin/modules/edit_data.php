@@ -575,8 +575,8 @@ if(!empty($_POST['id_pages_home']) && !empty($_POST['title']) && !empty($_POST['
     
     $id_pages = mysqli_real_escape_string($conn, $_POST['id_pages_home']);
 
-
-if(!empty($_FILES['img_fb'])){
+    var_dump($_FILES,$_POST);
+if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
     /* Nhận tên file */
  $filename1 = $_FILES['img_fb']['name'];
  /* Nhận kích thước file */
@@ -720,12 +720,12 @@ if(!empty($_FILES['img-tw'])){
         $title = mysqli_real_escape_string($conn, $_POST['title']);
         $description = mysqli_real_escape_string($conn, $_POST['description']);
         $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
-        $link_fb = mysqli_real_escape_string($conn, $_POST['link-fb']);
-        $title_fb = mysqli_real_escape_string($conn, $_POST['title-fb']);
-        $description_fb = mysqli_real_escape_string($conn, $_POST['description-fb']);
-        $keyword_fb = mysqli_real_escape_string($conn, $_POST['keyword-fb']);
-        $title_tw = mysqli_real_escape_string($conn, $_POST['title-tw']);
-        $description_tw = mysqli_real_escape_string($conn, $_POST['description-tw']);
+        $link_fb = mysqli_real_escape_string($conn, $_POST['link_fb']);
+        $title_fb = mysqli_real_escape_string($conn, $_POST['title_fb']);
+        $description_fb = mysqli_real_escape_string($conn, $_POST['description_fb']);
+        $keyword_fb = mysqli_real_escape_string($conn, $_POST['keyword_fb']);
+        $title_tw = mysqli_real_escape_string($conn, $_POST['title_tw']);
+        $description_tw = mysqli_real_escape_string($conn, $_POST['description_tw']);
 
         $sql = "UPDATE `seo_news` SET `title` = '$title', `description` = '$description',
         `keyword` = '$keyword',`link_fb` = '$link_fb', `title_fb` = '$title_fb', 
