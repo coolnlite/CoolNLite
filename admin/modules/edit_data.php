@@ -1120,12 +1120,12 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
         }
 
         //Chỉnh sửa seo tin tức
-    if(!empty($_POST['id_pages_titanx']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['keyword']) 
+    if(!empty($_POST['id_pages_news']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['keyword']) 
     && !empty($_POST['link_fb']) && isset($_POST['img_fb_old']) && !empty($_POST['title_fb']) &&
      !empty($_POST['description_fb']) && !empty($_POST['keyword_fb']) && !empty($_POST['title_tw']) 
      && !empty($_POST['description_tw']) && isset($_POST['img_tw_old'])){
         
-        $id_pages = mysqli_real_escape_string($conn, $_POST['id_pages_titanx']);
+        $id_pages = mysqli_real_escape_string($conn, $_POST['id_pages_news']);
     
     if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
         /* Nhận tên file */
@@ -1291,13 +1291,13 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
             if($result == true){
                 echo json_encode(array(
                     'status' => 1,
-                    'message' => 'Chỉnh sửa SEO cho trang titanx thành công'
+                    'message' => 'Chỉnh sửa SEO cho trang tin tức thành công'
                 ));
                 exit();
             }else{
                 echo json_encode(array(
                     'status' => 0,
-                    'message' => 'Chỉnh sửa SEO cho trang titanx thất bại'
+                    'message' => 'Chỉnh sửa SEO cho trang tin tức thất bại'
                 ));
                 exit();
             }
