@@ -739,13 +739,13 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw'] == 0){
         if($result == true){
             echo json_encode(array(
                 'status' => 1,
-                'message' => 'Chỉnh sửa SEO cho bài viết thành công'
+                'message' => 'Chỉnh sửa SEO cho trang chủ thành công'
             ));
             exit();
         }else{
             echo json_encode(array(
                 'status' => 0,
-                'message' => 'Chỉnh sửa SEO cho bài viết thất bại'
+                'message' => 'Chỉnh sửa SEO cho trang chủ thất bại'
             ));
             exit();
         }
