@@ -231,7 +231,6 @@
               data: $(this).serializeArray(),
               success: function(response){
                 var response = JSON.parse(response);
-
                   if(response.status == 1){
                       alert(response.message);
                       window.location.reload();
@@ -251,7 +250,6 @@
               data: $(this).serializeArray(),
               success: function(response){
                 var response = JSON.parse(response);
-
                   if(response.status == 1){
                       alert(response.message);
                       window.location.reload();
