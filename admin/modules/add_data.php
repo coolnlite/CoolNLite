@@ -550,32 +550,32 @@ if(
 
 //Thêm sidebar
 
-if(!empty($_POST['url']) && !empty($_POST['icon']) && !empty($_POST['name']) 
-&& isset($_POST['position'])){
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $url = mysqli_real_escape_string($conn, $_POST['url']);
-    $icon = mysqli_real_escape_string($conn, $_POST['icon']);
-    $position = mysqli_real_escape_string($conn, $_POST['position']);
-    $time = date('Y-m-d H:i:s');
+// if(!empty($_POST['url']) && !empty($_POST['icon']) && !empty($_POST['name']) 
+// && isset($_POST['position'])){
+//     $name = mysqli_real_escape_string($conn, $_POST['name']);
+//     $url = mysqli_real_escape_string($conn, $_POST['url']);
+//     $icon = mysqli_real_escape_string($conn, $_POST['icon']);
+//     $position = mysqli_real_escape_string($conn, $_POST['position']);
+//     $time = date('Y-m-d H:i:s');
 
-    $sql = "INSERT INTO `sidebar` (`url`,`icon`,`name`,`position`,`time`) 
-    VALUES ('$url','$icon','$name','$position','$time')";
+//     $sql = "INSERT INTO `sidebar` (`url`,`icon`,`name`,`position`,`time`) 
+//     VALUES ('$url','$icon','$name','$position','$time')";
 
-    $result = mysqli_query($conn, $sql);
-    if($result) {
-        echo json_encode(array(
-            'status' => 1,
-            'message' => 'Thêm sidebar thành công'
-            ));
-            exit();
-    }else{
-        echo json_encode(array(
-            'status' => 0,
-            'message' => 'Thêm sidebar thất bại'
-            ));
-            exit();
-    }
-}
+//     $result = mysqli_query($conn, $sql);
+//     if($result) {
+//         echo json_encode(array(
+//             'status' => 1,
+//             'message' => 'Thêm sidebar thành công'
+//             ));
+//             exit();
+//     }else{
+//         echo json_encode(array(
+//             'status' => 0,
+//             'message' => 'Thêm sidebar thất bại'
+//             ));
+//             exit();
+//     }
+// }
 
 
 
