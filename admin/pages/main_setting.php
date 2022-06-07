@@ -10,12 +10,10 @@
             <table id="example" class="table table-striped table-bordered" style="width: 100%;">
               <thead>
                 <th>Id</th>
-                <th>Họ và tên</th>
-                <th>Số điện thoại</th>
-                <th>Dòng xe</th>
-                <th>Khu vực</th>
-                <th>Tin nhắn</th>
-                <th>Thời gian gửi</th>
+                <th>Tên menu</th>
+                <th>Đường dẫn</th>
+                <th>Vị trí</th>
+                <th>Thời gian tạo</th>
                 <th>Thao tác</th>
               </thead>
               <tbody>
