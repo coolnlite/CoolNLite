@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="./public/css/slider.css">
   <!-- css -->
   <!-- one page scroll -->
-  <link rel="stylesheet" href="./assets/css/full-page-scroll.css">
+  
   <!-- one page scroll -->
   <title>COOL N LITE - Phim cách nhiệt</title>
 </head>
@@ -306,17 +306,7 @@
   <script src="./public/js/checkinput.js"></script>
   <!-- jquery validation -->
   <!-- one page scroll -->
-  <script src="./assets/js/full-page-scroll.js"></script>
-    <script type="text/javascript">
-      new fullScroll({
-        mainElement: "main",
-        sections : '.section',
-        displayDots: true,
-        dotsPosition: "left",
-        animateTime: 0.7,
-        animateFunction: "ease",
-      });
-    </script>
+  
   <!-- one page scroll -->
 </body>
 
