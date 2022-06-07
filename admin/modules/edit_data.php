@@ -648,7 +648,7 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
 }
     
 }
-if(!empty($_FILES['img-tw'])){
+if(!empty($_FILES['img-tw']) && $_FILES['img-tw'] == 0){
     /* Nhận tên file */
  $filename2 = $_FILES['img-tw']['name'];
  /* Nhận kích thước file */
@@ -731,7 +731,7 @@ if(!empty($_FILES['img-tw'])){
         `keyword` = '$keyword',`link_fb` = '$link_fb', `title_fb` = '$title_fb', 
         `description_fb` = '$description_fb',`keyword_fb` = '$keyword_fb',
         `title_tw` = '$title_tw',`description_tw` = '$description_tw'
-        WHERE id = $id_tag AND id_news = $id_news";
+        WHERE `id` = $id_pages";
 
         $result = mysqli_query($conn,$sql);
 
