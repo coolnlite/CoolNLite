@@ -66,16 +66,16 @@
             <div class="form-group">
             <label for="link-fb">Đường dẫn fanpage facebook:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-link-fb" class="text-danger">100</span> ký tự</span>
-            <input type="url" maxlength="100" class="form-control" name="link-fb" 
+            <input type="url" maxlength="100" class="form-control" name="link_fb" 
             placeholder="https://www.facebook.com/..." onkeyup="limit(this,100,'#home-link-fb')" 
-            onkeydown="limit(this,100,'#home-link-fb')" value="<?php print $sp['link-fb']?>" required>
+            onkeydown="limit(this,100,'#home-link-fb')" value="<?php print $sp['link_fb']?>" required>
             <div class="invalid-feedback">Vui lòng nhập đường dẫn fanpage</div>
             </div>
 
             <div class="form-group">
             <label for="img-fb">Ảnh đại diện facebook:</label>
             <input type="file" class="form-control" name="img-fb" required>
-            <input type="hidden" class="form-control" value="<?php print '..'.$sp['img_fb']?>" name="img-fb-old">
+            <input type="hidden" class="form-control" value="<?php print $sp['img_fb']?>" name="img_fb_old">
             <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
             <?php 
             if($sp['img_fb'] != ''){
@@ -91,18 +91,18 @@
             <div class="form-group">
             <label for="title-fb">Tiêu đề facebook:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-title-fb" class="text-danger">100</span> ký tự</span>
-            <input type="text" maxlength="100" class="form-control" name="title-fb" 
+            <input type="text" maxlength="100" class="form-control" name="title_fb" 
             placeholder="Nhập tiêu đề cho trang chủ" onkeyup="limit(this,100,'#home-title-fb')" 
-            onkeydown="limit(this,100,'#home-title-fb')" value="<?php print $sp['title-fb']?>" required>
+            onkeydown="limit(this,100,'#home-title-fb')" value="<?php print $sp['title_fb']?>" required>
             <div class="invalid-feedback">Vui lòng nhập tiêu đề cho trang chủ</div>
             </div>
             
             <div class="form-group">
             <label for="description-fb">Mô tả facebook:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-description-fb" class="text-danger">250</span> ký tự</span>
-            <input type="text" maxlength="250" class="form-control" name="description-fb" 
+            <input type="text" maxlength="250" class="form-control" name="description_fb" 
             placeholder="Nhập mô tả cho trang chủ" onkeyup="limit(this,250,'#home-description-fb')" 
-            onkeydown="limit(this,250,'#home-description-fb')" value="<?php print $sp['description-fb']?>" required>
+            onkeydown="limit(this,250,'#home-description-fb')" value="<?php print $sp['description_fb']?>" required>
             <div class="invalid-feedback">Vui lòng nhập mô tả cho trang chủ</div>
             </div>
             
@@ -111,32 +111,43 @@
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-keyword-fb" class="text-danger">100</span> ký tự</span>
             <input type="text" maxlength="100" class="form-control" name="keyword-fb" 
             placeholder="COOL N LITE, phim cách nhiệt, MTFLIM" onkeyup="limit(this,100,'#home-keyword-fb')" 
-            onkeydown="limit(this,100,'#home-keyword-fb')" value="<?php print $sp['keyword-fb']?>" required>
+            onkeydown="limit(this,100,'#home-keyword-fb')" value="<?php print $sp['keyword_fb']?>" required>
             <div class="invalid-feedback">Vui lòng nhập từ khóa cho trang chủ</div>
             </div>
 
             <div class="form-group">
             <label for="title-tw">Tiêu đề twitter:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-title-tw" class="text-danger">100</span> ký tự</span>
-            <input type="text" maxlength="100" class="form-control" name="title-tw" 
+            <input type="text" maxlength="100" class="form-control" name="title_tw" 
             placeholder="Nhập tiêu đề cho trang chủ" onkeyup="limit(this,100,'#home-title-tw')" 
-            onkeydown="limit(this,100,'#home-title-tw')" required>
+            onkeydown="limit(this,100,'#home-title-tw')" value="<?php print $sp['title_tw']?>" required>
             <div class="invalid-feedback">Vui lòng nhập tiêu đề cho trang chủ</div>
             </div>
             
             <div class="form-group">
             <label for="description-tw">Mô tả twitter:</label>
             <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="home-description-tw" class="text-danger">250</span> ký tự</span>
-            <input type="text" maxlength="250" class="form-control" name="description-tw" 
+            <input type="text" maxlength="250" class="form-control" name="description_tw" 
             placeholder="Nhập mô tả cho trang chủ" onkeyup="limit(this,250,'#home-description-tw')" 
-            onkeydown="limit(this,250,'#home-description-tw')" required>
+            onkeydown="limit(this,250,'#home-description-tw')" value="<?php print $sp['description_tw']?>" required>
             <div class="invalid-feedback">Vui lòng nhập mô tả cho trang chủ</div>
             </div>
             
             <div class="form-group">
             <label for="img-tw">Ảnh đại diện twitter:</label>
-            <input type="file" class="form-control" name="img-tw" required>
+            <input type="file" class="form-control" name="img_tw" required>
+            <input type="hidden" class="form-control" value="<?php print $sp['img_tw']?>" name="img_tw_old">
             <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho trang chủ</div>
+            <?php 
+            if($sp['img_tw'] != ''){
+            ?>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="<?php print '..'.$sp['img_tw']?>" alt="Ảnh đại diện">
+            </div>
+            </div>
+            <?php
+              }
+            ?>
             </div>
 
             <button type="submit" class="btn btn-primary">Thêm</button>
