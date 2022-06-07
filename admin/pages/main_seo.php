@@ -673,13 +673,13 @@
     </div>
     <div class="tab-pane fade" id="agency" role="tabpanel">
     <?php
-        $sql = "SELECT * FROM `seo_pages` WHERE `id` = 4 ";
+        $sql = "SELECT * FROM `seo_pages` WHERE `id` = 6 ";
         $seo_pages = executeResult($sql);
         foreach ($seo_pages as $sp){
 
       ?>
-     <form id="feditnews" class="needs-validation" enctype="multipart/form-data" novalidate>
-        <input type="hidden" class="form-control" value="3" name="id_pages_news" >
+     <form id="feditagency" class="needs-validation" enctype="multipart/form-data" novalidate>
+        <input type="hidden" class="form-control" value="3" name="id_pages_agency" >
 
         <div class="form-group">
         <label for="title">Tiêu đề :</label>
