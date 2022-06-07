@@ -522,10 +522,10 @@ if(
 
 //Thêm menu
 
-if(!empty($_POST['name']) && !empty($_POST['url']) && isset($_POST['position'])){
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $url = mysqli_real_escape_string($conn, $_POST['url']);
-    $position = mysqli_real_escape_string($conn, $_POST['position']);
+if(!empty($_POST['name_menu']) && !empty($_POST['url_menu']) && isset($_POST['position_menu'])){
+    $name = mysqli_real_escape_string($conn, $_POST['name_menu']);
+    $url = mysqli_real_escape_string($conn, $_POST['url_menu']);
+    $position = mysqli_real_escape_string($conn, $_POST['position_menu']);
     $time = date('Y-m-d H:i:s');
 
     $sql = "INSERT INTO `menu` (`name`, `url`, `position`,`time`) 
