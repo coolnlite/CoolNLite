@@ -97,14 +97,14 @@
 
             <div class="form-group">
             <label for="name">Tên menu :</label>
-            <input type="text" class="form-control" name="name" 
+            <input type="text" class="form-control" name="name_menu" 
             placeholder="Nhập tên menu" required>
             <div class="invalid-feedback">Vui lòng nhập tên menu</div>
             </div>
 
             <div class="form-group">
             <label for="url">Đường dẫn :</label>
-            <input type="text" class="form-control" name="url" 
+            <input type="text" class="form-control" name="url_menu" 
             placeholder="Nhập địa chỉ menu" required>
             <div class="invalid-feedback">Vui lòng nhập đường dẫn</div>
             </div>
@@ -112,7 +112,7 @@
             <div class="form-group">
             <label for="position">Vị trí :</label>
             <label class="text-danger">Vui lòng nhập số</label>
-            <input type="text" class="form-control" name="position"
+            <input type="text" class="form-control" name="position_menu"
             maxlength="1" placeholder="Nhập vị trí menu"  required>
             <div class="invalid-feedback">Vui lòng nhập vị trí</div>
             </div>
