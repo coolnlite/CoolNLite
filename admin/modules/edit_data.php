@@ -705,10 +705,12 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw'] == 0){
     $path2 = $fileName2 . '.' . $fileType2;
     $resultTW =  move_uploaded_file($_FILES['img_tw']['tmp_name'],$uploadPath2 . '/' .$path2);
     if($resultTW){
+       if($_POST['img_tw_old'] != ''){
         $img_tw_old = $_POST['img_tw_old'];
-        $link_tw = '../';
+        $link_tw = '../..';
         $file_tw = $link_tw.$img_tw_old;
         unlink($file_tw);
+       }
 
         $img_tw =  $tar_get2 . '/' .$path2;
         $sql = "UPDATE `seo_pages` SET `img_tw` = '$img_tw' WHERE `id` = $id_pages";
