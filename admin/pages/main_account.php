@@ -275,7 +275,7 @@
         </button>
       </div>
       <div class="modal-body">
-      <form id="fchangeUsers" class="needs-validation">
+      <form id="fchangeUsers" class="needs-validation" novalidate>
       
       </form>
       </div>
