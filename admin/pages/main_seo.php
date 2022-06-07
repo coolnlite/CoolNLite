@@ -104,7 +104,7 @@
                 <input type="text" maxlength="100" class="form-control" name="title-tw" 
                 placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#home-title-tw')" 
                 onkeydown="limit(this,100,'#home-title-tw')" required>
-                <div class="invalid-feedback">Vui lòng nhập tiêu đề cho bài viết</div>
+                <div class="invalid-feedback">Vui lòng nhập tiêu đề cho trang chủ</div>
                 </div>
                 
                 <div class="form-group">
@@ -113,13 +113,13 @@
                 <input type="text" maxlength="250" class="form-control" name="description-tw" 
                 placeholder="Nhập mô tả cho bài viết" onkeyup="limit(this,250,'#home-description-tw')" 
                 onkeydown="limit(this,250,'#home-description-tw')" required>
-                <div class="invalid-feedback">Vui lòng nhập mô tả cho bài viết</div>
+                <div class="invalid-feedback">Vui lòng nhập mô tả cho trang chủ</div>
                 </div>
                 
                 <div class="form-group">
                 <label for="img-tw">Ảnh đại diện twitter:</label>
                 <input type="file" class="form-control" name="img-tw" required>
-                <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho bài viết</div>
+                <div class="invalid-feedback">Vui lòng nhập ảnh đại diện cho trang chủ</div>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Thêm</button>
