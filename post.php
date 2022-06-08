@@ -22,14 +22,13 @@
             $time = $lt['time'];
         }
         if (!empty($id_news))
-        $cookieName='posts_'.$id_news;
+            $cookieView='posts_'.$id_news;
 
-            if(!isset($_COOKIE["$cookieName"]))
+            if(!isset($_COOKIE["$cookieView"]))
             {
-
-            setcookie("$cookieName","1",time()+3600);
-            $sql = "UPDATE `news` SET `view`=`view`+1 WHERE `id`='$id_news'";
-            mysqli_query($conn,$sql);
+                setcookie("$cookieView","1",time() + 1800);
+                $sql = "UPDATE `news` SET `view`=`view`+1 WHERE `id`='$id_news'";
+                mysqli_query($conn,$sql);
             }
 ?>
 <!DOCTYPE html>
