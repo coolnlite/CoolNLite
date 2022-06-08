@@ -18,7 +18,7 @@
         foreach($seo_pages as $sp){
             
     ?>
-  <title>COOL N LITE - Phim cách nhiệt</title>
+  <title><?php print $sp['title']?></title>
   <meta name="description" content="<?php print $sn['description']?>"/>
   <meta name="keywords" content="<?php print $sn['keyword']?>"/>
   <meta name="robots" content="noarchive,index,follow"/>
