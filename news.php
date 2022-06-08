@@ -159,8 +159,8 @@
       ?>
       <!-- javasript -->
       <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-      <script src="./public/js/script.js"></script>
-      <script src="./public/js/loadmore.js"></script>
+      <script src="<?php print $base_url?>/public/js/script.js"></script>
+      <script src="<?php print $base_url?>/public/js/loadmore.js"></script>
       <!-- javasript -->
    </body>
 </html>

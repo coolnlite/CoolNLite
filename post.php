@@ -90,11 +90,11 @@
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
     <!-- fontawesome -->
     <!-- css -->
-    <link rel="icon" sizes="32x32" href="./shared/img/icon.png">
-    <link rel="stylesheet" href="./public/css/style.css" />
-    <link rel="stylesheet" href="./public/css/reponsive.css" />
-    <link rel="stylesheet" href="./public/css/slider.css">
-    <link rel="stylesheet" href="./public/css/news.css">
+    <link rel="icon" sizes="32x32" href="<?php print $base_url?>/shared/img/icon.png">
+    <link rel="stylesheet" href="<?php print $base_url?>/public/css/style.css" />
+    <link rel="stylesheet" href="<?php print $base_url?>/public/css/reponsive.css" />
+    <link rel="stylesheet" href="<?php print $base_url?>/public/css/slider.css">
+    <link rel="stylesheet" href="<?php print $base_url?>/public/css/news.css">
     <!-- css -->
 </head>
 
@@ -117,7 +117,7 @@
                 <div class="posts-main">
                     <div class="posts-top">
                         <div class="posts-heading">
-                            <h1>
+                            <h1 title="<?php echo ''.$ps['title'].''?>">
                                <?php echo ''.$ps['title'].''?>
                             </h1>
                         </div>
@@ -131,7 +131,7 @@
                             ?>
                                 <a>
                                     <div class="card-img">
-                                        <img class="users" src=".<?php echo ''.$us['image'].''?>" alt="Người viết">
+                                        <img class="users" src="<?php echo ''.$base_url.$us['image'].''?>" alt="avatar">
                                     </div>
                                     <div class="card-title">
                                         <h6>Chia sẻ bởi</h6>
@@ -150,7 +150,8 @@
                                 </h5>
                                 <span class="view">
                                     <i class="far fa-eye"></i>
-                                    <?php echo ''.$ps['view'].''?></span>
+                                    <?php echo ''.$ps['view'].''?>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -178,9 +179,9 @@
                             ?>
                             <li class="tag-items">
                                 
-                                <a href="tag.php?id=<?php echo ''.$kw['id'].''?>&keyword=<?php
+                                <a href="tu-khoa/<?php echo ''.$kw['id'].''?>/<?php
                                     echo str_replace(' ', '+', $kw['name']);
-                                ?>">
+                                ?>.html">
                                     <?php echo ''.$kw['name'].''?>
                                 </a>
                             </li>
