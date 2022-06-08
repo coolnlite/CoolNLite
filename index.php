@@ -9,6 +9,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COOL N LITE - Phim cách nhiệt</title>
   <!-- fontawesome -->
   <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
   <!-- fontawesome -->
@@ -19,8 +20,7 @@
   <link rel="stylesheet" href="./public//css/news.css">
   <link rel="stylesheet" href="./public/css/slider.css">
   <!-- css -->
-  <!-- one page scroll -->
-  <title>COOL N LITE - Phim cách nhiệt</title>
+  
 </head>
 
 <body class="body">
@@ -303,6 +303,55 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script>
   <script src="./public/js/checkinput.js"></script>
   <!-- jquery validation -->
+  <!-- css on sroll pages -->
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script>
+ 
+ ScrollReveal({ reset: true });
+
+
+  ScrollReveal().reveal(".title", {
+    duration: 2000,
+    origin: "top",
+    distance: "300px",
+    easing: "cubic-bezier(0.5, 0, 0, 1)",
+    rotate: {
+      x: 20,
+      z: -10
+    }
+  });
+
+  ScrollReveal().reveal(".block-bottom .main-list-menu .box-para-top", {
+    duration: 2000,
+    move: 0
+  });
+
+  ScrollReveal().reveal(".section-gird .gird-top .box-title", {
+    duration: 2000,
+    origin: "left",
+    distance: "300px",
+    easing: "ease-in-out"
+  });
+  
+
+  ScrollReveal().reveal(".btn-menu", {
+    duration: 3000,
+    origin: "right",
+    distance: "300px",
+    easing: "ease-in-out"
+  });
+
+  ScrollReveal().reveal(".main-future .box-future-text .item-future", {
+    duration: 2000,
+    origin: "bottom",
+    distance: "100px",
+    easing: "cubic-bezier(.37,.01,.74,1)",
+    opacity: 0.3,
+    scale: 0.5
+  });
+
+  </script>
+  <!-- css on sroll pages -->
 </body>
 
 </html>
