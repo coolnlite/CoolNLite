@@ -260,6 +260,9 @@
           })
       });
 
+
+
+  //view menu
       $(document).on('click','.editMenuBtn',function(event){
         var id_menu = $(this).data('id');
         $.ajax({
@@ -274,6 +277,28 @@
             }
         });
       })
+
+      //Chỉnh sửa menu
+
+      $("#feditMenu").on('submit', function(e){
+          e.preventDefault();
+              $.ajax({
+              type: 'POST',
+              url: '<?php print $DOMAIN.'modules/edit_data.php'?>',
+              data: $(this).serializeArray(),
+              success: function(response){
+                var response = JSON.parse(response);
+                  if(response.status == 1){
+                      alert(response.message);
+                      window.location.reload();
+                  }else{
+                      alert(response.message);
+                  }
+                  
+              }
+          })
+      });
+
 
     });
     
