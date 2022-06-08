@@ -175,7 +175,7 @@
   <div class="modal-dialog" style="max-width : 700px" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Chỉnh sửa footer</h5>
+        <h5 class="modal-title">Chỉnh sửa sidebar</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

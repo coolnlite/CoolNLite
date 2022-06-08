@@ -216,8 +216,7 @@
 
             <div class="form-group">
             <label for="Icon">Icon :</label>
-            <input type="text" class="form-control" value="<?php print $sb['icon']?>" name="icon_sidebar" 
-            placeholder="Nhập icon" required>
+            <textarea class="form-control" rows="1" name="icon_sidebar" required><?php print $sb['icon'] ?></textarea>
             <div class="invalid-feedback">Vui lòng nhập icon</div>
             </div>
 
@@ -231,8 +230,8 @@
             <div class="form-group">
             <label for="mail">Vị trí :</label>
             <label class="text-danger">Vui lòng nhập số</label>
-            <input type="email" class="form-control" value="<?php print $sb['position']?>" name="position_sidebar" 
-            placeholder="Nhập vị trí" required>
+            <input type="text" class="form-control" value="<?php print $sb['position']?>" name="position_sidebar" 
+            placeholder="Nhập vị trí" maxlength="1" required>
             <div class="invalid-feedback">Vui lòng nhập vị trí</div>
             </div>
 

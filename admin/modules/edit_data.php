@@ -2096,4 +2096,39 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
         }
     }
 
+
+    //Chỉnh sửa sidebar
+
+    if(!empty($_POST['id_sidebar']) && !empty($_POST['url_sidebar']) &&
+     !empty($_POST['icon_sidebar']) && !empty($_POST['name_sidebar'])  &&
+     isset($_POST['position_sidebar'])){
+
+        $id_footer = mysqli_real_escape_string($conn, $_POST['id_footer']);
+        $copyright = mysqli_real_escape_string($conn, $_POST['copyright']);
+        $address = mysqli_real_escape_string($conn, $_POST['address']);
+        $phone = mysqli_real_escape_string($conn, $_POST['phone']);
+        $mail = mysqli_real_escape_string($conn, $_POST['mail']);
+        $title = mysqli_real_escape_string($conn, $_POST['title']);
+        $subtitle = mysqli_real_escape_string($conn, $_POST['subtitle']);
+        $time = date('Y-m-d H:i:s');
+    
+        $sql = "UPDATE `footer` SET `copyright` = '$copyright', `address` = '$address', 
+        `phone` = '$phone', `mail` = '$mail',`title` = '$title', `subtitle` = '$subtitle',
+        `time` = '$time' WHERE `id` = '$id_footer'";
+        $result = mysqli_query($conn,$sql);
+        if($result == true){
+            echo json_encode(array(
+                'status' => 1,
+                'message' => 'Cập nhật footer thành công'
+            ));
+            exit();
+        }else{
+            echo json_encode(array(
+                'status' => 0,
+                'message' => 'Cập nhật footer thất bại'
+            ));
+            exit();
+        }
+    }
+
  ?>
