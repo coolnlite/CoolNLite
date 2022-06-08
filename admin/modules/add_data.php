@@ -165,7 +165,7 @@
     }
 
 //Thêm seo chính cho bài viết
-if(!empty($_POST['id_news']) && !empty($_POST['title']) && !empty($_FILES['img-tw']) &&
+if(!empty($_POST['id_news']) && !empty($_FILES['img-tw']) &&
 !empty($_POST['description']) && !empty($_POST['keyword']) && !empty($_POST['link-fb']) &&
 !empty($_FILES['img-fb']) && !empty($_POST['title-fb']) && !empty($_POST['description-fb']) && 
 !empty($_POST['keyword-fb']) && !empty($_POST['title-tw']) && !empty($_POST['description-tw'])){
@@ -290,7 +290,6 @@ if(!empty($_POST['id_news']) && !empty($_POST['title']) && !empty($_FILES['img-t
 
     if($resultTW && $resultFB){
         $id_news = mysqli_real_escape_string($conn, $_POST['id_news']);
-        $title = mysqli_real_escape_string($conn, $_POST['title']);
         $description = mysqli_real_escape_string($conn, $_POST['description']);
         $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
         $link_fb = mysqli_real_escape_string($conn, $_POST['link-fb']);
@@ -300,9 +299,9 @@ if(!empty($_POST['id_news']) && !empty($_POST['title']) && !empty($_FILES['img-t
         $title_tw = mysqli_real_escape_string($conn, $_POST['title-tw']);
         $description_tw = mysqli_real_escape_string($conn, $_POST['description-tw']);
 
-        $sql = "INSERT INTO `seo_news` (`id_news`,`title`,`description`,`keyword`,`link_fb`,`img_fb`,
+        $sql = "INSERT INTO `seo_news` (`id_news`,`description`,`keyword`,`link_fb`,`img_fb`,
         `title_fb`,`description_fb`,`keyword_fb`,`title_tw`,`description_tw`,`img_tw`)
-        VALUES ('$id_news','$title','$description','$keyword','$link_fb','$img_fb',
+        VALUES ('$id_news','$description','$keyword','$link_fb','$img_fb',
         '$title_fb','$description_fb','$keyword_fb','$title_tw','$description_tw','$img_tw')";
 
         $result = mysqli_query($conn,$sql);

@@ -12,15 +12,6 @@
                 <input type="hidden" name="id_news" value="<?php print $id?>"  required>
 
                 <div class="form-group">
-                <label for="title">Tiêu đề :</label>
-                <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title" class="text-danger">100</span> ký tự</span>
-                <input type="text" maxlength="100" class="form-control" id="title" name="title" 
-                placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title')" 
-                onkeydown="limit(this,100,'#n-title')" required>
-                <div class="invalid-feedback">Vui lòng nhập tiêu đề cho bài viết</div>
-                </div>
-
-                <div class="form-group">
                 <label for="description">Mô tả:</label>
                 <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-description" class="text-danger">250</span> ký tự</span>
                 <input type="text" maxlength="250" class="form-control" id="description" name="description" 
@@ -121,15 +112,6 @@
         <form id="feditseomain" class="needs-validation"novalidate>
             <input type="hidden" name="id_news" value="<?php print $id?>"  required>
             <input type="hidden" name="id_tag" value="<?php print $sn['id']?>"  required>
-
-            <div class="form-group">
-            <label for="title">Tiêu đề :</label>
-            <span class="ml-1 font-weight-bold">Bạn còn tối đa <span id="n-title" class="text-danger">100</span> ký tự</span>
-            <input type="text" maxlength="100" class="form-control" id="title" name="title" 
-            placeholder="Nhập tiêu đề cho bài viết" onkeyup="limit(this,100,'#n-title')" 
-            onkeydown="limit(this,100,'#n-title')" value="<?php print $sn['title']?>" required>
-            <div class="invalid-feedback">Vui lòng nhập tiêu đề cho bài viết</div>
-            </div>
 
             <div class="form-group">
             <label for="description">Mô tả:</label>

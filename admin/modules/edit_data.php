@@ -141,7 +141,7 @@ if($result == true){
 
 
 //Chỉnh sửa seo chính cho bài viết
-if(!empty($_POST['id_news']) && !empty($_POST['id_tag'])&& !empty($_POST['title']) && !empty($_POST['img-tw-old']) &&
+if(!empty($_POST['id_news']) && !empty($_POST['id_tag']) && !empty($_POST['img-tw-old']) &&
 !empty($_POST['description']) && !empty($_POST['keyword']) && !empty($_POST['link-fb']) &&
 !empty($_POST['img-fb-old']) && !empty($_POST['title-fb']) && !empty($_POST['description-fb']) && 
 !empty($_POST['keyword-fb']) && !empty($_POST['title-tw']) && !empty($_POST['description-tw'])){
@@ -289,7 +289,6 @@ if(!empty($_FILES['img-tw']) && $_FILES['img-tw']['error'] == 0){
     }
 }
  
-        $title = mysqli_real_escape_string($conn, $_POST['title']);
         $description = mysqli_real_escape_string($conn, $_POST['description']);
         $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
         $link_fb = mysqli_real_escape_string($conn, $_POST['link-fb']);
@@ -299,7 +298,7 @@ if(!empty($_FILES['img-tw']) && $_FILES['img-tw']['error'] == 0){
         $title_tw = mysqli_real_escape_string($conn, $_POST['title-tw']);
         $description_tw = mysqli_real_escape_string($conn, $_POST['description-tw']);
 
-        $sql = "UPDATE `seo_news` SET `title` = '$title', `description` = '$description',
+        $sql = "UPDATE `seo_news` SET `description` = '$description',
         `keyword` = '$keyword',`link_fb` = '$link_fb', `title_fb` = '$title_fb', 
         `description_fb` = '$description_fb',`keyword_fb` = '$keyword_fb',
         `title_tw` = '$title_tw',`description_tw` = '$description_tw'
