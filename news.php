@@ -80,7 +80,7 @@
          <main role="main">
             <header>
                <div class="container">
-                  <h1 class="page-title"><a href="tin-tuc.html">Tin Tức</a></h1>
+                  <h1 class="page-title" title="tin tức"><a href="tin-tuc.html">Tin Tức</a></h1>
                </div>
             </header>
             <section id="news-list">
@@ -99,7 +99,7 @@
                         <li class="items-news news">
                            <a class="link-news" href="<?php echo ''.$ns['url'].''?>.html">
                               <article class="posts">
-                                 <figure class="box-img fix">
+                                 <figure class="box-img fix" title="<?php echo ''.$ns['title'].''?>">
                                     <img src="<?php echo ''.$base_url.$ns['thumnail'].''?>" alt="thumnail">
                                     <i class="fas fa-eye"></i>
                                  </figure>
@@ -133,8 +133,8 @@
                                        </div>
                                     </div>
                                     <div class="describe">
-                                       <p class="limit-3">
-                                       <?php echo ''.$ns['description'].''?>
+                                       <p class="limit-3" title="<?php echo ''.$ns['title'].''?>">
+                                          <?php echo ''.$ns['description'].''?>
                                        </p>
                                     </div>
                                  </div>

@@ -1,6 +1,6 @@
 <div class="box-menu">
         <header class="header">
-          <h1 class="logo">
+          <h1 class="logo" title="COOL N LITE">
             <a href="index.html" class="logo-link">
               <img src="<?php print $base_url?>/shared/img/logo.png" alt="Logo Cool N Lite" />
             </a>
