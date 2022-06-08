@@ -68,7 +68,6 @@
     <link rel="stylesheet" href="./public/css/news.css" />
     <link rel="stylesheet" href="./public/css/slider.css">
     <!-- css -->
-    <title>Đại Lý - COOL N LITE</title>
 </head>
 
 <body class="body">
