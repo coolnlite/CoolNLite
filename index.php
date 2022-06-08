@@ -322,7 +322,7 @@
   });
 
   ScrollReveal().reveal(".block-bottom .main-list-menu .box-para-top", {
-    duration: 2000,
+    duration: 3000,
     move: 0
   });
 
