@@ -20,7 +20,6 @@
   <link rel="stylesheet" href="./public/css/slider.css">
   <!-- css -->
   <!-- one page scroll -->
-  <!-- one page scroll -->
   <title>COOL N LITE - Phim cách nhiệt</title>
 </head>
 
@@ -287,12 +286,10 @@
     <section id="video">
       <video loop autoplay muted controls src="./shared/video/tru-so.mov"></video>
     </section>
-    <?php 
-    require_once('./pages/footer.php');
-    ?>
     <!-- VIDEO  -->
   </div>
-  <?php 
+  <?php
+    require_once('./pages/footer.php');
     require_once('./pages/popup_form.php');
   ?>
   <!-- javasript -->
@@ -306,12 +303,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script>
   <script src="./public/js/checkinput.js"></script>
   <!-- jquery validation -->
-  <!-- one page scroll -->
-  <script src=""></script>
-  <script>
-   
-  </script>
-  <!-- one page scroll -->
 </body>
 
 </html>

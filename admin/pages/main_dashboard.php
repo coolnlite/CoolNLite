@@ -2,7 +2,12 @@
 <div class="cardBox">
     <div class="card">
         <div>
-            <div class="numbers">1,504</div>
+            <?php
+                $sql = "SELECT count(*) AS allcount FROM `contact`";
+                $fetch = executeResult($sql);
+                $allcount = $fetch[0]['allcount'];
+            ?>
+            <div class="numbers"><?php print $allcount?></div>
             <div class="cardName">Tổng số khách hàng</div>
         </div>
 
@@ -13,7 +18,7 @@
 
     <div class="card">
         <div>
-            <div class="numbers">80</div>
+            <div class="numbers">0</div>
             <div class="cardName">Tổng số bình luận</div>
         </div>
 
@@ -24,7 +29,12 @@
 
     <div class="card">
         <div>
-            <div class="numbers">284</div>
+            <?php
+                $sql = "SELECT count(*) AS allcount FROM `news`";
+                $fetch = executeResult($sql);
+                $allcount = $fetch[0]['allcount'];
+            ?>
+            <div class="numbers"><?php print $allcount?></div>
             <div class="cardName">Tổng số bài viết</div>
         </div>
 
@@ -35,8 +45,16 @@
 
     <div class="card">
         <div>
-            <div class="numbers">77</div>
-            <div class="cardName">Lượt xem bài viết cao nhất</div>
+            <?php
+                $sql = "SELECT MAX(view) FROM news WHERE `status` = 1 ";
+                $view = executeResult($sql);
+                foreach($view as $v){
+                    
+                }
+
+            ?>
+            <div class="numbers"><?php print $v['MAX(view)']?></div>
+            <div class="cardName">Bài viết có lượt xem cao nhất</div>
         </div>
 
         <div class="iconBx">
