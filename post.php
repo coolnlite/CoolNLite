@@ -7,8 +7,6 @@
 
     if(isset($_GET['url'])){
         $posts = $_GET['url'] = !"" ? mysqli_real_escape_string($conn, $_GET['url']) : '';
-    }else{
-      require_once('./error_404.php');
     }
     $sql = "SELECT * FROM `news` WHERE `url` = '$posts'";
     $result = mysqli_query($conn, $sql);
@@ -31,6 +29,7 @@
                 $sql = "UPDATE `news` SET `view`=`view`+1 WHERE `id`='$id_news'";
                 mysqli_query($conn,$sql);
             }
+        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -265,8 +264,3 @@
 </body>
 
 </html>
-<?php
-    }else{
-       require_once('./error_404.php');
-    }
-?>
