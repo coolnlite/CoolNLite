@@ -222,9 +222,9 @@
             </div>
 
             <div class="form-group">
-            <label for="phone">Số điện thoại :</label>
-            <input type="text" class="form-control" value="<?php print $sb['name']?>" name="phone" 
-            placeholder="Nhập số điện thoại" maxlength="10" required>
+            <label for="name">Tên sidebar :</label>
+            <input type="text" class="form-control" value="<?php print $sb['name']?>" name="name_sidebar" 
+            placeholder="Nhập tên sidebar" required>
             <div class="invalid-feedback">Vui lòng nhập số điện thoại</div>
             </div>
 
