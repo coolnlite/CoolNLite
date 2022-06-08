@@ -2,6 +2,8 @@
     require_once('./config/config.php');
     require_once('./config/dbhelper.php');
     require_once('./admin/modules/function.php');
+    $base_url = 'http://localhost/CoolNLite';
+
     if(isset($_GET['url'])){
         $posts = $_GET['url'] = !"" ? mysqli_real_escape_string($conn, $_GET['url']) : '';
     }else{
@@ -12,12 +14,13 @@
     $rowcount = mysqli_num_rows($result);
     
     if (isset($rowcount) && $rowcount != 0) { // Kiểm tra có bài viết này không
-        $sql = "SELECT `id`,`title` FROM `news` WHERE `url` = '$posts'";
+        $sql = "SELECT `id`,`title`,`time` FROM `news` WHERE `url` = '$posts'";
         $list = executeResult($sql);
         foreach($list as $lt){ 
             $title = $lt['title'];
+            $id_news = $lt['id'];
+            $time = $lt['time'];
         }
-       
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,11 +29,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <base href="">
     <!-- meta main -->
-    <title><?php print $title.' - COOL N LITE'?></title>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
+    <title><?php print $title.' - Phim cách nhiệt COOL N LITE'?></title>
+    <?php
+        $sql = "SELECT * FROM `seo_news` WHERE `id_news` = '$id_news'";
+        $seo_news = executeResult($sql);
+        foreach($seo_news as $sn){
+            
+    ?>
+    <meta name="description" content="<?php print $sn['description']?>"/>
+    <meta name="keywords" content="<?php print $sn['keyword']?>"/>
     <meta name="robots" content="noarchive,index,follow"/>
     <meta http-equiv=”content-language” content=”vi” />
     <meta name="copyright" content="COOL N LITE"/>
@@ -44,29 +52,31 @@
     <meta name="revisit-after" content="days"/>
     <!-- meta main -->
     <!-- FACEBOOK -->
-    <meta property="og:site_name" content="vnexpress.net"/>
+    <meta property="og:site_name" content="coolnlite.vn"/>
     <meta property="og:rich_attachment" content="true"/>
     <meta property="og:type" content="article"/>
-    <meta property="article:publisher" content="https://www.facebook.com/congdongvnexpress/"/>
-    <meta property="article:published_time" content="Ngày xuất bản. Ví dụ: 2021-16-17T05:59:00+01:00" />
-    <meta property="og:url" itemprop="url" content=""/>
-    <meta property="og:image" itemprop="thumbnailUrl" content=""/>
+    <meta property="article:publisher" content="<?php print $sn['link_fb']?>"/>
+    <meta property="article:published_time" content="<?php print $time ?>" />
+    <meta property="og:url" itemprop="url" content="<?php print getCurrentPageURL() ?>"/>
+    <meta property="og:image" itemprop="thumbnailUrl" content="<?php print $base_url.$sn['img_fb']?>"/>
     <meta property="og:image:width" content="800"/>
     <meta property="og:image:height" content="354"/>
-    <meta content="Phạm nhân 'vượt ngục' Triệu Quân Sự bị bắt" itemprop="headline" property="og:title"/>
-    <meta content="Gần 15h hôm nay, Triệu Quân Sự, phạm nhân mang án chung thân, bị bắt tại xã Yên Dương, huyện Hà Trung, sau gần một ngày trốn khỏi trại giam quân đội T-974." itemprop="description" property="og:description"/>
-    <meta property="article:tag" content="Triệu Quân Sự,Thanh Hóa,Tin nóng"/>
+    <meta content="<?php print $sn['title_fb']?>" itemprop="headline" property="og:title"/>
+    <meta content="<?php print $sn['description_fb']?>" itemprop="description" property="og:description"/>
+    <meta property="article:tag" content="<?php print $sn['keyword_fb']?>"/>
     <!-- FACEBOOK -->
     <!-- Twitter Card -->
     <meta name="twitter:card" value="summary"/>
-    <meta name="twitter:url" content=""/>
-    <meta name="twitter:title" content=""/>
-    <meta name="twitter:description" content=""/>
-    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content="<?php print getCurrentPageURL() ?>"/>
+    <meta name="twitter:title" content="<?php print $sn['title_tw']?>"/>
+    <meta name="twitter:description" content="<?php print $sn['description_tw']?>"/>
+    <meta name="twitter:image" content="<?php print $base_url.$sn['img_tw']?>"/>
     <meta name="twitter:site" content="@COOLNLITE"/>
     <meta name="twitter:creator" content="@COOLNLITE"/>
     <!-- End Twitter Card -->
-
+    <?php 
+        }//Vòng lặp seo
+    ?>
     <!-- fontawesome -->
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
     <!-- fontawesome -->

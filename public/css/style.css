@@ -1279,7 +1279,7 @@ a.btn-up {
 }
 
 .footer-distributed .footer-icons a:hover {
-    color: aqua;
+    color: var(--color-blue);
 }
 
 @media (max-width: 880px) {
