@@ -196,3 +196,48 @@
     }
 }
 ?>
+
+<?php 
+    //View sidebar
+    if(isset($_POST['view_sidebar']) && !empty($_POST['id_sidebar'])){
+        $id_sidebar = $_POST['id_sidebar'];
+        $sql = "SELECT * FROM `sidebar` WHERE `id` = '$id_sidebar'";
+        $sidebar = executeResult($sql);
+        foreach($sidebar as $sb){
+?>
+            <input type="hidden" value="<?php print $sb['id']?>" name="id_sidebar">
+
+            <div class="form-group">
+            <label for="url_sidebar">Đường dẫn :</label>
+            <input type="text" class="form-control" value="<?php print $sb['url']?>" name="url_sidebar" 
+            placeholder="Nhập đường dẫn" required>
+            <div class="invalid-feedback">Vui lòng nhập đường dẫn</div>
+            </div>
+
+            <div class="form-group">
+            <label for="Icon">Icon :</label>
+            <input type="text" class="form-control" value="<?php print $sb['icon']?>" name="icon_sidebar" 
+            placeholder="Nhập icon" required>
+            <div class="invalid-feedback">Vui lòng nhập icon</div>
+            </div>
+
+            <div class="form-group">
+            <label for="phone">Số điện thoại :</label>
+            <input type="text" class="form-control" value="<?php print $sb['name']?>" name="phone" 
+            placeholder="Nhập số điện thoại" maxlength="10" required>
+            <div class="invalid-feedback">Vui lòng nhập số điện thoại</div>
+            </div>
+
+            <div class="form-group">
+            <label for="mail">Vị trí :</label>
+            <label class="text-danger">Vui lòng nhập số</label>
+            <input type="email" class="form-control" value="<?php print $sb['position']?>" name="position_sidebar" 
+            placeholder="Nhập vị trí" required>
+            <div class="invalid-feedback">Vui lòng nhập vị trí</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Thêm</button>
+<?php 
+    }
+}
+?>

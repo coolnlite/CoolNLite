@@ -337,6 +337,44 @@
           });
 
 
+           //view sidebar
+      $(document).on('click','.editSidebarBtn',function(event){
+        var id_sidebar = $(this).data('id');
+        $.ajax({
+            url: '<?php echo ''.$DOMAIN.'modules/view_data.php'?>',
+            data: {
+            view_sidebar : true,
+            id_sidebar : id_sidebar
+            },
+            type: "post",
+            success: function(data) {
+                $('#feditSidebar').html(data);
+            }
+        });
+      })
+
+    //Chỉnh sửa sidebar
+
+    $("#feditSidebar").on('submit', function(e){
+              e.preventDefault();
+                  $.ajax({
+                  type: 'POST',
+                  url: '<?php print $DOMAIN.'modules/edit_data.php'?>',
+                  data: $(this).serializeArray(),
+                  success: function(response){
+                    var response = JSON.parse(response);
+                      if(response.status == 1){
+                          alert(response.message);
+                          window.location.reload();
+                      }else{
+                          alert(response.message);
+                      }
+                      
+                  }
+              })
+          });
+
+
     });
     
   </script>
