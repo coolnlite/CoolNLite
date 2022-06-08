@@ -1,7 +1,7 @@
 <!-- FOOTER -->
 <footer class="footer-distributed">
     <div class="footer-left">
-      <h3><a href="./"><img src="./shared/img/logo.png" alt="Logo Cool N Lite"></a></h3>
+      <h3><a href="index.html"><img src="<?php print $base_url?>/shared/img/logo.png" alt="Logo Cool N Lite"></a></h3>
 
       <p class="footer-links">
       <?php
