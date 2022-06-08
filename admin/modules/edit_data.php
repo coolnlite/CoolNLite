@@ -2106,24 +2106,24 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
         $id_sidebar = mysqli_real_escape_string($conn, $_POST['id_sidebar']);
         $url_sidebar = mysqli_real_escape_string($conn, $_POST['url_sidebar']);
         $icon_sidebar = mysqli_real_escape_string($conn, $_POST['icon_sidebar']);
-        $phone = mysqli_real_escape_string($conn, $_POST['phone']);
-        $mail = mysqli_real_escape_string($conn, $_POST['mail']);
+        $name_sidebar = mysqli_real_escape_string($conn, $_POST['name_sidebar']);
+        $position_sidebar = mysqli_real_escape_string($conn, $_POST['position_sidebar']);
         $time = date('Y-m-d H:i:s');
     
-        $sql = "UPDATE `footer` SET `copyright` = '$copyright', `address` = '$address', 
-        `phone` = '$phone', `mail` = '$mail',`title` = '$title', `subtitle` = '$subtitle',
-        `time` = '$time' WHERE `id` = '$id_footer'";
+        $sql = "UPDATE `sidebar` SET `url` = '$url_sidebar', `icon` = '$icon_sidebar', 
+        `name` = '$name_sidebar', `position` = '$position_sidebar',`time` = '$time'
+         WHERE `id` = '$id_sidebar'";
         $result = mysqli_query($conn,$sql);
         if($result == true){
             echo json_encode(array(
                 'status' => 1,
-                'message' => 'Cập nhật footer thành công'
+                'message' => 'Cập nhật sidebar thành công'
             ));
             exit();
         }else{
             echo json_encode(array(
                 'status' => 0,
-                'message' => 'Cập nhật footer thất bại'
+                'message' => 'Cập nhật sidebar thất bại'
             ));
             exit();
         }

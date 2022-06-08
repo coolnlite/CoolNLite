@@ -287,10 +287,12 @@
     <section id="video">
       <video loop autoplay muted controls src="./shared/video/tru-so.mov"></video>
     </section>
+    <?php 
+    require_once('./pages/footer.php');
+    ?>
     <!-- VIDEO  -->
   </div>
   <?php 
-    require_once('./pages/footer.php');
     require_once('./pages/popup_form.php');
   ?>
   <!-- javasript -->
@@ -305,7 +307,10 @@
   <script src="./public/js/checkinput.js"></script>
   <!-- jquery validation -->
   <!-- one page scroll -->
-  
+  <script src=""></script>
+  <script>
+   
+  </script>
   <!-- one page scroll -->
 </body>
 
