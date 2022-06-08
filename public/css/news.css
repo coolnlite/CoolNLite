@@ -1233,6 +1233,10 @@ section .main-about .btn-lh:hover {
 .item-agency {
   padding: 50px 20px;
 }
+.item-agency.active{
+  opacity: 1;
+  top : 0;
+}
 
 .item-agency .container-agency {
   display: table;
