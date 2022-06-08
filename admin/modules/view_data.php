@@ -104,7 +104,7 @@
 ?>
 
 <?php 
-    //Chỉnh sửa menu
+    //View menu
     if(isset($_POST['view_menu']) && !empty($_POST['id_menu'])){
         $id_menu = $_POST['id_menu'];
         $sql = "SELECT * FROM `menu` WHERE `id` = '$id_menu'";
@@ -141,7 +141,7 @@
 ?>
 
 <?php 
-    //Chỉnh sửa menu
+    //View footer
     if(isset($_POST['view_footer']) && !empty($_POST['id_footer'])){
         $id_footer = $_POST['id_footer'];
         $sql = "SELECT * FROM `footer` WHERE `id` = '$id_footer'";
