@@ -62,11 +62,11 @@
   <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
   <!-- fontawesome -->
   <!-- css -->
-  <link rel="icon" sizes="32x32" href="./shared/img/icon.png">
-  <link rel="stylesheet" href="/public/css/style.css" />
-  <link rel="stylesheet" href="/public/css/reponsive.css" />
-  <link rel="stylesheet" href="/public//css/news.css">
-  <link rel="stylesheet" href="/public/css/slider.css">
+  <link rel="icon" sizes="32x32" href="<?php print $base_url?>/shared/img/icon.png">
+  <link rel="stylesheet" href="<?php print $base_url?>/public/css/style.css" />
+  <link rel="stylesheet" href="<?php print $base_url?>/public/css/reponsive.css" />
+  <link rel="stylesheet" href="<?php print $base_url?>/public/css/news.css">
+  <link rel="stylesheet" href="<?php print $base_url?>/public/css/slider.css">
   <!-- css -->
   
 </head>
@@ -76,7 +76,7 @@
     <!-- SETION 1 -->
     <section class="section menu bg-index-1" id="section-1">
       <?php 
-        require_once('/pages/menu.php');
+        require_once($base_url.'/pages/menu.php');
       ?>
       <div class="box-title-menu">
         <h1 class="title">THE TITANIUM FILM</h1>
