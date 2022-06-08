@@ -37,7 +37,7 @@ $(document).ready(function () {
                             .fadeIn("slow");
                         var rowno = row + 5;
                         if (rowno > allcount) {
-                            $(".btn-news").hide();
+                            $(".btn-news").text('Ẩn Đi');
                         } else {
                             $(".btn-news").text('Xem Thêm');
                         }

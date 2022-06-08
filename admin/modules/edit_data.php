@@ -2103,13 +2103,11 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
      !empty($_POST['icon_sidebar']) && !empty($_POST['name_sidebar'])  &&
      isset($_POST['position_sidebar'])){
 
-        $id_footer = mysqli_real_escape_string($conn, $_POST['id_footer']);
-        $copyright = mysqli_real_escape_string($conn, $_POST['copyright']);
-        $address = mysqli_real_escape_string($conn, $_POST['address']);
+        $id_sidebar = mysqli_real_escape_string($conn, $_POST['id_sidebar']);
+        $url_sidebar = mysqli_real_escape_string($conn, $_POST['url_sidebar']);
+        $icon_sidebar = mysqli_real_escape_string($conn, $_POST['icon_sidebar']);
         $phone = mysqli_real_escape_string($conn, $_POST['phone']);
         $mail = mysqli_real_escape_string($conn, $_POST['mail']);
-        $title = mysqli_real_escape_string($conn, $_POST['title']);
-        $subtitle = mysqli_real_escape_string($conn, $_POST['subtitle']);
         $time = date('Y-m-d H:i:s');
     
         $sql = "UPDATE `footer` SET `copyright` = '$copyright', `address` = '$address', 

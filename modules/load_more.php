@@ -57,6 +57,6 @@ require_once('../admin/modules/function.php');
             </li>     
         <?php }
          //Kết thúc foreach
-        echo '<a class="custom-btn btn-3 btn-show btn-news"><span>Xem Thêm</span></a>';
+        echo '<a class="btn-show btn-news">Xem Thêm</a>';
     } //Kết thúc if hot
 ?>
