@@ -315,6 +315,28 @@
         });
       })
 
+    //Chỉnh sửa footer
+
+    $("#feditFooter").on('submit', function(e){
+              e.preventDefault();
+                  $.ajax({
+                  type: 'POST',
+                  url: '<?php print $DOMAIN.'modules/edit_data.php'?>',
+                  data: $(this).serializeArray(),
+                  success: function(response){
+                    var response = JSON.parse(response);
+                      if(response.status == 1){
+                          alert(response.message);
+                          window.location.reload();
+                      }else{
+                          alert(response.message);
+                      }
+                      
+                  }
+              })
+          });
+
+
     });
     
   </script>

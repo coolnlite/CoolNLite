@@ -172,8 +172,8 @@
             </div>
 
             <div class="form-group">
-            <label for="mail">Mail :</label>
-            <input type="mail" class="form-control" value="<?php print $ft['mail']?>" name="mail" 
+            <label for="mail">Email :</label>
+            <input type="email" class="form-control" value="<?php print $ft['mail']?>" name="mail" 
             placeholder="Nhập mail" required>
             <div class="invalid-feedback">Vui lòng nhập mail</div>
             </div>
