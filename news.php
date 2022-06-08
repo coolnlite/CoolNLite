@@ -118,18 +118,5 @@
       <script src="./public/js/script.js"></script>
       <script src="./public/js/loadmore.js"></script>
       <!-- javasript -->
-       <!-- css on sroll pages -->
-  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-  <script>
- 
- ScrollReveal({ reset: true });
-
-  ScrollReveal().reveal(".rows-news .col-news .items-news", {
-    duration: 3000,
-    move: 0
-  });
-
-  </script>
-  <!-- css on sroll pages -->
    </body>
 </html>
