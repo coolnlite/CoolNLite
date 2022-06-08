@@ -52,7 +52,7 @@
          display: inline-block;
          width: 120px;
          height: 120px;
-         background-image: url('./shared/img/emoji.png');
+         background-image: url('../shared/img/emoji.png');
          background-size: cover;
          -webkit-transform: scale(1.4);
          -ms-transform: scale(1.4);
@@ -114,7 +114,7 @@
       <!-- SECTION NEWS -->
       <section class="section menu news">
          <?php 
-            require_once('./pages/menu.php');
+            require_once('../pages/menu.php');
          ?>
       </section>
       <div id="notfound">
@@ -127,12 +127,12 @@
                Xin lỗi nhưng trang bạn đang tìm kiếm không tồn tại, đã bị xóa. tên đã thay đổi hoặc tạm thời không có
                sẵn
             </p>
-            <a href="./index.php">Quay lại trang chủ</a>
+            <a href="./">Quay lại trang chủ</a>
          </div>
       </div>
    </div>
    <?php 
-        require_once('./pages/footer.php');
+        require_once('../pages/footer.php');
       ?>
 </body>
 
