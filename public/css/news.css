@@ -1232,6 +1232,8 @@ section .main-about .btn-lh:hover {
 
 .item-agency {
   padding: 50px 20px;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 .item-agency.active{
   opacity: 1;
