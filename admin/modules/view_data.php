@@ -167,7 +167,7 @@
             <div class="form-group">
             <label for="phone">Số điện thoại :</label>
             <input type="text" class="form-control" value="<?php print $ft['phone']?>" name="phone" 
-            placeholder="Nhập số điện thoại" required>
+            placeholder="Nhập số điện thoại" maxlength="10" required>
             <div class="invalid-feedback">Vui lòng nhập số điện thoại</div>
             </div>
 
@@ -187,8 +187,7 @@
 
             <div class="form-group">
             <label for="subtitle">Tiêu đề con :</label>
-            <input type="text" class="form-control" value="<?php print $ft['subtitle']?>" name="subtitle" 
-            placeholder="Nhập tiêu đề con" required>
+            <textarea class="form-control" name="subtitle" rows="3" required><?php print $ft['subtitle']?></textarea>
             <div class="invalid-feedback">Vui lòng nhập tiêu đề con</div>
             </div>
 

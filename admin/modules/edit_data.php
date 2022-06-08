@@ -2084,13 +2084,13 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
         if($result == true){
             echo json_encode(array(
                 'status' => 1,
-                'message' => 'Cập nhật menu thành công'
+                'message' => 'Cập nhật footer thành công'
             ));
             exit();
         }else{
             echo json_encode(array(
                 'status' => 0,
-                'message' => 'Cập nhật menu thất bại'
+                'message' => 'Cập nhật footer thất bại'
             ));
             exit();
         }
