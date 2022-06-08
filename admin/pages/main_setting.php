@@ -83,7 +83,7 @@
     </div>
   </div>
 
-  <div class="modal fade" id="addMenu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="addMenu" tabindex="-1" role="dialog">
   <div class="modal-dialog" style="max-width : 700px" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -128,7 +128,53 @@
   </div>
 </div>
 
-<div class="modal fade" id="addSidebar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="editMenu" tabindex="-1" role="dialog">
+  <div class="modal-dialog" style="max-width : 700px" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Chỉnh sửa menu</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form id="feditMenu" class="needs-validation" novalidate>
+
+            <div class="form-group">
+            <label for="name">Tên menu :</label>
+            <input type="text" class="form-control" name="name_menu" 
+            placeholder="Nhập tên menu" required>
+            <div class="invalid-feedback">Vui lòng nhập tên menu</div>
+            </div>
+
+            <div class="form-group">
+            <label for="url">Đường dẫn :</label>
+            <input type="text" class="form-control" name="url_menu" 
+            placeholder="Nhập địa chỉ menu" required>
+            <div class="invalid-feedback">Vui lòng nhập đường dẫn</div>
+            </div>
+
+            <div class="form-group">
+            <label for="position">Vị trí :</label>
+            <label class="text-danger">Vui lòng nhập số</label>
+            <input type="text" class="form-control" name="position_menu"
+            maxlength="1" placeholder="Nhập vị trí menu"  required>
+            <div class="invalid-feedback">Vui lòng nhập vị trí</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Thêm</button>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="addSidebar" tabindex="-1" role="dialog">
   <div class="modal-dialog" style="max-width : 700px" role="document">
     <div class="modal-content">
       <div class="modal-header">
