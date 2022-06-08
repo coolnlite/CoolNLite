@@ -63,10 +63,10 @@
   <!-- fontawesome -->
   <!-- css -->
   <link rel="icon" sizes="32x32" href="./shared/img/icon.png">
-  <link rel="stylesheet" href="./public/css/style.css" />
-  <link rel="stylesheet" href="./public/css/reponsive.css" />
-  <link rel="stylesheet" href="./public//css/news.css">
-  <link rel="stylesheet" href="./public/css/slider.css">
+  <link rel="stylesheet" href="/public/css/style.css" />
+  <link rel="stylesheet" href="/public/css/reponsive.css" />
+  <link rel="stylesheet" href="/public//css/news.css">
+  <link rel="stylesheet" href="/public/css/slider.css">
   <!-- css -->
   
 </head>
@@ -76,7 +76,7 @@
     <!-- SETION 1 -->
     <section class="section menu bg-index-1" id="section-1">
       <?php 
-        require_once('./pages/menu.php');
+        require_once('/pages/menu.php');
       ?>
       <div class="box-title-menu">
         <h1 class="title">THE TITANIUM FILM</h1>
@@ -84,19 +84,19 @@
           <section class="main-list-menu">
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="./shared/icon/Icon-protect.png" alt="icons">
+                <img src="/shared/icon/Icon-protect.png" alt="icons">
                 <span>Tỷ lệ chống tia cực tím 99%</span>
               </div>
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="./shared/icon/Icon-hongngoai.png" alt="icons">
+                <img src="/shared/icon/Icon-hongngoai.png" alt="icons">
                 <span>Tỷ lệ chống tia hồng ngoại 98%</span>
               </div>
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="./shared/icon/Icon-sun.png" alt="icons">
+                <img src="/shared/icon/Icon-sun.png" alt="icons">
                 <span>Tỷ lệ chống chói 95%
                 </span>
               </div>
