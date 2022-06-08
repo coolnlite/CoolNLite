@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2022 at 12:38 PM
+-- Generation Time: Jun 08, 2022 at 12:24 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -192,7 +192,7 @@ CREATE TABLE `footer` (
 --
 
 INSERT INTO `footer` (`id`, `copyright`, `address`, `phone`, `mail`, `title`, `subtitle`, `time`) VALUES
-(1, 'Copyright © 2022 by COOL N LITE', 'Tầng 12, Petroland, 12 Tân Trào, Q.7, TP HCM', '0835 808 858', 'coolnlite@gmail.com', 'COOL N LITE - The Titanium Film', 'Phim cách nhiệt COOL N LITE được sản xuất tại các cơ sở sản xuất phim công nghệ cao hàng đầu Hoa Kỳ. Đồng thời được nghiên cứu và phát triển bởi các kỹ sư tài năng nổi tiếng của Nhật để tạo ra phim cách nhiệt siêu cấp, công nghệ Titanium đầu tiên trên thế giới.', '2022-05-24 00:12:12');
+(1, 'Copyright © 2022 by COOL N LITE', 'Tầng 12, Petroland, 12 Tân Trào, Q.7, TP HCM', '0835 808 85', 'coolnlite@gmail.com', 'COOL N LITE - The Titanium Film', 'Phim cách nhiệt COOL N LITE được sản xuất tại các cơ sở sản xuất phim công nghệ cao hàng đầu Hoa Kỳ. Đồng thời được nghiên cứu và phát triển bởi các kỹ sư tài năng nổi tiếng của Nhật để tạo ra phim cách nhiệt siêu cấp, công nghệ Titanium đầu tiên trên thế giới.', '2022-06-08 11:38:57');
 
 -- --------------------------------------------------------
 
@@ -234,7 +234,7 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id`, `name`, `url`, `position`, `time`) VALUES
-(1, 'Premier Series', 'premier.php', 0, '2022-05-23 23:54:14'),
+(1, 'Premier Series', 'premier.php', 0, '2022-06-08 11:35:15'),
 (2, 'Titan X Series', 'titanx.php', 1, '2022-05-23 23:54:14'),
 (3, 'Tin Tức', 'news.php', 2, '2022-05-23 23:55:17'),
 (4, 'Chúng Tôi', 'about.php', 3, '2022-05-23 23:55:17'),
@@ -267,10 +267,10 @@ INSERT INTO `news` (`id`, `url`, `thumnail`, `title`, `description`, `content`, 
 (1, 'bai-viet-so-1', '/uploads/avatar.jpg', 'Trải nghiệm đánh giá iOS 15 Beta 2: Đã có bản Public Beta cho người dùng cập\n                                nhật miễn phí, bổ sung thêm tính năng mới', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n <img src=\"./uploads/avatar.jpg\" alt=\"hinh ảnh minh họa\">\r\n<br/>\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n<br/>\r\n<img src=\"./uploads/sieuxe.jpg\" alt=\"hinh ảnh minh họa\">', 1, 1, 1, '2022-05-25 13:49:31'),
 (2, 'bai-viet-so-2', '/uploads/sieuxe.jpg', 'Dùng điện thoại nhiều có ảnh hưởng đến sức khoẻ tâm thần?', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n <img src=\"./uploads/avatar.jpg\" alt=\"hinh ảnh minh họa\">\r\n<br/>\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n<br/>\r\n<img src=\"./uploads/sieuxe.jpg\" alt=\"hinh ảnh minh họa\">', 1, 1, 1, '2022-05-25 13:49:31'),
 (3, 'bai-viet-so-3', '/uploads/avatar.jpg', 'Tổng giám đốc đương nhiệm WHO Tedros tự tranh cử và được bầu làm tiếp 5 năm nữa', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n <img src=\"./uploads/avatar.jpg\" alt=\"hinh ảnh minh họa\">\r\n<br/>\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n<br/>\r\n<img src=\"./uploads/sieuxe.jpg\" alt=\"hinh ảnh minh họa\">', 1, 1, 1, '2022-05-25 13:49:31'),
-(4, 'bai-viet-so-4', '/uploads/sieuxe.jpg', 'Phong tỏa quá lâu, đại học Thượng Hải phải cho sinh viên thi bơi online để hoàn thành môn học', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n <img src=\"./uploads/avatar.jpg\" alt=\"hinh ảnh minh họa\">\r\n<br/>\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n<br/>\r\n<img src=\"./uploads/sieuxe.jpg\" alt=\"hinh ảnh minh họa\">', 1, 1, 1, '2022-05-25 13:49:31'),
-(5, 'bai-viet-so-5', '/uploads/avatar.jpg', 'Đậu mùa khỉ xuất hiện tại nhiều quốc gia, WHO đề nghị cảnh giác nhưng chưa cần tiêm vaccine đại trà', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n <img src=\"./uploads/avatar.jpg\" alt=\"hinh ảnh minh họa\">\r\n<br/>\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n<br/>\r\n<img src=\"./uploads/sieuxe.jpg\" alt=\"hinh ảnh minh họa\">', 1, 1, 1, '2022-05-25 13:49:31'),
-(6, 'bai-viet-so-6', '/uploads/sieuxe.jpg', 'iPhone 14 Pro có thể sẽ được áp dụng tính năng always-on display', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n <img src=\"./uploads/avatar.jpg\" alt=\"hinh ảnh minh họa\">\r\n<br/>\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n<br/>\r\n<img src=\"./uploads/sieuxe.jpg\" alt=\"hinh ảnh minh họa\">', 1, 1, 1, '2022-05-25 13:49:31'),
-(7, 'bai-viet-so-7', '/uploads/avatar.jpg', 'Đây là hệ thống camera Street View mới sẽ được Google sử dụng trong tương lai', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n <img src=\"./uploads/avatar.jpg\" alt=\"hinh ảnh minh họa\">\r\n<br/>\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n<br/>\r\n<img src=\"./uploads/sieuxe.jpg\" alt=\"hinh ảnh minh họa\">', 1, 1, 1, '2022-05-25 13:49:31');
+(4, 'bai-viet-so-4', '/uploads/sieuxe.jpg', 'Phong tỏa quá lâu, đại học Thượng Hải phải cho sinh viên thi bơi online để hoàn thành môn học', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n <img src=\"./uploads/avatar.jpg\" alt=\"hinh ảnh minh họa\">\r\n<br/>\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n<br/>\r\n<img src=\"./uploads/sieuxe.jpg\" alt=\"hinh ảnh minh họa\">', 1, 2, 1, '2022-05-25 13:49:31'),
+(5, 'bai-viet-so-5', '/uploads/avatar.jpg', 'Đậu mùa khỉ xuất hiện tại nhiều quốc gia, WHO đề nghị cảnh giác nhưng chưa cần tiêm vaccine đại trà', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n <img src=\"./uploads/avatar.jpg\" alt=\"hinh ảnh minh họa\">\r\n<br/>\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n<br/>\r\n<img src=\"./uploads/sieuxe.jpg\" alt=\"hinh ảnh minh họa\">', 1, 2, 1, '2022-05-25 13:49:31'),
+(6, 'bai-viet-so-6', '/uploads/sieuxe.jpg', 'iPhone 14 Pro có thể sẽ được áp dụng tính năng always-on display', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n <img src=\"./uploads/avatar.jpg\" alt=\"hinh ảnh minh họa\">\r\n<br/>\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n<br/>\r\n<img src=\"./uploads/sieuxe.jpg\" alt=\"hinh ảnh minh họa\">', 1, 2, 1, '2022-05-25 13:49:31'),
+(7, 'bai-viet-so-7', '/uploads/avatar.jpg', 'Đây là hệ thống camera Street View mới sẽ được Google sử dụng trong tương lai', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n <img src=\"./uploads/avatar.jpg\" alt=\"hinh ảnh minh họa\">\r\n<br/>\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis,sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae quae. Hic ab dolorum temporibus expedita.</p>\r\n<br/>\r\n<img src=\"./uploads/sieuxe.jpg\" alt=\"hinh ảnh minh họa\">', 1, 4, 1, '2022-05-25 13:49:31');
 
 -- --------------------------------------------------------
 
@@ -321,7 +321,6 @@ INSERT INTO `news_keyword` (`id_news_tag`, `id_news`, `id_tag`) VALUES
 CREATE TABLE `seo_news` (
   `id` int(11) NOT NULL,
   `id_news` int(11) NOT NULL,
-  `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `description` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `keyword` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `link_fb` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
@@ -360,9 +359,9 @@ CREATE TABLE `seo_pages` (
 --
 
 INSERT INTO `seo_pages` (`id`, `title`, `description`, `keyword`, `link_fb`, `img_fb`, `title_fb`, `description_fb`, `keyword_fb`, `title_tw`, `description_tw`, `img_tw`) VALUES
-(1, 'hh', 'hh', 'hh', 'hh', '/uploads/seo_pages/0fdaf7d00b9f8cefcdd95af3597863a6.png', 'hh', 'hh', 'hh', 'hh', 'hh', '/uploads/seo_pages/7f1c039bf163454dcb2910b79930f9d1.jpg'),
-(2, 'hh', 'hhh', 'hh', 'hhh', '/uploads/seo_pages/fb9c14ef21fc569556c81cb96420225c.jpg', 'hh', 'hh', 'hh', 'hh', 'hh', '/uploads/seo_pages/ef4559abe33feb676b94159bd8da45ed.jpg'),
-(3, 'hh', 'hh', 'hh', 'hh', '/uploads/seo_pages/ec3850e9690686d866dcb9aec8033b87.jpg', 'hh', 'hh', 'hh', 'hh', 'hh', '/uploads/seo_pages/39aab874057072424a5163dacf435208.jpg'),
+(1, '', '', '', '', '', '', '', '', '', '', ''),
+(2, '', '', '', '', '', '', '', '', '', '', ''),
+(3, '', '', '', '', '', '', '', '', '', '', ''),
 (4, '', '', '', '', '', '', '', '', '', '', ''),
 (5, '', '', '', '', '', '', '', '', '', '', ''),
 (6, '', '', '', '', '', '', '', '', '', '', ''),
@@ -389,7 +388,7 @@ CREATE TABLE `sidebar` (
 --
 
 INSERT INTO `sidebar` (`id`, `url`, `icon`, `name`, `position`, `time`) VALUES
-(1, 'dashboard.php', '<i class=\"fas fa-home\"></i>', 'Bảng điều khiển', 0, '2022-05-21 21:29:49'),
+(1, 'dashboard.php', '<i class=\"fas fa-home\"></i>', 'Bảng điều khiển', 0, '2022-06-08 13:43:37'),
 (2, 'news.php', '<i class=\"fas fa-books\"></i>', 'Bài viết', 1, '2022-05-21 21:29:49'),
 (5, 'customers.php', '<i class=\"fas fa-users\"></i>', 'Khách hàng', 2, '2022-05-21 21:33:49'),
 (6, 'account.php', ' <i class=\"fas fa-user-cog\"></i>', 'Tài khoản', 3, '2022-05-21 21:33:49'),
@@ -422,7 +421,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user_name`, `email`, `pass_word`, `position`, `token`, `full_name`, `image`, `status`, `time`) VALUES
-(1, 'thaisaone', 'vodongthai68@gmail.com', 'f2db2c94d7f2554ccda9edd32ae2bef5', 2, 'xhC1A0BtJ9x6L8ldZrLLEOVRnYX0up', 'Võ Đông Thái', '/uploads/users/1d7f3558b481ac55f57c60f3c03321ef.jpg', 1, '2022-05-19 10:13:12'),
+(1, 'thaisaone', 'vodongthai68@gmail.com', 'f2db2c94d7f2554ccda9edd32ae2bef5', 2, 'JEtQ5EFvqPgIuxqXklF7M5fHPJyuBE', 'Võ Đông Thái', '/uploads/users/1d7f3558b481ac55f57c60f3c03321ef.jpg', 1, '2022-05-19 10:13:12'),
 (26, 'crm', ' mtauto.marketing@gmail.com', '09e74116393bb3557a6aaa6427d3f281', 0, 'CYyqLtXAXGFhB3YnuGEokWLJSJZkGD', '68 Workshop', '/uploads/users/b5b5931df030f32e7496b2cf5f799b9a.jpg', 1, '2022-06-06 13:49:01'),
 (27, 'posts', ' mtgroup259@gmail.com', '09e74116393bb3557a6aaa6427d3f281', 1, 'ug8rexasGyu7n8Vi1gMbethNkCGVIG', 'Anh', '/uploads/users/1eac1adb34a6561f00933a954f508766.jpg', 1, '2022-06-06 14:13:41'),
 (28, 'dungdeptrai', ' vodongthais1@gmail.com', '09e74116393bb3557a6aaa6427d3f281', 2, '7qUBaRyaFPBQUIJuoDlTf5MIX2ROPn', 'Dung Thông II', '/uploads/users/6fb814a1c9f8767b96a2f72aa3133174.jpg', 1, '2022-06-06 14:15:54');
@@ -558,7 +557,7 @@ ALTER TABLE `news_keyword`
 -- AUTO_INCREMENT for table `seo_news`
 --
 ALTER TABLE `seo_news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `seo_pages`
