@@ -3,6 +3,7 @@
     require_once('./config/dbhelper.php');
     require_once('./admin/modules/function.php');
     $base_url = 'http://localhost/CoolNLite';
+    date_default_timezone_set('Asia/Ho_Chi_Minh');
 
     if(isset($_GET['url'])){
         $posts = $_GET['url'] = !"" ? mysqli_real_escape_string($conn, $_GET['url']) : '';
