@@ -16,7 +16,7 @@
         $seo_pages = executeResult($sql);
         foreach($seo_pages as $sp){
             
-    ?>
+      ?>
       <title><?php print $sp['title']?></title>
       <meta name="description" content="<?php print $sp['description']?>"/>
       <meta name="keywords" content="<?php print $sp['keyword']?>"/>
@@ -66,7 +66,6 @@
       <link rel="stylesheet" href="./public/css/reponsive.css" />
       <link rel="stylesheet" href="./public/css/news.css" />
       <!-- css -->
-      <title>Tin Tức - COOL N LITE</title>
    </head>
    <body class="body">
       <div id="main">
