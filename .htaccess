@@ -1,0 +1,26 @@
+// Thêm WWW vào URL
+
+RewriteEngine On
+
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} !^www.domain.com$ [NC]
+
+RewriteRule ^(.*)$ http://www.domain.com/$1 [L,R=301]
+
+ErrorDocument 404 /error_404.php
+ErrorDocument 500 /admin/error_404.php
+
+Options +FollowSymlinks
+
+#No hotlink
+
+RewriteEngine On
+
+RewriteCond %{HTTP_REFERER}!^$
+
+RewriteCond %{HTTP_REFERER}!^http://(www.)?domain.com/[nc]
+
+RewriteRule .*.(gif|jpg|png)$ http://domain.com/images/nohotlink.gif[nc]
+
+RewriteRule ^(([^/]+/)*[^.]+)$ /$1.php [L]
