@@ -97,7 +97,7 @@
                            foreach($news as $ns) {
                         ?>
                         <li class="items-news news">
-                           <a class="link-news" href="<?php echo ''.$ns['url'].''?>.html">
+                           <a class="link-news" href="<?php echo ''.$base_url.'/'.$ns['url'].''?>.html">
                               <article class="posts">
                                  <figure class="box-img fix" title="<?php echo ''.$ns['title'].''?>">
                                     <img src="<?php echo ''.$base_url.$ns['thumnail'].''?>" alt="thumnail">

@@ -212,12 +212,12 @@
                         foreach($posts as $ps){
                     ?>
                         <div class="card-columns">
-                            <a href="post.php?url=<?php echo ''.$ps['url'].''?>">
-                                <div class="card-img">
-                                    <img src=".<?php echo ''.$ps['thumnail'].''?>" alt="">
+                            <a href="<?php echo ''.$base_url.$ps['url'].''?>.html">
+                                <div class="card-img" title="<?php echo ''.$ps['title'].''?>">
+                                    <img src="<?php echo ''.$base_url.$ps['thumnail'].''?>" alt="">
                                 </div>
                                 <div class="card-title">
-                                    <h4>
+                                    <h4 title="<?php echo ''.$ps['title'].''?>">
                                     <?php echo ''.$ps['title'].''?>
                                     </h4>
                                     <p>
@@ -231,7 +231,7 @@
                                         foreach($users as $us){
                                         ?>
                                         <div class="box-img">
-                                            <img src=".<?php echo ''.$us['image'].''?>" alt="Người viết">
+                                            <img src="<?php echo ''.$base_url.$us['image'].''?>" alt="avatar">
                                         </div>
                                         <span>
                                             <?php echo ''.$us['full_name'].''?>
