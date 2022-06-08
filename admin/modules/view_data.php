@@ -74,6 +74,7 @@
 ?>        
 
 <?php 
+//Chỉnh sửa tài khoản người dùng
     if(isset($_POST['view_users']) && isset($_POST['id_users'])){
         $id_users = $_POST['id_users'];
         $sql = "SELECT `id`,`status` FROM `users` WHERE `id` = '$id_users'";
@@ -97,6 +98,43 @@
     <div class="d-flex justify-content-center">
         <button type="submit" class="btn btn-primary text-left">Cập nhật</button>
     </div>
+<?php 
+    }
+}
+?>
+
+<?php 
+    //Chỉnh sửa menu
+    if(isset($_POST['view_menu']) && !empty($_POST['id_menu'])){
+        $id_menu = $_POST['id_menu'];
+        $sql = "SELECT * FROM `menu` WHERE `id` = '$id_menu'";
+        $menu = executeResult($sql);
+        foreach($menu as $mn){
+?>
+            <input type="hidden" value="<?php print $mn['id']?>" name="id_menu">
+            <div class="form-group">
+            <label for="name">Tên menu :</label>
+            <input type="text" class="form-control" value="<?php print $mn['name']?>" name="name_menu" 
+            placeholder="Nhập tên menu" required>
+            <div class="invalid-feedback">Vui lòng nhập tên menu</div>
+            </div>
+
+            <div class="form-group">
+            <label for="url">Đường dẫn :</label>
+            <input type="text" class="form-control" name="url_menu" 
+            placeholder="Nhập địa chỉ menu" required>
+            <div class="invalid-feedback">Vui lòng nhập đường dẫn</div>
+            </div>
+
+            <div class="form-group">
+            <label for="position">Vị trí :</label>
+            <label class="text-danger">Vui lòng nhập số</label>
+            <input type="text" class="form-control" name="position_menu"
+            maxlength="1" placeholder="Nhập vị trí menu"  required>
+            <div class="invalid-feedback">Vui lòng nhập vị trí</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Thêm</button>
 <?php 
     }
 }

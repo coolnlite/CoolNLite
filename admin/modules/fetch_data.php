@@ -487,7 +487,7 @@ if(isset($_POST['menu'])){
         <i class="fas fa-trash-alt"></i>
         </a>
         <a title="Sửa" data-toggle="modal" data-target="#editMenu" href="javascript:void();" data-id="'.$row['id'].'"
-        class="btn btn-warning btn-sm" >
+        class="btn btn-warning btn-sm editMenuBtn" >
         <i class="fas fa-user-edit"></i>
         </a>
         ';
@@ -571,7 +571,7 @@ if(isset($_POST['footer'])){
         $sub_array[] = 
         '
         <a title="Sửa" data-toggle="modal" data-target="#editFooter" href="javascript:void();" data-id="'.$row['id'].'"
-        class="btn btn-warning btn-sm" >
+        class="btn btn-warning btn-sm editFooterBtn" >
         <i class="fas fa-user-edit"></i>
         </a>
         ';
@@ -652,7 +652,7 @@ if(isset($_POST['sidebar'])){
         <i class="fas fa-trash-alt"></i>
         </a>
         <a title="Sửa" data-toggle="modal" data-target="#editSidebar" href="javascript:void();" data-id="'.$row['id'].'"
-        class="btn btn-warning btn-sm" >
+        class="btn btn-warning btn-sm editSidebarBtn" >
         <i class="fas fa-user-edit"></i>
         </a>
         ';

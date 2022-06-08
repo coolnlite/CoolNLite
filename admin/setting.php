@@ -260,6 +260,20 @@
           })
       });
 
+      $(document).on('click','.editMenuBtn',function(event){
+        var id_menu = $(this).data('id');
+        $.ajax({
+            url: '<?php echo ''.$DOMAIN.'modules/view_data.php'?>',
+            data: {
+            view_menu : true,
+            id_menu : id_menu
+            },
+            type: "post",
+            success: function(data) {
+                $('#feditMenu').html(data);
+            }
+        });
+      })
 
     });
     
