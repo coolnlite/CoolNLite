@@ -1,28 +1,10 @@
-// Thêm WWW vào URL
-
 RewriteEngine On
 
-RewriteBase /
-
-RewriteCond %{HTTP_HOST} !^www.domain.com$ [NC]
-
-RewriteRule ^(.*)$ http://www.domain.com/$1 [L,R=301]
-
-ErrorDocument 404 /error_404.php
-ErrorDocument 500 /admin/error_404.php
-
-Options +FollowSymlinks
-
-#No hotlink
-
-RewriteEngine On
-
-RewriteCond %{HTTP_REFERER}!^$
-
-RewriteCond %{HTTP_REFERER}!^http://(www.)?domain.com/[nc]
-
-RewriteRule .*.(gif|jpg|png)$ http://domain.com/images/nohotlink.gif[nc]
-
-RewriteRule ^(([^/]+/)*[^.]+)$ /$1.php [L]
-
-RewriteRule ^(.*).html$ $1.php [R=301,L]
+RewriteRule "index.html" "index.php"
+RewriteRule "premier-series.html" "premier.php"
+RewriteRule "titan-x-series.html" "titanx.php"
+RewriteRule "tin-tuc.html" "news.php"
+RewriteRule "chung-toi.html" "about.php"
+RewriteRule "dai-ly.html" "agency.php"
+RewriteRule "^(.*).html$" "post.php?url=$1"
+RewriteRule "^tu-khoa/([0-9]+)/(.*).html$" "tag.php?id=$1&keyword=$2"
