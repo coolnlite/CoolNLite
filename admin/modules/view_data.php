@@ -121,7 +121,7 @@
 
             <div class="form-group">
             <label for="url">Đường dẫn :</label>
-            <input type="text" class="form-control" name="url_menu" 
+            <input type="text" class="form-control" value="<?php print $mn['url']?>" name="url_menu" 
             placeholder="Nhập địa chỉ menu" required>
             <div class="invalid-feedback">Vui lòng nhập đường dẫn</div>
             </div>
@@ -130,7 +130,7 @@
             <label for="position">Vị trí :</label>
             <label class="text-danger">Vui lòng nhập số</label>
             <input type="text" class="form-control" name="position_menu"
-            maxlength="1" placeholder="Nhập vị trí menu"  required>
+            maxlength="1" placeholder="Nhập vị trí menu" value="<?php print $mn['position']?>"  required>
             <div class="invalid-feedback">Vui lòng nhập vị trí</div>
             </div>
 
