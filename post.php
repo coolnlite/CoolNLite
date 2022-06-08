@@ -21,6 +21,16 @@
             $id_news = $lt['id'];
             $time = $lt['time'];
         }
+        if (!empty($id_news))
+        $cookieName='posts_'.$id_news;
+
+            if(!isset($_COOKIE["$cookieName"]))
+            {
+
+            setcookie("$cookieName","1",time()+3600);
+            $sql = "UPDATE `news` SET `view`=`view`+1 WHERE `id`='$id_news'";
+            mysqli_query($conn,$sql);
+            }
 ?>
 <!DOCTYPE html>
 <html lang="en">
