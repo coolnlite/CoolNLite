@@ -2033,23 +2033,28 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
 
     //Chỉnh sửa menu
 
-    if(isset($_POST['id_key']) && isset($_POST['name_key'])){
-        $id_key = $_POST['id_key'];
-        $name_key = mysqli_real_escape_string($conn, $_POST['name_key']);
+    if(!empty($_POST['id_menu']) && !empty($_POST['name_menu']) &&
+     !empty($_POST['url_name']) && isset($_POST['position_name'])){
+         
+        $id_menu = mysqli_real_escape_string($conn, $_POST['id_menu']);
+        $name_menu = mysqli_real_escape_string($conn, $_POST['name_menu']);
+        $url_menu = mysqli_real_escape_string($conn, $_POST['url_menu']);
+        $position_menu = mysqli_real_escape_string($conn, $_POST['position_menu']);
         $time = date('Y-m-d H:i:s');
     
-        $sql = "UPDATE `keyword` SET `name` = '$name_key', `time` = '$time' WHERE `id` = '$id_key'";
+        $sql = "UPDATE `menu` SET `name` = '$name_menu', `url` = '$url_menu', `position` = '$position_menu'
+         WHERE `id` = '$id_menu'";
         $result = mysqli_query($conn,$sql);
         if($result == true){
             echo json_encode(array(
                 'status' => 1,
-                'message' => 'Cập nhật từ khóa thành công'
+                'message' => 'Cập nhật menu thành công'
             ));
             exit();
         }else{
             echo json_encode(array(
                 'status' => 0,
-                'message' => 'Cập nhật từ khóa thất bại'
+                'message' => 'Cập nhật menu thất bại'
             ));
             exit();
         }
