@@ -299,6 +299,21 @@
           })
       });
 
+      //view footer
+      $(document).on('click','.editFooterBtn',function(event){
+        var id_footer = $(this).data('id');
+        $.ajax({
+            url: '<?php echo ''.$DOMAIN.'modules/view_data.php'?>',
+            data: {
+            view_footer : true,
+            id_footer : id_footer
+            },
+            type: "post",
+            success: function(data) {
+                $('#feditFooter').html(data);
+            }
+        });
+      })
 
     });
     
