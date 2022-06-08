@@ -61,10 +61,10 @@
       <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
       <!-- fontawesome -->
       <!-- css -->
-      <link rel="icon" sizes="32x32" href="./shared/img/icon.png">
-      <link rel="stylesheet" href="./public/css/style.css" />
-      <link rel="stylesheet" href="./public/css/reponsive.css" />
-      <link rel="stylesheet" href="./public/css/news.css" />
+      <link rel="icon" sizes="32x32" href="<?php print $base_url?>/shared/img/icon.png">
+      <link rel="stylesheet" href="<?php print $base_url?>/public/css/style.css" />
+      <link rel="stylesheet" href="<?php print $base_url?>/public/css/reponsive.css" />
+      <link rel="stylesheet" href="<?php print $base_url?>/public/css/news.css" />
       <!-- css -->
    </head>
    <body class="body">
@@ -80,7 +80,7 @@
          <main role="main">
             <header>
                <div class="container">
-                  <h1 class="page-title"><a href="./news.php">Tin Tức</a></h1>
+                  <h1 class="page-title"><a href="tin-tuc.html">Tin Tức</a></h1>
                </div>
             </header>
             <section id="news-list">
@@ -97,14 +97,14 @@
                            foreach($news as $ns) {
                         ?>
                         <li class="items-news news">
-                           <a class="link-news" href="./post.php?url=<?php echo ''.$ns['url'].''?>">
+                           <a class="link-news" href="<?php echo ''.$ns['url'].''?>.html">
                               <article class="posts">
                                  <figure class="box-img fix">
-                                    <img src=".<?php echo ''.$ns['thumnail'].''?>" alt="ảnh đại điện">
+                                    <img src="<?php echo ''.$base_url.$ns['thumnail'].''?>" alt="thumnail">
                                     <i class="fas fa-eye"></i>
                                  </figure>
                                  <div class="box-content">
-                                    <h3 class="limit-2">
+                                    <h3 class="limit-2" title="<?php echo ''.$ns['title'].''?>">
                                        <?php echo ''.$ns['title'].''?>
                                     </h3>
                                     <div class="box-all">
@@ -117,7 +117,7 @@
 
                                           ?>
                                           <div class="box-arthur">
-                                             <img src=".<?php echo ''.$us['image'].''?>" alt="Avatar">
+                                             <img src="<?php echo ''.$base_url.$us['image'].''?>" alt="avatar">
                                           </div>
                                           <span class="name">
                                              <?php echo ''.$us['full_name'].''?>
