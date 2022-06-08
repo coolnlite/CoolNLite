@@ -62,10 +62,10 @@
   <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
   <!-- fontawesome -->
   <!-- css -->
-  <link rel="icon" sizes="32x32" href="./shared/img/icon.png">
-  <link rel="stylesheet" href="./public/css/style.css" />
-  <link rel="stylesheet" href="./public/css/reponsive.css" />
-  <link rel="stylesheet" href="./public/css/slider.css">
+  <link rel="icon" sizes="32x32" href="<?php print $base_url?>/shared/img/icon.png">
+  <link rel="stylesheet" href="<?php print $base_url?>/public/css/style.css" />
+  <link rel="stylesheet" href="<?php print $base_url?>/public/css/reponsive.css" />
+  <link rel="stylesheet" href="<?php print $base_url?>/public/css/slider.css">
   <!-- css -->
 </head>
 
@@ -82,21 +82,21 @@
           <section class="main-list-menu">
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="./shared/icon/Icon-hongngoai.png" alt="icons">
+                <img src="<?php print $base_url?>/shared/icon/Icon-hongngoai.png" alt="icons">
                 <span>Tỉ lệ chống tia hồng ngoại 85%
                 </span>
               </div>
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="./shared/icon/Icon-protect.png" alt="icons">
+                <img src="<?php print $base_url?>/shared/icon/Icon-protect.png" alt="icons">
                 <span>Tỉ lệ chống tia cực tím 99%
                 </span>
               </div>
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="./shared/icon/Icon-beutifull.png" alt="icons">
+                <img src="<?php print $base_url?>/shared/icon/Icon-beutifull.png" alt="icons">
                 <span>Sang trọng với lớp màu ánh kim
                 </span>
               </div>
@@ -142,13 +142,13 @@
       <div class="container-slide">
         <div class="slider-container">
           <div class="slider2 sizes-slider2">
-            <img src="./shared/img/premier/MA-MAU-PREMIER.png" alt="Image">
+            <img src="<?php print $base_url?>/shared/img/premier/MA-MAU-PREMIER.png" alt="Image">
           </div>
           <div class="slider2 sizes-slider2">
-            <img src="./shared/img/premier/TITLE-PREMIER.png" alt="Image">
+            <img src="<?php print $base_url?>/shared/img/premier/TITLE-PREMIER.png" alt="Image">
           </div>
           <div class="slider2 sizes-slider2">
-            <img src="./shared/img/premier/THONG-SO-KY-THUAT-PREMIER-SERIES.png" alt="Image">
+            <img src="<?php print $base_url?>/shared/img/premier/THONG-SO-KY-THUAT-PREMIER-SERIES.png" alt="Image">
           </div>
           <div class="box-btn">
             <div class="prev-button prev-button1" onclick="plusSlide2(-1)">
@@ -184,7 +184,7 @@
             </div>
             <div class="quick-left-bottom">
               <div class="right-built-button">
-                <a href="post.php" class="btn-learn-more btn-built btn-secondary"><i
+                <a href="#" class="btn-learn-more btn-built btn-secondary"><i
                     class="fas fa-plus"></i></a>
                 <p class="txt-more">Xem Thêm</p>
                 <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>Báo giá ngay</span></a>
@@ -208,16 +208,16 @@
         <div class="container-slide titanx-slide">
           <div class="slider-container">
             <div class="slider sizes-slider">
-              <img src="./shared/img/premier/01.jpg" alt="Image">
+              <img src="<?php print $base_url?>/shared/img/premier/01.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img src="./shared/img/premier/02.jpg" alt="Image">
+              <img src="<?php print $base_url?>/shared/img/premier/02.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img src="./shared/img/premier/03.jpg" alt="Image">
+              <img src="<?php print $base_url?>/shared/img/premier/03.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img src="./shared/img/premier/04.jpg" alt="Image">
+              <img src="<?php print $base_url?>/shared/img/premier/04.jpg" alt="Image">
             </div>
             <div class="box-btn">
               <div class="prev-button prev-button1" onclick="plusSlide(-1)">
@@ -256,7 +256,7 @@
             </div>
           </div>
           <div class="right-built-button">
-            <a href="./post.php" class="btn btn-size-100 btn-size btn-built btn-secondary btn-show-form"><span>Liên hệ tư
+            <a class="btn btn-size-100 btn-size btn-built btn-secondary btn-show-form"><span>Liên hệ tư
                 vấn</span></a>
           </div>
         </section>
@@ -270,9 +270,9 @@
   ?>
   <!-- javasript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="./public/js/form.js"></script>
-  <script src="./public/js/slider.js"></script>
-  <script src="./public/js/script.js"></script>
+  <script src="<?php print $base_url?>/public/js/form.js"></script>
+  <script src="<?php print $base_url?>/public/js/slider.js"></script>
+  <script src="<?php print $base_url?>/public/js/script.js"></script>
   <!-- javasript -->
   <!-- css on sroll pages -->
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
