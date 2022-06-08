@@ -2064,18 +2064,22 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
 
     //Chỉnh sửa footer
 
-    if(!empty($_POST['id_menu']) && !empty($_POST['name_menu']) &&
-     !empty($_POST['url_menu']) && isset($_POST['position_menu'])){
+    if(!empty($_POST['id_footer']) && !empty($_POST['copyright']) &&
+     !empty($_POST['address']) && !empty($_POST['phone'])  &&
+     !empty($_POST['mail']) && !empty($_POST['title']) && !empty($_POST['subtitle'])){
 
-        $id_menu = mysqli_real_escape_string($conn, $_POST['id_menu']);
-        $name_menu = mysqli_real_escape_string($conn, $_POST['name_menu']);
-        $url_menu = mysqli_real_escape_string($conn, $_POST['url_menu']);
-        $position_menu = mysqli_real_escape_string($conn, $_POST['position_menu']);
+        $id_footer = mysqli_real_escape_string($conn, $_POST['id_footer']);
+        $copyright = mysqli_real_escape_string($conn, $_POST['copyright']);
+        $address = mysqli_real_escape_string($conn, $_POST['address']);
+        $phone = mysqli_real_escape_string($conn, $_POST['phone']);
+        $mail = mysqli_real_escape_string($conn, $_POST['mail']);
+        $title = mysqli_real_escape_string($conn, $_POST['title']);
+        $subtitle = mysqli_real_escape_string($conn, $_POST['subtitle']);
         $time = date('Y-m-d H:i:s');
     
-        $sql = "UPDATE `menu` SET `name` = '$name_menu', `url` = '$url_menu', 
-        `position` = '$position_menu', `time` = '$time'
-         WHERE `id` = '$id_menu'";
+        $sql = "UPDATE `footer` SET `copyright` = '$copyright', `address` = '$address', 
+        `phone` = '$phone', `mail` = '$mail',`title` = '$title', `subtitle` = '$subtitle',
+        `time` = '$time' WHERE `id` = '$id_footer'";
         $result = mysqli_query($conn,$sql);
         if($result == true){
             echo json_encode(array(
