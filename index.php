@@ -19,8 +19,8 @@
             
     ?>
   <title><?php print $sp['title']?></title>
-  <meta name="description" content="<?php print $sn['description']?>"/>
-  <meta name="keywords" content="<?php print $sn['keyword']?>"/>
+  <meta name="description" content="<?php print $sp['description']?>"/>
+  <meta name="keywords" content="<?php print $sp['keyword']?>"/>
   <meta name="robots" content="noarchive,index,follow"/>
   <meta http-equiv=”content-language” content=”vi” />
   <meta name="copyright" content="COOL N LITE"/>
@@ -37,21 +37,21 @@
   <meta property="og:site_name" content="coolnlite.vn"/>
   <meta property="og:rich_attachment" content="true"/>
   <meta property="og:type" content="article"/>
-  <meta property="article:publisher" content="<?php print $sn['link_fb']?>"/>
+  <meta property="article:publisher" content="<?php print $sp['link_fb']?>"/>
   <meta property="og:url" itemprop="url" content="<?php print getCurrentPageURL() ?>"/>
-  <meta property="og:image" itemprop="thumbnailUrl" content="<?php print $base_url.$sn['img_fb']?>"/>
+  <meta property="og:image" itemprop="thumbnailUrl" content="<?php print $base_url.$sp['img_fb']?>"/>
   <meta property="og:image:width" content="800"/>
   <meta property="og:image:height" content="354"/>
-  <meta content="<?php print $sn['title_fb']?>" itemprop="headline" property="og:title"/>
-  <meta content="<?php print $sn['description_fb']?>" itemprop="description" property="og:description"/>
-  <meta property="article:tag" content="<?php print $sn['keyword_fb']?>"/>
+  <meta content="<?php print $sp['title_fb']?>" itemprop="headline" property="og:title"/>
+  <meta content="<?php print $sp['description_fb']?>" itemprop="description" property="og:description"/>
+  <meta property="article:tag" content="<?php print $sp['keyword_fb']?>"/>
   <!-- FACEBOOK -->
   <!-- Twitter Card -->
   <meta name="twitter:card" value="summary"/>
   <meta name="twitter:url" content="<?php print getCurrentPageURL() ?>"/>
-  <meta name="twitter:title" content="<?php print $sn['title_tw']?>"/>
-  <meta name="twitter:description" content="<?php print $sn['description_tw']?>"/>
-  <meta name="twitter:image" content="<?php print $base_url.$sn['img_tw']?>"/>
+  <meta name="twitter:title" content="<?php print $sp['title_tw']?>"/>
+  <meta name="twitter:description" content="<?php print $sp['description_tw']?>"/>
+  <meta name="twitter:image" content="<?php print $base_url.$sp['img_tw']?>"/>
   <meta name="twitter:site" content="@COOLNLITE"/>
   <meta name="twitter:creator" content="@COOLNLITE"/>
   <!-- End Twitter Card -->
