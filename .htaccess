@@ -8,5 +8,5 @@ RewriteRule "chung-toi.html" "about.php"
 RewriteRule "dai-ly.html" "agency.php"
 RewriteRule "^(.*).html$" "post.php?url=$1"
 RewriteRule "^tu-khoa/([0-9]+)/(.*).html$" "tag.php?id=$1&keyword=$2"
-RewriteRule "^tim-kiem/([0-9a-zA-Z]+)$" "search.php?search_query=$1"
+RewriteRule "^tim-kiem/([0-9a-zA-Z]+).html$" "search.php?search_query=$1"
 
