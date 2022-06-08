@@ -1,7 +1,7 @@
 <div class="box-menu">
         <header class="header">
           <h1 class="logo">
-            <a href="<?php print $base_url?>" class="logo-link">
+            <a href="index.html" class="logo-link">
               <img src="<?php print $base_url?>/shared/img/logo.png" alt="Logo Cool N Lite" />
             </a>
           </h1>
@@ -53,7 +53,7 @@
           $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
         ?>
         <li class="items-menu">
-            <a class="link-menu <?php $curPageName == 'index.php' ? print "hovered" : print '' ?>" href="./">Home</a>
+            <a class="link-menu <?php $curPageName == 'index.php' ? print "hovered" : print '' ?>" href="index.html">Home</a>
         </li>
         <?php
             $sql = "SELECT * FROM `menu` ORDER BY `position` ASC";
