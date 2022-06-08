@@ -122,10 +122,10 @@
         <div class="container-slide">
           <div class="slider-container">
             <div class="slider sizes-slider">
-              <img src="./shared/img/trangchu/titanium.jpg" alt="Image">
+              <img src="<?php print $base_url?>/shared/img/trangchu/titanium.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img src="./shared/img/trangchu/cong-nghe-phun-xa.jpg" alt="Image">
+              <img src="<?php print $base_url?>/shared/img/trangchu/cong-nghe-phun-xa.jpg" alt="Image">
             </div>
             <div class="box-btn">
               <div class="prev-button prev-button1" onclick="plusSlide(-1)">
@@ -158,7 +158,7 @@
             </div>
           </div>
           <div class="right-built-button">
-            <a href="./pages/post.html" class="btn btn-size-100 btn-size btn-built btn-secondary"><span>Xem
+            <a href="#" class="btn btn-size-100 btn-size btn-built btn-secondary"><span>Xem
                 thêm</span></a>
           </div>
         </section>
@@ -178,20 +178,20 @@
           <section class="main-list-menu quick">
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="./shared/icon/Icon-hongngoai.png" alt="icons">
+                <img src="<?php print $base_url?>/shared/icon/Icon-hongngoai.png" alt="icons">
                 <span>Cách nhiệt 85%</span>
               </div>
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="./shared/icon/Icon-protect.png" title="Ngăn tia UV 99%" alt="icons">    
+                <img src="<?php print $base_url?>/shared/icon/Icon-protect.png" title="Ngăn tia UV 99%" alt="icons">    
                   <span>Ngăn tia UV 99%
                   </span>
               </div>
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="./shared/icon/Icon-beutifull.png" title="Sang trọng với lớp màu ánh kim" alt="icons"> 
+                <img src="<?php print $base_url?>/shared/icon/Icon-beutifull.png" title="Sang trọng với lớp màu ánh kim" alt="icons"> 
                   <span>Sang trọng với lớp màu ánh kim
                   </span>
               </div>
@@ -210,7 +210,7 @@
             </div>
             <div class="quick-left-bottom">
               <div class="right-built-button">
-                <a href="./pages/premier.html" class="btn-learn-more btn-built btn-secondary"><i
+                <a href="<?php print $base_url?>/titan-x-series.html" class="btn-learn-more btn-built btn-secondary"><i
                     class="fas fa-plus"></i></a>
                 <p class="txt-more">Xem Thêm</p>
                 <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>Liên hệ tư vấn</span></a>
@@ -243,7 +243,7 @@
           <section class="main-list-menu quick">
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="./shared/icon/Icon-hongngoai.png" alt="icons">
+                <img src="<?php print $base_url?>/shared/icon/Icon-hongngoai.png" alt="icons">
                   <span>Cách nhiệt 98%
                   </span>
               </div>
@@ -251,14 +251,14 @@
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                  <img src="./shared/icon/Icon-protect.png" title="Ngăn tia UV 99%" alt="icons">
+                  <img src="<?php print $base_url?>/shared/icon/Icon-protect.png" title="Ngăn tia UV 99%" alt="icons">
                   <span>Ngăn tia UV 99%
                   </span>
               </div>
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="./shared/icon/Icon-beutifull.png" title="Mang đến sự đẳng cấp và tinh tế" alt="icons"> 
+                <img src="<?php print $base_url?>/shared/icon/Icon-beutifull.png" title="Mang đến sự đẳng cấp và tinh tế" alt="icons"> 
                   <span>Mang đến sự đẳng cấp và tinh tế
                   </span>
               </div>
@@ -276,7 +276,7 @@
             </div>
             <div class="quick-left-bottom">
               <div class="right-built-button">
-                <a href="./pages/premier.html" class="btn-learn-more btn-built btn-secondary"><i
+                <a href="<?php print $base_url?>/premier-series.html" class="btn-learn-more btn-built btn-secondary"><i
                     class="fas fa-plus"></i></a>
                 <p class="txt-more">Xem Thêm</p>
                 <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>Liên hệ tư vấn</span></a>
@@ -332,7 +332,7 @@
     <!-- SETION 5 -->
     <!-- VIDEO  -->
     <section id="video">
-      <video loop autoplay muted controls src="./shared/video/tru-so.mov"></video>
+      <video loop autoplay muted controls src="<?php print $base_url?>/shared/video/tru-so.mov"></video>
     </section>
     <!-- VIDEO  -->
   </div>
@@ -342,14 +342,14 @@
   ?>
   <!-- javasript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="./public/js/slider.js"></script>
-  <script src="./public/js/script.js"></script>
-  <script src="./public/js/form.js"></script>
+  <script src="<?php print $base_url?>/public/js/slider.js"></script>
+  <script src="<?php print $base_url?>/public/js/script.js"></script>
+  <script src="<?php print $base_url?>/public/js/form.js"></script>
   <!-- javasript -->
   <!-- jquery validation -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script>
-  <script src="./public/js/checkinput.js"></script>
+  <script src="<?php print $base_url?>/public/js/checkinput.js"></script>
   <!-- jquery validation -->
   <!-- css on sroll pages -->
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
@@ -358,7 +358,7 @@
  ScrollReveal({ reset: true });
 
 
-  ScrollReveal().reveal(".title", {
+  ScrollReveal().reveal(".menu .box-title-menu .title", {
     duration: 2000,
     origin: "top",
     distance: "300px",
