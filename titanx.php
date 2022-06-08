@@ -217,6 +217,37 @@
   <script src="./public/js/slider.js"></script>
   <script src="./public/js/script.js"></script>
   <!-- javasript -->
+  <!-- css on sroll pages -->
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script>
+ 
+ ScrollReveal({ reset: true });
+
+  ScrollReveal().reveal(".title", {
+    duration: 2000,
+    origin: "top",
+    distance: "300px",
+    easing: "cubic-bezier(0.5, 0, 0, 1)",
+    rotate: {
+      x: 20,
+      z: -10
+    }
+  });
+
+  ScrollReveal().reveal(".block-bottom .main-list-menu .box-para-top", {
+    duration: 3000,
+    move: 0
+  });
+
+  ScrollReveal().reveal(".btn-menu", {
+    duration: 3000,
+    origin: "right",
+    distance: "300px",
+    easing: "ease-in-out"
+  });
+
+  </script>
+  <!-- css on sroll pages -->
 </body>
 
 </html>

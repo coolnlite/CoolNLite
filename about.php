@@ -246,6 +246,38 @@
     <script src="./public/js/slider.js"></script>
     <script src="./public/js/script.js"></script>
     <!-- javasript -->
+    <!-- css on sroll pages -->
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script>
+ 
+    ScrollReveal({ reset: true });
+
+    ScrollReveal().reveal("section .main-about", {
+        duration: 2000,
+        move: 0
+    });
+
+    ScrollReveal().reveal(".btn-detail", {
+        duration: 2000,
+        origin: "left",
+        distance: "30px",
+        easing: "ease-in-out"
+  });
+
+  ScrollReveal().reveal(".btn-search", {
+        duration: 2000,
+        origin: "right",
+        distance: "30px",
+        easing: "ease-in-out"
+  });
+
+  ScrollReveal().reveal(".policy_ico .box-icons", {
+    duration: 3000,
+    scale: 0.85
+});
+
+  </script>
+  <!-- css on sroll pages -->
 </body>
 
 </html>
