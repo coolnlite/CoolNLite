@@ -151,42 +151,42 @@
             <input type="hidden" value="<?php print $ft['id']?>" name="id_footer">
 
             <div class="form-group">
-            <label for="name">Copyright :</label>
+            <label for="copyright">Copyright :</label>
             <input type="text" class="form-control" value="<?php print $ft['copyright']?>" name="copyright" 
             placeholder="Nhập copyright" required>
             <div class="invalid-feedback">Vui lòng nhập copyright</div>
             </div>
 
             <div class="form-group">
-            <label for="url">Địa chỉ :</label>
+            <label for="address">Địa chỉ :</label>
             <input type="text" class="form-control" value="<?php print $ft['address']?>" name="address" 
             placeholder="Nhập địa chỉ" required>
             <div class="invalid-feedback">Vui lòng nhập địa chỉ</div>
             </div>
 
             <div class="form-group">
-            <label for="url">Số điện thoại :</label>
+            <label for="phone">Số điện thoại :</label>
             <input type="text" class="form-control" value="<?php print $ft['phone']?>" name="phone" 
             placeholder="Nhập số điện thoại" required>
             <div class="invalid-feedback">Vui lòng nhập số điện thoại</div>
             </div>
 
             <div class="form-group">
-            <label for="url">Mail :</label>
-            <input type="text" class="form-control" value="<?php print $ft['mail']?>" name="mail" 
+            <label for="mail">Mail :</label>
+            <input type="mail" class="form-control" value="<?php print $ft['mail']?>" name="mail" 
             placeholder="Nhập mail" required>
             <div class="invalid-feedback">Vui lòng nhập mail</div>
             </div>
 
             <div class="form-group">
-            <label for="url">Tiêu đề :</label>
+            <label for="title">Tiêu đề :</label>
             <input type="text" class="form-control" value="<?php print $ft['title']?>" name="title" 
             placeholder="Nhập tiêu đề" required>
             <div class="invalid-feedback">Vui lòng nhập tiêu đề</div>
             </div>
 
             <div class="form-group">
-            <label for="url">Tiêu đề con :</label>
+            <label for="subtitle">Tiêu đề con :</label>
             <input type="text" class="form-control" value="<?php print $ft['subtitle']?>" name="subtitle" 
             placeholder="Nhập tiêu đề con" required>
             <div class="invalid-feedback">Vui lòng nhập tiêu đề con</div>
