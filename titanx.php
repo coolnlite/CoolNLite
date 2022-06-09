@@ -138,13 +138,16 @@
       <div class="container-slide">
         <div class="slider-container">
           <div class="slider2 sizes-slider2">
-            <img src="<?php print $base_url?>/shared/img/titanx/titletitanx.png" alt="Image">
+            <img class="dk" src="<?php print $base_url?>/shared/img/titanx/mamautitanx.png" alt="Image">
+            <img class="mb" src="<?php print $base_url?>/shared/img/titanx/MAMAUTITANXBM.jpg" alt="Image">
           </div>
           <div class="slider2 sizes-slider2">
-            <img src="<?php print $base_url?>/shared/img/titanx/mamautitanx.png" alt="Image">
+            <img class="dk" src="<?php print $base_url?>/shared/img/titanx/titletitanx.png" alt="Image">
+            <img class="mb" src="<?php print $base_url?>/shared/img/titanx/titanxmb.png" alt="Image">
           </div>
           <div class="slider2 sizes-slider2">
-            <img src="<?php print $base_url?>/shared/img/titanx/thongsokythuattitanx.png" alt="Image">
+            <img class="dk" src="<?php print $base_url?>/shared/img/titanx/thongsokythuattitanx.png" alt="Image">
+            <img class="mb" src="<?php print $base_url?>/shared/img/titanx/thongxoakythuat.png" alt="Image">
           </div>
           <div class="box-btn">
             <div class="prev-button prev-button1" onclick="plusSlide2(-1)">

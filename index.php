@@ -124,8 +124,8 @@
               <img src="<?php print $base_url?>/shared/img/trangchu/titanium.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img class="img-dt" src="<?php print $base_url?>/shared/img/trangchu/cong-nghe-phun-xa.jpg" alt="Image">
-              <img class="home-mb" src="<?php print $base_url?>/shared/img/trangchu/cong-nghe-phun-xa-mb.jpg" alt="Image">
+              <img class="dk" src="<?php print $base_url?>/shared/img/trangchu/cong-nghe-phun-xa.jpg" alt="Image">
+              <img class="mb" src="<?php print $base_url?>/shared/img/trangchu/cong-nghe-phun-xa-mb.jpg" alt="Image">
             </div>
             <div class="box-btn">
               <div class="prev-button prev-button1" onclick="plusSlide(-1)">

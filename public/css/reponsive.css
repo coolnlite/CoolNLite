@@ -386,10 +386,17 @@
 }
 
 .section.built .box-built .box-left-built.bg-pre{
-  background: url(../../shared/img/premier/CAC-LOP-CUA-PREMIER-SERIES-5.png);
+  background: url(../../shared/img/premier/CAC-LOP-PREMIER-MB.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+}
+
+.section.built .box-built .box-left-built.bg-tit {
+  background: url(../../shared/img/titanx/cacloptitanx.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 }
