@@ -67,7 +67,7 @@ $('#search-text').keypress(function(event){
 
     }else{
       $text = $text.replace(/\s/g,'+');
-      window.location.href = 'search.php?search_query=' + $text;
+      window.location.href = 'tim-kiem/' + $text;
     }
   }
   });
@@ -79,7 +79,7 @@ $('#search-text').keypress(function(event){
 
     }else{
       $text = $text.replace(/\s/g,'+');
-      window.location.href = 'search.php?search_query=' + $text;
+      window.location.href = 'tim-kiem/' + $text;
     }
   });
 
@@ -124,7 +124,7 @@ $('#search-txt').keypress(function(event){
 
     }else{
       $text_mb = $text_mb.replace(/\s/g,'+');
-      window.location.href = 'search.php?search_query=' + $text_mb;
+      window.location.href = 'tim-kiem/' + $text_mb;
     }
   }
   });
@@ -136,7 +136,7 @@ $('#search-txt').keypress(function(event){
 
     }else{
       $text_mb =$text_mb.replace(/\s/g,'+');
-      window.location.href = 'search.php?search_query=' + $text_mb;
+      window.location.href = 'tim-kiem/' + $text_mb;
     }
   });
 
