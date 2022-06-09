@@ -89,7 +89,7 @@
 
                     <div class="col-img">
                         <div class="box-img">
-                            <img src=".<?php print $ag['img'] ?>" alt="Đại lý">
+                            <img src="<?php print $base_url?><?php print $ag['img'] ?>" alt="đại lý">
                         </div>
                     </div>
                     <div class="col-content">
@@ -127,8 +127,8 @@
     ?>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="./public/js/slider.js"></script>
-    <script src="./public/js/script.js"></script>
+    <script src="<?php print $base_url?>/public/js/slider.js"></script>
+    <script src="<?php print $base_url?>/public/js/script.js"></script>
     <!-- javasript -->
     <!-- css on sroll pages -->
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
