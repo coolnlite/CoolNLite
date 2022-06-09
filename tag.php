@@ -66,10 +66,10 @@
       <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
       <!-- fontawesome -->
       <!-- css -->
-      <link rel="icon" sizes="32x32" href="./shared/img/icon.png">
-      <link rel="stylesheet" href="./public/css/style.css" />
-      <link rel="stylesheet" href="./public/css/reponsive.css" />
-      <link rel="stylesheet" href="./public/css/news.css" />
+      <link rel="icon" sizes="32x32" href="<?php print $base_url?>/shared/img/icon.png">
+      <link rel="stylesheet" href="<?php print $base_url?>/public/css/style.css" />
+      <link rel="stylesheet" href="<?php print $base_url?>/public/css/reponsive.css" />
+      <link rel="stylesheet" href="<?php print $base_url?>/public/css/news.css" />
       <!-- css -->
    </head>
    <body class="body">
@@ -86,9 +86,9 @@
             <header>
                <div class="container">
                   <h1 class="page-title">
-                     <a href="./tag.php?id=<?php echo ''.$id_keyword.''?>&keyword=<?php
+                     <a href="<?php print $base_url?>/<?php echo ''.$id_keyword.''?>/<?php
                                     echo str_replace(' ', '+', $keyword);
-                                ?>"><?php print  $keyword ?>
+                                ?>.html"><?php print  $keyword ?>
                      </a>
                   </h1>
                </div>
@@ -110,10 +110,10 @@
                             foreach($news as $ns) {
                         ?>
                         <li class="items-news news">
-                           <a class="link-news" href="./post.php?url=<?php echo ''.$ns['url'].''?>">
+                           <a class="link-news" href="<?php echo ''.$base_url.'/'.$ns['url'].''?>.html">
                               <article class="posts">
                                  <figure class="box-img fix">
-                                    <img src=".<?php echo ''.$ns['thumnail'].''?>" alt="ảnh đại điện">
+                                    <img src=".<?php echo ''.$ns['thumnail'].''?>" alt="thumnail">
                                     <i class="fas fa-eye"></i>
                                  </figure>
                                  <div class="box-content">
@@ -130,7 +130,7 @@
 
                                           ?>
                                           <div class="box-arthur">
-                                             <img src=".<?php echo ''.$us['image'].''?>" alt="Avatar">
+                                             <img src=".<?php echo ''.$us['image'].''?>" alt="avatar">
                                           </div>
                                           <span class="name">
                                              <?php echo ''.$us['full_name'].''?>
