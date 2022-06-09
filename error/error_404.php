@@ -56,7 +56,7 @@
          display: inline-block;
          width: 120px;
          height: 120px;
-         background-image: url('../shared/img/emoji.png');
+         background-image: url('<?php print $base_url?>/shared/img/emoji.png');
          background-size: cover;
          -webkit-transform: scale(1.4);
          -ms-transform: scale(1.4);
