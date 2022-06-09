@@ -7,28 +7,25 @@
     if(isset($_GET['url'])){
         $posts = $_GET['url'] = !"" ? mysqli_real_escape_string($conn, $_GET['url']) : '';
     }
-    $sql = "SELECT * FROM `news` WHERE `url` = '$posts'";
-    $result = mysqli_query($conn, $sql);
-    $rowcount = mysqli_num_rows($result);
-    
-    if (isset($rowcount) && $rowcount != 0) { // Kiểm tra có bài viết này không
-        $sql = "SELECT `id`,`title`,`time` FROM `news` WHERE `url` = '$posts'";
-        $list = executeResult($sql);
-        foreach($list as $lt){ 
-            $title = $lt['title'];
-            $id_news = $lt['id'];
-            $time = $lt['time'];
-        }
-        if (!empty($id_news))
-            $cookieView='posts_'.$id_news;
 
-            if(!isset($_COOKIE["$cookieView"]))
-            {
-                setcookie("$cookieView","1",time() + 1800);
-                $sql = "UPDATE `news` SET `view`=`view`+1 WHERE `id`='$id_news'";
-                mysqli_query($conn,$sql);
-            }
+    $sql = "SELECT `id`,`title`,`time` FROM `news` WHERE `url` = '$posts'";
+    $list = executeResult($sql);
+
+    foreach($list as $lt){ 
+        $title = $lt['title'];
+        $id_news = $lt['id'];
+        $time = $lt['time'];
+    }
+    if (!empty($id_news)){
+        $cookieView='posts_'.$id_news;
+
+        if(!isset($_COOKIE["$cookieView"]))
+        {
+            setcookie("$cookieView","1",time() + 1800);
+            $sql = "UPDATE `news` SET `view`=`view`+1 WHERE `id`='$id_news'";
+            mysqli_query($conn,$sql);
         }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
