@@ -8,7 +8,15 @@
           <div class="block-menu">
             <ul class="list-menu">
                 <?php
+                $listMenu = array(
+                    0 => "premier.php",
+                    1 => "titanx.php",
+                    2 => "news.php",
+                    3 => "about.php",
+                    4 => "agency.php"
+                  );
                  $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
+                 var_dump($curPageName);
                  $sql = "SELECT * FROM `menu` ORDER BY `position` ASC";
                  $menu = executeResult($sql);
                  foreach($menu as $mn){
