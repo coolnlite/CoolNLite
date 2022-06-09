@@ -51,6 +51,7 @@ $(document).ready(function () {
 })
 
 $(document).ready(function(){
+  var base_url = "http://localhost/CoolNLite/";
   //Xử lý sự kiện click vào phần tử search
   $(document).click(function(event) { 
     $target = $(event.target);
@@ -67,7 +68,7 @@ $('#search-text').keypress(function(event){
 
     }else{
       $text = $text.replace(/\s/g,'+');
-      window.location.href = 'tim-kiem/' + $text;
+      window.location.href = base_url + 'tim-kiem/' + $text;
     }
   }
   });
@@ -79,7 +80,7 @@ $('#search-text').keypress(function(event){
 
     }else{
       $text = $text.replace(/\s/g,'+');
-      window.location.href = 'tim-kiem/' + $text;
+      window.location.href =  base_url + 'tim-kiem/' + $text;
     }
   });
 
@@ -92,7 +93,7 @@ $('#search-text').keypress(function(event){
     if ($text != "") {
       $.ajax({
         type: "POST",
-        url: "modules/result.php",
+        url: base_url + "modules/result.php",
         data: {
           text: $text,
         },
@@ -124,7 +125,7 @@ $('#search-txt').keypress(function(event){
 
     }else{
       $text_mb = $text_mb.replace(/\s/g,'+');
-      window.location.href = 'tim-kiem/' + $text_mb;
+      window.location.href = base_url + 'tim-kiem/' + $text_mb;
     }
   }
   });
@@ -136,7 +137,7 @@ $('#search-txt').keypress(function(event){
 
     }else{
       $text_mb =$text_mb.replace(/\s/g,'+');
-      window.location.href = 'tim-kiem/' + $text_mb;
+      window.location.href = base_url + 'tim-kiem/' + $text_mb;
     }
   });
 
@@ -148,7 +149,7 @@ $('#search-txt').keypress(function(event){
     if ($text_mb != "") {
       $.ajax({
         type: "POST",
-        url: "modules/result.php",
+        url: base_url + "modules/result.php",
         data: {
           text_mb:  $text_mb,
         },
