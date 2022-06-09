@@ -178,7 +178,7 @@
                             ?>
                             <li class="tag-items">
                                 
-                                <a href="tu-khoa/<?php echo ''.$kw['id'].''?>/<?php
+                                <a href="<?php print $base_url?>/tu-khoa/<?php echo ''.$kw['id'].''?>/<?php
                                     echo str_replace(' ', '+', $kw['name']);
                                 ?>.html">
                                     <?php echo ''.$kw['name'].''?>
