@@ -15,11 +15,11 @@ if (isset($_POST['text'])) {
         foreach ($result as $row) {
             echo '
               <article class="card-columns">
-              <a href="./post.php?url=' . $row['url'] . ' ">
-                <div class="card-img">
-                    <img src=".'.$row['thumnail'].'" alt ="img"/>
+              <a href="'.$base_url.'/' . $row['url'] . '.html">
+                <div class="card-img" title="' . $row['title'] . ' ">
+                    <img src="'.$base_url.''.$row['thumnail'].'" alt ="thumnail"/>
                 </div>
-                  <div class="card-title">
+                  <div class="card-title" title="' . $row['title'] . ' ">
                       <h5>
                         ' . $row['title'] . ' 
                       </h5>
