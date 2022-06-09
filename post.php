@@ -5,17 +5,17 @@
     date_default_timezone_set('Asia/Ho_Chi_Minh');
 
     if(isset($_GET['url'])){
-        $posts = $_GET['url'] = !"" ? mysqli_real_escape_string($conn, $_GET['url']) : '';
+        $link = $_GET['url'] = !"" ? mysqli_real_escape_string($conn, $_GET['url']) : '';
     }
 
-    $sql = "SELECT `id`,`title`,`time` FROM `news` WHERE `url` = '$posts'";
+    $sql = "SELECT `id`,`title`,`time` FROM `news` WHERE `url` = '$link'";
     $list = executeResult($sql);
 
     foreach($list as $lt){ 
         $title = $lt['title'];
         $id_news = $lt['id'];
         $time = $lt['time'];
-    }
+    
     if (!empty($id_news)){
         $cookieView='posts_'.$id_news;
 
@@ -41,6 +41,9 @@
         $seo_news = executeResult($sql);
         foreach($seo_news as $sn){
             
+    ?>
+    <?php 
+        }//Vòng lặp của bài viết
     ?>
     <meta name="description" content="<?php print $sn['description']?>"/>
     <meta name="keywords" content="<?php print $sn['keyword']?>"/>
@@ -106,9 +109,9 @@
         <main class="default-page-width">
             <section class="tag-main">
                 <?php
-                    $sql = "SELECT * FROM `news` WHERE `url` = '$posts'";
-                    $posts = executeResult($sql);
-                    foreach($posts as $ps){
+                    $sql = "SELECT * FROM `news` WHERE `url` = '$link'";
+                    $main = executeResult($sql);
+                    foreach($main as $ps){
                 ?>
                 <div class="posts-main">
                     <div class="posts-top">
@@ -201,8 +204,7 @@
                     <div class="wrapper">
                     <?php
                         $row = 6;
-                        $posts = $posts[0]['id'];
-                        $sql = "SELECT * FROM `news` WHERE `url` != $posts
+                        $sql = "SELECT * FROM `news` WHERE `url` != $link
                          ORDER BY RAND() LIMIT 0, $row ";
                         $posts = executeResult($sql);
                         foreach($posts as $ps){
