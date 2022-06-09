@@ -64,7 +64,8 @@
               <table id="sidebar" class="table table-striped table-bordered" style="width: 100%;">
                 <thead>
                 <th>Id</th>
-                <th>Đường dẫn</th>
+                <th>Đường dẫn ảo</th>
+                <th>Đường dẫn thật</th>
                 <th>Icons</th>
                 <th>Tên</th>
                 <th>Vị trí</th>

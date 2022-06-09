@@ -438,8 +438,9 @@ if(isset($_POST['menu'])){
         0 => 'id',
         1 => 'name',
         2 => 'url',
-        3 => 'position',
-        4 => 'time'
+        3 => 'url_real',
+        4 => 'position',
+        5 => 'time'
     );
     
     if(isset($_POST['search']['value']))
@@ -447,6 +448,7 @@ if(isset($_POST['menu'])){
         $search_value = $_POST['search']['value'];
         $sql .= " WHERE `name` like '%".$search_value."%'";
         $sql .= " OR `url` like '%".$search_value."%'";
+        $sql .= " OR `url_real` like '%".$search_value."%'";
         $sql .= " OR `position` like '%".$search_value."%'";
     }
 
@@ -478,6 +480,7 @@ if(isset($_POST['menu'])){
         $sub_array[] = $row['id'];
         $sub_array[] = $row['name'];
         $sub_array[] = $row['url'];
+        $sub_array[] = $row['url_real'];
         $sub_array[] = $row['position'];
         $sub_array[] = facebook_time_ago($row['time']);
         $sub_array[] = 
