@@ -1,5 +1,8 @@
 <?php 
 	require_once('config.php');
+	//Đường dẫn mặc định trang web
+	$base_url = 'http://localhost/CoolNLite';
+	//Đường dẫn mặc định trang web
 	$conn = mysqli_connect(HOST,USERNAME,PASSWORD,DATABASE);
 	date_default_timezone_set("Asia/Ho_Chi_Minh"); // Thiết lập múi giờ chuẩn
 /*

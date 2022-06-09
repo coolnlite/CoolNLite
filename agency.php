@@ -2,7 +2,6 @@
     require_once('./config/config.php');
     require_once('./config/dbhelper.php');
     require_once('./admin/modules/function.php');
-    $base_url = 'http://localhost/CoolNLite';
     date_default_timezone_set('Asia/Ho_Chi_Minh');
 ?>
 <!DOCTYPE html>
