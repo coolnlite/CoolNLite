@@ -86,7 +86,7 @@
             <header>
                <div class="container">
                   <h1 class="page-title">
-                     <a href="<?php print $base_url?>/<?php echo ''.$id_keyword.''?>/<?php
+                     <a href="<?php print $base_url?>/tu-khoa/<?php echo ''.$id_keyword.''?>/<?php
                                     echo str_replace(' ', '+', $keyword);
                                 ?>"><?php print  $keyword ?>
                      </a>
@@ -113,7 +113,7 @@
                            <a class="link-news" href="<?php echo ''.$base_url.'/'.$ns['url'].''?>.html">
                               <article class="posts">
                                  <figure class="box-img fix">
-                                    <img src=".<?php echo ''.$ns['thumnail'].''?>" alt="thumnail">
+                                    <img src="<?php echo ''.$base_url.''.$ns['thumnail'].''?>" alt="thumnail">
                                     <i class="fas fa-eye"></i>
                                  </figure>
                                  <div class="box-content">
@@ -130,7 +130,7 @@
 
                                           ?>
                                           <div class="box-arthur">
-                                             <img src=".<?php echo ''.$us['image'].''?>" alt="avatar">
+                                             <img src="<?php echo ''.$base_url.''.$us['image'].''?>" alt="avatar">
                                           </div>
                                           <span class="name">
                                              <?php echo ''.$us['full_name'].''?>

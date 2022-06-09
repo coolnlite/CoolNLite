@@ -210,11 +210,11 @@
                     ?>
                         <div class="card-columns">
                             <a href="<?php echo ''.$base_url.'/'.$other['url'].''?>.html">
-                                <div class="card-img" title="<?php echo ''.$others['title'].''?>">
+                                <div class="card-img" title="<?php echo ''.$other['title'].''?>">
                                     <img src="<?php echo ''.$base_url.$other['thumnail'].''?>" alt="thumnail">
                                 </div>
                                 <div class="card-title">
-                                    <h4 title="<?php echo ''.$others['title'].''?>">
+                                    <h4 title="<?php echo ''.$other['title'].''?>">
                                     <?php echo ''.$other['title'].''?>
                                     </h4>
                                     <p>

@@ -14,7 +14,8 @@
                  foreach($menu as $mn){
                 ?>
                 <li class="items-menu">
-                    <a class="link-menu <?php $mn['url'] == $curPageName ? print "hovered" : print '' ?>" href="<?php echo ''.$mn['url'].''?>" title="<?php echo ''.$mn['name'].''?>">
+                    <a class="link-menu <?php $mn['url'] == $curPageName ? print "hovered" : print '' ?>"
+                    href="<?php echo ''.$base_url.'/'.$mn['url'].''?>" title="<?php echo ''.$mn['name'].''?>">
                     <?php echo ''.$mn['name'].''?>
                   </a>
                 </li>
@@ -61,7 +62,8 @@
             foreach($menu as $mn){
         ?>
             <li class="items-menu">
-                <a class="link-menu <?php $mn['url'] == $curPageName ? print "hovered" : print '' ?>" href="<?php echo ''.$mn['url'].''?>"><?php echo ''.$mn['name'].''?></a>
+                <a class="link-menu <?php $mn['url'] == $curPageName ? print "hovered" : print '' ?>" 
+                href="<?php echo ''.$base_url.'/'.$mn['url'].''?>"><?php echo ''.$mn['name'].''?></a>
             </li>
         <?php } ?>
         </ul>
