@@ -211,9 +211,9 @@
                         foreach($posts as $ps){
                     ?>
                         <div class="card-columns">
-                            <a href="<?php echo ''.$base_url.$ps['url'].''?>.html">
+                            <a href="<?php echo ''.$base_url.'/'.$ps['url'].''?>.html">
                                 <div class="card-img" title="<?php echo ''.$ps['title'].''?>">
-                                    <img src="<?php echo ''.$base_url.$ps['thumnail'].''?>" alt="">
+                                    <img src="<?php echo ''.$base_url.$ps['thumnail'].''?>" alt="thumnail">
                                 </div>
                                 <div class="card-title">
                                     <h4 title="<?php echo ''.$ps['title'].''?>">
@@ -258,8 +258,8 @@
     ?>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="./public/js/slider.js"></script>
-    <script src="./public/js/script.js"></script>
+    <script src="<?php print $base_url?>/public/js/slider.js"></script>
+    <script src="<?php print $base_url?>/public/js/script.js"></script>
     <!-- javasript -->
 </body>
 
