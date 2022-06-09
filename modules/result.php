@@ -73,12 +73,12 @@ if (
             <li class="items-news news">
                            <a class="link-news" href="'.$base_url.'/' . $row['url'] . '.html">
                               <article class="posts">
-                                 <figure class="box-img fix" title=" '.$row['title'].'">
+                                 <figure class="box-img fix">
                                     <img src="'.$base_url.''.$row['thumnail'].'" alt="thumnail">
                                     <i class="fas fa-eye"></i>
                                  </figure>
                                  <div class="box-content">
-                                    <h3 class="limit-2" title=" '.$row['title'].'">
+                                    <h3 class="limit-2">
                                       '.$row['title'].'
                                     </h3>
                                     <div class="box-all">
@@ -214,18 +214,18 @@ if (isset($_POST['text_mb'])) {
     if (mysqli_num_rows($result) > 0) {
         foreach ($result as $row) {
             echo '
-            <article class="card-columns">
-            <a href="'.$base_url.'/' . $row['url'] . '.html">
-              <div class="card-img" title="' . $row['title'] . ' ">
-                  <img src="'.$base_url.''.$row['thumnail'].'" alt ="thumnail"/>
-              </div>
-                <div class="card-title" title="' . $row['title'] . ' ">
-                    <h5>
-                      ' . $row['title'] . ' 
-                    </h5>
+                <article class="card-search" title=" '.$row['title'].'">
+                <a href="'.$base_url.'/' . $row['url'] . '.html">
+                <div class="img-search" >
+                <img src="'.$base_url.$row['thumnail'].'" alt="thumnail">
                 </div>
-            </a>
-        </article>
+                <div class="content-search">
+                <h3 title=" '.$row['title'].'">
+                    '.$row['title'].'
+                </h3>
+                </div>
+                </a>
+            </article>
               ';
         }
     } else {
