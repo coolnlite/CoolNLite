@@ -204,26 +204,27 @@
                     <div class="wrapper">
                     <?php
                         $row = 6;
-                        $sql = "SELECT * FROM `news` WHERE `url` != $link
+                        $sql = "SELECT * FROM `news` WHERE `url` != '$link'
                          ORDER BY RAND() LIMIT 0, $row ";
-                        $posts = executeResult($sql);
-                        foreach($posts as $ps){
+                        $result = mysqli_query($conn,$sql);
+                        if($result){
+                            while($other = mysqli_fetch_array($result)){
                     ?>
                         <div class="card-columns">
-                            <a href="<?php echo ''.$base_url.'/'.$ps['url'].''?>.html">
-                                <div class="card-img" title="<?php echo ''.$ps['title'].''?>">
-                                    <img src="<?php echo ''.$base_url.$ps['thumnail'].''?>" alt="thumnail">
+                            <a href="<?php echo ''.$base_url.'/'.$other['url'].''?>.html">
+                                <div class="card-img" title="<?php echo ''.$others['title'].''?>">
+                                    <img src="<?php echo ''.$base_url.$other['thumnail'].''?>" alt="thumnail">
                                 </div>
                                 <div class="card-title">
-                                    <h4 title="<?php echo ''.$ps['title'].''?>">
-                                    <?php echo ''.$ps['title'].''?>
+                                    <h4 title="<?php echo ''.$others['title'].''?>">
+                                    <?php echo ''.$other['title'].''?>
                                     </h4>
                                     <p>
-                                    <?php echo ''.$ps['description'].''?>
+                                    <?php echo ''.$other['description'].''?>
                                     </p>
                                     <div class="box-users">
                                     <?php
-                                        $id_users = $ps['id_user'];
+                                        $id_users = $other['id_user'];
                                         $sql = "SELECT `full_name`, `image` FROM users WHERE id = '$id_users'";
                                         $users = executeResult($sql);
                                         foreach($users as $us){
@@ -243,7 +244,8 @@
                             </a>
                         </div>
                     <?php
-                        }//Kết thúc vòng lặp posts
+                         }//Vòng lặp while
+                        }//Kiểm tra có tồn tại hay không
                     ?>
                     </div>
                 </div>
