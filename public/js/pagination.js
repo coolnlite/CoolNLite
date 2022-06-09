@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  var base_url = "http://localhost/CoolNLite/";
       //Load search 
       load_search(1);
         function load_search(page) {
@@ -6,7 +7,7 @@ $(document).ready(function () {
           $search = $this.data('search');
           $.ajax({
               type: "POST",
-              url: 'modules/result.php',
+              url: base_url + 'modules/result.php',
               data: {
                   page: page,
                   search : $search
