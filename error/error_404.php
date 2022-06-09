@@ -1,3 +1,7 @@
+<?php
+   require_once('../config/config.php');
+   require_once('../config/dbhelper.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -127,7 +131,7 @@
                Xin lỗi nhưng trang bạn đang tìm kiếm không tồn tại, đã bị xóa. tên đã thay đổi hoặc tạm thời không có
                sẵn
             </p>
-            <a href="./">Quay lại trang chủ</a>
+            <a href="<?php print $base_url ?>">Quay lại trang chủ</a>
          </div>
       </div>
    </div>
