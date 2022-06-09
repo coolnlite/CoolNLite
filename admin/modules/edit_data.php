@@ -2034,16 +2034,17 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
     //Chỉnh sửa menu
 
     if(!empty($_POST['id_menu']) && !empty($_POST['name_menu']) &&
-     !empty($_POST['url_menu']) && isset($_POST['position_menu'])){
+     !empty($_POST['url_menu']) && !empty($_POST['url_real_menu']) && isset($_POST['position_menu'])){
 
         $id_menu = mysqli_real_escape_string($conn, $_POST['id_menu']);
         $name_menu = mysqli_real_escape_string($conn, $_POST['name_menu']);
         $url_menu = mysqli_real_escape_string($conn, $_POST['url_menu']);
+        $url_real_menu = mysqli_real_escape_string($conn, $_POST['url_real_menu']);
         $position_menu = mysqli_real_escape_string($conn, $_POST['position_menu']);
         $time = date('Y-m-d H:i:s');
     
         $sql = "UPDATE `menu` SET `name` = '$name_menu', `url` = '$url_menu', 
-        `position` = '$position_menu', `time` = '$time'
+        `url_real` = '$url_real_menu', `position` = '$position_menu', `time` = '$time'
          WHERE `id` = '$id_menu'";
         $result = mysqli_query($conn,$sql);
         if($result == true){
