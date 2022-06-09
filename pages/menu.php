@@ -8,26 +8,31 @@
           <div class="block-menu">
             <ul class="list-menu">
                 <?php
-                $listMenu = array(
-                    0 => "premier.php",
-                    1 => "titanx.php",
-                    2 => "news.php",
-                    3 => "about.php",
-                    4 => "agency.php"
-                  );
-                 $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
-                 var_dump($curPageName);
+                 $listMenu = array(
+                  "premier.php",
+                  "titanx.php",
+                  "news.php",
+                  "about.php",
+                  "agency.php"
+                );
+                 
                  $sql = "SELECT * FROM `menu` ORDER BY `position` ASC";
                  $menu = executeResult($sql);
                  foreach($menu as $mn){
+
                 ?>
                 <li class="items-menu">
-                    <a class="link-menu <?php $mn['url'] == $curPageName ? print "hovered" : print '' ?>"
+                    <a class="link-menu <?php foreach($listMenu as $lm){
+                     $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
+                     $lm == $curPageName ? print "hovered" : print '' ;
+                    }?>"
                     href="<?php echo ''.$base_url.'/'.$mn['url'].''?>" title="<?php echo ''.$mn['name'].''?>">
                     <?php echo ''.$mn['name'].''?>
                   </a>
                 </li>
-              <?php } ?>
+              <?php
+               }
+               ?>
             </ul>
           </div>
           <div title="Tìm kiếm" class="search-box search-box-desktop" id="search-box-desktop">
