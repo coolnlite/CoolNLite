@@ -71,10 +71,10 @@ if (
             }
             $output .= '
             <li class="items-news news">
-                           <a class="link-news" href="./post.php?url='.$row['url'].'">
+                           <a class="link-news" href="'.$base_url.'/' . $row['url'] . '.html">
                               <article class="posts">
                                  <figure class="box-img fix">
-                                    <img src=".'.$row['thumnail'].'" alt="ảnh đại điện">
+                                    <img src="'.$base_url.''.$row['thumnail'].'" alt="thumnail">
                                     <i class="fas fa-eye"></i>
                                  </figure>
                                  <div class="box-content">
@@ -84,7 +84,7 @@ if (
                                     <div class="box-all">
                                        <div class="arthur">
                                           <div class="box-arthur">
-                                             <img src=".'.$img.'" alt="Avatar">
+                                             <img src="'.$base_url.''.$img.'" alt="avatar">
                                           </div>
                                           <span class="name">
                                              '.$fullname.'
@@ -214,18 +214,18 @@ if (isset($_POST['text_mb'])) {
     if (mysqli_num_rows($result) > 0) {
         foreach ($result as $row) {
             echo '
-                <article class="card-search">
-                <a href="post.php?url='.$row['url'].'">
-                <div class="img-search">
-                <img src=".'.$row['thumnail'].'" alt="img">
+            <article class="card-columns">
+            <a href="'.$base_url.'/' . $row['url'] . '.html">
+              <div class="card-img" title="' . $row['title'] . ' ">
+                  <img src="'.$base_url.''.$row['thumnail'].'" alt ="thumnail"/>
+              </div>
+                <div class="card-title" title="' . $row['title'] . ' ">
+                    <h5>
+                      ' . $row['title'] . ' 
+                    </h5>
                 </div>
-                <div class="content-search">
-                <h3>
-                    '.$row['title'].'
-                </h3>
-                </div>
-                </a>
-            </article>
+            </a>
+        </article>
               ';
         }
     } else {
