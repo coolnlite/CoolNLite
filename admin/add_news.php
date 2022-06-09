@@ -45,8 +45,12 @@
     <script src="./ckfinder/ckfinder.js"></script>
     <script>
         CKEDITOR.replace( 'content', {
-        filebrowserBrowseUrl: 'ckfinder/ckfinder.html',
-        filebrowserUploadUrl: 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
+            filebrowserBrowseUrl : 'http://localhost/CoolNLite/admin/ckfinder/ckfinder.html',
+            filebrowserImageBrowseUrl : 'http://localhost/CoolNLite/admin/ckfinder/ckfinder.html?type=Images',
+            filebrowserFlashBrowseUrl : 'http://localhost/CoolNLite/admin/ckfinder/ckfinder.html?type=Flash',
+            filebrowserUploadUrl : 'http://localhost/CoolNLite/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+            filebrowserImageUploadUrl : 'http://localhost/CoolNLite/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+            filebrowserFlashUploadUrl : 'http://localhost/CoolNLite/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
         } );
     </script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
