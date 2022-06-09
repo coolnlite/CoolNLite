@@ -42,9 +42,6 @@
         foreach($seo_news as $sn){
             
     ?>
-    <?php 
-        }//Vòng lặp của bài viết
-    ?>
     <meta name="description" content="<?php print $sn['description']?>"/>
     <meta name="keywords" content="<?php print $sn['keyword']?>"/>
     <meta name="robots" content="noarchive,index,follow"/>
@@ -84,6 +81,7 @@
     <!-- End Twitter Card -->
     <?php 
         }//Vòng lặp seo
+    }//Vòng lặp bài viết
     ?>
     <!-- fontawesome -->
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
@@ -180,7 +178,7 @@
                                 
                                 <a href="<?php print $base_url?>/tu-khoa/<?php echo ''.$kw['id'].''?>/<?php
                                     echo str_replace(' ', '+', $kw['name']);
-                                ?>.html">
+                                ?>">
                                     <?php echo ''.$kw['name'].''?>
                                 </a>
                             </li>

@@ -88,7 +88,7 @@
                   <h1 class="page-title">
                      <a href="<?php print $base_url?>/<?php echo ''.$id_keyword.''?>/<?php
                                     echo str_replace(' ', '+', $keyword);
-                                ?>.html"><?php print  $keyword ?>
+                                ?>"><?php print  $keyword ?>
                      </a>
                   </h1>
                </div>
@@ -170,7 +170,7 @@
       ?>
       <!-- javasript -->
       <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-      <script src="./public/js/script.js"></script>
+      <script src="<?php print $base_url?>/public/js/script.js"></script>
       <!-- javasript -->
    </body>
 </html>
