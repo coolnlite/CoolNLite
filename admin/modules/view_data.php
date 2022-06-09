@@ -120,10 +120,17 @@
             </div>
 
             <div class="form-group">
-            <label for="url">Đường dẫn :</label>
+            <label for="url">Đường dẫn ảo:</label>
             <input type="text" class="form-control" value="<?php print $mn['url']?>" name="url_menu" 
-            placeholder="Nhập địa chỉ menu" required>
-            <div class="invalid-feedback">Vui lòng nhập đường dẫn</div>
+            placeholder="Nhập đường dẫn ảo" required>
+            <div class="invalid-feedback">Vui lòng nhập đường dẫn ảo</div>
+            </div>
+
+            <div class="form-group">
+            <label for="url_real">Đường dẫn thật:</label>
+            <input type="text" class="form-control" value="<?php print $mn['url_real']?>" name="url_real_menu" 
+            placeholder="Nhập đường dẫn thật" required>
+            <div class="invalid-feedback">Vui lòng nhập đường dẫn thật</div>
             </div>
 
             <div class="form-group">
