@@ -73,12 +73,12 @@ if (
             <li class="items-news news">
                            <a class="link-news" href="'.$base_url.'/' . $row['url'] . '.html">
                               <article class="posts">
-                                 <figure class="box-img fix">
+                                 <figure class="box-img fix title="'.$row['title'].'">
                                     <img src="'.$base_url.''.$row['thumnail'].'" alt="thumnail">
                                     <i class="fas fa-eye"></i>
                                  </figure>
                                  <div class="box-content">
-                                    <h3 class="limit-2">
+                                    <h3 class="limit-2" title="'.$row['title'].'">
                                       '.$row['title'].'
                                     </h3>
                                     <div class="box-all">
