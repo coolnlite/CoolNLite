@@ -521,14 +521,16 @@ if(
 
 //Thêm menu
 
-if(!empty($_POST['name_menu']) && !empty($_POST['url_menu']) && isset($_POST['position_menu'])){
+if(!empty($_POST['name_menu']) && !empty($_POST['url_menu']) && 
+!empty($_POST['url_real_menu']) && isset($_POST['position_menu'])){
     $name = mysqli_real_escape_string($conn, $_POST['name_menu']);
     $url = mysqli_real_escape_string($conn, $_POST['url_menu']);
+    $url_real = mysqli_real_escape_string($conn, $_POST['url_real_menu']);
     $position = mysqli_real_escape_string($conn, $_POST['position_menu']);
     $time = date('Y-m-d H:i:s');
 
-    $sql = "INSERT INTO `menu` (`name`, `url`, `position`,`time`) 
-    VALUES ('$name',' $url','$position','$time')";
+    $sql = "INSERT INTO `menu` (`name`, `url`,`url_real`, `position`,`time`) 
+    VALUES ('$name',' $url','$url_real','$position','$time')";
 
     $result = mysqli_query($conn, $sql);
     if($result) {
