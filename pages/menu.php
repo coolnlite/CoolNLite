@@ -24,7 +24,7 @@
           </div>
           <div title="Tìm kiếm" class="search-box search-box-desktop" id="search-box-desktop">
             <input type="search" name="search-text" id="search-text" placeholder="Tìm kiếm" autocomplete="off" />
-            <button type="submit" id="btn-search">
+            <button type="submit" id="btn-search" title="Tìm">
               <i class="far fa-search"></i>
             </button>
             <div class="result-search" id="result-search">
@@ -44,7 +44,7 @@
             <button type="submit" id="btn-search-mb">
               <i class="far fa-search"></i>
             </button>
-            <div class="result-search-mb" id="result-search-mb">
+            <div class="result-search-mb" id="result-search-mb" title="Tìm">
             </div>
             <div class="bg-search-mb" id="bg-search-mb">
             </div>
