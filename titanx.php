@@ -138,16 +138,16 @@
       <div class="container-slide">
         <div class="slider-container">
           <div class="slider2 sizes-slider2">
-            <img class="dk" src="<?php print $base_url?>/shared/img/titanx/mamautitanx.png" alt="Image">
-            <img class="mb" src="<?php print $base_url?>/shared/img/titanx/MAMAUTITANXBM.jpg" alt="Image">
+            <img class="dk" src="<?php print $base_url?>/shared/img/titanx/ma-mau-titan-x.png" alt="Image">
+            <img class="mb" src="<?php print $base_url?>/shared/img/titanx/ma-mau-titan-x-mb.png" alt="Image">
           </div>
           <div class="slider2 sizes-slider2">
-            <img class="dk" src="<?php print $base_url?>/shared/img/titanx/titletitanx.png" alt="Image">
-            <img class="mb" src="<?php print $base_url?>/shared/img/titanx/titanxmb.png" alt="Image">
+            <img class="dk" src="<?php print $base_url?>/shared/img/titanx/title-titan-x.png" alt="Image">
+            <img class="mb" src="<?php print $base_url?>/shared/img/titanx/title-tittan-x-mb.png" alt="Image">
           </div>
           <div class="slider2 sizes-slider2">
-            <img class="dk" src="<?php print $base_url?>/shared/img/titanx/thongsokythuattitanx.png" alt="Image">
-            <img class="mb" src="<?php print $base_url?>/shared/img/titanx/thongxoakythuat.png" alt="Image">
+            <img class="dk" src="<?php print $base_url?>/shared/img/titanx/thong-so-ky-thuat-titan-x.png" alt="Image">
+            <img class="mb" src="<?php print $base_url?>/shared/img/titanx/thong-so-ky-thuat-titan-x-mb.png" alt="Image">
           </div>
           <div class="box-btn">
             <div class="prev-button prev-button1" onclick="plusSlide2(-1)">

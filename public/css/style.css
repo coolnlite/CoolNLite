@@ -102,7 +102,7 @@ textarea {
 }
 
 .section .bg-premier-2 {
-    background: url(../../shared/img/premier/BANG-GIA-NIEM-YET-PREMIER-SERIES.png);
+    background: url(../../shared/img/premier/bang-gia-premier.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -116,7 +116,7 @@ textarea {
 }
 
 .section .bg-titanx-2 {
-    background: url(../../shared/img/titanx/bangniemyet.png);
+    background: url(../../shared/img/titanx/bang-gia-niem-yet-titan-x.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -746,14 +746,14 @@ a.btn-up {
 }
 
 .section.built .box-built .box-left-built.bg-pre {
-    background: url(../../shared/img/premier/CAC-LOP-CUA-PREMIER-SERIES-5.png);
+    background: url(../../shared/img/premier/cac-lop-cua-premier-series.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 }
 
 .section.built .box-built .box-left-built.bg-tit {
-    background: url(../../shared/img/titanx/cacloptitanx.png);
+    background: url(../../shared/img/titanx/cac-lop-cua-titan-x.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
