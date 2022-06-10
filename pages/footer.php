@@ -52,8 +52,8 @@
     <?php }
     ?>
       <div class="footer-icons">
-        <a href="#"><i class="fab fa-facebook"></i></i></a>
-        <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+        <a href="https://www.facebook.com/coolnlitevn" target="_blank"><i class="fab fa-facebook"></i></i></a>
+        <a href=""><i class="fab fa-facebook-messenger"></i></a>
         <a href="#"><i class="fab fa-google"></i></a>
       </div>
     </div>
