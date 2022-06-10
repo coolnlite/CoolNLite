@@ -38,8 +38,9 @@
     <title><?php print $title.' - Phim cách nhiệt COOL N LITE'?></title>
     <?php
         $sql = "SELECT * FROM `seo_news` WHERE `id_news` = '$id_news'";
-        $seo_news = executeResult($sql);
-        foreach($seo_news as $sn){
+        $result = mysqli_query($conn,$sql);
+        if($result){
+          while ($sp = mysqli_fetch_array($result)){
             
     ?>
     <meta name="description" content="<?php print $sn['description']?>"/>
@@ -81,6 +82,7 @@
     <!-- End Twitter Card -->
     <?php 
         }//Vòng lặp seo
+        }
     }//Vòng lặp bài viết
     ?>
     <!-- fontawesome -->

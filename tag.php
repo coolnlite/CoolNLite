@@ -19,8 +19,9 @@
       <title><?php print  $keyword ?> - Phim cách nhiệt COOL N LITE</title>
       <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 7";
-        $seo_pages = executeResult($sql);
-        foreach($seo_pages as $sp){
+        $result = mysqli_query($conn,$sql);
+        if($result){
+          while ($sp = mysqli_fetch_array($result)){
             
       ?>
       <meta name="description" content="<?php print $sp['description']?>"/>
@@ -61,6 +62,7 @@
       <!-- End Twitter Card -->
       <?php 
          }//Vòng lặp seo
+      }
       ?>
       <!-- fontawesome -->
       <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
