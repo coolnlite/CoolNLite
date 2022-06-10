@@ -142,7 +142,7 @@
 
                                         </div>
                                         <div class="box-icons">
-                                            <img src="./shared/img/about/10NAMBAOHANHBONTROC-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
+                                            <img src="<?php print $base_url?>/shared/img/about/10NAMBAOHANHBONTROC-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
                                         </div>
                                     </div>
                                     <div class="policy_txt">
@@ -162,7 +162,7 @@
 
                                         </div>
                                         <div class="box-icons">
-                                            <img src="./shared/img/about/7NAMBAOHANHTHONGSO-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
+                                            <img src="<?php print $base_url?>/shared/img/about/7NAMBAOHANHTHONGSO-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
                                         </div>
                                     </div>
                                     <div class="policy_txt">
@@ -182,7 +182,7 @@
 
                                         </div>
                                         <div class="box-icons">
-                                            <img src="./shared/img/about/TEMBAOHANHHOLOGRAM-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
+                                            <img src="<?php print $base_url?>/shared/img/about/TEMBAOHANHHOLOGRAM-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
                                         </div>
                                     </div>
                                     <div class="policy_txt">
@@ -202,7 +202,7 @@
 
                                         </div>
                                         <div class="box-icons">
-                                            <img src="./shared/img/about/THUONGXUYENKIEMTRAVATHAYMOI-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
+                                            <img src="<?php print $base_url?>/shared/img/about/THUONGXUYENKIEMTRAVATHAYMOI-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
                                         </div>
                                     </div>
                                     <div class="policy_txt">
@@ -233,10 +233,10 @@
                         <div class="container-slide about-slide">
                             <div class="slider-container">
                                 <div class="slider sizes-slider3">
-                                    <img src="./shared/img/about/CRM5.jpg" alt="Image">
+                                    <img src="<?php print $base_url?>/shared/img/about/CRM5.jpg" alt="Image">
                                 </div>
                                 <div class="slider sizes-slider3">
-                                    <img src="./shared/img/about/CRM6.jpg" alt="Image">
+                                    <img src="<?php print $base_url?>/shared/img/about/CRM6.jpg" alt="Image">
                                 </div>
                                 <div class="box-btn">
                                     <div class="prev-button prev-button2" onclick="plusSlide(-1)">
