@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2022 at 11:47 AM
+-- Generation Time: Jun 10, 2022 at 07:33 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -87,88 +87,6 @@ CREATE TABLE `contact` (
   `message` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
   `time` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `contact`
---
-
-INSERT INTO `contact` (`id_contact`, `full_name`, `tel`, `models`, `area`, `message`, `time`) VALUES
-(34, ' Nguyễn Văn A', '0971738344', 'SUV', 'Bình Phước', 'Sáng sớm ăn cơm ở nhà', '2022-05-18 14:37:52'),
-(35, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:02:18'),
-(36, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:00'),
-(37, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:04'),
-(38, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:07'),
-(39, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:10'),
-(40, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:13'),
-(41, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:06:44'),
-(42, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:06:47'),
-(43, ' Nguyễn Văn A', '0971738344', 'Sedan', 'Bình Phước', '', '2022-05-20 10:07:02'),
-(44, ' Nguyễn Văn A', '0971738344', 'Sedan', 'Bình Phước', 'gggggg', '2022-05-20 10:07:08'),
-(45, ' Nguyễn Văn A', '0971738344', 'Crossover - CUV', 'Bình Phước', 'Text', '2022-05-20 10:07:41'),
-(46, ' Nguyễn Văn A', '0971738344', 'Crossover - CUV', 'Bình Phước', '', '2022-05-20 10:09:32'),
-(47, ' Nguyễn Văn B', '0971738344', 'Convertible', 'Tp Hồ Chí Minh', '', '2022-05-20 10:10:23'),
-(48, ' Nguyễn Văn A', '0971738344', 'SUV', 'Tp Cần Thơ', '', '2022-05-20 10:11:01'),
-(49, ' Nguyễn Văn A', '0971738344', 'SUV', 'Tp Cần Thơ', '', '2022-05-20 10:11:01'),
-(50, ' Nguyễn Văn A', '0971738344', 'Sedan', 'Bình Phước', '', '2022-05-20 10:07:02'),
-(51, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:06:47'),
-(52, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:10'),
-(53, ' Nguyễn Alo', '0971888888', 'Hatchback', 'Bình Định', '', '2022-05-20 16:49:55'),
-(54, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:10'),
-(55, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:06:47'),
-(56, 'Lê Thị Hương', '0973664167', '', 'Bình Định', 'Tôi là ai', '2022-05-20 16:52:07'),
-(57, 'Lê Thị Hương', '0973664167', '', 'Bình Định', 'Tôi là ai', '2022-05-20 16:52:21'),
-(58, ' Nguyễn Văn A', '0971738344', 'Crossover - CUV', 'Bình Phước', '', '2022-05-20 10:09:32'),
-(59, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:10'),
-(60, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:10'),
-(61, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:06:47'),
-(62, ' Nguyễn Alo', '0971888888', 'Hatchback', 'Bình Định', '', '2022-05-20 16:49:55'),
-(63, 'Lê Thị Hương', '0973664167', '', 'Bình Định', 'Tôi là ai', '2022-05-20 16:52:07'),
-(64, 'Lê Thị Hương', '0973664167', '', 'Bình Định', 'Tôi là ai', '2022-05-20 16:52:07'),
-(65, 'Lê Thị Hương', '0973664167', '', 'Bình Định', 'Tôi là ai', '2022-05-20 16:52:21'),
-(66, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:10'),
-(67, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:00'),
-(68, ' Nguyễn Văn A', '0971738344', 'SUV', 'Bình Phước', 'Sáng sớm ăn cơm ở nhà', '2022-05-18 14:37:52'),
-(69, ' Nguyễn Văn A', '0971738344', 'SUV', 'Tp Cần Thơ', '', '2022-05-20 10:11:01'),
-(70, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:06:47'),
-(71, ' Nguyễn Văn B', '0971738344', 'Convertible', 'Tp Hồ Chí Minh', '', '2022-05-20 10:10:23'),
-(72, ' Nguyễn Văn A', '0971738344', 'SUV', 'Bình Phước', 'Sáng sớm ăn cơm ở nhà', '2022-05-18 14:37:52'),
-(73, ' Nguyễn Văn A', '0971738344', 'SUV', 'Tp Cần Thơ', '', '2022-05-20 10:11:01'),
-(74, ' Nguyễn Văn A', '0971738344', 'SUV', 'Bình Phước', 'Sáng sớm ăn cơm ở nhà', '2022-05-18 14:37:52'),
-(75, ' Lê Long Đỉnh', '0971234323', 'Coupe', 'Bến Tre', 'Mẫu tin thử nghiệm', '2022-05-20 17:21:17'),
-(76, 'Lê Thị Hương', '0973664167', '', 'Bình Định', 'Tôi là ai', '2022-05-20 16:52:07'),
-(77, ' Lê Long Đỉnh', '0971234323', 'Hatchback', 'Bình Dương', 'Tôi đang thử nghiệm form', '2022-05-20 17:22:52'),
-(78, ' Lê Long Đỉnh', '0971234323', 'Hatchback', 'Bình Dương', 'Tôi đang thử nghiệm form', '2022-05-20 17:22:52'),
-(79, 'Lê Thị Hương', '0973664167', '', 'Bình Định', 'Tôi là ai', '2022-05-20 16:52:07'),
-(80, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:06:47'),
-(81, ' Lê Long Đỉnh', '0971234323', 'Coupe', 'Bến Tre', 'Mẫu tin thử nghiệm thôi mà', '2022-05-20 17:21:17'),
-(82, ' Lê Long Đỉnh', '0971234323', 'Coupe', 'Bến Tre', 'Mẫu tin thử nghiệm thôi mà', '2022-05-20 17:21:17'),
-(83, ' Lê Long Đỉnh', '0971234323', 'Hatchback', 'Bình Dương', 'Tôi đang thử nghiệm form', '2022-05-20 17:22:52'),
-(84, ' Nguyễn Văn A', '0971738344', 'SUV', 'Bình Phước', 'Sáng sớm ăn cơm ở nhà', '2022-05-18 14:37:52'),
-(85, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:10'),
-(86, 'Lê Thị Hương', '0973664167', '', 'Bình Định', 'Tôi là ai, vì sao mọi người làm như thế', '2022-05-20 16:52:07'),
-(87, ' Lê Long Đỉnh', '0971234323', 'Coupe', 'Bến Tre', 'Mẫu tin thử nghiệm thôi mà', '2022-05-20 17:21:17'),
-(88, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:10'),
-(89, ' Lê Long Đỉnh', '0971234323', 'Coupe', 'Bến Tre', 'Mẫu tin thử nghiệm thôi mà', '2022-05-20 17:21:17'),
-(90, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:10'),
-(91, ' Nguyễn Văn A', '0971738344', 'SUV', 'Bình Phước', 'Sáng sớm ăn cơm ở nhà', '2022-05-18 14:37:52'),
-(92, ' Lê Long Đỉnh', '0971234323', 'Hatchback', 'Bình Dương', 'Tôi đang thử nghiệm form', '2022-05-20 17:22:52'),
-(93, ' Lê Long Đỉnh', '0971234323', 'Hatchback', 'Bình Dương', 'Tôi đang thử nghiệm form', '2022-05-20 17:22:52'),
-(94, ' Lê Thị Bình', '0921738555', 'Sedan', 'Cao Bằng', '', '2022-05-21 21:09:16'),
-(96, ' Lê Thị Bình', '0921738555', 'Sedan', 'Cao Bằng', '', '2022-05-21 21:09:16'),
-(97, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:10'),
-(98, ' Lê Long Đỉnh', '0971234323', 'Coupe', 'Bến Tre', 'Mẫu tin thử nghiệm thôi mà', '2022-05-20 17:21:17'),
-(99, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:10'),
-(100, ' Lê Thị Bình', '0921738555', 'Sedan', 'Cao Bằng', '', '2022-05-21 21:09:16'),
-(101, ' Nguyễn Văn A', '0971738344', 'SUV', 'Bình Phước', 'Sáng sớm ăn cơm ở nhà', '2022-05-18 14:37:52'),
-(102, ' Võ Đông Thái', '0971738344', 'Hatchback', 'Bà Rịa-Vũng Tàu', 'Sáng uống cà phê', '2022-05-20 10:05:10'),
-(103, ' Nguyễn Văn A', '0971738344', 'SUV', 'Bình Phước', 'Sáng sớm ăn cơm ở nhà', '2022-05-18 14:37:52'),
-(104, ' Lê Long Đỉnh', '0971234323', 'Coupe', 'Bến Tre', 'Mẫu tin thử nghiệm thôi mà', '2022-05-20 17:21:17'),
-(105, ' Lê Thị Bình', '0921738555', 'Sedan', 'Cao Bằng', 'Tôi đang test các form', '2022-05-21 21:09:16'),
-(106, ' Dương Quá', '0921738555', 'Limousine', '', 'Tôi là quá nhi ở thế kỷ 21\n', '2022-05-21 21:13:51'),
-(107, ' Tiểu Long Nữ', '0921738555', 'Convertible', 'Quảng Ninh', 'Vì sao như vậy nhỉ', '2022-05-21 21:15:08'),
-(109, ' Lê Văn An', '0971738344', 'Limousine', 'Bắc Ninh', 'Tôi đang test', '2022-05-25 11:33:46'),
-(110, ' Đoàn Khắc Nguyễn', '0365123456', 'Hatchback', 'Bình Dương', 'Tôi là nguyễn', '2022-05-25 11:46:58'),
-(111, ' Nguyễn Văn A', '0971738344', 'Limousine', 'Bình Định', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciunt omnis, sunt explicabo commodi nostrum repellat provident delectus totam sint assumenda, beatae nquae. Hic ab dolorum temporibus expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit et nesciu', '2022-05-25 14:16:15');
 
 -- --------------------------------------------------------
 
@@ -372,7 +290,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user_name`, `email`, `pass_word`, `position`, `token`, `full_name`, `image`, `status`, `time`) VALUES
-(1, 'thaisaone', 'vodongthai68@gmail.com', 'f2db2c94d7f2554ccda9edd32ae2bef5', 2, 'iidhugGFyIMknAyciLbK5bXX9LJ48d', 'Võ Đông Thái', '/uploads/users/1d7f3558b481ac55f57c60f3c03321ef.jpg', 1, '2022-05-19 10:13:12');
+(1, 'thaisaone', 'vodongthai68@gmail.com', 'f2db2c94d7f2554ccda9edd32ae2bef5', 2, '7hEUXoKhMkHp9q9zdRtDhqtKsrtjbm', 'Võ Đông Thái', '/uploads/users/1d7f3558b481ac55f57c60f3c03321ef.jpg', 1, '2022-05-19 10:13:12');
 
 --
 -- Indexes for dumped tables
