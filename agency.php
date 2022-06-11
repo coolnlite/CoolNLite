@@ -81,6 +81,16 @@
         </section>
         <!-- SETION 1 -->
         <section class="main-agency" id="main-agency">
+
+        <div class="search-agency" id="search-agency">
+            <input type="search" name="agency" id="agency-txt" placeholder="Tìm kiếm đại lý" />
+            <button type="button" class="btn-agency">
+              <i class="far fa-search"></i>
+            </button>
+            <div class="result_agency" id="result_agency">
+            </div>
+        </div>
+
         <?php 
             $sql = "SELECT * FROM `agency` ORDER BY `time` DESC ";
             $agency = executeResult($sql);
