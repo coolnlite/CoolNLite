@@ -1244,6 +1244,9 @@ section .main-about .btn-lh:hover {
   border-radius: 30px;
   box-shadow: 0px 0px 1px 1px var(--color-form);
 }
+#search-agency:hover,#search-agency:focus{
+  box-shadow: 0px 0px 1px 1px var(--color-blue);
+}
 #search-agency input{
   width: 100%;
   outline: 0;
