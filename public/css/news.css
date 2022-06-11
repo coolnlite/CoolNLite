@@ -1271,9 +1271,7 @@ section .main-about .btn-lh:hover {
   color: var(--text-color);
   font-size: 16px;
 }
-#result_agency{
-  
-}
+
 .item-agency {
   padding: 50px 20px;
   opacity: 0;
