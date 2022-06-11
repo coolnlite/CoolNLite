@@ -1247,6 +1247,11 @@ section .main-about .btn-lh:hover {
 #search-agency:hover,#search-agency:focus{
   box-shadow: 0px 0px 1px 1px var(--color-blue);
 }
+#search-agency input::-webkit-search-cancel-button{
+  position:relative;
+  right: 35px;
+  cursor: pointer;
+}
 #search-agency input{
   width: 100%;
   outline: 0;
@@ -1260,7 +1265,7 @@ section .main-about .btn-lh:hover {
   height: 50px;
   width: 50px;
   top : 0;
-  right: -50px;
+  right: -25px;
   border-radius: 25px;
   background-color: var(--color-blue);
   color: var(--text-color);
