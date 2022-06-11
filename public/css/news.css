@@ -1238,7 +1238,7 @@ section .main-about .btn-lh:hover {
   justify-content: center;
   align-items: center;
   max-width: 300px;
-  height: 50px;
+  height: 40px;
   position: relative;
   background-color: var(--text-color);
   border-radius: 30px;
@@ -1249,7 +1249,7 @@ section .main-about .btn-lh:hover {
 }
 #search-agency input::-webkit-search-cancel-button{
   position:relative;
-  right: 35px;
+  right: 30px;
   cursor: pointer;
 }
 #search-agency input{
@@ -1262,14 +1262,17 @@ section .main-about .btn-lh:hover {
 }
 #search-agency .btn-agency{
   position: absolute;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   top : 0;
-  right: -25px;
+  right: -10px;
   border-radius: 25px;
   background-color: var(--color-blue);
   color: var(--text-color);
   font-size: 16px;
+}
+#result_agency{
+  
 }
 .item-agency {
   padding: 50px 20px;
