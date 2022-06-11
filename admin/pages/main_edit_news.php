@@ -35,7 +35,7 @@
     </div>
       
     <label for="content">Nội dung :</label>
-    <textarea class="form-control" id="content" name="content" rows="5" >
+    <textarea class="form-control" id="content" name="content" rows="10" >
         <?php print $ns['content']?>
     </textarea>
     

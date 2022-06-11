@@ -23,7 +23,7 @@
     </div>
       
     <label for="content">Nội dung :</label>
-    <textarea class="form-control" id="content" name="content" rows="5" value=""></textarea>
+    <textarea class="form-control" id="content" name="content" rows="10" value=""></textarea>
     
     <div class="form-group">
       <label>Trạng thái bài viết :</label>
