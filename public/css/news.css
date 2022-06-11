@@ -1232,7 +1232,9 @@ section .main-about .btn-lh:hover {
 
 #search-agency{
   display: flex;
-  margin: 1em 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 
 .item-agency {
