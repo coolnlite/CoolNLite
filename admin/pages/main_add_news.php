@@ -3,8 +3,11 @@
   <form id="fAddNews" class="needs-validation" enctype="multipart/form-data" novalidate>
     <div class="form-group">
       <label for="url">Đường dẫn :</label><label class="text-danger">(Mẫu : vo-dong-thai-dep-trai-ahihi)</label>
-      <input type="text" class="form-control" id="url" placeholder="Nhập đường dẫn bài viết" name="url" required>
-      <div class="invalid-feedback">Vui lòng nhập đường dẫn bài viết</div>
+      <div class="input-group-prepend">
+        <span class="input-group-text">https://coolnlite.vn/</span>
+        <input type="text" class="form-control" id="url" placeholder="Nhập đường dẫn bài viết" name="url" required>
+        <div class="invalid-feedback">Vui lòng nhập đường dẫn bài viết</div>
+      </div>
     </div>
     <div class="form-group">
       <label for="title">Tiêu đề :</label> <label class="text-danger">không quá 200 ký tự</label>
