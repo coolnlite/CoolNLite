@@ -163,7 +163,7 @@
             $agency = executeResult($sql);
             foreach($agency as $ag){
         ?>
-            <div class="item-agency">
+            <div class="item-agency" id="<?php print $ag['id']?>">
                 <div class="container-agency">
 
                     <div class="col-img">
