@@ -90,7 +90,12 @@
             <div class="result_agency" id="result_agency">
                 <div class="card_agency">
                     <a href="#">
+                        <div class="card-img">
+                            <img src="/shared/img/daily/agency.jpg" alt="đại lý">
+                        </div>
+                        <div class="card-title">
 
+                        </div>
                     </a>
                 </div>
             </div>
