@@ -11,3 +11,4 @@ RewriteRule "^tu-khoa/([0-9]+)/(.*)$" "tag.php?id=$1&keyword=$2"
 RewriteRule "^tim-kiem/([0-9a-zA-Z]+)$" "search.php?search_query=$1"
 
 ErrorDocument 404 "/CoolNLite/error/error_404.php"
+
