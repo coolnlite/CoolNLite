@@ -318,7 +318,7 @@ textarea {
     outline: none;
     border: 1px solid var(--color-form);
     text-indent: 10px;
-    font-size: 14px;
+    font-size: 15px;
 }
 #search-txt::-webkit-search-cancel-button{
     position:relative;
@@ -1085,7 +1085,7 @@ a.btn-up {
 }
 
 .list-mobile-menu .block-close span {
-    margin-right: 32px;
+    margin-right: 2em;
 }
 
 .list-mobile-menu .block-close span:hover {
