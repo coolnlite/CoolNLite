@@ -91,15 +91,15 @@
                 <div class="card_agency">
                     <a href="#">
                         <div class="card-img">
-                            <img src="/shared/img/daily/agency.jpg" alt="đại lý">
+                            <img src="./shared/img/daily/agency.jpg" alt="đại lý">
                         </div>
                         <div class="card-title">
-                            <p>
+                            <h5>
                                 Tên cửa hàng : 
                                 <span>
                                     Huy Auto
                                 </span>
-                            </p>
+                            </h5>
                             <p>
                                 Số điện thoại :
                                 <span>
