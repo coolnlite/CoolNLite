@@ -88,7 +88,11 @@
               <i class="far fa-search"></i>
             </button>
             <div class="result_agency" id="result_agency">
-                
+                <div class="card_agency">
+                    <a href="#">
+
+                    </a>
+                </div>
             </div>
         </div>
 
