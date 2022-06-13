@@ -168,12 +168,12 @@ $('#search-txt').keypress(function(event){
   $("#agency-txt").keyup(function () {
     $text_agency = $(this).val();
     $result = $("#result_agency");
-    if ($text_mb != "") {
+    if ($text_agency != "") {
       $.ajax({
         type: "POST",
         url: base_url + "modules/result.php",
         data: {
-          text_mb:  $text_mb,
+          text_agency:  $text_agency,
         },
         success: function (data) {
           $result.html(data);

@@ -111,50 +111,6 @@
                     </a>
                 </div>
 
-                <div class="card_agency">
-                    <a href="#">
-                        <div class="card-img">
-                            <img src="./shared/img/daily/agency.jpg" alt="đại lý">
-                        </div>
-                        <div class="card-title">
-                            <h6>
-                                Tên cửa hàng : 
-                                <span>
-                                    Huy Auto
-                                </span>
-                            </h6>
-                            <p>
-                                Số điện thoại :
-                                <span>
-                                    0904808588
-                                </span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card_agency">
-                    <a href="#">
-                        <div class="card-img">
-                            <img src="./shared/img/daily/agency.jpg" alt="đại lý">
-                        </div>
-                        <div class="card-title">
-                            <h6>
-                                Tên cửa hàng : 
-                                <span>
-                                    Huy Auto
-                                </span>
-                            </h6>
-                            <p>
-                                Số điện thoại :
-                                <span>
-                                    0904808588
-                                </span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-
             </div>
         </div>
 
@@ -163,7 +119,7 @@
             $agency = executeResult($sql);
             foreach($agency as $ag){
         ?>
-            <div class="item-agency" id="<?php print $ag['id']?>">
+            <div class="item-agency" id="agency_<?php print $ag['id']?>">
                 <div class="container-agency">
 
                     <div class="col-img">

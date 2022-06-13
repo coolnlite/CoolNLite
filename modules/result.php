@@ -233,4 +233,34 @@ if (isset($_POST['text_mb'])) {
     }
 }
 
+//Search đại lý
+
+if (isset($_POST['text_agency'])) {
+    $text = mysqli_real_escape_string($conn, $_POST['text_agency']);
+
+    $sql = "SELECT * FROM `agency` WHERE `title` LIKE '$text%' OR ";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        foreach ($result as $row) {
+            echo '
+                <article class="card-search" title=" '.$row['title'].'">
+                <a href="'.$base_url.'/' . $row['url'] . '.html">
+                <div class="img-search" >
+                <img src="'.$base_url.$row['thumnail'].'" alt="thumnail">
+                </div>
+                <div class="content-search">
+                <h3 title=" '.$row['title'].'">
+                    '.$row['title'].'
+                </h3>
+                </div>
+                </a>
+            </article>
+              ';
+        }
+    } else {
+        echo '<p class="not-data">Không tìm thấy kết quả</p>';
+    }
+}
+
 ?>
