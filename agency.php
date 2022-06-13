@@ -83,11 +83,12 @@
         <section class="main-agency" id="main-agency">
 
         <div class="search-agency" id="search-agency">
-            <input type="search" name="agency" id="agency-txt" placeholder="Tìm kiếm đại lý" />
+            <input type="search" name="agency" id="agency-txt" placeholder="Nhập tên đại lý hoặc số điện thoại" />
             <button type="button" class="btn-agency">
               <i class="far fa-search"></i>
             </button>
             <div class="result_agency" id="result_agency">
+                
             </div>
         </div>
 
