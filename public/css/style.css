@@ -1085,7 +1085,11 @@ a.btn-up {
 }
 
 .list-mobile-menu .block-close span {
-    margin-right: 2em;
+    margin-right: 20px;
+}
+
+.list-mobile-menu .block-close span:hover {
+   color: var(--color-blue);
 }
 
 .list-mobile-menu .block-close span:hover {
