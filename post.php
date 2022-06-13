@@ -98,6 +98,8 @@
 </head>
 
 <body class="body">
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v14.0" nonce="IFO3xsI2"></script>
     <div id="main">
         <!-- SETION 1 -->
         <section class="section" id="details">
@@ -194,6 +196,8 @@
                 <?php
                     }//Kết thúc vòng lặp posts
                 ?>
+                <div class="fb-comments" data-href="<?php print getCurrentPageURL() ?>"
+                 data-width="100%" data-numposts="7"></div>
                 <!-- Phần tin khác -->
                 <div class="other-news-box">
                     <nav class="title-items">
@@ -259,7 +263,6 @@
     ?>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="<?php print $base_url?>/public/js/slider.js"></script>
     <script src="<?php print $base_url?>/public/js/script.js"></script>
     <!-- javasript -->
 </body>
