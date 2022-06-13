@@ -1438,6 +1438,9 @@ section .main-about .btn-lh:hover {
   #search-agency{
     margin-top: 3em;
   }
+  #search-agency input{
+    font-size: 15px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
