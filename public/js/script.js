@@ -108,7 +108,7 @@ $('#search-text').keypress(function(event){
   });
 
 //Search trên điện thoại
-//Xử lý sự kiện click vào phần tử search
+//Xử lý sự kiện click vào ngoài phần tử search
 $(document).click(function(event) { 
   $target = $(event.target);
   if(!$target.closest('#block-search-mb').length && 
@@ -183,6 +183,15 @@ $('#search-txt').keypress(function(event){
     } else {
       $result.css("display", "none");
     }
+  });
+
+  //Xử lý sự kiện click vào ngoài phần tử search
+  $(document).click(function(event) { 
+    $target = $(event.target);
+    if(!$target.closest('#search-agency').length && 
+    $('#search-agency').is(":visible")) {
+      $('#result_agency').hide();
+    }        
   });
 
 })
