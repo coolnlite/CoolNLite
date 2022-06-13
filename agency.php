@@ -139,7 +139,6 @@
     ?>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="<?php print $base_url?>/public/js/slider.js"></script>
     <script src="<?php print $base_url?>/public/js/script.js"></script>
     <!-- javasript -->
     <!-- css on sroll pages -->
