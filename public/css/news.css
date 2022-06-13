@@ -1280,7 +1280,7 @@ section .main-about .btn-lh:hover {
   background-color: var(--text-color);
   box-shadow: 0px 0px 1px 1px var(--color-blue);
   overflow: hidden;
-  height: 340px;
+  height: 280px;
   top: 45px;
   right: 0;
   transition: all 0.5s;
@@ -1303,7 +1303,7 @@ section .main-about .btn-lh:hover {
 #result_agency .card_agency:last-child a{
   height: 70px;
 }
-#result_agency .card_agency a:hover .card-title h5{
+#result_agency .card_agency a:hover .card-title h6{
   color: var(--color-blue);
 }
 #result_agency .card_agency .card-img{
@@ -1319,13 +1319,13 @@ section .main-about .btn-lh:hover {
   padding-left: 1em;
   text-align: justify;
 }
-#result_agency .card_agency .card-title h5{
+#result_agency .card_agency .card-title h6{
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 14px;
-  font-weight: 300;
+  margin: 0 0 .75em;
 }
 #result_agency .not-data {
   font-size: 1.4em;

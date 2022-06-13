@@ -88,7 +88,51 @@
               <i class="far fa-search"></i>
             </button>
             <div class="result_agency" id="result_agency">
-                
+
+                <div class="card_agency">
+                    <a href="#">
+                        <div class="card-img">
+                            <img src="./shared/img/daily/agency.jpg" alt="đại lý">
+                        </div>
+                        <div class="card-title">
+                            <h6>
+                                Tên cửa hàng : 
+                                <span>
+                                    Huy Auto
+                                </span>
+                            </h6>
+                            <p>
+                                Số điện thoại :
+                                <span>
+                                    0904808588
+                                </span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card_agency">
+                    <a href="#">
+                        <div class="card-img">
+                            <img src="./shared/img/daily/agency.jpg" alt="đại lý">
+                        </div>
+                        <div class="card-title">
+                            <h6>
+                                Tên cửa hàng : 
+                                <span>
+                                    Huy Auto
+                                </span>
+                            </h6>
+                            <p>
+                                Số điện thoại :
+                                <span>
+                                    0904808588
+                                </span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
                 <div class="card_agency">
                     <a href="#">
                         <div class="card-img">
