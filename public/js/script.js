@@ -163,4 +163,26 @@ $('#search-txt').keypress(function(event){
     }
   });
 
+  //Search đại lý 
+
+  $("#agency-txt").keyup(function () {
+    $text_agency = $(this).val();
+    $result = $("#result_agency");
+    if ($text_mb != "") {
+      $.ajax({
+        type: "POST",
+        url: base_url + "modules/result.php",
+        data: {
+          text_mb:  $text_mb,
+        },
+        success: function (data) {
+          $result.html(data);
+          $result.css("display", "block");
+        },
+      });
+    } else {
+      $result.css("display", "none");
+    }
+  });
+
 })

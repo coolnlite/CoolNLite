@@ -1287,6 +1287,7 @@ section .main-about .btn-lh:hover {
   border-radius: 5px;
   overflow-y: scroll;
   padding: 1em;
+  display: none;
 }
 
 #result_agency .card_agency {
