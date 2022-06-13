@@ -322,7 +322,7 @@ textarea {
 }
 #search-txt::-webkit-search-cancel-button{
     position:relative;
-    right: 30px;
+    right: 40px;
     cursor: pointer;    
 }
 .block-search-mb > input:focus,
