@@ -6,7 +6,6 @@
       <div class="input-group-prepend">
         <span class="input-group-text">https://coolnlite.vn/</span>
         <input type="text" class="form-control" id="url" placeholder="Nhập đường dẫn bài viết" name="url" required>
-        <div class="invalid-feedback">Vui lòng nhập đường dẫn bài viết</div>
       </div>
     </div>
     <div class="form-group">
