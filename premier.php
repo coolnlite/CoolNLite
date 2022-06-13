@@ -285,7 +285,7 @@
  ScrollReveal({ reset: true });
 
 
-  ScrollReveal().reveal(".title", {
+  ScrollReveal().reveal(".menu .box-title-menu .title", {
     duration: 2000,
     origin: "top",
     distance: "300px",

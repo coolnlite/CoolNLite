@@ -36,7 +36,15 @@ searchInpModels.addEventListener("keyup", () => {
   optionsModels.innerHTML = arr ? arr : `<p style="padding: 10px; color : red ; font-size : 14px">Không tìm thấy dòng xe nào !</p>`;
 });
 
-selectBtnModels.addEventListener("click", () => wrapperModels.classList.toggle("active"));
+
+selectBtnModels.addEventListener("click", function(){
+  wrapperModels.classList.toggle("active");
+  let area = document.querySelector(".dropdown.area");
+  let hasClassArea = area.classList.contains("active");
+  if(hasClassArea){
+    area.classList.toggle('active');
+  }
+});
 
 
 //ẨN HIÊN FORM KHU VỰC
@@ -87,4 +95,13 @@ searchInpArea.addEventListener("keyup", () => {
   optionsArea.innerHTML = arr ? arr : `<p style="padding: 10px; color : red ; font-size : 14px">Không tìm thấy khu vực nào !</p>`;
 });
 
-selectBtnArea.addEventListener("click", () => wrapperArea.classList.toggle("active"));
+selectBtnArea.addEventListener("click", function (){
+
+  wrapperArea.classList.toggle("active");
+  let models = document.querySelector(".dropdown.models");
+  let hasClassModels = models.classList.contains("active");
+  if(hasClassModels){
+    models.classList.toggle('active');
+  }
+
+});
