@@ -238,7 +238,7 @@ if (isset($_POST['text_mb'])) {
 if (isset($_POST['text_agency'])) {
     $text = mysqli_real_escape_string($conn, $_POST['text_agency']);
 
-    $sql = "SELECT * FROM `agency` WHERE `title` LIKE '$text%' OR ";
+    $sql = "SELECT * FROM `agency` WHERE `name` LIKE '$text%' OR `phone` LIKE '$text%'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
