@@ -36,7 +36,7 @@
               </div>
 
               <div class="dropdown models form-group">
-                <label class="title">Dòng xe<span> *</span></label>
+                <label class="title">Dòng xe</label>
                 <div class="select-btn">
                   <span>Vui lòng chọn dữ liệu</span>
                   <i class="fas fa-chevron-down"></i>
@@ -51,7 +51,7 @@
               </div>
 
               <div class="dropdown area form-group">
-                <label class="title">Khu vực<span> *</span></label>
+                <label class="title">Khu vực</label>
                 <div class="select-btn">
                   <span>Vui lòng chọn dữ liệu</span>
                   <i class="fas fa-chevron-down"></i>

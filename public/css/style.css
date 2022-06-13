@@ -591,18 +591,6 @@ textarea {
     width: 100%;
 }
 
-.menu .box-title-menu .block-bottom .btn-down {
-    text-align: center;
-    width: 100%;
-    color: var(--text-color);
-    font-size: 2.4em;
-    padding: 14px 0px;
-}
-
-.menu .box-title-menu .block-bottom .btn-down:hover {
-    cursor: pointer;
-}
-
 .menu .box-title-menu .block-bottom .space-menu {
     padding: 0 2.4em;
     min-height: 1.8em;
