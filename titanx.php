@@ -107,9 +107,6 @@
             </div>
           </section>
           <div class="space-menu"></div>
-          <div class="btn-down">
-            <span class="far fa-angle-down"></span>
-          </div>
         </div>
       </div>
     </section>
