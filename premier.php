@@ -304,7 +304,7 @@
   
 
   ScrollReveal().reveal(".btn-menu", {
-    duration: 3000,
+    duration: 2000,
     origin: "right",
     distance: "30px",
     easing: "ease-in-out"
