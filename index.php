@@ -75,7 +75,7 @@
 <body class="body">
   <div id="main">
     <!-- SETION 1 -->
-    <section class="section menu bg-index-1" id="section-1">
+    <section class="section menu bg-index-1">
       <?php 
         require_once('./pages/menu.php');
       ?>
@@ -107,18 +107,12 @@
             </div>
           </section>
           <div class="space-menu"></div>
-          <a class="btn-down" href="#section-2">
-            <span class="far fa-angle-down"></span>
-          </a>
         </div>
       </div>
     </section>
     <!-- SETION 1 -->
     <!-- SETION 2-->
-    <section class="section built" id="section-2">
-      <a href="#section-1" class="btn-up">
-        <span class="fas fa-chevron-up"></span>
-      </a>
+    <section class="section built">
       <section class="box-built">
         <div class="container-slide">
           <div class="slider-container">
@@ -168,7 +162,7 @@
     </section>
     <!-- SETION 2-->
     <!-- SETION 3 -->
-    <section class="section section-gird" id="section-3">
+    <section class="section section-gird">
       <div class="box-title-menu gird-top bg-index-2">
         <a href="#section-2" class="btn-up">
           <span class="fas fa-chevron-up"></span>
@@ -233,11 +227,8 @@
     </section>
     <!-- SETION 3 -->
     <!-- SETION 4 -->
-    <section class="section section-gird" id="section-4">
+    <section class="section section-gird">
       <div class="box-title-menu gird-top bg-index-3">
-        <a href="#section-3" class="btn-up">
-          <span class="fas fa-chevron-up"></span>
-        </a>
         <div class="box-title">
           <h1>TITAN X SERIES</h1>
         </div>
@@ -298,11 +289,8 @@
     </section>
     <!-- SETION 4 -->
     <!-- SETION 5 -->
-    <section class="section section-gird" id="section-5">
+    <section class="section section-gird">
       <div class="box-title-menu gird-top bg-index-4">
-        <a href="#section-4" class="btn-up">
-          <span class="fas fa-chevron-up"></span>
-        </a>
         <div class="main-future">
           <section class="box-future-text">
             <div class="item-future">
