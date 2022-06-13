@@ -238,14 +238,14 @@ if (isset($_POST['text_mb'])) {
 if (isset($_POST['text_agency'])) {
     $text = mysqli_real_escape_string($conn, $_POST['text_agency']);
 
-    $sql = "SELECT * FROM `agency` WHERE `name` LIKE '$text%' OR `phone` LIKE '$text%'";
+    $sql = "SELECT * FROM `agency` WHERE `name` LIKE '%$text%' OR `phone` LIKE '%$text%'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
         foreach ($result as $row) {
             echo '
             <div class="card_agency">
-            <a href="#">
+            <a href="#agency_'.$row['id'].'">
                 <div class="card-img">
                     <img src="'.$base_url.'/shared/img/daily/agency.jpg" alt="ảnh đại lý">
                 </div>
