@@ -94,7 +94,18 @@
                             <img src="/shared/img/daily/agency.jpg" alt="đại lý">
                         </div>
                         <div class="card-title">
-
+                            <p>
+                                Tên cửa hàng : 
+                                <span>
+                                    Huy Auto
+                                </span>
+                            </p>
+                            <p>
+                                Số điện thoại :
+                                <span>
+                                    0904808588
+                                </span>
+                            </p>
                         </div>
                     </a>
                 </div>
