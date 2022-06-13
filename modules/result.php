@@ -244,18 +244,27 @@ if (isset($_POST['text_agency'])) {
     if (mysqli_num_rows($result) > 0) {
         foreach ($result as $row) {
             echo '
-                <article class="card-search" title=" '.$row['title'].'">
-                <a href="'.$base_url.'/' . $row['url'] . '.html">
-                <div class="img-search" >
-                <img src="'.$base_url.$row['thumnail'].'" alt="thumnail">
+            <div class="card_agency">
+            <a href="#">
+                <div class="card-img">
+                    <img src="'.$base_url.'/shared/img/daily/agency.jpg" alt="ảnh đại lý">
                 </div>
-                <div class="content-search">
-                <h3 title=" '.$row['title'].'">
-                    '.$row['title'].'
-                </h3>
+                <div class="card-title">
+                    <h6>
+                        Tên cửa hàng : 
+                        <span>
+                            '.$row['name'].'
+                        </span>
+                    </h6>
+                    <p>
+                        Số điện thoại :
+                        <span>
+                            '.$row['phone'].'
+                        </span>
+                    </p>
                 </div>
-                </a>
-            </article>
+            </a>
+        </div>
               ';
         }
     } else {
