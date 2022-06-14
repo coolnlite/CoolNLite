@@ -363,8 +363,8 @@
 
   ScrollReveal().reveal(".section-gird .gird-top .box-title", {
     duration: 2000,
-    origin: "left",
-    distance: "300px",
+    origin: "top",
+    distance: "100px",
     easing: "ease-in-out"
   });
   
