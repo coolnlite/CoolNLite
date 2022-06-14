@@ -64,7 +64,7 @@
     <a href="tel:+0835 808 858"></a>
   </button>
 
-  <button type="button" class="btn-fixed btn-top back-to-top" title="Đầu trang">
+  <button type="button" class="btn-fixed btn-top scrollToTop" title="Đầu trang">
     <i class="fas fa-chevron-up"></i>
   </button>
 

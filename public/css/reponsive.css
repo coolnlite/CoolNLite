@@ -259,6 +259,9 @@
     bottom: 5em;
     background-color: rgba(255, 255, 255, 0.1);
   }
+  .scrollToTop:hover{
+    background-color: var(--text-color);
+  }
   .anywhere .block-bottom .quick {
     grid-template-columns: var(--width-gird-third) var(--width-gird-third) var(--width-gird-third);
   }
