@@ -295,6 +295,11 @@ figure.box-img i {
     bottom: 1.5em;
   }
 
+  .btn-top{
+    right: 1.5em;
+    bottom: 5em;
+  }
+
   main header .page-title {
     font-size: 2em;
     line-height: 2em;
