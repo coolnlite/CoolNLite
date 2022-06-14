@@ -1353,6 +1353,9 @@ a.btn-up {
     right: 32px;
     bottom: 10em;
 }
+.scrollToTop{
+    display: none;
+}
 
 .btn-top i{
     color: var(--color-blue);
