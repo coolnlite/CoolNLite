@@ -291,12 +291,12 @@ figure.box-img i {
 }
 @media only screen and (max-width: 480px){
   .btn-messenger {
-    right: 1.5em;
-    bottom: 1.5em;
+    right: 1em;
+    bottom: 1.7em;
   }
 
   .btn-top{
-    right: 1.5em;
+    right: 1em;
     bottom: 5em;
   }
 

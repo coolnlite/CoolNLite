@@ -1318,7 +1318,6 @@ a.btn-up {
 /*--- Messger ---*/
 
 .btn-fixed{
-
     position: fixed;
     width: 40px;
     height: 40px;
@@ -1332,6 +1331,7 @@ a.btn-up {
     z-index: 100;
     -webkit-box-shadow: 0 1px 4px 0 rgb(0 0 0 / 50%);
     box-shadow: 0 1px 4px 0 rgb(0 0 0 / 50%);
+    cursor: pointer;
 }
 
 .btn-fixed a {
@@ -1351,10 +1351,11 @@ a.btn-up {
 
 .btn-top{
     right: 32px;
-    bottom: 9em;
+    bottom: 10em;
 }
 
 .btn-top i{
+    color: var(--color-blue);
     font-size: 1.6em;
 }
 
