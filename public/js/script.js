@@ -51,7 +51,7 @@ $(document).ready(function () {
 //Back To Top
 
 $(window).scroll(function(){
-  if ($(this).scrollTop() > 100) {
+  if ($(this).scrollTop() > 200) {
       $('.scrollToTop').fadeIn();
   } else {
       $('.scrollToTop').fadeOut();
