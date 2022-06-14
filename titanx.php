@@ -290,7 +290,7 @@
 
   ScrollReveal().reveal(".btn-menu", {
     duration: 2000,
-    origin: "right",
+    origin: "bottom",
     distance: "30px",
     easing: "ease-in-out"
   });

@@ -363,7 +363,7 @@
 
   ScrollReveal().reveal(".section-gird .gird-top .box-title", {
     duration: 2000,
-    origin: "top",
+    origin: "left",
     distance: "100px",
     easing: "ease-in-out"
   });
@@ -371,7 +371,7 @@
 
   ScrollReveal().reveal(".btn-menu", {
     duration: 2000,
-    origin: "right",
+    origin: "bottom",
     distance: "30px",
     easing: "ease-in-out"
   });
