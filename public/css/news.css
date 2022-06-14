@@ -801,7 +801,8 @@ section .main-about .btn-lh:hover {
 }
 
 .control {
-  width: 1440px;
+  position: relative;
+  max-width: 1440px;
   height: auto;
   margin: 0 auto;
 }
