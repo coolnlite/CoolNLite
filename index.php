@@ -164,9 +164,6 @@
     <!-- SETION 3 -->
     <section class="section section-gird">
       <div class="box-title-menu gird-top bg-index-2">
-        <a href="#section-2" class="btn-up">
-          <span class="fas fa-chevron-up"></span>
-        </a>
         <div class="box-title">
           <h1>Premier Series</h1>
         </div>
