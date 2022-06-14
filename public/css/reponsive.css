@@ -249,6 +249,15 @@
 }
 
 @media only screen and (max-width : 600px) {
+  .btn-messenger {
+    right: 1.5em;
+    bottom: 1.5em;
+  }
+
+  .btn-top{
+    right: 1.5em;
+    bottom: 5em;
+  }
   .anywhere .block-bottom .quick {
     grid-template-columns: var(--width-gird-third) var(--width-gird-third) var(--width-gird-third);
   }
