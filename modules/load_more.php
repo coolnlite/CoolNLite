@@ -11,10 +11,10 @@ require_once('../admin/modules/function.php');
         foreach ($news as $ns) {
     ?>
        <li class="items-news news">
-                <a class="link-news" href="<?php echo ''.$base_url.'/'.$ns['url'].''?>.html">
+                <a class="link-news" href="<?php echo ''.$base_url.$ns['url'].''?>.html">
                     <article class="posts">
                         <figure class="box-img fix">
-                        <img src=".<?php echo ''.$ns['thumnail'].''?>" alt="thumnail">
+                        <img src="<?php echo ''.$base_url.$ns['thumnail'].''?>" alt="thumnail">
                         <i class="fas fa-eye"></i>
                         </figure>
                         <div class="box-content">
@@ -31,7 +31,7 @@ require_once('../admin/modules/function.php');
 
                                 ?>
                                 <div class="box-arthur">
-                                    <img src=".<?php echo ''.$us['image'].''?>" alt="avatar">
+                                    <img src="<?php echo ''.$base_url.$us['image'].''?>" alt="avatar">
                                 </div>
                                 <span class="name">
                                     <?php echo ''.$us['full_name'].''?>
