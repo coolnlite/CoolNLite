@@ -13,7 +13,7 @@
         $menu = executeResult($sql);
         foreach($menu as $mn){
         ?>
-            <a href="<?php echo ''.$mn['url'].''?>"><?php echo ''.$mn['name'].''?></a>
+            <a href="<?php echo ''.$base_url.$mn['url'].''?>"><?php echo ''.$mn['name'].''?></a>
         <?php 
             } 
         ?>
