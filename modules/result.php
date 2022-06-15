@@ -247,7 +247,7 @@ if (isset($_POST['text_agency'])) {
             <div class="card_agency">
             <a href="#agency_'.$row['id'].'">
                 <div class="card-img">
-                    <img src="'.$base_url.'/shared/img/daily/agency.jpg" alt="ảnh đại lý">
+                    <img src="'.$base_url.'shared/img/daily/agency.jpg" alt="ảnh đại lý">
                 </div>
                 <div class="card-title">
                     <h6>
