@@ -1,3 +1,7 @@
+<?php
+   require_once('../config/config.php');
+   require_once('../config/dbhelper.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -120,7 +124,7 @@
       <div id="notfound">
          <div class="notfound">
             <div class="notfound-404">
-               <h1>4<span></span>4</h1>
+               <h1>4<span></span>3</h1>
             </div>
             <h2>Oh ! Quyền truy cập bị từ chối</h2>
             <p>
