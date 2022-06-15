@@ -63,11 +63,11 @@
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
     <!-- fontawesome -->
     <!-- css -->
-    <link rel="icon" sizes="32x32" href="<?php print $base_url?>/shared/img/icon.png">
-    <link rel="stylesheet" href="<?php print $base_url?>/public/css/style.css" />
-    <link rel="stylesheet" href="<?php print $base_url?>/public/css/reponsive.css" />
-    <link rel="stylesheet" href="<?php print $base_url?>/public/css/news.css" />
-    <link rel="stylesheet" href="<?php print $base_url?>/public/css/slider.css">
+    <link rel="icon" sizes="32x32" href="<?php print $base_url?>shared/img/icon.png">
+    <link rel="stylesheet" href="<?php print $base_url?>public/css/style.css" />
+    <link rel="stylesheet" href="<?php print $base_url?>public/css/reponsive.css" />
+    <link rel="stylesheet" href="<?php print $base_url?>public/css/news.css" />
+    <link rel="stylesheet" href="<?php print $base_url?>public/css/slider.css">
     <!-- css -->
 </head>
 
@@ -140,7 +140,7 @@
     ?>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="<?php print $base_url?>/public/js/script.js"></script>
+    <script src="<?php print $base_url?>public/js/script.js"></script>
     <!-- javasript -->
     <!-- css on sroll pages -->
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>

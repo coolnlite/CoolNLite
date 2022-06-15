@@ -1,7 +1,11 @@
 <!-- FOOTER -->
 <footer class="footer-distributed">
     <div class="footer-left">
-      <h3 title="COOL N LITE"><a href="<?php print $base_url ?>"><img src="<?php print $base_url?>/shared/img/logo.png" alt="Logo Cool N Lite"></a></h3>
+      <h3 title="COOL N LITE">
+        <a href="<?php print $base_url ?>">
+          <img src="<?php print $base_url?>shared/img/logo.png" alt="Logo Cool N Lite">
+        </a>
+    </h3>
 
       <p class="footer-links">
       <?php

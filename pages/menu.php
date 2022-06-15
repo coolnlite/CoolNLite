@@ -2,7 +2,7 @@
         <header class="header">
           <h1 class="logo" title="COOL N LITE">
             <a href="<?php print $base_url ?>" class="logo-link">
-              <img src="<?php print $base_url?>/shared/img/logo.png" alt="Logo Cool N Lite" />
+              <img src="<?php print $base_url?>shared/img/logo.png" alt="Logo Cool N Lite" />
             </a>
           </h1>
           <div class="block-menu">
@@ -15,7 +15,7 @@
                 ?>
                 <li class="items-menu">
                     <a class="link-menu <?php $mn['url_real'] == $curPageName ? print "hovered" : print '' ?>"
-                    href="<?php echo ''.$base_url.'/'.$mn['url'].''?>" title="<?php echo ''.$mn['name'].''?>">
+                    href="<?php echo ''.$base_url.$mn['url'].''?>" title="<?php echo ''.$mn['name'].''?>">
                     <?php echo ''.$mn['name'].''?>
                   </a>
                 </li>
@@ -54,7 +54,10 @@
           $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
         ?>
         <li class="items-menu">
-            <a class="link-menu <?php $curPageName == 'index.php' ? print "hovered" : print '' ?>" href="index.html">Home</a>
+            <a class="link-menu <?php $curPageName == 'index.php' ? print "hovered" : print '' ?>" 
+            href="<?php print $base_url?>index.html">
+            Home
+          </a>
         </li>
         <?php
             $sql = "SELECT * FROM `menu` ORDER BY `position` ASC";
@@ -63,7 +66,7 @@
         ?>
             <li class="items-menu">
                 <a class="link-menu <?php $mn['url_real'] == $curPageName ? print "hovered" : print '' ?>" 
-                href="<?php echo ''.$base_url.'/'.$mn['url'].''?>"><?php echo ''.$mn['name'].''?></a>
+                href="<?php echo ''.$base_url.$mn['url'].''?>"><?php echo ''.$mn['name'].''?></a>
             </li>
         <?php } ?>
         </ul>

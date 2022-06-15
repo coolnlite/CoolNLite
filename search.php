@@ -68,10 +68,10 @@
       <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
       <!-- fontawesome -->
       <!-- css -->
-      <link rel="icon" sizes="32x32" href="<?php print $base_url?>/shared/img/icon.png">
-      <link rel="stylesheet" href="<?php print $base_url?>/public/css/style.css" />
-      <link rel="stylesheet" href="<?php print $base_url?>/public/css/reponsive.css" />
-      <link rel="stylesheet" href="<?php print $base_url?>/public/css/news.css" />
+      <link rel="icon" sizes="32x32" href="<?php print $base_url?>shared/img/icon.png">
+      <link rel="stylesheet" href="<?php print $base_url?>public/css/style.css" />
+      <link rel="stylesheet" href="<?php print $base_url?>public/css/reponsive.css" />
+      <link rel="stylesheet" href="<?php print $base_url?>public/css/news.css" />
       <!-- css -->
    </head>
    <body class="body">
@@ -88,7 +88,7 @@
             <header>
                <div class="container">
                   <h1 class="page-title">
-                     <a href="<?php print $base_url?>/tim-kiem/<?php print str_replace(' ', '+', $search_query)?>">
+                     <a href="<?php print $base_url?>tim-kiem/<?php print str_replace(' ', '+', $search_query)?>">
                       Tìm kiếm :  <?php print $search_query?>
                     </a>
                   </h1>
@@ -112,8 +112,8 @@
       ?>
       <!-- javasript -->
       <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-      <script src="<?php print $base_url?>/public/js/pagination.js"></script>
-      <script src="<?php print $base_url?>/public/js/script.js"></script>
+      <script src="<?php print $base_url?>public/js/pagination.js"></script>
+      <script src="<?php print $base_url?>public/js/script.js"></script>
       <!-- javasript -->
    </body>
 </html>

@@ -68,10 +68,10 @@
       <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
       <!-- fontawesome -->
       <!-- css -->
-      <link rel="icon" sizes="32x32" href="<?php print $base_url?>/shared/img/icon.png">
-      <link rel="stylesheet" href="<?php print $base_url?>/public/css/style.css" />
-      <link rel="stylesheet" href="<?php print $base_url?>/public/css/reponsive.css" />
-      <link rel="stylesheet" href="<?php print $base_url?>/public/css/news.css" />
+      <link rel="icon" sizes="32x32" href="<?php print $base_url?>shared/img/icon.png">
+      <link rel="stylesheet" href="<?php print $base_url?>public/css/style.css" />
+      <link rel="stylesheet" href="<?php print $base_url?>public/css/reponsive.css" />
+      <link rel="stylesheet" href="<?php print $base_url?>public/css/news.css" />
       <!-- css -->
    </head>
    <body class="body">
@@ -112,7 +112,7 @@
                             foreach($news as $ns) {
                         ?>
                         <li class="items-news news">
-                           <a class="link-news" href="<?php echo ''.$base_url.'/'.$ns['url'].''?>.html">
+                           <a class="link-news" href="<?php echo ''.$base_url.$ns['url'].''?>.html">
                               <article class="posts">
                                  <figure class="box-img fix">
                                     <img src="<?php echo ''.$base_url.''.$ns['thumnail'].''?>" alt="thumnail">
@@ -172,7 +172,7 @@
       ?>
       <!-- javasript -->
       <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-      <script src="<?php print $base_url?>/public/js/script.js"></script>
+      <script src="<?php print $base_url?>public/js/script.js"></script>
       <!-- javasript -->
    </body>
 </html>

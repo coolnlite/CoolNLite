@@ -63,11 +63,11 @@
   <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
   <!-- fontawesome -->
   <!-- css -->
-  <link rel="icon" sizes="32x32" href="<?php print $base_url?>/shared/img/icon.png">
-  <link rel="stylesheet" href="<?php print $base_url?>/public/css/style.css" />
-  <link rel="stylesheet" href="<?php print $base_url?>/public/css/reponsive.css" />
-  <link rel="stylesheet" href="<?php print $base_url?>/public/css/news.css">
-  <link rel="stylesheet" href="<?php print $base_url?>/public/css/slider.css">
+  <link rel="icon" sizes="32x32" href="<?php print $base_url?>shared/img/icon.png">
+  <link rel="stylesheet" href="<?php print $base_url?>public/css/style.css" />
+  <link rel="stylesheet" href="<?php print $base_url?>public/css/reponsive.css" />
+  <link rel="stylesheet" href="<?php print $base_url?>public/css/news.css">
+  <link rel="stylesheet" href="<?php print $base_url?>public/css/slider.css">
   <!-- css -->
   
 </head>
@@ -85,19 +85,19 @@
           <section class="main-list-menu">
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="<?php print $base_url?>/shared/icon/Icon-protect.png" alt="icons">
+                <img src="<?php print $base_url?>shared/icon/Icon-protect.png" alt="icons">
                 <span>Tỷ lệ chống tia cực tím 99%</span>
               </div>
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="<?php print $base_url?>/shared/icon/Icon-hongngoai.png" alt="icons">
+                <img src="<?php print $base_url?>shared/icon/Icon-hongngoai.png" alt="icons">
                 <span>Tỷ lệ chống tia hồng ngoại 98%</span>
               </div>
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="<?php print $base_url?>/shared/icon/Icon-sun.png" alt="icons">
+                <img src="<?php print $base_url?>shared/icon/Icon-sun.png" alt="icons">
                 <span>Tỷ lệ chống chói 95%
                 </span>
               </div>
@@ -117,11 +117,11 @@
         <div class="container-slide">
           <div class="slider-container">
             <div class="slider sizes-slider">
-              <img src="<?php print $base_url?>/shared/img/trangchu/titanium.jpg" alt="Image">
+              <img src="<?php print $base_url?>shared/img/trangchu/titanium.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img class="dk" src="<?php print $base_url?>/shared/img/trangchu/cong-nghe-phun-xa.jpg" alt="Image">
-              <img class="mb" src="<?php print $base_url?>/shared/img/trangchu/cong-nghe-phun-xa-mb.jpg" alt="Image">
+              <img class="dk" src="<?php print $base_url?>shared/img/trangchu/cong-nghe-phun-xa.jpg" alt="Image">
+              <img class="mb" src="<?php print $base_url?>shared/img/trangchu/cong-nghe-phun-xa-mb.jpg" alt="Image">
             </div>
             <div class="box-btn">
               <div class="prev-button prev-button1" onclick="plusSlide(-1)">
@@ -171,20 +171,20 @@
           <section class="main-list-menu quick">
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="<?php print $base_url?>/shared/icon/Icon-hongngoai.png" alt="icons">
+                <img src="<?php print $base_url?>shared/icon/Icon-hongngoai.png" alt="icons">
                 <span>Cách nhiệt 85%</span>
               </div>
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="<?php print $base_url?>/shared/icon/Icon-protect.png" title="Ngăn tia UV 99%" alt="icons">    
+                <img src="<?php print $base_url?>shared/icon/Icon-protect.png" title="Ngăn tia UV 99%" alt="icons">    
                   <span>Ngăn tia UV 99%
                   </span>
               </div>
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="<?php print $base_url?>/shared/icon/Icon-beutifull.png" title="Sang trọng với lớp màu ánh kim" alt="icons"> 
+                <img src="<?php print $base_url?>shared/icon/Icon-beutifull.png" title="Sang trọng với lớp màu ánh kim" alt="icons"> 
                   <span>Sang trọng với lớp màu ánh kim
                   </span>
               </div>
@@ -203,7 +203,7 @@
             </div>
             <div class="quick-left-bottom">
               <div class="right-built-button">
-                <a href="<?php print $base_url?>/titan-x-series.html" class="btn-learn-more btn-built btn-secondary"><i
+                <a href="<?php print $base_url?>titan-x-series.html" class="btn-learn-more btn-built btn-secondary"><i
                     class="fas fa-plus"></i></a>
                 <p class="txt-more">Xem Thêm</p>
                 <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>Liên hệ tư vấn</span></a>
@@ -233,7 +233,7 @@
           <section class="main-list-menu quick">
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="<?php print $base_url?>/shared/icon/Icon-hongngoai.png" alt="icons">
+                <img src="<?php print $base_url?>shared/icon/Icon-hongngoai.png" alt="icons">
                   <span>Cách nhiệt 98%
                   </span>
               </div>
@@ -241,14 +241,14 @@
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                  <img src="<?php print $base_url?>/shared/icon/Icon-protect.png" title="Ngăn tia UV 99%" alt="icons">
+                  <img src="<?php print $base_url?>shared/icon/Icon-protect.png" title="Ngăn tia UV 99%" alt="icons">
                   <span>Ngăn tia UV 99%
                   </span>
               </div>
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="<?php print $base_url?>/shared/icon/Icon-beutifull.png" title="Mang đến sự đẳng cấp và tinh tế" alt="icons"> 
+                <img src="<?php print $base_url?>shared/icon/Icon-beutifull.png" title="Mang đến sự đẳng cấp và tinh tế" alt="icons"> 
                   <span>Mang đến sự đẳng cấp và tinh tế
                   </span>
               </div>
@@ -266,7 +266,7 @@
             </div>
             <div class="quick-left-bottom">
               <div class="right-built-button">
-                <a href="<?php print $base_url?>/premier-series.html" class="btn-learn-more btn-built btn-secondary"><i
+                <a href="<?php print $base_url?>premier-series.html" class="btn-learn-more btn-built btn-secondary"><i
                     class="fas fa-plus"></i></a>
                 <p class="txt-more">Xem Thêm</p>
                 <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>Liên hệ tư vấn</span></a>
@@ -329,9 +329,9 @@
   ?>
   <!-- javasript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="<?php print $base_url?>/public/js/slider.js"></script>
-  <script src="<?php print $base_url?>/public/js/script.js"></script>
-  <script src="<?php print $base_url?>/public/js/form.js"></script>
+  <script src="<?php print $base_url?>public/js/slider.js"></script>
+  <script src="<?php print $base_url?>public/js/script.js"></script>
+  <script src="<?php print $base_url?>public/js/form.js"></script>
   <!-- javasript -->
   <!-- jquery validation -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
@@ -355,7 +355,7 @@
       z: -10
     }
   });
-
+  
   ScrollReveal().reveal(".block-bottom .main-list-menu .box-para-top", {
     duration: 3000,
     move: 0
@@ -372,7 +372,7 @@
   ScrollReveal().reveal(".btn-menu", {
     duration: 2000,
     origin: "bottom",
-    distance: "30px",
+    distance: "20px",
     easing: "ease-in-out"
   });
 

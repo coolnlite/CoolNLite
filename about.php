@@ -63,11 +63,11 @@
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
     <!-- fontawesome -->
     <!-- css -->
-    <link rel="icon" sizes="32x32" href="<?php print $base_url?>/shared/img/icon.png">
-    <link rel="stylesheet" href="<?php print $base_url?>/public/css/style.css" />
-    <link rel="stylesheet" href="<?php print $base_url?>/public/css/reponsive.css" />
-    <link rel="stylesheet" href="<?php print $base_url?>/public/css/news.css" />
-    <link rel="stylesheet" href="<?php print $base_url?>/public/css/slider.css">
+    <link rel="icon" sizes="32x32" href="<?php print $base_url?>shared/img/icon.png">
+    <link rel="stylesheet" href="<?php print $base_url?>public/css/style.css" />
+    <link rel="stylesheet" href="<?php print $base_url?>public/css/reponsive.css" />
+    <link rel="stylesheet" href="<?php print $base_url?>public/css/news.css" />
+    <link rel="stylesheet" href="<?php print $base_url?>public/css/slider.css">
     <!-- css -->
 </head>
 
@@ -99,7 +99,9 @@
             <div class="ab-container">
                 <section class="block-policy">
                     <div class="box-video-about">
-                        <video loop autoplay muted controls src="./shared/video/quytrinhlapdat.mp4"></video>
+                        <video loop autoplay muted controls 
+                        src="<?php print $base_url?>shared/video/quytrinhlapdat.mp4">
+                    </video>
                     </div>
                 </section>
                 <section class="box-text">
@@ -144,7 +146,7 @@
 
                                         </div>
                                         <div class="box-icons">
-                                            <img src="<?php print $base_url?>/shared/img/about/10NAMBAOHANHBONTROC-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
+                                            <img src="<?php print $base_url?>shared/img/about/10NAMBAOHANHBONTROC-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
                                         </div>
                                     </div>
                                     <div class="policy_txt">
@@ -164,7 +166,7 @@
 
                                         </div>
                                         <div class="box-icons">
-                                            <img src="<?php print $base_url?>/shared/img/about/7NAMBAOHANHTHONGSO-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
+                                            <img src="<?php print $base_url?>shared/img/about/7NAMBAOHANHTHONGSO-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
                                         </div>
                                     </div>
                                     <div class="policy_txt">
@@ -184,7 +186,7 @@
 
                                         </div>
                                         <div class="box-icons">
-                                            <img src="<?php print $base_url?>/shared/img/about/TEMBAOHANHHOLOGRAM-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
+                                            <img src="<?php print $base_url?>shared/img/about/TEMBAOHANHHOLOGRAM-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
                                         </div>
                                     </div>
                                     <div class="policy_txt">
@@ -204,7 +206,7 @@
 
                                         </div>
                                         <div class="box-icons">
-                                            <img src="<?php print $base_url?>/shared/img/about/THUONGXUYENKIEMTRAVATHAYMOI-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
+                                            <img src="<?php print $base_url?>shared/img/about/THUONGXUYENKIEMTRAVATHAYMOI-removebg-preview.png" alt="iamge" class="fas fa-award"></img>
                                         </div>
                                     </div>
                                     <div class="policy_txt">
@@ -235,10 +237,10 @@
                         <div class="container-slide about-slide">
                             <div class="slider-container">
                                 <div class="slider sizes-slider3">
-                                    <img src="<?php print $base_url?>/shared/img/about/CRM5.jpg" alt="Image">
+                                    <img src="<?php print $base_url?>shared/img/about/CRM5.jpg" alt="Image">
                                 </div>
                                 <div class="slider sizes-slider3">
-                                    <img src="<?php print $base_url?>/shared/img/about/CRM6.jpg" alt="Image">
+                                    <img src="<?php print $base_url?>shared/img/about/CRM6.jpg" alt="Image">
                                 </div>
                                 <div class="box-btn">
                                     <div class="prev-button prev-button2" onclick="plusSlide(-1)">
@@ -291,9 +293,9 @@
     ?>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="<?php print $base_url?>/public/js/form.js"></script>
-    <script src="<?php print $base_url?>/public/js/slider.js"></script>
-    <script src="<?php print $base_url?>/public/js/script.js"></script>
+    <script src="<?php print $base_url?>public/js/form.js"></script>
+    <script src="<?php print $base_url?>public/js/slider.js"></script>
+    <script src="<?php print $base_url?>public/js/script.js"></script>
     <!-- javasript -->
     <!-- css on sroll pages -->
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>

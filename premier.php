@@ -63,10 +63,10 @@
   <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
   <!-- fontawesome -->
   <!-- css -->
-  <link rel="icon" sizes="32x32" href="<?php print $base_url?>/shared/img/icon.png">
-  <link rel="stylesheet" href="<?php print $base_url?>/public/css/style.css" />
-  <link rel="stylesheet" href="<?php print $base_url?>/public/css/reponsive.css" />
-  <link rel="stylesheet" href="<?php print $base_url?>/public/css/slider.css">
+  <link rel="icon" sizes="32x32" href="<?php print $base_url?>shared/img/icon.png">
+  <link rel="stylesheet" href="<?php print $base_url?>public/css/style.css" />
+  <link rel="stylesheet" href="<?php print $base_url?>public/css/reponsive.css" />
+  <link rel="stylesheet" href="<?php print $base_url?>public/css/slider.css">
   <!-- css -->
 </head>
 
@@ -83,21 +83,21 @@
           <section class="main-list-menu">
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="<?php print $base_url?>/shared/icon/Icon-hongngoai.png" alt="icons">
+                <img src="<?php print $base_url?>shared/icon/Icon-hongngoai.png" alt="icons">
                 <span>Tỉ lệ chống tia hồng ngoại 85%
                 </span>
               </div>
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="<?php print $base_url?>/shared/icon/Icon-protect.png" alt="icons">
+                <img src="<?php print $base_url?>shared/icon/Icon-protect.png" alt="icons">
                 <span>Tỉ lệ chống tia cực tím 99%
                 </span>
               </div>
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="<?php print $base_url?>/shared/icon/Icon-beutifull.png" alt="icons">
+                <img src="<?php print $base_url?>shared/icon/Icon-beutifull.png" alt="icons">
                 <span>Sang trọng với lớp màu ánh kim
                 </span>
               </div>
@@ -140,16 +140,16 @@
       <div class="container-slide">
         <div class="slider-container">
           <div class="slider2 sizes-slider2">
-            <img class="dk" src="<?php print $base_url?>/shared/img/premier/ma-mau-premier.png" alt="Image">
-            <img class="mb" src="<?php print $base_url?>/shared/img/premier/ma-mau-premier-mb.png" alt="Image">
+            <img class="dk" src="<?php print $base_url?>shared/img/premier/ma-mau-premier.png" alt="Image">
+            <img class="mb" src="<?php print $base_url?>shared/img/premier/ma-mau-premier-mb.png" alt="Image">
           </div>
           <div class="slider2 sizes-slider2">
-            <img class="dk" src="<?php print $base_url?>/shared/img/premier/title-premier.png" alt="Image">
-            <img class="mb" src="<?php print $base_url?>/shared/img/premier/title-premier-mb.png" alt="Image">
+            <img class="dk" src="<?php print $base_url?>shared/img/premier/title-premier.png" alt="Image">
+            <img class="mb" src="<?php print $base_url?>shared/img/premier/title-premier-mb.png" alt="Image">
           </div>
           <div class="slider2 sizes-slider2">
-            <img class="dk" src="<?php print $base_url?>/shared/img/premier/thong-so-ky-thuat-premier-series.png" alt="Image">
-            <img class="mb" src="<?php print $base_url?>/shared/img/premier/thong-so-ky-thuat-premier-series-mb.png" alt="Image">
+            <img class="dk" src="<?php print $base_url?>shared/img/premier/thong-so-ky-thuat-premier-series.png" alt="Image">
+            <img class="mb" src="<?php print $base_url?>shared/img/premier/thong-so-ky-thuat-premier-series-mb.png" alt="Image">
           </div>
           <div class="box-btn">
             <div class="prev-button prev-button1" onclick="plusSlide2(-1)">
@@ -202,23 +202,21 @@
         </section>
       </div>
     </section>
-    <!-- SETION 3 -->
-    <!-- SETION 5-->
     <section class="section built" id="section-2">
       <section class="box-built">
         <div class="container-slide titanx-slide">
           <div class="slider-container">
             <div class="slider sizes-slider">
-              <img src="<?php print $base_url?>/shared/img/premier/01.jpg" alt="Image">
+              <img src="<?php print $base_url?>shared/img/premier/01.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img src="<?php print $base_url?>/shared/img/premier/02.jpg" alt="Image">
+              <img src="<?php print $base_url?>shared/img/premier/02.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img src="<?php print $base_url?>/shared/img/premier/03.jpg" alt="Image">
+              <img src="<?php print $base_url?>shared/img/premier/03.jpg" alt="Image">
             </div>
             <div class="slider sizes-slider">
-              <img src="<?php print $base_url?>/shared/img/premier/04.jpg" alt="Image">
+              <img src="<?php print $base_url?>shared/img/premier/04.jpg" alt="Image">
             </div>
             <div class="box-btn">
               <div class="prev-button prev-button1" onclick="plusSlide(-1)">
@@ -263,7 +261,7 @@
         </section>
       </section>
     </section>
-    <!-- SETION 5-->
+
   </div>
   <?php 
     require_once('./pages/footer.php');
@@ -271,9 +269,9 @@
   ?>
   <!-- javasript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="<?php print $base_url?>/public/js/form.js"></script>
-  <script src="<?php print $base_url?>/public/js/slider.js"></script>
-  <script src="<?php print $base_url?>/public/js/script.js"></script>
+  <script src="<?php print $base_url?>public/js/form.js"></script>
+  <script src="<?php print $base_url?>public/js/slider.js"></script>
+  <script src="<?php print $base_url?>public/js/script.js"></script>
   <!-- javasript -->
   <!-- css on sroll pages -->
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
@@ -303,7 +301,7 @@
   ScrollReveal().reveal(".btn-menu", {
     duration: 2000,
     origin: "bottom",
-    distance: "30px",
+    distance: "20px",
     easing: "ease-in-out"
   });
 

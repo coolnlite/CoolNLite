@@ -89,11 +89,11 @@
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
     <!-- fontawesome -->
     <!-- css -->
-    <link rel="icon" sizes="32x32" href="<?php print $base_url?>/shared/img/icon.png">
-    <link rel="stylesheet" href="<?php print $base_url?>/public/css/style.css" />
-    <link rel="stylesheet" href="<?php print $base_url?>/public/css/reponsive.css" />
-    <link rel="stylesheet" href="<?php print $base_url?>/public/css/slider.css">
-    <link rel="stylesheet" href="<?php print $base_url?>/public/css/news.css">
+    <link rel="icon" sizes="32x32" href="<?php print $base_url?>shared/img/icon.png">
+    <link rel="stylesheet" href="<?php print $base_url?>public/css/style.css" />
+    <link rel="stylesheet" href="<?php print $base_url?>public/css/reponsive.css" />
+    <link rel="stylesheet" href="<?php print $base_url?>public/css/slider.css">
+    <link rel="stylesheet" href="<?php print $base_url?>public/css/news.css">
     <!-- css -->
 </head>
 
@@ -178,7 +178,7 @@
                             ?>
                             <li class="tag-items">
                                 
-                                <a href="<?php print $base_url?>/tu-khoa/<?php echo ''.$kw['id'].''?>/<?php
+                                <a href="<?php print $base_url?>tu-khoa/<?php echo ''.$kw['id'].''?>/<?php
                                     echo str_replace(' ', '+', $kw['name']);
                                 ?>">
                                     <?php echo ''.$kw['name'].''?>
@@ -211,7 +211,7 @@
                             while($other = mysqli_fetch_array($result)){
                     ?>
                         <div class="card-columns">
-                            <a href="<?php echo ''.$base_url.'/'.$other['url'].''?>.html">
+                            <a href="<?php echo ''.$base_url.$other['url'].''?>.html">
                                 <div class="card-img" title="<?php echo ''.$other['title'].''?>">
                                     <img src="<?php echo ''.$base_url.$other['thumnail'].''?>" alt="thumnail">
                                 </div>
@@ -259,7 +259,7 @@
     ?>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="<?php print $base_url?>/public/js/script.js"></script>
+    <script src="<?php print $base_url?>public/js/script.js"></script>
     <!-- javasript -->
 </body>
 
