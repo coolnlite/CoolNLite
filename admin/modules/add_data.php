@@ -35,7 +35,7 @@
          /* Location */
          $uploadPath = "../../uploads/posts";
 
-         $tar_get = "/uploads/posts";
+         $tar_get = "uploads/posts";
          /* Upload file */
          //Kiểm tra kích thước ảnh trước khi upload
          $size = $_FILES["thumnail"]['tmp_name'];
@@ -184,7 +184,7 @@ if(!empty($_POST['id_news']) && !empty($_FILES['img-tw']) &&
  /* Location */
  $uploadPath1 = "../../uploads/seo_news";
 
- $tar_get1 = "/uploads/seo_news";
+ $tar_get1 = "uploads/seo_news";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size1 = $_FILES["img-fb"]['tmp_name'];
@@ -243,7 +243,7 @@ if(!empty($_POST['id_news']) && !empty($_FILES['img-tw']) &&
  /* Location */
  $uploadPath2 = "../../uploads/seo_news";
 
- $tar_get2 = "/uploads/seo_news";
+ $tar_get2 = "uploads/seo_news";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size2 = $_FILES["img-tw"]['tmp_name'];
@@ -350,7 +350,7 @@ if(
  /* Location */
  $uploadPath = "../../uploads/agency";
 
- $tar_get = "/uploads/agency";
+ $tar_get = "uploads/agency";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size = $_FILES["img"]['tmp_name'];
@@ -442,7 +442,7 @@ if(
  /* Location */
  $uploadPath = "../../uploads/users";
 
- $tar_get = "/uploads/users";
+ $tar_get = "uploads/users";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size = $_FILES["image"]['tmp_name'];
