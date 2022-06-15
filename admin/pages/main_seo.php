@@ -1,30 +1,32 @@
 <div style="margin: 0 auto; width : 94%">
 
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#home" role="tab" aria-controls="home" aria-selected="true">Trang Chủ</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="pills-premier-tab" data-toggle="pill" href="#premier" role="tab" aria-controls="premier" aria-selected="false">Premier Series</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="pills-titanx-tab" data-toggle="pill" href="#titanx" role="tab" aria-controls="titanx" aria-selected="false">Titan X Series</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="pills-news-tab" data-toggle="pill" href="#news" role="tab" aria-controls="news" aria-selected="false">Tin Tức</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="pills-about-tab" data-toggle="pill" href="#about" role="tab" aria-controls="about" aria-selected="false">Chúng Tôi</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="pills-agency-tab" data-toggle="pill" href="#agency" role="tab" aria-controls="agency" aria-selected="false">Đại Lý</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="pills-tag-tab" data-toggle="pill" href="#tag" role="tab" aria-controls="tag" aria-selected="false">Từ Khóa</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="pills-search-tab" data-toggle="pill" href="#search" role="tab" aria-controls="search" aria-selected="false">Tìm Kiếm</a>
-    </li>
+
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Trang Chủ</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-premier-tab" data-toggle="pill" href="#pills-premier" role="tab" aria-controls="pills-premier" aria-selected="false">Premier Series</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">TitanX Series</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Tin Tức</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills--tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Về Chúng Tôi</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Đại Lý</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Từ Khóa</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills--tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Tìm Kiếm</a>
+  </li>
+
   </ul>
 
   <div class="tab-content" id="pills-tabContent">
@@ -158,13 +160,14 @@
           }
         ?>
     </div>
+
     <div class="tab-pane fade" id="premier" role="tabpanel" ria-labelledby="pills-premier-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 2 ";
         $seo_pages = executeResult($sql);
         foreach ($seo_pages as $sp){
 
-      ?>
+    ?>
      <form id="feditpremier" class="needs-validation" enctype="multipart/form-data" novalidate>
         <input type="hidden" class="form-control" value="2" name="id_pages_premier" >
 
@@ -287,6 +290,7 @@
         }
         ?>
     </div>
+
     <div class="tab-pane fade" id="titanx" role="tabpanel" ria-labelledby="pills-titanx-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 3 ";
@@ -1009,6 +1013,7 @@
     </div>
 
   </div>
+  
 </div>
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
