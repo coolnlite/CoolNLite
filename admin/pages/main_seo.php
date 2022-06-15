@@ -21,10 +21,10 @@
     <a class="nav-link" id="pills-agency-tab" data-toggle="pill" href="#pills-agency" role="tab" aria-controls="pills-agency" aria-selected="false">Đại Lý</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Từ Khóa</a>
+    <a class="nav-link" id="pills-tag-tab" data-toggle="pill" href="#pills-tag" role="tab" aria-controls="pills-tag" aria-selected="true">Từ Khóa</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="pills--tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Tìm Kiếm</a>
+    <a class="nav-link" id="pills-search-tab" data-toggle="pill" href="#pills-search" role="tab" aria-controls="pills-search" aria-selected="false">Tìm Kiếm</a>
   </li>
 
   </ul>
