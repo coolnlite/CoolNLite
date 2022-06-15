@@ -11,7 +11,7 @@
             <div class="col-xl-3 border-right">
                 <div class="d-flex flex-column align-items-center text-center">
                     <img class="rounded-circle" alt="Ảnh đại diện" 
-                    width="150px" src="..<?php print $us['image']?>">
+                    width="150px" src="<?php print $base_url.$us['image']?>">
                     <span class="font-weight-bold">Võ Đông Thái</span>
                     <span class="text-black-50">Administrator</span>
                     <a class="btn btn-outline-primary mt-1" data-toggle="modal" data-target="#changImage">Thay đổi ảnh đại diện</a>
