@@ -203,7 +203,7 @@
             </div>
             <div class="quick-left-bottom">
               <div class="right-built-button">
-                <a href="<?php print $base_url?>titan-x-series.html" class="btn-learn-more btn-built btn-secondary"><i
+                <a href="<?php print $base_url?>premier-series.html" class="btn-learn-more btn-built btn-secondary"><i
                     class="fas fa-plus"></i></a>
                 <p class="txt-more">Xem Thêm</p>
                 <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>Liên hệ tư vấn</span></a>
@@ -266,7 +266,7 @@
             </div>
             <div class="quick-left-bottom">
               <div class="right-built-button">
-                <a href="<?php print $base_url?>premier-series.html" class="btn-learn-more btn-built btn-secondary"><i
+                <a href="<?php print $base_url?>titan-x-series.html" class="btn-learn-more btn-built btn-secondary"><i
                     class="fas fa-plus"></i></a>
                 <p class="txt-more">Xem Thêm</p>
                 <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>Liên hệ tư vấn</span></a>
