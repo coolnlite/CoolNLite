@@ -60,7 +60,7 @@ if(isset($_POST['account']) && !empty($_POST['user_id']) && isset($_POST['permis
         $sub_array[] = $row['email'];
         $sub_array[] = $row['position'] == 2 ? 'Administrator' : 'Users' ;
         $sub_array[] = $row['full_name'] ;
-        $sub_array[] = '<img src="'.$base_url.$row['image'].'" alt="">';
+        $sub_array[] = '<img src="'.$base_url.$row['image'].'" alt="ảnh đại diện">';
         $sub_array[] = $row['status'] == 1 ? 'Đang hoạt động'  : 'Đang ngủ' ;
         $sub_array[] = facebook_time_ago($row['time']);
         if($permission == 2){
