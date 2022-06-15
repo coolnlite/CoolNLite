@@ -137,7 +137,9 @@
    </div>
    <?php 
         require_once('../pages/footer.php');
-      ?>
+   ?>
+   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+   <script src="<?php print $base_url?>public/js/script.js"></script>
 </body>
 
 </html>
