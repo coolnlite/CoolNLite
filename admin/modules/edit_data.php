@@ -57,7 +57,7 @@ if($_FILES['thumnail']['error'] > 0){
  /* Location */
  $uploadPath = "../../uploads/posts";
 
- $tar_get = "/uploads/posts";
+ $tar_get = "uploads/posts";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size = $_FILES["thumnail"]['tmp_name'];
@@ -165,7 +165,7 @@ if(!empty($_FILES['img-fb']) && $_FILES['img-fb']['error'] == 0){
  /* Location */
  $uploadPath1 = "../../uploads/seo_news";
 
- $tar_get1 = "/uploads/seo_news";
+ $tar_get1 = "uploads/seo_news";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size1 = $_FILES["img-fb"]['tmp_name'];
@@ -235,7 +235,7 @@ if(!empty($_FILES['img-tw']) && $_FILES['img-tw']['error'] == 0){
  /* Location */
  $uploadPath2 = "../../uploads/seo_news";
 
- $tar_get2 = "/uploads/seo_news";
+ $tar_get2 = "uploads/seo_news";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size2 = $_FILES["img-tw"]['tmp_name'];
@@ -347,7 +347,7 @@ if(
   /* Location */
   $uploadPath = "../../uploads/agency";
  
-  $tar_get = "/uploads/agency";
+  $tar_get = "uploads/agency";
   /* Upload file */
   //Kiểm tra kích thước ảnh trước khi upload
   $size = $_FILES["edit-img"]['tmp_name'];
@@ -449,7 +449,7 @@ if(
  /* Location */
  $uploadPath = "../../uploads/users";
 
- $tar_get = "/uploads/users";
+ $tar_get = "uploads/users";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size = $_FILES["image"]['tmp_name'];
@@ -592,7 +592,7 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
  /* Location */
  $uploadPath1 = "../../uploads/seo_pages";
 
- $tar_get1 = "/uploads/seo_pages";
+ $tar_get1 = "uploads/seo_pages";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size1 = $_FILES["img_fb"]['tmp_name'];
@@ -664,7 +664,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
  /* Location */
  $uploadPath2 = "../../uploads/seo_pages";
 
- $tar_get2 = "/uploads/seo_pages";
+ $tar_get2 = "uploads/seo_pages";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size2 = $_FILES["img_tw"]['tmp_name'];
@@ -776,7 +776,7 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
  /* Location */
  $uploadPath1 = "../../uploads/seo_pages";
 
- $tar_get1 = "/uploads/seo_pages";
+ $tar_get1 = "uploads/seo_pages";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size1 = $_FILES["img_fb"]['tmp_name'];
@@ -848,7 +848,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
  /* Location */
  $uploadPath2 = "../../uploads/seo_pages";
 
- $tar_get2 = "/uploads/seo_pages";
+ $tar_get2 = "uploads/seo_pages";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size2 = $_FILES["img_tw"]['tmp_name'];
@@ -960,7 +960,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
      /* Location */
      $uploadPath1 = "../../uploads/seo_pages";
     
-     $tar_get1 = "/uploads/seo_pages";
+     $tar_get1 = "uploads/seo_pages";
      /* Upload file */
      //Kiểm tra kích thước ảnh trước khi upload
      $size1 = $_FILES["img_fb"]['tmp_name'];
@@ -1032,7 +1032,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
      /* Location */
      $uploadPath2 = "../../uploads/seo_pages";
     
-     $tar_get2 = "/uploads/seo_pages";
+     $tar_get2 = "uploads/seo_pages";
      /* Upload file */
      //Kiểm tra kích thước ảnh trước khi upload
      $size2 = $_FILES["img_tw"]['tmp_name'];
@@ -1144,7 +1144,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
      /* Location */
      $uploadPath1 = "../../uploads/seo_pages";
     
-     $tar_get1 = "/uploads/seo_pages";
+     $tar_get1 = "uploads/seo_pages";
      /* Upload file */
      //Kiểm tra kích thước ảnh trước khi upload
      $size1 = $_FILES["img_fb"]['tmp_name'];
@@ -1216,7 +1216,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
      /* Location */
      $uploadPath2 = "../../uploads/seo_pages";
     
-     $tar_get2 = "/uploads/seo_pages";
+     $tar_get2 = "uploads/seo_pages";
      /* Upload file */
      //Kiểm tra kích thước ảnh trước khi upload
      $size2 = $_FILES["img_tw"]['tmp_name'];
@@ -1328,7 +1328,7 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
  /* Location */
  $uploadPath1 = "../../uploads/seo_pages";
 
- $tar_get1 = "/uploads/seo_pages";
+ $tar_get1 = "uploads/seo_pages";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size1 = $_FILES["img_fb"]['tmp_name'];
@@ -1400,7 +1400,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
  /* Location */
  $uploadPath2 = "../../uploads/seo_pages";
 
- $tar_get2 = "/uploads/seo_pages";
+ $tar_get2 = "uploads/seo_pages";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size2 = $_FILES["img_tw"]['tmp_name'];
@@ -1512,7 +1512,7 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
  /* Location */
  $uploadPath1 = "../../uploads/seo_pages";
 
- $tar_get1 = "/uploads/seo_pages";
+ $tar_get1 = "uploads/seo_pages";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size1 = $_FILES["img_fb"]['tmp_name'];
@@ -1584,7 +1584,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
  /* Location */
  $uploadPath2 = "../../uploads/seo_pages";
 
- $tar_get2 = "/uploads/seo_pages";
+ $tar_get2 = "uploads/seo_pages";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size2 = $_FILES["img_tw"]['tmp_name'];
@@ -1695,7 +1695,7 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
  /* Location */
  $uploadPath1 = "../../uploads/seo_pages";
 
- $tar_get1 = "/uploads/seo_pages";
+ $tar_get1 = "uploads/seo_pages";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size1 = $_FILES["img_fb"]['tmp_name'];
@@ -1767,7 +1767,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
  /* Location */
  $uploadPath2 = "../../uploads/seo_pages";
 
- $tar_get2 = "/uploads/seo_pages";
+ $tar_get2 = "uploads/seo_pages";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size2 = $_FILES["img_tw"]['tmp_name'];
@@ -1874,7 +1874,7 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
  /* Location */
  $uploadPath1 = "../../uploads/seo_pages";
 
- $tar_get1 = "/uploads/seo_pages";
+ $tar_get1 = "uploads/seo_pages";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size1 = $_FILES["img_fb"]['tmp_name'];
@@ -1946,7 +1946,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
  /* Location */
  $uploadPath2 = "../../uploads/seo_pages";
 
- $tar_get2 = "/uploads/seo_pages";
+ $tar_get2 = "uploads/seo_pages";
  /* Upload file */
  //Kiểm tra kích thước ảnh trước khi upload
  $size2 = $_FILES["img_tw"]['tmp_name'];
