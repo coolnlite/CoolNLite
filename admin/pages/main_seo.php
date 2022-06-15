@@ -84,7 +84,7 @@
               if($sp['img_fb'] != ''){
               ?>
               <div class="card" style="width: 18rem;">
-                  <img class="card-img-top" src="<?php print '..'.$sp['img_fb']?>" alt="Ảnh đại diện">
+                  <img class="card-img-top" src="<?php print $base_url.$sp['img_fb']?>" alt="Ảnh đại diện">
               </div>
               <?php
                 }
@@ -145,7 +145,7 @@
               if($sp['img_tw'] != ''){
               ?>
               <div class="card" style="width: 18rem;">
-                  <img class="card-img-top" src="<?php print '..'.$sp['img_tw']?>" alt="Ảnh đại diện">
+                  <img class="card-img-top" src="<?php print $base_url.$sp['img_tw']?>" alt="Ảnh đại diện">
               </div>
               <?php
                 }
@@ -214,7 +214,7 @@
         if($sp['img_fb'] != ''){
         ?>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?php print '..'.$sp['img_fb']?>" alt="Ảnh đại diện">
+            <img class="card-img-top" src="<?php print $base_url.$sp['img_fb']?>" alt="Ảnh đại diện">
         </div>
         <?php
           }
@@ -275,7 +275,7 @@
         if($sp['img_tw'] != ''){
         ?>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?php print '..'.$sp['img_tw']?>" alt="Ảnh đại diện">
+            <img class="card-img-top" src="<?php print $base_url.$sp['img_tw']?>" alt="Ảnh đại diện">
         </div>
         <?php
           }
@@ -344,7 +344,7 @@
         if($sp['img_fb'] != ''){
         ?>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?php print '..'.$sp['img_fb']?>" alt="Ảnh đại diện">
+            <img class="card-img-top" src="<?php print $base_url.$sp['img_fb']?>" alt="Ảnh đại diện">
         </div>
         <?php
           }
@@ -405,7 +405,7 @@
         if($sp['img_tw'] != ''){
         ?>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?php print '..'.$sp['img_tw']?>" alt="Ảnh đại diện">
+            <img class="card-img-top" src="<?php print $base_url.$sp['img_tw']?>" alt="Ảnh đại diện">
         </div>
         <?php
           }
@@ -473,7 +473,7 @@
         if($sp['img_fb'] != ''){
         ?>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?php print '..'.$sp['img_fb']?>" alt="Ảnh đại diện">
+            <img class="card-img-top" src="<?php print $base_url.$sp['img_fb']?>" alt="Ảnh đại diện">
         </div>
         <?php
           }
@@ -534,7 +534,7 @@
         if($sp['img_tw'] != ''){
         ?>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?php print '..'.$sp['img_tw']?>" alt="Ảnh đại diện">
+            <img class="card-img-top" src="<?php print $base_url.$sp['img_tw']?>" alt="Ảnh đại diện">
         </div>
         <?php
           }
@@ -602,7 +602,7 @@
         if($sp['img_fb'] != ''){
         ?>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?php print '..'.$sp['img_fb']?>" alt="Ảnh đại diện">
+            <img class="card-img-top" src="<?php print $base_url.$sp['img_fb']?>" alt="Ảnh đại diện">
         </div>
         <?php
           }
@@ -663,7 +663,7 @@
         if($sp['img_tw'] != ''){
         ?>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?php print '..'.$sp['img_tw']?>" alt="Ảnh đại diện">
+            <img class="card-img-top" src="<?php print $base_url.$sp['img_tw']?>" alt="Ảnh đại diện">
         </div>
         <?php
           }
@@ -731,7 +731,7 @@
         if($sp['img_fb'] != ''){
         ?>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?php print '..'.$sp['img_fb']?>" alt="Ảnh đại diện">
+            <img class="card-img-top" src="<?php print $base_url.$sp['img_fb']?>" alt="Ảnh đại diện">
         </div>
         <?php
           }
@@ -792,7 +792,7 @@
         if($sp['img_tw'] != ''){
         ?>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?php print '..'.$sp['img_tw']?>" alt="Ảnh đại diện">
+            <img class="card-img-top" src="<?php print $base_url.$sp['img_tw']?>" alt="Ảnh đại diện">
         </div>
         <?php
           }
@@ -851,7 +851,7 @@
         if($sp['img_fb'] != ''){
         ?>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?php print '..'.$sp['img_fb']?>" alt="Ảnh đại diện">
+            <img class="card-img-top" src="<?php print $base_url.$sp['img_fb']?>" alt="Ảnh đại diện">
         </div>
         <?php
           }
@@ -894,7 +894,7 @@
         if($sp['img_tw'] != ''){
         ?>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?php print '..'.$sp['img_tw']?>" alt="Ảnh đại diện">
+            <img class="card-img-top" src="<?php print $base_url.$sp['img_tw']?>" alt="Ảnh đại diện">
         </div>
         <?php
           }
@@ -953,7 +953,7 @@
         if($sp['img_fb'] != ''){
         ?>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?php print '..'.$sp['img_fb']?>" alt="Ảnh đại diện">
+            <img class="card-img-top" src="<?php print $base_url.$sp['img_fb']?>" alt="Ảnh đại diện">
         </div>
         <?php
           }
@@ -996,7 +996,7 @@
         if($sp['img_tw'] != ''){
         ?>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?php print '..'.$sp['img_tw']?>" alt="Ảnh đại diện">
+            <img class="card-img-top" src="<?php print $base_url.$sp['img_tw']?>" alt="Ảnh đại diện">
         </div>
         <?php
           }
