@@ -1100,6 +1100,7 @@ a.btn-up {
 
 .list-mobile-menu .list-menu .items-menu .link-menu {
     color: var(--color-txt);
+    padding: 0.8em 0em;
 }
 
 

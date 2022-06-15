@@ -13,10 +13,10 @@
    <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
    <!-- fontawesome -->
    <!-- css -->
-   <link rel="icon" sizes="32x32" href="./shared/img/icon.png">
-   <link rel="stylesheet" href="./public/css/style.css" />
-   <link rel="stylesheet" href="./public/css/reponsive.css" />
-   <link rel="stylesheet" href="./public/css/news.css" />
+   <link rel="icon" sizes="32x32" href="<?php print $base_url?>shared/img/icon.png">
+   <link rel="stylesheet" href="<?php print $base_url?>public/css/style.css" />
+   <link rel="stylesheet" href="<?php print $base_url?>public/css/reponsive.css" />
+   <link rel="stylesheet" href="<?php print $base_url?>public/css/news.css" />
    <!-- css -->
    <title>COOL N LITE - Phim cách nhiệt</title>
    <style>
