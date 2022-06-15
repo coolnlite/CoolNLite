@@ -12,11 +12,4 @@ RewriteRule "^(.*).html$" "post.php?url=$1"
 RewriteRule "^tu-khoa/([0-9]+)/(.*)$" "tag.php?id=$1&keyword=$2"
 RewriteRule "^tim-kiem/([0-9a-zA-Z]+)$" "search.php?search_query=$1"
 
-RewriteBase /
 
-RewriteCond %{HTTP_HOST} !^www.coolnlite.vn$ [NC]
-
-RewriteRule ^(.*)$ http://www.coolnlite.vn/$1 [L,R=301]
-
-ErrorDocument 404 https://www.coolnlite.vn/error/error_404.php
-ErrorDocument 500 https://www.coolnlite.vn/error/error_500.php
