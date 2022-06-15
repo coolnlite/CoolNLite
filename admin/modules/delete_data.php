@@ -47,7 +47,7 @@ if(isset($_POST['delete_news']) && isset($_POST['id_news'])){
     $news = executeResult($sql);
     foreach($news as $ns){
         $img = $ns['thumnail'];
-        $link = $base_url;
+        $link = '../../';
         $file = $link.$img;
         unlink($file);
     }
@@ -117,7 +117,7 @@ if(isset($_POST['delete_agency']) && isset($_POST['id_agency'])){
     $agency = executeResult($sql);
     foreach($agency as $ag){
         $img = $ag['img'];
-        $link = $base_url;
+        $link = '../../';
         $file = $link.$img;
         unlink($file);
     }
@@ -150,7 +150,7 @@ if(isset($_POST['delete_users']) && !empty($_POST['id_users'])){
     $users = executeResult($sql);
     foreach( $users as $us){
         $image = $us['image'];
-        $link = $base_url;
+        $link = '../../';
         $file = $link.$image;
         unlink($file);
     }

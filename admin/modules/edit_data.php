@@ -103,7 +103,7 @@ if(move_uploaded_file($_FILES['thumnail']['tmp_name'],$uploadPath . '/' .$path))
     $thumnail =  $tar_get . '/' .$path;
 
     $thumnail_old = $_POST['thumnail_old'];
-    $link = $base_url;
+    $link = '../../';
     $file = $link.$thumnail_old;
     unlink($file);
 
@@ -210,7 +210,7 @@ if(!empty($_FILES['img-fb']) && $_FILES['img-fb']['error'] == 0){
  $resultFB = move_uploaded_file($_FILES['img-fb']['tmp_name'],$uploadPath1 . '/' .$path1);
  if($resultFB){
     $img_fb_old = $_POST['img-fb-old'];
-    $link_fb = $base_url;
+    $link_fb = '../../';
     $file_fb = $link_fb.$img_fb_old;
     unlink($file_fb);
 
@@ -279,7 +279,7 @@ if(!empty($_FILES['img-tw']) && $_FILES['img-tw']['error'] == 0){
     $resultTW =  move_uploaded_file($_FILES['img-tw']['tmp_name'],$uploadPath2 . '/' .$path2);
     if($resultTW){
         $img_tw_old = $_POST['img-tw-old'];
-        $link_tw = $base_url;
+        $link_tw = '../../';
         $file_tw = $link_tw.$img_tw_old;
         unlink($file_tw);
 
@@ -393,7 +393,7 @@ if(
      $img =  $tar_get . '/' .$path;
  
      $img_old = $_POST['img-old'];
-     $link = $base_url;
+     $link = '../../';
      $file = $link.$img_old;
      unlink($file);
  
@@ -495,7 +495,7 @@ if(move_uploaded_file($_FILES['image']['tmp_name'],$uploadPath . '/' .$path)){
     $image =  $tar_get . '/' .$path;
 
     $image_old = $_POST['image_old'];
-    $link = $base_url;
+    $link = '../../';
     $file = $link.$image_old;
     unlink($file);
 
@@ -638,7 +638,7 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
  if($resultFB){
     if($_POST['img_fb_old'] != ''){
         $img_fb_old = $_POST['img_fb_old'];
-        $link_fb = $base_url;
+        $link_fb = '../../';
         $file_fb = $link_fb.$img_fb_old;
         unlink($file_fb);
     }
@@ -709,7 +709,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
     if($resultTW){
        if($_POST['img_tw_old'] != ''){
         $img_tw_old = $_POST['img_tw_old'];
-        $link_tw = $base_url;
+        $link_tw = '../../';
         $file_tw = $link_tw.$img_tw_old;
         unlink($file_tw);
        }
@@ -822,7 +822,7 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
  if($resultFB){
     if($_POST['img_fb_old'] != ''){
         $img_fb_old = $_POST['img_fb_old'];
-        $link_fb = $base_url;
+        $link_fb = '../../';
         $file_fb = $link_fb.$img_fb_old;
         unlink($file_fb);
     }
@@ -893,7 +893,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
     if($resultTW){
        if($_POST['img_tw_old'] != ''){
         $img_tw_old = $_POST['img_tw_old'];
-        $link_tw = $base_url;
+        $link_tw = '../../';
         $file_tw = $link_tw.$img_tw_old;
         unlink($file_tw);
        }
@@ -1006,7 +1006,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
      if($resultFB){
         if($_POST['img_fb_old'] != ''){
             $img_fb_old = $_POST['img_fb_old'];
-            $link_fb = $base_url;
+            $link_fb = '../../';
             $file_fb = $link_fb.$img_fb_old;
             unlink($file_fb);
         }
@@ -1077,7 +1077,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
         if($resultTW){
            if($_POST['img_tw_old'] != ''){
             $img_tw_old = $_POST['img_tw_old'];
-            $link_tw = $base_url;
+            $link_tw = '../../';
             $file_tw = $link_tw.$img_tw_old;
             unlink($file_tw);
            }
@@ -1190,7 +1190,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
      if($resultFB){
         if($_POST['img_fb_old'] != ''){
             $img_fb_old = $_POST['img_fb_old'];
-            $link_fb = $base_url;
+            $link_fb = '../../';
             $file_fb = $link_fb.$img_fb_old;
             unlink($file_fb);
         }
@@ -1261,7 +1261,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
         if($resultTW){
            if($_POST['img_tw_old'] != ''){
             $img_tw_old = $_POST['img_tw_old'];
-            $link_tw = $base_url;
+            $link_tw = '../../';
             $file_tw = $link_tw.$img_tw_old;
             unlink($file_tw);
            }
@@ -1374,7 +1374,7 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
  if($resultFB){
     if($_POST['img_fb_old'] != ''){
         $img_fb_old = $_POST['img_fb_old'];
-        $link_fb = $base_url;
+        $link_fb = '../../';
         $file_fb = $link_fb.$img_fb_old;
         unlink($file_fb);
     }
@@ -1445,7 +1445,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
     if($resultTW){
        if($_POST['img_tw_old'] != ''){
         $img_tw_old = $_POST['img_tw_old'];
-        $link_tw = $base_url;
+        $link_tw = '../../';
         $file_tw = $link_tw.$img_tw_old;
         unlink($file_tw);
        }
@@ -1558,7 +1558,7 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
  if($resultFB){
     if($_POST['img_fb_old'] != ''){
         $img_fb_old = $_POST['img_fb_old'];
-        $link_fb = $base_url;
+        $link_fb = '../../';
         $file_fb = $link_fb.$img_fb_old;
         unlink($file_fb);
     }
@@ -1629,7 +1629,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
     if($resultTW){
        if($_POST['img_tw_old'] != ''){
         $img_tw_old = $_POST['img_tw_old'];
-        $link_tw = $base_url;
+        $link_tw = '../../';
         $file_tw = $link_tw.$img_tw_old;
         unlink($file_tw);
        }
@@ -1741,7 +1741,7 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
  if($resultFB){
     if($_POST['img_fb_old'] != ''){
         $img_fb_old = $_POST['img_fb_old'];
-        $link_fb = $base_url;
+        $link_fb = '../../';
         $file_fb = $link_fb.$img_fb_old;
         unlink($file_fb);
     }
@@ -1812,7 +1812,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
     if($resultTW){
        if($_POST['img_tw_old'] != ''){
         $img_tw_old = $_POST['img_tw_old'];
-        $link_tw = $base_url;
+        $link_tw = '../../';
         $file_tw = $link_tw.$img_tw_old;
         unlink($file_tw);
        }
@@ -1920,7 +1920,7 @@ if(!empty($_FILES['img_fb']) && $_FILES['img_fb']['error'] == 0){
  if($resultFB){
     if($_POST['img_fb_old'] != ''){
         $img_fb_old = $_POST['img_fb_old'];
-        $link_fb = $base_url;
+        $link_fb = '../../';
         $file_fb = $link_fb.$img_fb_old;
         unlink($file_fb);
     }
@@ -1991,7 +1991,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
     if($resultTW){
        if($_POST['img_tw_old'] != ''){
         $img_tw_old = $_POST['img_tw_old'];
-        $link_tw = $base_url;
+        $link_tw = '../../';
         $file_tw = $link_tw.$img_tw_old;
         unlink($file_tw);
        }
