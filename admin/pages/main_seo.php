@@ -1,32 +1,35 @@
 <div style="margin: 0 auto; width : 94%">
+
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#home" role="tab">Trang Chủ</a>
+      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#home" role="tab" aria-controls="home" aria-selected="true">Trang Chủ</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-premier-tab" data-toggle="pill" href="#premier" role="tab">Premier Series</a>
+      <a class="nav-link" id="pills-premier-tab" data-toggle="pill" href="#premier" role="tab" aria-controls="premier" aria-selected="false">Premier Series</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-titanx-tab" data-toggle="pill" href="#titanx" role="tab">Titan X Series</a>
+      <a class="nav-link" id="pills-titanx-tab" data-toggle="pill" href="#titanx" role="tab" aria-controls="titanx" aria-selected="false">Titan X Series</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-news-tab" data-toggle="pill" href="#news" role="tab">Tin Tức</a>
+      <a class="nav-link" id="pills-news-tab" data-toggle="pill" href="#news" role="tab" aria-controls="news" aria-selected="false">Tin Tức</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-about-tab" data-toggle="pill" href="#about" role="tab">Chúng Tôi</a>
+      <a class="nav-link" id="pills-about-tab" data-toggle="pill" href="#about" role="tab" aria-controls="about" aria-selected="false">Chúng Tôi</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-agency-tab" data-toggle="pill" href="#agency" role="tab">Đại Lý</a>
+      <a class="nav-link" id="pills-agency-tab" data-toggle="pill" href="#agency" role="tab" aria-controls="agency" aria-selected="false">Đại Lý</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-tag-tab" data-toggle="pill" href="#tag" role="tab">Từ Khóa</a>
+      <a class="nav-link" id="pills-tag-tab" data-toggle="pill" href="#tag" role="tab" aria-controls="tag" aria-selected="false">Từ Khóa</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-search-tab" data-toggle="pill" href="#search" role="tab">Tìm Kiếm</a>
+      <a class="nav-link" id="pills-search-tab" data-toggle="pill" href="#search" role="tab" aria-controls="search" aria-selected="false">Tìm Kiếm</a>
     </li>
   </ul>
+
   <div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="home" role="tabpanel">
+
+    <div class="tab-pane fade show active" id="home" role="tabpanel" ria-labelledby="pills-home-tab">
       <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 1 ";
         $seo_pages = executeResult($sql);
@@ -155,7 +158,7 @@
           }
         ?>
     </div>
-    <div class="tab-pane fade" id="premier" role="tabpanel">
+    <div class="tab-pane fade" id="premier" role="tabpanel" ria-labelledby="pills-premier-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 2 ";
         $seo_pages = executeResult($sql);
@@ -284,7 +287,7 @@
         }
         ?>
     </div>
-    <div class="tab-pane fade" id="titanx" role="tabpanel">
+    <div class="tab-pane fade" id="titanx" role="tabpanel" ria-labelledby="pills-titanx-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 3 ";
         $seo_pages = executeResult($sql);
@@ -413,7 +416,7 @@
         }
         ?>
     </div>
-    <div class="tab-pane fade" id="news" role="tabpanel">
+    <div class="tab-pane fade" id="news" role="tabpanel" ria-labelledby="pills-news-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 4 ";
         $seo_pages = executeResult($sql);
@@ -542,7 +545,7 @@
         }
         ?>
     </div>
-    <div class="tab-pane fade" id="about" role="tabpanel">
+    <div class="tab-pane fade" id="about" role="tabpanel" ria-labelledby="pills-about-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 5 ";
         $seo_pages = executeResult($sql);
@@ -671,7 +674,7 @@
         }
         ?>
     </div>
-    <div class="tab-pane fade" id="agency" role="tabpanel">
+    <div class="tab-pane fade" id="agency" role="tabpanel" ria-labelledby="pills-agency-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 6 ";
         $seo_pages = executeResult($sql);
@@ -800,7 +803,7 @@
         }
         ?>
     </div>
-    <div class="tab-pane fade" id="tag" role="tabpanel">
+    <div class="tab-pane fade" id="tag" role="tabpanel" ria-labelledby="pills-tag-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 7 ";
         $seo_pages = executeResult($sql);
@@ -902,7 +905,7 @@
         }
         ?>
     </div>
-    <div class="tab-pane fade" id="search" role="tabpanel">
+    <div class="tab-pane fade" id="search" role="tabpanel" ria-labelledby="pills-search-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 8 ";
         $seo_pages = executeResult($sql);
