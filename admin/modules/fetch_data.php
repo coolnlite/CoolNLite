@@ -142,7 +142,7 @@ if(isset($_POST['account']) && !empty($_POST['user_id']) && isset($_POST['permis
         {
             $sub_array = array();
             $sub_array[] = $row['id'];
-            $sub_array[] = '<img src="..'.$row['img'].'" alt="">';
+            $sub_array[] = '<img src="'.$base_url.$row['img'].'" alt="ảnh đại lý">';
             $sub_array[] = $row['name'];
             $sub_array[] = $row['address'];
             $sub_array[] = $row['phone'] ;
@@ -307,7 +307,7 @@ if(isset($_POST['tag_news'])){
             $sub_array = array();
             $sub_array[] = $row['id'];
             $sub_array[] = $row['url'];
-            $sub_array[] = '<img src="..'.$row['thumnail'].'" alt="">';
+            $sub_array[] = '<img src="'.$base_url.$row['thumnail'].'" alt="">';
             $sub_array[] = $row['title'];
             $sub_array[] = $row['description'];
             $sub_array[] = $row['view'] ;
