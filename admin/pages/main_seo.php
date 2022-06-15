@@ -31,7 +31,7 @@
 
   <div class="tab-content" id="pills-tabContent">
 
-    <div class="tab-pane fade show active" id="home" role="tabpanel" ria-labelledby="pills-home-tab">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" ria-labelledby="pills-home-tab">
       <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 1 ";
         $seo_pages = executeResult($sql);
@@ -161,7 +161,7 @@
         ?>
     </div>
 
-    <div class="tab-pane fade" id="premier" role="tabpanel" ria-labelledby="pills-premier-tab">
+    <div class="tab-pane fade" id="pills-premier" role="tabpanel" ria-labelledby="pills-premier-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 2 ";
         $seo_pages = executeResult($sql);
@@ -291,7 +291,7 @@
         ?>
     </div>
 
-    <div class="tab-pane fade" id="titanx" role="tabpanel" ria-labelledby="pills-titanx-tab">
+    <div class="tab-pane fade" id="pills-titanx" role="tabpanel" ria-labelledby="pills-titanx-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 3 ";
         $seo_pages = executeResult($sql);
@@ -420,7 +420,7 @@
         }
         ?>
     </div>
-    <div class="tab-pane fade" id="news" role="tabpanel" ria-labelledby="pills-news-tab">
+    <div class="tab-pane fade" id="pills-news" role="tabpanel" ria-labelledby="pills-news-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 4 ";
         $seo_pages = executeResult($sql);
@@ -549,7 +549,7 @@
         }
         ?>
     </div>
-    <div class="tab-pane fade" id="about" role="tabpanel" ria-labelledby="pills-about-tab">
+    <div class="tab-pane fade" id="pills-about" role="tabpanel" ria-labelledby="pills-about-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 5 ";
         $seo_pages = executeResult($sql);
@@ -678,7 +678,7 @@
         }
         ?>
     </div>
-    <div class="tab-pane fade" id="agency" role="tabpanel" ria-labelledby="pills-agency-tab">
+    <div class="tab-pane fade" id="pills-agency" role="tabpanel" ria-labelledby="pills-agency-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 6 ";
         $seo_pages = executeResult($sql);
@@ -807,7 +807,7 @@
         }
         ?>
     </div>
-    <div class="tab-pane fade" id="tag" role="tabpanel" ria-labelledby="pills-tag-tab">
+    <div class="tab-pane fade" id="pills-tag" role="tabpanel" ria-labelledby="pills-tag-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 7 ";
         $seo_pages = executeResult($sql);
@@ -909,7 +909,7 @@
         }
         ?>
     </div>
-    <div class="tab-pane fade" id="search" role="tabpanel" ria-labelledby="pills-search-tab">
+    <div class="tab-pane fade" id="pills-search" role="tabpanel" ria-labelledby="pills-search-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 8 ";
         $seo_pages = executeResult($sql);
