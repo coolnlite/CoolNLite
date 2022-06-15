@@ -22,7 +22,7 @@
     class="box-user">
         <span class="name-user"><?php echo '' . $us['full_name'] . '' ?></span>
         <div class="user">
-            <img src="<?php echo '' .'..'. $us['image'] . '' ?>" alt="Avatar">
+            <img src="<?php echo ''.$base_url. $us['image'] . '' ?>" alt="Avatar">
         </div>
     </a>
     <?php
