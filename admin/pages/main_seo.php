@@ -30,14 +30,12 @@
   </ul>
 
   <div class="tab-content" id="pills-tabContent">
-
-    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" ria-labelledby="pills-home-tab">
-      <?php
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" ria-labelledby="pills-home-tab">   
+    <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 1 ";
         $seo_pages = executeResult($sql);
         foreach ($seo_pages as $sp){
-
-      ?>
+    ?>
       <form id="fedithome" class="needs-validation" enctype="multipart/form-data" novalidate>
 
               <input type="hidden" class="form-control" value="1" name="id_pages_home">
@@ -88,10 +86,10 @@
               <div class="card" style="width: 18rem;">
                   <img class="card-img-top" src="<?php print '..'.$sp['img_fb']?>" alt="Ảnh đại diện">
               </div>
-              </div>
               <?php
                 }
               ?>
+              </div>
 
               <div class="form-group">
               <label for="title-fb">Tiêu đề facebook:</label>
@@ -149,18 +147,18 @@
               <div class="card" style="width: 18rem;">
                   <img class="card-img-top" src="<?php print '..'.$sp['img_tw']?>" alt="Ảnh đại diện">
               </div>
-              </div>
               <?php
                 }
               ?>
+              </div>
 
               <button type="submit" class="btn btn-primary">Cập nhật</button>
           </form>
           <?php  
-          }
-        ?>
+            }//Kết thúc vòng lặp 
+          ?>
     </div>
-
+    
     <div class="tab-pane fade" id="pills-premier" role="tabpanel" ria-labelledby="pills-premier-tab">
     <?php
         $sql = "SELECT * FROM `seo_pages` WHERE `id` = 2 ";
@@ -218,10 +216,10 @@
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="<?php print '..'.$sp['img_fb']?>" alt="Ảnh đại diện">
         </div>
-        </div>
         <?php
           }
         ?>
+         </div>
 
         <div class="form-group">
         <label for="title-fb">Tiêu đề facebook:</label>
@@ -279,10 +277,10 @@
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="<?php print '..'.$sp['img_tw']?>" alt="Ảnh đại diện">
         </div>
-        </div>
         <?php
           }
         ?>
+        </div>
 
         <button type="submit" class="btn btn-primary">Cập nhật</button>
         </form>
@@ -348,10 +346,10 @@
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="<?php print '..'.$sp['img_fb']?>" alt="Ảnh đại diện">
         </div>
-        </div>
         <?php
           }
         ?>
+        </div>
 
         <div class="form-group">
         <label for="title-fb">Tiêu đề facebook:</label>
@@ -409,10 +407,10 @@
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="<?php print '..'.$sp['img_tw']?>" alt="Ảnh đại diện">
         </div>
-        </div>
         <?php
           }
         ?>
+        </div>
 
         <button type="submit" class="btn btn-primary">Cập nhật</button>
         </form>
@@ -609,7 +607,7 @@
         <?php
           }
         ?>
-      </div>
+        </div>
 
         <div class="form-group">
         <label for="title-fb">Tiêu đề facebook:</label>
