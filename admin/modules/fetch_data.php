@@ -307,7 +307,7 @@ if(isset($_POST['tag_news'])){
             $sub_array = array();
             $sub_array[] = $row['id'];
             $sub_array[] = $row['url'];
-            $sub_array[] = '<img src="'.$base_url.$row['thumnail'].'" alt="">';
+            $sub_array[] = '<img src="'.$base_url.$row['thumnail'].'" alt="ảnh đại diện">';
             $sub_array[] = $row['title'];
             $sub_array[] = $row['description'];
             $sub_array[] = $row['view'] ;
