@@ -293,7 +293,7 @@
     ?>
     <div class="popup-image">
     <span>&times;</span>
-        <img src="" alt="ảnh">
+        <img src="http://localhost/CoolNLite/uploads/content/images/tai-nhanh-tay-hinh-anh-goku-cho-de-yeu-1.jpg" alt="ảnh">
     </div>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
