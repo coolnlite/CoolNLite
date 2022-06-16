@@ -98,10 +98,15 @@
     <!-- CSS POPUP IMAGE -->
     <style>
         .popup-image{
+            top: 0;
+            left: 0;
             position: fixed;
             width: 100%;
             height: 100%;
             z-index: 100;
+            pointer-events: inherit;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
         }
         .popup-image span{
             position: absolute;
@@ -109,6 +114,7 @@
             right: 10px;
             cursor: pointer;
             font-weight: bolder;
+            font-size: 40px;
             color: #fff;
             z-index: 100;
         }
@@ -295,6 +301,14 @@
     <span>&times;</span>
         <img src="http://localhost/CoolNLite/uploads/content/images/tai-nhanh-tay-hinh-anh-goku-cho-de-yeu-1.jpg" alt="ảnh">
     </div>
+    <script>
+        document.querySelectorAll('#content-posts img').forEach(image => {
+            image.onclick = () => {
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').style.src = image.getAttribute('src');
+            }
+        })
+    </script>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="<?php print $base_url?>public/js/script.js"></script>
