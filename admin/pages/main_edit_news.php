@@ -24,7 +24,7 @@
       <input type="file" class="form-control" name="thumnail" id="thumnail">
       <div class="invalid-feedback">Vui lòng nhập ảnh đại diện bài viết</div>
       <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="<?php print '..'.$ns['thumnail']?>" alt="Image">
+        <img class="card-img-top" src="<?php print $base_url.$ns['thumnail']?>" alt="Image">
       </div>
     </div>
     <div class="form-group">
