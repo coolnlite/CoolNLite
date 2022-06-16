@@ -299,15 +299,19 @@
     ?>
     <div class="popup-image">
     <span>&times;</span>
-        <img src="http://localhost/CoolNLite/uploads/content/images/tai-nhanh-tay-hinh-anh-goku-cho-de-yeu-1.jpg" alt="ảnh">
+        <img src="" alt="ảnh">
     </div>
     <script>
         document.querySelectorAll('#content-posts img').forEach(image => {
             image.onclick = () => {
                 document.querySelector('.popup-image').style.display = 'block';
-                document.querySelector('.popup-image img').style.src = image.getAttribute('src');
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
             }
         })
+        document.querySelector('.popup-image span').onclick = () => {
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+        
     </script>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
