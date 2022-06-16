@@ -299,7 +299,7 @@
     ?>
     <div class="popup-image">
     <span>&times;</span>
-        <img src="http://localhost/CoolNLite/uploads/content/images/tai-nhanh-tay-hinh-anh-goku-cho-de-yeu-1.jpg" alt="ảnh">
+        <img src="" alt="ảnh">
     </div>
     <script>
         document.querySelectorAll('#content-posts img').forEach(image => {
