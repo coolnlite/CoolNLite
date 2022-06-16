@@ -110,6 +110,23 @@
             cursor: pointer;
             font-weight: bolder;
             color: #fff;
+            z-index: 100;
+        }
+        .popup-image img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid #fff;
+            border-radius: 5px;
+            object-fit: cover;
+            width: 750px;
+        }
+        @media only screen and (max-width : 768px) {
+            .popup-image img{
+                width: 95%;
+            }
+
         }
     </style>
 </head>
