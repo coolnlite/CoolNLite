@@ -110,8 +110,8 @@
         }
         .popup-image span{
             position: absolute;
-            top: 0;
-            right: 10px;
+            top: 30px;
+            right: 30px;
             cursor: pointer;
             font-weight: bolder;
             font-size: 40px;
