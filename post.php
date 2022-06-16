@@ -95,6 +95,23 @@
     <link rel="stylesheet" href="<?php print $base_url?>public/css/slider.css">
     <link rel="stylesheet" href="<?php print $base_url?>public/css/news.css">
     <!-- css -->
+    <!-- CSS POPUP IMAGE -->
+    <style>
+        .popup-image{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+        }
+        .popup-image span{
+            position: absolute;
+            top: 0;
+            right: 10px;
+            cursor: pointer;
+            font-weight: bolder;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body class="body">
@@ -257,6 +274,10 @@
     <?php 
         require_once('./pages/footer.php');
     ?>
+    <div class="popup-image">
+    <span>&times;</span>
+        <img src="" alt="ảnh">
+    </div>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="<?php print $base_url?>public/js/script.js"></script>
