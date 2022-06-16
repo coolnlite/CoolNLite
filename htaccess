@@ -1,0 +1,24 @@
+RewriteEngine On
+ServerSignature Off
+Options -Indexes
+<files config.php>
+
+order allow,deny
+
+deny from all
+
+</files>
+
+RewriteRule "index.html" "index.php" [L]
+RewriteRule "premier.html" "premier.php" [L]
+RewriteRule "titanx.html" "titanx.php" [L]
+RewriteRule "tin-tuc.html" "news.php" [L]
+RewriteRule "chung-toi.html" "about.php" [L]
+RewriteRule "dai-ly.html" "agency.php" [L]
+RewriteRule "^(.*).html$" "post.php?url=$1" [L]
+RewriteRule "^tu-khoa/([0-9]+)/(.*)$" "tag.php?id=$1&keyword=$2" [L]
+RewriteRule "^tim-kiem/([0-9a-zA-Z]+)$" "search.php?search_query=$1" [L]
+
+ErrorDocument 403 "http://localhost/CoolNLite/error/error_403.php"
+ErrorDocument 404 "http://localhost/CoolNLite/error/error_404.php"
+ErrorDocument 500 "http://localhost/CoolNLite/error/error_500.php"
