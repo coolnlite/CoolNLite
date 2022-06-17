@@ -55,7 +55,7 @@
                 <p class="alert" id="alert"></p>
                 <button type="submit" name="btn-login" class="btn">Đăng nhập</button>
             </div>
-            <a href="forget_password.php" class="forget">Quên mật khẩu</a>
+            <a href="password_reset.php" class="forget">Quên mật khẩu</a>
         </form>
 
     <!-- javascript -->
