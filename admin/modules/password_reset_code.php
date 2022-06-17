@@ -8,15 +8,15 @@
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $token = getToken(30);
 
-        $sql = "SELECT `email` FROM `users` WHERE `email` = $email LIMIT 1";
+        $sql = "SELECT `email` FROM `users` WHERE `email` = '$email' LIMIT 1";
         $result = mysqli_query($conn,$sql);
 
-        if($result){
+        if(mysqli_num_rows($result) > 0){
 
         }else{
             echo json_encode(array(
                 'status' => 1,
-                'message' => 'Email'.$email.'không tồn tại trong hệ thống'
+                'message' => 'Email trên không tồn tại trong hệ thống'
             ));
         }
     }
