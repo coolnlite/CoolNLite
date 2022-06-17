@@ -36,6 +36,7 @@ body {
 }
 .title-forget{
     color: var(--primary);
+    font-weight: lighter;
 }
 label.error{
     font-size: 14px;

@@ -50,7 +50,7 @@
             </div>
             <div class="form-group">
                 <p class="alert" id="alert"></p>
-                <button type="submit" name="btn-login" class="btn">Xác Nhận</button>
+                <button type="submit" name="btn-mail" class="btn">Xác Nhận</button>
             </div>
             <a href="./" class="forget">Trở về trang đăng nhập</a>
         </form>
@@ -84,37 +84,27 @@
                 //FORM LOGIN ADMIN
                 $("#form-login").validate({
                     rules: {
-                        username: {
+                        email: {
                             required: true,
+                            email : true,
                             maxlength: 50,
-                        },
-                        password: {
-                            required: true,
-                            minlength: 8,
                         },
                     },
                     messages: {
-                        username: {
-                            required: "Vui lòng nhập Tên tài khoản / Email",
+                        email: {
+                            required: "Vui lòng nhập email",
+                            email : "Vui lòng nhập đúng định dạng email",
                             maxlength: "Vui lòng không nhập quá 50 ký tự"
-                        },
-                        password: {
-                            required: "Vui lòng nhập mật khẩu",
-                            minlength: "Vui lòng nhập ít nhất 8 ký tự",
                         },
                     },
                     submitHandler: function (form) {
                         $.ajax({
                             type: "POST",
-                            url: "modules/login.php",
+                            url: "",
                             data: $(form).serializeArray(),
                             dataType : 'json',
                             success: function (response) {
-                                if(response.status == 0){
-                                    $('#alert').text(response.message);
-                                }else{
-                                    window.location = response.message;
-                                }
+                                
                             },
                         });
                     },
