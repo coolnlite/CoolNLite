@@ -33,7 +33,6 @@
     right: 10px;
     width: 32px;
     height: 32px;
-    border: 2px solid var(--color-blue);
     background: var(--text-color);
     border-radius: 50%;
     text-align: center;
@@ -45,7 +44,6 @@
 .lightbox .btn-close:hover {
     background: var(--color-blue);
     color: var(--text-color);
-    border: 2px solid var(--text-color);
 }
 
 .lightbox .lightbox-status {
