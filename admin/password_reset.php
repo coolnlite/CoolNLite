@@ -100,11 +100,11 @@
                     submitHandler: function (form) {
                         $.ajax({
                             type: "POST",
-                            url: "",
+                            url: "modules/password_reset_code.php",
                             data: $(form).serializeArray(),
                             dataType : 'json',
                             success: function (response) {
-                                
+                                console.log(response);
                             },
                         });
                     },
