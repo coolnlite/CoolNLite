@@ -18,12 +18,23 @@
             $get_email = $row['email'];
 
             $update_token = "UPDATE `users` SET `email_token`='$token' WHERE `email`='$email' LIMIT 1 ";
+            $result_token = mysqli_query($conn, $update_token);
+            if($result_token){
+
+            }else{
+                echo json_encode(array(
+                    'status' => 1,
+                    'message' => 'Có lỗi gì đó xảy ra'
+                ));
+                exit();
+            }
 
         }else{
             echo json_encode(array(
                 'status' => 1,
                 'message' => 'Email '.$email.' trên không tồn tại'
             ));
+            exit();
         }
     }
 ?>
