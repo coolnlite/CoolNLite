@@ -34,6 +34,9 @@ body {
         background: url(../../shared/img/bg-admin-mb.png) no-repeat center center fixed;
     }
 }
+.title-forget{
+    color: var(--primary);
+}
 label.error{
     font-size: 14px;
     color: red;
