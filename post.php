@@ -273,8 +273,7 @@
         $(document).ready(function(){
 
         $(".content-posts").popupLightbox({
-        width: 1000,
-        height: 700
+       
         });
     });
     </script>
