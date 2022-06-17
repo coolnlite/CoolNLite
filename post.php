@@ -95,46 +95,7 @@
     <link rel="stylesheet" href="<?php print $base_url?>public/css/slider.css">
     <link rel="stylesheet" href="<?php print $base_url?>public/css/news.css">
     <!-- css -->
-    <!-- CSS POPUP IMAGE -->
-    <style>
-        .popup-image{
-            top: 0;
-            left: 0;
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: 99;
-            pointer-events: inherit;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: none;
-        }
-        .popup-image span{
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            cursor: pointer;
-            font-weight: bolder;
-            font-size: 40px;
-            color: #fff;
-            z-index: 100;
-        }
-        .popup-image img{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 1px solid #fff;
-            border-radius: 5px;
-            object-fit: cover;
-            max-width: 1000px;
-        }
-        @media only screen and (max-width : 768px) {
-            .popup-image img{
-                width: 95%;
-            }
-
-        }
-    </style>
+    
 </head>
 
 <body class="body">
@@ -297,29 +258,19 @@
     <?php 
         require_once('./pages/footer.php');
     ?>
-    <div class="popup-image">
-    <span>&times;</span>
-        <img src="" alt="ảnh">
-    </div>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script>
-        $(document).on('click','#content-posts img', function(){
-            var img = $(this).attr('src');
-            $('.popup-image').show();
-            $('body').addClass('overflow');
-            $('.popup-image img').attr('src', img);
-        })
-        $('.popup-image span').click(function(){
-            $('.popup-image').hide();
-            $('body').removeClass('overflow');
-        })
-        $('.popup-image').click(function(){
-            $(this).hide();
-            $('body').removeClass('overflow');
-        })
-    </script>
     <script src="<?php print $base_url?>public/js/script.js"></script>
+    <script src="<?php print $base_url?>public/js/jquery.popup.lightbox.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+        $(".content-posts").popupLightbox({
+        width: 600,
+        height: 450
+        });
+    });
+    </script>
     <!-- javasript -->
 </body>
 
