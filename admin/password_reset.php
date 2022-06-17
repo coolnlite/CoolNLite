@@ -87,6 +87,7 @@
                         email: {
                             required: true,
                             email : true,
+                            nowhitespace : true,
                             maxlength: 50,
                         },
                     },
@@ -94,6 +95,7 @@
                         email: {
                             required: "Vui lòng nhập email",
                             email : "Vui lòng nhập đúng định dạng email",
+                            nowhitespace : "Vui lòng không nhập khoảng trắng",
                             maxlength: "Vui lòng không nhập quá 50 ký tự"
                         },
                     },
