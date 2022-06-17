@@ -52,7 +52,7 @@
     left: 20px;
     color: #fff;
     font-size: 14px;
-    z-index: 101
+    z-index: 101;
 }
 
 .img-show img {
@@ -62,7 +62,7 @@
     display: block;
     top: 0;
     bottom: 0;
-    margin: auto
+    margin: auto;
 }
 
 .btn-prev,
@@ -79,7 +79,7 @@
     font-family: FontAwesome;
     color: var(--text-color);
     font-size: 18pt;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .btn-prev:hover,
@@ -90,28 +90,28 @@
     -webkit-transition: .4s;
     -moz-transition: .4s;
     -ms-transition: .4s;
-    -o-transition: .4s
+    -o-transition: .4s;
 }
 
 .btn-prev {
-    left: 5px
+    left: 5px;
 }
 
 .btn-next {
-    right: 5px
+    right: 5px;
 }
 
 .btn-prev:before {
-    content: "\f104"
+    content: "\f104";
 }
 
 .btn-next:before {
-    content: "\f105"
+    content: "\f105";
 }
 
 @media only screen and (min-width:680px) {
     .lightbox {
         border-radius: 5px;
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5)
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
     }
 }
