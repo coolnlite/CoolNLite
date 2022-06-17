@@ -123,10 +123,10 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            border: 5px solid #fff;
+            border: 1px solid #fff;
             border-radius: 5px;
             object-fit: cover;
-            width: 750px;
+            max-width: 1000px;
         }
         @media only screen and (max-width : 768px) {
             .popup-image img{
