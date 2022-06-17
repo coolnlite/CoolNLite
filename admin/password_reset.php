@@ -50,7 +50,7 @@
             </div>
             <div class="form-group">
                 <p class="alert" id="alert"></p>
-                <button type="submit" name="btn-mail" class="btn">Xác Nhận</button>
+                <button type="submit" name="reset_password" class="btn">Xác Nhận</button>
             </div>
             <a href="./" class="forget">Trở về trang đăng nhập</a>
         </form>
