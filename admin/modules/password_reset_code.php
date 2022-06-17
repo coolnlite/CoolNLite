@@ -16,7 +16,7 @@
         }else{
             echo json_encode(array(
                 'status' => 1,
-                'message' => 'Email trên không tồn tại trong hệ thống'
+                'message' => 'Email'.$email.'trên không tồn tại trong hệ thống'
             ));
         }
     }
