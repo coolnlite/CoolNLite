@@ -89,20 +89,24 @@
                     rules: {
                         username: {
                             required: true,
+                            nowhitespace : true,
                             maxlength: 50,
                         },
                         password: {
                             required: true,
+                            nowhitespace : true,
                             minlength: 8,
                         },
                     },
                     messages: {
                         username: {
                             required: "Vui lòng nhập Tên tài khoản / Email",
+                            nowhitespace : "Vui lòng không nhập khoảng trắng",
                             maxlength: "Vui lòng không nhập quá 50 ký tự"
                         },
                         password: {
                             required: "Vui lòng nhập mật khẩu",
+                            nowhitespace : "Vui lòng không nhập khoảng trắng",
                             minlength: "Vui lòng nhập ít nhất 8 ký tự",
                         },
                     },
