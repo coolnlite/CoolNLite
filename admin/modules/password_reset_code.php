@@ -13,6 +13,12 @@
 
         if(mysqli_num_rows($result) > 0){
 
+            $row = mysqli_fetch_array($result);
+            $get_name = $row['name'];
+            $get_email = $row['email'];
+
+            $update_token = "UPDATE `users` SET `email_token`='$token' WHERE `email`='$email' LIMIT 1 ";
+
         }else{
             echo json_encode(array(
                 'status' => 1,
