@@ -269,14 +269,6 @@
     <script src="<?php print $base_url?>public/js/script.js"></script>
     <!-- lightbox -->
     <script src="<?php print $base_url?>public/js/jquery.popup.lightbox.min.js"></script>
-    <script>
-        $(document).ready(function(){
-
-        $(".content-posts").popupLightbox({
-       
-        });
-    });
-    </script>
     <!-- javasript -->
 </body>
 
