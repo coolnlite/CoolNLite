@@ -301,20 +301,18 @@
     <span>&times;</span>
         <img src="" alt="ảnh">
     </div>
-    <script>
-        document.querySelectorAll('#content-posts img').forEach(image => {
-            image.onclick = () => {
-                document.querySelector('.popup-image').style.display = 'block';
-                document.querySelector('.popup-image img').src = image.getAttribute('src');
-            }
-        })
-        document.querySelector('.popup-image span').onclick = () => {
-            document.querySelector('.popup-image').style.display = 'none';
-        }
-        
-    </script>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).on('click','#content-posts img', function(){
+            var img = $(this).attr(src);
+            $('.popup-image').show();
+            $('.popup-image img').attr('src', img);
+        })
+        $('.popup-image span').click(function(){
+            $('.popup-image').hide();
+        })
+    </script>
     <script src="<?php print $base_url?>public/js/script.js"></script>
     <!-- javasript -->
 </body>
