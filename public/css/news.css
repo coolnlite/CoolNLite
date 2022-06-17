@@ -268,7 +268,7 @@ figure.box-img i {
 }
 
 @media only screen and (max-width: 600px) {
-  #content-posts img{
+  div#content-posts img{
     max-height: 230px;
   }
   .container {
