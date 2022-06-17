@@ -104,7 +104,11 @@
                             data: $(form).serializeArray(),
                             dataType : 'json',
                             success: function (response) {
-                                console.log(response);
+                                if(response.status == 1){
+                                    $('#alert').text(response.message);
+                                }else{
+                                   
+                                }
                             },
                         });
                     },
