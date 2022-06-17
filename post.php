@@ -305,12 +305,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
         $(document).on('click','#content-posts img', function(){
-            var img = $(this).attr(src);
+            var img = $(this).attr('src');
             $('.popup-image').show();
+            $('body').addClass('overflow');
             $('.popup-image img').attr('src', img);
         })
         $('.popup-image span').click(function(){
             $('.popup-image').hide();
+            $('body').removeClass('overflow');
         })
     </script>
     <script src="<?php print $base_url?>public/js/script.js"></script>
