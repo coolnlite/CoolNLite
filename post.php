@@ -94,6 +94,8 @@
     <link rel="stylesheet" href="<?php print $base_url?>public/css/reponsive.css" />
     <link rel="stylesheet" href="<?php print $base_url?>public/css/slider.css">
     <link rel="stylesheet" href="<?php print $base_url?>public/css/news.css">
+    <!-- lightbox -->
+    <link rel="stylesheet" href="<?php print $base_url?>public/css/popup-lightbox.min.css">
     <!-- css -->
     
 </head>
@@ -261,6 +263,7 @@
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="<?php print $base_url?>public/js/script.js"></script>
+    <!-- lightbox -->
     <script src="<?php print $base_url?>public/js/jquery.popup.lightbox.min.js"></script>
     <script>
         $(document).ready(function(){
