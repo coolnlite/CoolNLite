@@ -42,6 +42,7 @@
    <!-- Script -->
     <script src="./js/main.js"></script>
     <script src="./ckeditor/ckeditor.js"></script>
+    <script src="./ckeditor/config.js"></script>
     <script src="./ckfinder/ckfinder.js"></script>
     <script>
         CKEDITOR.replace( 'content', {
