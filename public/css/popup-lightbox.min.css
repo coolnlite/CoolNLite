@@ -26,7 +26,11 @@
     box-sizing: border-box;
     font-size: 16px;
 }
-
+@media only screen and (max-width : 600px){
+    figcaption.img-caption{
+        font-size: 14px;
+    }
+}
 .lightbox .btn-close {
     color: var(--text-color-b);
     position: absolute;
