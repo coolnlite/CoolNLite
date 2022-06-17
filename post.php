@@ -103,7 +103,7 @@
             position: fixed;
             width: 100%;
             height: 100%;
-            z-index: 100;
+            z-index: 99;
             pointer-events: inherit;
             background-color: rgba(0, 0, 0, 0.7);
             display: none;
@@ -312,6 +312,10 @@
         })
         $('.popup-image span').click(function(){
             $('.popup-image').hide();
+            $('body').removeClass('overflow');
+        })
+        $('.popup-image').click(function(){
+            $(this).hide();
             $('body').removeClass('overflow');
         })
     </script>
