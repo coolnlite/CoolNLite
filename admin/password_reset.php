@@ -86,16 +86,16 @@
                     rules: {
                         email: {
                             required: true,
-                            email : true,
                             nowhitespace : true,
+                            email : true,
                             maxlength: 50,
                         },
                     },
                     messages: {
                         email: {
                             required: "Vui lòng nhập email",
-                            email : "Vui lòng nhập đúng định dạng email",
                             nowhitespace : "Vui lòng không nhập khoảng trắng",
+                            email : "Vui lòng nhập đúng định dạng email",
                             maxlength: "Vui lòng không nhập quá 50 ký tự"
                         },
                     },
