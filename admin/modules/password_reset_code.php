@@ -3,11 +3,11 @@
     require_once('../../config/dbhelper.php');
     require_once('./function.php');
 
-    require_once($base_url. "admin/PHPMailer-master/src/PHPMailer.php");
-    require_once($base_url. "admin/PHPMailer-master/src/Exception.php");
-    require_once($base_url. "admin/PHPMailer-master/src/OAuth.php");
-    require_once($base_url. "admin/PHPMailer-master/src/POP3.php");
-    require_once($base_url. "admin/PHPMailer-master/src/SMTP.php");
+    require_once($base_url. "admin/PHPMailer/src/PHPMailer.php");
+    require_once($base_url. "admin/PHPMailer/src/Exception.php");
+    require_once($base_url. "admin/PHPMailer/src/OAuth.php");
+    require_once($base_url. "admin/PHPMailer/src/POP3.php");
+    require_once($base_url. "admin/PHPMailer/src/SMTP.php");
      
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
