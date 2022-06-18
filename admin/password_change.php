@@ -50,7 +50,7 @@
             </div>
             <div class="form-group">
                 <label class="form-label">Nhập lại mật khẩu</label>
-                <input type="password" class="form-control" name="confirm_password" />
+                <input type="password" class="form-control" id="confirm_password" name="confirm_password" />
             </div>
             <div class="form-group">
                 <p class="error" id="error"></p>
@@ -67,10 +67,10 @@
         <script>
             $(document).ready(function () {
                 //UP DOWN PANDA
-                $('#password').focusin(function () {
+                $('#confirm_password').focusin(function () {
                     $('form').addClass('up')
                 });
-                $('#password').focusout(function () {
+                $('#confirm_password').focusout(function () {
                     $('form').removeClass('up')
                 });
 
