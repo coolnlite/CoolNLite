@@ -51,7 +51,7 @@
             <div class="form-group">
                 <p class="error" id="error"></p>
                 <p class="success" id="success"></p>
-                <button type="submit" name="reset_password" class="btn">Xác Nhận</button>
+                <button type="submit" name="reset_password" style="margin-top: 0px" class="btn">Xác Nhận</button>
             </div>
             <a href="./" class="forget">Trở về trang đăng nhập</a>
         </form>
