@@ -39,7 +39,7 @@
                 <div class="finger"></div>
             </div>
         </div>
-        <form id="form-">
+        <form id="form_update_pw">
             <div class="hand"></div>
             <div class="hand rgt"></div>
             <div class="box-logo"><img src="../shared/img/logo.png" alt=""></div>
@@ -55,7 +55,7 @@
             <div class="form-group">
                 <p class="error" id="error"></p>
                 <p class="success" id="success"></p>
-                <button type="submit" name="_password" style="margin-top: 0px" class="btn">Cập Nhật</button>
+                <button type="submit" name="update_password" style="margin-top: 0px" class="btn">Cập Nhật</button>
             </div>
         </form>
 
@@ -92,7 +92,7 @@
                     && /\d/.test(value) // has a digit
                 });
 
-                $("#form-login").validate({
+                $("#form_update_pw").validate({
                     rules: {
                         password: {
                             required: true,

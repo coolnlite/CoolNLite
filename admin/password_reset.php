@@ -39,7 +39,7 @@
                 <div class="finger"></div>
             </div>
         </div>
-        <form id="form-login">
+        <form id="form-reset-pw">
             <div class="hand"></div>
             <div class="hand rgt"></div>
             <div class="box-logo"><img src="../shared/img/logo.png" alt=""></div>
@@ -83,7 +83,7 @@
                     });
                 });
                 //FORM LOGIN ADMIN
-                $("#form-login").validate({
+                $("#form-reset-pw").validate({
                     rules: {
                         email: {
                             required: true,
