@@ -39,7 +39,7 @@
                 <div class="finger"></div>
             </div>
         </div>
-        <form id="form-login">
+        <form id="form-">
             <div class="hand"></div>
             <div class="hand rgt"></div>
             <div class="box-logo"><img src="../shared/img/logo.png" alt=""></div>
@@ -86,11 +86,18 @@
                     });
                 });
                 //FORM LOGIN ADMIN
+                $.validator.addMethod("pwcheck", function(value) {
+                return /^[A-Za-z0-9\d=!\-@._*]*$/.test(value) // consists of only these
+                    && /[a-z]/.test(value) // has a lowercase letter
+                    && /\d/.test(value) // has a digit
+                });
+
                 $("#form-login").validate({
                     rules: {
                         password: {
                             required: true,
                             nowhitespace : true,
+                            pwcheck : true,
                             maxlength: 33,
                         },
                         confirm_password: {
@@ -104,6 +111,7 @@
                         password: {
                             required: "Vui lòng nhập mật khẩu",
                             nowhitespace : "Vui lòng không nhập khoảng trắng",
+                            pwcheck : "Mật khẩu phải có ít nhất một thường, ít nhất 1 chữ hoa",
                             maxlength: "Vui lòng không nhập quá 33 ký tự"
                         },
                         confirm_password: {
