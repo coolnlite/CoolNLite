@@ -10,7 +10,6 @@
     include("../PHPMailer/src/SMTP.php");
      
     use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
     function send_password_reset($get_full_name,$get_email,$token){
