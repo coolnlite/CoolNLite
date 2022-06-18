@@ -104,14 +104,13 @@
                         password: {
                             required: "Vui lòng nhập mật khẩu",
                             nowhitespace : "Vui lòng không nhập khoảng trắng",
-                            email : "Vui lòng nhập đúng định dạng email",
-                            maxlength: "Vui lòng không nhập quá 50 ký tự"
+                            maxlength: "Vui lòng không nhập quá 33 ký tự"
                         },
                         confirm_password: {
-                            required: "Vui lòng nhập email",
+                            required: "Vui lòng không để trống",
                             nowhitespace : "Vui lòng không nhập khoảng trắng",
                             equalTo : "Mật khẩu không khớp",
-                            maxlength: "Vui lòng không nhập quá 50 ký tự"
+                            maxlength: "Vui lòng không nhập quá 33 ký tự"
                         },
                     },
                     submitHandler: function (form) {
