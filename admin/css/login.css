@@ -362,9 +362,14 @@ form.up {
     color: var(--primary);
     transform: translateY(-15px);
 }
-.alert{
+.error, .success{
     font-size: 14px;
+}
+.error{
     color: red;
+}
+.success{
+    color: green;
 }
 a:visited{
     color: var(--primary);

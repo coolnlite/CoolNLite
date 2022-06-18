@@ -49,7 +49,8 @@
                 <input type="text" class="form-control" name="email" />
             </div>
             <div class="form-group">
-                <p class="alert" id="alert"></p>
+                <p class="error" id="error"></p>
+                <p class="success" id="success"></p>
                 <button type="submit" name="reset_password" class="btn">Xác Nhận</button>
             </div>
             <a href="./" class="forget">Trở về trang đăng nhập</a>
@@ -107,9 +108,9 @@
                             dataType : 'json',
                             success: function (response) {
                                 if(response.status == 1){
-                                    $('#alert').text(response.message);
+                                    $('#error').text(response.message);
                                 }else{
-                                   
+                                    $('#success').text(response.message);
                                 }
                             },
                         });
