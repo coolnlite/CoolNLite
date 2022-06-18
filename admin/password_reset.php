@@ -43,10 +43,10 @@
             <div class="hand"></div>
             <div class="hand rgt"></div>
             <div class="box-logo"><img src="../shared/img/logo.png" alt=""></div>
-            <h3 class="title-forget">Đặt lại mật khẩu của bạn nếu bạn quên mật khẩu</h3>
+            <h3 class="title-forget">Đặt lại mật khẩu của bạn</h3>
             <div class="form-group">
                 <label class="form-label">Email</label>
-                <input type="text" class="form-control" name="email" />
+                <input id="email" type="text" class="form-control" name="email" />
             </div>
             <div class="form-group">
                 <p class="error" id="error"></p>
@@ -64,10 +64,10 @@
         <script>
             $(document).ready(function () {
                 //UP DOWN PANDA
-                $('#password').focusin(function () {
+                $('#email').focusin(function () {
                     $('form').addClass('up')
                 });
-                $('#password').focusout(function () {
+                $('#email').focusout(function () {
                     $('form').removeClass('up')
                 });
 
