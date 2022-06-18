@@ -3,13 +3,14 @@
     require_once('../../config/dbhelper.php');
     require_once('./function.php');
 
-    require_once($base_url. "admin/PHPMailer/src/PHPMailer.php");
-    require_once($base_url. "admin/PHPMailer/src/Exception.php");
-    require_once($base_url. "admin/PHPMailer/src/OAuth.php");
-    require_once($base_url. "admin/PHPMailer/src/POP3.php");
-    require_once($base_url. "admin/PHPMailer/src/SMTP.php");
+    include("../PHPMailer/src/PHPMailer.php");
+    include("../PHPMailer/src/Exception.php");
+    include("../PHPMailer/src/OAuth.php");
+    include("../PHPMailer/src/POP3.php");
+    include("../PHPMailer/src/SMTP.php");
      
     use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
     function send_password_reset($get_full_name,$get_email,$token){
@@ -22,7 +23,7 @@
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = 'damlongcaca@gmail.com';                     //SMTP username
-            $mail->Password   = '';                               //SMTP password
+            $mail->Password   = '***';                               //SMTP password
             $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
             $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
