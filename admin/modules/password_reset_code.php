@@ -16,7 +16,7 @@
 
         try {
             //Server settings
-            $mail->SMTPDebug = 2;                      //Enable verbose debug output
+            $mail->SMTPDebug = 0;                      //Enable verbose debug output
             $mail->isSMTP();
             $mail->CharSet = 'utf-8';                                      //Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
@@ -41,13 +41,7 @@
             </a>
             ";
             $mail->Body    = $email_templete;
-            $mail->smtpConnect( array(
-                "ssl" => array(
-                    "verify_peer" => false,
-                    "verify_peer_name" => false,
-                    "allow_self_signed" => true
-                )
-            ));
+            
             $mail->send();
             echo 'Đã gửi mail thành công';
         } catch (Exception $e) {
