@@ -17,7 +17,7 @@ if(isset($_POST['btn-login'])){
 
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-
+        
         if($row != NULL){
             $id = $row['id'];
             $permision = $row['position'];
