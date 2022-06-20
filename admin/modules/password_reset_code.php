@@ -56,7 +56,7 @@
 
         try {
             //Server settings
-            $mail->SMTPDebug = 2;                      //Enable verbose debug output
+            $mail->SMTPDebug = 0;                      //Enable verbose debug output
             $mail->isSMTP();
             $mail->CharSet = 'utf-8';                                      //Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
@@ -90,9 +90,17 @@
             ));
             
             $mail->send();
-            echo 'Đã gửi mail thành công';
+            echo json_encode(array(
+                'status' => 1,
+                'message' => 'Đã gửi mail thành công. Vui lòng kiểm tra hộp thư'
+            ));
+            exit();
         } catch (Exception $e) {
-            echo "Mail không gửi được. Mail lỗi: {$mail->ErrorInfo}";
+            echo json_encode(array(
+                'status' => 0,
+                'message' => 'Đã gửi mail thất bại .Mail lỗi'
+            ));
+            exit();
         }
     }
 
