@@ -489,6 +489,7 @@ if(
 
         $user_name = mysqli_real_escape_string($conn, $_POST['user_name']);
         $email = mysqli_real_escape_string($conn, $_POST['email']);
+        
         $pass_word = mysqli_real_escape_string($conn, $_POST['pass_word']);
         $pass_word = md5($pass_word);
 
@@ -500,7 +501,7 @@ if(
 
         $sql = "INSERT INTO `users` (`user_name`, `email`, `pass_word`, `position`,`token`
         , `full_name`, `image`, `status`, `time`) 
-        VALUES ('$user_name',' $email','$pass_word','$position','$tk','$full_name','$image','$status','$time')";
+        VALUES ('$user_name','$email','$pass_word','$position','$tk','$full_name','$image','$status','$time')";
         $result = mysqli_query($conn,$sql);
 
         if($result){
