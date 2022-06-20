@@ -10,9 +10,10 @@
     include("../PHPMailer/src/SMTP.php");
      
     use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
     
-    function send_password_reset($get_full_name,$get_email,$token){
+    function send_password_reset($get_user_name,$get_email,$token){
         $mail = new PHPMailer(true);
 
         try {
@@ -23,12 +24,12 @@
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = 'damlongcaca@gmail.com';                     //SMTP username
             $mail->Password   = '';                               //SMTP password
-            $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
+            $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
             $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
             $mail->setFrom('damlongcaca@gmail.com', 'Dam Long');
-            $mail->addAddress($get_email, $get_full_name);     //Add a recipient
+            $mail->addAddress($get_email, $get_user_name);     //Add a recipient
             // $mail->addReplyTo('info@example.com', 'Information');
             // $mail->addCC('cc@example.com');
             // $mail->addBCC('bcc@example.com');
@@ -41,7 +42,7 @@
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Thông báo cập nhật lại mật khẩu';
             $email_templete = "
-            <p>Xin Chào <b>$get_full_name</b></p>
+            <p>Xin Chào <b>$get_user_name</b></p>
             <p>Xin vui lòng nhấp vào đường dẫn bên dưới để cập nhật lại mật khẩu cho tài khoản của bạn</p>
             <a href='http://localhost/CoolNLite/admin/password_change.php?token=$token&email=$get_email'>
             http://localhost/CoolNLite/admin/password_change.php?token=$token&email=$get_email
@@ -62,19 +63,19 @@
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $token = getToken(30);
 
-        $sql = "SELECT `email`,`full_name` FROM `users` WHERE `email` = '$email' LIMIT 1";
+        $sql = "SELECT `email`,`user_name` FROM `users` WHERE `email` = '$email' LIMIT 1";
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){
 
             $row = mysqli_fetch_array($result);
-            $get_full_name = $row['full_name'];
+            $get_user_name = $row['user_name'];
             $get_email = $row['email'];
 
             $update_token = "UPDATE `users` SET `email_token`='$token' WHERE `email`='$get_email' LIMIT 1 ";
             $result_token = mysqli_query($conn, $update_token);
             if($result_token){
-                send_password_reset($get_full_name,$get_email,$token);
+                send_password_reset($get_user_name,$get_email,$token);
                 echo json_encode(array(
                     'status' => 0,
                     'message' => 'Chúng tôi đã gửi mail đến '.$email
