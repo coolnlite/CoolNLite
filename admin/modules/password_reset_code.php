@@ -3,10 +3,6 @@
     require_once('../../config/dbhelper.php');
     require_once('./function.php');
 
-    include("../PHPMailer/src/PHPMailer.php");
-    include("../PHPMailer/src/Exception.php");
-    include("../PHPMailer/src/SMTP.php");
-
     if(isset($_POST['reset_password']) && !empty($_POST['email'])){
 
         $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -46,6 +42,10 @@
             exit();
         }
     }
+
+    require_once("../PHPMailer/src/PHPMailer.php");
+    require_once("../PHPMailer/src/Exception.php");
+    require_once("../PHPMailer/src/SMTP.php");
 
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
