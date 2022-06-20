@@ -112,8 +112,7 @@
 </head>
 
 <body>
-    <div class="container-admin">
-        <div class="main">
+
             <div id="notfound">
                 <div class="notfound">
                     <div class="notfound-404">
@@ -121,14 +120,13 @@
                     </div>
                     <h2>Oops! Trang Không Tìm Thấy Hay Token đã hết hạn</h2>
                     <p>
-                    Xin lỗi nhưng trang bạn đang tìm kiếm không tồn tại, đã bị xóa. tên đã thay đổi hoặc tạm thời không có
-                    sẵn
+                    Xin lỗi nhưng trang bạn đang tìm kiếm không tồn tại, đã bị xóa. Tên đã thay đổi hoặc tạm thời không có
+                    sẵn hay token đã hết hạn
                     </p>
                     <a href="./">Quay lại trang đăng nhập</a>
                 </div>
             </div>
-        </div>
-    </div>
+
 </body>
 
 </html>
