@@ -379,6 +379,68 @@
 
         });
 
+    // Đổi mật khẩu
+    $("#fchangePass").validate({
+                    rules: {
+                        pass_old: {
+                            required: true,
+                            maxlength : 20,
+                            nowhitespace : true,
+                        },
+                        pass_news: {
+                            required: true,
+                            maxlength : 20,
+                            nowhitespace : true,
+                            pwcheck : true,
+                        },
+                        confirm_pass_news: {
+                            required: true,
+                            maxlength : 20,
+                            equalTo: "#pass_news",
+                        },
+                    },
+                    messages: {
+
+                        pass_old: {
+                            required: "Vui lòng nhập mật khẩu cũ",
+                            maxlength : "Vui lòng nhập không quá 20 ký tự",
+                            nowhitespace : "Vui lòng không nhập khoảng trắng",
+                        },
+                        pass_news: {
+                            required: "Vui lòng nhập mật khẩu mới",
+                            maxlength : "Vui lòng nhập không quá 20 ký tự",
+                            nowhitespace : "Vui lòng không nhập khoảng trắng",
+                            pwcheck : "Mật khẩu phải có ít nhất một thường, ít nhất 1 chữ hoa"
+                        },
+                        
+                        confirm_pass_news: {
+                            required: "Vui lòng nhập lại mật khẩu mới",
+                            maxlength : "Vui lòng nhập không quá 20 ký tự",
+                            equalTo : "Mật khẩu không khớp"
+                        },
+
+                    },
+                    submitHandler: function (form) {
+                    $.ajax({
+                        type: "POST",
+                        url: "<?php print $DOMAIN.'modules/edit_data.php'?>",
+                        data: new FormData(form),
+                        dataType : 'json',
+                        contentType: false,
+                        cache: false,
+                        processData:false,
+                        success: function (response) {
+                            if(response.status == 1){
+                                alert(response.message);
+                                window.location.reload();
+                            }else{
+                                alert(response.message);
+                            }
+                        },
+                    });
+                    },
+                });
+
     </script>
 
 </body>

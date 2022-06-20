@@ -311,7 +311,7 @@
 
       <div class="form-group">
       <label for="pass_news">Mật khẩu mới :</label>
-      <input type="password" class="form-control" name="pass_news" 
+      <input type="password" class="form-control"id="pass_news" name="pass_news" 
       placeholder="Nhập mật khẩu mới">
       </div>
 
