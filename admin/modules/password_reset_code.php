@@ -43,10 +43,10 @@
         }
     }
 
-    require_once("../PHPMailer/src/PHPMailer.php");
-    require_once("../PHPMailer/src/Exception.php");
-    require_once("../PHPMailer/src/SMTP.php");
-
+    include("../PHPMailer/src/PHPMailer.php");
+    include("../PHPMailer/src/Exception.php");
+    include("../PHPMailer/src/SMTP.php");
+    
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
     
