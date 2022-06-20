@@ -101,8 +101,45 @@
 
 //Cập nhật lại mật khẩu
 if(isset($_POST['update_password'])){
-    if(!empty($_POST['password']) && !empty($_POST['confirm_password'])){
+    if(
+        !empty($_POST['password']) && !empty($_POST['confirm_password']) &&
+        !empty($_POST['email']) && !empty($_POST['email_token']) 
+    )
+    {
+        $password = mysqli_real_escape_string($conn, $_POST['password']);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $email_token = mysqli_real_escape_string($conn, $_POST['email_token']);
 
+        $password = md5($password);
+
+        $sql = "UPDATE `users` SET `pass_word` = '$password' 
+        WHERE `email` = '$email' AND `email_token` = '$email_token'";
+        $result = mysqli_query($conn,$sql);
+        if($result){
+            $token = getToken(30);
+            $sql_token = "UPDATE `users` SET `email_token` = '$token' WHERE `email` = '$email'";
+            $result_token = mysqli_query($conn,$sql_token);
+            if($result_token){
+                echo json_encode(array(
+                    'status' => 0,
+                    'message' => 'Cập nhật mật khẩu thành công'
+                ));
+                exit();
+            }else{
+                echo json_encode(array(
+                    'status' => 1,
+                    'message' => 'Cập nhật mật khẩu thất bại'
+                ));
+                exit();
+            }
+
+        }else{
+            echo json_encode(array(
+                'status' => 1,
+                'message' => 'Cập nhật mật khẩu thất bại'
+            ));
+            exit();
+        }
     }
 }
 

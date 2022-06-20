@@ -62,7 +62,8 @@
             <div class="hand rgt"></div>
             <div class="box-logo"><img src="../shared/img/logo.png" alt=""></div>
             <h3 class="title-forget">Thay đổi mật khẩu</h3>
-            <input type="hidden" value="<?php ?>">
+            <input type="hidden" name="email" value="<?php print $email?>">
+            <input type="hidden" name="email_token" value="<?php print $email_token?>">
             <div class="form-group">
                 <label class="form-label">Mật khẩu</label>
                 <input type="password" class="form-control" id="password" name="password" />
@@ -151,6 +152,9 @@
                                     $('#error').text(response.message);
                                 }else{
                                     $('#success').text(response.message);
+                                    setTimeout(function(){
+                                        window.location = 'http://localhost/CoolNLite/admin/';
+                                    },3000)
                                 }
                             },
                         });
