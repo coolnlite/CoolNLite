@@ -158,6 +158,7 @@ if(!empty($_POST['id_users']) && !empty($_POST['token_users'])){
         $sql = "SELECT * FROM `users` WHERE `pass_word` = '$pass_old' 
         AND `id` = '$id_users' AND `token` = '$token'";
         $result = mysqli_query($conn,$sql);
+        
         if(mysqli_num_rows($result) > 0){
 
             $sql_update = "UPDATE `users` SET `pass_word` = '$pass_news' 
