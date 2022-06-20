@@ -49,7 +49,6 @@
             ";
             $mail->Body    = $email_templete;
             // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
             $mail->send();
             echo 'Message has been sent';
         } catch (Exception $e) {
