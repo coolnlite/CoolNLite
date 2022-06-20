@@ -423,14 +423,11 @@
                     submitHandler: function (form) {
                     $.ajax({
                         type: "POST",
-                        url: "<?php print $DOMAIN.'modules/edit_data.php'?>",
-                        data: new FormData(form),
+                        url: "<?php print $DOMAIN.'modules/password_reset_code.php'?>",
+                        data: $(form).serializeArray(),
                         dataType : 'json',
-                        contentType: false,
-                        cache: false,
-                        processData:false,
                         success: function (response) {
-                            if(response.status == 1){
+                            if(response.status == 0){
                                 alert(response.message);
                                 window.location.reload();
                             }else{
