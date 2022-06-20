@@ -62,8 +62,8 @@
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = 'damlongcaca@gmail.com';                     //SMTP username
             $mail->Password   = 'wopycvfyccegmlcs';                               //SMTP password
-            $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
-            $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
+            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
             $mail->setFrom('damlongcaca@gmail.com', 'Dam Long');
@@ -80,6 +80,13 @@
             </a>
             ";
             $mail->Body    = $email_templete;
+            $mail->smtpConnect( array(
+                "ssl" => array(
+                    "verify_peer" => false,
+                    "verify_peer_name" => false,
+                    "allow_self_signed" => true
+                )
+            ));
             
             $mail->send();
             echo 'Đã gửi mail thành công';
@@ -87,5 +94,5 @@
             echo "Mail không gửi được. Mail lỗi: {$mail->ErrorInfo}";
         }
     }
-    
+
 ?>
