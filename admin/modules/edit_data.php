@@ -518,7 +518,7 @@ if(move_uploaded_file($_FILES['image']['tmp_name'],$uploadPath . '/' .$path)){
 }
 
 }
-
+//Chỉnh sửa thông tin người dùng
 if
 (!empty($_POST['id_users']) && !empty($_POST['full_name_edit']))
 {
