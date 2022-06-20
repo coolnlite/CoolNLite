@@ -106,6 +106,9 @@
                             url: "modules/password_reset_code.php",
                             data: $(form).serializeArray(),
                             dataType : 'json',
+                            beforeSend: function() {
+                                $('#success').text('Đang gửi');
+                            },
                             success: function (response) {
                                 if(response.status == 1){
                                     $('#error').text(response.message);
