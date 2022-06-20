@@ -1,6 +1,26 @@
 <?php
-    ob_start(); 
-    session_start();
+  ob_start();
+  session_start();
+  require_once('./modules/permision.php');
+  require_once('../config/config.php');
+  require_once('../config/dbhelper.php'); 
+
+  if(isset($_GET['email']) && !empty($_GET['email']) && isset($_GET['email']) && !empty($_GET['email'])){
+    $email = $_GET['$email'] = !"" ? mysqli_real_escape_string($conn, $_GET['$email']) : '';
+  }else{
+    require_once('./error_404.php');
+    exit();
+  }
+
+  $sql = "SELECT `id` FROM `news` WHERE `id` = '$id'";
+  $result = mysqli_query($conn, $sql);
+  $rowcount = mysqli_num_rows($result);
+  if (isset($rowcount) && $rowcount != 0) { // Kiểm tra có id này không
+    
+  }else{
+    require_once('./error_404.php');
+    exit();
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,6 +64,7 @@
             <div class="hand rgt"></div>
             <div class="box-logo"><img src="../shared/img/logo.png" alt=""></div>
             <h3 class="title-forget">Thay đổi mật khẩu</h3>
+            <input type="hidden" value="<?php ?>">
             <div class="form-group">
                 <label class="form-label">Mật khẩu</label>
                 <input type="password" class="form-control" id="password" name="password" />
