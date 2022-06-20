@@ -87,7 +87,7 @@
             $mail->send();
             echo json_encode(array(
                 'status' => 0,
-                'message' => 'Đã gửi mail thành công. Vui lòng kiểm tra hộp thư'
+                'message' => 'Đã gửi mail thành công. Vui lòng kiểm tra hộp thư !'
             ));
             exit();
         } catch (Exception $e) {
