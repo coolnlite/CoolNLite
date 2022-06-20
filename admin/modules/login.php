@@ -36,7 +36,7 @@ if(isset($_POST['btn-login'])){
             $_SESSION['token'] = $token;
 
             echo json_encode(array(
-                'status' => 1,
+                'status' => 0,
                 'message' => 'http://localhost/CoolNLite/admin/dashboard.php'
             ));
             exit();
@@ -45,7 +45,7 @@ if(isset($_POST['btn-login'])){
 
         }else{
             echo json_encode(array(
-                'status' => 0,
+                'status' => 1,
                 'message' => 'Mật khẩu hoặc tài khoản không đúng hoặc bị vô hiệu hóa'
             ));
             exit();
