@@ -99,4 +99,9 @@
         }
     }
 
+//Cập nhật lại mật khẩu
+if(isset($_POST['update_password'])){
+
+}
+
 ?>
