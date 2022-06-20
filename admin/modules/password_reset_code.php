@@ -70,7 +70,6 @@
             //Recipients
             $mail->setFrom('damlongcaca@gmail.com', 'COOL N LITE');
             $mail->addAddress($get_email, $get_full_name);     //Add a recipient
-            $mail->addAddress('damlongcaca@gmail.com');     //Add a recipient
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
