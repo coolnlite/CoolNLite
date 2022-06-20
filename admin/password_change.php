@@ -27,7 +27,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ĐĂNG NHẬP VÀO COOL N LITE</title>
+    <title>Tạo mật khẩu mới - COOL N LITE </title>
     <link rel="icon" sizes="32x32" href="../shared/img/icon.png">
     
     <link rel="stylesheet" href="./css/login.css">
