@@ -101,7 +101,9 @@
 
 //Cập nhật lại mật khẩu
 if(isset($_POST['update_password'])){
+    if(!empty($_POST['password']) && !empty($_POST['confirm_password'])){
 
+    }
 }
 
 ?>
