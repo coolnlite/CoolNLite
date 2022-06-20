@@ -107,7 +107,7 @@
                             data: $(form).serializeArray(),
                             dataType : 'json',
                             beforeSend: function() {
-                                $('#success').text('Đang gửi');
+                                $('#success').text('Đang gửi...');
                             },
                             success: function (response) {
                                 if(response.status == 1){

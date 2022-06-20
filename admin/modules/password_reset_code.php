@@ -63,8 +63,8 @@
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = 'damlongcaca@gmail.com';                     //SMTP username
             $mail->Password   = 'wopycvfyccegmlcs';                               //SMTP password
-            $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
-            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
+            $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
             $mail->setFrom('damlongcaca@gmail.com', 'COOL N LITE');
