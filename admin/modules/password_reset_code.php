@@ -68,7 +68,7 @@
 
             //Recipients
             $mail->setFrom('damlongcaca@gmail.com', 'Dam Long');
-            $mail->addAddress($get_email);     //Add a recipient
+            $mail->addAddress($get_email, $get_full_name);     //Add a recipient
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
