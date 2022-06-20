@@ -18,6 +18,10 @@
                 </div>
             </div>
             <div class="col-xl-9 border-right">
+            <div class="form-row mb-3 d-flex justify-content-center">
+              <button type="button" class="btn btn-primary" 
+              data-toggle="modal" data-target="#changePass">Đổi mật khẩu</button>
+            </div>
             <h5>Thông Tin Tài Khoản</h5>
             <form>
                 <div class="form-row">
@@ -279,6 +283,39 @@
       
       </form>
       </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="changePass" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Đổi mật khẩu</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form id="fchangePass">
+
+      <input type="hidden" value="<?php print $id?>" name="id_users" >
+      <input type="hidden" value="<?php print $tk?>" name="token_users" >
+
+      <div class="form-group">
+      <label for="pass_old">Mật khẩu cũ :</label>
+      <input type="password" class="form-control" name="user_name" 
+      placeholder="Nhập tên tài khoản" value="<?php print $us['user_name']?>" maxlength="30" required>
+
+      </div>
+
+
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary text-left">Xác nhận</button>
+        </div>
+
+        </form>
       </div>
     </div>
   </div>
