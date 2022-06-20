@@ -122,7 +122,7 @@ if(isset($_POST['update_password'])){
             if($result_token){
                 echo json_encode(array(
                     'status' => 0,
-                    'message' => 'Cập nhật mật khẩu thành công. Đang chuyển trang vui lòng chờ ...'
+                    'message' => 'Cập nhật mật khẩu thành công. Đang chuyển trang ...'
                 ));
                 exit();
             }else{
