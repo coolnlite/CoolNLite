@@ -1,24 +1,22 @@
 <?php
-  ob_start();
-  session_start();
-  require_once('./modules/permision.php');
   require_once('../config/config.php');
   require_once('../config/dbhelper.php'); 
 
-  if(isset($_GET['email']) && !empty($_GET['email']) && isset($_GET['email']) && !empty($_GET['email'])){
-    $email = $_GET['$email'] = !"" ? mysqli_real_escape_string($conn, $_GET['$email']) : '';
+  if(isset($_GET['email']) && !empty($_GET['email']) && isset($_GET['token']) && !empty($_GET['token'])){
+    $email = $_GET['email'] = !"" ? mysqli_real_escape_string($conn, $_GET['email']) : '';
+    $email_token = $_GET['token'] = !"" ? mysqli_real_escape_string($conn, $_GET['token']) : '';
   }else{
-    require_once('./error_404.php');
+    require_once('./token.php');
     exit();
   }
 
-  $sql = "SELECT `id` FROM `news` WHERE `id` = '$id'";
+  $sql = "SELECT * FROM `users` WHERE `email` = '$email' AND `email_token` = '$email_token' ";
   $result = mysqli_query($conn, $sql);
   $rowcount = mysqli_num_rows($result);
   if (isset($rowcount) && $rowcount != 0) { // Kiểm tra có id này không
     
   }else{
-    require_once('./error_404.php');
+    require_once('./token.php');
     exit();
   }
 ?>
