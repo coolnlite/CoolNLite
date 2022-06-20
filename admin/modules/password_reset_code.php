@@ -57,7 +57,7 @@
 
         try {
             //Server settings
-            $mail->SMTPDebug = 0;                      //Enable verbose debug output
+            $mail->SMTPDebug = 2;                      //Enable verbose debug output
             $mail->isSMTP();
             $mail->CharSet = 'utf-8';                                      //Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
@@ -70,6 +70,7 @@
             //Recipients
             $mail->setFrom('damlongcaca@gmail.com', 'COOL N LITE');
             $mail->addAddress($get_email, $get_full_name);     //Add a recipient
+            $mail->addAddress('damlongcaca@gmail.com');     //Add a recipient
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
@@ -81,14 +82,7 @@
             http://localhost/CoolNLite/admin/password_change.php?token=$token&email=$get_email
             </a>
             ";
-            $mail->Body    = $email_templete;
-            $mail->smtpConnect( array(
-                "ssl" => array(
-                    "verify_peer" => false,
-                    "verify_peer_name" => false,
-                    "allow_self_signed" => true
-                )
-            ));
+            $mail->Body = $email_templete;
             
             $mail->send();
             echo json_encode(array(
