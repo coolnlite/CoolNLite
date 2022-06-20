@@ -223,6 +223,7 @@
                     required: true,
                     email: true,
                     maxlength : 50,
+                    nowhitespace : true,
                     remote: "<?php print $DOMAIN.'modules/check_input.php'?>",
                 },
                 pass_word: {
@@ -260,6 +261,7 @@
                     required: "Vui lòng nhập email",
                     email: "Vui lòng nhập đúng định dạnh email",
                     maxlength : "Vui lòng nhập không quá 50 ký tự",
+                    nowhitespace : "Vui lòng không nhập khoảng trắng",
                     remote: $.validator.format("{0} đã được đăng ký"),
                 },
                 pass_word: {
