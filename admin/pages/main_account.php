@@ -305,14 +305,24 @@
 
       <div class="form-group">
       <label for="pass_old">Mật khẩu cũ :</label>
-      <input type="password" class="form-control" name="user_name" 
-      placeholder="Nhập tên tài khoản" value="<?php print $us['user_name']?>" maxlength="30" required>
-
+      <input type="password" class="form-control" name="pass_old" 
+      placeholder="Nhập mật khẩu cũ">
       </div>
 
+      <div class="form-group">
+      <label for="pass_news">Mật khẩu mới :</label>
+      <input type="password" class="form-control" name="pass_news" 
+      placeholder="Nhập mật khẩu mới">
+      </div>
+
+      <div class="form-group">
+      <label for="confirm_pass_news">Nhập lại mật khẩu mới :</label>
+      <input type="password" class="form-control" name="confirm_pass_news" 
+      placeholder="Nhập lại mật khẩu mới">
+      </div>
 
         <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary text-left">Xác nhận</button>
+            <button type="submit" class="btn btn-primary text-left">Cập nhật</button>
         </div>
 
         </form>
