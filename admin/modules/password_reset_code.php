@@ -5,11 +5,10 @@
 
     include("../PHPMailer/src/PHPMailer.php");
     include("../PHPMailer/src/Exception.php");
-    include("../PHPMailer/src/OAuth.php");
-    include("../PHPMailer/src/POP3.php");
     include("../PHPMailer/src/SMTP.php");
      
     use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
     
     function send_password_reset($get_full_name,$get_email,$token){
@@ -18,24 +17,18 @@
         try {
             //Server settings
             $mail->SMTPDebug = 2;                      //Enable verbose debug output
-            $mail->isSMTP();                                            //Send using SMTP
+            $mail->isSMTP();
+            $mail->CharSet = 'utf-8';                                      //Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = 'damlongcaca@gmail.com';                     //SMTP username
-            $mail->Password   = '';                               //SMTP password
-            $mail->SMTPSecure = 'tsl';            //Enable implicit TLS encryption
-            $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            $mail->Password   = 'wopycvfyccegmlcs';                               //SMTP password
+            $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
+            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
             $mail->setFrom('damlongcaca@gmail.com', 'Dam Long');
             $mail->addAddress($get_email, $get_full_name);     //Add a recipient
-            // $mail->addReplyTo('info@example.com', 'Information');
-            // $mail->addCC('cc@example.com');
-            // $mail->addBCC('bcc@example.com');
-
-            //Attachments
-            // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-            // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
@@ -48,11 +41,17 @@
             </a>
             ";
             $mail->Body    = $email_templete;
-            // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+            $mail->smtpConnect( array(
+                "ssl" => array(
+                    "verify_peer" => false,
+                    "verify_peer_name" => false,
+                    "allow_self_signed" => true
+                )
+            ));
             $mail->send();
-            echo 'Message has been sent';
+            echo 'Đã gửi mail thành công';
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            echo "Mail không gửi được. Mail lỗi: {$mail->ErrorInfo}";
         }
     }
 
