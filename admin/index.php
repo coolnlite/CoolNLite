@@ -52,7 +52,7 @@
                 <label class="form-label">Mật khẩu</label>
                 <input id="password" type="password" name="password" class="form-control" />
                
-                <p class="alert" id="alert"></p>
+                <p class="error" id="error"></p>
                 <button type="submit" name="btn-login" class="btn">Đăng nhập</button>
             </div>
             <a href="password_reset.php" class="forget">Quên mật khẩu</a>
@@ -118,7 +118,7 @@
                             dataType : 'json',
                             success: function (response) {
                                 if(response.status == 0){
-                                    $('#alert').text(response.message);
+                                    $('#error').text(response.message);
                                 }else{
                                     window.location = response.message;
                                 }
