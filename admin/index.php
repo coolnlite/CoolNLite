@@ -118,9 +118,9 @@
                             dataType : 'json',
                             success: function (response) {
                                 if(response.status == 0){
-                                    $('#error').text(response.message);
-                                }else{
                                     window.location = response.message;
+                                }else{
+                                    $('#error').text(response.message);
                                 }
                             },
                         });
