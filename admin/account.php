@@ -429,7 +429,7 @@
                         success: function (response) {
                             if(response.status == 0){
                                 alert(response.message);
-                                window.location.reload();
+                                window.location = '<?php print $DOMAIN.'modules/logout.php'?>';
                             }else{
                                 alert(response.message);
                             }
