@@ -1438,6 +1438,9 @@ section .main-about .btn-lh:hover {
   z-index: 101;
   cursor: pointer;
 }
+.popup-image span:hover{
+  color: var(--color-blue);
+}
 /*--- popup-image ---*/
 
 @media only screen and (min-width: 992px) {
