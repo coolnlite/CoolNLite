@@ -1417,6 +1417,7 @@ section .main-about .btn-lh:hover {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 99;
+  display: none;
 }
 .popup-image img{
   position: absolute;
