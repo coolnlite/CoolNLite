@@ -1423,7 +1423,7 @@ section .main-about .btn-lh:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 750px;
+  max-width: 900px;
   transform: translate(-50%, -50%);
   z-index: 100;
   height: auto;
