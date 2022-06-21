@@ -142,7 +142,7 @@
 
     <div class="popup-image" id="popup-image">
         <span class="fas fa-times"></span>
-        <img src="http://localhost/CoolNLite/uploads/agency/2eb7f744f1268ceba3edfda8d77587b1.jpg" alt="ảnh đại lý">
+        <img src="" alt="ảnh đại lý">
     </div>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -152,23 +152,33 @@
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <script>
       function scrollReveal() {
-	var revealPoint = 150;
-	var revealElement = document.querySelectorAll(".item-agency");
-	for (var i = 0; i < revealElement.length; i++) {
-		var windowHeight = window.innerHeight;
-		var revealTop = revealElement[i].getBoundingClientRect().top;
-		if (revealTop < windowHeight - revealPoint) {
-			revealElement[i].classList.add("active");
-		} else {
-			revealElement[i].classList.remove("active");
-		}
-	}
-}
+        var revealPoint = 150;
+        var revealElement = document.querySelectorAll(".item-agency");
+        for (var i = 0; i < revealElement.length; i++) {
+            var windowHeight = window.innerHeight;
+            var revealTop = revealElement[i].getBoundingClientRect().top;
+            if (revealTop < windowHeight - revealPoint) {
+                revealElement[i].classList.add("active");
+            } else {
+                revealElement[i].classList.remove("active");
+            }
+        }
+    }
 
-window.addEventListener("scroll", scrollReveal);
-scrollReveal();
+    window.addEventListener("scroll", scrollReveal);
+    scrollReveal();
   </script>
   <!-- css on sroll pages -->
+  <script>
+    var image = $('.container-agency .col-img .box-img img');
+    for (let i = 0; i < image.length; i++) {
+        image[i].click(function(){
+            let src = image[i].attr('src');
+            $('#popup-image').show().fadeOut();
+            $('#popup-image img').attr('src', src);
+        })
+    }
+  </script>
 </body>
 
 </html>
