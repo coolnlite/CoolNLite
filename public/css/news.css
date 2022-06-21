@@ -1426,6 +1426,8 @@ section .main-about .btn-lh:hover {
   transform: translate(-50%, -50%);
   z-index: 100;
   height: auto;
+  border-radius: 5px;
+  border: 1px solid var(--text-color);
 }
 .popup-image span{
   color: var(--text-color);
@@ -1434,6 +1436,7 @@ section .main-about .btn-lh:hover {
   top: 1em;
   right: 2em;
   z-index: 101;
+  cursor: pointer;
 }
 /*--- popup-image ---*/
 
@@ -1494,5 +1497,12 @@ section .main-about .btn-lh:hover {
   }
   .ab-container{
     width: calc(100% - 2em);
+  }
+  .popup-image img{
+    max-width: 95%;
+  }
+  .popup-image span{
+    top : 1em;
+    right: 1em;
   }
 }
