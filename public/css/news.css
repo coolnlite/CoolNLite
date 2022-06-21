@@ -1407,6 +1407,34 @@ section .main-about .btn-lh:hover {
   font-weight: 700;
   text-transform: uppercase;
 }
+/*--- popup-image ---*/
+
+.popup-image{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+}
+.popup-image img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 750px;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  height: auto;
+}
+.popup-image span{
+  color: var(--text-color);
+  font-size: 2em;
+  position: absolute;
+  top: 1em;
+  right: 2em;
+}
+/*--- popup-image ---*/
 
 @media only screen and (min-width: 992px) {
   #agency {

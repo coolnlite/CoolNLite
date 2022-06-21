@@ -134,10 +134,16 @@
             ?>
         </section>
     </div>
+
     <?php 
         require_once('./pages/footer.php');
         require_once('./pages/popup_form.php');
     ?>
+
+    <div class="popup-image" id="popup-image">
+        <span class="fas fa-times"></span>
+        <img src="/shared/img/daily/agency.jpg" alt="ảnh đại lý">
+    </div>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="<?php print $base_url?>public/js/script.js"></script>
