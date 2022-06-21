@@ -102,7 +102,7 @@
 
                     <div class="col-img">
                         <div class="box-img">
-                            <img src="<?php print $base_url?><?php print $ag['img'] ?>" alt="đại lý">
+                            <img src="<?php print $base_url?><?php print $ag['img'] ?>" alt="ảnh đại lý">
                         </div>
                     </div>
                     <div class="col-content">
