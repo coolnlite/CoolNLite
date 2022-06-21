@@ -238,7 +238,7 @@ if (isset($_POST['text_mb'])) {
 if (isset($_POST['text_agency'])) {
     $text = mysqli_real_escape_string($conn, $_POST['text_agency']);
 
-    $sql = "SELECT * FROM `agency` WHERE `name` LIKE '%$text%' OR `phone` LIKE '%$text%'";
+    $sql = "SELECT * FROM `agency` WHERE `address` LIKE '%$text%'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
@@ -268,7 +268,7 @@ if (isset($_POST['text_agency'])) {
               ';
         }
     } else {
-        echo '<p class="not-data">Không tìm thấy kết quả</p>';
+        echo '<p class="not-data">Không tìm thấy đại lý gần đây</p>';
     }
 }
 
