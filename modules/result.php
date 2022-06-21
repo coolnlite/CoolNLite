@@ -247,7 +247,7 @@ if (isset($_POST['text_agency'])) {
             <div class="card_agency">
             <a href="#agency_'.$row['id'].'">
                 <div class="card-img">
-                    <img src="'.$base_url.'shared/img/daily/agency.jpg" alt="ảnh đại lý">
+                    <img src="'.$base_url.$row['img'].'" alt="ảnh đại lý">
                 </div>
                 <div class="card-title">
                     <h6>
@@ -260,12 +260,6 @@ if (isset($_POST['text_agency'])) {
                         Địa chỉ :
                         <span>
                         '.$row['address'].'
-                        </span>
-                    </p>
-                    <p>
-                        Số điện thoại :
-                        <span>
-                            '.$row['phone'].'
                         </span>
                     </p>
                 </div>

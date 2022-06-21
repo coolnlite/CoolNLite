@@ -1237,7 +1237,7 @@ section .main-about .btn-lh:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 340px;
+  max-width: 350px;
   height: 40px;
   position: relative;
   background-color: var(--text-color);
@@ -1249,7 +1249,7 @@ section .main-about .btn-lh:hover {
 }
 #search-agency input::-webkit-search-cancel-button{
   position:relative;
-  right: 30px;
+  right: 40px;
   cursor: pointer;
 }
 #search-agency input{
@@ -1298,25 +1298,25 @@ section .main-about .btn-lh:hover {
   display: flex;
   color: var(--text-color-b);
   font-size: 14px;
-  height: 90px;
+  height: 100px;
   cursor: pointer;
 }
 #result_agency .card_agency:last-child a{
-  height: 80px;
+  height: 90px;
 }
 #result_agency .card_agency a:hover .card-title h6{
   color: var(--color-blue);
 }
 #result_agency .card_agency .card-img{
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
 }
 #result_agency .card_agency .card-img img{
   width: 100%;
   height: 100%;
 }
 #result_agency .card_agency .card-title {
-  width: calc(100% - 70px);
+  width: calc(100% - 90px);
   padding-left: 1em;
   text-align: justify;
 }
@@ -1326,7 +1326,7 @@ section .main-about .btn-lh:hover {
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 14px;
-  margin: 0 0 .75em;
+  margin: 0 0 .55em;
 }
 #result_agency .not-data {
   font-size: 1.4em;
