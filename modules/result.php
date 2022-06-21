@@ -257,6 +257,12 @@ if (isset($_POST['text_agency'])) {
                         </span>
                     </h6>
                     <p>
+                        Địa chỉ :
+                        <span>
+                        '.$row['address'].'
+                        </span>
+                    </p>
+                    <p>
                         Số điện thoại :
                         <span>
                             '.$row['phone'].'

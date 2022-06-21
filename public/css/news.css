@@ -1237,7 +1237,7 @@ section .main-about .btn-lh:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 300px;
+  max-width: 330px;
   height: 40px;
   position: relative;
   background-color: var(--text-color);
