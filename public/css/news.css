@@ -1382,6 +1382,7 @@ section .main-about .btn-lh:hover {
 
 .container-agency .col-img .box-img img {
   width: 100%;
+  cursor: pointer;
 }
 
 .container-agency .col-content {
