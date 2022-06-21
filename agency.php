@@ -171,12 +171,20 @@
   <!-- css on sroll pages -->
   <script>
     var image = $('.container-agency .col-img .box-img img');
+    var close = $('#popup-image span');
+
     $(image).on('click',function(){
             let src = $(this).attr('src');
-            $('#popup-image').show();
+            $('#popup-image').fadeOut(2000).show();
             $('#popup-image img').attr('src', src);
             $('body').addClass('overflow');
     })
+
+    $(close).click(function(){
+        $('#popup-image').fadeIn(2000).hide();
+        $('body').removeClass('overflow');
+    })
+
     
   </script>
 </body>
