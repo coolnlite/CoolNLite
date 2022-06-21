@@ -142,7 +142,7 @@
 
     <div class="popup-image" id="popup-image">
         <span class="fas fa-times"></span>
-        <img src="/shared/img/daily/agency.jpg" alt="ảnh đại lý">
+        <img src="http://localhost/CoolNLite/uploads/agency/2eb7f744f1268ceba3edfda8d77587b1.jpg" alt="ảnh đại lý">
     </div>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>

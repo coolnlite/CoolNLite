@@ -1429,10 +1429,11 @@ section .main-about .btn-lh:hover {
 }
 .popup-image span{
   color: var(--text-color);
-  font-size: 2em;
+  font-size: 3em;
   position: absolute;
   top: 1em;
   right: 2em;
+  z-index: 101;
 }
 /*--- popup-image ---*/
 
