@@ -142,7 +142,7 @@
 
     <div class="popup-image" id="popup-image">
         <span class="fas fa-times"></span>
-        <img src="" alt="ảnh đại lý">
+        <img src="http://localhost/CoolNLite/uploads/agency/2eb7f744f1268ceba3edfda8d77587b1.jpg" alt="ảnh đại lý">
     </div>
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -171,13 +171,13 @@
   <!-- css on sroll pages -->
   <script>
     var image = $('.container-agency .col-img .box-img img');
-    for (let i = 0; i < image.length; i++) {
-        image[i].click(function(){
-            let src = image[i].attr('src');
-            $('#popup-image').show().fadeOut();
+    $(image).on('click',function(){
+            let src = $(this).attr('src');
+            $('#popup-image').show();
             $('#popup-image img').attr('src', src);
-        })
-    }
+            $('body').addClass('overflow');
+    })
+    
   </script>
 </body>
 
