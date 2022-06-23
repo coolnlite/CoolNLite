@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2022 at 10:27 AM
+-- Generation Time: Jun 23, 2022 at 12:31 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -110,7 +110,32 @@ CREATE TABLE `footer` (
 --
 
 INSERT INTO `footer` (`id`, `copyright`, `address`, `phone`, `mail`, `title`, `subtitle`, `time`) VALUES
-(1, 'Copyright © 2022 by COOL N LITE', 'Tầng 12, Petroland, 12 Tân Trào, Q.7, TP HCM', '0835 808 85', 'coolnlite@gmail.com', 'COOL N LITE - The Titanium Film', 'Phim cách nhiệt COOL N LITE được sản xuất tại các cơ sở sản xuất phim công nghệ cao hàng đầu Hoa Kỳ. Đồng thời được nghiên cứu và phát triển bởi các kỹ sư tài năng nổi tiếng của Nhật để tạo ra phim cách nhiệt siêu cấp, công nghệ Titanium đầu tiên trên thế giới.', '2022-06-08 11:38:57');
+(1, 'Copyright © 2022 by COOL N LITE', 'Tầng 12, Petroland, 12 Tân Trào, Q.7, TP HCM', '0835 808 85', 'coolnlite@coolnlite.vn', 'COOL N LITE - The Titanium Film', 'Phim cách nhiệt COOL N LITE được sản xuất tại các cơ sở sản xuất phim công nghệ cao hàng đầu Hoa Kỳ. Đồng thời được nghiên cứu và phát triển bởi các kỹ sư tài năng nổi tiếng của Nhật để tạo ra phim cách nhiệt siêu cấp, công nghệ Titanium đầu tiên trên thế giới.', '2022-06-08 11:38:57');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id_gallery` int(11) NOT NULL,
+  `name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `time` varchar(30) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery_img`
+--
+
+CREATE TABLE `gallery_img` (
+  `id` int(11) NOT NULL,
+  `id_gallery` int(11) NOT NULL,
+  `image` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `time` varchar(30) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -148,7 +173,8 @@ INSERT INTO `menu` (`id`, `name`, `url`, `url_real`, `position`, `time`) VALUES
 (2, 'Titan X Series', 'titan-x-series.html', 'titanx.php', 1, '2022-06-09 11:57:02'),
 (3, 'Tin Tức', 'tin-tuc.html', 'news.php', 2, '2022-06-09 09:56:02'),
 (4, 'Chúng Tôi', 'chung-toi.html', 'about.php', 3, '2022-06-09 09:56:15'),
-(5, 'Đại Lý', 'dai-ly.html', 'agency.php', 4, '2022-06-09 09:56:28');
+(5, 'Đại Lý', 'dai-ly.html', 'agency.php', 5, '2022-06-23 15:46:33'),
+(7, 'Thư Viện', 'thu-vien.html', 'gallery.php', 4, '2022-06-23 15:48:26');
 
 -- --------------------------------------------------------
 
@@ -261,10 +287,11 @@ INSERT INTO `sidebar` (`id`, `url`, `icon`, `name`, `position`, `time`) VALUES
 (2, 'news.php', '<i class=\"fas fa-books\"></i>', 'Bài viết', 1, '2022-05-21 21:29:49'),
 (5, 'customers.php', '<i class=\"fas fa-users\"></i>', 'Khách hàng', 2, '2022-05-21 21:33:49'),
 (6, 'account.php', ' <i class=\"fas fa-user-cog\"></i>', 'Tài khoản', 3, '2022-05-21 21:33:49'),
-(9, 'setting.php', '<i class=\"fas fa-cog\"></i>', 'Cài đặt', 6, '2022-05-21 21:37:09'),
-(10, 'modules/logout.php', '<i class=\"fas fa-sign-out-alt\"></i>', 'Đăng xuất', 7, '2022-05-21 21:37:09'),
-(11, 'seo.php', '<i class=\"fas fa-search-dollar\"></i>', 'SEO', 5, '2022-05-21 21:33:49'),
-(12, 'agency.php', '<i class=\"fas fa-house-return\"></i>', 'Đại lý', 4, '2022-05-21 21:33:49');
+(9, 'setting.php', '<i class=\"fas fa-cog\"></i>', 'Cài đặt', 7, '2022-06-23 15:44:56'),
+(10, 'modules/logout.php', '<i class=\"fas fa-sign-out-alt\"></i>', 'Đăng xuất', 8, '2022-06-23 15:45:10'),
+(11, 'seo.php', '<i class=\"fas fa-search-dollar\"></i>', 'SEO', 6, '2022-06-23 15:44:41'),
+(12, 'agency.php', '<i class=\"fas fa-house-return\"></i>', 'Đại lý', 5, '2022-06-23 15:44:30'),
+(13, 'gallery.php', '<i class=\"fas fa-images\"></i>', 'Thư viện', 4, '2022-06-23 15:43:44');
 
 -- --------------------------------------------------------
 
@@ -276,9 +303,10 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `user_name` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `pass_word` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pass_word` varchar(33) COLLATE utf8mb4_unicode_ci NOT NULL,
   `position` int(1) NOT NULL,
   `token` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_token` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `full_name` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` int(1) NOT NULL,
@@ -289,8 +317,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `user_name`, `email`, `pass_word`, `position`, `token`, `full_name`, `image`, `status`, `time`) VALUES
-(1, 'thaisaone', 'vodongthai68@gmail.com', 'f2db2c94d7f2554ccda9edd32ae2bef5', 2, 'u8lWKiG6yRXrlye9hebCPTtrX1BSAI', 'Võ Đông Thái', '/uploads/users/1d7f3558b481ac55f57c60f3c03321ef.jpg', 1, '2022-05-19 10:13:12');
+INSERT INTO `users` (`id`, `user_name`, `email`, `pass_word`, `position`, `token`, `email_token`, `full_name`, `image`, `status`, `time`) VALUES
+(1, 'thaisaone', 'vodongthai68@gmail.com', 'f2db2c94d7f2554ccda9edd32ae2bef5', 2, '5YTI3VHmYA8fzGvpziCmIijqHnPq3R', '6rTTL0crUtLsPMAHzDEqsmfD3z0IvQ', 'Võ Đông Thái', '/uploads/users/1d7f3558b481ac55f57c60f3c03321ef.jpg', 1, '2022-05-19 10:13:12'),
+(30, 'khacnguyen', 'doankhacnguyen57608@gmail.com', '075e81203213785a5975e4cb57b83285', 1, 'bwGXwiaPObq9po5Y98Y9ZtQvpVLtmP', 'bqDWvGuPB60mODQhLc9JW9t19mxXTf', 'Nguyễn Gà', 'uploads/users/71472a1078e285e836d0f97eaee84872.jpg', 1, '2022-06-20 11:32:12');
 
 --
 -- Indexes for dumped tables
@@ -313,6 +342,20 @@ ALTER TABLE `contact`
 --
 ALTER TABLE `footer`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`id_gallery`),
+  ADD UNIQUE KEY `name` (`name`);
+
+--
+-- Indexes for table `gallery_img`
+--
+ALTER TABLE `gallery_img`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_foreign_gallery_img` (`id_gallery`);
 
 --
 -- Indexes for table `keyword`
@@ -396,6 +439,18 @@ ALTER TABLE `footer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `gallery_img`
+--
+ALTER TABLE `gallery_img`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `keyword`
 --
 ALTER TABLE `keyword`
@@ -405,13 +460,13 @@ ALTER TABLE `keyword`
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `news_keyword`
@@ -435,13 +490,23 @@ ALTER TABLE `seo_pages`
 -- AUTO_INCREMENT for table `sidebar`
 --
 ALTER TABLE `sidebar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `gallery_img`
+--
+ALTER TABLE `gallery_img`
+  ADD CONSTRAINT `fk_foreign_gallery_img` FOREIGN KEY (`id_gallery`) REFERENCES `gallery` (`id_gallery`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
