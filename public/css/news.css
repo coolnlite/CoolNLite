@@ -1415,9 +1415,19 @@ section .main-about .btn-lh:hover {
   left: 0;
   width: 100%;
   height: 100%;
+ 
+  z-index: 98;
+  display: none;
+}
+.popup-image .bg-popup-image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 99;
-  display: none;
+  cursor: pointer;
 }
 .popup-image img{
   position: absolute;
