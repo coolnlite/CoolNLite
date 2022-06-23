@@ -2187,28 +2187,28 @@
 			}), b.define("select2/i18n/en", [], function() {
 				return {
 					errorLoading: function() {
-						return "The results could not be loaded."
+						return "Kết quả không thể tải được."
 					},
 					inputTooLong: function(a) {
 						var b = a.input.length - a.maximum,
-							c = "Please delete " + b + " character";
+							c = "Vui lòng nhập" + b + " ký tự";
 						return 1 != b && (c += "s"), c
 					},
 					inputTooShort: function(a) {
-						return "Please enter " + (a.minimum - a.input.length) + " or more characters"
+						return "Vui lòng nhập " + (a.minimum - a.input.length) + " hoặc nhiều ký tự"
 					},
 					loadingMore: function() {
-						return "Loading more results…"
+						return "Đang tải nhiều kết quả…"
 					},
 					maximumSelected: function(a) {
-						var b = "You can only select " + a.maximum + " item";
+						var b = "Bạn chỉ có thể chộn " + a.maximum + " mẫu tin";
 						return 1 != a.maximum && (b += "s"), b
 					},
 					noResults: function() {
-						return "No results found"
+						return "Không tìm thấy dòng xe trên"
 					},
 					searching: function() {
-						return "Searching…"
+						return "Đang tìm…"
 					}
 				}
 			}), b.define("select2/defaults", ["jquery", "require", "./results", "./selection/single", "./selection/multiple", "./selection/placeholder", "./selection/allowClear", "./selection/search", "./selection/eventRelay", "./utils", "./translation", "./diacritics", "./data/select", "./data/array", "./data/ajax", "./data/tags", "./data/tokenizer", "./data/minimumInputLength", "./data/maximumInputLength", "./data/maximumSelectionLength", "./dropdown", "./dropdown/search", "./dropdown/hidePlaceholder", "./dropdown/infiniteScroll", "./dropdown/attachBody", "./dropdown/minimumResultsForSearch", "./dropdown/selectOnClose", "./dropdown/closeOnSelect", "./i18n/en"], function(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, A, B, C) {

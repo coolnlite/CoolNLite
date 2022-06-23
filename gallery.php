@@ -85,6 +85,9 @@
         .color{
             color:var(--color-blue);
         }
+        .gallery{
+            padding-bottom: 3.2em;
+        }
     </style>
 </head>
 
@@ -110,7 +113,9 @@
             <select id='selGallery' class="selGallery" name="selGallery">
                 <option>Vui lòng chọn dòng xe</option>          
                 <option value='1'>COLORADO</option>  
-                <option value='2'>GLB35</option>   
+                <option value='2'>GLB35</option>
+                <option value='3'>COLORADO</option>  
+                <option value='4'>GLB35</option> 
             </select>   
         </section>
 
