@@ -82,6 +82,9 @@
             background-color: var(--color-blue);
             height: 2px;
         }
+        .color{
+            color:var(--color-blue);
+        }
 
     </style>
 </head>
