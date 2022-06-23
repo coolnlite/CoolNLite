@@ -743,6 +743,7 @@ main.default-page-width {
   max-width: 1440px;
   height: auto;
   margin: 0 auto;
+  text-align: center;
 }
 
 section .main-about {

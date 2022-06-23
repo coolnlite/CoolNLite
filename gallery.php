@@ -67,7 +67,7 @@
     <link rel="stylesheet" href="<?php print $base_url?>public/css/style.css" />
     <link rel="stylesheet" href="<?php print $base_url?>public/css/reponsive.css" />
     <link rel="stylesheet" href="<?php print $base_url?>public/css/news.css" />
-    <link rel="stylesheet" href="<?php print $base_url?>public/css/slider.css">
+    <link rel="stylesheet" href="<?php print $base_url?>public/css/select.css" />
     <!-- css -->
     <style>
         .title-gallery{
@@ -85,7 +85,6 @@
         .color{
             color:var(--color-blue);
         }
-
     </style>
 </head>
 
@@ -107,9 +106,14 @@
             </div>
         </section>
 
-        <section>
-
+        <section class="fix-about gallery" id="gallery">
+            <select id='selGallery' class="selGallery" name="selGallery">
+                <option>Vui lòng chọn dòng xe</option>          
+                <option value='1'>COLORADO</option>  
+                <option value='2'>GLB35</option>   
+            </select>   
         </section>
+
     </div>
     <?php 
         require_once('./pages/footer.php');
@@ -118,7 +122,14 @@
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="<?php print $base_url?>public/js/script.js"></script>
+    <script src="<?php print $base_url?>public/js/select.js"></script>
     <!-- javasript -->
+    <script>
+        $(document).ready(function(){
+            // Gọi hàm
+            $("#selGallery").select2();
+        });
+        </script>
 </body>
 
 </html>
