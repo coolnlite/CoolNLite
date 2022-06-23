@@ -767,6 +767,7 @@ section .main-about p {
   font-size: 1.4em;
   color: var(--color-txt);
   padding-bottom: 3.2em;
+  padding-top: 1em;
 }
 
 section .main-about p.txt-about {

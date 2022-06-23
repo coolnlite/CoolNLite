@@ -69,6 +69,21 @@
     <link rel="stylesheet" href="<?php print $base_url?>public/css/news.css" />
     <link rel="stylesheet" href="<?php print $base_url?>public/css/slider.css">
     <!-- css -->
+    <style>
+        .title-gallery{
+            position: relative;
+        }
+        .title-gallery::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-blue);
+            height: 2px;
+        }
+
+    </style>
 </head>
 
 <body class="body">
@@ -81,13 +96,17 @@
         </section>
         <section class="fix-about">
             <div class="main-about">
-                <h1>HÌNH ẢNH LẮP ĐẶT</h1>
+                <h1 class="title-gallery">HÌNH ẢNH LẮP ĐẶT</h1>
                 <p class="text-about">
-                    Kho tổng hợp những hình ảnh thực tế về các dòng phim cách nhiệt khi được lắp lên các dòng xe trên thị trường của COOL N LITE</b>.
+                    Kho tổng hợp những hình ảnh thực tế về các dòng phim cách nhiệt khi được lắp lên các dòng xe trên thị trường của
+                    <b class="color">COOL N LITE</b>.
                 </p>
             </div>
         </section>
 
+        <section>
+
+        </section>
     </div>
     <?php 
         require_once('./pages/footer.php');
@@ -99,38 +118,6 @@
     <script src="<?php print $base_url?>public/js/slider.js"></script>
     <script src="<?php print $base_url?>public/js/script.js"></script>
     <!-- javasript -->
-    <!-- css on sroll pages -->
-  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-  <script>
- 
-    ScrollReveal({ reset: true });
-
-    ScrollReveal().reveal("section .main-about", {
-        duration: 2000,
-        move: 0
-    });
-
-    ScrollReveal().reveal(".btn-detail", {
-        duration: 2000,
-        origin: "left",
-        distance: "30px",
-        easing: "ease-in-out"
-  });
-
-  ScrollReveal().reveal(".btn-search", {
-        duration: 2000,
-        origin: "right",
-        distance: "30px",
-        easing: "ease-in-out"
-  });
-
-  ScrollReveal().reveal(".policy_ico .box-icons", {
-    duration: 3000,
-    scale: 0.85
-});
-
-  </script>
-  <!-- css on sroll pages -->
 </body>
 
 </html>
