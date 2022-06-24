@@ -349,9 +349,15 @@
 
 .select2-container--default .select2-results>.select2-results__options {
     max-height: 200px;
-    overflow-y: auto
+    overflow-y: auto;
 }
-
+.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar{
+    width: 4px;
+}
+.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar-thumb{
+    background-color: var(--color-blue);
+    border-radius: 4px;
+}
 .select2-container--default .select2-results__option[role=group] {
     padding: 0
 }

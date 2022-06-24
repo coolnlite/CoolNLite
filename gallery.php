@@ -88,6 +88,10 @@
         .gallery{
             padding-bottom: 3.2em;
         }
+        .popup-gallery a img{
+            width: 300px;
+            height: 300px;
+        }
     </style>
 </head>
 
@@ -113,10 +117,35 @@
             <select id='selGallery' class="selGallery" name="selGallery">
                 <option>Vui lòng chọn dòng xe</option>          
                 <option value='1'>COLORADO</option>  
-                <option value='2'>GLB35</option>
-                <option value='3'>COLORADO</option>  
-                <option value='4'>GLB35</option> 
+                <option value='2'>GLC 200</option>  
+                <option value='3'>GLB35</option>
             </select>   
+        </section>
+
+        <section class="fix-about gallery" id="result_gallery">
+            <div class="popup-gallery">
+                <a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg">
+                    <img src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_s.jpg" >
+                </a>
+                <a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg">
+                    <img src="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_s.jpg" >
+                </a>
+                <a href="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg">
+                    <img src="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_s.jpg">
+                </a>
+                <a href="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg">
+                    <img src="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_s.jpg" >
+                </a>
+                <a href="http://farm9.staticflickr.com/8235/8559402846_8b7f82e05d_b.jpg">
+                    <img src="http://farm9.staticflickr.com/8235/8559402846_8b7f82e05d_s.jpg" >
+                </a>
+                <a href="http://farm9.staticflickr.com/8235/8558295467_e89e95e05a_b.jpg">
+                    <img src="http://farm9.staticflickr.com/8235/8558295467_e89e95e05a_s.jpg" >
+                </a>
+                <a href="http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_b.jpg">
+                    <img src="http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_s.jpg" >
+                </a>
+            </div>
         </section>
 
     </div>
@@ -134,7 +163,25 @@
             // Gọi hàm
             $("#selGallery").select2();
         });
-        </script>
+    </script>
+    <script>
+        $(document).ready(function() {
+	$('.popup-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Đang tải ảnh #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+		image: {
+			tError: '<a href="%url%">Ảnh #%curr%</a> không thể tải được.',
+		}
+	});
+});
+    </script>
 </body>
 
 </html>
