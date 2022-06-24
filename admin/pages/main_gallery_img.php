@@ -5,51 +5,47 @@
         while ($rows = mysqli_fetch_array($result)){
 ?>
 <div style="margin: 0 auto; width : 94%">
-<?php 
-    $sql_img = "SELECT * FROM `gallery_img` WHERE `id_gallery` = '$id'";
-    $result_img = mysqli_query($conn,$sql_img);
-    if(mysqli_num_rows( $result_img) > 0 ){
-        while ($rows_img = mysqli_fetch_array($result)){
-?>
-  <h3>Chỉnh sửa ảnh cho dòng xe <span class="text-primary"><?php print $rows['name']?></span></h3>
 
+<div class="mb-3">
+    <h3>Thêm ảnh cho dòng xe <span class="text-primary"><?php print $rows['name']?></span></h3>
 
-  <form id="feditGalleryImg" class="needs-validation" enctype="multipart/form-data" novalidate>
-    <input type="hidden" value="<?php print $id ?>" name="id_gallery">
-    <div class="form-group">
-      <label for="thumnail">Ảnh dòng xe :</label>
-      <input type="file" class="form-control" name="gallery_img[]" id="gallery_img" multiple required>
-      <div class="invalid-feedback">Vui lòng nhập ảnh dòng xe</div>
-      <?php
-        if(!empty($rows_img['image'])){
+    <form id="faddGalleryImg" class="needs-validation" enctype="multipart/form-data" novalidate>
+        <input type="hidden" value="<?php print $id ?>" name="id_gallery">
+        <div class="form-group">
+        <label for="thumnail">Ảnh dòng xe :</label>
+        <input type="file" class="form-control" name="gallery_img[]" id="gallery_img" multiple required>
+        <div class="invalid-feedback">Vui lòng nhập ảnh dòng xe</div>
+        </div>
 
-        }
-      ?>
+        <button type="submit" class="btn btn-primary">Thêm</button>
+
+    </form>
+</div>
+
+  <h3>Danh sách ảnh dòng xe <span class="text-primary"><?php print $rows['name']?></span></h3>
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-end ">
+      <div style="width: 94%; margin : 0 auto">
+        <div class="row">
+          <div class="col-xl-12">
+            <table id="listGalleryImg" class="table table-striped table-bordered" style="width: 100%;">
+              <thead>
+                <th>Id</th>
+                <th>Ảnh dòng xe</th>
+                <th>Thời gian đăng</th>
+                <th>Thao tác</th>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <button type="submit" class="btn btn-primary">Thêm</button>
 
-  </form>
-<?php
-        }
-    }else{       
-?>
-<h3>Thêm ảnh cho dòng xe <span class="text-primary"><?php print $rows['name']?></span></h3>
-
- <form id="faddGalleryImg" class="needs-validation" enctype="multipart/form-data" novalidate>
-    <input type="hidden" value="<?php print $id ?>" name="id_gallery">
-    <div class="form-group">
-      <label for="thumnail">Ảnh dòng xe :</label>
-      <input type="file" class="form-control" name="gallery_img[]" id="gallery_img" multiple required>
-      <div class="invalid-feedback">Vui lòng nhập ảnh dòng xe</div>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Thêm</button>
-
-  </form>
-<?php
- }
-?>
 </div>
 <?php
     }//Kết thúc vòng lặp while

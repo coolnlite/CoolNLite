@@ -56,6 +56,43 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function(){
+
+            $('#listGalleryImg').DataTable({
+            "fnCreatedRow": function(nRow, aData, iDataIndex) {
+                $(nRow).attr('id', aData[0]);
+            },
+            language: {
+                lengthMenu: 'Hiện _MENU_ mẫu tin trên trang',
+                zeroRecords: 'Không tìm thấy mẫu tin nào',
+                info: 'Hiện trang _PAGE_ trên _PAGES_ trang',
+                infoEmpty: 'Không có mẫu tin nào',
+                infoFiltered:'',
+                search : "Tìm kiếm:",
+                paginate: {
+                    next:       ">>",
+                    previous:   "<<"
+                    },
+            },
+            'serverSide': 'true',
+            'processing': 'true',
+            'paging': 'true',
+            'order': [],
+            'ajax': {
+                'url': '<?php echo ''.$DOMAIN.'modules/fetch_data.php'?>',
+                'data': {
+                    gallery_img : true
+                },
+                
+                'type': 'post',
+            },
+            "aoColumnDefs": [{
+                "bSortable": false,
+                "aTargets": [3]
+                },
+
+            ]
+            });
+
             $("#faddGalleryImg").on('submit', function(e){
                 e.preventDefault();
                     $.ajax({
