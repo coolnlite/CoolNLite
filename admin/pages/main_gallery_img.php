@@ -9,7 +9,7 @@
 
 
   <form id="fAddGallery" class="needs-validation" enctype="multipart/form-data" novalidate>
-   
+    <input type="hidden" value="<?php print $id ?>" name="id_gallery">
     <div class="form-group">
       <label for="thumnail">Ảnh dòng xe :</label>
       <input type="file" class="form-control" name="gallery_img[]" id="gallery_img" multiple required>

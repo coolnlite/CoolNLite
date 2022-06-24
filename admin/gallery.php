@@ -92,7 +92,36 @@
             ]
             });
 
-            });
+            // Xóa mẫu tin khách hàng
+            $(document).on('click', '.deleteGallery', function(event) {
+            var table = $('#gallery').DataTable();
+            event.preventDefault();
+            var id_gallery = $(this).data('id');
+                if (confirm("Bạn chắc chắc có muốn xóa dòng xe này")) {
+                $.ajax({
+                    url: '<?php echo ''.$DOMAIN.'modules/delete_data.php'?>',
+                    data: {
+                    delete_gallery : true,
+                    id_gallery: id_gallery
+                    },
+                    type: "post",
+                    success: function(data) {
+                    var json = JSON.parse(data);
+                    status = json.status;
+                    if (status == 'success') {
+                        $("#" + id_gallery).closest('tr').remove();
+                    } else {
+                        alert('Có lỗi gì đó');
+                        return;
+                    }
+                    }
+                });
+                } else {
+                return null;
+                }
+            })
+
+        });
     </script>
  
 </body>
