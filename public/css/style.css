@@ -477,7 +477,7 @@ textarea {
     padding: 0.8em 0.4em;
     font-size: 1.6em;
     color: var(--text-color);
-    font-weight: 100;
+    font-weight: lighter;
     text-align: center;
     position: relative;
 }
@@ -527,9 +527,9 @@ textarea {
 }
 
 .menu .box-title-menu .title {
-    margin-top: 11vh;
+    margin-top: 12vh;
     width: 100%;
-    font-size: 40px;
+    font-size: 35px;
     padding: 0 24px;
     color: var(--text-color);
     text-align: center;
