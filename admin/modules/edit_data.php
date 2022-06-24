@@ -2131,7 +2131,7 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
         $name = mysqli_real_escape_string($conn, $_POST['gallery_name']);
         $time = date('Y-m-d H:i:s');
     
-        $sql = "UPDATE `sidebar` SET `name` = '$name', `time` = '$time'
+        $sql = "UPDATE `gallery` SET `name` = '$name', `time` = '$time'
          WHERE `id_gallery` = '$id_gallery'";
         $result = mysqli_query($conn,$sql);
         if($result == true){
