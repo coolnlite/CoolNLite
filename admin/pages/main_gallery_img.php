@@ -5,6 +5,12 @@
         while ($rows = mysqli_fetch_array($result)){
 ?>
 <div style="margin: 0 auto; width : 94%">
+<?php 
+    $sql_img = "SELECT * FROM `gallery_img` WHERE `id_gallery` = '$id'";
+    $result_img = mysqli_query($conn,$sql_img);
+    if(mysqli_num_rows( $result_img) > 0 ){
+        while ($rows_img = mysqli_fetch_array($result)){
+?>
   <h3>Thêm ảnh cho dòng xe <span class="text-primary"><?php print $rows['name']?></span></h3>
 
 
@@ -19,6 +25,10 @@
     <button type="submit" class="btn btn-primary">Thêm</button>
 
   </form>
+<?php
+        }
+    }
+?>
 </div>
 <?php
     }//Kết thúc vòng lặp while
