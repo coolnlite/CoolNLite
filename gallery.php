@@ -141,7 +141,7 @@
 
         <section class="fix-about gallery" id="gallery">
             <select id='selGallery' class="selGallery" name="selGallery">
-                <option>Vui lòng chọn dòng xe</option>          
+                <option value='0'>Vui lòng chọn dòng xe</option>          
                 <option value='1'>COLORADO</option>  
                 <option value='2'>GLC 200</option>  
                 <option value='3'>GLB35</option>
