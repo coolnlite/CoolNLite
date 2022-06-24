@@ -1,6 +1,8 @@
 <?php
     $sql = "SELECT * FROM `gallery` WHERE `id_gallery` = '$id'";
     $result = mysqli_query($conn,$sql);
+    if(mysqli_num_rows($result) > 0 ){
+        while ($rows = mysqli_fetch_array($result)){
 ?>
 <div style="margin: 0 auto; width : 94%">
   <h3>Thêm ảnh cho dòng xe</h3>
@@ -18,7 +20,10 @@
 
   </form>
 </div>
-
+<?php
+    }//Kết thúc vòng lặp while
+}//Kết thúc vòng lặp if
+?>
 <script>
 // Disable form submissions if there are invalid fields
 (function() {
