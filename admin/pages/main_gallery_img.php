@@ -1,10 +1,16 @@
+<?php
+    $sql = "SELECT * FROM `gallery` WHERE `id_gallery` = '$id'";
+    $result = mysqli_query($conn,$sql);
+?>
 <div style="margin: 0 auto; width : 94%">
-  <h3></h3>
+  <h3>Thêm ảnh cho dòng xe</h3>
+
+
   <form id="fAddGallery" class="needs-validation" enctype="multipart/form-data" novalidate>
    
     <div class="form-group">
       <label for="thumnail">Ảnh dòng xe :</label>
-      <input type="file" class="form-control" name="gallery_img[]" id="gallery_img" required>
+      <input type="file" class="form-control" name="gallery_img[]" id="gallery_img" multiple required>
       <div class="invalid-feedback">Vui lòng nhập ảnh dòng xe</div>
     </div>
 
