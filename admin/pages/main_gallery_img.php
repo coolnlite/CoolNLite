@@ -5,7 +5,7 @@
         while ($rows = mysqli_fetch_array($result)){
 ?>
 <div style="margin: 0 auto; width : 94%">
-  <h3>Thêm ảnh cho dòng xe</h3>
+  <h3>Thêm ảnh cho dòng xe <span class="text-primary"><?php print $rows['name']?></span></h3>
 
 
   <form id="fAddGallery" class="needs-validation" enctype="multipart/form-data" novalidate>
