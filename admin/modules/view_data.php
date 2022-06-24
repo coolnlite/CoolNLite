@@ -247,3 +247,25 @@
     }
 }
 ?>
+
+<?php 
+    //View sidebar
+    if(isset($_POST['view_gallery']) && !empty($_POST['id_gallery'])){
+        $id_gallery = $_POST['id_gallery'];
+        $sql = "SELECT * FROM `gallery` WHERE `id_gallery` = '$id_gallery'";
+        $gallery = executeResult($sql);
+        foreach($gallery as $gl){
+?>
+             <input type="hidden" value="<?php print $gl['id_gallery']?>" name="id_gallery">
+                <div class="form-group">
+                <label for="img">Tên dòng xe :</label>
+                <input type="text" class="form-control" value="<?php print $gl['name']?>" 
+                name="gallery_name" maxlength="30" required>
+                <div class="invalid-feedback">Vui lòng nhập tên dòng xe</div>
+                </div>
+
+            <button type="submit" class="btn btn-primary">Thêm</button>
+<?php 
+    }
+}
+?>

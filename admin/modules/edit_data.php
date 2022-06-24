@@ -2125,4 +2125,28 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
         }
     }
 
+    if(!empty($_POST['id_gallery']) && !empty($_POST['gallery_name'])){
+
+        $id_gallery = mysqli_real_escape_string($conn, $_POST['id_gallery']);
+        $name = mysqli_real_escape_string($conn, $_POST['gallery_name']);
+        $time = date('Y-m-d H:i:s');
+    
+        $sql = "UPDATE `sidebar` SET `name` = '$name', `time` = '$time'
+         WHERE `id_gallery` = '$id_gallery'";
+        $result = mysqli_query($conn,$sql);
+        if($result == true){
+            echo json_encode(array(
+                'status' => 1,
+                'message' => 'Cập nhật dòng xe thành công'
+            ));
+            exit();
+        }else{
+            echo json_encode(array(
+                'status' => 0,
+                'message' => 'Cập nhật dòng xe thất bại'
+            ));
+            exit();
+        }
+    }
+
  ?>
