@@ -19,7 +19,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHỈNH SỬA BÀI VIẾT</title>
+    <title>ẢNH DÒNG XE</title>
     <link rel="icon" sizes="32x32" href="../shared/img/icon.png">
     <!-- fontawesome -->
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
@@ -44,7 +44,7 @@
             if($permission == 0){
                 require_once('./pages/main_premision.php');
               }else{
-                require_once('./pages/main_edit_news.php');
+                require_once('./pages/main_gallery_img.php');
               }
            ?>
         </div>
