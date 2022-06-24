@@ -125,26 +125,32 @@
 
         <section class="fix-about gallery" id="result_gallery">
             <div class="popup-gallery">
-                <a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg">
-                    <img src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_s.jpg" >
+                <a href="<?php print $base_url?>uploads/gallery/colorado-cnl.jpg">
+                    <img src="<?php print $base_url?>uploads/gallery/colorado-cnl-1.jpg" >
                 </a>
-                <a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg">
-                    <img src="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_s.jpg" >
+                <a href="<?php print $base_url?>uploads/gallery/colorado-cnl-1.jpg">
+                    <img src="<?php print $base_url?>uploads/gallery/colorado-cnl-1.jpg" >
                 </a>
-                <a href="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg">
-                    <img src="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_s.jpg">
+                <a href="<?php print $base_url?>uploads/gallery/colorado-cnl-2.jpg">
+                    <img src="<?php print $base_url?>uploads/gallery/colorado-cnl-2.jpg">
                 </a>
-                <a href="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg">
-                    <img src="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_s.jpg" >
+                <a href="<?php print $base_url?>uploads/gallery/glb35-cnl.jpg">
+                    <img src="<?php print $base_url?>uploads/gallery/glb35-cnl.jpg" >
                 </a>
-                <a href="http://farm9.staticflickr.com/8235/8559402846_8b7f82e05d_b.jpg">
-                    <img src="http://farm9.staticflickr.com/8235/8559402846_8b7f82e05d_s.jpg" >
+                <a href="<?php print $base_url?>uploads/gallery/glb35-cnl-1.jpg">
+                    <img src="<?php print $base_url?>uploads/gallery/glb35-cnl-1.jpg" >
                 </a>
-                <a href="http://farm9.staticflickr.com/8235/8558295467_e89e95e05a_b.jpg">
-                    <img src="http://farm9.staticflickr.com/8235/8558295467_e89e95e05a_s.jpg" >
+                <a href="<?php print $base_url?>uploads/gallery/glb35-cnl-2.jpg">
+                    <img src="<?php print $base_url?>uploads/gallery/glb35-cnl-2.jpg" >
                 </a>
-                <a href="http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_b.jpg">
-                    <img src="http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_s.jpg" >
+                <a href="<?php print $base_url?>uploads/gallery/glc200-cnl.jpg">
+                    <img src="<?php print $base_url?>uploads/gallery/glc200-cnl.jpg" >
+                </a>
+                <a href="<?php print $base_url?>uploads/gallery/glc200-cnl-1.jpg">
+                    <img src="<?php print $base_url?>uploads/gallery/glc200-cnl-1.jpg" >
+                </a>
+                <a href="<?php print $base_url?>uploads/gallery/glc200-cnl-2.jpg">
+                    <img src="<?php print $base_url?>uploads/gallery/glc200-cnl-2.jpg" >
                 </a>
             </div>
         </section>
