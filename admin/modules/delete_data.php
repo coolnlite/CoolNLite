@@ -226,5 +226,29 @@ if(isset($_POST['delete_sidebar']) && !empty($_POST['id_sidebar'])){
 
 }
 
+//delete menu
+if(isset($_POST['delete_gallery']) && !empty($_POST['id_gallery'])){
+    $id_gallery = $_POST['id_gallery'];
+    
+    $sql = "DELETE FROM `gallery` WHERE `id_gallery`= '$id_gallery'";
+    $result =mysqli_query($conn,$sql);
+    if($result == true)
+    {
+        $data = array(
+            'status'=>'success',
+        );
+
+        echo json_encode($data);
+    }
+    else
+    {
+        $data = array(
+            'status'=>'failed',
+        );
+
+        echo json_encode($data);
+    } 
+
+}
 
 ?>
