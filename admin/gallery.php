@@ -56,7 +56,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
 
-            $('#example').DataTable({
+            $('#gallery').DataTable({
             "fnCreatedRow": function(nRow, aData, iDataIndex) {
                 $(nRow).attr('id', aData[0]);
             },
