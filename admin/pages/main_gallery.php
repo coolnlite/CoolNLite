@@ -5,7 +5,7 @@
       <div class="d-flex justify-content-between align-items-center pb-3">
         <span class="text-center h5">DÒNG XE</span>
         <button type="button" class="btn btn-outline-success" data-toggle="modal" 
-        data-target="#addMenu">Thêm dòng xe</button>
+        data-target="#addGallery">Thêm dòng xe</button>
       </div>
         <div class="row">
           <div class="col-xl-12">
@@ -27,6 +27,34 @@
       </div>
     </div>
   </div>
+
+  <div class="modal fade" id="addGallery" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Thêm dòng xe</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body-view">
+        <form id="fAddGallery" class="needs-validation" enctype="multipart/form-data" novalidate>
+
+        <div class="form-group">
+        <label for="img">Tên dòng xe :</label>
+        <input type="text" class="form-control" name="img" maxlength="30" required>
+        <div class="invalid-feedback">Vui lòng nhập tên dòng xe</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Thêm</button>
+    </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
 (function() {
