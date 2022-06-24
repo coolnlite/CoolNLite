@@ -90,9 +90,31 @@
             padding-bottom: 3.2em;
         }
         .popup-gallery a img{
-            width: 300px;
-            height: 300px;
+            max-width: 300px;
+            max-height: 300px;
         }
+        @media screen and (max-width : 768px){
+            .popup-gallery a img{
+                max-width: 250px;
+                max-height: 250px;
+            }
+        }
+        @media screen and (max-width : 600px){
+            .popup-gallery a img{
+                max-width: 180px;
+                max-height: 180px;
+            }
+        }
+        @media screen and (max-width : 320px){
+            .popup-gallery a img{
+                max-width: 150px;
+                max-height: 150px;
+            }
+            .select2-container{
+                width: calc(100% - 20px) !important;
+            }
+        }
+
     </style>
 </head>
 
