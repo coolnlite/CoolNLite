@@ -579,5 +579,28 @@ if(!empty($_POST['url_sidebar']) && !empty($_POST['icon_sidebar']) &&
     }
 }
 
+//Thêm tên dòng xe
+if(!empty($_POST['gallery_name'])){
+    $gallery_name = mysqli_real_escape_string($conn, $_POST['gallery_name']);
+    $time = date('Y-m-d H:i:s');
+
+    $sql = "INSERT INTO `gallery` (`name`,`time`) 
+    VALUES ('$gallery_name','$time')";
+
+    $result = mysqli_query($conn, $sql);
+    if($result) {
+        echo json_encode(array(
+            'status' => 1,
+            'message' => 'Thêm dòng xe thành công'
+            ));
+            exit();
+    }else{
+        echo json_encode(array(
+            'status' => 0,
+            'message' => 'Thêm dòng xe thất bại'
+            ));
+            exit();
+    }
+}
 
 ?>

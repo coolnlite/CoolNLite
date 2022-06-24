@@ -42,7 +42,7 @@
 
         <div class="form-group">
         <label for="img">Tên dòng xe :</label>
-        <input type="text" class="form-control" name="img" maxlength="30" required>
+        <input type="text" class="form-control" name="gallery_name" maxlength="30" required>
         <div class="invalid-feedback">Vui lòng nhập tên dòng xe</div>
         </div>
 
