@@ -68,6 +68,7 @@
     <link rel="stylesheet" href="<?php print $base_url?>public/css/reponsive.css" />
     <link rel="stylesheet" href="<?php print $base_url?>public/css/news.css" />
     <link rel="stylesheet" href="<?php print $base_url?>public/css/select.css" />
+    <link rel="stylesheet" href="<?php print $base_url?>public/css/magnific-popup.css" />
     <!-- css -->
     <style>
         .title-gallery{
@@ -157,6 +158,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="<?php print $base_url?>public/js/script.js"></script>
     <script src="<?php print $base_url?>public/js/select.js"></script>
+    <script src="<?php print $base_url?>public/js/jquery.magnific-popup.min.js"></script>
     <!-- javasript -->
     <script>
         $(document).ready(function(){
