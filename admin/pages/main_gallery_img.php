@@ -11,10 +11,32 @@
     if(mysqli_num_rows( $result_img) > 0 ){
         while ($rows_img = mysqli_fetch_array($result)){
 ?>
-  <h3>Thêm ảnh cho dòng xe <span class="text-primary"><?php print $rows['name']?></span></h3>
+  <h3>Chỉnh sửa ảnh cho dòng xe <span class="text-primary"><?php print $rows['name']?></span></h3>
 
 
-  <form id="fAddGalleryImg" class="needs-validation" enctype="multipart/form-data" novalidate>
+  <form id="feditGalleryImg" class="needs-validation" enctype="multipart/form-data" novalidate>
+    <input type="hidden" value="<?php print $id ?>" name="id_gallery">
+    <div class="form-group">
+      <label for="thumnail">Ảnh dòng xe :</label>
+      <input type="file" class="form-control" name="gallery_img[]" id="gallery_img" multiple required>
+      <div class="invalid-feedback">Vui lòng nhập ảnh dòng xe</div>
+      <?php
+        if(!empty($rows_img['image'])){
+
+        }
+      ?>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Thêm</button>
+
+  </form>
+<?php
+        }
+    }else{       
+?>
+<h3>Thêm ảnh cho dòng xe <span class="text-primary"><?php print $rows['name']?></span></h3>
+
+ <form id="faddGalleryImg" class="needs-validation" enctype="multipart/form-data" novalidate>
     <input type="hidden" value="<?php print $id ?>" name="id_gallery">
     <div class="form-group">
       <label for="thumnail">Ảnh dòng xe :</label>
@@ -26,8 +48,7 @@
 
   </form>
 <?php
-        }
-    }
+ }
 ?>
 </div>
 <?php

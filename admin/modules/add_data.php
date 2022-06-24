@@ -603,4 +603,19 @@ if(!empty($_POST['gallery_name'])){
     }
 }
 
+//Thêm ảnh dòng xe
+if(!empty($_POST['id_gallery'])){
+       
+    //Kiểm tra file upload
+    if (!empty(array_filter($_FILES['gallery_img']['name']))) {
+        
+        foreach($_FILES['gallery_img']['name'] as $id){
+            
+        }
+
+    } else {
+        
+    }
+} 
+
 ?>

@@ -54,6 +54,31 @@
     <script src="./js/main.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#faddGalleryImg").on('submit', function(e){
+                e.preventDefault();
+                    $.ajax({
+                    type: 'POST',
+                    url: '<?php print $DOMAIN.'modules/add_data.php'?>',
+                    data: new FormData(this),
+                    dataType : 'json',
+                    contentType: false,
+                    cache: false,
+                    processData:false,
+                    success: function(response){ 
+                        if(response.status == 1){
+                            alert(response.message);
+                            window.location.reload();
+                        }else{
+                            alert(response.message);
+                        }
+                        
+                    }
+                })
+            });
+        })
+    </script>
 </body>
 
 </html>
