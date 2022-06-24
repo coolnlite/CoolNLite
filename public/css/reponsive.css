@@ -356,12 +356,6 @@
     width: 100%;
   }
   /* PHẦN THAY BG */
-  .section.menu.bg-index-1{
-    background: url(../../shared/img/trangchu//coolnlite-mb.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
   .section.section-gird .bg-index-3 {
     background: url(../../shared/img/trangchu/car-bluenologo.jpg);
     background-repeat: no-repeat;
