@@ -732,7 +732,7 @@ if(isset($_POST['gallery'])){
         <i class="fas fa-user-edit"></i>
         </a>
 
-        <a title="Thêm ảnh" href="" data-id="'.$row['id_gallery'].'"
+        <a title="Thêm ảnh" href="gallery_img.php?id='.$row['id_gallery'].'" data-id="'.$row['id_gallery'].'"
         class="btn btn-primary btn-sm editGallery" >
         <i class="fas fa-image"></i>
         </a>
