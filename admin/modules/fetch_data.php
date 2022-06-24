@@ -700,7 +700,7 @@ if(isset($_POST['gallery'])){
     }
     else
     {
-        $sql .= " ORDER BY `position` asc";
+        $sql .= " ORDER BY `id_gallery` asc";
     }
 
     if($_POST['length'] != -1)
@@ -717,18 +717,24 @@ if(isset($_POST['gallery'])){
     while($row = mysqli_fetch_assoc($query))
     {
         $sub_array = array();
-        $sub_array[] = $row['id'];
+        $sub_array[] = $row['id_gallery'];
         $sub_array[] = $row['name'];
         $sub_array[] = facebook_time_ago($row['time']);
         $sub_array[] = 
         '
-        <a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  
-        class="btn btn-danger btn-sm deleteSidebar" >
+        <a title="Xóa" href="javascript:void();" data-id="'.$row['id_gallery'].'"  
+        class="btn btn-danger btn-sm deleteGallery" >
         <i class="fas fa-trash-alt"></i>
         </a>
-        <a title="Sửa" data-toggle="modal" data-target="#editSidebar" href="javascript:void();" data-id="'.$row['id'].'"
-        class="btn btn-warning btn-sm editSidebarBtn" >
+
+        <a title="Sửa" data-toggle="modal" data-target="#editGallery" href="javascript:void();" data-id="'.$row['id_gallery'].'"
+        class="btn btn-warning btn-sm editGallery" >
         <i class="fas fa-user-edit"></i>
+        </a>
+
+        <a title="Thêm ảnh" href="" data-id="'.$row['id_gallery'].'"
+        class="btn btn-primary btn-sm editGallery" >
+        <i class="fas fa-image"></i>
         </a>
         ';
         $data[] = $sub_array;
