@@ -672,4 +672,76 @@ if(isset($_POST['sidebar'])){
 
 }
 
+//Hiển thị dòng xe
+if(isset($_POST['gallery'])){
+    $output= array();
+    $sql = "SELECT * FROM `gallery` ";
+
+    $totalQuery = mysqli_query($conn,$sql);
+    $total_all_rows = mysqli_num_rows($totalQuery);
+   
+    $columns = array(
+        0 => 'id_gallery',
+        1 => 'name',
+        2 => 'time'
+    );
+    
+    if(isset($_POST['search']['value']))
+    {
+        $search_value = $_POST['search']['value'];
+        $sql .= " WHERE `name` like '%".$search_value."%'";
+    }
+
+    if(isset($_POST['order']))
+    {
+        $column_name = $_POST['order'][0]['column'];
+        $order = $_POST['order'][0]['dir'];
+        $sql .= " ORDER BY ".$columns[$column_name]." ".$order."";
+    }
+    else
+    {
+        $sql .= " ORDER BY `position` asc";
+    }
+
+    if($_POST['length'] != -1)
+    {
+        $start = $_POST['start'];
+        $length = $_POST['length'];
+        $sql .= " LIMIT  ".$start.", ".$length;
+    }	
+   
+    $query = mysqli_query($conn,$sql);
+    $count_rows = mysqli_num_rows($query);
+    $data = array();
+
+    while($row = mysqli_fetch_assoc($query))
+    {
+        $sub_array = array();
+        $sub_array[] = $row['id'];
+        $sub_array[] = $row['name'];
+        $sub_array[] = facebook_time_ago($row['time']);
+        $sub_array[] = 
+        '
+        <a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  
+        class="btn btn-danger btn-sm deleteSidebar" >
+        <i class="fas fa-trash-alt"></i>
+        </a>
+        <a title="Sửa" data-toggle="modal" data-target="#editSidebar" href="javascript:void();" data-id="'.$row['id'].'"
+        class="btn btn-warning btn-sm editSidebarBtn" >
+        <i class="fas fa-user-edit"></i>
+        </a>
+        ';
+        $data[] = $sub_array;
+    }
+
+    $output = array(
+        'draw'=> intval($_POST['draw']),
+        'recordsTotal' =>$count_rows ,
+        'recordsFiltered'=>   $total_all_rows,
+        'data'=>$data,
+    );
+    echo  json_encode($output);
+
+}
+
 ?>
