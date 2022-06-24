@@ -104,6 +104,9 @@
                 max-width: 180px;
                 max-height: 180px;
             }
+            section .main-about p{
+                padding-bottom: 2em;
+            }
         }
         @media screen and (max-width : 320px){
             .popup-gallery a img{
