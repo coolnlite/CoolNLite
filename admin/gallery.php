@@ -54,7 +54,142 @@
 
 
     <script type="text/javascript">
+        $(document).ready(function() {
 
+            $('#example').DataTable({
+            "fnCreatedRow": function(nRow, aData, iDataIndex) {
+                $(nRow).attr('id', aData[0]);
+            },
+            language: {
+                lengthMenu: 'Hiện _MENU_ mẫu tin trên trang',
+                zeroRecords: 'Không tìm thấy mẫu tin nào',
+                info: 'Hiện trang _PAGE_ trên _PAGES_ trang',
+                infoEmpty: 'Không có mẫu tin nào',
+                infoFiltered:'',
+                search : "Tìm kiếm:",
+                paginate: {
+                    next:       ">>",
+                    previous:   "<<"
+                    },
+            },
+            'serverSide': 'true',
+            'processing': 'true',
+            'paging': 'true',
+            'order': [],
+            'ajax': {
+                'url': '<?php echo ''.$DOMAIN.'modules/fetch_data.php'?>',
+                'data': {
+                    gallery : true
+                },
+                
+                'type': 'post',
+            },
+            "aoColumnDefs": [{
+                "bSortable": false,
+                "aTargets": [4]
+                },
+
+            ]
+            });
+
+            //Thêm đại lý
+            $("#fAddAgency").on('submit', function(e){
+                e.preventDefault();
+                    $.ajax({
+                    type: 'POST',
+                    url: '<?php print $DOMAIN.'modules/add_data.php'?>',
+                    data: new FormData(this),
+                    dataType : 'json',
+                    contentType: false,
+                    cache: false,
+                    processData:false,
+                    success: function(response){ 
+                        if(response.status == 1){
+                            alert(response.message);
+                            window.location.reload();
+                        }else{
+                            alert(response.message);
+                        }
+                        
+                    }
+                })
+            });
+
+            // Xóa mẫu tin đại lý
+            $(document).on('click', '.deleteBtn', function(event) {
+            var table = $('#example').DataTable();
+            event.preventDefault();
+            var id_agency = $(this).data('id');
+            if (confirm("Bạn chắc chắc có muốn xóa mẫu tin này")) {
+                $.ajax({
+                url: '<?php echo ''.$DOMAIN.'modules/delete_data.php'?>',
+                data: {
+                    delete_agency : true,
+                    id_agency: id_agency
+                },
+                type: "post",
+                success: function(data) {
+                    var json = JSON.parse(data);
+                    status = json.status;
+                    if (status == 'success') {
+                    $("#" + id_agency).closest('tr').remove();
+                    } else {
+                    alert('Có lỗi gì đó');
+                    return;
+                    }
+                }
+                });
+            } else {
+                return null;
+            }
+            })
+
+            // Xem đại lý
+            $(document).on('click', '.editBtn', function(event) {
+            var id_agency = $(this).data('id');
+                $.ajax({
+                    url: '<?php echo ''.$DOMAIN.'modules/view_data.php'?>',
+                    data: {
+                    view_agency : true,
+                    id_agency: id_agency
+                    },
+                    type: "post",
+                    success: function(data) {
+                        var json = JSON.parse(data);
+                        $("#id-agency").val(json.id);
+                        $("#img-old").val(json.img);
+                        $("#card-img-top").attr('src','..'+json.img);
+                        $("#edit-name").val(json.name);
+                        $("#edit-address").val(json.address);
+                        $("#edit-phone").val(json.phone);
+                    }
+                });
+            })
+
+            //Chỉnh sửa đại lý
+            $("#fEditAgency").on('submit', function(e){
+                    e.preventDefault();
+                        $.ajax({
+                        type: 'POST',
+                        url: '<?php print $DOMAIN.'modules/edit_data.php'?>',
+                        data: new FormData(this),
+                        dataType : 'json',
+                        contentType: false,
+                        cache: false,
+                        processData:false,
+                        success: function(response){ 
+                            if(response.status == 1){
+                                alert(response.message);
+                                window.location.reload();
+                            }else{
+                                alert(response.message);
+                            }
+                            
+                        }
+                    })
+                });  
+
+            });
     </script>
  
 </body>
