@@ -106,8 +106,7 @@
                     cache: false,
                     processData:false,
                     success: function(response){ 
-                        console.log(response);
-                        if(response.status != 0){
+                        if(response.status == 1){
                             window.location.reload();
                         }else{
                             alert(response.message);
