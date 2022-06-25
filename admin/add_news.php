@@ -71,9 +71,6 @@
             contentType: false,
             cache: false,
             processData:false,
-            beforeSend: function(){
-               
-            },
             success: function(response){ 
                 if(response.status == 1){
                     alert(response.message);
