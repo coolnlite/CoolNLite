@@ -605,16 +605,82 @@ if(!empty($_POST['gallery_name'])){
 
 //Thêm ảnh dòng xe
 if(!empty($_POST['id_gallery'])){
-       
     //Kiểm tra file upload
     if (!empty(array_filter($_FILES['gallery_img']['name']))) {
         
         foreach($_FILES['gallery_img']['name'] as $id){
+            /* Nhận tên file */
+            $filename = $_FILES['gallery_img']['name'][$id];
+            /* Nhận kích thước file */
+            $filesize = $_FILES['gallery_img']['size'][$id];
+        
+            /* Thêm tên file bằng timestamp*/
+            $timestamp = time();
+        
+            /* Gắn timestamp vào tên file*/
+            $path = $timestamp.$filename;
+        
+            /* Location */
+            $uploadPath = "../../uploads/gallery";
+
+            $tar_get = "uploads/gallery";
+            /* Upload file */
+        
+            //Kiểm tra xem kiểu file có hợp lệ hoặc dung lượng lớn không
+            $validTypes = array("jpg","jpeg","png","bmp","gif");
+            $fileType = substr($path,strrpos($path,".") + 1);
+
+            if(in_array($fileType,$validTypes)){
+                //Kiểm tra kích thước file
+                if($filesize < 2 * 1024 * 1024){
+                    //Check xem ảnh đã tồn tại hay chưa nếu không thì đổi tên
+                    $num = 1;
+                    $fileName = substr($path,0,strrpos($path,"."));
+                    $fileName = md5($fileName);
+                    while(file_exists($uploadPath . '/' . $fileName . '.' . $fileType)){
+                        $fileName = $fileName . "(". $num .")";
+                        $num ++;
+                    }
+                    $path = $fileName . '.' . $fileType;
+
+                    if(move_uploaded_file($_FILES['gallery_img']['tmp_name'][$id],$uploadPath . '/' .$path)){
+                        $id_gallery = mysqli_real_escape_string($conn, $_POST['id_gallery']);
+                        $gallery_img =  $tar_get . '/' .$path;
+                        $time = date('Y-m-d H:i:s');
+
+                        $sql = "INSERT INTO `gallery_img` (`id_gallery`, `image`, `time`) 
+                        VALUES ($id_gallery,$gallery_img,'$time')";
+                        $result = mysqli_query($conn,$sql);
+
+                        if($result){
+                            echo json_encode(array(
+                            'status' => 1,
+                            'message' => 'Thêm hình ảnh cho dòng xe thành công'
+                            ));
+                            exit();
+                        }else{
+                            echo json_encode(array(
+                            'status' => 0,
+                            'message' => 'Thêm hình ảnh cho dòng xe thất bại'
+                            ));
+                            exit();
+                        }
+                    }
+                }else{
+                    echo json_encode(array(
+                        'status' => 0,
+                        'messaage' => 'Ảnh '.$filename.' uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
+                    ));
+                }
+            }else{
+                echo json_encode(array(
+                    'status' => 0,
+                    'message' => 'Ảnh '.$filename.' uploads không thành công .Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp, gif'
+                ));
+            }
             
         }
 
-    } else {
-        
     }
 } 
 
