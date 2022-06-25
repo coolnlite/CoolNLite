@@ -629,8 +629,6 @@ if(!empty($_POST['id_gallery'])){
             //Kiểm tra xem kiểu file có hợp lệ hoặc dung lượng lớn không
             $validTypes = array("jpg","jpeg","png","bmp","gif");
             $fileType = substr($path,strrpos($path,".") + 1);
-
-            $notify = array();
             
             if(in_array($fileType,$validTypes)){
                 //Kiểm tra kích thước file
@@ -663,17 +661,15 @@ if(!empty($_POST['id_gallery'])){
                 }else{
                     echo json_encode(array(
                         'status' => 0,
-                        'messaage' => 'Ảnh '.$filename.' uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
+                        'messaage' => $filename.' uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
                     ));
                 }
             }else{
                 echo json_encode(array(
                     'status' => 0,
-                    'message' => 'Ảnh '.$filename.' uploads không thành công .Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp, gif'
+                    'message' => $filename.' uploads không thành công .Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp, gif'
                 ));
             }
-            
-            echo json_encode($notify);
 
         }
 

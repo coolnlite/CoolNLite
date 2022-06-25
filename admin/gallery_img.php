@@ -106,12 +106,11 @@
                     cache: false,
                     processData:false,
                     success: function(response){ 
-                        if(response.status == 1){
-                            window.location.reload();
+                        if(response.status == 0){
+                            $('#notify_error').text(response.message);
                         }else{
-                            alert(response.message);
+                            window.location.reload();
                         }
-                        
                     }
                 })
             });

@@ -20,6 +20,7 @@
         <button type="submit" class="btn btn-primary">Thêm</button>
 
     </form>
+    <p class="text-danger text-center" id="notify_error"></p>
 </div>
 
 <h4 class="text-center">Danh sách ảnh dòng xe <span class="text-primary"><?php print $rows['name']?></span></h4>
@@ -40,7 +41,7 @@
         <div class="col-md-2"></div>
       </div>
   </div>
-  
+
 </div>
 <?php
     }//Kết thúc vòng lặp while
