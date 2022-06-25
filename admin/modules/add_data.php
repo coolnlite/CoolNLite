@@ -608,7 +608,7 @@ if(!empty($_POST['id_gallery'])){
     //Kiểm tra file upload
     if (!empty(array_filter($_FILES['gallery_img']['name']))) {
         
-        foreach($_FILES['gallery_img']['name'] as $id){
+        foreach($_FILES['gallery_img']['name'] as $id => $val){
             /* Nhận tên file */
             $filename = $_FILES['gallery_img']['name'][$id];
             /* Nhận kích thước file */
