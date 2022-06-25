@@ -257,7 +257,7 @@ if(isset($_POST['delete_gallery_img']) && !empty($_POST['id_gallery_img'])){
     
     $sql = "SELECT `image` FROM `gallery_img` WHERE `id` = '$id_gallery_img'";
     $gallery = executeResult($sql);
-    foreach( $gallery as $gl){
+    foreach($gallery as $gl){
         $image = $gl['image'];
         $link = '../../';
         $file = $link.$image;

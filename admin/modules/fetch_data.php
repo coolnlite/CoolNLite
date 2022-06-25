@@ -799,7 +799,7 @@ if(isset($_POST['gallery_img'])){
         $sub_array[] = facebook_time_ago($row['time']);
         $sub_array[] = 
         '
-        <a title="Xóa" href="javascript:void();" data-id="'.$row['id_gallery'].'"  
+        <a title="Xóa" href="javascript:void();" data-id="'.$row['id'].'"  
         class="btn btn-danger btn-sm deleteGalleryImg" >
         <i class="fas fa-trash-alt"></i>
         </a>
