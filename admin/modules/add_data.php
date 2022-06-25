@@ -653,9 +653,7 @@ if(!empty($_POST['id_gallery'])){
                         $result = mysqli_query($conn,$sql);
 
                         if($result){
-                            echo json_encode(array(
-                            'status' => 1,
-                            ));
+                           
                         }else{
                             echo json_encode(array(
                             'status' => 0,
