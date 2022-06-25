@@ -116,6 +116,36 @@
                     }
                 })
             });
+
+            // Xóa mẫu tin dòng xe
+            $(document).on('click', '.deleteGalleryImg', function(event) {
+            var table = $('#listGalleryImg').DataTable();
+            event.preventDefault();
+            var id_gallery_img = $(this).data('id');
+                if (confirm("Bạn chắc chắc có muốn xóa ảnh dòng xe này")) {
+                $.ajax({
+                    url: '<?php echo ''.$DOMAIN.'modules/delete_data.php'?>',
+                    data: {
+                    delete_gallery_img : true,
+                    id_gallery_img: id_gallery_img
+                    },
+                    type: "post",
+                    success: function(data) {
+                    var json = JSON.parse(data);
+                    status = json.status;
+                    if (status == 'success') {
+                        $("#" + id_gallery_img).closest('tr').remove();
+                    } else {
+                        alert('Có lỗi gì đó');
+                        return;
+                    }
+                    }
+                });
+                } else {
+                return null;
+                }
+            })
+
         })
     </script>
 </body>

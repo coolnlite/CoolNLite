@@ -630,6 +630,8 @@ if(!empty($_POST['id_gallery'])){
             $validTypes = array("jpg","jpeg","png","bmp","gif");
             $fileType = substr($path,strrpos($path,".") + 1);
 
+            $notify = array();
+            
             if(in_array($fileType,$validTypes)){
                 //Kiểm tra kích thước file
                 if($filesize < 2 * 1024 * 1024){
@@ -653,13 +655,9 @@ if(!empty($_POST['id_gallery'])){
                         $result = mysqli_query($conn,$sql);
 
                         if($result){
-                           
-                        }else{
                             echo json_encode(array(
-                            'status' => 0,
-                            'message' => 'Thêm hình ảnh cho dòng xe thất bại'
+                                'status' => 1,
                             ));
-                            exit();
                         }
                     }
                 }else{
@@ -675,6 +673,8 @@ if(!empty($_POST['id_gallery'])){
                 ));
             }
             
+            echo json_encode($notify);
+
         }
 
     }

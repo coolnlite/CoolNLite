@@ -795,12 +795,12 @@ if(isset($_POST['gallery_img'])){
     {
         $sub_array = array();
         $sub_array[] = $row['id'];
-        $sub_array[] = '<img src="'.$row['image'].'" alt="">';
+        $sub_array[] = '<img src="'.$base_url.$row['image'].'" alt="ảnh đại diện">';
         $sub_array[] = facebook_time_ago($row['time']);
         $sub_array[] = 
         '
         <a title="Xóa" href="javascript:void();" data-id="'.$row['id_gallery'].'"  
-        class="btn btn-danger btn-sm deleteGallery" >
+        class="btn btn-danger btn-sm deleteGalleryImg" >
         <i class="fas fa-trash-alt"></i>
         </a>
         ';
