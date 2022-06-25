@@ -649,15 +649,13 @@ if(!empty($_POST['id_gallery'])){
                         $time = date('Y-m-d H:i:s');
 
                         $sql = "INSERT INTO `gallery_img` (`id_gallery`, `image`, `time`) 
-                        VALUES ($id_gallery,$gallery_img,'$time')";
+                        VALUES ('$id_gallery','$gallery_img','$time')";
                         $result = mysqli_query($conn,$sql);
 
                         if($result){
                             echo json_encode(array(
                             'status' => 1,
-                            'message' => 'Thêm hình ảnh cho dòng xe thành công'
                             ));
-                            exit();
                         }else{
                             echo json_encode(array(
                             'status' => 0,
