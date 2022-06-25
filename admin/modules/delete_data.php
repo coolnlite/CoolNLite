@@ -256,14 +256,14 @@ if(isset($_POST['delete_gallery_img']) && !empty($_POST['id_gallery_img'])){
     $id_gallery_img = $_POST['id_gallery_img'];
     
     $sql = "SELECT `image` FROM `gallery_img` WHERE `id` = '$id_gallery_img'";
-    $users = executeResult($sql);
+    $gallery = executeResult($sql);
     foreach( $gallery as $gl){
         $image = $gl['image'];
         $link = '../../';
         $file = $link.$image;
         unlink($file);
     }
-    $sql = "DELETE FROM `gallery_img` WHERE `id`= '$id_gallery_img'";
+    $sql = "DELETE FROM `gallery_img` WHERE `id` = '$id_gallery_img'";
     $result =mysqli_query($conn,$sql);
     if($result == true)
     {
