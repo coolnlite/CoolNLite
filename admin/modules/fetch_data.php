@@ -795,7 +795,7 @@ if(isset($_POST['gallery_img'])){
     {
         $sub_array = array();
         $sub_array[] = $row['id'];
-        $sub_array[] = $row['name'];
+        $sub_array[] = '<img src="'.$row['image'].'" alt="">';
         $sub_array[] = facebook_time_ago($row['time']);
         $sub_array[] = 
         '
