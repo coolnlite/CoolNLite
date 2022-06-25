@@ -107,6 +107,7 @@
                     processData:false,
                     success: function(response){ 
                         if(response.status == 1){
+                            alert('Thêm hình ảnh thành công')
                             window.location.reload();
                         }else{
                             alert(response.message);
