@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 23, 2022 at 12:31 PM
+-- Generation Time: Jun 25, 2022 at 07:23 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -124,6 +124,15 @@ CREATE TABLE `gallery` (
   `time` varchar(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id_gallery`, `name`, `time`) VALUES
+(1, 'COLORADO', '2022-06-24 12:06:00'),
+(2, 'GLC 200', '2022-06-24 12:06:00'),
+(3, 'GLB35', '2022-06-24 16:16:14');
+
 -- --------------------------------------------------------
 
 --
@@ -133,7 +142,7 @@ CREATE TABLE `gallery` (
 CREATE TABLE `gallery_img` (
   `id` int(11) NOT NULL,
   `id_gallery` int(11) NOT NULL,
-  `image` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `image` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `time` varchar(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -318,7 +327,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user_name`, `email`, `pass_word`, `position`, `token`, `email_token`, `full_name`, `image`, `status`, `time`) VALUES
-(1, 'thaisaone', 'vodongthai68@gmail.com', 'f2db2c94d7f2554ccda9edd32ae2bef5', 2, '5YTI3VHmYA8fzGvpziCmIijqHnPq3R', '6rTTL0crUtLsPMAHzDEqsmfD3z0IvQ', 'Võ Đông Thái', '/uploads/users/1d7f3558b481ac55f57c60f3c03321ef.jpg', 1, '2022-05-19 10:13:12'),
+(1, 'thaisaone', 'vodongthai68@gmail.com', 'f2db2c94d7f2554ccda9edd32ae2bef5', 2, '2gtiZzdPg4NAcOYDQxXrhtRZFfnYHC', '6rTTL0crUtLsPMAHzDEqsmfD3z0IvQ', 'Võ Đông Thái', '/uploads/users/1d7f3558b481ac55f57c60f3c03321ef.jpg', 1, '2022-05-19 10:13:12'),
 (30, 'khacnguyen', 'doankhacnguyen57608@gmail.com', '075e81203213785a5975e4cb57b83285', 1, 'bwGXwiaPObq9po5Y98Y9ZtQvpVLtmP', 'bqDWvGuPB60mODQhLc9JW9t19mxXTf', 'Nguyễn Gà', 'uploads/users/71472a1078e285e836d0f97eaee84872.jpg', 1, '2022-06-20 11:32:12');
 
 --
@@ -442,13 +451,13 @@ ALTER TABLE `footer`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `gallery_img`
 --
 ALTER TABLE `gallery_img`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `keyword`
