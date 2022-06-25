@@ -251,4 +251,37 @@ if(isset($_POST['delete_gallery']) && !empty($_POST['id_gallery'])){
 
 }
 
+//delete ảnh dòng xe
+if(isset($_POST['delete_gallery_img']) && !empty($_POST['id_gallery_img'])){
+    $id_gallery_img = $_POST['id_gallery_img'];
+    
+    $sql = "SELECT `image` FROM `gallery_img` WHERE `id` = '$id_gallery_img'";
+    $users = executeResult($sql);
+    foreach( $gallery as $gl){
+        $image = $gl['image'];
+        $link = '../../';
+        $file = $link.$image;
+        unlink($file);
+    }
+    $sql = "DELETE FROM `gallery_img` WHERE `id`= '$id_gallery_img'";
+    $result =mysqli_query($conn,$sql);
+    if($result == true)
+    {
+        $data = array(
+            'status'=>'success',
+        );
+
+        echo json_encode($data);
+    }
+    else
+    {
+        $data = array(
+            'status'=>'failed',
+        );
+
+        echo json_encode($data);
+    } 
+
+}
+
 ?>
