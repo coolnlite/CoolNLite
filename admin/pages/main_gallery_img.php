@@ -23,22 +23,22 @@
 </div>
 
   <h4 class="text-center">Danh sách ảnh dòng xe <span class="text-primary"><?php print $rows['name']?></span></h4>
-  <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-12">
-            <table id="listGalleryImg" class="table table-striped table-bordered" style="width: 100%;">
-              <thead>
-                <th>Id</th>
-                <th>Ảnh dòng xe</th>
-                <th>Thời gian đăng</th>
-                <th>Thao tác</th>
-              </thead>
-              <tbody>
-              </tbody>
-            </table>
-          </div>
-          <div class="col-md-2"></div>
+  <div class="container-fluid text-left">
+      <div class="row">
+        <div class="col-xl-12">
+          <table id="listGalleryImg" class="table table-striped table-bordered text-center" style="width: 100%;">
+            <thead>
+              <th>Id</th>
+              <th>Ảnh dòng xe</th>
+              <th>Thời gian đăng</th>
+              <th>Thao tác</th>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
         </div>
+        <div class="col-md-2"></div>
+      </div>
   </div>
 
 
