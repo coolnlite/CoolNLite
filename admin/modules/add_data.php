@@ -676,7 +676,7 @@ if(!empty($_POST['id_gallery'])){
                 if($insert) {
                     $response = array(
                         "status" => 1,
-                        "message" => $filename.' uploads thành công'
+                        "message" =>'uploads ảnh thành công'
                     );
                 } else {
                     $response = array(
