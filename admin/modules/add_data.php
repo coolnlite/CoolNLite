@@ -648,15 +648,13 @@ if(!empty($_POST['id_gallery'])){
                         $gallery_img =  $tar_get . '/' .$path;
                         $time = date('Y-m-d H:i:s');
 
-                        $sql = "INSERT INTO `gallery_img` (`id_gallery`, `image`, `time`) 
-                        VALUES ('$id_gallery','$gallery_img','$time')";
-                        $result = mysqli_query($conn,$sql);
+                        $sqlVal = "('".$id_gallery."' ,'".$gallery_img."', '".$time."')";
 
-                        if($result){
-                            echo json_encode(array(
-                                'status' => 1,
-                            ));
-                        }
+                    }else{
+                        echo json_encode(array(
+                            'status' => 0,
+                            'messaage' => $filename.' uploads không thành công .'
+                        ));
                     }
                 }else{
                     echo json_encode(array(
@@ -671,8 +669,28 @@ if(!empty($_POST['id_gallery'])){
                 ));
             }
 
+            //Thêm data vào db
+            if(!empty($sqlVal)) {
+                $insert = $conn -> query("INSERT INTO `gallery_img` (`id_gallery`, `image`, `time`) 
+                VALUES $sqlVal");
+                if($insert) {
+                    echo json_encode(array(
+                        'status' => 1,
+                    ));
+                } else {
+                    echo json_encode(array(
+                        'status' => 0,
+                        'message' => $filename.' uploads không thành công .'
+                    ));
+                }
+            }
         }
 
+    }else{
+        echo json_encode(array(
+            'status' => 0,
+            'message' => "Vui lòng chọn file để uploads"
+        ));
     }
 } 
 

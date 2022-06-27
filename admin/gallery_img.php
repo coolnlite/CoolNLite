@@ -108,8 +108,9 @@
                     success: function(response){ 
                         if(response.status == 0){
                             $('#notify_error').text(response.message);
-                        }else{
-                            window.location.reload();
+                        }
+                        if(response.status == 0){
+                            alert('Cập nhật hình đại diện thành công');
                         }
                     }
                 })
