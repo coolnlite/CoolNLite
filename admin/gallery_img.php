@@ -107,7 +107,19 @@
                     processData:false,
                     success: function(response){ 
                        if(response.move == 0){
-                        
+                        $('#notify').append(response.message);
+                       }
+                       if(response.size == 0){
+                        $('#notify').append(response.message);
+                       }
+                       if(response.type == 0){
+                        $('#notify').append(response.message);
+                       }
+                       if(response.failed == 0){
+                        $('#notify').append(response.message);
+                       }
+                       if(response.success == 1){
+                        $('#notify').append(response.message);
                        }
                     }
                 })
