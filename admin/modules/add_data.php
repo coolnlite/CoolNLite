@@ -674,24 +674,26 @@ if(!empty($_POST['id_gallery'])){
                 $insert = $conn -> query("INSERT INTO `gallery_img` (`id_gallery`, `image`, `time`) 
                 VALUES $sqlVal");
                 if($insert) {
-                    echo json_encode(array(
-                        'status' => 1,
-                    ));
+                    $response = array(
+                        "status" => 1,
+                        "message" => $filename.' uploads thành công'
+                    );
                 } else {
-                    echo json_encode(array(
-                        'status' => 0,
-                        'message' => $filename.' uploads không thành công .'
-                    ));
+                    $response = array(
+                        "status" => 0,
+                        "message" => $filename.' uploads không thành công' 
+                    );
                 }
             }
         }
 
     }else{
-        echo json_encode(array(
-            'status' => 0,
-            'message' => "Vui lòng chọn file để uploads"
-        ));
+        $response = array(
+            "status" => 0,
+            "message" => "Vui lòng chọn file để uploads" 
+        );
     }
+    echo json_encode($response);
 } 
 
 ?>
