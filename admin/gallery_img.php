@@ -84,14 +84,14 @@
                 'url': '<?php echo ''.$DOMAIN.'modules/fetch_data.php'?>',
                 'data': {
                     gallery_img : true,
-                    id_gallery_img : $id
+                    id_gallery_img : <?php print $id?>
                 },
                 
                 'type': 'post',
             },
             "aoColumnDefs": [{
                 "bSortable": false,
-                "aTargets": [3]
+                "aTargets": [4]
                 },
 
             ]

@@ -762,14 +762,15 @@ if(isset($_POST['gallery_img']) && isset($_POST['id_gallery_img'])){
    
     $columns = array(
         0 => 'id',
-        1 => 'name',
-        2 => 'time'
+        1 => 'id_gallery',
+        2 => 'name',
+        3 => 'time'
     );
     
     if(isset($_POST['search']['value']))
     {
         $search_value = $_POST['search']['value'];
-        $sql .= " WHERE `id` like '%".$search_value."%'";
+        $sql .= " OR `id` like '%".$search_value."%'";
     }
 
     if(isset($_POST['order']))
@@ -798,6 +799,7 @@ if(isset($_POST['gallery_img']) && isset($_POST['id_gallery_img'])){
     {
         $sub_array = array();
         $sub_array[] = $row['id'];
+        $sub_array[] = $row['id_gallery'];
         $sub_array[] = '<img src="'.$base_url.$row['image'].'" alt="ảnh đại diện">';
         $sub_array[] = facebook_time_ago($row['time']);
         $sub_array[] = 
