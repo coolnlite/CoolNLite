@@ -91,7 +91,7 @@
             },
             "aoColumnDefs": [{
                 "bSortable": false,
-                "aTargets": [4]
+                "aTargets": [3]
                 },
 
             ]

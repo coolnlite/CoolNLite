@@ -750,7 +750,7 @@ if(isset($_POST['gallery'])){
 
 }
 
-if(isset($_POST['gallery_img']) && isset($_POST['id_gallery_img'])){
+if(isset($_POST['gallery_img']) && !empty($_POST['id_gallery_img'])){
 
     $id_gallery_img = mysqli_real_escape_string($conn, $_POST['id_gallery_img']);
 
@@ -762,9 +762,8 @@ if(isset($_POST['gallery_img']) && isset($_POST['id_gallery_img'])){
    
     $columns = array(
         0 => 'id',
-        1 => 'id_gallery',
-        2 => 'name',
-        3 => 'time'
+        1 => 'image',
+        2 => 'time'
     );
     
     if(isset($_POST['search']['value']))
@@ -799,7 +798,6 @@ if(isset($_POST['gallery_img']) && isset($_POST['id_gallery_img'])){
     {
         $sub_array = array();
         $sub_array[] = $row['id'];
-        $sub_array[] = $row['id_gallery'];
         $sub_array[] = '<img src="'.$base_url.$row['image'].'" alt="ảnh đại diện">';
         $sub_array[] = facebook_time_ago($row['time']);
         $sub_array[] = 
