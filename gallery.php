@@ -70,6 +70,85 @@
     <link rel="stylesheet" href="<?php print $base_url?>public/css/magnific-popup.css" />
     <!-- css -->
     <style>
+        .select-hidden {
+        display: none;
+        visibility: hidden;
+        padding-right: 10px;
+        }
+
+        .select {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        font-size: 16px;
+        color: #fff;
+        width: 220px;
+        height: 40px;
+        }
+
+        .select-styled {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #c0392b;
+        padding: 8px 15px;
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+        }
+        .select-styled:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        border-color: #fff transparent transparent transparent;
+        position: absolute;
+        top: 16px;
+        right: 10px;
+        }
+        .select-styled:hover {
+        background-color: #b83729;
+        }
+        .select-styled:active, .select-styled.active {
+        background-color: #ab3326;
+        }
+        .select-styled:active:after, .select-styled.active:after {
+        top: 9px;
+        border-color: transparent transparent #fff transparent;
+        }
+
+        .select-options {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 999;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: #ab3326;
+        }
+        .select-options li {
+        margin: 0;
+        padding: 12px 0;
+        text-indent: 15px;
+        border-top: 1px solid #962d22;
+        -moz-transition: all 0.15s ease-in;
+        -o-transition: all 0.15s ease-in;
+        -webkit-transition: all 0.15s ease-in;
+        transition: all 0.15s ease-in;
+        }
+        .select-options li:hover, .select-options li.is-selected {
+        color: #c0392b;
+        background: #fff;
+        }
+        .select-options li[rel="hide"] {
+        display: none;
+        }
         .title-gallery{
             position: relative;
         }
@@ -165,46 +244,96 @@
     <!-- javasript -->
     <script>
         $(document).ready(function() {
-	$('.popup-gallery').magnificPopup({
-		delegate: 'a',
-		type: 'image',
-		tLoading: 'Đang tải ảnh #%curr%...',
-		mainClass: 'mfp-img-mobile',
-		gallery: {
-			enabled: true,
-			navigateByImgClick: true,
-			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-		},
-		image: {
-			tError: '<a href="%url%">Ảnh #%curr%</a> không thể tải được.',
-		}
-	});
-});
+            //Popup
+            $('.popup-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Đang tải ảnh #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+                },
+                image: {
+                    tError: '<a href="%url%">Ảnh #%curr%</a> không thể tải được.',
+                }
+            });
 
-$(document).ready(function () {
-      //Load gallery 
-      load_gallery(0);
-        function load_gallery(id_gallery) {
-          $this = $('#result_gallery');
-          var id_gallery = $("#selGallery option:selected").val();
-          $.ajax({
-              type: "POST",
-              url: '<?php print $base_url.'modules/result.php'?>',
-              data: {
-                gallery : true,
-                id_gallery : id_gallery
-              },
-              success: function(data) {
-                  $this.html(data);
-              }
-          })
-      }
-      
-      $(document).on('change','#selGallery', function(){
-        var id_gallery = $("#selGallery option:selected").val();
-        load_gallery(id_gallery);
-      })
-})
+            //Load gallery 
+                load_gallery(0);
+                    function load_gallery(id_gallery) {
+                    $this = $('#result_gallery');
+                    var id_gallery = $("#selGallery option:selected").val();
+                    $.ajax({
+                        type: "POST",
+                        url: '<?php print $base_url.'modules/result.php'?>',
+                        data: {
+                            gallery : true,
+                            id_gallery : id_gallery
+                        },
+                        success: function(data) {
+                            $this.html(data);
+                        }
+                    })
+                }
+                
+                $(document).on('change','#selGallery', function(){
+                    var id_gallery = $("#selGallery option:selected").val();
+                    load_gallery(id_gallery);
+                })
+
+            //Custom select
+            $('select').each(function(){
+                var $this = $(this), numberOfOptions = $(this).children('option').length;
+            
+                $this.addClass('select-hidden'); 
+                $this.wrap('<div class="select"></div>');
+                $this.after('<div class="select-styled"></div>');
+
+                var $styledSelect = $this.next('div.select-styled');
+                $styledSelect.text($this.children('option').eq(0).text());
+            
+                var $list = $('<ul />', {
+                    'class': 'select-options'
+                }).insertAfter($styledSelect);
+            
+                for (var i = 0; i < numberOfOptions; i++) {
+                    $('<li />', {
+                        text: $this.children('option').eq(i).text(),
+                        rel: $this.children('option').eq(i).val()
+                    }).appendTo($list);
+                    //if ($this.children('option').eq(i).is(':selected')){
+                    //  $('li[rel="' + $this.children('option').eq(i).val() + '"]').addClass('is-selected')
+                    //}
+                }
+            
+                var $listItems = $list.children('li');
+            
+                $styledSelect.click(function(e) {
+                    e.stopPropagation();
+                    $('div.select-styled.active').not(this).each(function(){
+                        $(this).removeClass('active').next('ul.select-options').hide();
+                    });
+                    $(this).toggleClass('active').next('ul.select-options').toggle();
+                });
+            
+                $listItems.click(function(e) {
+                    e.stopPropagation();
+                    $styledSelect.text($(this).text()).removeClass('active');
+                    $this.val($(this).attr('rel'));
+                    $list.hide();
+                    //console.log($this.val());
+                });
+            
+                $(document).click(function() {
+                    $styledSelect.removeClass('active');
+                    $list.hide();
+                });
+
+            });
+            });
+
     </script>
 </body>
 
