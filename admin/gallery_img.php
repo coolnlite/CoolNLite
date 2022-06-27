@@ -111,6 +111,7 @@
                         }
                         if(response.status == 1){
                             alert(response.message);
+                            window.location.reload();
                         }
                     }
                 })
