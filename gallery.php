@@ -140,8 +140,8 @@
         </section>
 
         <section class="fix-about gallery" id="gallery">
-            <select id='selGallery' class="selGallery" name="selGallery">
-                <option value='0'>Vui lòng chọn dòng xe</option>          
+            <select id='selGallery' class="selGallery">
+                <option value="0">Vui lòng chọn dòng xe</option>          
                 <option value='1'>COLORADO</option>  
                 <option value='2'>GLC 200</option>  
                 <option value='3'>GLB35</option>
@@ -214,6 +214,25 @@
 		}
 	});
 });
+
+$(document).ready(function () {
+      //Load gallery 
+      load_search();
+        function load_search() {
+          $this = $('#result_gallery');
+          $id_gallery = $('#selGallery').val();
+          $.ajax({
+              type: "POST",
+              url: <?php print $base_url?> + 'modules/result.php',
+              data: {
+                id_gallery :  $id_gallery
+              },
+              success: function(data) {
+                  $this.html(data);
+              }
+          })
+      }
+})
     </script>
 </body>
 
