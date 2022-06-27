@@ -151,7 +151,7 @@
         </section>
 
         <section class="fix-about gallery" id="gallery">
-            <select id='selGallery' class="selGallery">
+            <select id='selGallery' class="selGallery" name="selGallery">
                 <option value="0">Vui lòng chọn dòng xe</option>          
                 <?php
                     $sql = "SELECT * FROM `gallery` ORDER BY `id_gallery` ASC";
