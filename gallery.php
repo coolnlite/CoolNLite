@@ -186,8 +186,7 @@ $(document).ready(function () {
       load_gallery(0);
         function load_gallery(id_gallery) {
           $this = $('#result_gallery');
-          $id_gallery = $("#selGallery option:selected").val();
-          console.log($id_gallery);
+          var id_gallery = $("#selGallery option:selected").val();
           $.ajax({
               type: "POST",
               url: '<?php print $base_url.'modules/result.php'?>',
@@ -203,6 +202,7 @@ $(document).ready(function () {
 
       $(document).on('click', '#selGallery option:selected', function(){
         var id_gallery = $("#selGallery option:selected").val();
+        console.log(id_gallery);
         load_gallery(id_gallery);
       });
 })
