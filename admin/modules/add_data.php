@@ -607,6 +607,8 @@ if(!empty($_POST['gallery_name'])){
 if(!empty($_POST['id_gallery'])){
     //Kiểm tra file upload
     if (!empty(array_filter($_FILES['gallery_img']['name']))) {
+
+        $reponse = array();
         
         foreach($_FILES['gallery_img']['name'] as $id => $val){
             /* Nhận tên file */
@@ -651,22 +653,22 @@ if(!empty($_POST['id_gallery'])){
                         $sqlVal = "('".$id_gallery."' ,'".$gallery_img."', '".$time."')";
 
                     }else{
-                        $response = array(
-                            'status' => 0,
-                            'messaage' => $filename.' uploads không thành công .'
+                        $false = array(
+                            'message' => $filename.' uploads không thành công'
                         );
+                        $reponse = array_merge($reponse,$false);
                     }
                 }else{
-                    $response = array(
-                        'status' => 0,
-                        'messaage' => $filename.' uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
+                    $false = array(
+                        'message' => $filename.' uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
                     );
+                    $reponse = array_merge($reponse,$false);
                 }
             }else{
-                $response = array(
-                    'status' => 0,
+                $false = array(
                     'message' => $filename.' uploads không thành công .Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp, gif'
                 );
+                $reponse = array_merge($reponse,$false);
             }
 
             //Thêm data vào db
@@ -674,26 +676,27 @@ if(!empty($_POST['id_gallery'])){
                 $insert = $conn -> query("INSERT INTO `gallery_img` (`id_gallery`, `image`, `time`) 
                 VALUES $sqlVal");
                 if($insert) {
-                    $response = array(
-                        "status" => 1,
-                        "message" =>'uploads ảnh thành công'
+                    $true = array(
+                        'message' => $filename.' uploads thành công'
                     );
+                    $reponse = array_merge($reponse,$true);
+
                 } else {
-                    $response = array(
-                        "status" => 0,
-                        "message" => $filename.' uploads không thành công' 
+                    $false = array(
+                        'message' => $filename.' uploads không thành công'
                     );
+                    $reponse = array_merge($reponse,$false);
                 }
             }
         }
 
     }else{
-        $response = array(
-            "status" => 0,
-            "message" => "Vui lòng chọn file để uploads" 
+        $false = array(
+            'message' => 'Vui lòng chọn file để uploads'
         );
+        $reponse = array_merge($reponse,$false);
     }
-    echo json_encode($response);
+    echo json_encode($reponse);
 } 
 
 ?>
