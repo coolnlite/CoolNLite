@@ -106,13 +106,7 @@
                     cache: false,
                     processData:false,
                     success: function(response){ 
-                        if(response.status == 0){
-                            $('#notify_error').text(response.message);
-                        }
-                        if(response.status == 1){
-                            alert(response.message);
-                            window.location.reload();
-                        }
+                        console.log(response);
                     }
                 })
             });
