@@ -199,12 +199,11 @@ $(document).ready(function () {
               }
           })
       }
-
-      $(document).on('click', '#selGallery option:selected', function(){
+      
+      $(document).on('change','#selGallery', function(){
         var id_gallery = $("#selGallery option:selected").val();
-        console.log(id_gallery);
         load_gallery(id_gallery);
-      });
+      })
 })
     </script>
 </body>
