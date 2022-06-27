@@ -108,7 +108,7 @@
                     processData:false,
                     success: function(response){ 
                        $('.notify-box').show();
-                       $('.notify-body').append();
+                       $('.notify-body').append(response);
                     }
                 })
             });
