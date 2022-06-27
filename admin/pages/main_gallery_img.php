@@ -20,9 +20,6 @@
         <button type="submit" class="btn btn-primary">Thêm</button>
 
     </form>
-    <div id="notify">
-        
-    </div>
 </div>
 
 <h4 class="text-center">Danh sách ảnh dòng xe <span class="text-primary"><?php print $rows['name']?></span></h4>
@@ -49,6 +46,24 @@
     }//Kết thúc vòng lặp while
 }//Kết thúc vòng lặp if
 ?>
+
+<div class="modal notify-box" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Thông báo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="notify-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 // Disable form submissions if there are invalid fields
 (function() {

@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"/>
 
     <link rel="stylesheet" href="./css/style.css">
+    
 </head>
 
 <body>
@@ -106,7 +107,8 @@
                     cache: false,
                     processData:false,
                     success: function(response){ 
-                       $('#notify').append(response);
+                       $('.notify-box').show();
+                       $('.notify-body').append();
                     }
                 })
             });
