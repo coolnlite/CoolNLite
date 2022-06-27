@@ -753,19 +753,18 @@ if(isset($_POST['gallery'])){
 if(isset($_POST['gallery_img']) && !empty($_POST['id_gallery_img'])){
 
     $id_gallery_img = mysqli_real_escape_string($conn, $_POST['id_gallery_img']);
-    $id_gallery_img = (int)$id_gallery_img;
 
     $output= array();
-    $sql = "SELECT * FROM `gallery_img` WHERE id_gallery = $id_gallery_img";
+    $sql = "SELECT * FROM `gallery_img` WHERE `id_gallery` = $id_gallery_img";
 
     $totalQuery = mysqli_query($conn,$sql);
-    var_dump($totalQuery);
     $total_all_rows = mysqli_num_rows($totalQuery);
    
     $columns = array(
         0 => 'id',
-        1 => 'image',
-        2 => 'time'
+        1 => 'id_gallery',
+        2 => 'image',
+        3 => 'time'
     );
     
     if(isset($_POST['search']['value']))
@@ -800,6 +799,7 @@ if(isset($_POST['gallery_img']) && !empty($_POST['id_gallery_img'])){
     {
         $sub_array = array();
         $sub_array[] = $row['id'];
+        $sub_array[] = $row['id_gallery'];
         $sub_array[] = '<img src="'.$base_url.$row['image'].'" alt="ảnh đại diện">';
         $sub_array[] = facebook_time_ago($row['time']);
         $sub_array[] = 
