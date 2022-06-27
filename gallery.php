@@ -195,7 +195,7 @@ $(document).ready(function () {
           $id_gallery = $('#selGallery').val();
           $.ajax({
               type: "POST",
-              url: <?php print $base_url?> + 'modules/result.php',
+              url: '<?php print $base_url.'modules/result.php'?>',
               data: {
                 gallery : true,
                 id_gallery :  $id_gallery
