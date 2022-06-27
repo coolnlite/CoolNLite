@@ -653,22 +653,22 @@ if(!empty($_POST['id_gallery'])){
                         $sqlVal = "('".$id_gallery."' ,'".$gallery_img."', '".$time."')";
 
                     }else{
-                        $false = array(
+                        $move = array(
                             'message' => $filename.' uploads không thành công'
                         );
-                        $reponse = array_merge($reponse,$false);
+                        $reponse = array_merge($reponse,$move);
                     }
                 }else{
-                    $false = array(
+                    $size = array(
                         'message' => $filename.' uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
                     );
-                    $reponse = array_merge($reponse,$false);
+                    $reponse = array_merge($reponse,$size);
                 }
             }else{
-                $false = array(
+                $type = array(
                     'message' => $filename.' uploads không thành công .Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp, gif'
                 );
-                $reponse = array_merge($reponse,$false);
+                $reponse = array_merge($reponse, $type);
             }
 
             //Thêm data vào db
