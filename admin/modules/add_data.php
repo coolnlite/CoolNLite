@@ -634,7 +634,7 @@ if(!empty($_POST['id_gallery'])){
                 //Kiểm tra kích thước file
                 if($filesize < 2 * 1024 * 1024){
                     //Kiểm tra kích thước ảnh trước khi upload
-                    $size = $_FILES["image"]['tmp_name'];
+                    $size = $_FILES["gallery_img"]['tmp_name'][$id];
                     list($width, $height) = getimagesize($size);
                     if($width <= "2000" || $height <= "2000") {
                        //Check xem ảnh đã tồn tại hay chưa nếu không thì đổi tên
