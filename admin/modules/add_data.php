@@ -608,9 +608,10 @@ if(!empty($_POST['id_gallery'])){
     //Kiểm tra file upload
     if (!empty(array_filter($_FILES['gallery_img']['name']))) {
 
-        $message = array();
-
         foreach($_FILES['gallery_img']['name'] as $id => $val){
+            
+            $message = array();
+
             /* Nhận tên file */
             $filename = $_FILES['gallery_img']['name'][$id];
             /* Nhận kích thước file */
@@ -660,7 +661,7 @@ if(!empty($_POST['id_gallery'])){
                     $message = array_push($message,'<p class="text-danger text-center" id="notify_move">'.$filename.' uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB</p>');
                 }
             }else{
-                $message = array_push($message,'<p class="text-danger text-center" id="notify_move">'.$filename.' uploads không thành công .Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp, gif</p>');
+                $message = array_push($message,''.$filename.'uploads không thành công .Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp, gif');
             }
 
             //Thêm data vào db
