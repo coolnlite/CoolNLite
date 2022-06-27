@@ -633,10 +633,6 @@ if(!empty($_POST['id_gallery'])){
             if(in_array($fileType,$validTypes)){
                 //Kiểm tra kích thước file
                 if($filesize < 2 * 1024 * 1024){
-                    //Kiểm tra kích thước ảnh trước khi upload
-                    $size = $_FILES["gallery_img"]['tmp_name'][$id];
-                    list($width, $height) = getimagesize($size);
-                    if($width <= "2000" || $height <= "2000") {
                        //Check xem ảnh đã tồn tại hay chưa nếu không thì đổi tên
                         $num = 1;
                         $fileName = substr($path,0,strrpos($path,"."));
@@ -657,9 +653,6 @@ if(!empty($_POST['id_gallery'])){
                         }else{
                             $message .= '<p class="text-danger text-center" ><b>'.$filename.'</b> uploads không thành công</p>';
                         }
-                    }else{
-                        $message .= '<p class="text-danger text-center" ><b>'.$filename.'</b> uploads không thành công .Vui lòng chọn ảnh có kích thước nhỏ hơn hoặc bằng 2000px X 2000px  </p>';
-                    }
                 }else{
                     $message .= '<p class="text-danger text-center" ><b>'.$filename.'</b> uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB</p>';
 
