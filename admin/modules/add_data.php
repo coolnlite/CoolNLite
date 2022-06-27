@@ -609,8 +609,8 @@ if(!empty($_POST['id_gallery'])){
     if (!empty(array_filter($_FILES['gallery_img']['name']))) {
 
         foreach($_FILES['gallery_img']['name'] as $id => $val){
-            
-            $message = array();
+
+            $message = '';
 
             /* Nhận tên file */
             $filename = $_FILES['gallery_img']['name'][$id];
@@ -654,14 +654,14 @@ if(!empty($_POST['id_gallery'])){
                         $sqlVal = "('".$id_gallery."' ,'".$gallery_img."', '".$time."')";
 
                     }else{
-                        $message = array_push($message,'<p class="text-danger text-center" id="notify_move">'.$filename.' uploads không thành công</p>');
-                        
+                        $message += '<p class="text-danger text-center" id="notify_move">'.$filename.' uploads không thành công</p>';
                     }
                 }else{
-                    $message = array_push($message,'<p class="text-danger text-center" id="notify_move">'.$filename.' uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB</p>');
+                    $message += '<p class="text-danger text-center" id="notify_move">'.$filename.' uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB</p>';
+
                 }
             }else{
-                $message = array_push($message,''.$filename.'uploads không thành công .Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp, gif');
+                $message += '<p class="text-danger text-center" id="notify_move">'.$filename.' uploads không thành công .Vui lòng chọn ảnh đuôi là jpg, jpeg, png, bmp, gif</p>';
             }
 
             //Thêm data vào db
@@ -669,10 +669,13 @@ if(!empty($_POST['id_gallery'])){
                 $insert = $conn -> query("INSERT INTO `gallery_img` (`id_gallery`, `image`, `time`) 
                 VALUES $sqlVal");
                 if($insert) {
-                    $message = array_push($message,'<p class="text-success text-center" id="notify_move">'.$filename.' uploads thành công</p>');
+
+                    $message += '<p class="text-success text-center" id="notify_move">'.$filename.' uploads thành công</p>'; 
 
                 } else {
-                    $message = array_push($message,'<p class="text-danger text-center" id="notify_move">'.$filename.' uploads không thành công</p>');
+
+                    $message += '<p class="text-danger text-center" id="notify_move">'.$filename.' uploads không thành công</p>';
+                    
                 }
             }
         }
