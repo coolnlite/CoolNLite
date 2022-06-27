@@ -23,7 +23,7 @@
 </div>
 
 <h4 class="text-center">Danh sách ảnh dòng xe <span class="text-primary"><?php print $rows['name']?></span></h4>
-  <div class="container-fluid">
+  <div class="container-fluid text-center">
       <div class="row">
         <div class="col-xl-12">
           <table id="listGalleryImg" class="table table-striped table-bordered text-center" style="width: 100%;">

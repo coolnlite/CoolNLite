@@ -64,6 +64,7 @@
             "fnCreatedRow": function(nRow, aData, iDataIndex) {
                 $(nRow).attr('id', aData[0]);
             },
+            bFilter:false,
             language: {
                 lengthMenu: 'Hiện _MENU_ mẫu tin trên trang',
                 zeroRecords: 'Không tìm thấy mẫu tin nào',

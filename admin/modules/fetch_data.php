@@ -766,11 +766,6 @@ if(isset($_POST['gallery_img']) && !empty($_POST['id_gallery_img'])){
         2 => 'time'
     );
     
-    if(isset($_POST['search']['value']))
-    {
-        $search_value = $_POST['search']['value'];
-        $sql .= " OR `id` like '%".$search_value."%'";
-    }
 
     if(isset($_POST['order']))
     {
