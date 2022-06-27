@@ -303,9 +303,6 @@
                         text: $this.children('option').eq(i).text(),
                         rel: $this.children('option').eq(i).val()
                     }).appendTo($list);
-                    //if ($this.children('option').eq(i).is(':selected')){
-                    //  $('li[rel="' + $this.children('option').eq(i).val() + '"]').addClass('is-selected')
-                    //}
                 }
             
                 var $listItems = $list.children('li');
