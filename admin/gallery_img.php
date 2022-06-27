@@ -96,22 +96,6 @@
             ]
             });
 
-            $("#faddGalleryImg").on('submit', function(e){
-                e.preventDefault();
-                    $.ajax({
-                    type: 'POST',
-                    url: '<?php print $DOMAIN.'modules/add_data.php'?>',
-                    data: new FormData(this),
-                    dataType : 'json',
-                    contentType: false,
-                    cache: false,
-                    processData:false,
-                    success: function(response){ 
-                       $('.notify-box').show();
-                       $('.notify-body').append(response);
-                    }
-                })
-            });
 
             // Xóa mẫu tin dòng xe
             $(document).on('click', '.deleteGalleryImg', function(event) {
@@ -142,6 +126,31 @@
                 }
             })
 
+            //Thêm hình ảnh
+            $("#faddGalleryImg").on('submit', function(e){
+                e.preventDefault();
+                    $.ajax({
+                    type: 'POST',
+                    url: '<?php print $DOMAIN.'modules/add_data.php'?>',
+                    data: new FormData(this),
+                    dataType : 'json',
+                    contentType: false,
+                    cache: false,
+                    processData:false,
+                    success: function(response){ 
+                       $('.notify-box').show();
+                       $('.notify-body').append(response);
+                    }
+                })
+            });
+
+            //Modal 
+            $('.btn-secondary').click(function(){
+                $('.notify-box').hide();
+            })
+            $('.close').click(function(){
+                $('.notify-box').hide();
+            })
         })
     </script>
 </body>
