@@ -83,7 +83,8 @@
             'ajax': {
                 'url': '<?php echo ''.$DOMAIN.'modules/fetch_data.php'?>',
                 'data': {
-                    gallery_img : true
+                    gallery_img : true,
+                    id_gallery_img : $id
                 },
                 
                 'type': 'post',
