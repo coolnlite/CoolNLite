@@ -147,9 +147,11 @@
             //Modal 
             $('.btn-secondary').click(function(){
                 $('.notify-box').hide();
+                window.location.reload();
             })
             $('.close').click(function(){
                 $('.notify-box').hide();
+                window.location.reload();
             })
         })
     </script>

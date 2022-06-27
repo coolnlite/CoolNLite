@@ -655,17 +655,17 @@ if(!empty($_POST['id_gallery'])){
                             $sqlVal = "('".$id_gallery."' ,'".$gallery_img."', '".$time."')";
 
                         }else{
-                            $message .= '<p class="text-danger text-center" >'.$filename.' uploads không thành công</p>';
+                            $message .= '<p class="text-danger text-center" ><b>'.$filename.'</b> uploads không thành công</p>';
                         }
                     }else{
-                        $message .= '<p class="text-danger text-center" >'.$filename.' uploads không thành công .Vui lòng chọn ảnh có kích thước nhỏ hơn hoặc bằng 2000px X 2000px  </p>';
+                        $message .= '<p class="text-danger text-center" ><b>'.$filename.'</b> uploads không thành công .Vui lòng chọn ảnh có kích thước nhỏ hơn hoặc bằng 2000px X 2000px  </p>';
                     }
                 }else{
-                    $message .= '<p class="text-danger text-center" >'.$filename.' uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB</p>';
+                    $message .= '<p class="text-danger text-center" ><b>'.$filename.'</b> uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB</p>';
 
                 }
             }else{
-                $message .= '<p class="text-danger text-center" >'.$filename.' uploads không thành công .Vui lòng chọn ảnh đuôi là jpg, jpeg, png, bmp, gif</p>';
+                $message .= '<p class="text-danger text-center" ><b>'.$filename.'</b> uploads không thành công .Vui lòng chọn ảnh đuôi là jpg, jpeg, png, bmp, gif</p>';
             }
 
             //Thêm data vào db
@@ -673,9 +673,9 @@ if(!empty($_POST['id_gallery'])){
                 $insert = $conn -> query("INSERT INTO `gallery_img` (`id_gallery`, `image`, `time`) 
                 VALUES $sqlVal");
                 if($insert) {
-                    $message .= '<p class="text-success text-center">'.$filename.' uploads ảnh thành công</p>'; 
+                    $message .= '<p class="text-success text-center"><b>'.$filename.'</b> uploads ảnh thành công</p>'; 
                 } else {
-                    $message .= '<p class="text-danger text-center">'.$filename.' uploads ảnh không thành công</p>';
+                    $message .= '<p class="text-danger text-center"><b>'.$filename.'</b> uploads ảnh không thành công</p>';
                 }
             }
         }

@@ -56,7 +56,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="notify-body">
+      <div class="notify-body py-3 px-3">
         
       </div>
       <div class="modal-footer">
