@@ -1,4 +1,7 @@
 <?php
+
+use CKSource\CKFinder\Image;
+
 require_once('../config/config.php');
 require_once('../config/dbhelper.php');
 require_once('../admin/modules/function.php');
@@ -283,7 +286,15 @@ if (isset($_POST['gallery']) && isset($_POST['id_gallery'])) {
         $result = mysqli_query($conn, $sql);
     
         if(mysqli_num_rows($result) > 0){
-
+            foreach ($result as $row) {
+                echo '
+                <div class="popup-gallery">
+                    <a href="'.$base_url.$row['image'].'">
+                        <img src="'.$base_url.$row['image'].'" >
+                    </a>
+                </div>
+                  ';
+            }
         }else{
             echo '<p class="not-data">Hiện chưa có hình ảnh nào</p>';
         }

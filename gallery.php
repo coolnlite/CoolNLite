@@ -149,35 +149,7 @@
         </section>
 
         <section class="fix-about gallery" id="result_gallery">
-            <div class="popup-gallery">
-                <a href="<?php print $base_url?>uploads/gallery/colorado-cnl.jpg">
-                    <img src="<?php print $base_url?>uploads/gallery/colorado-cnl-1.jpg" >
-                </a>
-                <a href="<?php print $base_url?>uploads/gallery/colorado-cnl-1.jpg">
-                    <img src="<?php print $base_url?>uploads/gallery/colorado-cnl-1.jpg" >
-                </a>
-                <a href="<?php print $base_url?>uploads/gallery/colorado-cnl-2.jpg">
-                    <img src="<?php print $base_url?>uploads/gallery/colorado-cnl-2.jpg">
-                </a>
-                <a href="<?php print $base_url?>uploads/gallery/glb35-cnl.jpg">
-                    <img src="<?php print $base_url?>uploads/gallery/glb35-cnl.jpg" >
-                </a>
-                <a href="<?php print $base_url?>uploads/gallery/glb35-cnl-1.jpg">
-                    <img src="<?php print $base_url?>uploads/gallery/glb35-cnl-1.jpg" >
-                </a>
-                <a href="<?php print $base_url?>uploads/gallery/glb35-cnl-2.jpg">
-                    <img src="<?php print $base_url?>uploads/gallery/glb35-cnl-2.jpg" >
-                </a>
-                <a href="<?php print $base_url?>uploads/gallery/glc200-cnl.jpg">
-                    <img src="<?php print $base_url?>uploads/gallery/glc200-cnl.jpg" >
-                </a>
-                <a href="<?php print $base_url?>uploads/gallery/glc200-cnl-1.jpg">
-                    <img src="<?php print $base_url?>uploads/gallery/glc200-cnl-1.jpg" >
-                </a>
-                <a href="<?php print $base_url?>uploads/gallery/glc200-cnl-2.jpg">
-                    <img src="<?php print $base_url?>uploads/gallery/glc200-cnl-2.jpg" >
-                </a>
-            </div>
+            
         </section>
 
     </div>
