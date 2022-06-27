@@ -272,4 +272,33 @@ if (isset($_POST['text_agency'])) {
     }
 }
 
+//Hiển thị ảnh thư viện
+
+if (isset($_POST['gallery']) && isset($_POST['id_gallery'])) {
+
+    $id_gallery = mysqli_real_escape_string($conn, $_POST['id_gallery']);
+
+    if($id_gallery != 0){
+        $sql = "SELECT * FROM `gallery_img` WHERE `id_gallery` = '$id_gallery'";
+        $result = mysqli_query($conn, $sql);
+    
+        if(mysqli_num_rows($result) > 0){
+
+        }else{
+            echo '<p class="not-data">Hiện chưa có hình ảnh nào</p>';
+        }
+        
+    }else{
+        $sql = "SELECT * FROM `gallery_img` ";
+        $result = mysqli_query($conn, $sql);
+    
+        if(mysqli_num_rows($result) > 0){
+
+        }else{
+            echo '<p class="not-data">Hiện chưa có hình ảnh nào</p>';
+        }
+    }
+
+}
+
 ?>

@@ -225,6 +225,7 @@ $(document).ready(function () {
               type: "POST",
               url: <?php print $base_url?> + 'modules/result.php',
               data: {
+                gallery : true,
                 id_gallery :  $id_gallery
               },
               success: function(data) {
