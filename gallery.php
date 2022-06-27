@@ -153,9 +153,13 @@
         <section class="fix-about gallery" id="gallery">
             <select id='selGallery' class="selGallery">
                 <option value="0">Vui lòng chọn dòng xe</option>          
-                <option value='1'>COLORADO</option>  
-                <option value='2'>GLC 200</option>  
-                <option value='3'>GLB35</option>
+                <?php
+                    $sql = "SELECT * FROM 'gallery' ORDER BY `id` ASC";
+                    $galllery = executeResult($sql);
+                    foreach($galllery as $gl){
+                        echo '<option value="'.$gl['id'].'">'.$gl['name'].'</option>';
+                    }
+                ?>
             </select>   
         </section>
 
