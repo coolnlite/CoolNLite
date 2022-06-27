@@ -109,8 +109,8 @@
                         if(response.status == 0){
                             $('#notify_error').text(response.message);
                         }
-                        if(response.status == 0){
-                            alert('Cập nhật hình đại diện thành công');
+                        if(response.status == 1){
+                            alert(response.message);
                         }
                     }
                 })

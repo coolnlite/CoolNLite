@@ -651,22 +651,22 @@ if(!empty($_POST['id_gallery'])){
                         $sqlVal = "('".$id_gallery."' ,'".$gallery_img."', '".$time."')";
 
                     }else{
-                        echo json_encode(array(
+                        $response = array(
                             'status' => 0,
                             'messaage' => $filename.' uploads không thành công .'
-                        ));
+                        );
                     }
                 }else{
-                    echo json_encode(array(
+                    $response = array(
                         'status' => 0,
                         'messaage' => $filename.' uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
-                    ));
+                    );
                 }
             }else{
-                echo json_encode(array(
+                $response = array(
                     'status' => 0,
                     'message' => $filename.' uploads không thành công .Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp, gif'
-                ));
+                );
             }
 
             //Thêm data vào db
