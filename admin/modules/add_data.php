@@ -633,25 +633,32 @@ if(!empty($_POST['id_gallery'])){
             if(in_array($fileType,$validTypes)){
                 //Kiểm tra kích thước file
                 if($filesize < 2 * 1024 * 1024){
-                    //Check xem ảnh đã tồn tại hay chưa nếu không thì đổi tên
-                    $num = 1;
-                    $fileName = substr($path,0,strrpos($path,"."));
-                    $fileName = md5($fileName);
-                    while(file_exists($uploadPath . '/' . $fileName . '.' . $fileType)){
-                        $fileName = $fileName . "(". $num .")";
-                        $num ++;
-                    }
-                    $path = $fileName . '.' . $fileType;
+                    //Kiểm tra kích thước ảnh trước khi upload
+                    $size = $_FILES["image"]['tmp_name'];
+                    list($width, $height) = getimagesize($size);
+                    if($width <= "2000" || $height <= "2000") {
+                       //Check xem ảnh đã tồn tại hay chưa nếu không thì đổi tên
+                        $num = 1;
+                        $fileName = substr($path,0,strrpos($path,"."));
+                        $fileName = md5($fileName);
+                        while(file_exists($uploadPath . '/' . $fileName . '.' . $fileType)){
+                            $fileName = $fileName . "(". $num .")";
+                            $num ++;
+                        }
+                        $path = $fileName . '.' . $fileType;
 
-                    if(move_uploaded_file($_FILES['gallery_img']['tmp_name'][$id],$uploadPath . '/' .$path)){
-                        $id_gallery = mysqli_real_escape_string($conn, $_POST['id_gallery']);
-                        $gallery_img =  $tar_get . '/' .$path;
-                        $time = date('Y-m-d H:i:s');
+                        if(move_uploaded_file($_FILES['gallery_img']['tmp_name'][$id],$uploadPath . '/' .$path)){
+                            $id_gallery = mysqli_real_escape_string($conn, $_POST['id_gallery']);
+                            $gallery_img =  $tar_get . '/' .$path;
+                            $time = date('Y-m-d H:i:s');
 
-                        $sqlVal = "('".$id_gallery."' ,'".$gallery_img."', '".$time."')";
+                            $sqlVal = "('".$id_gallery."' ,'".$gallery_img."', '".$time."')";
 
+                        }else{
+                            $message .= '<p class="text-danger text-center" >'.$filename.' uploads không thành công</p>';
+                        }
                     }else{
-                        $message .= '<p class="text-danger text-center" >'.$filename.' uploads không thành công</p>';
+                        $message .= '<p class="text-danger text-center" >'.$filename.' uploads không thành công .Vui lòng chọn ảnh có kích thước nhỏ hơn hoặc bằng 2000px X 2000px  </p>';
                     }
                 }else{
                     $message .= '<p class="text-danger text-center" >'.$filename.' uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB</p>';
