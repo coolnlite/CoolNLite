@@ -653,19 +653,19 @@ if(!empty($_POST['id_gallery'])){
                     }else{
                         echo json_encode(array(
                             'move' => 0,
-                            'message' => $filename.' uploads không thành công '
+                            'message' => '<p class="text-danger text-center" id="notify_move">'.$filename.' uploads không thành công</p>'
                         ));
                     }
                 }else{
                     echo json_encode(array(
                         'size' => 0,
-                        'message' => $filename.' uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB'
+                        'message' => '<p class="text-danger text-center" id="notify_move">'.$filename.' uploads không thành công .Vui lòng chọn ảnh có dung lượng nhỏ hơn hoặc bằng 2MB</p>'
                     ));
                 }
             }else{
                 echo json_encode(array(
                     'type' => 0,
-                    'message' => $filename.' uploads không thành công .Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp, gif'
+                    'message' => '<p class="text-danger text-center" id="notify_move">'.$filename.' uploads không thành công .Vui lòng chọn file có đuôi là jpg, jpeg, png, bmp, gif</p>'
                 ));
             }
 
@@ -676,25 +676,19 @@ if(!empty($_POST['id_gallery'])){
                 if($insert) {
                     echo json_encode(array(
                         'success' => 1,
-                        'message' => $filename.' uploads thành công'
+                        'message' => '<p class="text-success text-center" id="notify_move">'.$filename.' uploads thành công</p>'
                     ));
 
                 } else {
                     echo json_encode(array(
                         'failed' => 0,
-                        'message' => $filename.' uploads thất bại'
+                        'message' => '<p class="text-danger text-center" id="notify_move">'.$filename.' uploads không thành công</p>'
                     ));
                 }
             }
         }
 
-    }else{
-        $false = array(
-            'message' => 'Vui lòng chọn file để uploads'
-        );
-        $reponse = array_merge($reponse,$false);
     }
-    echo json_encode($reponse);
 } 
 
 ?>

@@ -20,7 +20,9 @@
         <button type="submit" class="btn btn-primary">Thêm</button>
 
     </form>
-    <p class="text-danger text-center" id="notify_error"></p>
+    <div id="notify">
+        
+    </div>
 </div>
 
 <h4 class="text-center">Danh sách ảnh dòng xe <span class="text-primary"><?php print $rows['name']?></span></h4>

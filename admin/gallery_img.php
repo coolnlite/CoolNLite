@@ -106,7 +106,9 @@
                     cache: false,
                     processData:false,
                     success: function(response){ 
-                        console.log(response);
+                       if(response.move == 0){
+                        
+                       }
                     }
                 })
             });
