@@ -148,8 +148,10 @@
             </select>   
         </section>
 
-        <section class="fix-about gallery" id="result_gallery">
-            
+        <section class="fix-about gallery" >
+            <div class="popup-gallery" id="result_gallery">
+                
+            </div>
         </section>
 
     </div>

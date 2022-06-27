@@ -288,11 +288,9 @@ if (isset($_POST['gallery']) && isset($_POST['id_gallery'])) {
         if(mysqli_num_rows($result) > 0){
             foreach ($result as $row) {
                 echo '
-                <div class="popup-gallery">
                     <a href="'.$base_url.$row['image'].'">
                         <img src="'.$base_url.$row['image'].'" >
                     </a>
-                </div>
                   ';
             }
         }else{
@@ -306,11 +304,9 @@ if (isset($_POST['gallery']) && isset($_POST['id_gallery'])) {
         if(mysqli_num_rows($result) > 0){
             foreach ($result as $row) {
                 echo '
-                <div class="popup-gallery">
                     <a href="'.$base_url.$row['image'].'">
                         <img src="'.$base_url.$row['image'].'" >
                     </a>
-                </div>
                   ';
             }
         }else{
