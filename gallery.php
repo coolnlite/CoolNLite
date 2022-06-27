@@ -67,7 +67,6 @@
     <link rel="stylesheet" href="<?php print $base_url?>public/css/style.css" />
     <link rel="stylesheet" href="<?php print $base_url?>public/css/reponsive.css" />
     <link rel="stylesheet" href="<?php print $base_url?>public/css/news.css" />
-    <link rel="stylesheet" href="<?php print $base_url?>public/css/select.css" />
     <link rel="stylesheet" href="<?php print $base_url?>public/css/magnific-popup.css" />
     <!-- css -->
     <style>
@@ -140,7 +139,7 @@
         </section>
 
         <section class="fix-about gallery" id="gallery">
-            <select id='selGallery' class="selGallery">
+            <select id='selGallery' name="selGallery" class="selGallery">
                 <option value="0">Vui lòng chọn dòng xe</option>          
                 <option value='1'>COLORADO</option>  
                 <option value='2'>GLC 200</option>  
@@ -162,15 +161,8 @@
     <!-- javasript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="<?php print $base_url?>public/js/script.js"></script>
-    <script src="<?php print $base_url?>public/js/select.js"></script>
     <script src="<?php print $base_url?>public/js/jquery.magnific-popup.min.js"></script>
     <!-- javasript -->
-    <script>
-        $(document).ready(function(){
-            // Gọi hàm
-            $("#selGallery").select2();
-        });
-    </script>
     <script>
         $(document).ready(function() {
 	$('.popup-gallery').magnificPopup({
@@ -191,22 +183,28 @@
 
 $(document).ready(function () {
       //Load gallery 
-      load_search();
-        function load_search() {
+      load_gallery(0);
+        function load_gallery(id_gallery) {
           $this = $('#result_gallery');
-          $id_gallery = $('#selGallery').val();
+          $id_gallery = $("#selGallery option:selected").val();
+          console.log($id_gallery);
           $.ajax({
               type: "POST",
               url: '<?php print $base_url.'modules/result.php'?>',
               data: {
                 gallery : true,
-                id_gallery :  $id_gallery
+                id_gallery : id_gallery
               },
               success: function(data) {
                   $this.html(data);
               }
           })
       }
+
+      $(document).on('click', '#selGallery option:selected', function(){
+        var id_gallery = $("#selGallery option:selected").val();
+        load_gallery(id_gallery);
+      });
 })
     </script>
 </body>
