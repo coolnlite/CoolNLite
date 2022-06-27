@@ -607,11 +607,8 @@ if(!empty($_POST['gallery_name'])){
 if(!empty($_POST['id_gallery'])){
     //Kiểm tra file upload
     if (!empty(array_filter($_FILES['gallery_img']['name']))) {
-
+        $message = '';
         foreach($_FILES['gallery_img']['name'] as $id => $val){
-
-            $message = '';
-
             /* Nhận tên file */
             $filename = $_FILES['gallery_img']['name'][$id];
             /* Nhận kích thước file */
@@ -669,14 +666,14 @@ if(!empty($_POST['id_gallery'])){
                 $insert = $conn -> query("INSERT INTO `gallery_img` (`id_gallery`, `image`, `time`) 
                 VALUES $sqlVal");
                 if($insert) {
-                    $message .= '<p class="text-success text-center" id="notify_move">'.$filename.' uploads thành công</p>'; 
+                    $message .= '<p class="text-success text-center" id="notify_move">Uploads ảnh thành công</p>'; 
                 } else {
-                    $message .= '<p class="text-danger text-center" id="notify_move">'.$filename.' uploads không thành công</p>';
+                    $message .= '<p class="text-danger text-center" id="notify_move">Uploads ảnh không thành công</p>';
                 }
             }
         }
-        echo json_encode($message);
     }
+    echo json_encode($message);
 } 
 
 ?>
