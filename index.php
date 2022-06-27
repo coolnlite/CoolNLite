@@ -177,18 +177,19 @@
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="<?php print $base_url?>shared/icon/Icon-protect.png" title="Ngăn tia UV 99%" alt="icons">    
-                  <span>Ngăn tia UV 99%
-                  </span>
-              </div>
-            </div>
-            <div class="item-parameter">
-              <div class="box-para-top">
                 <img src="<?php print $base_url?>shared/icon/Icon-beutifull.png" title="Sang trọng với lớp màu ánh kim" alt="icons"> 
                   <span>Sang trọng với lớp màu ánh kim
                   </span>
               </div>
             </div>
+            <div class="item-parameter">
+              <div class="box-para-top">
+                <img src="<?php print $base_url?>shared/icon/Icon-protect.png" title="Ngăn tia UV 99%" alt="icons">    
+                  <span>Ngăn tia UV 99%
+                  </span>
+              </div>
+            </div>
+            
           </section>
         </div>
       </div>
