@@ -154,10 +154,10 @@
             <select id='selGallery' class="selGallery">
                 <option value="0">Vui lòng chọn dòng xe</option>          
                 <?php
-                    $sql = "SELECT * FROM 'gallery' ORDER BY `id` ASC";
+                    $sql = "SELECT * FROM `gallery` ORDER BY `id_gallery` ASC";
                     $galllery = executeResult($sql);
                     foreach($galllery as $gl){
-                        echo '<option value="'.$gl['id'].'">'.$gl['name'].'</option>';
+                        echo '<option value="'.$gl['id_gallery'].'">'.$gl['name'].'</option>';
                     }
                 ?>
             </select>   
