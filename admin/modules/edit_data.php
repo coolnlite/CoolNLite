@@ -1657,13 +1657,13 @@ if(!empty($_FILES['img_tw']) && $_FILES['img_tw']['error'] == 0){
         if($result == true){
             echo json_encode(array(
                 'status' => 1,
-                'message' => 'Chỉnh sửa SEO cho trang chúng tôi thành công'
+                'message' => 'Chỉnh sửa SEO cho trang thư viện thành công'
             ));
             exit();
         }else{
             echo json_encode(array(
                 'status' => 0,
-                'message' => 'Chỉnh sửa SEO cho trang chúng tôi thất bại'
+                'message' => 'Chỉnh sửa SEO cho trang thư viện thất bại'
             ));
             exit();
         }

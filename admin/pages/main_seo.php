@@ -687,7 +687,7 @@
 
       ?>
      <form id="feditgallery" class="needs-validation" enctype="multipart/form-data" novalidate>
-        <input type="hidden" class="form-control" value="5" name="id_pages_gallery" >
+        <input type="hidden" class="form-control" value="9" name="id_pages_gallery" >
 
         <div class="form-group">
         <label for="title">Tiêu đề :</label>
