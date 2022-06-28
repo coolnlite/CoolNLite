@@ -212,13 +212,13 @@
             </div>
           </section>
           <section class="main-box-quick-right">
-            <p>
+            <span>
               Với dòng phim cách nhiệt PREMIER, COOL N LITE ứng dụng phương pháp phún xạ đa kim loại lên các tấm phim
               như Đồng, Crom và nhiều hợp kim khác để đạt tính kháng nhiệt tuyệt vời.
               Phim cách nhiệt dòng PREMIER được sản xuất bằng công nghệ tiên tiến cùng những vật liệu tốt nhất, với mức
               giá hợp lý, đảm bảo hiệu suất lâu dài cho người sử dụng, bảo vệ bạn khỏi tia UV và mang lại sự thoải mái
               khi lái xe.
-            </p>
+            </span>
           </section>
         </section>
       </div>
