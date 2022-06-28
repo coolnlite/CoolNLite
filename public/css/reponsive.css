@@ -375,12 +375,6 @@
   background-position: center;
   background-size: cover;
 }
-  section#about-us {
-  background: url(../../shared/img/about/about.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
 section#gallery_bg {
   background: url(../../shared/img/gallery/gallery-mb.jpg);
   background-repeat: no-repeat;
