@@ -729,6 +729,14 @@ main.default-page-width {
 /*** --- Details --- ***/
 
 /*--- ABOUT US ---*/
+#gallery_bg{
+  width: 100%;
+  height: 400px;
+  background: url(../../shared/img/gallery/gallery.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 #about-us {
   width: 100%;
   height: 400px;

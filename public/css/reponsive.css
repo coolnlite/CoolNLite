@@ -13,7 +13,7 @@
     padding: 12px 8px 12px 8px;
   }
 
-  .menu .box-title-menu .title {
+  .menu .box-title-mabout-usenu .title {
     font-size: 3.4rem;
   }
 
@@ -377,6 +377,12 @@
 }
   section#about-us {
   background: url(../../shared/img/about/about-mbnologo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+section#gallery_bg {
+  background: url(../../shared/img/gallery/gallery-mb.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
