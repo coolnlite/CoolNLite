@@ -72,7 +72,7 @@
 </head>
 
 <body class="body">
-    <div id="main">
+    <div id="main" style="background-color: var(--text-color-b);">
         <!-- SETION 1 -->
         <section class="section agency" id="agency">
             <?php 
