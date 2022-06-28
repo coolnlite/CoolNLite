@@ -376,7 +376,7 @@
   background-size: cover;
 }
   section#about-us {
-  background: url(../../shared/img/about/about-mbnologo.jpg);
+  background: url(../../shared/img/about/about.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -386,6 +386,7 @@ section#gallery_bg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: 250px;
 }
 
 .box-title-menu.gird-top.bg-index-4 {

@@ -133,7 +133,7 @@
 </head>
 
 <body class="body">
-    <div id="main" style="background-color: var(--text-color-b);">
+    <div id="main">
         <!-- SETION 1 -->
         <section class="section about-mb" id="gallery_bg">
         <?php 
@@ -142,8 +142,8 @@
         </section>
         <section class="fix-about">
             <div class="main-about">
-                <h1 class="title-gallery" style="color : var(--text-color)">HÌNH ẢNH LẮP ĐẶT</h1>
-                <p class="text-about" style="color : var(--text-color)">
+                <h1 class="title-gallery">HÌNH ẢNH LẮP ĐẶT</h1>
+                <p class="text-about">
                     Kho tổng hợp những hình ảnh thực tế về các dòng phim cách nhiệt khi được lắp lên các dòng xe trên thị trường của
                     <b class="color">COOL N LITE</b>.
                 </p>
