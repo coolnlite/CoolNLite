@@ -170,12 +170,13 @@ textarea {
 .search-box {
     display: flex;
     align-items: center;
-    background-color: var(--text-color);
+    background-color: transparent;
     border-radius: 30px;
     max-width: 160px;
     height: 30px;
     font-size: 1.1em;
     position: relative;
+    border: 2px solid var(--text-color);
 }
 .search-box #search-text {
     flex: 1;
@@ -185,7 +186,7 @@ textarea {
     width: 35px;
     height: 35px;
     border-radius: 30px;
-    background-color: var(--color-blue);
+    background-color: transparent;
     cursor: pointer;
     position: absolute;
     right: -1px;
@@ -201,6 +202,8 @@ textarea {
     padding-left: 10px;
     border-radius: 30px;
     max-width: 160px;
+    color: var(--text-color);
+    background-color: transparent;
 }
 #search-text::-webkit-search-cancel-button{
     position:relative;
