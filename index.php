@@ -322,8 +322,8 @@
   var index = 0;
   var i = 0;
 
-  var slider = $('.slider');
-  var line = $('.line');
+  var slider = $('.slide-text');
+  var line = $('.line-txt');
 
   auto();
 
