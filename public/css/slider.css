@@ -117,7 +117,9 @@
     justify-content: center;
     z-index: 11;
 }
-
+.container-slide .slider-container .lines.fix-lines{
+    bottom: -50px;
+}
 .container-slide .slider-container .lines .line.active,
 .container-slide .slider-container .lines .line2.active {
     background: var(--color-blue);

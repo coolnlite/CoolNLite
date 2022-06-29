@@ -130,10 +130,10 @@
               &#10095;
             </div>
           </div>
-          <div class="lines">
-            <div class="line2" onclick="currentSlide2(1)">
+          <div class="lines fix-lines">
+            <div class="line2 fix-line2" onclick="currentSlide2(1)">
             </div>
-            <div class="line2" onclick="currentSlide2(2)">
+            <div class="line2 fix-line2" onclick="currentSlide2(2)">
             </div>
           </div>
         </div>
