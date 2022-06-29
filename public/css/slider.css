@@ -38,6 +38,11 @@
     animation-duration: 1.5s; 
 }
 
+.container-slide .slider-container .slider video{
+    width: 100%;
+    height: 100%;
+}
+
 @keyframes fade {
     form {
         opacity: 0.5;

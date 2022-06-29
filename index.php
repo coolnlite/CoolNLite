@@ -115,28 +115,28 @@
     <section class="section built">
       <section class="box-built">
         <div class="container-slide">
-          <div class="slider-container">
-            <div class="slider sizes-slider">
-              <img src="<?php print $base_url?>shared/img/trangchu/titanium.jpg" alt="Image">
+        <div class="slider-container">
+          <div class="slider2 sizes-slider2">
+            <img src="<?php print $base_url ?>shared/img/titanium.jpg" alt="image">
+          </div>
+          <div class="slider2 sizes-slider2">
+           <video src="<?php print $base_url ?>shared/video/cong-nghe-phun-xa.mov"></video>
+          </div>
+          <div class="box-btn">
+            <div class="prev-button prev-button1" onclick="plusSlide2(-1)">
+              &#10094;
             </div>
-            <div class="slider sizes-slider">
-              <video src="<?php print $base_url?>shared/video/cong-nghe-phun-xa.mov"></video>
-            </div>
-            <div class="box-btn">
-              <div class="prev-button prev-button1" onclick="plusSlide(-1)">
-                <i class="fas fa-chevron-left"></i>
-              </div>
-              <div class="next-button next-button1" onclick="plusSlide(1)">
-                <i class="fas fa-chevron-right"></i>
-              </div>
-            </div>
-            <div class="lines">
-              <div class="line" onclick="currentSlide(1)">
-              </div>
-              <div class="line" onclick="currentSlide(2)">
-              </div>
+            <div class="next-button next-button1" onclick="plusSlide2(1)">
+              &#10095;
             </div>
           </div>
+          <div class="lines">
+            <div class="line2" onclick="currentSlide2(1)">
+            </div>
+            <div class="line2" onclick="currentSlide2(2)">
+            </div>
+          </div>
+        </div>
         </div>
         <section class="box-right-built">
           <div class="main-box-right-button">
