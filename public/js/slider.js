@@ -1,53 +1,53 @@
-//SLIDER 1
-var index = 0;
-var i = 0;
+// //SLIDER 1
+// var index = 0;
+// var i = 0;
 
-var slider = $('.slider');
-var line = $('.line');
+// var slider = $('.slider');
+// var line = $('.line');
 
-auto();
+// auto();
 
-function show(n){
+// function show(n){
 
-  for(i = 0 ; i < slider.length ; i++){
-    slider[i].style.display = "none";
-  }
+//   for(i = 0 ; i < slider.length ; i++){
+//     slider[i].style.display = "none";
+//   }
 
-  for(i = 0 ; i < line.length ; i++){
-   line[i].className = line[i].className.replace("active");
-  }
+//   for(i = 0 ; i < line.length ; i++){
+//    line[i].className = line[i].className.replace("active");
+//   }
 
-  slider[n-1].style.display = "block";
-  line[n-1].className += " active";
+//   slider[n-1].style.display = "block";
+//   line[n-1].className += " active";
 
-}
+// }
 
-function auto(){
-  index++;
-  if(index > slider.length){
-    index = 1;
-  }
-  show(index);
-  setTimeout(auto,7000);
-}
+// function auto(){
+//   index++;
+//   if(index > slider.length){
+//     index = 1;
+//   }
+//   show(index);
+//   setTimeout(auto,7000);
+// }
 
-function plusSlide(n){
-  index += n;
+// function plusSlide(n){
+//   index += n;
 
-  if(index > slider.length){
-    index = 1;
-  }
+//   if(index > slider.length){
+//     index = 1;
+//   }
 
-  if(index < 1){
-    index = slider.length;
-  }
-  show(index);
-}
+//   if(index < 1){
+//     index = slider.length;
+//   }
+//   show(index);
+// }
 
-function currentSlide(n){
-  index = n;
-  show(index);
-}
+// function currentSlide(n){
+//   index = n;
+//   show(index);
+// }
 
 //SLIDER 2
 var index2 = 0;

@@ -117,7 +117,7 @@
         <div class="container-slide">
         <div class="slider-container">
           <div class="slider2 sizes-slider2">
-            <img src="<?php print $base_url ?>shared/img/titanium.jpg" alt="image">
+            <img src="<?php print $base_url ?>shared/img/trangchu/titanium.jpg" alt="image">
           </div>
           <div class="slider2 sizes-slider2">
            <video src="<?php print $base_url ?>shared/video/cong-nghe-phun-xa.mov"></video>
