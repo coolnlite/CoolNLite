@@ -113,14 +113,14 @@
     <!-- SETION 1 -->
     <!-- SETION 2-->
     <section class="section built">
-      <section class="box-built">
+      <section class="box-built" id="fix-slider-index">
         <div class="container-slide">
         <div class="slider-container">
           <div class="slider2 sizes-slider2">
             <img src="<?php print $base_url ?>shared/img/trangchu/titanium.jpg" alt="image">
           </div>
           <div class="slider2 sizes-slider2">
-           <video src="<?php print $base_url ?>shared/video/cong-nghe-phun-xa.mov"></video>
+           <video loop autoplay muted controls src="<?php print $base_url ?>shared/video/cong-nghe-phun-xa.mov"></video>
           </div>
           <div class="box-btn">
             <div class="prev-button prev-button1" onclick="plusSlide2(-1)">
