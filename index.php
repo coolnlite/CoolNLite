@@ -196,33 +196,52 @@
         </section>
       </div>
       <div class="box-title-menu gird-top bg-index-2">
-        <div class="box-title">
-          <h1>Premier Series</h1>
-        </div>
-        <div class="block-bottom">
-          <section class="main-list-menu quick">
-            <div class="item-parameter">
-              <div class="box-para-top">
-                <img src="<?php print $base_url?>shared/icon/Icon-hongngoai.png" alt="icons">
-                <span>Cách nhiệt 85%</span>
+        <div class="block-slides-text">
+          
+          <div class="block-bottom slide-text">
+          <div class="box-title">
+            <h1>Premier Series</h1>
+          </div>
+            <section class="main-list-menu quick">
+              <div class="item-parameter">
+                <div class="box-para-top">
+                  <img src="<?php print $base_url?>shared/icon/Icon-hongngoai.png" alt="icons">
+                  <span>Cách nhiệt 85%</span>
+                </div>
               </div>
-            </div>
-            <div class="item-parameter">
-              <div class="box-para-top">
-                <img src="<?php print $base_url?>shared/icon/Icon-beutifull.png" title="Sang trọng với lớp màu ánh kim" alt="icons"> 
-                  <span>Sang trọng với lớp màu ánh kim
-                  </span>
+              <div class="item-parameter">
+                <div class="box-para-top">
+                  <img src="<?php print $base_url?>shared/icon/Icon-beutifull.png" title="Sang trọng với lớp màu ánh kim" alt="icons"> 
+                    <span>Sang trọng với lớp màu ánh kim
+                    </span>
+                </div>
               </div>
-            </div>
-            <div class="item-parameter">
-              <div class="box-para-top">
-                <img src="<?php print $base_url?>shared/icon/Icon-protect.png" title="Ngăn tia UV 99%" alt="icons">    
-                  <span>Ngăn tia UV 99%
-                  </span>
+              <div class="item-parameter">
+                <div class="box-para-top">
+                  <img src="<?php print $base_url?>shared/icon/Icon-protect.png" title="Ngăn tia UV 99%" alt="icons">    
+                    <span>Ngăn tia UV 99%
+                    </span>
+                </div>
               </div>
+            </section>
+          </div>
+
+          <div class="box-btn-text">
+            <div class="prev-button prev-button1" onclick="plusSlide(-1)">
+              &#10094;
             </div>
-            
-          </section>
+            <div class="next-button next-button1" onclick="plusSlide(1)">
+              &#10095;
+            </div>
+          </div>
+
+          <div class="lines fix-lines">
+            <div class="line2 fix-line2" onclick="currentSlide(1)">
+            </div>
+            <div class="line2 fix-line2" onclick="currentSlide(2)">
+            </div>
+          </div>
+
         </div>
       </div>
       

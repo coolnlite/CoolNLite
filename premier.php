@@ -272,6 +272,58 @@
   <script src="<?php print $base_url?>public/js/form.js"></script>
   <script src="<?php print $base_url?>public/js/slider.js"></script>
   <script src="<?php print $base_url?>public/js/script.js"></script>
+  <script>
+        //SLIDER 1
+var index = 0;
+var i = 0;
+
+var slider = $('.slider');
+var line = $('.line');
+
+auto();
+
+function show(n){
+
+  for(i = 0 ; i < slider.length ; i++){
+    slider[i].style.display = "none";
+  }
+
+  for(i = 0 ; i < line.length ; i++){
+   line[i].className = line[i].className.replace("active");
+  }
+
+  slider[n-1].style.display = "block";
+  line[n-1].className += " active";
+
+}
+
+function auto(){
+  index++;
+  if(index > slider.length){
+    index = 1;
+  }
+  show(index);
+  setTimeout(auto,7000);
+}
+
+function plusSlide(n){
+  index += n;
+
+  if(index > slider.length){
+    index = 1;
+  }
+
+  if(index < 1){
+    index = slider.length;
+  }
+  show(index);
+}
+
+function currentSlide(n){
+  index = n;
+  show(index);
+}
+    </script>
   <!-- javasript -->
   <!-- css on sroll pages -->
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>

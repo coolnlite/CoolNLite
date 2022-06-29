@@ -64,8 +64,8 @@ textarea {
     --lh-14: 1.414;
     --color-heading: #171a20;
     --color-txt: #393c41;
-    --width-gird: 272px;
-    --width-gird-second: 200px;
+    --width-gird: 290px;
+    --width-gird-second: 210px;
     --width-gird-third: 170px;
     --color-blue: #437CBF;
     --border-gray: #d0d1d2;
@@ -587,6 +587,7 @@ textarea {
 .block-bottom .main-list-menu .box-para-top img {
     width: 30px;
     height: 30px;
+    margin-right: 15px;
 }
 
 .block-bottom .item-parameter {
