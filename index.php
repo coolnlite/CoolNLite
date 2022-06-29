@@ -235,10 +235,10 @@
             </div>
           </div>
 
-          <div class="lines fix-lines">
-            <div class="line2 fix-line2" onclick="currentSlide(1)">
+          <div class="lines-text">
+            <div class="line-txt" onclick="currentSlide(1)">
             </div>
-            <div class="line2 fix-line2" onclick="currentSlide(2)">
+            <div class="line-txt" onclick="currentSlide(2)">
             </div>
           </div>
 
