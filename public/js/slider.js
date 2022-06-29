@@ -2,8 +2,8 @@
 var index2 = 0;
 var i2 = 0;
 
-var slider2 = $('.slider2');
-var line2 = $('.line2');
+var slider2 = document.querySelectorAll('.slider2');
+var line2 = document.querySelectorAll('.line2');
 
 auto2();
 
