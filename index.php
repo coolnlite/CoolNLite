@@ -120,7 +120,7 @@
             <img src="<?php print $base_url ?>shared/img/trangchu/titanium.jpg" alt="image">
           </div>
           <div class="slider2 sizes-slider2">
-           <video loop autoplay muted controls src="<?php print $base_url ?>shared/video/cong-nghe-phun-xa.mov"></video>
+           <video loop autoplay muted src="<?php print $base_url ?>shared/video/cong-nghe-phun-xa.mov"></video>
           </div>
           <div class="box-btn">
             <div class="prev-button prev-button1" onclick="plusSlide2(-1)">
