@@ -165,7 +165,36 @@
     </section>
     <!-- SETION 2-->
     <!-- SETION 3 -->
-    <section class="section section-gird">
+    <section class="section section-gird" id="fix-gird-index">
+    <div class="box-quick">
+        <section class="main-box-quick">
+          <section class="main-box-quick-left">
+            <div class="quick-left-top">
+              <span class="title-right-built">
+                <span class="text-heading">COOL N LITE PREMIER SERIES
+                </span>
+              </span>
+            </div>
+            <div class="quick-left-bottom">
+              <div class="right-built-button">
+                <a href="<?php print $base_url?>premier-series.html" class="btn-learn-more btn-built btn-secondary"><i
+                    class="fas fa-plus"></i></a>
+                <p class="txt-more">Xem Thêm</p>
+                <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>Liên hệ tư vấn</span></a>
+              </div>
+            </div>
+          </section>
+          <section class="main-box-quick-right">
+            <span>
+              Với dòng phim cách nhiệt PREMIER, COOL N LITE ứng dụng phương pháp phún xạ đa kim loại lên các tấm phim
+              như Đồng, Crom và nhiều hợp kim khác để đạt tính kháng nhiệt tuyệt vời.
+              Phim cách nhiệt dòng PREMIER được sản xuất bằng công nghệ tiên tiến cùng những vật liệu tốt nhất, với mức
+              giá hợp lý, đảm bảo hiệu suất lâu dài cho người sử dụng, bảo vệ bạn khỏi tia UV và mang lại sự thoải mái
+              khi lái xe.
+            </span>
+          </section>
+        </section>
+      </div>
       <div class="box-title-menu gird-top bg-index-2">
         <div class="box-title">
           <h1>Premier Series</h1>
@@ -196,35 +225,7 @@
           </section>
         </div>
       </div>
-      <div class="box-quick">
-        <section class="main-box-quick">
-          <section class="main-box-quick-left">
-            <div class="quick-left-top">
-              <span class="title-right-built">
-                <span class="text-heading">COOL N LITE PREMIER SERIES
-                </span>
-              </span>
-            </div>
-            <div class="quick-left-bottom">
-              <div class="right-built-button">
-                <a href="<?php print $base_url?>premier-series.html" class="btn-learn-more btn-built btn-secondary"><i
-                    class="fas fa-plus"></i></a>
-                <p class="txt-more">Xem Thêm</p>
-                <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>Liên hệ tư vấn</span></a>
-              </div>
-            </div>
-          </section>
-          <section class="main-box-quick-right">
-            <span>
-              Với dòng phim cách nhiệt PREMIER, COOL N LITE ứng dụng phương pháp phún xạ đa kim loại lên các tấm phim
-              như Đồng, Crom và nhiều hợp kim khác để đạt tính kháng nhiệt tuyệt vời.
-              Phim cách nhiệt dòng PREMIER được sản xuất bằng công nghệ tiên tiến cùng những vật liệu tốt nhất, với mức
-              giá hợp lý, đảm bảo hiệu suất lâu dài cho người sử dụng, bảo vệ bạn khỏi tia UV và mang lại sự thoải mái
-              khi lái xe.
-            </span>
-          </section>
-        </section>
-      </div>
+      
     </section>
     <!-- SETION 3 -->
     <!-- SETION 4 -->

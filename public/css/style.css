@@ -844,7 +844,9 @@ a.btn-up {
     display: grid;
     grid-template-rows: 1fr auto;
 }
-
+#fix-gird-index{
+    grid-template-rows: auto 1fr;
+}
 .section-gird .gird-top.bg-index-2 {
     background: url(../../shared/img/trangchu/premier.gif);
     background-repeat: no-repeat;
