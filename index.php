@@ -230,68 +230,6 @@
     <!-- SETION 3 -->
     <!-- SETION 4 -->
     <section class="section section-gird">
-      <div class="box-title-menu gird-top bg-index-3">
-        <div class="box-title">
-          <h1>TITAN X SERIES</h1>
-        </div>
-        <div class="block-bottom">
-          <section class="main-list-menu quick">
-            <div class="item-parameter">
-              <div class="box-para-top">
-                <img src="<?php print $base_url?>shared/icon/Icon-hongngoai.png" alt="icons">
-                  <span>Cách nhiệt 98%
-                  </span>
-              </div>
-
-            </div>
-            <div class="item-parameter">
-              <div class="box-para-top">
-                  <img src="<?php print $base_url?>shared/icon/Icon-protect.png" title="Ngăn tia UV 99%" alt="icons">
-                  <span>Ngăn tia UV 99%
-                  </span>
-              </div>
-            </div>
-            <div class="item-parameter">
-              <div class="box-para-top">
-                <img src="<?php print $base_url?>shared/icon/Icon-beutifull.png" title="Mang đến sự đẳng cấp và tinh tế" alt="icons"> 
-                  <span>Mang đến sự đẳng cấp và tinh tế
-                  </span>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-      <div class="box-quick">
-        <section class="main-box-quick">
-          <section class="main-box-quick-left">
-            <div class="quick-left-top">
-              <span class="title-right-built">
-                <span class="text-heading">COOL N LITE TITAN X SERIES</span>
-              </span>
-            </div>
-            <div class="quick-left-bottom">
-              <div class="right-built-button">
-                <a href="<?php print $base_url?>titan-x-series.html" class="btn-learn-more btn-built btn-secondary"><i
-                    class="fas fa-plus"></i></a>
-                <p class="txt-more">Xem Thêm</p>
-                <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>Liên hệ tư vấn</span></a>
-              </div>
-            </div>
-          </section>
-          <section class="main-box-quick-right">
-            <p>
-              Sự kết hợp của hơn 30 kim loại quý như Vàng, Bạc và Titanium,..cho phép TITAN X có khả năng hấp thụ nhiệt
-              và phản xạ nhiệt tối ưu mang lại trải nghiệm sau vô lăng hết sức thú vị: tầm nhìn sáng, bảo vệ tối đa mà
-              vẫn đảm bảo tính riêng tư trong cabin. Dòng phim cách nhiệt COOL N LITE thường được các dòng siêu xe nổi
-              tiếng như Lamborghini, Ferrari, Mercedes, McLaren…lựa chọn để lắp đặt trên xe của mình.
-            </p>
-          </section>
-        </section>
-      </div>
-    </section>
-    <!-- SETION 4 -->
-    <!-- SETION 5 -->
-    <section class="section section-gird">
       <div class="box-title-menu gird-top bg-index-4">
         <div class="main-future">
           <section class="box-future-text">
@@ -321,7 +259,7 @@
         </div>
       </div>
     </section>
-    <!-- SETION 5 -->
+    <!-- SETION 4 -->
     <!-- VIDEO  -->
     <section id="video">
       <video loop autoplay muted controls src="<?php print $base_url?>/shared/video/tru-so.mov"></video>
