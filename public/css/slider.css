@@ -195,10 +195,34 @@
     font-size: 4em;
     color: var(--text-color);
     position: absolute;
+    cursor: pointer;
 }
 .block-slides-text .prev-button{
-    left: 3em;
+    left: 1em;
 }
 .block-slides-text .next-button{
-    right: 3em;
+    right: 1em;
+}
+.block-slides-text .lines-text{
+    position: absolute;
+    display: flex;
+    bottom: 50px;
+    width: 100%;
+    justify-content: center;
+    z-index: 11;
+}
+.block-slides-text .lines-text .line-txt{
+    width: 10%;
+    height: 10px;
+    margin: 0 1em;
+    background: var(--text-color);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    -webkit-transform: skew(-30deg);
+    -moz-transform: skew(-30deg);
+    -o-transform: skew(-30deg);
+    transform: skew(-30deg);
+}
+.block-slides-text .lines-text .line-txt.active{
+    background-color: var(--color-blue);
 }
