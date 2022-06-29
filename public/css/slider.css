@@ -120,6 +120,13 @@
 .container-slide .slider-container .lines.fix-lines{
     bottom: -50px;
 }
+.container-slide .slider-container .lines.fix-lines .line2{
+    -webkit-transform: skew(30deg);
+    -moz-transform: skew(30deg);
+    -o-transform: skew(30deg);
+    transform: skew(30deg);
+    height: 30px;
+}
 .container-slide .slider-container .lines .line.active,
 .container-slide .slider-container .lines .line2.active {
     background: var(--color-blue);
