@@ -322,8 +322,8 @@
   var index = 0;
   var i = 0;
 
-  var slider = $('.slide-text');
-  var line = $('.line-txt');
+  var slider = document.querySelectorAll('.slide-text');
+  var line = document.querySelectorAll('.line-txt');
 
   auto();
 
@@ -337,7 +337,7 @@
     line[i].className = line[i].className.replace("active");
     }
 
-    slider[n-1].style.display = "block";
+    slider[n-1].style.display = "flex";
     line[n-1].className += " active";
 
   }
