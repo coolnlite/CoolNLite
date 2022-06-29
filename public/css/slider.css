@@ -107,7 +107,7 @@
 .container-slide .slider-container .lines {
     position: absolute;
     display: flex;
-    bottom: 30px;
+    bottom: 20px;
     width: 100%;
     justify-content: center;
     z-index: 11;

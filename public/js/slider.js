@@ -79,7 +79,6 @@ function auto2(){
     index2 = 1;
   }
   show2(index2);
-  setTimeout(auto2,5000);
 }
 
 function plusSlide2(n){
