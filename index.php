@@ -228,19 +228,19 @@
 
           <div class="block-bottom slide-text">
           <div class="box-title">
-            <h1>TitanX Series</h1>
+            <h1>Titan X Series</h1>
           </div>
             <section class="main-list-menu quick">
               <div class="item-parameter">
                 <div class="box-para-top">
                   <img src="<?php print $base_url?>shared/icon/Icon-hongngoai.png" alt="icons">
-                  <span>Cách nhiệt 85%</span>
+                  <span>Cách nhiệt 98%</span>
                 </div>
               </div>
               <div class="item-parameter">
                 <div class="box-para-top">
                   <img src="<?php print $base_url?>shared/icon/Icon-beutifull.png" title="Sang trọng với lớp màu ánh kim" alt="icons"> 
-                    <span>Sang trọng với lớp màu ánh kim
+                    <span>Mang đến sự đẳng cấp và tinh tế
                     </span>
                 </div>
               </div>
@@ -397,19 +397,6 @@
       z: -10
     }
   });
-  
-  ScrollReveal().reveal(".block-bottom .main-list-menu .box-para-top", {
-    duration: 3000,
-    move: 0
-  });
-
-  ScrollReveal().reveal(".section-gird .gird-top .box-title", {
-    duration: 2000,
-    origin: "left",
-    distance: "100px",
-    easing: "ease-in-out"
-  });
-  
 
   ScrollReveal().reveal(".btn-menu", {
     duration: 2000,
