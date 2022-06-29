@@ -191,6 +191,9 @@
     height: 100%;
     position: relative;
 }
+.block-slides-text .slide-text{
+    display: none;
+}
 .block-slides-text .prev-next{
     font-size: 4em;
     color: var(--text-color);

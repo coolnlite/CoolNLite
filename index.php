@@ -226,6 +226,34 @@
             </section>
           </div>
 
+          <div class="block-bottom slide-text">
+          <div class="box-title">
+            <h1>TitanX Series</h1>
+          </div>
+            <section class="main-list-menu quick">
+              <div class="item-parameter">
+                <div class="box-para-top">
+                  <img src="<?php print $base_url?>shared/icon/Icon-hongngoai.png" alt="icons">
+                  <span>Cách nhiệt 85%</span>
+                </div>
+              </div>
+              <div class="item-parameter">
+                <div class="box-para-top">
+                  <img src="<?php print $base_url?>shared/icon/Icon-beutifull.png" title="Sang trọng với lớp màu ánh kim" alt="icons"> 
+                    <span>Sang trọng với lớp màu ánh kim
+                    </span>
+                </div>
+              </div>
+              <div class="item-parameter">
+                <div class="box-para-top">
+                  <img src="<?php print $base_url?>shared/icon/Icon-protect.png" title="Ngăn tia UV 99%" alt="icons">    
+                    <span>Ngăn tia UV 99%
+                    </span>
+                </div>
+              </div>
+            </section>
+          </div>
+
           <div class="box-btn">
             <div class="prev-next prev-button" onclick="plusSlide(-1)">
               &#10094;
