@@ -214,6 +214,26 @@ div.block-slides-text div.block-bottom.slide-text .box-title{
       opacity: 1;
     }
   }
+  div.block-slides-text div.block-bottom.slide-text .box-title .quick{
+    -webkit-animation: fade-in1 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in1 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+  @-webkit-keyframes fade-in1 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in1 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 .block-slides-text .prev-next{
     font-size: 4em;
     color: var(--text-color);
