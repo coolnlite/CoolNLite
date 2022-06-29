@@ -740,7 +740,19 @@ a.btn-up {
     grid-template-columns: auto 416px;
     height: auto;
 }
-
+#fix-slider-index {
+    background-color: var(--text-color-b);
+}
+#fix-slider-index .container-slide{
+    padding: 10% 0%;
+}
+#fix-slider-index .title-right-built .text-heading{
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+#fix-slider-index .main-box-right-button .txt-main .txt-top-b{
+    color: var(--text-color);
+}
 .section.built .box-built .box-left-built.bg-pre {
     background: url(../../shared/img/premier/cac-lop-cua-premier-series.png);
     background-repeat: no-repeat;

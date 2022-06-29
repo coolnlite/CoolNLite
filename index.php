@@ -141,7 +141,10 @@
         <section class="box-right-built">
           <div class="main-box-right-button">
             <span class="title-right-built">
-              <span class="text-heading">Công nghệ phún xạ Titanium độc quyền
+              <span class="text-heading">Công nghệ phún xạ 
+                <b>
+                  Titanium độc quyền
+                </b>
               </span>
             </span>
             <div class="txt-main">
