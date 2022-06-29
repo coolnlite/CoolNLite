@@ -191,9 +191,14 @@
     height: 100%;
     position: relative;
 }
-.block-slides-text .prev-button,
-.block-slides-text .next-button{
+.block-slides-text .prev-next{
     font-size: 4em;
     color: var(--text-color);
     position: absolute;
+}
+.block-slides-text .prev-button{
+    left: 3em;
+}
+.block-slides-text .next-button{
+    right: 3em;
 }
