@@ -157,7 +157,7 @@
             </div>
           </div>
           <div class="right-built-button">
-            <a href="#" class="btn btn-size-100 btn-size btn-built btn-secondary"><span>Xem
+            <a href="#" class="btn btn-size btn-size-100 btn-fisrt" style="border: 3px solid var(--text-color);"><span>Xem
                 thêm</span></a>
           </div>
         </section>
