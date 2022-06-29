@@ -191,7 +191,7 @@
     height: 100%;
     position: relative;
 }
-.block-slides-text .slide-text{
+div.block-slides-text div.block-bottom.slide-text{
     display: none;
 }
 .block-slides-text .prev-next{
