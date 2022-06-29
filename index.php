@@ -197,7 +197,7 @@
       </div>
       <div class="box-title-menu gird-top bg-index-2">
         <div class="block-slides-text">
-          
+
           <div class="block-bottom slide-text">
           <div class="box-title">
             <h1>Premier Series</h1>
@@ -226,11 +226,11 @@
             </section>
           </div>
 
-          <div class="box-btn-text">
-            <div class="prev-button prev-button1" onclick="plusSlide(-1)">
+          <div class="box-btn">
+            <div class="prev-button" onclick="plusSlide(-1)">
               &#10094;
             </div>
-            <div class="next-button next-button1" onclick="plusSlide(1)">
+            <div class="next-button" onclick="plusSlide(1)">
               &#10095;
             </div>
           </div>

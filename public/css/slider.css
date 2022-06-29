@@ -184,3 +184,15 @@
           right: -10px;
       }
 }
+
+/* FIX SLIDER INDEX */
+.block-slides-text{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.block-slides-text .prev-button,
+.block-slides-text .next-button{
+    font-size: 2em;
+    color: var(--text-color);
+}

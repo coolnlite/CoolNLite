@@ -874,7 +874,7 @@ a.btn-up {
 
 .section-gird .gird-top .box-title {
     position: absolute;
-    top: 25vh;
+    top: 10vh;
     padding: 0 24px;
     color: var(--text-color);
     text-align: center;
