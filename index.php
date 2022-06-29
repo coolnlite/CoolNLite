@@ -177,8 +177,8 @@
             </div>
             <div class="quick-left-bottom">
               <div class="right-built-button">
-                <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>Liên hệ tư vấn</span></a>
-                <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>Liên hệ tư vấn</span></a>
+                <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>Premier Series</span></a>
+                <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>TitanX Series</span></a>
               </div>
             </div>
           </section>
