@@ -193,6 +193,7 @@
 }
 .block-slides-text .prev-button,
 .block-slides-text .next-button{
-    font-size: 2em;
+    font-size: 4em;
     color: var(--text-color);
+    position: absolute;
 }

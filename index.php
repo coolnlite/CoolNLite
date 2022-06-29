@@ -227,10 +227,10 @@
           </div>
 
           <div class="box-btn">
-            <div class="prev-button" onclick="plusSlide(-1)">
+            <div class="prev-next prev-button" onclick="plusSlide(-1)">
               &#10094;
             </div>
-            <div class="next-button" onclick="plusSlide(1)">
+            <div class="prev-next next-button" onclick="plusSlide(1)">
               &#10095;
             </div>
           </div>
