@@ -6,6 +6,12 @@
           <img src="<?php print $base_url?>shared/img/logo.png" alt="Logo Cool N Lite">
         </a>
     </h3>
+    <?php
+         $sql = "SELECT * FROM `footer`";
+         $footer = executeResult($sql);
+         foreach($footer as $ft){
+    ?>
+    <p class="footer-company-name"><?php echo ''.$ft['copyright'].''?></p>
 
       <p class="footer-links">
       <?php
@@ -18,12 +24,22 @@
             } 
         ?>
       </p>
-    <?php
-         $sql = "SELECT * FROM `footer`";
-         $footer = executeResult($sql);
-         foreach($footer as $ft){
+      
+    </div>
+
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span><?php echo ''.$ft['title'].''?>
+        </span>
+        <?php echo ''.$ft['subtitle'].''?>
+      </p>
+    <?php }
     ?>
-      <p class="footer-company-name"><?php echo ''.$ft['copyright'].''?></p>
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/coolnlitevn" target="_blank"><i class="fab fa-facebook"></i></i></a>
+        <a href=""><i class="fab fa-facebook-messenger"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+      </div>
     </div>
 
     <div class="footer-center">
@@ -47,20 +63,7 @@
       </div>
     </div>
 
-    <div class="footer-right">
-      <p class="footer-company-about">
-        <span><?php echo ''.$ft['title'].''?>
-        </span>
-        <?php echo ''.$ft['subtitle'].''?>
-      </p>
-    <?php }
-    ?>
-      <div class="footer-icons">
-        <a href="https://www.facebook.com/coolnlitevn" target="_blank"><i class="fab fa-facebook"></i></i></a>
-        <a href=""><i class="fab fa-facebook-messenger"></i></a>
-        <a href="#"><i class="fab fa-google"></i></a>
-      </div>
-    </div>
+    
   </footer>
   <!-- FOOTER -->
 

@@ -1154,6 +1154,8 @@ a.btn-up {
     text-align: left;
     font: bold 16px sans-serif;
     padding: 55px 35px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer-distributed .footer-left,
@@ -1211,7 +1213,7 @@ a.btn-up {
 /* Footer Center */
 
 .footer-distributed .footer-center {
-    width: 40%;
+    
 }
 
 .footer-distributed .footer-center i {
@@ -1301,6 +1303,7 @@ a.btn-up {
 
 .footer-distributed .footer-icons {
     margin-top: 25px;
+    text-align: center;
 }
 
 .footer-distributed .footer-icons a {
