@@ -982,7 +982,7 @@ a.btn-up {
 /***---START SECTION 6 ---***/
 
 .box-title-menu.gird-top.bg-index-4 {
-    background: url(../../shared/img/trangchu/thanh-tuu.png);
+    background: url(../../shared/img/trangchu/thanhtuu.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1021,8 +1021,9 @@ a.btn-up {
     min-height: 28px;
     line-height: 28px;
     font-size: 28px;
-    font-weight: 500;
+    font-weight: bolder;
     text-align: center;
+
 }
 
 .main-future .box-future-text .item-future .item-bottom {

@@ -96,7 +96,7 @@
               </div>
             </div>
             <div class="item-parameter">
-              <div class="box-para-top" style="align-items: start;">
+              <div class="box-para-top" style="align-items: start;"style="align-items: start;">
                 <img src="<?php print $base_url?>shared/icon/Icon-sun.png" style="width: 40px; height : 40px" alt="icons">
                 <span>Tỷ lệ chống chói 95%
                 </span>
@@ -397,14 +397,6 @@
       x: 20,
       z: -10
     }
-  });
-  ScrollReveal().reveal(".main-future .box-future-text .item-future", {
-    duration: 2000,
-    origin: "bottom",
-    distance: "100px",
-    easing: "cubic-bezier(.37,.01,.74,1)",
-    opacity: 0.3,
-    scale: 0.5
   });
 
   </script>
