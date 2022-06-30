@@ -320,4 +320,7 @@ div.block-slides-text div.block-bottom.slide-text .box-title{
     #fix-size-future{
         max-height: 50vh;
     }
+    #fix-size-future .main-future .box-future-text{
+        padding: 2em 0em;
+    }
 }
