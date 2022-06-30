@@ -157,8 +157,8 @@
               </p>
             </div>
           </div>
-          <div class="right-built-button">
-            <a href="#" style="justify-content: start;" class="btn btn-size btn-menu btn-fisrt"><span>Xem
+          <div class="right-built-button" style="justify-content: start;">
+            <a href="#" class="btn btn-size btn-menu btn-fisrt"><span>Xem
                 thêm</span></a>
           </div>
         </section>

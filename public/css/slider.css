@@ -125,7 +125,7 @@
     -moz-transform: skew(-30deg);
     -o-transform: skew(-30deg);
     transform: skew(-30deg);
-    height: 10px;
+    height: 7px;
 }
 .container-slide .slider-container .lines .line.active,
 .container-slide .slider-container .lines .line2.active {
@@ -277,7 +277,7 @@ div.block-slides-text div.block-bottom.slide-text .box-title{
 }
 .block-slides-text .lines-text .line-txt{
     width: 10%;
-    height: 10px;
+    height: 7px;
     margin: 0 1em;
     background: var(--text-color);
     cursor: pointer;

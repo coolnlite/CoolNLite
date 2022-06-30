@@ -807,7 +807,7 @@ a.btn-up {
     font-size: 28px;
     color: var(--color-heading);
     display: block;
-    font-weight: 500;
+    font-weight: bolder;
 }
 
 .main-box-right-button .txt-main {

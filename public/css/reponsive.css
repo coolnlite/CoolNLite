@@ -136,6 +136,9 @@
   .section .box-menu .header {
     padding: 12px 20px;
   }
+  #fix-slider-index{
+    grid-template-columns: 1fr;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -145,11 +148,11 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  #fix-slider-index{
-    grid-template-columns: 1fr;
-  }
   .section.built .box-built {
     grid-template-columns: 1fr;
+  }
+  #fix-slider-index{
+    grid-template-columns: auto 450px;
   }
 
   .box-built .main-box-right-button .box-img {
