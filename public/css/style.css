@@ -1148,7 +1148,6 @@ a.btn-up {
 
 .footer-distributed {
     background: var(--text-color-b);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     width: 100%;
     text-align: left;
@@ -1167,7 +1166,7 @@ a.btn-up {
 /* Footer left */
 
 .footer-distributed .footer-left {
-    width: 35%;
+    width: 40%;
 }
 
 
@@ -1211,9 +1210,11 @@ a.btn-up {
 /* Footer Center */
 
 .footer-distributed .footer-center {
-    width: 24%;
+   width: 20%;
 }
-
+.footer-distributed .footer-center div{
+    
+}
 .footer-distributed .footer-center i {
     background-color: #33383b;
     color: var(--text-color);
@@ -1280,7 +1281,7 @@ a.btn-up {
 /* Footer Right */
 
 .footer-distributed .footer-right {
-    width: 40%;
+    width: 39%;
 }
 
 .footer-distributed .footer-company-about {
@@ -1301,6 +1302,7 @@ a.btn-up {
 
 .footer-distributed .footer-icons {
     margin-top: 25px;
+    text-align: center;
 }
 
 .footer-distributed .footer-icons a {
