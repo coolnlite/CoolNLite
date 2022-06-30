@@ -822,6 +822,7 @@ a.btn-up {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    justify-content: center;
     align-items: center;
     -ms-align-items: center;
     margin: 16px 0;
