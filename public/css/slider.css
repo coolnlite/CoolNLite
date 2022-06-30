@@ -278,8 +278,11 @@ div.block-slides-text div.block-bottom.slide-text .box-title{
 .block-slides-text .lines-text .line-txt.active{
     background-color: var(--color-blue);
 }
-@media only screen and (max-width : 480px){
+@media only screen and (max-width : 600px){
     #fix-slider-index .fix-sizes-slider2{
         height: 300px;
+    }
+    #fix-slider-index .container-slide{
+        padding: 5vh 0;
     }
 }

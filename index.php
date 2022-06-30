@@ -120,7 +120,7 @@
             <img src="<?php print $base_url ?>shared/img/trangchu/titanium.jpg" alt="image">
           </div>
           <div class="slider2 sizes-slider2 fix-sizes-slider2">
-           <video loop autoplay muted src="<?php print $base_url ?>shared/video/cong-nghe-phun-xa.mov"></video>
+          <img src="<?php print $base_url ?>shared/img/trangchu/cong-nghe-phun-xa.jpg" alt="image">
           </div>
           <div class="box-btn">
             <div class="prev-button prev-button1" onclick="plusSlide2(-1)">
@@ -177,8 +177,10 @@
             </div>
             <div class="quick-left-bottom">
               <div class="right-built-button">
-                <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>Premier Series</span></a>
-                <a class="btn btn-size btn-built btn-secondary btn-show-form"><span>TitanX Series</span></a>
+                <a class="btn btn-size btn-built btn-secondary btn-show-form" style="margin-right : 5px">
+                  <span>Premier Series</span></a>
+                <a class="btn btn-size btn-built btn-secondary btn-show-form" style="margin-left: 5px;">
+                  <span>TitanX Series</span></a>
               </div>
             </div>
           </section>
