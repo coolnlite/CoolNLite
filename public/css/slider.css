@@ -309,4 +309,8 @@ div.block-slides-text div.block-bottom.slide-text .box-title{
         width: 30%;
         height: 5px;
     }
+    #fix-slider-index .box-right-built{
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
 }
