@@ -187,15 +187,16 @@
 
 /* FIX SLIDER INDEX */
 #fix-slider-index .fix-next-prev{
+    position: absolute;
     color: var(--text-color);
     font-size: 3em;
     cursor: pointer;
 }
 #fix-slider-index .prev-left{
-    left: 3.5em;
+    left: 35px;
 }
-#fix-slider-index .next-left{
-    right: 3.5em;
+#fix-slider-index .next-right{
+    right: 35px;
 }
 .block-slides-text{
     width: 100%;

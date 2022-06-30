@@ -757,6 +757,7 @@ a.btn-up {
     text-align: start;
 }
 #fix-slider-index .title-right-built .text-heading > b{
+    font-style: normal;
     font-size: 28px;
 }
 #fix-slider-index .main-box-right-button .txt-main .txt-top-b{
@@ -786,13 +787,15 @@ a.btn-up {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    align-items: flex-end;
-    -webkit-align-items: flex-end;
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
     flex-grow: 1;
     flex-flow: column nowrap;
     -ms-flex-flow: column nowrap;
 }
-
+.section.built .box-built .box-right-built .main-box-right-button{
+    max-width: 340px;
+}
 .title-right-built {
     padding-top: 16px;
     padding-bottom: 8px;
