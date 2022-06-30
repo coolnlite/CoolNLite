@@ -124,10 +124,10 @@
             <img class="mb" src="<?php print $base_url ?>shared/img/trangchu/cong-nghe-phun-xa-mb.jpg" alt="image">
           </div>
           <div class="box-btn">
-            <div class="fix-next-prev" onclick="plusSlide2(-1)">
+            <div class="fix-next-prev prev-left" onclick="plusSlide2(-1)">
               &#10094;
             </div>
-            <div class="fix-next-prev" onclick="plusSlide2(1)">
+            <div class="fix-next-prev next-right" onclick="plusSlide2(1)">
               &#10095;
             </div>
           </div>

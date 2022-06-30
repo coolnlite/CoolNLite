@@ -191,6 +191,12 @@
     font-size: 3em;
     cursor: pointer;
 }
+#fix-slider-index .prev-left{
+    left: 3.5em;
+}
+#fix-slider-index .next-left{
+    right: 3.5em;
+}
 .block-slides-text{
     width: 100%;
     height: 100%;

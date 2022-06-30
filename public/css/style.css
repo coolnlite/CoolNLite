@@ -808,15 +808,17 @@ a.btn-up {
 }
 
 .main-box-right-button .txt-main {
+    margin-top: 15%;
     padding: 16px 0;
     font-size: 16px;
 }
 
 .main-box-right-button .txt-main .txt-top-b {
     color: var(--color-txt);
-    line-height: 20px;
+    line-height: 40px;
     font-size: 16px;
     text-align: left;
+    font-weight: lighter;
 }
 
 .right-built-button {
@@ -824,7 +826,7 @@ a.btn-up {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     -ms-align-items: center;
     margin: 16px 0;
