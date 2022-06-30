@@ -117,17 +117,17 @@
         <div class="container-slide">
         <div class="slider-container">
           <div class="slider2 sizes-slider2 fix-sizes-slider2">
-            <img src="<?php print $base_url ?>shared/img/trangchu/titanx.png" alt="image">
+            <img src="<?php print $base_url ?>shared/img/trangchu/titan.png" alt="image">
           </div>
           <div class="slider2 sizes-slider2 fix-sizes-slider2">
             <img class="dk" src="<?php print $base_url ?>shared/img/trangchu/cong-nghe-phun-xa.jpg" alt="image">
             <img class="mb" src="<?php print $base_url ?>shared/img/trangchu/cong-nghe-phun-xa-mb.jpg" alt="image">
           </div>
           <div class="box-btn">
-            <div class="prev-button prev-button1" onclick="plusSlide2(-1)">
+            <div class="fix-next-prev" onclick="plusSlide2(-1)">
               &#10094;
             </div>
-            <div class="next-button next-button1" onclick="plusSlide2(1)">
+            <div class="fix-next-prev" onclick="plusSlide2(1)">
               &#10095;
             </div>
           </div>

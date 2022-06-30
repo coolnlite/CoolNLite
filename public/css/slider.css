@@ -186,6 +186,10 @@
 }
 
 /* FIX SLIDER INDEX */
+#fix-slider-index .fix-next-prev{
+    color: var(--text-color);
+    font-size: 3em;
+}
 .block-slides-text{
     width: 100%;
     height: 100%;
