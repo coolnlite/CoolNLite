@@ -285,4 +285,10 @@ div.block-slides-text div.block-bottom.slide-text .box-title{
     #fix-slider-index .container-slide{
         padding: 5vh 0;
     }
+    .block-slides-text .prev-button{
+        left: 0;
+    }
+    .block-slides-text .next-button{
+        right: 0;
+    }
 }
