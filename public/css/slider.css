@@ -191,6 +191,9 @@
     height: 100%;
     position: relative;
 }
+#fix-slider-index .fix-sizes-slider2{
+    height: 600px;
+}
 div.block-slides-text div.block-bottom.slide-text{
     display: none;
 }

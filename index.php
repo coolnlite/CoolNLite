@@ -116,10 +116,10 @@
       <section class="box-built" id="fix-slider-index">
         <div class="container-slide">
         <div class="slider-container">
-          <div class="slider2 sizes-slider2">
+          <div class="slider2 sizes-slider2 fix-sizes-slider2">
             <img src="<?php print $base_url ?>shared/img/trangchu/titanium.jpg" alt="image">
           </div>
-          <div class="slider2 sizes-slider2">
+          <div class="slider2 sizes-slider2 fix-sizes-slider2">
            <video loop autoplay muted src="<?php print $base_url ?>shared/video/cong-nghe-phun-xa.mov"></video>
           </div>
           <div class="box-btn">
