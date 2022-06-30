@@ -178,9 +178,9 @@
             </div>
             <div class="quick-left-bottom">
               <div class="right-built-button">
-                <a class="btn btn-size btn-built btn-secondary btn-show-form" style="margin-right : 5px">
+                <a href="premier.php" class="btn btn-size btn-built btn-secondary" style="margin-right : 5px">
                   <span>Premier Series</span></a>
-                <a class="btn btn-size btn-built btn-secondary btn-show-form" style="margin-left: 5px;">
+                <a href="titanx.php" class="btn btn-size btn-built btn-secondary" style="margin-left: 5px;">
                   <span>TitanX Series</span></a>
               </div>
             </div>
