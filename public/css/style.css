@@ -829,7 +829,7 @@ a.btn-up {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     -ms-align-items: center;
     margin: 16px 0;
@@ -906,9 +906,7 @@ a.btn-up {
     padding: 0 15%;
     width: 100%;
     grid-gap: 0 24px;
-    display: grid;
-    grid-template-columns: 40% 70%;
-    grid-template-rows: 1fr;
+    display: flex;
 }
 
 .main-box-quick-right {
