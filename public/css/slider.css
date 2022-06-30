@@ -189,6 +189,7 @@
 #fix-slider-index .fix-next-prev{
     color: var(--text-color);
     font-size: 3em;
+    cursor: pointer;
 }
 .block-slides-text{
     width: 100%;

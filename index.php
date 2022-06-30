@@ -97,7 +97,7 @@
             </div>
             <div class="item-parameter">
               <div class="box-para-top">
-                <img src="<?php print $base_url?>shared/icon/Icon-sun.png" alt="icons">
+                <img src="<?php print $base_url?>shared/icon/Icon-sun.png" style="width: 40px; height : 40px" alt="icons">
                 <span>Tỷ lệ chống chói 95%
                 </span>
               </div>
@@ -158,7 +158,7 @@
             </div>
           </div>
           <div class="right-built-button">
-            <a href="#" class="btn btn-size btn-size-100 btn-fisrt" style="border: 3px solid var(--text-color);"><span>Xem
+            <a href="#" class="btn btn-size btn-menu btn-fisrt"><span>Xem
                 thêm</span></a>
           </div>
         </section>
@@ -398,14 +398,6 @@
       z: -10
     }
   });
-
-  ScrollReveal().reveal(".btn-menu", {
-    duration: 2000,
-    origin: "bottom",
-    distance: "20px",
-    easing: "ease-in-out"
-  });
-
   ScrollReveal().reveal(".main-future .box-future-text .item-future", {
     duration: 2000,
     origin: "bottom",
