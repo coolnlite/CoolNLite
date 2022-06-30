@@ -23,6 +23,7 @@
 
   .section.section-gird .gird-top .quick {
     grid-template-columns: 100px 100px 100px;
+    padding-bottom: 0px;
   }
 
   .section-gird .box-quick section.main-box-quick {
