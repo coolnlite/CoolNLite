@@ -846,6 +846,9 @@ a.btn-up {
     display: grid;
     grid-template-rows: 1fr auto;
 }
+#fix-size-future{
+    max-height: 100vh;
+}
 #fix-gird-index{
     grid-template-rows: auto 1fr;
 }

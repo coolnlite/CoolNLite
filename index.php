@@ -117,7 +117,7 @@
         <div class="container-slide">
         <div class="slider-container">
           <div class="slider2 sizes-slider2 fix-sizes-slider2">
-            <img src="<?php print $base_url ?>shared/img/trangchu/titanium.jpg" alt="image">
+            <img src="<?php print $base_url ?>shared/img/trangchu/titanx.png" alt="image">
           </div>
           <div class="slider2 sizes-slider2 fix-sizes-slider2">
             <img class="dk" src="<?php print $base_url ?>shared/img/trangchu/cong-nghe-phun-xa.jpg" alt="image">
@@ -241,7 +241,7 @@
               <div class="item-parameter">
                 <div class="box-para-top">
                   <img src="<?php print $base_url?>shared/icon/Icon-beutifull.png" title="Sang trọng với lớp màu ánh kim" alt="icons"> 
-                    <span>Mang đến sự đẳng cấp và tinh tế
+                    <span>Mang đến sự đẳng cấp, tinh tế
                     </span>
                 </div>
               </div>
@@ -277,7 +277,7 @@
     </section>
     <!-- SETION 3 -->
     <!-- SETION 4 -->
-    <section class="section section-gird">
+    <section class="section section-gird" id="fix-size-future">
       <div class="box-title-menu gird-top bg-index-4">
         <div class="main-future">
           <section class="box-future-text">
