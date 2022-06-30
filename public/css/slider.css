@@ -291,4 +291,22 @@ div.block-slides-text div.block-bottom.slide-text .box-title{
     .block-slides-text .prev-button{
         left: 0;
     }
+    .block-bottom .main-list-menu .box-para-top img{
+        margin-right: 0px;
+    }
+    .section-gird .gird-top .box-title{
+        top: 5vh;
+        font-size: 0.8em;
+    }
+    .block-slides-text .prev-next{
+        font-size: 3em;
+    }
+    .block-slides-text .lines-text .line-txt{
+        width: 30%;
+        height: 5px;
+    }
+    .container-slide .slider-container .lines.fix-lines .line2{
+        width: 30%;
+        height: 5px;
+    }
 }
