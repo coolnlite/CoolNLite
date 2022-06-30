@@ -1203,6 +1203,7 @@ a.btn-up {
 }
 
 .footer-distributed .footer-company-name {
+    padding-top: 16px;
     color: var(--text-color);
     font-size: 14px;
     font-weight: normal;
