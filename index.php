@@ -84,19 +84,19 @@
         <div class="block-bottom">
           <section class="main-list-menu">
             <div class="item-parameter">
-              <div class="box-para-top">
+              <div class="box-para-top" style="align-items: start;">
                 <img src="<?php print $base_url?>shared/icon/Icon-protect.png" alt="icons">
                 <span>Tỷ lệ chống tia cực tím 99%</span>
               </div>
             </div>
             <div class="item-parameter">
-              <div class="box-para-top">
+              <div class="box-para-top" style="align-items: start;">
                 <img src="<?php print $base_url?>shared/icon/Icon-hongngoai.png" alt="icons">
                 <span>Tỷ lệ chống tia hồng ngoại 98%</span>
               </div>
             </div>
             <div class="item-parameter">
-              <div class="box-para-top">
+              <div class="box-para-top" style="align-items: start;">
                 <img src="<?php print $base_url?>shared/icon/Icon-sun.png" style="width: 40px; height : 40px" alt="icons">
                 <span>Tỷ lệ chống chói 95%
                 </span>

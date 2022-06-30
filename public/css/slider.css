@@ -276,7 +276,7 @@ div.block-slides-text div.block-bottom.slide-text .box-title{
     z-index: 11;
 }
 .block-slides-text .lines-text .line-txt{
-    width: 10%;
+    width: 8%;
     height: 7px;
     margin: 0 1em;
     background: var(--text-color);
